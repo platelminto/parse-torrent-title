@@ -565,5 +565,20 @@
     "codec": "x264",
     "audio": "DTS5.1",
     "group": "TWA"
+  },
+  {
+    "title": "Family Guy",
+    "season": 17,
+    "resolution": "720p",
+    "codec": "x264"
+  },
+  {
+    "title": "South Park",
+    "season": 23,
+    "resolution": "720p",
+    "codec": "x264",
+    "quality": "WEB-DL",
+    "group": "[i_c]",
+    "excess": ["Complete", "AMZN"]
   }
 ]
