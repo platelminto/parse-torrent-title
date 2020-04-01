@@ -505,7 +505,13 @@
   },
   {
     "title": "Akira",
-    "excess": ["UpScaled", "DesiSCR-Rip", "Hindi", "5.1", "Mafiaking"]
+    "excess": [
+      "UpScaled",
+      "DesiSCR-Rip",
+      "Hindi",
+      "5.1",
+      "Mafiaking"
+    ]
   },
   {
     "title": "Ben Hur",
@@ -526,14 +532,28 @@
   },
   {
     "title": "The X-Files",
-    "season": [1, 2, 3],
+    "season": [
+      1,
+      2,
+      3
+    ],
     "resolution": "1080p",
     "quality": "BluRay",
     "codec": "x265"
   },
   {
     "title": "The X-Files",
-    "season": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "season": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
     "resolution": "1080p",
     "quality": "BluRay",
     "codec": "x264",
@@ -578,7 +598,13 @@
     "resolution": "720p",
     "codec": "x264",
     "quality": "WEB-DL",
-    "group": "[i_c]",
-    "excess": ["Complete", "AMZN"]
+    "group": "[i_c]"
+  },
+  {
+    "quality": "DVDrip",
+    "codec": "x264",
+    "year": 2010,
+    "title": "Borgen",
+    "season": 1
   }
 ]
