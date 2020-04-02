@@ -59,11 +59,14 @@ class PTN(object):
                 pattern = r'\b%s\b' % pattern
 
             clean_name = re.sub('_', ' ', self.torrent['name'])
-            match = re.findall(pattern, clean_name, re.I)
+            match = re.findall(pattern, clean_name, re.IGNORECASE)
             if len(match) == 0:
                 continue
 
             index = {}
+            if len(match) > 1:
+                for other_match in match[1:]:
+                    self.excess_raw = self.excess_raw.replace(other_match[0], '')
             if isinstance(match[0], tuple):
                 match = list(match[0])
             if len(match) > 1:
@@ -82,7 +85,7 @@ class PTN(object):
             if key == 'season' and index['clean'] == 0:
                 # handle multi season
                 # i.e. S01-S09
-                m = re.findall('s([0-9]{2})-s([0-9]{2})', clean_name, re.I)
+                m = re.findall('s([0-9]{2})-s([0-9]{2})', clean_name, re.IGNORECASE)
                 if m:
                     clean = list(range(int(m[0][0]), int(m[0][1])+1))
             elif key in types.keys() and types[key] == 'boolean':
@@ -93,7 +96,7 @@ class PTN(object):
                     clean = int(clean)
 
             if key == 'group':
-                if (re.search(patterns[5][1], clean, re.I) or
+                if (re.search(patterns[5][1], clean, re.IGNORECASE) or
                     re.search(patterns[4][1], clean)):
                     continue  # Codec and quality.
                 if re.match('[^ ]+ [^ ]+ .+', clean):
@@ -157,7 +160,7 @@ class PTN(object):
             group = self.parts['group']
             sites = '|'.join(bt_sites)
             pat = '\[(' + sites + ')\]$'
-            group = re.sub(pat, '', group, flags=re.I)
+            group = re.sub(pat, '', group, flags=re.IGNORECASE)
             if group:
                 self.parts['group'] = group
 
