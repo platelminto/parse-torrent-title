@@ -606,5 +606,12 @@
     "codec": "x264",
     "quality": "DVDrip",
     "year": 2010
+  },
+  {
+    "title": "Bumbibjornarna",
+    "season": 2,
+    "codec": "XviD",
+    "quality": "DVDRip",
+    "group": "Rezar1337"
   }
 ]
