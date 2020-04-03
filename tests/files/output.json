@@ -13,7 +13,6 @@
     "resolution": "1080p",
     "quality": "BrRip",
     "codec": "H264",
-    "excess": "",
     "title": "Hercules"
   },
   {
@@ -53,7 +52,6 @@
     "quality": "HDRip",
     "codec": "XViD",
     "extended": true,
-    "excess": "",
     "title": "Hercules",
     "group": "juggs"
   },
@@ -204,6 +202,7 @@
     "year": 2014,
     "quality": "WEBRip",
     "audio": "Dual-Audio",
+    "size": "1400Mb",
     "title": "Lucy"
   },
   {
@@ -366,6 +365,7 @@
     "quality": "DvDScr",
     "codec": "x264",
     "audio": "AAC",
+    "language": "Hindi",
     "title": "The Shaukeens"
   },
   {
@@ -469,61 +469,96 @@
   },
   {
     "title": "The Jungle Book",
+    "resolution": "1080p",
+    "audio": "AAC",
+    "year": 2016,
+    "quality": "BRRip",
+    "codec": "x264",
     "sbs": "SBS",
     "3d": true
   },
   {
     "title": "Ant-Man",
+    "resolution": "1080p",
+    "audio": "AAC",
+    "year": 2015,
+    "quality": "BRRip",
+    "codec": "x264",
     "sbs": "Half-SBS",
     "3d": true
   },
   {
     "title": "Ice Age Collision Course",
-    "quality": "HDRIP"
+    "resolution": "720p",
+    "audio": "AC3",
+    "year": 2016,
+    "quality": "HDRIP",
+    "codec": "X264"
   },
   {
     "title": "Red Sonja Queen Of Plagues",
-    "quality": "BDRip"
+    "codec": "x264",
+    "quality": "BDRip",
+    "year": 2016
   },
   {
+    "hardcoded": true,
+    "resolution": "720p",
+    "size": "900MB",
+    "year": 2016,
     "title": "The Purge: Election Year",
-    "size": "900MB"
+    "quality": "HDRiP"
   },
   {
     "title": "War Dogs",
     "quality": "HDTS",
-    "size": "600MB"
+    "size": "600MB",
+    "year": 2016
   },
   {
     "title": "The Hateful Eight",
     "codec": "x265",
-    "size": "999MB"
+    "size": "999MB",
+    "resolution": "720p",
+    "quality": "BluRay",
+    "year": 2015
   },
   {
     "title": "The Boss",
-    "unrated": true
+    "unrated": true,
+    "resolution": "720p",
+    "audio": "AAC",
+    "year": 2016,
+    "quality": "BRRip",
+    "codec": "x264"
   },
   {
     "title": "Return To Snowy River",
-    "group": "W4F[PRiME]"
+    "year": 1988,
+    "quality":"DVDRip",
+    "codec": "x264"
   },
   {
     "title": "Akira",
-    "excess": [
-      "UpScaled",
-      "DesiSCR-Rip",
-      "Hindi",
-      "5.1",
-      "Mafiaking"
-    ]
+    "audio": "AC3",
+    "resolution": "720p",
+    "codec": "x264",
+    "year": 2016,
+    "language": "Hindi"
   },
   {
     "title": "Ben Hur",
-    "quality": "TELESYNC"
+    "quality": "TELESYNC",
+    "year": 2016,
+    "audio": "AC3",
+    "codec": "x264"
   },
   {
     "title": "The Secret Life of Pets",
-    "audio": "AAC-LC"
+    "audio": "AAC-LC",
+    "year": 2016,
+    "quality": "HDRiP",
+    "codec": "x264"
   },
   {
     "title": "The X-Files",
@@ -536,28 +571,15 @@
   },
   {
     "title": "The X-Files",
-    "season": [
-      1,
-      2,
-      3
-    ],
+    "season": [1, 2, 3],
     "resolution": "1080p",
     "quality": "BluRay",
-    "codec": "x265"
+    "codec": "x265",
+    "subtitles": "DKsubs"
   },
   {
     "title": "The X-Files",
-    "season": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [1, 2, 3, 4, 5, 6, 7, 8, 9],
     "resolution": "1080p",
     "quality": "BluRay",
     "codec": "x264",
