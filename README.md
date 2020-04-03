@@ -14,6 +14,20 @@ information from the filename. If a regex rule matches, the corresponding part
 is removed from the filename. In the end, the remaining part is taken as the
 title of the content.
 
+### Updates on top of [/u/roidayan's work](https://github.com/roidayan/parse-torrent-name/tree/updates)
+
+- Slightly improved complete season regex matching.
+- Removed duplicate info (from multiple matches for the same pattern) from `excess` field.
+- Added more tests.
+
+### [/u/roidayan's updates](https://github.com/roidayan/parse-torrent-name/tree/updates) on top of [/u/divijbindlish's original python port](https://github.com/divijbindlish/parse-torrent-name)
+
+- Added support for complete season parsing (either just a full season, or a range), not just single episodes.
+- Cleans group names from having the container & bt site name.
+- Improved season & episode matching.
+- Added to various fields' patterns.
+- Added more tests.
+
 ## Why?
 
 Online APIs by providers like
