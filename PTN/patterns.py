@@ -30,7 +30,7 @@ patterns = [
     ('widescreen', 'WS'),
     ('website', '^(\[ ?([^\]]+?) ?\])'),
     ('language', '(rus|(?:True)?Fr(?:ench)?|en(?:g(?:lish)?)?|vost(?:fr)?|castellano|'
-                 'spanish|german|multi|nordic)'),
+                 'spanish|german|multi|nordic|hindi)'),
     ('subtitles', '(DKsubs)'),
     ('sbs', '(?:Half-)?SBS'),
     ('unrated', 'UNRATED'),
