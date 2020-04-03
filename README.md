@@ -1,4 +1,4 @@
-# parse-torrent-name ![Build status](https://travis-ci.org/divijbindlish/parse-torrent-name.svg?branch=master)
+# parse-torrent-name
 
 > Extract media information from torrent-like filename
 
@@ -106,7 +106,7 @@ PTN.parse('friends.s02e01.720p.bluray-sujaidr')
 
 ### Note
 
-PTN does not gaurantee the fields `group`, `excess` and `episodeName` as these 
+PTN does not guarantee the fields `group`, `excess` and `episodeName` as these 
 fields might be interchanged with each other. This shoudn't affect most 
 applications since episode name can be fetched from an online database 
 after getting the season and episode number correctly.
@@ -139,19 +139,13 @@ after getting the season and episode number correctly.
 
 ### Automatic
 
-PTN can be installed automatically using `easy_install` or `pip`.
+PTN can be installed automatically using `pip`.
 
 ```sh
-$ easy_install parse-torrent-name
+$ pip install git+git://github.com/platelminto/parse-torrent-name.git@main
 ```
 
-OR 
-
-```sh
-$ pip install parse-torrent-name
-```
-
-Note that these commands might require `sudo` permission depending on whether
+Note that you might require `sudo` permission depending on whether
 a virtual environment is used or not.
 
 ### Manual
@@ -159,7 +153,7 @@ a virtual environment is used or not.
 First clone the repository.
 
 ```sh
-$ git clone https://github.com/divijbindlish/parse-torrent-name PTN && cd PTN
+$ git clone https://github.com/platelminto/parse-torrent-name PTN && cd PTN
 ```
 
 And run the command for installing the package.
@@ -170,9 +164,7 @@ $ python setup.py install
 
 ## Contributing
 
-Take a look at the open
-[issues](https://github.com/jzjzjzj/parse-torrent-name/issues) on the original
-project and submit a PR!
+Submit a PR, including tests (if applicable) for what you've added. Please provide input torrent names in `tests/files/input.json` and output json objects in `tests/files/output.json` (where the non-guaranteed fields `group`, `excess`, and `episodeName` don't have to be included).
 
 ## License
 
