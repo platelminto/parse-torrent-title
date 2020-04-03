@@ -27,14 +27,16 @@
     "episode": 6,
     "quality": "HDTV",
     "codec": "XviD",
-    "title": "The Big Bang Theory"
+    "title": "The Big Bang Theory",
+    "group": "[eztv]"
   },
   {
     "year": 2014,
     "resolution": "720p",
     "quality": "BrRip",
     "codec": "x264",
-    "title": "22 Jump Street"
+    "title": "22 Jump Street",
+    "group": "YIFY"
   },
   {
     "year": 2014,
@@ -43,7 +45,8 @@
     "codec": "H264",
     "audio": "DD5.1",
     "extended": true,
-    "title": "Hercules"
+    "title": "Hercules",
+    "group": "RARBG"
   },
   {
     "year": 2014,
@@ -386,7 +389,8 @@
     "quality": "CAM",
     "codec": "x264",
     "audio": "AAC",
-    "title": "Interstellar"
+    "title": "Interstellar",
+    "language": "ENG"
   },
   {
     "year": 2014,
@@ -460,7 +464,7 @@
     "season": 2,
     "episode": 20,
     "resolution": "720p",
-    "language": "rus.eng",
+    "language": ["rus", "eng"],
     "title": "Community"
   },
   {

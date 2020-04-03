@@ -64,9 +64,7 @@ class PTN(object):
                 continue
 
             index = {}
-            if len(match) > 1:
-                for other_match in match[1:]:
-                    self.excess_raw = self.excess_raw.replace(other_match[0], '')
+
             if isinstance(match[0], tuple):
                 match = list(match[0])
             if len(match) > 1:
@@ -88,6 +86,8 @@ class PTN(object):
                 m = re.findall('s([0-9]{2})-s([0-9]{2})', clean_name, re.IGNORECASE)
                 if m:
                     clean = list(range(int(m[0][0]), int(m[0][1])+1))
+            elif key == 'language' and len(match) > 1:
+                clean = match
             elif key in types.keys() and types[key] == 'boolean':
                 clean = True
             else:
@@ -106,6 +106,7 @@ class PTN(object):
                 self.torrent['map'] = re.sub(
                     sub_pattern, '{episode}', self.torrent['name']
                 )
+
             self._part(key, match, match[index['raw']], clean)
 
         # Start process for title
