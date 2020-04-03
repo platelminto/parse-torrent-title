@@ -20,7 +20,7 @@ title of the content.
 - Removed duplicate info (from multiple matches for the same pattern) from `excess` field.
 - Added more tests.
 
-### [/u/roidayan's updates](https://github.com/roidayan/parse-torrent-name/tree/updates) on top of [/u/divijbindlish's original python port](https://github.com/divijbindlish/parse-torrent-name)
+### [/u/roidayan's work](https://github.com/roidayan/parse-torrent-name/tree/updates) on top of [/u/divijbindlish's original python port](https://github.com/divijbindlish/parse-torrent-name)
 
 - Added support for complete season parsing (either just a full season, or a range), not just single episodes.
 - Cleans group names from having the container & bt site name.
