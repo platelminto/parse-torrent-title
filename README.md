@@ -15,20 +15,23 @@ title of the content.
 
 ### Updates on top of [/u/roidayan's work](https://github.com/roidayan/parse-torrent-name/tree/updates)
 
-- Slightly improved complete season regex matching.
-- Improved TV episode detection.
 - Added more languages in `patterns.py`.
 - Added multi-language support.
 - Added `AAC2` audio support.
+- Improved complete season regex matching.
+- Improved TV episode detection.
+- Fixed incorrect parsing of titles with a year in them.
 - Added more tests and cleaned up previous ones.
+
 
 ### [/u/roidayan's work](https://github.com/roidayan/parse-torrent-name/tree/updates) on top of [/u/divijbindlish's original python port](https://github.com/divijbindlish/parse-torrent-name)
 
 - Added support for complete season parsing (either just a full season, or a range), not just single episodes.
-- Fixed group names from having the container & bt site name.
-- Improved season & episode matching.
 - Added to various fields' patterns.
+- Improved season & episode matching.
+- Fixed group names from having the container & bt site name.
 - Added more tests.
+
 
 ## Why?
 
