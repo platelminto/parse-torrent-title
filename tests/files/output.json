@@ -638,5 +638,13 @@
     "codec": "XviD",
     "quality": "DVDRip",
     "group": "Rezar1337"
+  },
+  {
+    "title": "The Martian",
+    "resolution": "540p",
+    "codec": "x264",
+    "year": 2015,
+    "audio": "AAC2",
+    "quality": "HDRip"
   }
 ]
