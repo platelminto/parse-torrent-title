@@ -15,9 +15,10 @@ title of the content.
 
 ### Updates on top of [/u/roidayan's work](https://github.com/roidayan/parse-torrent-name/tree/updates)
 
-- Added more languages in `patterns.py`.
 - Added multi-language support.
-- Added `AAC2` audio support.
+- Added support for 2020s release years.
+- Added more languages in `patterns.py`.
+- Added more audio support.
 - Improved complete season regex matching.
 - Improved TV episode detection.
 - Fixed incorrect parsing of titles with a year in them.
