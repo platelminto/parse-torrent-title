@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 
 delimiters = '[\.\s\-\+_]'
+langs = 'rus|(?:True)?fr(?:ench)?|e?n(?:g(?:lish)?)?|vost(' \
+        '?:fr)?|castellano|spanish|dk|german|multi|nordic|exyu|chs|hindi|polish|mandarin'
 
 patterns = [
     ('season', delimiters +  # Season description can't be at the beginning, must be after this pattern
@@ -29,9 +31,8 @@ patterns = [
     ('container', '(MKV|AVI|MP4)'),
     ('widescreen', 'WS'),
     ('website', '^(\[ ?([^\]]+?) ?\])'),
-    ('language', '(rus|(?:True)?fr(?:ench)?|en(?:g(?:lish)?)?|vost(?:fr)?|castellano|'
-                 'spanish|german|multi|nordic|hindi|polish)'),
-    ('subtitles', '(DKsubs)'),
+    ('subtitles', '((?:(?:' + langs + '|e-)[\-\s.]*)*subs)'),
+    ('language', '(' + langs + ')(?!(?:[\-\s.]*(?:' + langs + ')*)+[\-\s.]?subs)'),
     ('sbs', '(?:Half-)?SBS'),
     ('unrated', 'UNRATED'),
     ('size', '(\d+(?:\.\d+)?(?:GB|MB))'),

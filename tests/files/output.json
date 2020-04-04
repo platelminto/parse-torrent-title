@@ -684,5 +684,49 @@
     "language": "Polish",
     "audio": "AAC5.1",
     "codec": "X264"
+  },
+  {
+    "title": "The Bridge",
+    "subtitles": "E-Subs",
+    "audio": "AAC",
+    "season": 1,
+    "codec": "x264",
+    "quality": "BRRip"
+  },
+  {
+    "title": "The Meg",
+    "resolution": "1080p",
+    "subtitles": "ExYu-Subs",
+    "year": 2018,
+    "quality": "HDRip",
+    "codec": "x264"
+  },
+  {
+    "title": "Dragon Ball Super: Broly",
+    "subtitles": "English Subs",
+    "year": 2018,
+    "quality": "CAM",
+    "codec": "x264"
+  },
+  {
+    "title": "Joker",
+    "codec": "x264",
+    "hardcoded": true,
+    "resolution": "720p",
+    "subtitles": "Hindi - Eng Multi Subs",
+    "quality": "HDRip",
+    "year": 2019,
+    "language": "English"
+  },
+  {
+    "title": "IP Man And Four Kings",
+    "codec": "x264",
+    "hardcoded": true,
+    "resolution": "1080p",
+    "subtitles": "CHS-ENG SUBS",
+    "quality": "HDRip",
+    "year": 2019,
+    "audio": "AAC",
+    "language": "Mandarin"
   }
 ]

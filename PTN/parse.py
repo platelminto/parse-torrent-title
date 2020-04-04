@@ -93,7 +93,8 @@ class PTN(object):
                 m = re.findall('s([0-9]{2})-s([0-9]{2})', clean_name, re.IGNORECASE)
                 if m:
                     clean = list(range(int(m[0][0]), int(m[0][1])+1))
-            elif key == 'language' and len(match) > 1:
+            elif key == 'language' and index['clean'] != 0:
+                # handle multi language
                 clean = match
             elif key in types.keys() and types[key] == 'boolean':
                 clean = True
