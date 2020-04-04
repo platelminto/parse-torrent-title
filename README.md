@@ -16,6 +16,7 @@ title of the content.
 ### Updates on top of [/u/roidayan's work](https://github.com/roidayan/parse-torrent-name/tree/updates)
 
 - Slightly improved complete season regex matching.
+- Improved TV episode detection.
 - Added more languages in `patterns.py`.
 - Added multi-language support.
 - Added `AAC2` audio support.
