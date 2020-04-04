@@ -667,5 +667,13 @@
     "codec": "x264",
     "quality": "BluRay",
     "resolution": "1080p"
+  },
+  {
+    "title": "Impractical Jokers The Movie",
+    "year": 2020,
+    "codec": "x264",
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "audio": "AAC5.1"
   }
 ]
