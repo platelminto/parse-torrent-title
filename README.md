@@ -112,7 +112,7 @@ PTN.parse('friends.s02e01.720p.bluray-sujaidr')
 
 ### TV seasons
 
-```
+```py
 PTN.parse('South Park Season 23 Complete 720p AMZN WEB-DL x264 [i_c]')
 # {
 #     'title': 'South Park',
