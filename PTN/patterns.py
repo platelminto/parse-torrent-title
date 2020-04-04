@@ -6,11 +6,11 @@ delimiters = '[\.\s\-\+_]'
 patterns = [
     ('season', delimiters +  # Season description can't be at the beginning, must be after this pattern
                '((?:Complete' + delimiters + ')?s[0-9]{2}-s[0-9]{2}|'  # Describes season ranges
-               '(?:Complete' + delimiters + ')?s([0-9]{1,2})(?:e[0-9]{2})?|'  # Describes season, optionally with complete or episode
+               '(?:Complete' + delimiters + ')?s([0-9]{1,2})(?:e[0-9]{1,2})?|'  # Describes season, optionally with complete or episode
                '([0-9]{1,2})x[0-9]{2}|'  # Describes 5x02, 12x15 type descriptions
                '(?:Complete' + delimiters + ')?Season[\. -]([0-9]{1,2}))'  # Describes Season.15 type descriptions
                '(?:' + delimiters + '|$)'),
-    ('episode', '((?:[ex]|ep)([0-9]{2})(?:[^0-9]|$))'),
+    ('episode', '((?:[ex]|ep)([0-9]{1,2})(?:[^0-9]|$))'),
     ('year', '([\[\(]?((?:19[0-9]|20[01])[0-9])[\]\)]?)'),
     ('resolution', '([0-9]{3,4}p|1280x720)'),
     ('quality', ('((?:PPV\.)?[HP]DTV|(?:HD)?CAM|B[DR]Rip|(?:HD-?)?TS|'
