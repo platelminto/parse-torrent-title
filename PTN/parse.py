@@ -63,16 +63,17 @@ class PTN(object):
             if len(match) == 0:
                 continue
 
-            # We will just use the first match, so if there are multiple, just store them
-            # for later to remove them from 'excess'
-            rest_of_matches = list()
-            if len(match) > 1:
-                rest_of_matches = match[1:]
-
             index = {}
 
-            if isinstance(match[0], tuple):
-                match = list(match[0])
+            # With multiple matches, we will usually want to use the first match.
+            # For 'year', we instead use the last instance of a year match since,
+            # if a title includes a year, we don't want to use this for the year field.
+            match_index = 0
+            if key == 'year':
+                match_index = -1
+
+            if isinstance(match[match_index], tuple):
+                match = list(match[match_index])
             if len(match) > 1:
                 index['raw'] = 0
                 index['clean'] = 0
@@ -114,11 +115,6 @@ class PTN(object):
                 )
 
             self._part(key, match, match[index['raw']], clean)
-
-            for other_match in rest_of_matches:
-                if isinstance(other_match, tuple):
-                    other_match = other_match[0]
-                self.excess_raw = self.excess_raw.replace(other_match, '')
 
         # Start process for title
         raw = self.torrent['name']
