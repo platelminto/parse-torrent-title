@@ -11,7 +11,7 @@ patterns = [
                '(?:Complete' + delimiters + ')?Season[\. -]([0-9]{1,2}))'  # Describes Season.15 type descriptions
                '(?:' + delimiters + '|$)'),
     ('episode', '((?:[ex]|ep)([0-9]{1,2})(?:[^0-9]|$))'),
-    ('year', '([\[\(]?((?:19[0-9]|20[01])[0-9])[\]\)]?)'),
+    ('year', '([\[\(]?((?:19[0-9]|20[0-2])[0-9])[\]\)]?)'),
     ('resolution', '([0-9]{3,4}p|1280x720)'),
     ('quality', ('((?:PPV\.)?[HP]DTV|(?:HD)?CAM|B[DR]Rip|(?:HD-?)?TS|'
                  '(?:PPV )?WEB-?DL(?: DVDRip)?|HDRip|HDTVRip|DVDRip|DVDRIP|'
