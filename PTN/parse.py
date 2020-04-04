@@ -63,6 +63,12 @@ class PTN(object):
             if len(match) == 0:
                 continue
 
+            # We will just use the first match, so if there are multiple, just store them
+            # for later to remove them from 'excess'
+            rest_of_matches = list()
+            if len(match) > 1:
+                rest_of_matches = match[1:]
+
             index = {}
 
             if isinstance(match[0], tuple):
@@ -108,6 +114,11 @@ class PTN(object):
                 )
 
             self._part(key, match, match[index['raw']], clean)
+
+            for other_match in rest_of_matches:
+                if isinstance(other_match, tuple):
+                    other_match = other_match[0]
+                self.excess_raw = self.excess_raw.replace(other_match, '')
 
         # Start process for title
         raw = self.torrent['name']
