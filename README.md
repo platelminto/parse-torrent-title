@@ -114,24 +114,25 @@ PTN.parse('friends.s02e01.720p.bluray-sujaidr')
 
 ```
 PTN.parse('South Park Season 23 Complete 720p AMZN WEB-DL x264 [i_c]')
-#  {
-#    'title': 'South Park',
-#    'season': 23,
-#    'resolution': '720p',
-#    'codec': 'x264',
-#    'quality': 'WEB-DL',
-#    'group': '[i_c]',
-#    'excess': ['Complete', 'AMZN']
+# {
+#     'title': 'South Park',
+#     'season': 23,
+#     'resolution': '720p',
+#     'codec': 'x264',
+#     'quality': 'WEB-DL',
+#     'group': '[i_c]',
+#     'excess': ['Complete', 'AMZN']
 # }
+
   
 PTN.parse('The.X-Files.Complete.S01-S09.1080p.BluRay.x264-GECKOS')
 # {
-#    'season': [1, 2, 3, 4, 5, 6, 7, 8, 9],
-#    'title': 'The X-Files',
-#    'resolution': '1080p',
-#    'quality': 'BluRay',
-#    'codec': 'x264',
-#    'group': 'GECKOS'
+#     'season': [1, 2, 3, 4, 5, 6, 7, 8, 9],
+#     'title': 'The X-Files',
+#     'resolution': '1080p',
+#     'quality': 'BluRay',
+#     'codec': 'x264',
+#     'group': 'GECKOS'
 # }
 ```
 
