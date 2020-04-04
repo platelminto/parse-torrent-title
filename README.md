@@ -16,9 +16,11 @@ title of the content.
 ### Updates on top of [/u/roidayan's work](https://github.com/roidayan/parse-torrent-name/tree/updates)
 
 - Added multi-language support.
+- Added proper subtitle support.
 - Added support for 2020s release years.
 - Added more languages in `patterns.py`.
 - Added more audio support.
+- Added exceptions list for media with known, non-fixable issues.
 - Improved complete season regex matching.
 - Improved TV episode detection.
 - Fixed incorrect parsing of titles with a year in them.
@@ -152,7 +154,6 @@ after correctly getting the season and episode number.
 * episodeName
 * excess
 * extended
-* garbage
 * group
 * hardcoded
 * language
@@ -161,11 +162,16 @@ after correctly getting the season and episode number.
 * region
 * repack
 * resolution
+* sbs
 * season
+* size
+* subtitles
 * title
+* unrated
 * website
 * widescreen
 * year
+* 3d
 
 ## Install
 
