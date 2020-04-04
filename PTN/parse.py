@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import re
-from .patterns import patterns, types, bt_sites
+from .patterns import patterns, types, bt_sites, exceptions
 
 
 class PTN(object):
@@ -129,6 +129,15 @@ class PTN(object):
         clean = clean.strip(' _-')
 
         self._part('title', [], raw, clean)
+
+        # Considerations for results that are known to cause issues, such
+        # as media with years in them but without a release year.
+        for exception in exceptions:
+            incorrect_key, incorrect_value = exception['incorrect_parse']
+            if self.parts['title'] == exception['parsed_title'] \
+              and self.parts[incorrect_key] == incorrect_value:
+                self.parts.pop(incorrect_key)
+                self.parts['title'] = exception['actual_title']
 
         # Start process for end
         clean = re.sub('(^[-\. ()]+)|([-\. ]+$)', '', self.excess_raw)

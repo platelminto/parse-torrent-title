@@ -29,8 +29,8 @@ patterns = [
     ('container', '(MKV|AVI|MP4)'),
     ('widescreen', 'WS'),
     ('website', '^(\[ ?([^\]]+?) ?\])'),
-    ('language', '(rus|(?:True)?Fr(?:ench)?|en(?:g(?:lish)?)?|vost(?:fr)?|castellano|'
-                 'spanish|german|multi|nordic|hindi)'),
+    ('language', '(rus|(?:True)?fr(?:ench)?|en(?:g(?:lish)?)?|vost(?:fr)?|castellano|'
+                 'spanish|german|multi|nordic|hindi|polish)'),
     ('subtitles', '(DKsubs)'),
     ('sbs', '(?:Half-)?SBS'),
     ('unrated', 'UNRATED'),
@@ -52,3 +52,7 @@ types = {
 }
 
 bt_sites = ['eztv', 'ettv', 'rarbg', 'rartv', 'ETRG']
+
+exceptions = [
+    {'parsed_title': '', 'incorrect_parse': ('year', 1983), 'actual_title': '1983'}
+]
