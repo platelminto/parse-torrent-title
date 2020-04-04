@@ -675,5 +675,14 @@
     "quality": "WEBRip",
     "resolution": "1080p",
     "audio": "AAC5.1"
+  },
+  {
+    "title": "1983",
+    "season": 1,
+    "resolution": "1080p",
+    "quality": "WEB-DL",
+    "language": "Polish",
+    "audio": "AAC5.1",
+    "codec": "X264"
   }
 ]
