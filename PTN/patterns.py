@@ -18,7 +18,7 @@ patterns = [
                  'CamRip|W[EB]BRip|BluRay|DvDScr|hdtv|telesync)')),
     ('codec', '(xvid|[hx]\.?26[45])'),
     ('audio', ('(MP3|DD5\.?1|Dual[\- ]Audio|LiNE|DTS|DTS5\.1|'
-               'AAC[ \.-]LC|AAC(?:\.?2(?:\.0)?)?|'
+               'AAC[ \.-]LC|AAC(?:(?:\.?2(?:\.0)?)?|(?:\.?5(?:\.1)?)?)|'
                'AC3(?:\.5\.1)?)')),
     ('group', '(- ?([^-]+(?:-={[^-]+-?$)?))$'),
     ('region', 'R[0-9]'),
