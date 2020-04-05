@@ -765,9 +765,18 @@
   },
   {
     "title": "Tom Clancys Jack Ryan",
-    "quality": "WEBRip",
     "season": 2,
+    "quality": "WEBRip",
     "resolution": "720p",
     "codec": "x264"
+  },
+  {
+    "title": "Sacred Games",
+    "season": 1,
+    "year": 2018,
+    "codec": "x264",
+    "subtitles": "ESub",
+    "resolution": "720p",
+    "language": "Hindi"
   }
 ]

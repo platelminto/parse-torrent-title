@@ -40,7 +40,7 @@ patterns = [
     ('container', '(MKV|AVI|MP4)'),
     ('widescreen', 'WS'),
     ('website', '^(\[ ?([^\]]+?) ?\])'),
-    ('subtitles', '((?:(?:' + langs + '|e-)[\-\s.]*)*subs)'),
+    ('subtitles', '((?:(?:' + langs + '|e-?)[\-\s.]*)*subs?)'),
     ('language', '(' + langs + ')(?!(?:[\-\s.]*(?:' + langs + ')*)+[\-\s.]?subs)'),
     ('sbs', '(?:Half-)?SBS'),
     ('unrated', 'UNRATED'),
