@@ -1,12 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-delimiters = '[\.\s\-\+_]'
+delimiters = '[\.\s\-\+_\/]'
 langs = 'rus|(?:True)?fr(?:ench)?|e?n(?:g(?:lish)?)?|vost(' \
         '?:fr)?|ita(?:liano)?|castellano|spanish|dk|german|multi|nordic|exyu|chs|hindi|polish|mandarin'
 
 season_range_pattern = '(?:Complete' + delimiters + '*)?(?:' + delimiters + '*)?(?:s(?:easons?)?)?' + delimiters + '?(?:s[0-9]{2}[\s]*(' \
                        '?:\-|(?:\s*to\s*))[\s]*s[0-9]{2})'
+
+year_pattern = '(?:19[0-9]|20[0-2])[0-9]'
+month_pattern = '0[1-9]|1[0-2]'
+day_pattern = '[0-2][0-9]|3[01]'
 
 patterns = [
     ('season', delimiters + '(' # Season description can't be at the beginning, must be after this pattern
@@ -16,7 +20,9 @@ patterns = [
                '(?:Complete' + delimiters + ')?Season[\. -]([0-9]{1,2}))'  # Describes Season.15 type descriptions
                '(?:' + delimiters + '|$)'),
     ('episode', '((?:[ex]|ep)([0-9]{1,2})(?:[^0-9]|$))'),
-    ('year', '([\[\(]?((?:19[0-9]|20[0-2])[0-9])[\]\)]?)'),
+    ('year', '([\[\(]?(' + year_pattern + ')[\]\)]?)'),
+    ('month', '(?:' + year_pattern + ')' + delimiters + '(' + month_pattern + ')' + delimiters + '(?:' + day_pattern + ')'),
+    ('day', '(?:' + year_pattern + ')' + delimiters + '(?:' + month_pattern + ')' + delimiters + '(' + day_pattern + ')'),
     ('resolution', '([0-9]{3,4}p|1280x720)'),
     ('quality', ('((?:PPV\.)?[HP]DTV|(?:HD)?CAM|B[DR]Rip|(?:HD-?)?TS|'
                  '(?:PPV )?WEB-?DL(?: DVDRip)?|HDRip|HDTVRip|DVDRip|DVDRIP|'
@@ -46,6 +52,8 @@ types = {
     'season': 'integer',
     'episode': 'integer',
     'year': 'integer',
+    'month': 'integer',
+    'day': 'integer',
     'extended': 'boolean',
     'hardcoded': 'boolean',
     'proper': 'boolean',

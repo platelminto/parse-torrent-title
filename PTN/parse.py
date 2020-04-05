@@ -37,6 +37,10 @@ class PTN(object):
             if raw is not None:
                 self.excess_raw = self.excess_raw.replace(raw, '')
 
+    @staticmethod
+    def _get_pattern(pattern):
+        return [p[1] for p in patterns if p[0] == pattern][0]
+
     def _late(self, name, clean):
         if name == 'group':
             self._part(name, [], None, clean)
@@ -104,8 +108,8 @@ class PTN(object):
                     clean = int(clean)
 
             if key == 'group':
-                if (re.search(patterns[5][1], clean, re.IGNORECASE) or
-                    re.search(patterns[4][1], clean)):
+                if (re.search(self._get_pattern('codec'), clean, re.IGNORECASE) or
+                    re.search(self._get_pattern('quality'), clean)):
                     continue  # Codec and quality.
                 if re.match('[^ ]+ [^ ]+ .+', clean):
                     key = 'episodeName'

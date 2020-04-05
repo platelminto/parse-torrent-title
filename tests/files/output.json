@@ -744,5 +744,23 @@
     "quality": "DVDRip",
     "resolution": "720p",
     "season": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
+  },
+  {
+    "title": "Stephen Colbert",
+    "year": 2020,
+    "month": 4,
+    "day": 2,
+    "quality": "HDTV",
+    "codec": "x264"
+  },
+  {
+    "title": "Jimmy Not Funny",
+    "year": 2017,
+    "month": 8,
+    "day": 1,
+    "container": "mkv",
+    "codec": "x264",
+    "resolution": "720p",
+    "quality": "HDTV"
   }
 ]
