@@ -17,13 +17,14 @@ title of the content.
 
 - Added multi-language support.
 - Added proper subtitle support.
+- Added support for full `YYYY-MM-DD`-type dates, usually useful for daily shows that otherwise have no episode name.
 - Added support for 2020s release years.
 - Added more languages in `patterns.py`.
 - Added more audio support.
 - Added exceptions list for media with known, non-fixable issues.
-- Improved complete season regex matching.
-- Improved TV episode detection.
-- Fixed incorrect parsing of titles with a year in them.
+- Improved complete season matching.
+- Improved TV episode matching.
+- Fixed incorrect parsing of titles containing years.
 - Added more tests and cleaned up previous ones.
 
 
@@ -150,6 +151,7 @@ after correctly getting the season and episode number.
 * audio
 * codec
 * container
+* day
 * episode
 * episodeName
 * excess
@@ -157,6 +159,7 @@ after correctly getting the season and episode number.
 * group
 * hardcoded
 * language
+* month
 * proper
 * quality
 * region
