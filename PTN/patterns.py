@@ -3,11 +3,14 @@
 
 delimiters = '[\.\s\-\+_]'
 langs = 'rus|(?:True)?fr(?:ench)?|e?n(?:g(?:lish)?)?|vost(' \
-        '?:fr)?|castellano|spanish|dk|german|multi|nordic|exyu|chs|hindi|polish|mandarin'
+        '?:fr)?|ita(?:liano)?|castellano|spanish|dk|german|multi|nordic|exyu|chs|hindi|polish|mandarin'
+
+season_range_pattern = '(?:Complete' + delimiters + '*)?(?:' + delimiters + '*)?(?:s(?:easons?)?)?' + delimiters + '?(?:s[0-9]{2}[\s]*(' \
+                       '?:\-|(?:\s*to\s*))[\s]*s[0-9]{2})'
 
 patterns = [
-    ('season', delimiters +  # Season description can't be at the beginning, must be after this pattern
-               '((?:Complete' + delimiters + ')?s[0-9]{2}-s[0-9]{2}|'  # Describes season ranges
+    ('season', delimiters + '(' # Season description can't be at the beginning, must be after this pattern
+               '' + season_range_pattern + '|' # Describes season ranges
                '(?:Complete' + delimiters + ')?s([0-9]{1,2})(?:e[0-9]{1,2})?|'  # Describes season, optionally with complete or episode
                '([0-9]{1,2})x[0-9]{2}|'  # Describes 5x02, 12x15 type descriptions
                '(?:Complete' + delimiters + ')?Season[\. -]([0-9]{1,2}))'  # Describes Season.15 type descriptions
