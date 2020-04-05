@@ -50,6 +50,7 @@ class PTN(object):
             self._part(name, [], None, clean.strip())
 
     def parse(self, name):
+        name = name.strip()
         self.parts = {}
         self.torrent = {'name': name}
         self.excess_raw = name

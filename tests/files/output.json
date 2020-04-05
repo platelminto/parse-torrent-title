@@ -762,5 +762,12 @@
     "codec": "x264",
     "resolution": "720p",
     "quality": "HDTV"
+  },
+  {
+    "title": "Tom Clancys Jack Ryan",
+    "quality": "WEBRip",
+    "season": 2,
+    "resolution": "720p",
+    "codec": "x264"
   }
 ]
