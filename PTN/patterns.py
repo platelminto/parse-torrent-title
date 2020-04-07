@@ -19,18 +19,18 @@ patterns = [
                '([0-9]{1,2})x[0-9]{2}|'  # Describes 5x02, 12x15 type descriptions
                '(?:Complete' + delimiters + ')?Season[\. -]([0-9]{1,2}))'  # Describes Season.15 type descriptions
                '(?:' + delimiters + '|$)'),
-    ('episode', '((?:[ex]|ep)([0-9]{1,2})(?:[^0-9]|$))'),
+    ('episode', '((?:(?:[ex]|ep)(?:[0-9]{1,2}(?:-[0-9]{1,2}))|(?:[ex]|ep)([0-9]{1,2}))(?:[^0-9]|$))'),
     ('year', '([\[\(]?(' + year_pattern + ')[\]\)]?)'),
     ('month', '(?:' + year_pattern + ')' + delimiters + '(' + month_pattern + ')' + delimiters + '(?:' + day_pattern + ')'),
     ('day', '(?:' + year_pattern + ')' + delimiters + '(?:' + month_pattern + ')' + delimiters + '(' + day_pattern + ')'),
     ('resolution', '([0-9]{3,4}p|1280x720)'),
     ('quality', ('((?:PPV\.)?[HP]DTV|(?:HD)?CAM|B[DR]Rip|(?:HD-?)?TS|'
-                 '(?:PPV )?WEB-?DL(?: DVDRip)?|HDRip|HDTVRip|DVDRip|DVDRIP|'
+                 '(?:PPV )?WEB(?:-?DL(?:Mux)?)?(?: DVDRip)?|HDRip|HDTVRip|DVDRip|DVDRIP|'
                  'CamRip|W[EB]BRip|BluRay|DvDScr|hdtv|telesync)')),
     ('codec', '(xvid|[hx]\.?26[45])'),
     ('audio', ('(MP3|DD5\.?1|Dual[\- ]Audio|LiNE|DTS|DTS5\.1|'
                'AAC[ \.-]LC|AAC(?:(?:\.?2(?:\.0)?)?|(?:\.?5(?:\.1)?)?)|'
-               'AC3(?:\.5\.1)?)')),
+               '(?:E-?)?AC-?3(?:' + delimiters + '?5\.1)?)')),
     ('group', '(- ?([^-]+(?:-={[^-]+-?$)?))$'),
     ('region', 'R[0-9]'),
     ('extended', '(EXTENDED(:?.CUT)?)'),
@@ -45,6 +45,7 @@ patterns = [
     ('sbs', '(?:Half-)?SBS'),
     ('unrated', 'UNRATED'),
     ('size', '(\d+(?:\.\d+)?(?:GB|MB))'),
+    ('bit-depth', '(?:8|10)bit'),
     ('3d', '3D')
 ]
 

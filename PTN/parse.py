@@ -92,8 +92,9 @@ class PTN(object):
                 index['raw'] = 0
                 index['clean'] = 0
 
-            if key == 'season' and index['clean'] == 0:
-                # handle multi season
+            # patterns for multiseason/episode make the range, and only the range, appear in match[0]
+            if (key == 'season' or key == 'episode') and index['clean'] == 0:
+                # handle multi season/episode
                 # i.e. S01-S09
                 m = re.findall('[0-9]+', match[0])
                 if m:

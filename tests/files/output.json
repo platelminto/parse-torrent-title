@@ -785,5 +785,46 @@
     "quality":"HDTV",
     "resolution": "720p",
     "codec": "X264"
+  },
+  {
+    "year": 2020,
+    "title": "Home Before Dark",
+    "season": 1,
+    "resolution": "1080p",
+    "bit-depth": "10bit",
+    "audio": "EAC3 5.1",
+    "quality": "Webrip",
+    "codec": "x265"
+  },
+  {
+    "episode": 3,
+    "title": "Our Girl",
+    "season": 5,
+    "quality": "HDTV",
+    "codec": "x264"
+  },
+  {
+    "episode": 4,
+    "title": "Roswell New Mexico",
+    "season": 2,
+    "resolution": "480p",
+    "codec": "x264"
+  },
+  {
+    "quality": "WEB",
+    "season": 1,
+    "title": "Coyote Peterson-Brave the Wild",
+    "codec": "x264",
+    "episode": 0
+  },
+  {
+    "quality": "WEB-DLMux",
+    "language": ["ITA", "ENG"],
+    "title": "The Blacklist",
+    "episode": [5, 6],
+    "codec": "H264",
+    "season": 7,
+    "audio": "DD5.1",
+    "resolution": "1080p"
   }
 ]
