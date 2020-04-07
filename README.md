@@ -16,14 +16,14 @@ title of the content.
 ### Updates on top of [/u/roidayan's work](https://github.com/roidayan/parse-torrent-name/tree/updates)
 
 - Added multi-language support.
+- Added multi-episode support.
 - Added proper subtitle support.
 - Added support for full `YYYY-MM-DD`-type dates, usually useful for daily shows that otherwise have no episode name.
 - Added support for 2020s release years.
-- Added more languages in `patterns.py`.
+- Added more languages.
 - Added more audio support.
 - Added exceptions list for media with known, non-fixable issues.
-- Improved complete season matching.
-- Improved TV episode matching.
+- Improved matching for various fields.
 - Fixed incorrect parsing of titles containing years.
 - Added more tests and cleaned up previous ones.
 
@@ -149,6 +149,7 @@ after correctly getting the season and episode number.
 ### Parts extracted
 
 * audio
+* bit-depth
 * codec
 * container
 * day
