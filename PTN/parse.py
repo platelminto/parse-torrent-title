@@ -95,9 +95,9 @@ class PTN(object):
             if key == 'season' and index['clean'] == 0:
                 # handle multi season
                 # i.e. S01-S09
-                m = re.findall('s([0-9]{2})[\s]*(?:\-|(?:\s*to\s*))[\s]*s([0-9]{2})', clean_name, re.IGNORECASE)
+                m = re.findall('[0-9]+', match[0])
                 if m:
-                    clean = list(range(int(m[0][0]), int(m[0][1])+1))
+                    clean = list(range(int(m[0]), int(m[1])+1))
             elif key == 'language' and index['clean'] != 0:
                 # handle multi language
                 clean = match
