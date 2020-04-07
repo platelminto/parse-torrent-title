@@ -778,5 +778,12 @@
     "subtitles": "ESub",
     "resolution": "720p",
     "language": "Hindi"
+  },
+  {
+    "title":"Homeland",
+    "season": [1, 2, 3, 4],
+    "quality":"HDTV",
+    "resolution": "720p",
+    "codec": "X264"
   }
 ]

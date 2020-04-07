@@ -5,8 +5,8 @@ delimiters = '[\.\s\-\+_\/]'
 langs = 'rus|(?:True)?fr(?:ench)?|e?n(?:g(?:lish)?)?|vost(' \
         '?:fr)?|ita(?:liano)?|castellano|spanish|dk|german|multi|nordic|exyu|chs|hindi|polish|mandarin'
 
-season_range_pattern = '(?:Complete' + delimiters + '*)?(?:' + delimiters + '*)?(?:s(?:easons?)?)?' + delimiters + '?(?:s[0-9]{2}[\s]*(' \
-                       '?:\-|(?:\s*to\s*))[\s]*s[0-9]{2})'
+season_range_pattern = '(?:Complete' + delimiters + '*)?(?:' + delimiters + '*)?(?:s(?:easons?)?)?' + delimiters + '?(?:s?[0-9]{1,2}[\s]*(' \
+                       '?:\-|(?:\s*to\s*))[\s]*s?[0-9]{1,2})'
 
 year_pattern = '(?:19[0-9]|20[0-2])[0-9]'
 month_pattern = '0[1-9]|1[0-2]'
