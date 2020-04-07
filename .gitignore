@@ -6,3 +6,6 @@ env/
 
 *.pyc
 .idea/
+
+tests/files/temp*
+test_generator.py
