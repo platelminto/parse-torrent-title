@@ -189,6 +189,8 @@ class PTN(object):
                 if match:
                     self._part('encoder', match, raw, match[1])
                     self.parts['group'] = group.replace(raw, '')
+                    if not self.parts['group'].strip():
+                        self.parts.pop('group')
 
         if len(clean) != 0:
             if len(clean) == 1:
