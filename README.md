@@ -142,7 +142,7 @@ PTN.parse('The.X-Files.Complete.S01-S09.1080p.BluRay.x264-GECKOS')
 
 ### Note
 
-PTN does not guarantee the fields `group`, `excess`, `encoder`, and `episodeName`, as these 
+PTN does not guarantee the fields `group`, `excess`, and `episodeName`, as these 
 fields might be interchanged with each other. This shoudn't affect most 
 applications since episode names can be fetched from an online database 
 after correctly getting the season and episode number.
