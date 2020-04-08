@@ -622,8 +622,7 @@
     "season": 23,
     "resolution": "720p",
     "codec": "x264",
-    "quality": "WEB-DL",
-    "group": "[i_c]"
+    "quality": "WEB-DL"
   },
   {
     "title": "Borgen",
@@ -826,5 +825,39 @@
     "season": 7,
     "audio": "DD5.1",
     "resolution": "1080p"
+  },
+  {
+    "audio": "EAC3",
+    "bit-depth": "10bit",
+    "quality": "WEB-DL",
+    "year": 1972,
+    "codec": "x265",
+    "season": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "title": "Are You Being Served",
+    "resolution": "576p"
+  },
+  {
+    "season": 6,
+    "title": "Empire",
+    "episode": 16,
+    "quality": "WEB",
+    "year": 2015,
+    "codec": "H264",
+    "encoder": "TGx"
+  },
+  {
+    "season": 1,
+    "title": "Mixed-ish",
+    "episode": 20,
+    "codec": "XviD"
+  },
+  {
+    "container": "MP4",
+    "size": "4.3GB",
+    "codec": "x264",
+    "title": "Marvels Iron Fist",
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "season": 2
   }
 ]

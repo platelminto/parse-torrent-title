@@ -64,8 +64,6 @@ types = {
     '3d': 'boolean'
 }
 
-bt_sites = ['eztv', 'ettv', 'rarbg', 'rartv', 'ETRG']
-
 exceptions = [
     {'parsed_title': '', 'incorrect_parse': ('year', 1983), 'actual_title': '1983'}
 ]

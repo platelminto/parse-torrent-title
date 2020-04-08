@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import re
-from .patterns import patterns, types, bt_sites, exceptions
+from .patterns import patterns, types, exceptions
 
 
 class PTN(object):
@@ -178,15 +178,17 @@ class PTN(object):
                 group = group[:-(len(container)+1)]
                 self.parts['group'] = group
 
-        # clean group name from having bt site name
+        # split group name and encoder, adding the latter to self.parts
         if 'group' in self.parts:
-
             group = self.parts['group']
-            sites = '|'.join(bt_sites)
-            pat = '\[(' + sites + ')\]$'
-            group = re.sub(pat, '', group, flags=re.IGNORECASE)
-            if group:
-                self.parts['group'] = group
+            pat = '(\[(.*)\])'
+            match = re.findall(pat, group, flags=re.IGNORECASE)
+            if match:
+                match = match[0]
+                raw = match[0]
+                if match:
+                    self._part('encoder', match, raw, match[1])
+                    self.parts['group'] = group.replace(raw, '')
 
         if len(clean) != 0:
             if len(clean) == 1:
