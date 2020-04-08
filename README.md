@@ -17,6 +17,7 @@ title of the content.
 
 - Added multi-language support.
 - Added multi-episode support.
+- Added `bit-depth` and `encoder` fields.
 - Added proper subtitle support.
 - Added support for full `YYYY-MM-DD`-type dates, usually useful for daily shows that otherwise have no episode name.
 - Added support for 2020s release years.
@@ -141,7 +142,7 @@ PTN.parse('The.X-Files.Complete.S01-S09.1080p.BluRay.x264-GECKOS')
 
 ### Note
 
-PTN does not guarantee the fields `group`, `excess` and `episodeName` as these 
+PTN does not guarantee the fields `group`, `excess`, `encoder`, and `episodeName`, as these 
 fields might be interchanged with each other. This shoudn't affect most 
 applications since episode names can be fetched from an online database 
 after correctly getting the season and episode number.
@@ -153,6 +154,7 @@ after correctly getting the season and episode number.
 * codec
 * container
 * day
+* encoder
 * episode
 * episodeName
 * excess
