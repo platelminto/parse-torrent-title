@@ -100,6 +100,7 @@ PTN.parse('Mr Robot S01E05 HDTV x264-KILLERS[ettv]')
 #     'title': 'Mr Robot',
 #     'codec': 'x264',
 #     'group':  'KILLERS',
+#     'encoder': 'ettv',
 #     'quality': 'HDTV'
 # }
 
@@ -124,7 +125,7 @@ PTN.parse('South Park Season 23 Complete 720p AMZN WEB-DL x264 [i_c]')
 #     'resolution': '720p',
 #     'codec': 'x264',
 #     'quality': 'WEB-DL',
-#     'group': '[i_c]',
+#     'encoder': 'i_c',
 #     'excess': ['Complete', 'AMZN']
 # }
 
