@@ -69,7 +69,8 @@
   {
     "quality": "PPV.HDTV",
     "codec": "x264",
-    "title": "UFC 179"
+    "title": "UFC 179",
+    "group": "Ebi"
   },
   {
     "season": 2,
@@ -107,7 +108,9 @@
     "episode": 6,
     "quality": "HDTV",
     "codec": "x264",
-    "title": "Marvels Agents of S.H.I.E.L.D."
+    "title": "Marvels Agents of S.H.I.E.L.D.",
+    "group": "KILLERS",
+    "encoder": "ettv"
   },
   {
     "year": 2014,
@@ -234,7 +237,8 @@
     "quality": "HDTV",
     "codec": "x264",
     "repack": true,
-    "title": "Two and a Half Men"
+    "title": "Two and a Half Men",
+    "encoder": "eztv"
   },
   {
     "year": 2014,
@@ -343,7 +347,8 @@
     "resolution": "720p",
     "quality": "HDTV",
     "codec": "x264",
-    "title": "Doctor Who"
+    "title": "Doctor Who",
+    "group": "FoV"
   },
   {
     "season": 1,
@@ -457,7 +462,8 @@
     "quality": "HDTV",
     "codec": "X264",
     "website": "www.Speed.cd",
-    "title": "Sons of Anarchy"
+    "title": "Sons of Anarchy",
+    "group": "DIMENSION"
   },
   {
     "season": 2,
@@ -498,7 +504,8 @@
     "title": "Red Sonja Queen Of Plagues",
     "codec": "x264",
     "quality": "BDRip",
-    "year": 2016
+    "year": 2016,
+    "encoder": "PRiME"
   },
   {
     "hardcoded": true,
@@ -690,7 +697,8 @@
     "audio": "AAC",
     "season": 1,
     "codec": "x264",
-    "quality": "BRRip"
+    "quality": "BRRip",
+    "encoder": "GWC"
   },
   {
     "title": "The Meg",
