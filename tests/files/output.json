@@ -1,871 +1,871 @@
 [
   {
-    "season": 5,
-    "episode": 3,
-    "resolution": "720p",
-    "quality": "HDTV",
     "codec": "x264",
-    "title": "The Walking Dead",
-    "group": "ASAP"
+    "episode": 3,
+    "group": "ASAP",
+    "quality": "HDTV",
+    "resolution": "720p",
+    "season": 5,
+    "title": "The Walking Dead"
   },
   {
-    "year": 2014,
-    "resolution": "1080p",
-    "quality": "BrRip",
     "codec": "H264",
-    "title": "Hercules"
+    "quality": "BrRip",
+    "resolution": "1080p",
+    "title": "Hercules",
+    "year": 2014
   },
   {
-    "year": 2014,
-    "quality": "HDRip",
     "codec": "XViD",
-    "title": "Dawn of the Planet of the Apes"
+    "quality": "HDRip",
+    "title": "Dawn of the Planet of the Apes",
+    "year": 2014
   },
   {
-    "season": 8,
+    "codec": "XviD",
     "episode": 6,
     "quality": "HDTV",
-    "codec": "XviD",
+    "season": 8,
     "title": "The Big Bang Theory"
   },
   {
-    "year": 2014,
-    "resolution": "720p",
-    "quality": "BrRip",
     "codec": "x264",
+    "group": "YIFY",
+    "quality": "BrRip",
+    "resolution": "720p",
     "title": "22 Jump Street",
-    "group": "YIFY"
+    "year": 2014
   },
   {
-    "year": 2014,
-    "resolution": "1080p",
-    "quality": "WEB-DL",
-    "codec": "H264",
     "audio": "DD5.1",
+    "codec": "H264",
     "extended": true,
+    "group": "RARBG",
+    "quality": "WEB-DL",
+    "resolution": "1080p",
     "title": "Hercules",
-    "group": "RARBG"
+    "year": 2014
   },
   {
-    "year": 2014,
-    "quality": "HDRip",
     "codec": "XViD",
     "extended": true,
+    "group": "juggs",
+    "quality": "HDRip",
     "title": "Hercules",
-    "group": "juggs"
+    "year": 2014
   },
   {
-    "year": 2014,
-    "quality": "WEBDL DVDRip",
     "codec": "XviD",
-    "title": "Hercules"
+    "quality": "WEBDL DVDRip",
+    "title": "Hercules",
+    "year": 2014
   },
   {
-    "year": 2014,
+    "codec": "x264",
     "quality": "PPV WEB-DL",
-    "codec": "x264",
-    "title": "WWE Hell in a Cell"
+    "title": "WWE Hell in a Cell",
+    "year": 2014
   },
   {
+    "codec": "x264",
+    "group": "Ebi",
     "quality": "PPV.HDTV",
-    "codec": "x264",
-    "title": "UFC 179",
-    "group": "Ebi"
+    "title": "UFC 179"
   },
   {
-    "season": 2,
+    "codec": "x264",
     "episode": 5,
     "quality": "HDTV",
-    "codec": "x264",
+    "season": 2,
     "title": "Marvels Agents of S H I E L D"
   },
   {
-    "year": 2014,
-    "resolution": "1080p",
-    "quality": "WEB-DL",
+    "audio": "DD5.1",
     "codec": "H264",
-    "audio": "DD5.1",
-    "title": "X-Men Days of Future Past"
-  },
-  {
-    "year": 2014,
-    "resolution": "720p",
-    "quality": "HDCAM",
-    "codec": "x264",
-    "region": "R6",
-    "title": "Guardians Of The Galaxy"
-  },
-  {
-    "season": 2,
-    "episode": 1,
-    "resolution": "1080p",
     "quality": "WEB-DL",
+    "resolution": "1080p",
+    "title": "X-Men Days of Future Past",
+    "year": 2014
+  },
+  {
+    "codec": "x264",
+    "quality": "HDCAM",
+    "region": "R6",
+    "resolution": "720p",
+    "title": "Guardians Of The Galaxy",
+    "year": 2014
+  },
+  {
     "audio": "DD5.1",
+    "episode": 1,
+    "quality": "WEB-DL",
+    "resolution": "1080p",
+    "season": 2,
     "title": "Marvel's Agents of S H I E L D"
   },
   {
-    "season": 2,
-    "episode": 6,
-    "quality": "HDTV",
     "codec": "x264",
-    "title": "Marvels Agents of S.H.I.E.L.D.",
+    "encoder": "ettv",
+    "episode": 6,
     "group": "KILLERS",
-    "encoder": "ettv"
+    "quality": "HDTV",
+    "season": 2,
+    "title": "Marvels Agents of S.H.I.E.L.D."
   },
   {
-    "year": 2014,
     "quality": "CamRip",
-    "title": "Guardians of the Galaxy"
+    "title": "Guardians of the Galaxy",
+    "year": 2014
   },
   {
-    "season": 5,
-    "episode": 3,
-    "resolution": "1080p",
-    "quality": "WEB-DL",
-    "codec": "H.264",
     "audio": "DD5.1",
-    "title": "The Walking Dead",
-    "group": "Cyphanix"
-  },
-  {
-    "year": 2012,
-    "quality": "DVDRip",
-    "codec": "XViD",
-    "audio": "LiNE",
-    "region": "R5",
-    "title": "Brave"
-  },
-  {
-    "year": 2014,
-    "quality": "BRRip",
-    "codec": "XViD",
-    "title": "Lets Be Cops"
-  },
-  {
-    "year": 2013,
-    "quality": "WBBRip",
-    "codec": "XViD",
-    "title": "These Final Hours"
-  },
-  {
+    "codec": "H.264",
+    "episode": 3,
+    "group": "Cyphanix",
+    "quality": "WEB-DL",
+    "resolution": "1080p",
     "season": 5,
+    "title": "The Walking Dead"
+  },
+  {
+    "audio": "LiNE",
+    "codec": "XViD",
+    "quality": "DVDRip",
+    "region": "R5",
+    "title": "Brave",
+    "year": 2012
+  },
+  {
+    "codec": "XViD",
+    "quality": "BRRip",
+    "title": "Lets Be Cops",
+    "year": 2014
+  },
+  {
+    "codec": "XViD",
+    "quality": "WBBRip",
+    "title": "These Final Hours",
+    "year": 2013
+  },
+  {
+    "codec": "x264",
     "episode": 6,
     "quality": "HDTV",
-    "codec": "x264",
+    "season": 5,
     "title": "Downton Abbey"
   },
   {
-    "year": 2014,
-    "quality": "HDRip",
-    "codec": "XViD",
     "audio": "AC3",
-    "hardcoded": true,
-    "title": "Annabelle"
-  },
-  {
-    "year": 2014,
-    "quality": "HDRip",
     "codec": "XViD",
     "hardcoded": true,
-    "title": "Lucy"
+    "quality": "HDRip",
+    "title": "Annabelle",
+    "year": 2014
   },
   {
-    "season": 1,
-    "episode": 4,
-    "year": 2014,
-    "quality": "HDTV",
+    "codec": "XViD",
+    "hardcoded": true,
+    "quality": "HDRip",
+    "title": "Lucy",
+    "year": 2014
+  },
+  {
     "codec": "x264",
-    "title": "The Flash"
+    "episode": 4,
+    "quality": "HDTV",
+    "season": 1,
+    "title": "The Flash",
+    "year": 2014
   },
   {
-    "season": 18,
+    "codec": "x264",
     "episode": 5,
     "quality": "HDTV",
-    "codec": "x264",
+    "season": 18,
     "title": "South Park"
   },
   {
-    "season": 1,
+    "codec": "x264",
     "episode": 3,
-    "year": 2014,
     "quality": "HDTV",
-    "codec": "x264",
-    "title": "The Flash"
-  },
-  {
     "season": 1,
+    "title": "The Flash",
+    "year": 2014
+  },
+  {
+    "codec": "x264",
     "episode": 1,
-    "year": 2014,
     "quality": "HDTV",
-    "codec": "x264",
-    "title": "The Flash"
+    "season": 1,
+    "title": "The Flash",
+    "year": 2014
   },
   {
-    "year": 2014,
-    "quality": "WEBRip",
     "audio": "Dual-Audio",
+    "quality": "WEBRip",
     "size": "1400Mb",
-    "title": "Lucy"
+    "title": "Lucy",
+    "year": 2014
   },
   {
-    "year": 2014,
     "quality": "HdRip",
-    "title": "Teenage Mutant Ninja Turtles"
+    "title": "Teenage Mutant Ninja Turtles",
+    "year": 2014
   },
   {
-    "year": 2014,
-    "title": "Teenage Mutant Ninja Turtles"
+    "title": "Teenage Mutant Ninja Turtles",
+    "year": 2014
   },
   {
-    "season": 26,
-    "episode": 5,
-    "quality": "HDTV",
     "codec": "x264",
+    "episode": 5,
     "proper": true,
+    "quality": "HDTV",
+    "season": 26,
     "title": "The Simpsons"
   },
   {
-    "year": 2014,
-    "resolution": "720p",
-    "quality": "BrRip",
     "codec": "x264",
-    "title": "2047 - Sights of Death"
+    "quality": "BrRip",
+    "resolution": "720p",
+    "title": "2047 - Sights of Death",
+    "year": 2014
   },
   {
-    "season": 12,
+    "codec": "x264",
+    "encoder": "eztv",
     "episode": 1,
     "quality": "HDTV",
-    "codec": "x264",
     "repack": true,
-    "title": "Two and a Half Men",
-    "encoder": "eztv"
+    "season": 12,
+    "title": "Two and a Half Men"
   },
   {
-    "year": 2014,
-    "quality": "WEBrip",
-    "codec": "XviD",
     "audio": "AC3",
-    "title": "Dinosaur 13"
-  },
-  {
-    "year": 2014,
-    "quality": "HDRip",
     "codec": "XviD",
+    "quality": "WEBrip",
+    "title": "Dinosaur 13",
+    "year": 2014
+  },
+  {
     "audio": "MP3",
-    "title": "Teenage Mutant Ninja Turtles"
-  },
-  {
-    "year": 2014,
-    "resolution": "1080p",
-    "quality": "WEB-DL",
-    "codec": "H264",
-    "audio": "DD51",
-    "title": "Dawn Of The Planet of The Apes"
-  },
-  {
-    "year": 2014,
-    "resolution": "720p",
+    "codec": "XviD",
     "quality": "HDRip",
-    "codec": "x264",
-    "audio": "AC3.5.1",
-    "title": "Teenage Mutant Ninja Turtles"
+    "title": "Teenage Mutant Ninja Turtles",
+    "year": 2014
   },
   {
-    "season": 1,
+    "audio": "DD51",
+    "codec": "H264",
+    "quality": "WEB-DL",
+    "resolution": "1080p",
+    "title": "Dawn Of The Planet of The Apes",
+    "year": 2014
+  },
+  {
+    "audio": "AC3.5.1",
+    "codec": "x264",
+    "quality": "HDRip",
+    "resolution": "720p",
+    "title": "Teenage Mutant Ninja Turtles",
+    "year": 2014
+  },
+  {
+    "audio": "AAC",
+    "codec": "x264",
     "episode": 5,
     "quality": "WEB-DL",
-    "codec": "x264",
-    "audio": "AAC",
+    "season": 1,
     "title": "Gotham"
   },
   {
-    "year": 2014,
-    "resolution": "1080p",
-    "quality": "WEB-DL",
-    "codec": "H264",
     "audio": "AAC2.0",
-    "title": "Into The Storm"
+    "codec": "H264",
+    "quality": "WEB-DL",
+    "resolution": "1080p",
+    "title": "Into The Storm",
+    "year": 2014
   },
   {
-    "year": 2014,
-    "resolution": "720p",
-    "quality": "WEBRip",
     "audio": "Dual-Audio",
-    "title": "Lucy"
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "title": "Lucy",
+    "year": 2014
   },
   {
-    "year": 2014,
-    "resolution": "1080p",
-    "quality": "BRRip",
-    "codec": "x264",
     "audio": "DTS",
-    "title": "Into The Storm"
-  },
-  {
-    "year": 2014,
-    "resolution": "1080p",
-    "quality": "BluRay",
     "codec": "x264",
-    "title": "Sin City A Dame to Kill For"
-  },
-  {
-    "year": 2014,
-    "quality": "HDTV",
-    "codec": "x264",
-    "title": "WWE Monday Night Raw 3rd Nov"
-  },
-  {
-    "year": 2013,
     "quality": "BRRip",
-    "codec": "XViD",
-    "title": "Jack And The Cuckoo-Clock Heart"
+    "resolution": "1080p",
+    "title": "Into The Storm",
+    "year": 2014
   },
   {
-    "year": 2014,
-    "quality": "HDTV",
     "codec": "x264",
-    "title": "WWE Hell in a Cell"
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Sin City A Dame to Kill For",
+    "year": 2014
   },
   {
-    "year": 2014,
-    "quality": "TS",
+    "codec": "x264",
+    "quality": "HDTV",
+    "title": "WWE Monday Night Raw 3rd Nov",
+    "year": 2014
+  },
+  {
     "codec": "XViD",
-    "audio": "AC3",
-    "title": "Dracula Untold"
+    "quality": "BRRip",
+    "title": "Jack And The Cuckoo-Clock Heart",
+    "year": 2013
   },
   {
-    "season": 1,
+    "codec": "x264",
+    "quality": "HDTV",
+    "title": "WWE Hell in a Cell",
+    "year": 2014
+  },
+  {
+    "audio": "AC3",
+    "codec": "XViD",
+    "quality": "TS",
+    "title": "Dracula Untold",
+    "year": 2014
+  },
+  {
+    "codec": "x264",
     "episode": 1,
     "quality": "HDTV",
-    "codec": "x264",
+    "season": 1,
     "title": "The Missing"
   },
   {
-    "season": 8,
-    "episode": 11,
-    "year": 2005,
-    "resolution": "720p",
-    "quality": "HDTV",
     "codec": "x264",
+    "episode": 11,
+    "group": "FoV",
+    "quality": "HDTV",
+    "resolution": "720p",
+    "season": 8,
     "title": "Doctor Who",
-    "group": "FoV"
+    "year": 2005
   },
   {
-    "season": 1,
+    "audio": "AAC",
+    "codec": "x264",
     "episode": 7,
     "quality": "WEB-DL",
-    "codec": "x264",
-    "audio": "AAC",
+    "season": 1,
     "title": "Gotham"
   },
   {
-    "year": 2014,
-    "quality": "DVDRip",
     "codec": "XViD",
-    "title": "One Shot"
+    "quality": "DVDRip",
+    "title": "One Shot",
+    "year": 2014
   },
   {
-    "year": 2014,
-    "quality": "DvDScr",
-    "codec": "x264",
     "audio": "AAC",
+    "codec": "x264",
     "language": "Hindi",
-    "title": "The Shaukeens"
-  },
-  {
-    "year": 2014,
     "quality": "DvDScr",
-    "codec": "x264",
-    "title": "The Shaukeens"
+    "title": "The Shaukeens",
+    "year": 2014
   },
   {
-    "year": 2014,
-    "resolution": "1080p",
-    "quality": "WEBRip",
     "codec": "x264",
+    "quality": "DvDScr",
+    "title": "The Shaukeens",
+    "year": 2014
+  },
+  {
     "audio": "AAC.2.0",
+    "codec": "x264",
     "hardcoded": true,
     "proper": true,
-    "title": "Annabelle"
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "title": "Annabelle",
+    "year": 2014
   },
   {
-    "year": 2014,
-    "quality": "CAM",
-    "codec": "x264",
     "audio": "AAC",
+    "codec": "x264",
+    "language": "ENG",
+    "quality": "CAM",
     "title": "Interstellar",
-    "language": "ENG"
+    "year": 2014
   },
   {
-    "year": 2014,
-    "quality": "DVDRip",
     "audio": "Dual Audio",
     "container": "AVI",
-    "title": "Guardians of the Galaxy"
+    "quality": "DVDRip",
+    "title": "Guardians of the Galaxy",
+    "year": 2014
   },
   {
-    "year": 2014,
-    "resolution": "720p",
-    "quality": "WEB-DL",
-    "codec": "x264",
     "audio": "Dual Audio",
-    "container": "MKV",
-    "title": "Eliza Graves"
-  },
-  {
-    "year": 2014,
-    "quality": "PDTV",
     "codec": "x264",
-    "widescreen": true,
-    "title": "WWE Monday Night Raw"
+    "container": "MKV",
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "title": "Eliza Graves",
+    "year": 2014
   },
   {
-    "season": 1,
+    "codec": "x264",
+    "quality": "PDTV",
+    "title": "WWE Monday Night Raw",
+    "widescreen": true,
+    "year": 2014
+  },
+  {
     "episode": 3,
+    "season": 1,
     "title": "Sons of Anarchy"
   },
   {
-    "season": 8,
-    "episode": 12,
-    "year": 2005,
-    "resolution": "720p",
-    "quality": "hdtv",
     "codec": "x264",
-    "title": "doctor who"
+    "episode": 12,
+    "quality": "hdtv",
+    "resolution": "720p",
+    "season": 8,
+    "title": "doctor who",
+    "year": 2005
   },
   {
-    "season": 1,
-    "episode": 1,
-    "resolution": "720p",
-    "quality": "bluray",
     "codec": "x264",
+    "episode": 1,
+    "quality": "bluray",
+    "resolution": "720p",
+    "season": 1,
     "title": "breaking bad"
   },
   {
-    "season": 4,
     "episode": 3,
+    "season": 4,
     "title": "Game of Thrones"
   },
   {
-    "season": 5,
-    "episode": 10,
-    "resolution": "480p",
-    "quality": "BluRay",
     "codec": "x264",
-    "website": "720pMkv.Com",
-    "title": "sons of anarchy"
+    "episode": 10,
+    "quality": "BluRay",
+    "resolution": "480p",
+    "season": 5,
+    "title": "sons of anarchy",
+    "website": "720pMkv.Com"
   },
   {
-    "season": 7,
-    "episode": 7,
-    "resolution": "720p",
-    "quality": "HDTV",
     "codec": "X264",
-    "website": "www.Speed.cd",
+    "episode": 7,
+    "group": "DIMENSION",
+    "quality": "HDTV",
+    "resolution": "720p",
+    "season": 7,
     "title": "Sons of Anarchy",
-    "group": "DIMENSION"
+    "website": "www.Speed.cd"
   },
   {
-    "season": 2,
     "episode": 20,
+    "language": ["rus","eng"],
     "resolution": "720p",
-    "language": ["rus", "eng"],
+    "season": 2,
     "title": "Community"
   },
   {
-    "title": "The Jungle Book",
-    "resolution": "1080p",
+    "3d": true,
     "audio": "AAC",
-    "year": 2016,
-    "quality": "BRRip",
     "codec": "x264",
+    "quality": "BRRip",
+    "resolution": "1080p",
     "sbs": "SBS",
-    "3d": true
-  },
-  {
-    "title": "Ant-Man",
-    "resolution": "1080p",
-    "audio": "AAC",
-    "year": 2015,
-    "quality": "BRRip",
-    "codec": "x264",
-    "sbs": "Half-SBS",
-    "3d": true
-  },
-  {
-    "title": "Ice Age Collision Course",
-    "resolution": "720p",
-    "audio": "AC3",
-    "year": 2016,
-    "quality": "HDRIP",
-    "codec": "X264"
-  },
-  {
-    "title": "Red Sonja Queen Of Plagues",
-    "codec": "x264",
-    "quality": "BDRip",
-    "year": 2016,
-    "encoder": "PRiME"
-  },
-  {
-    "hardcoded": true,
-    "resolution": "720p",
-    "size": "900MB",
-    "year": 2016,
-    "title": "The Purge: Election Year",
-    "quality": "HDRiP"
-  },
-  {
-    "title": "War Dogs",
-    "quality": "HDTS",
-    "size": "600MB",
+    "title": "The Jungle Book",
     "year": 2016
   },
   {
-    "title": "The Hateful Eight",
-    "codec": "x265",
-    "size": "999MB",
-    "resolution": "720p",
-    "quality": "BluRay",
+    "3d": true,
+    "audio": "AAC",
+    "codec": "x264",
+    "quality": "BRRip",
+    "resolution": "1080p",
+    "sbs": "Half-SBS",
+    "title": "Ant-Man",
     "year": 2015
   },
   {
+    "audio": "AC3",
+    "codec": "X264",
+    "quality": "HDRIP",
+    "resolution": "720p",
+    "title": "Ice Age Collision Course",
+    "year": 2016
+  },
+  {
+    "codec": "x264",
+    "encoder": "PRiME",
+    "quality": "BDRip",
+    "title": "Red Sonja Queen Of Plagues",
+    "year": 2016
+  },
+  {
+    "hardcoded": true,
+    "quality": "HDRiP",
+    "resolution": "720p",
+    "size": "900MB",
+    "title": "The Purge: Election Year",
+    "year": 2016
+  },
+  {
+    "quality": "HDTS",
+    "size": "600MB",
+    "title": "War Dogs",
+    "year": 2016
+  },
+  {
+    "codec": "x265",
+    "quality": "BluRay",
+    "resolution": "720p",
+    "size": "999MB",
+    "title": "The Hateful Eight",
+    "year": 2015
+  },
+  {
+    "audio": "AAC",
+    "codec": "x264",
+    "quality": "BRRip",
+    "resolution": "720p",
     "title": "The Boss",
     "unrated": true,
-    "resolution": "720p",
-    "audio": "AAC",
-    "year": 2016,
-    "quality": "BRRip",
-    "codec": "x264"
+    "year": 2016
   },
   {
-    "title": "Return To Snowy River",
-    "year": 1988,
-    "quality":"DVDRip",
-    "codec": "x264"
-  },
-  {
-    "title": "Akira",
-    "audio": "AC3",
-    "resolution": "720p",
     "codec": "x264",
-    "year": 2016,
-    "language": "Hindi"
+    "quality": "DVDRip",
+    "title": "Return To Snowy River",
+    "year": 1988
   },
   {
-    "title": "Ben Hur",
-    "quality": "TELESYNC",
-    "year": 2016,
     "audio": "AC3",
-    "codec": "x264"
+    "codec": "x264",
+    "language": "Hindi",
+    "resolution": "720p",
+    "title": "Akira",
+    "year": 2016
   },
   {
-    "title": "The Secret Life of Pets",
+    "audio": "AC3",
+    "codec": "x264",
+    "quality": "TELESYNC",
+    "title": "Ben Hur",
+    "year": 2016
+  },
+  {
     "audio": "AAC-LC",
-    "year": 2016,
+    "codec": "x264",
     "quality": "HDRiP",
-    "codec": "x264"
+    "title": "The Secret Life of Pets",
+    "year": 2016
   },
   {
-    "title": "The X-Files",
+    "codec": "x264",
+    "group": "RAPiDCOWS",
+    "quality": "BluRay",
+    "resolution": "720p",
     "season": 1,
     "subtitles": "DKsubs",
-    "resolution": "720p",
-    "quality": "BluRay",
-    "codec": "x264",
-    "group": "RAPiDCOWS"
+    "title": "The X-Files"
   },
   {
-    "title": "The X-Files",
-    "season": [1, 2, 3],
-    "resolution": "1080p",
-    "quality": "BluRay",
     "codec": "x265",
-    "subtitles": "DKsubs"
-  },
-  {
-    "title": "The X-Files",
-    "season": [1, 2, 3, 4, 5, 6, 7, 8, 9],
-    "resolution": "1080p",
     "quality": "BluRay",
-    "codec": "x264",
-    "group": "GECKOS"
+    "resolution": "1080p",
+    "season": [1,2,3],
+    "subtitles": "DKsubs",
+    "title": "The X-Files"
   },
   {
-    "title": "The Flash",
-    "year": 2014,
-    "season": 3,
-    "resolution": "720p",
+    "codec": "x264",
+    "group": "GECKOS",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "season": [1,2,3,4,5,6,7,8,9],
+    "title": "The X-Files"
+  },
+  {
+    "codec": "x264",
+    "group": "Scene",
     "quality": "HDTV",
-    "codec": "x264",
-    "group": "Scene"
+    "resolution": "720p",
+    "season": 3,
+    "title": "The Flash",
+    "year": 2014
   },
   {
-    "title": "Boku Unmei no Hito desu",
+    "container": "mp4",
     "episode": 7,
+    "group": "ZhuixinFan",
     "quality": "HDTVrip",
     "resolution": "1280X720",
-    "container": "mp4",
-    "group": "ZhuixinFan"
+    "title": "Boku Unmei no Hito desu"
   },
   {
-    "title": "Blind",
-    "year": 2017,
+    "audio": "DTS5.1",
+    "codec": "x264",
+    "group": "TWA",
     "language": "NORDiC",
     "quality": "BluRay",
     "resolution": "720p",
-    "codec": "x264",
-    "audio": "DTS5.1",
-    "group": "TWA"
+    "title": "Blind",
+    "year": 2017
   },
   {
-    "title": "Family Guy",
+    "codec": "x264",
+    "resolution": "720p",
     "season": 17,
-    "resolution": "720p",
-    "codec": "x264"
+    "title": "Family Guy"
   },
   {
-    "title": "South Park",
-    "season": 23,
-    "resolution": "720p",
     "codec": "x264",
-    "quality": "WEB-DL"
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "season": 23,
+    "title": "South Park"
   },
   {
-    "title": "Borgen",
-    "season": 1,
     "codec": "x264",
     "quality": "DVDrip",
+    "season": 1,
+    "title": "Borgen",
     "year": 2010
   },
   {
-    "title": "Bumbibjornarna",
-    "season": 2,
     "codec": "XviD",
+    "group": "Rezar1337",
     "quality": "DVDRip",
-    "group": "Rezar1337"
+    "season": 2,
+    "title": "Bumbibjornarna"
   },
   {
-    "title": "The Martian",
-    "resolution": "540p",
-    "codec": "x264",
-    "year": 2015,
     "audio": "AAC2",
-    "quality": "HDRip"
+    "codec": "x264",
+    "quality": "HDRip",
+    "resolution": "540p",
+    "title": "The Martian",
+    "year": 2015
   },
   {
-    "title": "Borgen",
-    "season": 1,
+    "container": "mp4",
     "episode": 9,
-    "container": "mp4"
+    "season": 1,
+    "title": "Borgen"
   },
   {
-    "title": "The Legend of 1900",
-    "year": 1998,
-    "codec": "H264",
     "audio": "AAC",
+    "codec": "H264",
     "quality": "BluRay",
-    "resolution": "1080p"
+    "resolution": "1080p",
+    "title": "The Legend of 1900",
+    "year": 1998
   },
   {
-    "title": "2001 A Space Odyssey",
-    "year": 1968,
     "codec": "x264",
     "quality": "BluRay",
-    "resolution": "1080p"
+    "resolution": "1080p",
+    "title": "2001 A Space Odyssey",
+    "year": 1968
   },
   {
-    "title": "Impractical Jokers The Movie",
-    "year": 2020,
+    "audio": "AAC5.1",
     "codec": "x264",
     "quality": "WEBRip",
     "resolution": "1080p",
-    "audio": "AAC5.1"
+    "title": "Impractical Jokers The Movie",
+    "year": 2020
   },
   {
-    "title": "1983",
-    "season": 1,
-    "resolution": "1080p",
-    "quality": "WEB-DL",
-    "language": "Polish",
     "audio": "AAC5.1",
-    "codec": "X264"
-  },
-  {
-    "title": "The Bridge",
-    "subtitles": "E-Subs",
-    "audio": "AAC",
+    "codec": "X264",
+    "language": "Polish",
+    "quality": "WEB-DL",
+    "resolution": "1080p",
     "season": 1,
-    "codec": "x264",
-    "quality": "BRRip",
-    "encoder": "GWC"
+    "title": "1983"
   },
   {
-    "title": "The Meg",
+    "audio": "AAC",
+    "codec": "x264",
+    "encoder": "GWC",
+    "quality": "BRRip",
+    "season": 1,
+    "subtitles": "E-Subs",
+    "title": "The Bridge"
+  },
+  {
+    "codec": "x264",
+    "quality": "HDRip",
     "resolution": "1080p",
     "subtitles": "ExYu-Subs",
-    "year": 2018,
-    "quality": "HDRip",
-    "codec": "x264"
+    "title": "The Meg",
+    "year": 2018
   },
   {
-    "title": "Dragon Ball Super: Broly",
-    "subtitles": "English Subs",
-    "year": 2018,
+    "codec": "x264",
     "quality": "CAM",
-    "codec": "x264"
+    "subtitles": "English Subs",
+    "title": "Dragon Ball Super: Broly",
+    "year": 2018
   },
   {
-    "title": "Joker",
     "codec": "x264",
     "hardcoded": true,
+    "language": "English",
+    "quality": "HDRip",
     "resolution": "720p",
     "subtitles": "Hindi - Eng Multi Subs",
-    "quality": "HDRip",
-    "year": 2019,
-    "language": "English"
+    "title": "Joker",
+    "year": 2019
   },
   {
-    "title": "IP Man And Four Kings",
+    "audio": "AAC",
     "codec": "x264",
     "hardcoded": true,
+    "language": "Mandarin",
+    "quality": "HDRip",
     "resolution": "1080p",
     "subtitles": "CHS-ENG SUBS",
-    "quality": "HDRip",
-    "year": 2019,
-    "audio": "AAC",
-    "language": "Mandarin"
+    "title": "IP Man And Four Kings",
+    "year": 2019
   },
   {
-    "title": "American Dad!",
-    "season": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    "season": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+    "title": "American Dad!"
   },
   {
-    "title": "The Simpsons",
-    "language": ["ITA", "ENG"],
+    "language": ["ITA","ENG"],
+    "quality": "DVDrip",
     "season": 1,
-    "quality": "DVDrip"
+    "title": "The Simpsons"
   },
   {
-    "title": "The Simpsons",
     "quality": "DVDRip",
     "resolution": "720p",
-    "season": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
+    "season": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28],
+    "title": "The Simpsons"
   },
   {
-    "title": "Stephen Colbert",
-    "year": 2020,
-    "month": 4,
-    "day": 2,
-    "quality": "HDTV",
-    "codec": "x264"
-  },
-  {
-    "title": "Jimmy Not Funny",
-    "year": 2017,
-    "month": 8,
-    "day": 1,
-    "container": "mkv",
     "codec": "x264",
-    "resolution": "720p",
-    "quality": "HDTV"
+    "day": 2,
+    "month": 4,
+    "quality": "HDTV",
+    "title": "Stephen Colbert",
+    "year": 2020
   },
   {
-    "title": "Tom Clancys Jack Ryan",
-    "season": 2,
+    "codec": "x264",
+    "container": "mkv",
+    "day": 1,
+    "month": 8,
+    "quality": "HDTV",
+    "resolution": "720p",
+    "title": "Jimmy Not Funny",
+    "year": 2017
+  },
+  {
+    "codec": "x264",
     "quality": "WEBRip",
     "resolution": "720p",
-    "codec": "x264"
-  },
-  {
-    "title": "Sacred Games",
-    "season": 1,
-    "year": 2018,
-    "codec": "x264",
-    "subtitles": "ESub",
-    "resolution": "720p",
-    "language": "Hindi"
-  },
-  {
-    "title":"Homeland",
-    "season": [1, 2, 3, 4],
-    "quality":"HDTV",
-    "resolution": "720p",
-    "codec": "X264"
-  },
-  {
-    "year": 2020,
-    "title": "Home Before Dark",
-    "season": 1,
-    "resolution": "1080p",
-    "bit-depth": "10bit",
-    "audio": "EAC3 5.1",
-    "quality": "Webrip",
-    "codec": "x265"
-  },
-  {
-    "episode": 3,
-    "title": "Our Girl",
-    "season": 5,
-    "quality": "HDTV",
-    "codec": "x264"
-  },
-  {
-    "episode": 4,
-    "title": "Roswell New Mexico",
     "season": 2,
-    "resolution": "480p",
-    "codec": "x264"
+    "title": "Tom Clancys Jack Ryan"
   },
   {
+    "codec": "x264",
+    "language": "Hindi",
+    "resolution": "720p",
+    "season": 1,
+    "subtitles": "ESub",
+    "title": "Sacred Games",
+    "year": 2018
+  },
+  {
+    "codec": "X264",
+    "quality": "HDTV",
+    "resolution": "720p",
+    "season": [1,2,3,4],
+    "title": "Homeland"
+  },
+  {
+    "audio": "EAC3 5.1",
+    "bit-depth": "10bit",
+    "codec": "x265",
+    "quality": "Webrip",
+    "resolution": "1080p",
+    "season": 1,
+    "title": "Home Before Dark",
+    "year": 2020
+  },
+  {
+    "codec": "x264",
+    "episode": 3,
+    "quality": "HDTV",
+    "season": 5,
+    "title": "Our Girl"
+  },
+  {
+    "codec": "x264",
+    "episode": 4,
+    "resolution": "480p",
+    "season": 2,
+    "title": "Roswell New Mexico"
+  },
+  {
+    "codec": "x264",
+    "episode": 0,
     "quality": "WEB",
     "season": 1,
-    "title": "Coyote Peterson-Brave the Wild",
-    "codec": "x264",
-    "episode": 0
+    "title": "Coyote Peterson-Brave the Wild"
   },
   {
-    "quality": "WEB-DLMux",
-    "language": ["ITA", "ENG"],
-    "title": "The Blacklist",
-    "episode": [5, 6],
-    "codec": "H264",
-    "season": 7,
     "audio": "DD5.1",
-    "resolution": "1080p"
+    "codec": "H264",
+    "episode": [5,6],
+    "language": ["ITA","ENG"],
+    "quality": "WEB-DLMux",
+    "resolution": "1080p",
+    "season": 7,
+    "title": "The Blacklist"
   },
   {
     "audio": "EAC3",
     "bit-depth": "10bit",
-    "quality": "WEB-DL",
-    "year": 1972,
     "codec": "x265",
-    "season": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "quality": "WEB-DL",
+    "resolution": "576p",
+    "season": [1,2,3,4,5,6,7,8,9,10],
     "title": "Are You Being Served",
-    "resolution": "576p"
+    "year": 1972
   },
   {
-    "season": 6,
-    "title": "Empire",
+    "codec": "H264",
+    "encoder": "TGx",
     "episode": 16,
     "quality": "WEB",
-    "year": 2015,
-    "codec": "H264",
-    "encoder": "TGx"
+    "season": 6,
+    "title": "Empire",
+    "year": 2015
   },
   {
-    "season": 1,
-    "title": "Mixed-ish",
+    "codec": "XviD",
     "episode": 20,
-    "codec": "XviD"
+    "season": 1,
+    "title": "Mixed-ish"
   },
   {
-    "container": "MP4",
-    "size": "4.3GB",
     "codec": "x264",
-    "title": "Marvels Iron Fist",
+    "container": "MP4",
     "quality": "WEB-DL",
     "resolution": "720p",
-    "season": 2
+    "season": 2,
+    "size": "4.3GB",
+    "title": "Marvels Iron Fist"
   }
 ]

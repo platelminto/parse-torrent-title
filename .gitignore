@@ -7,5 +7,5 @@ env/
 *.pyc
 .idea/
 
-tests/files/temp*
-test_generator.py
+tests/files/seen_inputs.json
+tests/test_generator.py
