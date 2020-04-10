@@ -867,5 +867,50 @@
     "season": 2,
     "size": "4.3GB",
     "title": "Marvels Iron Fist"
+  },
+  {
+    "codec": "x264",
+    "encoder": "EtHD",
+    "group": "BARGAiN",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Dag Vreemde Man",
+    "year": 2016
+  },
+  {
+    "codec": "x264",
+    "encoder": "EtHD",
+    "group": "BARGAiN",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Boi",
+    "year": 2016
+  },
+  {
+    "codec": "x264",
+    "group": "GalaxyRG",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "size": "800MB",
+    "title": "Label Me",
+    "year": 2019
+  },
+  {
+    "codec": "h264",
+    "encoder": "TGx",
+    "episode": [1,2],
+    "group": "FaiLED",
+    "quality": "WEB",
+    "resolution": "720p",
+    "season": 3,
+    "title": "A Touch Of Cloth"
+  },
+  {
+    "codec": "x264",
+    "encoder": "TGx",
+    "group": "SHADOW",
+    "quality": "HDRip",
+    "title": "The Hand Bag",
+    "year": 2020
   }
 ]
