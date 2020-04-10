@@ -15,10 +15,10 @@ day_pattern = '[0-2][0-9]|3[01]'
 patterns = [
     ('season', delimiters + '(' # Season description can't be at the beginning, must be after this pattern
                '' + season_range_pattern + '|' # Describes season ranges
-               '(?:Complete' + delimiters + ')?s([0-9]{1,2})(?:e[0-9]{1,2})?|'  # Describes season, optionally with complete or episode
+               '(?:Complete' + delimiters + ')?s([0-9]{1,2})(?:e[0-9]{1,2})?(?:' + delimiters + '?Complete)?|'  # Describes season, optionally with complete or episode
                '([0-9]{1,2})x[0-9]{2}|'  # Describes 5x02, 12x15 type descriptions
-               '(?:Complete' + delimiters + ')?Season[\. -]([0-9]{1,2}))'  # Describes Season.15 type descriptions
-               '(?:' + delimiters + '|$)'),
+               '(?:Complete' + delimiters + ')?Season[\. -]([0-9]{1,2})(?:' + delimiters + '?Complete)?'  # Describes Season.15 type descriptions
+               ')(?:' + delimiters + '|$)'),
     ('episode', '((?:(?:[ex]|ep)(?:[0-9]{1,2}(?:-[0-9]{1,2}))|(?:[ex]|ep)([0-9]{1,2}))(?:[^0-9]|$))'),
     ('year', '([\[\(]?(' + year_pattern + ')[\]\)]?)'),
     ('month', '(?:' + year_pattern + ')' + delimiters + '(' + month_pattern + ')' + delimiters + '(?:' + day_pattern + ')'),
