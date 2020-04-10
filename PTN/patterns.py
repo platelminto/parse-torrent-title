@@ -19,7 +19,7 @@ patterns = [
                '([0-9]{1,2})x[0-9]{2}|'  # Describes 5x02, 12x15 type descriptions
                '(?:Complete' + delimiters + ')?Season[\. -]([0-9]{1,2})(?:' + delimiters + '?Complete)?'  # Describes Season.15 type descriptions
                ')(?:' + delimiters + '|$)'),
-    ('episode', '((?:(?:[ex]|ep)(?:[0-9]{1,2}(?:-[0-9]{1,2}))|(?:[ex]|ep)([0-9]{1,2}))(?:[^0-9]|$))'),
+    ('episode', '((?:(?:[ex]|ep)(?:[0-9]{1,2}(?:-(?:[ex]|ep)?(?:[0-9]{1,2})))|(?:[ex]|ep)([0-9]{1,2}))(?:[^0-9]|$))'),
     ('year', '([\[\(]?(' + year_pattern + ')[\]\)]?)'),
     ('month', '(?:' + year_pattern + ')' + delimiters + '(' + month_pattern + ')' + delimiters + '(?:' + day_pattern + ')'),
     ('day', '(?:' + year_pattern + ')' + delimiters + '(?:' + month_pattern + ')' + delimiters + '(' + day_pattern + ')'),
