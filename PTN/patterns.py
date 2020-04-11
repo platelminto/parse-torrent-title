@@ -45,7 +45,7 @@ patterns = [
     ('sbs', '(?:Half-)?SBS'),
     ('unrated', 'UNRATED'),
     ('size', '(\d+(?:\.\d+)?(?:GB|MB))'),
-    ('bit-depth', '(?:8|10)bit'),
+    ('bitDepth', '(?:8|10)bit'),
     ('3d', '3D')
 ]
 
