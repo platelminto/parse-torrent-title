@@ -4,8 +4,8 @@
 
 ![Python versions](https://img.shields.io/badge/Python-2.7%2C%203.3-brightgreen.svg?style=flat-square)
 
-A python port of [Jānis](https://github.com/jzjzjzj)' awesome JavaScript
-[library](https://github.com/jzjzjzj/parse-torrent-name).
+Based off of [this JavaScript
+library](https://github.com/jzjzjzj/parse-torrent-name).
 
 Extract all possible media information from a filename. Multiple regex 
 rules are applied on the filename, each of which extracts appropriate
@@ -17,7 +17,7 @@ title of the content.
 
 - Added multi-language support.
 - Added multi-episode support.
-- Added `bit-depth` and `encoder` fields.
+- Added `bitDepth` and `encoder` fields.
 - Added proper subtitle support.
 - Added support for full `YYYY-MM-DD`-type dates, usually useful for daily shows that otherwise have no episode name.
 - Added support for 2020s release years.
@@ -213,4 +213,6 @@ Submit a PR, including tests (if applicable) for what you've added. Please provi
 
 ## License
 
-MIT © [Divij Bindlish](http://divijbindlish.in)
+MIT © 2015-2017 [Divij Bindlish](http://divijbindlish.in)
+
+MIT © 2020 [Giorgio Momigliano](https://github.com/platelminto)
