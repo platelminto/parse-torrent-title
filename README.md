@@ -17,7 +17,7 @@ title of the content.
 
 - Added multi-language support.
 - Added multi-episode support.
-- Added `bitDepth`, `encoder`, and `internal` fields.
+- Added various fields.
 - Added proper subtitle support.
 - Added support for full `YYYY-MM-DD`-type dates, usually useful for daily shows that otherwise have no episode name.
 - Added support for 2020s release years.
@@ -151,7 +151,7 @@ after correctly getting the season and episode number.
 ### Parts extracted
 
 * audio
-* bit-depth
+* bitDepth
 * codec
 * container
 * day
@@ -167,6 +167,7 @@ after correctly getting the season and episode number.
 * month
 * proper
 * quality
+* readnfo
 * region
 * repack
 * resolution

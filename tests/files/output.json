@@ -496,6 +496,7 @@
     "audio": "AC3",
     "codec": "X264",
     "quality": "HDRIP",
+    "readnfo": true,
     "resolution": "720p",
     "title": "Ice Age Collision Course",
     "year": 2016

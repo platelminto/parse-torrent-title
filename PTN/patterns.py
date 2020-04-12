@@ -49,7 +49,8 @@ patterns = [
     ('size', '(\d+(?:\.\d+)?(?:GB|MB))'),
     ('bitDepth', '(?:8|10)bit'),
     ('3d', '3D'),
-    ('internal', 'iNTERNAL')
+    ('internal', 'iNTERNAL'),
+    ('readnfo', 'READNFO')
 ]
 
 types = {
@@ -65,7 +66,8 @@ types = {
     'widescreen': 'boolean',
     'unrated': 'boolean',
     '3d': 'boolean',
-    'internal': 'boolean'
+    'internal': 'boolean',
+    'readnfo': 'boolean'
 }
 
 exceptions = [
