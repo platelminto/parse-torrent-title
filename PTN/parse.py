@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import re
-from .patterns import patterns, types, exceptions
+from .patterns import patterns, types, exceptions, delimiters
 
 
 class PTN(object):
@@ -99,9 +99,12 @@ class PTN(object):
                 m = re.findall('[0-9]+', match[0])
                 if m:
                     clean = list(range(int(m[0]), int(m[1])+1))
-            elif key == 'language' and index['clean'] != 0:
+            elif key == 'language':
                 # handle multi language
-                clean = match
+                m = re.split('{}+'.format(delimiters), match[0])
+                clean = list(filter(None, m))
+                if len(clean) == 1:
+                    clean = clean[0]
             elif key in types.keys() and types[key] == 'boolean':
                 clean = True
             else:
@@ -109,10 +112,13 @@ class PTN(object):
                 if key in types.keys() and types[key] == 'integer':
                     clean = int(clean)
 
+            # Codec, quality and subtitles matches can interfere with group matching,
+            # so we depend on _late method later to extract it.
             if key == 'group':
                 if (re.search(self._get_pattern('codec'), clean, re.IGNORECASE) or
-                    re.search(self._get_pattern('quality'), clean)):
-                    continue  # Codec and quality.
+                    re.search(self._get_pattern('quality'), clean, re.IGNORECASE) or
+                    re.search(self._get_pattern('subtitles'), clean, re.IGNORECASE)):
+                    continue
                 if re.match('[^ ]+ [^ ]+ .+', clean):
                     key = 'episodeName'
             if key == 'episode':

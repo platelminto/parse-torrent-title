@@ -101,7 +101,7 @@
     "quality": "WEB-DL",
     "resolution": "1080p",
     "season": 2,
-    "title": "Marvel's Agents of S H I E L D"
+    "title": "Marvel's Agents of S.H.I.E.L.D."
   },
   {
     "codec": "x264",
@@ -540,12 +540,15 @@
   },
   {
     "codec": "x264",
+    "encoder": "PRiME",
+    "group": "W4F",
+    "internal": true,
     "quality": "DVDRip",
     "title": "Return To Snowy River",
     "year": 1988
   },
   {
-    "audio": "AC3",
+    "audio": "AC3 - 5.1",
     "codec": "x264",
     "language": "Hindi",
     "resolution": "720p",
@@ -626,7 +629,7 @@
   },
   {
     "codec": "x264",
-    "quality": "WEB-DL",
+    "quality": "AMZN WEB-DL",
     "resolution": "720p",
     "season": 23,
     "title": "South Park"
@@ -669,6 +672,7 @@
   },
   {
     "codec": "x264",
+    "internal": true,
     "quality": "BluRay",
     "resolution": "1080p",
     "title": "2001 A Space Odyssey",
@@ -686,7 +690,7 @@
     "audio": "AAC5.1",
     "codec": "X264",
     "language": "Polish",
-    "quality": "WEB-DL",
+    "quality": "NF WEB-DL",
     "resolution": "1080p",
     "season": 1,
     "title": "1983"
@@ -772,7 +776,7 @@
   },
   {
     "codec": "x264",
-    "quality": "WEBRip",
+    "quality": "AMZN.WEBRip",
     "resolution": "720p",
     "season": 2,
     "title": "Tom Clancys Jack Ryan"
@@ -797,7 +801,7 @@
     "audio": "EAC3 5.1",
     "bitDepth": "10bit",
     "codec": "x265",
-    "quality": "Webrip",
+    "quality": "ATVP Webrip",
     "resolution": "1080p",
     "season": 1,
     "title": "Home Before Dark",
@@ -819,7 +823,9 @@
   },
   {
     "codec": "x264",
+    "encoder": "TGx",
     "episode": 0,
+    "internal": true,
     "quality": "WEB",
     "season": 1,
     "title": "Coyote Peterson-Brave the Wild"
@@ -829,16 +835,16 @@
     "codec": "H264",
     "episode": [5,6],
     "language": ["ITA","ENG"],
-    "quality": "WEB-DLMux",
+    "quality": "AMZN.WEB-DLMux",
     "resolution": "1080p",
     "season": 7,
     "title": "The Blacklist"
   },
   {
-    "audio": "EAC3",
+    "audio": "EAC3 2.0",
     "bitDepth": "10bit",
     "codec": "x265",
-    "quality": "WEB-DL",
+    "quality": "AMZN WEB-DL",
     "resolution": "576p",
     "season": [1,2,3,4,5,6,7,8,9,10],
     "title": "Are You Being Served",
@@ -889,7 +895,7 @@
   {
     "codec": "x264",
     "group": "GalaxyRG",
-    "quality": "WEBRip",
+    "quality": "AMZN.WEBRip",
     "resolution": "720p",
     "size": "800MB",
     "title": "Label Me",
