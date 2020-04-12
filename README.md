@@ -4,7 +4,7 @@
 
 ![Python versions](https://img.shields.io/badge/Python-2.7%2C%203.3-brightgreen.svg?style=flat-square)
 
-Based off of [this JavaScript
+Originally based off of [this JavaScript
 library](https://github.com/jzjzjzj/parse-torrent-name).
 
 Extract all possible media information from a filename. Multiple regex 
@@ -124,9 +124,9 @@ PTN.parse('South Park Season 23 Complete 720p AMZN WEB-DL x264 [i_c]')
 #     'season': 23,
 #     'resolution': '720p',
 #     'codec': 'x264',
-#     'quality': 'WEB-DL',
+#     'quality': 'AMZN WEB-DL',
 #     'encoder': 'i_c',
-#     'excess': ['Complete', 'AMZN']
+#     'excess': 'Complete'
 # }
 
   
