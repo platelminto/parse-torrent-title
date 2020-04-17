@@ -13,7 +13,7 @@ setup(
     author=__import__('PTN').__author__,
     author_email=__import__('PTN').__email__,
     license=__import__('PTN').__license__,
-    url='https://github.com/divijbindlish/parse-torrent-name',
+    url='https://github.com/platelminto/parse-torrent-name',
     description='Extract media information from torrent-like filename',
     long_description=description,
     packages=['PTN'],
