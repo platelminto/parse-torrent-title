@@ -8,7 +8,10 @@ producers = 'ATVP|AMZN|NF|NICK|RED|DSNP'
 
 season_range_pattern = '(?:Complete' + delimiters + '*)?(?:' + delimiters + '*)?(?:s(?:easons?)?)?' + delimiters + '?(?:s?[0-9]{1,2}[\s]*(' \
                        '?:\-|(?:\s*to\s*))[\s]*s?[0-9]{1,2})(?:' + delimiters + '*Complete)?'
-episode_pattern = '(?:(?:[ex]|ep)(?:[0-9]{1,2}(?:-(?:[ex]|ep)?(?:[0-9]{1,2})))|(?:[ex]|ep)([0-9]{1,2}))'
+
+# Used when matching episodeName in parse.py, when actually matching episodes we use a slightly
+# modified version that has a capture group on the episode number (as seen below).
+episode_pattern = '(?:(?:[ex]|ep)(?:[0-9]{1,2}(?:-(?:[ex]|ep)?(?:[0-9]{1,2})))|(?:[ex]|ep)(?:[0-9]{1,2}))'
 
 year_pattern = '(?:19[0-9]|20[0-2])[0-9]'
 month_pattern = '0[1-9]|1[0-2]'
@@ -21,19 +24,18 @@ patterns = [
                '([0-9]{1,2})x[0-9]{2}|'  # Describes 5x02, 12x15 type descriptions
                '(?:Complete' + delimiters + ')?Season[\. -]([0-9]{1,2})'  # Describes Season.15 type descriptions
                ')(?:' + delimiters + '|$)'),
-    ('episode', '(' + episode_pattern + ')(?:[^0-9]|$)'),
+    ('episode', '((?:[ex]|ep)(?:[0-9]{1,2}(?:-(?:[ex]|ep)?(?:[0-9]{1,2})))|(?:[ex]|ep)([0-9]{1,2}))(?:[^0-9]|$)'),
     ('year', '([\[\(]?(' + year_pattern + ')[\]\)]?)'),
     ('month', '(?:' + year_pattern + ')' + delimiters + '(' + month_pattern + ')' + delimiters + '(?:' + day_pattern + ')'),
     ('day', '(?:' + year_pattern + ')' + delimiters + '(?:' + month_pattern + ')' + delimiters + '(' + day_pattern + ')'),
     ('resolution', '([0-9]{3,4}p|1280x720)'),
-    ('quality', ('((?:PPV\.)?[HP]DTV|(?:HD)?CAM|B[DR]Rip|(?:HD-?)?TS|'
+    ('quality', ('((?:PPV\.)?[HP]DTV|(?:HD)?CAM-?(?:Rip)?|B[DR]Rip|(?:HD-?)?TS|'
                  'HDRip|HDTVRip|DVDRip|DVDRIP|'
-                 'CamRip|(?:(?:' + producers + ')' + delimiters + '?)?(?:PPV )?W[EB]B(?:-?DL(?:Mux)?)?(?:Rip| DVDRip)?|BluRay|DvDScr|hdtv|telesync)')),
+                 '(?:(?:' + producers + ')' + delimiters + '?)?(?:PPV )?W[EB]B(?:-?DL(?:Mux)?)?(?:Rip| DVDRip)?|BluRay|DvDScr|hdtv|telesync)')),
     ('codec', '(xvid|[hx]\.?26[45])'),
     ('audio', ('(MP3|DD5\.?1|Dual[\- ]Audio|LiNE|DTS|DTS5\.1|'
                'AAC[ \.-]LC|AAC(?:(?:\.?2(?:\.0)?)?|(?:\.?5(?:\.1)?)?)|'
                '(?:E-?)?AC-?3(?:' + delimiters + '*?(?:2\.0|5\.1))?)')),
-    ('group', '(- ?([^-]+(?:-={[^-]+-?$)?))$'),
     ('region', 'R[0-9]'),
     ('extended', '(EXTENDED(:?.CUT)?)'),
     ('hardcoded', 'HC'),

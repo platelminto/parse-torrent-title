@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import re
-from .patterns import patterns, types, exceptions, delimiters
+from .patterns import patterns, types, exceptions, delimiters, episode_pattern
 
 
 class PTN(object):
@@ -41,13 +41,16 @@ class PTN(object):
     def _get_pattern(pattern):
         return [p[1] for p in patterns if p[0] == pattern][0]
 
-    def _late(self, name, clean):
-        if name == 'group':
-            self._part(name, [], None, clean)
-        elif name == 'episodeName':
-            clean = re.sub('[\._]', ' ', clean)
-            clean = re.sub('_+$', '', clean)
-            self._part(name, [], None, clean.strip())
+    @staticmethod
+    def _clean_string(string):
+        clean = re.sub('^ -', '', string)
+        if clean.find(' ') == -1 and clean.find('.') != -1:
+            clean = re.sub('\.', ' ', clean)
+        clean = re.sub('_', ' ', clean)
+        clean = re.sub('([\[\(_]|- )$', '', clean).strip()
+        clean = clean.strip(' _-')
+
+        return clean
 
     def parse(self, name):
         name = name.strip()
@@ -60,7 +63,7 @@ class PTN(object):
         self.title_raw = None
 
         for key, pattern in patterns:
-            if key not in ('season', 'episode', 'website'):
+            if key not in ('season', 'episode', 'episodeName', 'website'):
                 pattern = r'\b%s\b' % pattern
 
             clean_name = re.sub('_', ' ', self.torrent['name'])
@@ -113,19 +116,12 @@ class PTN(object):
                     clean = int(clean)
 
             # Codec, quality and subtitles matches can interfere with group matching,
-            # so we depend on _late method later to extract it.
+            # so we do this later as a special case.
             if key == 'group':
                 if (re.search(self._get_pattern('codec'), clean, re.IGNORECASE) or
                     re.search(self._get_pattern('quality'), clean, re.IGNORECASE) or
                     re.search(self._get_pattern('subtitles'), clean, re.IGNORECASE)):
                     continue
-                if re.match('[^ ]+ [^ ]+ .+', clean):
-                    key = 'episodeName'
-            if key == 'episode':
-                sub_pattern = self._escape_regex(match[index['raw']])
-                self.torrent['map'] = re.sub(
-                    sub_pattern, '{episode}', self.torrent['name']
-                )
 
             self._part(key, match, match[index['raw']], clean)
 
@@ -133,13 +129,7 @@ class PTN(object):
         raw = self.torrent['name']
         if self.end is not None:
             raw = raw[self.start:self.end].split('(')[0]
-
-        clean = re.sub('^ -', '', raw)
-        if clean.find(' ') == -1 and clean.find('.') != -1:
-            clean = re.sub('\.', ' ', clean)
-        clean = re.sub('_', ' ', clean)
-        clean = re.sub('([\[\(_]|- )$', '', clean).strip()
-        clean = clean.strip(' _-')
+        clean = self._clean_string(raw)
 
         self._part('title', [], raw, clean)
 
@@ -155,6 +145,17 @@ class PTN(object):
         # Start process for end
         clean = re.sub('(^[-\. ()]+)|([-\. ]+$)', '', self.excess_raw)
         clean = re.sub('[\(\)\/]', ' ', clean)
+
+        match = re.findall('((?:(?:[A-Za-z][a-z]+|[A-Za-z])(?:[\.\ \-\+\_]|$))+)', clean)
+        if match:
+            match = re.findall(episode_pattern + '[\.\_\-\s\+]*(' + re.escape(match[0]) + ')',
+                               self.torrent['name'], re.IGNORECASE)
+            if match:
+                self._part('episodeName', match, match[0], self._clean_string(match[0]))
+                clean = clean.replace(match[0], '')
+
+        clean = re.sub('(^[-_\. ()]+)|([-\. ]+$)', '', clean)
+        clean = re.sub('[\(\)\/]', ' ', clean)
         match = re.split('\.\.+| +', clean)
         if len(match) > 0 and isinstance(match[0], tuple):
             match = list(match[0])
@@ -162,19 +163,10 @@ class PTN(object):
         clean = filter(bool, match)
         clean = [item for item in filter(lambda a: a != '-', clean)]
         clean = [item.strip('-') for item in clean]
-        if len(clean) != 0:
-            group_pattern = clean[-1] + self.group_raw
-            if self.torrent['name'].find(group_pattern) == \
-                    len(self.torrent['name']) - len(group_pattern):
-                self._late('group', clean.pop() + self.group_raw)
 
-            if 'map' in self.torrent.keys() and len(clean) != 0:
-                episode_name_pattern = (
-                    '{episode}'
-                    '' + re.sub('_+$', '', clean[0])
-                )
-                if self.torrent['map'].find(episode_name_pattern) != -1:
-                    self._late('episodeName', clean.pop(0))
+        if len(clean) != 0:
+            group = clean.pop() + self.group_raw
+            self._part('group', [], group, group)
 
         # clean group name from having a container name
         if 'group' in self.parts and 'container' in self.parts:
@@ -200,6 +192,6 @@ class PTN(object):
 
         if len(clean) != 0:
             if len(clean) == 1:
-                clean = clean[0]
+                clean = clean[0]  # Avoids making a list if it only has 1 element
             self._part('excess', [], self.excess_raw, clean)
         return self.parts

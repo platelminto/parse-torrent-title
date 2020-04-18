@@ -17,14 +17,13 @@ title of the content.
 
 - Added multi-language support.
 - Added multi-episode support.
-- Added various fields.
+- Added various fields (see field list below).
 - Added proper subtitle support.
+- Added proper support for matching episode names.
 - Added support for full `YYYY-MM-DD`-type dates, usually useful for daily shows that otherwise have no episode name.
 - Added support for 2020s release years.
-- Added more languages.
-- Added more audio support.
 - Added exceptions list for media with known, non-fixable issues.
-- Improved matching for various fields.
+- Expanded and improved matching for various fields.
 - Fixed incorrect parsing of titles containing years.
 - Added more tests and cleaned up previous ones.
 
@@ -56,7 +55,7 @@ import PTN
 
 info = PTN.parse('A freakishly cool movie or TV episode')
 
-print info # All details that were parsed
+print(info) # All details that were parsed
 ```
 
 PTN works well for both movies and TV seasons & episodes. All meaningful information is

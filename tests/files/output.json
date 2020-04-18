@@ -98,6 +98,7 @@
   {
     "audio": "DD5.1",
     "episode": 1,
+    "episodeName": "Shadows",
     "quality": "WEB-DL",
     "resolution": "1080p",
     "season": 2,
@@ -274,6 +275,7 @@
     "audio": "AAC",
     "codec": "x264",
     "episode": 5,
+    "episodeName": "Viper",
     "quality": "WEB-DL",
     "season": 1,
     "title": "Gotham"
@@ -336,13 +338,16 @@
   {
     "codec": "x264",
     "episode": 1,
+    "episodeName": "Pilot",
     "quality": "HDTV",
     "season": 1,
     "title": "The Missing"
   },
   {
     "codec": "x264",
+    "encoder": "rartv",
     "episode": 11,
+    "episodeName": "Dark Water",
     "group": "FoV",
     "quality": "HDTV",
     "resolution": "720p",
@@ -354,6 +359,7 @@
     "audio": "AAC",
     "codec": "x264",
     "episode": 7,
+    "episodeName": "Penguins Umbrella",
     "quality": "WEB-DL",
     "season": 1,
     "title": "Gotham"
@@ -427,6 +433,8 @@
   {
     "codec": "x264",
     "episode": 12,
+    "episodeName": "death in heaven",
+    "group": "fov",
     "quality": "hdtv",
     "resolution": "720p",
     "season": 8,
@@ -443,6 +451,7 @@
   },
   {
     "episode": 3,
+    "episodeName": "Breaker of Chains",
     "season": 4,
     "title": "Game of Thrones"
   },
@@ -607,6 +616,7 @@
   {
     "container": "mp4",
     "episode": 7,
+    "episodeName": "Chi Jap",
     "group": "ZhuixinFan",
     "quality": "HDTVrip",
     "resolution": "1280X720",
@@ -659,6 +669,7 @@
   },
   {
     "container": "mp4",
+    "episodeName": "Divide and Rule",
     "episode": 9,
     "season": 1,
     "title": "Borgen"
@@ -715,7 +726,7 @@
   },
   {
     "codec": "x264",
-    "quality": "CAM",
+    "quality": "CAM-Rip",
     "subtitles": "English Subs",
     "title": "Dragon Ball Super: Broly",
     "year": 2018
@@ -826,6 +837,8 @@
     "codec": "x264",
     "encoder": "TGx",
     "episode": 0,
+    "episodeName": "Coyotes Journal Coyote And His Faithful Crew",
+    "group": "ROBOTS",
     "internal": true,
     "quality": "WEB",
     "season": 1,
