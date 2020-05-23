@@ -1,4 +1,4 @@
-# parse-torrent-name
+# parse-torrent-title
 
 > Extract media information from torrent-like filename
 
@@ -188,7 +188,7 @@ after correctly getting the season and episode number.
 PTN can be installed automatically using `pip`.
 
 ```sh
-$ pip install git+git://github.com/platelminto/parse-torrent-name.git@master
+$ pip install git+git://github.com/platelminto/parse-torrent-title.git@master
 ```
 
 Note that you might require `sudo` permission depending on whether
@@ -199,7 +199,7 @@ a virtual environment is used or not.
 First clone the repository.
 
 ```sh
-$ git clone https://github.com/platelminto/parse-torrent-name PTN && cd PTN
+$ git clone https://github.com/platelminto/parse-torrent-title PTN && cd PTN
 ```
 
 And run the command for installing the package.
