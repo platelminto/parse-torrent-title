@@ -1,0 +1,10 @@
+language: python
+python:
+- '2.7'
+- '3.5'
+script: python tests/test_parse.py
+deploy:
+  provider: pypi
+  user: __token__
+  password:
+    secure: C+8n9K6DeT4Cs81gYcRzlB/Z8n9DyhxZCtPxZ2w7y3HJkyhUSS+f2hJf0wszVT7aM3iKRzdGG/8nWd1n+v33JoVYNhl1tQC5n+87UPOXKYPfHIYja39WG2l7mEi1qksqOjS7HqontDFqPOLyuqSxR/5EQ9L9OUgxwfJmi42OOoOFnsC+gazcJUjB5JXyTRo2MVBLm/arMg1lEOduQk/hKWk1SWpi/aRgJSmRFosbE7JUl7nj9skMpk9RBwpg91edwdIo4TwezUude0yOjAGDDzKODXlBff6fB41JZJTzX/PjTS9N9hH3826M70RgdBI4Bv/e1EDxMe17YSor1naNGr2Rk7kfQNbyfT5ouFADuhChOD88YPsu1i6/asrFyHNVJJRAgth1urmn/LRambMFGy0/JOvbXjvD+XBbeJO45bHoWG4xP6vkoCJ/EwRCQse1n2Tpay5xYUKH5h5NXsMZ9JSwd9cHevT+ZOP6V48NsaA7ovwyq3glRURlzx58J5w/DaDBHk6LBuW7otAqvbaSrNHFHWhX/2ZAJO0hTwI0CNYaUL+ZsSCSBkDNmCvHqko0Zda7WJ3l62mfRGZcP6QhQtzn40AHXPzlKPsnfF8pKFcQyOhOrTJKLWqdNlM32I/2hpvNN1shGVQYO7jnZh3siDiYt719LvEzww9QlyYaC7o=
