@@ -16,6 +16,7 @@ setup(
     url='https://github.com/platelminto/parse-torrent-title',
     description='Extract media information from torrent-like filename',
     long_description=description,
+    long_description_content_type='text/markdown',
     packages=['PTN'],
     keywords=('parse parser torrent torrents name names proper rename '
               'movie movies tv show shows series extract find quality '
