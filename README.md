@@ -2,7 +2,8 @@
 
 > Extract media information from torrent-like filename
 
-![Python versions](https://img.shields.io/badge/Python-2.7%2C%203.3-brightgreen.svg?style=flat-square)
+![Python versions](https://img.shields.io/badge/Python-2.7%2C%203.5-brightgreen.svg?style=flat-square)
+[![Build Status](https://travis-ci.com/platelminto/parse-torrent-title.svg?branch=master)](https://travis-ci.com/platelminto/parse-torrent-title)
 
 Originally based off of [this JavaScript
 library](https://github.com/jzjzjzj/parse-torrent-name).
@@ -188,7 +189,7 @@ after correctly getting the season and episode number.
 PTN can be installed automatically using `pip`.
 
 ```sh
-$ pip install git+git://github.com/platelminto/parse-torrent-title.git@master
+$ pip install parse-torrent-title
 ```
 
 Note that you might require `sudo` permission depending on whether
