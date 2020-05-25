@@ -1,19 +1,15 @@
 language: python
-
 python:
 - '2.7'
 - '3.5'
-
 script: python tests/test_parse.py
-
 before_install:
-  - 'pip install -U pip'
-  - 'python setup.py install'
-
+- pip install -U pip
+- python setup.py install
 deploy:
   provider: pypi
   user: __token__
   password:
-    secure: $PYPI_TOKEN
-  distributions: 'sdist bdist_wheel'
+    secure: EOmx2AahE9H/ZXNoAzIyOaxun7+9gJItet6+jkPq00mnqCF5zqTgZJe3/uejEVFFb/ccFcz5sR1/Y65jesW1dW4Xv2QvBXB5uSQaD0H8T8pNC6UGlbz9SKHFadHtvsa/2kgyyJ4kkdFbzGcQ/2qRFDj+l7eLeIo4JHTMaRLJLn+0ZkGSEKnNztWd57VZXxfWw+1msEncKR54ZHbju5naV1rcxZink6X+yt75v/V5U+U0Gy1JnYgiCgB9ykP9pMrXxpO8X6xCOqbWJFOCetCHGy+JaYBEi3Lr0oZDcsIRdyK/nt3Z0PJlSmna5TP4EO6JslGFwV5mO9foIZRaBkxFrygdvCm1uAtMZBeU4nfZAcVEa42c9/a/7zdkN23kZz7Mzy836MP6bMAhpKmqqwDcdUYQ/nWgu8QtJuCB5mbYrb3EPbORRwgF0xodYD+W2tvHem7sNAKpRibY6KZ5nJ1qR29/eMmF6X7zrMp3BBu4OqG4cTtb/MPMG+FqCygmosIqGdUI6gOq1cfvVXAmXgCtZgvSwDmVcS2HiBr3EMRaw0Wp7D+g4TIDrXTHVNgFWifamIep8RBw0wUQGI90b1tb7aCeL0jj52TplRKGw12orfjIIR4D6MMSdhQOUMQnJLqrpMIQMXc5cVcEAIs9x/UaAgiCj2BSP9+LM+jCbhcVBRQ=
+  distributions: sdist bdist_wheel
   skip_existing: true
