@@ -932,5 +932,15 @@
     "quality": "HDRip",
     "title": "The Hand Bag",
     "year": 2020
+  },
+  {
+    "season": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+    "year": 2014,
+    "codec": "XviD",
+    "audio": "Ac3",
+    "subtitles": "Sub.ita.eng",
+    "language": ["English", "Italian"],
+    "title": "Z Nation",
+    "group": "MIRCrew"
   }
 ]
