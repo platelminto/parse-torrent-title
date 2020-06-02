@@ -932,5 +932,38 @@
     "quality": "HDRip",
     "title": "The Hand Bag",
     "year": 2020
+  },
+  {
+    "year": 2003,
+    "resolution": "1080p",
+    "quality": "BluRay",
+    "codec": "x264",
+    "title": "Johnny English",
+    "encoder": "YTS.AG"
+  },
+  {
+    "year": 2011,
+    "resolution": "1080p",
+    "quality": "BRRip",
+    "codec": "x264",
+    "title": "Johnny English Reborn",
+    "encoder": "MovieOW"
+  },
+  {
+    "year": 2018,
+    "resolution": "1080p",
+    "quality": "BluRay",
+    "codec": "x264",
+    "title": "Johnny English Strikes Again",
+    "encoder": "YTS.AM"
+  },
+  {
+    "year": 1971,
+    "resolution": "1080p",
+    "quality": "BluRay",
+    "codec": "x265",
+    "audio": "EAC3",
+    "title": "The French Connection",
+    "group": "SARTRE"
   }
 ]
