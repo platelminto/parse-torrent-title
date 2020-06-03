@@ -27,7 +27,7 @@ patterns = [
                '([0-9]{1,2})x[0-9]{2}|'  # Describes 5x02, 12x15 type descriptions
                '(?:Complete' + delimiters + ')?Season[\. -]([0-9]{1,2})'  # Describes Season.15 type descriptions
                ')(?:' + delimiters + '|$)'),
-    ('episode', '((?:[ex]|ep)(?:[0-9]{1,2}(?:-(?:[ex]|ep)?(?:[0-9]{1,2})))|(?:[ex]|ep)([0-9]{1,2}))(?:[^0-9]|$)'),
+    ('episode', '[^a-z]((?:[ex]|ep)(?:[0-9]{1,2}(?:-(?:[ex]|ep)?(?:[0-9]{1,2})))|(?:[ex]|ep)([0-9]{1,2}))(?:[^0-9]|$)'),
     ('year', '([\[\(]?(' + year_pattern + ')[\]\)]?)'),
     ('month', '(?:' + year_pattern + ')' + delimiters + '(' + month_pattern + ')' + delimiters + '(?:' + day_pattern + ')'),
     ('day', '(?:' + year_pattern + ')' + delimiters + '(?:' + month_pattern + ')' + delimiters + '(' + day_pattern + ')'),
@@ -36,7 +36,7 @@ patterns = [
                  'HDRip|HDTVRip|DVDRip|DVDRIP|'
                  '(?:(?:' + producers + ')' + delimiters + '?)?(?:PPV )?W[EB]B(?:-?DL(?:Mux)?)?(?:Rip| DVDRip)?|BluRay|DvDScr|hdtv|telesync)')),
     ('codec', '(xvid|[hx]\.?26[45])'),
-    ('audio', ('(MP3|DD5\.?1|Dual[\- ]Audio|LiNE|DTS|DTS5\.1|'
+    ('audio', ('(MP3|DDP2.0|DDP5.1|DD5\.?1|Dual[\- ]Audio|LiNE|DTS|DTS5\.1|'
                'AAC[ \.-]LC|AAC(?:(?:\.?2(?:\.0)?)?|(?:\.?5(?:\.1)?)?)|'
                '(?:E-?)?AC-?3(?:' + delimiters + '*?(?:2\.0|5\.1))?)')),
     ('region', 'R[0-9]'),
