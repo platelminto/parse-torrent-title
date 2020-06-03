@@ -109,9 +109,9 @@ class PTN(object):
                 m = re.findall('[0-9]+', match[0])
                 if m:
                     clean = list(range(int(m[0]), int(m[1])+1))
-            elif key == 'language':
+            elif key == 'language' or key == 'subtitles':
                 # handle multi language
-                m = re.split('{}+'.format(delimiters), match[0])
+                m = re.split('{}+'.format(delimiters), match[index['clean']])
                 clean = list(filter(None, m))
                 if len(clean) == 1:
                     clean = clean[0]
