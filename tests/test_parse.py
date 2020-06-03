@@ -26,6 +26,9 @@ class ParseTest(unittest.TestCase):
             for key in expected_result:
                 self.assertIn(key, result)
                 self.assertEqual(result[key], expected_result[key], key)
+            for key in result.keys():
+                if key not in ('group', 'excess', 'encoder'):
+                    self.assertIn(key, expected_result)
 
 
 if __name__ == '__main__':
