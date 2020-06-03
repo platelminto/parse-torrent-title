@@ -6,8 +6,9 @@ from .patterns import patterns, types, exceptions, delimiters, episode_pattern, 
 
 
 class PTN(object):
-    def _escape_regex(self, string):
-        return re.sub('[\-\[\]{}()*+?.,\\\^$|#\s]', '\\$&', string)
+    @staticmethod
+    def _escape_regex(string):
+        return re.sub(r'[\-\[\]{}()*+?.,\\\^$|#\s]', '\\$&', string)
 
     def __init__(self):
         self.torrent = None
@@ -45,11 +46,11 @@ class PTN(object):
 
     @staticmethod
     def _clean_string(string):
-        clean = re.sub('^ -', '', string)
+        clean = re.sub(r'^ -', '', string)
         if clean.find(' ') == -1 and clean.find('.') != -1:
-            clean = re.sub('\.', ' ', clean)
-        clean = re.sub('_', ' ', clean)
-        clean = re.sub('([\[\(_]|- )$', '', clean).strip()
+            clean = re.sub(r'\.', ' ', clean)
+        clean = re.sub(r'_', ' ', clean)
+        clean = re.sub(r'([\[(_]|- )$', '', clean).strip()
         clean = clean.strip(' _-')
 
         return clean
@@ -66,13 +67,9 @@ class PTN(object):
 
         for key, pattern in patterns:
             if key not in ('season', 'episode', 'episodeName', 'website'):
-                pattern = r'\b%s\b' % pattern
+                pattern = r'\b{}\b'.format(pattern)
 
-            clean_name = re.sub('_', ' ', self.torrent['name'])
-            # Only use part of the torrent name after the (guessed) title (a season or year)
-            # to avoid matching certain patterns that could show up in a release title.
-            if key in patterns_ignore_title:
-                clean_name = re.split(self.post_title_pattern, clean_name, 1, re.IGNORECASE)[-1]
+            clean_name = self.get_clean_name(key)
 
             match = re.findall(pattern, clean_name, re.IGNORECASE)
             if len(match) == 0:
@@ -93,7 +90,7 @@ class PTN(object):
                 index['raw'] = 0
                 index['clean'] = 0
                 # for season we might have it in index 1 or index 2
-                # i.e. "5x09"
+                # e.g. "5x09"
                 for i in range(1, len(match)):
                     if match[i]:
                         index['clean'] = i
@@ -106,12 +103,12 @@ class PTN(object):
             if (key == 'season' or key == 'episode') and index['clean'] == 0:
                 # handle multi season/episode
                 # i.e. S01-S09
-                m = re.findall('[0-9]+', match[0])
+                m = re.findall(r'[0-9]+', match[0])
                 if m:
-                    clean = list(range(int(m[0]), int(m[1])+1))
+                    clean = list(range(int(m[0]), int(m[1]) + 1))
             elif key == 'language' or key == 'subtitles':
                 # handle multi language
-                m = re.split('{}+'.format(delimiters), match[index['clean']])
+                m = re.split(r'{}+'.format(delimiters), match[index['clean']])
                 clean = list(filter(None, m))
                 if len(clean) == 1:
                     clean = clean[0]
@@ -122,7 +119,7 @@ class PTN(object):
                 if key in types.keys() and types[key] == 'integer':
                     clean = int(clean)
 
-            # Codec, quality and subtitles matches can interfere with group matching,
+            # Codec, quality and subtitle matches can interfere with group matching,
             # so we do this later as a special case.
             if key == 'group':
                 if (re.search(self._get_pattern('codec'), clean, re.IGNORECASE) or
@@ -132,38 +129,19 @@ class PTN(object):
 
             self._part(key, match, match[index['raw']], clean)
 
-        # Start process for title
-        raw = self.torrent['name']
-        if self.end is not None:
-            raw = raw[self.start:self.end].split('(')[0]
-        clean = self._clean_string(raw)
+        self.process_title()
+        self.fix_known_exceptions()
 
-        self._part('title', [], raw, clean)
+        # Start process for end, where more general fields (episode name, group, and
+        # encoder) get set.
+        clean = re.sub(r'(^[-. ()]+)|([-. ]+$)', '', self.excess_raw)
+        clean = re.sub(r'[()/]', ' ', clean)
 
-        # Considerations for results that are known to cause issues, such
-        # as media with years in them but without a release year.
-        for exception in exceptions:
-            incorrect_key, incorrect_value = exception['incorrect_parse']
-            if self.parts['title'] == exception['parsed_title'] \
-              and self.parts[incorrect_key] == incorrect_value:
-                self.parts.pop(incorrect_key)
-                self.parts['title'] = exception['actual_title']
+        clean = self.try_episode_name(clean)
 
-        # Start process for end
-        clean = re.sub('(^[-\. ()]+)|([-\. ]+$)', '', self.excess_raw)
-        clean = re.sub('[\(\)\/]', ' ', clean)
-
-        match = re.findall('((?:(?:[A-Za-z][a-z]+|[A-Za-z])(?:[\.\ \-\+\_]|$))+)', clean)
-        if match:
-            match = re.findall(episode_pattern + '[\.\_\-\s\+]*(' + re.escape(match[0]) + ')',
-                               self.torrent['name'], re.IGNORECASE)
-            if match:
-                self._part('episodeName', match, match[0], self._clean_string(match[0]))
-                clean = clean.replace(match[0], '')
-
-        clean = re.sub('(^[-_\. ()]+)|([-\. ]+$)', '', clean)
-        clean = re.sub('[\(\)\/]', ' ', clean)
-        match = re.split('\.\.+| +', clean)
+        clean = re.sub(r'(^[-_. ()]+)|([-. ]+$)', '', clean)
+        clean = re.sub(r'[()/]', ' ', clean)
+        match = re.split(r'\.\.+| +', clean)
         if len(match) > 0 and isinstance(match[0], tuple):
             match = list(match[0])
 
@@ -171,22 +149,72 @@ class PTN(object):
         clean = [item for item in filter(lambda a: a != '-', clean)]
         clean = [item.strip('-') for item in clean]
 
+        self.try_group(clean)
+        self.try_encoder()
+
+        if len(clean) != 0:
+            if len(clean) == 1:
+                clean = clean[0]  # Avoids making a list if it only has 1 element
+            self._part('excess', [], self.excess_raw, clean)
+        return self.parts
+
+    def process_title(self):
+        raw = self.torrent['name']
+        if self.end is not None:
+            raw = raw[self.start:self.end].split('(')[0]
+        clean = self._clean_string(raw)
+        self._part('title', [], raw, clean)
+
+    def get_clean_name(self, key):
+        clean_name = re.sub(r'_', ' ', self.torrent['name'])
+        # Only use part of the torrent name after the (guessed) title (split at a season or year)
+        # to avoid matching certain patterns that could show up in a release title.
+        for (ignore_key, ignore_patterns) in patterns_ignore_title:
+            if ignore_key == key and not ignore_patterns:
+                clean_name = re.split(self.post_title_pattern, clean_name, 1, re.IGNORECASE)[-1]
+            elif ignore_key == key:
+                for ignore_pattern in ignore_patterns:
+                    if re.findall(ignore_pattern, clean_name, re.IGNORECASE):
+                        clean_name = re.split(self.post_title_pattern, clean_name, 1, re.IGNORECASE)[-1]
+        return clean_name
+
+    def fix_known_exceptions(self):
+        # Considerations for results that are known to cause issues, such
+        # as media with years in them but without a release year.
+        for exception in exceptions:
+            incorrect_key, incorrect_value = exception['incorrect_parse']
+            if self.parts['title'] == exception['parsed_title'] \
+                and self.parts[incorrect_key] == incorrect_value:
+                self.parts.pop(incorrect_key)
+                self.parts['title'] = exception['actual_title']
+
+    def try_episode_name(self, clean):
+        match = re.findall(r'((?:(?:[A-Za-z][a-z]+|[A-Za-z])(?:[. \-+_]|$))+)', clean)
+        if match:
+            match = re.findall(episode_pattern + r'[._\-\s+]*(' + re.escape(match[0]) + ')',
+                               self.torrent['name'], re.IGNORECASE)
+            if match:
+                self._part('episodeName', match, match[0], self._clean_string(match[0]))
+                clean = clean.replace(match[0], '')
+        return clean
+
+    def try_group(self, clean):
         if len(clean) != 0:
             group = clean.pop() + self.group_raw
             self._part('group', [], group, group)
-
         # clean group name from having a container name
         if 'group' in self.parts and 'container' in self.parts:
             group = self.parts['group']
             container = self.parts['container']
-            if group.lower().endswith('.'+container.lower()):
-                group = group[:-(len(container)+1)]
+            if group.lower().endswith('.' + container.lower()):
+                group = group[:-(len(container) + 1)]
                 self.parts['group'] = group
 
+    def try_encoder(self):
         # split group name and encoder, adding the latter to self.parts
         if 'group' in self.parts:
             group = self.parts['group']
-            pat = '(\[(.*)\])'
+            pat = r'(\[(.*)\])'
             match = re.findall(pat, group, flags=re.IGNORECASE)
             if match:
                 match = match[0]
@@ -196,9 +224,3 @@ class PTN(object):
                     self.parts['group'] = group.replace(raw, '')
                     if not self.parts['group'].strip():
                         self.parts.pop('group')
-
-        if len(clean) != 0:
-            if len(clean) == 1:
-                clean = clean[0]  # Avoids making a list if it only has 1 element
-            self._part('excess', [], self.excess_raw, clean)
-        return self.parts
