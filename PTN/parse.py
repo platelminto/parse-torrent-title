@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import re
-from .patterns import patterns, types, exceptions, delimiters, episode_pattern
+from .patterns import patterns, types, exceptions, delimiters, episode_pattern, patterns_ignore_title
 
 
 class PTN(object):
@@ -17,6 +17,8 @@ class PTN(object):
         self.end = None
         self.title_raw = None
         self.parts = None
+
+        self.post_title_pattern = '{}|{}'.format(self._get_pattern('season'), self._get_pattern('year'))
 
     def _part(self, name, match, raw, clean):
         # The main core instructuions
@@ -67,6 +69,11 @@ class PTN(object):
                 pattern = r'\b%s\b' % pattern
 
             clean_name = re.sub('_', ' ', self.torrent['name'])
+            # Only use part of the torrent name after the (guessed) title (a season or year)
+            # to avoid matching certain patterns that could show up in a release title.
+            if key in patterns_ignore_title:
+                clean_name = re.split(self.post_title_pattern, clean_name, 1, re.IGNORECASE)[-1]
+
             match = re.findall(pattern, clean_name, re.IGNORECASE)
             if len(match) == 0:
                 continue

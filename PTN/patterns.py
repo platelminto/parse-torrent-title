@@ -17,6 +17,10 @@ year_pattern = '(?:19[0-9]|20[0-2])[0-9]'
 month_pattern = '0[1-9]|1[0-2]'
 day_pattern = '[0-2][0-9]|3[01]'
 
+# Patterns that should only try to be matched after the 'title delimiter', either a year
+# or a season. So if we have a language in the title, and there's some basic validation
+patterns_ignore_title = ['language']
+
 patterns = [
     ('season', delimiters + '(' # Season description can't be at the beginning, must be after this pattern
                '' + season_range_pattern + '|' # Describes season ranges
