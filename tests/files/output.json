@@ -585,7 +585,7 @@
     "quality": "BluRay",
     "resolution": "720p",
     "season": 1,
-    "subtitles": "DKsubs",
+    "subtitles": "DK",
     "title": "The X-Files"
   },
   {
@@ -593,7 +593,7 @@
     "quality": "BluRay",
     "resolution": "1080p",
     "season": [1,2,3],
-    "subtitles": "DKsubs",
+    "subtitles": "DK",
     "title": "The X-Files"
   },
   {
@@ -713,21 +713,21 @@
     "encoder": "GWC",
     "quality": "BRRip",
     "season": 1,
-    "subtitles": "E-Subs",
+    "subtitles": "E",
     "title": "The Bridge"
   },
   {
     "codec": "x264",
     "quality": "HDRip",
     "resolution": "1080p",
-    "subtitles": "ExYu-Subs",
+    "subtitles": "ExYu",
     "title": "The Meg",
     "year": 2018
   },
   {
     "codec": "x264",
     "quality": "CAM-Rip",
-    "subtitles": "English Subs",
+    "subtitles": "English",
     "title": "Dragon Ball Super: Broly",
     "year": 2018
   },
@@ -737,7 +737,7 @@
     "language": "English",
     "quality": "HDRip",
     "resolution": "720p",
-    "subtitles": "Hindi - Eng Multi Subs",
+    "subtitles": ["Hindi", "Eng"],
     "title": "Joker",
     "year": 2019
   },
@@ -748,7 +748,7 @@
     "language": "Mandarin",
     "quality": "HDRip",
     "resolution": "1080p",
-    "subtitles": "CHS-ENG SUBS",
+    "subtitles": ["CHS", "ENG"],
     "title": "IP Man And Four Kings",
     "year": 2019
   },
@@ -798,7 +798,7 @@
     "language": "Hindi",
     "resolution": "720p",
     "season": 1,
-    "subtitles": "ESub",
+    "subtitles": "E",
     "title": "Sacred Games",
     "year": 2018
   },
@@ -938,9 +938,18 @@
     "year": 2014,
     "codec": "XviD",
     "audio": "Ac3",
-    "subtitles": "Sub.ita.eng",
-    "language": ["English", "Italian"],
+    "subtitles": ["ita", "eng"],
+    "language": ["Italian", "English"],
     "title": "Z Nation",
     "group": "MIRCrew"
+  },
+  {
+    "year": 2019,
+    "resolution": "1080p",
+    "quality": "BluRay",
+    "audio": "AC3",
+    "subtitles": "SUBS",
+    "language": ["ITA", "ENG"],
+    "title": "1917"
   }
 ]

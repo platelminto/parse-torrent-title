@@ -3,7 +3,7 @@
 
 delimiters = '[\.\s\-\+_\/]'
 langs = 'rus|(?:True)?fr(?:ench)?|en(?:g(?:lish)?)?|vost(' \
-        '?:fr)?|ita(?:liano?)?|castellano|swedish|spanish|dk|german|multi|nordic|exyu|chs|hindi|polish|mandarin'
+        '?:fr)?|ita(?:liano?)?|castellano|swedish|spanish|dk|german|nordic|exyu|chs|hindi|polish|mandarin'
 producers = 'ATVP|AMZN|NF|NICK|RED|DSNP'
 
 season_range_pattern = '(?:Complete' + delimiters + '*)?(?:' + delimiters + '*)?(?:s(?:easons?)?)?' + delimiters + '?(?:s?[0-9]{1,2}[\s]*(' \
@@ -12,6 +12,9 @@ season_range_pattern = '(?:Complete' + delimiters + '*)?(?:' + delimiters + '*)?
 # Used when matching episodeName in parse.py, when actually matching episodes we use a slightly
 # modified version that has a capture group on the episode number (as seen below).
 episode_pattern = '(?:(?:[ex]|ep)(?:[0-9]{1,2}(?:-(?:[ex]|ep)?(?:[0-9]{1,2})))|(?:[ex]|ep)(?:[0-9]{1,2}))'
+
+lang_list_pattern = '(?:(?:' + langs + ')' + delimiters + '*)'
+subtitles_pattern = '((?:' + delimiters + ')?subs?' + delimiters + '*(' + lang_list_pattern + '*)|(' + lang_list_pattern + '*)(?:multi' + delimiters + '*)?subs?)'  # 'subs' can be at beginning or end
 
 year_pattern = '(?:19[0-9]|20[0-2])[0-9]'
 month_pattern = '0[1-9]|1[0-2]'
@@ -44,8 +47,8 @@ patterns = [
     ('container', '(MKV|AVI|MP4)'),
     ('widescreen', 'WS'),
     ('website', '^(\[ ?([^\]]+?) ?\])'),
-    ('subtitles', '((?:(?:' + langs + '|e-?)[\-\s.]*)*subs?)'),
-    ('language', '((?:(?:' + langs + ')' + delimiters + '*)+)(?!(?:[\-\s.]*(?:' + langs + ')*)+[\-\s.]?subs)'),
+    ('subtitles', subtitles_pattern + '|(E-?)(?:subs?)'),
+    ('language', '(' + lang_list_pattern + '+)(?!' + subtitles_pattern + ')'),
     ('sbs', '(?:Half-)?SBS'),
     ('unrated', 'UNRATED'),
     ('size', '(\d+(?:\.\d+)?(?:GB|MB))'),
