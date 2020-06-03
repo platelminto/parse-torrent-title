@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 delimiters = '[\.\s\-\+_\/]'
-langs = 'rus|(?:True)?fr(?:ench)?|e?n(?:g(?:lish)?)?|vost(' \
-        '?:fr)?|ita(?:liano)?|castellano|swedish|spanish|dk|german|multi|nordic|exyu|chs|hindi|polish|mandarin'
+langs = 'rus|(?:True)?fr(?:ench)?|en(?:g(?:lish)?)?|vost(' \
+        '?:fr)?|ita(?:liano?)?|castellano|swedish|spanish|dk|german|multi|nordic|exyu|chs|hindi|polish|mandarin'
 producers = 'ATVP|AMZN|NF|NICK|RED|DSNP'
 
 season_range_pattern = '(?:Complete' + delimiters + '*)?(?:' + delimiters + '*)?(?:s(?:easons?)?)?' + delimiters + '?(?:s?[0-9]{1,2}[\s]*(' \
