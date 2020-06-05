@@ -150,7 +150,7 @@ class PTN(object):
                     if transform:
                         clean = transform(clean)
                     # if isinstance(clean, str) and not replace and not transform:
-                    #     clean = clean.upper() TODO reanble
+                    #     clean = clean.upper() TODO
 
                 self._part(key, match, match[index['raw']], clean)
                 break
