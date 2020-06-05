@@ -31,11 +31,15 @@ patterns = [
     ('year', '([\[\(]?(' + year_pattern + ')[\]\)]?)'),
     ('month', '(?:' + year_pattern + ')' + delimiters + '(' + month_pattern + ')' + delimiters + '(?:' + day_pattern + ')'),
     ('day', '(?:' + year_pattern + ')' + delimiters + '(?:' + month_pattern + ')' + delimiters + '(' + day_pattern + ')'),
-    ('resolution', [('([0-9]{3,4}p)', None, str.lower), ('(1280x720)', '720p', None)]),
+    ('resolution', [('([0-9]{3,4}p)', None, str.lower),
+                    ('(1280x720)', '720p')]),
     ('quality', ('((?:PPV\.)?[HP]DTV|(?:HD)?CAM-?(?:Rip)?|B[DR]Rip|(?:HD-?)?TS|'
                  'HDRip|HDTVRip|DVDRip|DVDRIP|'
                  '(?:(?:' + producers + ')' + delimiters + '?)?(?:PPV )?W[EB]B(?:-?DL(?:Mux)?)?(?:Rip| DVDRip)?|BluRay|DvDScr|hdtv|telesync)')),
-    ('codec', '(xvid|[hx]\.?26[45])'),
+    ('codec', [('(xvid)', 'Xvid'),
+               ('(av1)', 'AV1'),
+               ('([hx]\.?264)', 'H.264'),
+               ('([hx]\.?265)', 'H.265')]),
     ('audio', ('(MP3|DDP2.0|DDP5.1|DD5\.?1|Dual[\- ]Audio|LiNE|DTS|DTS5\.1|'
                'AAC[ \.-]LC|AAC(?:(?:\.?2(?:\.0)?)?|(?:\.?5(?:\.1)?)?)|'
                '(?:E-?)?AC-?3(?:' + delimiters + '*?(?:2\.0|5\.1))?)')),

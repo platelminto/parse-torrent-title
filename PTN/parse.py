@@ -66,8 +66,17 @@ class PTN(object):
         self.title_raw = None
 
         for key, pattern_options in patterns:
+            pattern_options_norm = list()
             if not isinstance(pattern_options, list):
                 pattern_options = [(pattern_options, None, None)]
+            for options in pattern_options:
+                if len(options) == 2:  # No transformation
+                    pattern_options_norm.append(options + (None,))
+                else:
+                    pattern_options_norm.append(options)
+
+            pattern_options = pattern_options_norm
+
             for (pattern, replace, transform) in pattern_options:
                 if key not in ('season', 'episode', 'episodeName', 'website'):
                     pattern = r'\b{}\b'.format(pattern)
