@@ -65,69 +65,78 @@ class PTN(object):
         self.end = None
         self.title_raw = None
 
-        for key, pattern in patterns:
-            if key not in ('season', 'episode', 'episodeName', 'website'):
-                pattern = r'\b{}\b'.format(pattern)
+        for key, pattern_options in patterns:
+            if not isinstance(pattern_options, list):
+                pattern_options = [(pattern_options, None, None)]
+            for (pattern, replace, transform) in pattern_options:
+                if key not in ('season', 'episode', 'episodeName', 'website'):
+                    pattern = r'\b{}\b'.format(pattern)
 
-            clean_name = self.get_clean_name(key)
+                clean_name = self.get_clean_name(key)
 
-            match = re.findall(pattern, clean_name, re.IGNORECASE)
-            if len(match) == 0:
-                continue
-
-            index = {}
-
-            # With multiple matches, we will usually want to use the first match.
-            # For 'year', we instead use the last instance of a year match since,
-            # if a title includes a year, we don't want to use this for the year field.
-            match_index = 0
-            if key == 'year':
-                match_index = -1
-
-            if isinstance(match[match_index], tuple):
-                match = list(match[match_index])
-            if len(match) > 1:
-                index['raw'] = 0
-                index['clean'] = 0
-                # for season we might have it in index 1 or index 2
-                # e.g. "5x09"
-                for i in range(1, len(match)):
-                    if match[i]:
-                        index['clean'] = i
-                        break
-            else:
-                index['raw'] = 0
-                index['clean'] = 0
-
-            # patterns for multiseason/episode make the range, and only the range, appear in match[0]
-            if (key == 'season' or key == 'episode') and index['clean'] == 0:
-                # handle multi season/episode
-                # i.e. S01-S09
-                m = re.findall(r'[0-9]+', match[0])
-                if m:
-                    clean = list(range(int(m[0]), int(m[1]) + 1))
-            elif key == 'language' or key == 'subtitles':
-                # handle multi language
-                m = re.split(r'{}+'.format(delimiters), match[index['clean']])
-                clean = list(filter(None, m))
-                if len(clean) == 1:
-                    clean = clean[0]
-            elif key in types.keys() and types[key] == 'boolean':
-                clean = True
-            else:
-                clean = match[index['clean']]
-                if key in types.keys() and types[key] == 'integer':
-                    clean = int(clean)
-
-            # Codec, quality and subtitle matches can interfere with group matching,
-            # so we do this later as a special case.
-            if key == 'group':
-                if (re.search(self._get_pattern('codec'), clean, re.IGNORECASE) or
-                    re.search(self._get_pattern('quality'), clean, re.IGNORECASE) or
-                    re.search(self._get_pattern('subtitles'), clean, re.IGNORECASE)):
+                match = re.findall(pattern, clean_name, re.IGNORECASE)
+                if len(match) == 0:
                     continue
 
-            self._part(key, match, match[index['raw']], clean)
+                index = {}
+
+                # With multiple matches, we will usually want to use the first match.
+                # For 'year', we instead use the last instance of a year match since,
+                # if a title includes a year, we don't want to use this for the year field.
+                match_index = 0
+                if key == 'year':
+                    match_index = -1
+
+                if isinstance(match[match_index], tuple):
+                    match = list(match[match_index])
+                if len(match) > 1:
+                    index['raw'] = 0
+                    index['clean'] = 0
+                    # for season we might have it in index 1 or index 2
+                    # e.g. "5x09"
+                    for i in range(1, len(match)):
+                        if match[i]:
+                            index['clean'] = i
+                            break
+                else:
+                    index['raw'] = 0
+                    index['clean'] = 0
+
+                # patterns for multiseason/episode make the range, and only the range, appear in match[0]
+                if (key == 'season' or key == 'episode') and index['clean'] == 0:
+                    # handle multi season/episode
+                    # i.e. S01-S09
+                    m = re.findall(r'[0-9]+', match[0])
+                    if m:
+                        clean = list(range(int(m[0]), int(m[1]) + 1))
+                elif key == 'language' or key == 'subtitles':
+                    # handle multi language
+                    m = re.split(r'{}+'.format(delimiters), match[index['clean']])
+                    clean = list(filter(None, m))
+                    if len(clean) == 1:
+                        clean = clean[0]
+                elif key in types.keys() and types[key] == 'boolean':
+                    clean = True
+                else:
+                    clean = match[index['clean']]
+                    if key in types.keys() and types[key] == 'integer':
+                        clean = int(clean)
+
+                # Codec, quality and subtitle matches can interfere with group matching,
+                # so we do this later as a special case.
+                if key == 'group':
+                    if (re.search(self._get_pattern('codec'), clean, re.IGNORECASE) or
+                        re.search(self._get_pattern('quality'), clean, re.IGNORECASE) or
+                        re.search(self._get_pattern('subtitles'), clean, re.IGNORECASE)):
+                        continue
+
+                if replace:
+                    clean = replace
+                if transform:
+                    clean = transform(clean)
+
+                self._part(key, match, match[index['raw']], clean)
+                break
 
         self.process_title()
         self.fix_known_exceptions()
