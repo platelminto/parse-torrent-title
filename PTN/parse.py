@@ -9,7 +9,7 @@ from .extras import exceptions, patterns_ignore_title
 class PTN(object):
     @staticmethod
     def _escape_regex(string):
-        return re.sub(r'[\-\[\]{}()*+?.,\\\^$|#\s]', '\\$&', string)
+        return re.sub(r'[\-\[\]{}()*+?.,\\^$|#\s]', '\\$&', string)
 
     def __init__(self):
         self.torrent = None
@@ -136,21 +136,14 @@ class PTN(object):
                     if key in types.keys() and types[key] == 'integer':
                         clean = int(clean)
 
-                # Codec, quality and subtitle matches can interfere with group matching,
-                # so we do this later as a special case.
-                if key == 'group':
-                    if (re.search(self._get_pattern('codec'), clean, re.IGNORECASE) or
-                        re.search(self._get_pattern('quality'), clean, re.IGNORECASE) or
-                        re.search(self._get_pattern('subtitles'), clean, re.IGNORECASE)):
-                        continue
-
                 if not keep_raw:
                     if replace:
                         clean = replace
                     if transform:
                         clean = transform(clean)
-                    # if isinstance(clean, str) and not replace and not transform:
-                    #     clean = clean.upper() TODO
+
+                    if key == 'language' or key == 'subtitles':
+                        pass
 
                 self._part(key, match, match[index['raw']], clean)
                 break
