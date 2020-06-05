@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from .extras import get_audio_options
+
 delimiters = '[\.\s\-\+_\/]'
 langs = 'rus|(?:True)?fr(?:ench)?|en(?:g(?:lish)?)?|vost(' \
         '?:fr)?|ita(?:liano?)?|castellano|swedish|spanish|dk|german|nordic|exyu|chs|hindi|polish|mandarin'
@@ -20,6 +22,7 @@ year_pattern = '(?:19[0-9]|20[0-2])[0-9]'
 month_pattern = '0[1-9]|1[0-2]'
 day_pattern = '[0-2][0-9]|3[01]'
 
+
 patterns = [
     ('season', delimiters + '(' # Season description can't be at the beginning, must be after this pattern
                '' + season_range_pattern + '|' # Describes season ranges
@@ -36,13 +39,11 @@ patterns = [
     ('quality', ('((?:PPV\.)?[HP]DTV|(?:HD)?CAM-?(?:Rip)?|B[DR]Rip|(?:HD-?)?TS|'
                  'HDRip|HDTVRip|DVDRip|DVDRIP|'
                  '(?:(?:' + producers + ')' + delimiters + '?)?(?:PPV )?W[EB]B(?:-?DL(?:Mux)?)?(?:Rip| DVDRip)?|BluRay|DvDScr|hdtv|telesync)')),
-    ('codec', [('(xvid)', 'Xvid'),
-               ('(av1)', 'AV1'),
-               ('([hx]\.?264)', 'H.264'),
-               ('([hx]\.?265)', 'H.265')]),
-    ('audio', ('(MP3|DDP2.0|DDP5.1|DD5\.?1|Dual[\- ]Audio|LiNE|DTS|DTS5\.1|'
-               'AAC[ \.-]LC|AAC(?:(?:\.?2(?:\.0)?)?|(?:\.?5(?:\.1)?)?)|'
-               '(?:E-?)?AC-?3(?:' + delimiters + '*?(?:2\.0|5\.1))?)')),
+    ('codec', [('xvid', 'Xvid'),
+               ('av1', 'AV1'),
+               ('[hx]\.?264', 'H.264'),
+               ('[hx]\.?265', 'H.265')]),
+    ('audio', get_audio_options()),
     ('region', 'R[0-9]'),
     ('extended', '(EXTENDED(:?.CUT)?)'),
     ('hardcoded', 'HC'),
@@ -53,10 +54,11 @@ patterns = [
     ('website', '^(\[ ?([^\]]+?) ?\])'),
     ('subtitles', subtitles_pattern + '|(E-?)(?:subs?)'),
     ('language', '(' + lang_list_pattern + '+)(?!' + subtitles_pattern + ')'),
-    ('sbs', '(?:Half-)?SBS'),
+    ('sbs', [('Half-SBS', 'Half-SBS'),
+             'SBS']),
     ('unrated', 'UNRATED'),
     ('size', '(\d+(?:\.\d+)?(?:GB|MB))'),
-    ('bitDepth', '(?:8|10)bit'),
+    ('bitDepth', ('(?:8|10)bit', None, str.lower)),
     ('3d', '3D'),
     ('internal', 'iNTERNAL'),
     ('readnfo', 'READNFO')
@@ -78,21 +80,3 @@ types = {
     'internal': 'boolean',
     'readnfo': 'boolean'
 }
-
-exceptions = [
-    {
-        'parsed_title': '',
-        'incorrect_parse': ('year', 1983),
-        'actual_title': '1983'
-     },
-    {
-        'parsed_title': 'Marvel\'s Agents of S H I E L D',
-        'incorrect_parse': ('title', 'Marvel\'s Agents of S H I E L D'),
-        'actual_title': 'Marvel\'s Agents of S.H.I.E.L.D.'
-    }
-]
-
-# Patterns that should only try to be matched after the 'title delimiter', either a year
-# or a season. So if we have a language in the title it won't cause issues by getting matched.
-# Empty list indicates to always do so, as opposed to matching specific regexes.
-patterns_ignore_title = [('language', []), ('audio', ['LiNE'])]

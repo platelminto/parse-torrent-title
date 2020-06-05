@@ -22,12 +22,12 @@ class ParseTest(unittest.TestCase):
 
         for torrent, expected_result in zip(torrents, expected_results):
             print("Test: " + torrent)
-            result = PTN.parse(torrent)
+            result = PTN.parse(torrent, keep_raw=True)
             for key in expected_result:
                 self.assertIn(key, result)
-                self.assertEqual(result[key], expected_result[key], key)
+                self.assertEqual(expected_result[key], result[key], key)
             for key in result.keys():
-                if key not in ('group', 'excess', 'encoder'):
+                if key not in ('group', 'excess', 'encoder'):  # Not needed in tests
                     self.assertIn(key, expected_result)
 
 

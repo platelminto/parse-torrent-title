@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import re
-from .patterns import patterns, types, exceptions, delimiters, episode_pattern, patterns_ignore_title
+from .patterns import patterns, types, delimiters, episode_pattern
+from .extras import exceptions, patterns_ignore_title
 
 
 class PTN(object):
@@ -55,7 +56,7 @@ class PTN(object):
 
         return clean
 
-    def parse(self, name):
+    def parse(self, name, keep_raw):
         name = name.strip()
         self.parts = {}
         self.torrent = {'name': name}
@@ -67,10 +68,14 @@ class PTN(object):
 
         for key, pattern_options in patterns:
             pattern_options_norm = list()
-            if not isinstance(pattern_options, list):
+            if isinstance(pattern_options, str):
                 pattern_options = [(pattern_options, None, None)]
+            elif isinstance(pattern_options, tuple):
+                pattern_options = [pattern_options]
             for options in pattern_options:
-                if len(options) == 2:  # No transformation
+                if isinstance(options, str):
+                    pattern_options_norm.append((options, None, None))
+                elif len(options) == 2:  # No transformation
                     pattern_options_norm.append(options + (None,))
                 else:
                     pattern_options_norm.append(options)
@@ -139,10 +144,13 @@ class PTN(object):
                         re.search(self._get_pattern('subtitles'), clean, re.IGNORECASE)):
                         continue
 
-                if replace:
-                    clean = replace
-                if transform:
-                    clean = transform(clean)
+                if not keep_raw:
+                    if replace:
+                        clean = replace
+                    if transform:
+                        clean = transform(clean)
+                    # if isinstance(clean, str) and not replace and not transform:
+                    #     clean = clean.upper() TODO reanble
 
                 self._part(key, match, match[index['raw']], clean)
                 break
