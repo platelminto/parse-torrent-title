@@ -22,10 +22,11 @@ class PTN(object):
 
         self.post_title_pattern = '{}|{}'.format(self._get_pattern('season'), self._get_pattern('year'))
 
-    def _part(self, name, match, raw, clean):
-        if isinstance(clean, list) and len(clean) == 1:
-            clean = clean[0]  # Avoids making a list if it only has 1 element
-        self.parts[name] = clean
+    def _part(self, name, match, raw, clean, overwrite=False):
+        if overwrite or name not in self.parts:
+            if isinstance(clean, list) and len(clean) == 1:
+                clean = clean[0]  # Avoids making a list if it only has 1 element
+            self.parts[name] = clean
 
         if len(match) != 0:
             # The instructions for extracting title
@@ -147,7 +148,6 @@ class PTN(object):
                         clean = self.standardise_languages(clean)
 
                 self._part(key, match, match[index['raw']], clean)
-                break
 
         self.process_title()
         self.fix_known_exceptions()
