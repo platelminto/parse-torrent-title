@@ -6,11 +6,24 @@
 # if to not replace), and (optional) a function to transform the value after everything
 # (None if to do nothing).
 
-from .extras import get_channel_audio_options
+from .extras import get_channel_audio_options, link_pattern_options
 
 delimiters = '[\.\s\-\+_\/]'
-langs = 'rus|(?:True)?fr(?:ench)?|en(?:g(?:lish)?)?|vost(' \
-        '?:fr)?|ita(?:liano?)?|castellano|swedish|spanish|dk|german|nordic|exyu|chs|hindi|polish|mandarin'
+langs = [('rus(?:sian)?', 'Russian'),
+         ('(?:True)?fr(?:ench)?', 'French'),
+         ('en?(?:g(?:lish)?)?', 'English'),
+         ('ita(?:liano?)?', 'Italian'),
+         ('castellano|spanish', 'Spanish'),
+         ('swedish', 'Swedish'),
+         ('dk|danish', 'Danish'),
+         ('german', 'German'),
+         ('nordic', 'Nordic'),
+         ('exyu', 'ExYu'),
+         ('chs', 'Chinese'),
+         ('hindi', 'Hindi'),
+         ('polish', 'Polish'),
+         ('mandarin', 'Mandarin'),
+         ('kor(?:ean)?', 'Korean'),]
 producers = 'ATVP|AMZN|NF|NICK|RED|DSNP'
 
 season_range_pattern = '(?:Complete' + delimiters + '*)?(?:' + delimiters + '*)?(?:s(?:easons?)?)?' + delimiters + \
@@ -20,7 +33,7 @@ season_range_pattern = '(?:Complete' + delimiters + '*)?(?:' + delimiters + '*)?
 # modified version that has a capture group on the episode number (as seen below).
 episode_pattern = '(?:(?:[ex]|ep)(?:[0-9]{1,2}(?:-(?:[ex]|ep)?(?:[0-9]{1,2})))|(?:[ex]|ep)(?:[0-9]{1,2}))'
 
-lang_list_pattern = '(?:(?:' + langs + ')' + delimiters + '*)'
+lang_list_pattern = '(?:(?:' + link_pattern_options(langs) + ')' + delimiters + '*)'
 subtitles_pattern = '((?:{delimiters})?subs?{delimiters}*({langs}*)|({langs}*)(?:multi{delimiters}*)?subs?)'\
     .format(delimiters=delimiters, langs=lang_list_pattern)  # 'subs' can be at beginning or end
 
@@ -69,7 +82,7 @@ patterns = [
     ('container', ('(MKV|AVI|MP4)', None, str.upper)),
     ('widescreen', 'WS'),
     ('website', '^(\[ ?([^\]]+?) ?\])'),
-    ('subtitles', subtitles_pattern + '|(E-?)(?:subs?)'),
+    ('subtitles', subtitles_pattern + '|-?(?:subs?)'),
     ('language', '(' + lang_list_pattern + '+)(?!' + subtitles_pattern + ')'),
     ('sbs', [('Half-SBS', 'Half SBS'),
              ('SBS', None, str.upper)]),

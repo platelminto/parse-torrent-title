@@ -49,7 +49,16 @@ class ParseTest(unittest.TestCase):
             ('Ant-Man.2015.3D.1080p.BRRip.Half-SBS.x264.AAC-m2g',
              {'codec': 'H.264', 'audio': 'AAC', 'sbs': 'Half SBS'}),
             ('Dawn.Of.The.Planet.of.The.Apes.2014.1080p.WEB-DL.DD51.H264-RARBG',
-             {'codec': 'H.264', 'audio': 'Dolby Digital 5.1'})
+             {'codec': 'H.264', 'audio': 'Dolby Digital 5.1'}),
+            ('Community.s02e20.rus.eng.720p.Kybik.v.Kybe',
+             {'language': ['Russian', 'English']}),
+            ('IP Man And Four Kings 2019 HDRip 1080p x264 AAC Mandarin HC CHS-ENG SUBS Mp4Ba',
+             {'subtitles': ['Chinese', 'English'], 'codec': 'H.264', 'audio': 'AAC'}),
+            ('Z Nation (2014)S01-01-13 (2014) Full Season.XviD - Italian English.Ac3.Sub.ita.eng.MIRCrew',
+             {'subtitles': ['Italian', 'English'], 'language': ['Italian', 'English'],
+              'codec': 'Xvid', 'audio': 'Dolby Digital'}),
+            ('1917 (2019) [BluRay Rip 1080p ITA-ENG AC3 SUBS] [[email protected]]',
+             {'audio': 'Dolby Digital', 'language': ['Italian', 'English'],'subtitles': 'Available'})
         ]
 
         for test in inputs_with_expected:

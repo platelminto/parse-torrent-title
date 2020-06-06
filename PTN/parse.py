@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import re
-from .patterns import patterns, types, delimiters, episode_pattern
+from .patterns import patterns, types, delimiters, episode_pattern, langs
 from .extras import exceptions, patterns_ignore_title
 
 
@@ -23,7 +23,8 @@ class PTN(object):
         self.post_title_pattern = '{}|{}'.format(self._get_pattern('season'), self._get_pattern('year'))
 
     def _part(self, name, match, raw, clean):
-        # The main core instructuions
+        if isinstance(clean, list) and len(clean) == 1:
+            clean = clean[0]  # Avoids making a list if it only has 1 element
         self.parts[name] = clean
 
         if len(match) != 0:
@@ -127,8 +128,6 @@ class PTN(object):
                     # handle multi language
                     m = re.split(r'{}+'.format(delimiters), match[index['clean']])
                     clean = list(filter(None, m))
-                    if len(clean) == 1:
-                        clean = clean[0]
                 elif key in types.keys() and types[key] == 'boolean':
                     clean = True
                 else:
@@ -142,8 +141,10 @@ class PTN(object):
                     if transform:
                         clean = transform(clean)
 
-                    if key == 'language' or key == 'subtitles':
-                        pass
+                    if key == 'subtitles' and len(clean) == 1 and clean[0].lower() == 'subs':
+                        clean = 'Available'
+                    elif key == 'language' or key == 'subtitles':
+                        clean = self.standardise_languages(clean)
 
                 self._part(key, match, match[index['raw']], clean)
                 break
@@ -172,10 +173,19 @@ class PTN(object):
         self.try_encoder()
 
         if len(clean) != 0:
-            if len(clean) == 1:
-                clean = clean[0]  # Avoids making a list if it only has 1 element
             self._part('excess', [], self.excess_raw, clean)
         return self.parts
+
+    @staticmethod
+    def standardise_languages(clean):
+        cleaned_langs = list()
+        for lang in clean:
+            for (lang_regex, lang_clean) in langs:
+                if re.match(lang_regex, lang, re.IGNORECASE):
+                    cleaned_langs.append(lang_clean)
+                    break
+        clean = cleaned_langs
+        return clean
 
     def process_title(self):
         raw = self.torrent['name']
