@@ -57,20 +57,20 @@
   },
   {
     "codec": "XviD",
-    "quality": "WEBDL DVDRip",
+    "quality": "WEBDL",
     "title": "Hercules",
     "year": 2014
   },
   {
     "codec": "x264",
-    "quality": "PPV WEB-DL",
+    "quality": "WEB-DL",
     "title": "WWE Hell in a Cell",
     "year": 2014
   },
   {
     "codec": "x264",
     "group": "Ebi",
-    "quality": "PPV.HDTV",
+    "quality": "HDTV",
     "title": "UFC 179"
   },
   {
@@ -643,7 +643,7 @@
   },
   {
     "codec": "x264",
-    "quality": "AMZN WEB-DL",
+    "quality": "WEB-DL",
     "resolution": "720p",
     "season": 23,
     "title": "South Park"
@@ -707,7 +707,7 @@
     "audio": "AAC5.1",
     "codec": "X264",
     "language": "Polish",
-    "quality": "NF WEB-DL",
+    "quality": "WEB-DL",
     "resolution": "1080p",
     "season": 1,
     "title": "1983"
@@ -793,7 +793,7 @@
   },
   {
     "codec": "x264",
-    "quality": "AMZN.WEBRip",
+    "quality": "WEBRip",
     "resolution": "720p",
     "season": 2,
     "title": "Tom Clancys Jack Ryan"
@@ -819,7 +819,7 @@
     "audio": "EAC3 5.1",
     "bitDepth": "10bit",
     "codec": "x265",
-    "quality": "ATVP Webrip",
+    "quality": "Webrip",
     "resolution": "1080p",
     "season": 1,
     "title": "Home Before Dark",
@@ -855,7 +855,7 @@
     "codec": "H264",
     "episode": [5,6],
     "language": ["ITA","ENG"],
-    "quality": "AMZN.WEB-DLMux",
+    "quality": "WEB-DLMux",
     "resolution": "1080p",
     "season": 7,
     "title": "The Blacklist"
@@ -864,7 +864,7 @@
     "audio": "EAC3 2.0",
     "bitDepth": "10bit",
     "codec": "x265",
-    "quality": "AMZN WEB-DL",
+    "quality": "WEB-DL",
     "resolution": "576p",
     "season": [1,2,3,4,5,6,7,8,9,10],
     "title": "Are You Being Served",
@@ -915,7 +915,7 @@
   {
     "codec": "x264",
     "group": "GalaxyRG",
-    "quality": "AMZN.WEBRip",
+    "quality": "WEBRip",
     "resolution": "720p",
     "size": "800MB",
     "title": "Label Me",
@@ -1021,14 +1021,14 @@
     "episode": 66,
     "episodeName": "No Safe Passage",
     "group": "NTb",
-    "quality": "AMZN.WEB-DL",
+    "quality": "WEB-DL",
     "resolution": "720p",
     "season": 0,
     "title": "Deadliest Catch"
   },
   {
     "codec": "x264",
-    "quality": "NF.WEB",
+    "quality": "WEB",
     "resolution": "1080p",
     "season": 7,
     "title": "New Girl"

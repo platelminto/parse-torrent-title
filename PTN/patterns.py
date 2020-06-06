@@ -24,7 +24,6 @@ langs = [('rus(?:sian)?', 'Russian'),
          ('polish', 'Polish'),
          ('mandarin', 'Mandarin'),
          ('kor(?:ean)?', 'Korean'),]
-producers = 'ATVP|AMZN|NF|NICK|RED|DSNP'
 
 season_range_pattern = '(?:Complete' + delimiters + '*)?(?:' + delimiters + '*)?(?:s(?:easons?)?)?' + delimiters + \
                        '?(?:s?[0-9]{1,2}[\s]*(?:\-|(?:\s*to\s*))[\s]*s?[0-9]{1,2})(?:' + delimiters + '*Complete)?'
@@ -56,9 +55,35 @@ patterns = [
      .format(delimiters=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)),
     ('resolution', [('([0-9]{3,4}p)', None, str.lower),
                     ('(1280x720)', '720p')]),
-    ('quality', ('((?:PPV\.)?[HP]DTV|(?:HD)?CAM-?(?:Rip)?|B[DR]Rip|(?:HD-?)?TS|'
-                 'HDRip|HDTVRip|DVDRip|DVDRIP|'
-                 '(?:(?:' + producers + ')' + delimiters + '?)?(?:PPV )?W[EB]B(?:-?DL(?:Mux)?)?(?:Rip| DVDRip)?|BluRay|DvDScr|hdtv|telesync)')),
+    ('quality', [('WEB[ -]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
+                 # Match WEB-DL's first as they can show up with others.
+                 ('WEB[ -]?Cap', 'WEBCap'),
+                 ('W[EB]B[ -]?(?:Rip)|WEB', 'WEBRip'),
+                 ('(?:HD)?CAM(?:-?Rip)?', 'Cam'),
+                 ('(?:HD)?TS|TELESYNC|PDVD|PreDVDRip', 'Telesync'),
+                 ('WP|WORKPRINT', 'Workprint'),
+                 ('(?:HD)?TC|TELECINE', 'Telecine'),
+                 ('(?:DVD)?SCR(?:EENER)?|BDSCR', 'Screener'),
+                 ('DDC', 'Digital Distribution Copy'),
+                 ('DVD(?:Rip|Mux)', 'DVD-Rip'),
+                 ('DVDR|DVD-Full|Full-rip', 'DVD-R'),
+                 ('PDTV|DVBRip', 'PDTV'),
+                 ('DSR(?:ip)?|SATRip|DTHRip', 'DSRip'),
+                 ('HDTV(?:Rip)?', 'HDTV'),
+                 ('D?TVRip|DVBRip', 'TVRip'),
+                 ('VODR(?:ip)?', 'VODRip'),
+                 ('HD-Rip', 'HD-Rip'),
+                 ('Blu-?Ray', 'Blu-ray'),
+                 ('BD?R(?:ip)|BDR', 'BDRip'),
+                 ('BRRip', 'BRRip'),
+                 # Match this last as it can show up with others.
+                 ('PPV(?:Rip)?', 'Pay-Per-View Rip')]),
+    # ('producer', [('ATVP', 'Apple TV+'),
+    #               ('AMZN', 'Amazon Studios'),
+    #               ('NF', 'Netflix'),
+    #               ('NICK', 'Nickelodeon'),
+    #               ('RED', 'YouTube Premium'),
+    #               ('DSNP', 'Disney Plus')]),
     ('codec', [('xvid', 'Xvid'),
                ('av1', 'AV1'),
                ('[hx]\.?264', 'H.264'),
