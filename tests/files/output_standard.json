@@ -444,6 +444,7 @@
   },
   {
     "codec": "H.264",
+    "producer": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "South Park"
   },
@@ -490,6 +491,7 @@
     "audio": "AAC 5.1",
     "codec": "H.264",
     "language": "Polish",
+    "producer": "Netflix",
     "quality": "WEB-DL",
     "title": "1983"
   },
@@ -552,6 +554,7 @@
   },
   {
     "codec": "H.264",
+    "producer": "Amazon Studios",
     "quality": "WEBRip",
     "title": "Tom Clancys Jack Ryan"
   },
@@ -571,6 +574,7 @@
     "audio": "Dolby Digital Plus 5.1",
     "bitDepth": 10,
     "codec": "H.265",
+    "producer": "Apple TV+",
     "quality": "WEBRip",
     "title": "Home Before Dark"
   },
@@ -592,6 +596,7 @@
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "language": ["Italian","English"],
+    "producer": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "The Blacklist"
   },
@@ -599,6 +604,7 @@
     "audio": "Dolby Digital Plus 2.0",
     "bitDepth": 10,
     "codec": "H.265",
+    "producer": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "Are You Being Served"
   },
@@ -630,6 +636,7 @@
   },
   {
     "codec": "H.264",
+    "producer": "Amazon Studios",
     "quality": "WEBRip",
     "size": "800MB",
     "title": "Label Me"
@@ -694,11 +701,13 @@
   {
     "audio": "Dolby Digital Plus 2.0",
     "codec": "H.264",
+    "producer": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "Deadliest Catch"
   },
   {
     "codec": "H.264",
+    "producer": "Netflix",
     "quality": "WEBRip",
     "title": "New Girl"
   },

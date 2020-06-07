@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import re
-from .patterns import patterns, types, delimiters, episode_pattern, langs
+from .patterns import patterns, types, delimiters, langs, patterns_ordered
 from .extras import exceptions, patterns_ignore_title
 
 
@@ -20,7 +20,7 @@ class PTN(object):
         self.title_raw = None
         self.parts = None
 
-        self.post_title_pattern = '{}|{}'.format(self._get_pattern('season'), self._get_pattern('year'))
+        self.post_title_pattern = '{}|{}'.format(patterns['season'], patterns['year'])
 
     def _part(self, name, match, raw, clean, overwrite=False):
         if overwrite or name not in self.parts:
@@ -43,9 +43,6 @@ class PTN(object):
             if raw is not None:
                 self.excess_raw = self.excess_raw.replace(raw, '')
 
-    @staticmethod
-    def _get_pattern(pattern):
-        return [p[1] for p in patterns if p[0] == pattern][0]
 
     @staticmethod
     def _clean_string(string):
@@ -68,7 +65,7 @@ class PTN(object):
         self.end = None
         self.title_raw = None
 
-        for key, pattern_options in patterns:
+        for key, pattern_options in [(key, patterns[key]) for key in patterns_ordered]:
             pattern_options_norm = list()
             if isinstance(pattern_options, str):
                 pattern_options = [(pattern_options, None, None)]
@@ -123,8 +120,10 @@ class PTN(object):
                     # handle multi season/episode
                     # i.e. S01-S09
                     m = re.findall(r'[0-9]+', match[0])
-                    if m:
+                    if m and len(m) > 1:
                         clean = list(range(int(m[0]), int(m[1]) + 1))
+                    elif m:
+                        clean = int(m[0])
                 elif key == 'language' or key == 'subtitles':
                     # handle multi language
                     m = re.split(r'{}+'.format(delimiters), match[index['clean']])
@@ -220,7 +219,7 @@ class PTN(object):
     def try_episode_name(self, clean):
         match = re.findall(r'((?:(?:[A-Za-z][a-z]+|[A-Za-z])(?:[. \-+_]|$))+)', clean)
         if match:
-            match = re.findall(episode_pattern + r'[._\-\s+]*(' + re.escape(match[0]) + ')',
+            match = re.findall(patterns['episode'] + r'[._\-\s+]*(' + re.escape(match[0]) + ')',
                                self.torrent['name'], re.IGNORECASE)
             if match:
                 self._part('episodeName', match, match[0], self._clean_string(match[0]))

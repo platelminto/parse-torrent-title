@@ -36,6 +36,46 @@ def get_channel_audio_options(patterns_with_names):
     return options
 
 
+def prefix_pattern_with(prefixes, pattern_options, between='', optional=False):
+    if optional:
+        optional_char = '?'
+    else:
+        optional_char = ''
+    options = list()
+    if not isinstance(prefixes, list):
+        prefixes = [prefixes]
+    for prefix in prefixes:
+        if not isinstance(pattern_options, list):
+            pattern_options = [pattern_options]
+        for pattern_option in pattern_options:
+            if isinstance(pattern_option, str):
+                options.append('(?:{}){}(?:{})?({})'.format(prefix, optional_char, between, pattern_option))
+            else:
+                options.append(('(?:{}){}(?:{})?({})'.format(prefix, optional_char, between, pattern_option[0]),) + pattern_option[1:])
+
+    return options
+
+
+def suffix_pattern_with(suffixes, pattern_options, between='', optional=False):
+    if optional:
+        optional_char = '?'
+    else:
+        optional_char = ''
+    options = list()
+    if not isinstance(suffixes, list):
+        suffixes = [suffixes]
+    for suffix in suffixes:
+        if not isinstance(pattern_options, list):
+            pattern_options = [pattern_options]
+        for pattern_option in pattern_options:
+            if isinstance(pattern_option, str):
+                options.append('({})(?:{})?(?:{}){}'.format(pattern_option, between, suffix, optional_char))
+            else:
+                options.append(('({})(?:{})?(?:{}){}'.format(pattern_option[0], between, suffix, optional_char),) + pattern_option[1:])
+
+    return options
+
+
 # Link a regex-tuple list into a single regex (to be able to use elsewhere while
 # maintaining standardisation functionality).
 def link_pattern_options(pattern_options):
