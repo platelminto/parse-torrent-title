@@ -16,9 +16,10 @@ title of the content.
 
 ### Updates on top of [/u/roidayan's work](https://github.com/roidayan/parse-torrent-name/tree/updates)
 
+- Added ability to return standardised info.
 - Added multi-language support.
 - Added multi-episode support.
-- Added various fields (see field list below).
+- Added various fields (see full field list below).
 - Added proper subtitle support.
 - Added proper support for matching episode names.
 - Added support for full `YYYY-MM-DD`-type dates, usually useful for daily shows that otherwise have no episode name.
@@ -56,12 +57,25 @@ import PTN
 
 info = PTN.parse('A freakishly cool movie or TV episode')
 
-print(info) # All details that were parsed
+print(info) # All details that were parsed.
 ```
 
-PTN works well for both movies and TV seasons & episodes. All meaningful information is
+Both movies and TV (seasons & episodes) can be parsed. All meaningful information is
 extracted and returned in a dictionary. Text which couldn't be
 parsed is returned in the `excess` field.
+
+### Raw info
+
+The matches in the torrent name are standardised into specific strings, according to scene rules when possible - `'WEBDL'`, `'WEB DL'`, and `'HDRip'` are all converted to `'WEB-DL'`, for example. `'DDP51'` becomes `'Dolby Digital Plus 5.1'`. `['ita', 'eng']` becomes `['Italian', 'English']`.To disable this, and return just what was matched in the torrent, run:
+
+```py
+import PTN
+
+info = PTN.parse('A freakishly cool movie or TV episode', standardise=False)
+
+print(info) # All details that were parsed as they exist in the torrent name.
+```
+
 
 ### Movies
 
@@ -71,7 +85,7 @@ PTN.parse('San Andreas 2015 720p WEB-DL x264 AAC-JYK')
 #     'group': 'JYK',
 #     'title': 'San Andreas',
 #     'resolution': '720p',
-#     'codec': 'x264',
+#     'codec': 'H.264',
 #     'year':  2015,
 #     'audio': 'AAC',
 #     'quality': 'WEB-DL'
@@ -82,11 +96,11 @@ PTN.parse('The Martian 2015 540p HDRip KORSUB x264 AAC2 0-FGT')
 #     'group': '0-FGT',
 #     'title': 'The Martian',
 #     'resolution': '540p',
-#     'excess': 'KORSUB',
-#     'codec': 'x264',
+#     'codec': 'H.264',
 #     'year': 2015,
-#     'audio': 'AAC2',
-#     'quality': 'HDRip'
+#     'audio': 'AAC 2.0',
+#     'quality': 'WEB-DL',
+#     'subtitles': 'Korean'
 # }
 ```
 
@@ -98,7 +112,7 @@ PTN.parse('Mr Robot S01E05 HDTV x264-KILLERS[ettv]')
 #     'episode': 5,
 #     'season': 1,
 #     'title': 'Mr Robot',
-#     'codec': 'x264',
+#     'codec': 'H.264',
 #     'group':  'KILLERS',
 #     'encoder': 'ettv',
 #     'quality': 'HDTV'
@@ -111,7 +125,7 @@ PTN.parse('friends.s02e01.720p.bluray-sujaidr')
 #     'title': 'friends',
 #     'resolution': '720p',
 #     'group': 'sujaidr',
-#     'quality': 'bluray'    
+#     'quality': 'Blu-ray'    
 # }
 ```
 
@@ -123,10 +137,10 @@ PTN.parse('South Park Season 23 Complete 720p AMZN WEB-DL x264 [i_c]')
 #     'title': 'South Park',
 #     'season': 23,
 #     'resolution': '720p',
-#     'codec': 'x264',
-#     'quality': 'AMZN WEB-DL',
+#     'codec': 'H.264',
+#     'quality': 'WEB-DL',
 #     'encoder': 'i_c',
-#     'excess': 'Complete'
+#     'excess': ['Complete', 'AMZN']
 # }
 
   
@@ -135,15 +149,15 @@ PTN.parse('The.X-Files.Complete.S01-S09.1080p.BluRay.x264-GECKOS')
 #     'season': [1, 2, 3, 4, 5, 6, 7, 8, 9],
 #     'title': 'The X-Files',
 #     'resolution': '1080p',
-#     'quality': 'BluRay',
-#     'codec': 'x264',
+#     'quality': 'Blu-ray',
+#     'codec': 'H.264',
 #     'group': 'GECKOS'
 # }
 ```
 
 ### Note
 
-PTN does not guarantee the fields `group`, `excess`, and `episodeName`, as these 
+The fields `group`, `excess`, and `episodeName` are not guaranteed, as these 
 fields might be interchanged with each other. This shoudn't affect most 
 applications since episode names can be fetched from an online database 
 after correctly getting the season and episode number.
@@ -211,7 +225,7 @@ $ python setup.py install
 
 ## Contributing
 
-Submit a PR, including tests (if applicable) for what you've added. Please provide input torrent names in `tests/files/input.json` and output json objects in `tests/files/output.json` (where the non-guaranteed fields `group`, `excess`, and `episodeName` don't have to be included).
+Submit a PR on the `dev` branch, including tests for what gets newly matched (if applicable). Please provide input torrent names in `tests/files/input.json` and full output json objects in `tests/files/output_raw.json` (where the fields `group`, `excess`, and `episodeName` don't have to be included). Also add the output to `tests/files/output_standard.json`, only including fields that are standardised, along with `title`.
 
 ## License
 
