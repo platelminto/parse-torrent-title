@@ -21,13 +21,14 @@ class ParseTest(unittest.TestCase):
         self.assertEqual(len(torrents), len(expected_results))
 
         for torrent, expected_result in zip(torrents, expected_results):
+            print('Test: ' + torrent)
             result = PTN.parse(torrent, standardise=False)
             for key in expected_result:
                 self.assertIn(key, result, torrent)
-                self.assertEqual(expected_result[key], result[key], '{} - {}'.format(key, torrent))
+                self.assertEqual(expected_result[key], result[key], key)
             for key in result.keys():
                 if key not in ('group', 'excess', 'encoder'):  # Not needed in tests
-                    self.assertIn(key, expected_result, torrent)
+                    self.assertIn(key, expected_result)
 
     def test_standardised(self):
         json_input = os.path.join(os.path.dirname(__file__), 'files/input.json')
