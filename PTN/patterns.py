@@ -11,7 +11,6 @@ from .extras import get_channel_audio_options, link_pattern_options
 delimiters = '[\.\s\-\+_\/]'
 langs = [('rus(?:sian)?', 'Russian'),
          ('(?:True)?fr(?:ench)?', 'French'),
-         ('en?(?:g(?:lish)?)?', 'English'),
          ('ita(?:liano?)?', 'Italian'),
          ('castellano|spanish', 'Spanish'),
          ('swedish', 'Swedish'),
@@ -23,7 +22,9 @@ langs = [('rus(?:sian)?', 'Russian'),
          ('hindi', 'Hindi'),
          ('polish', 'Polish'),
          ('mandarin', 'Mandarin'),
-         ('kor(?:ean)?', 'Korean'),]
+         ('kor(?:ean)?', 'Korean'),
+         ('en?(?:g(?:lish)?)?', 'English')  # Must be at end, matches just an 'e'
+         ]
 
 season_range_pattern = '(?:Complete' + delimiters + '*)?(?:' + delimiters + '*)?(?:s(?:easons?)?)?' + delimiters + \
                        '?(?:s?[0-9]{1,2}[\s]*(?:\-|(?:\s*to\s*))[\s]*s?[0-9]{1,2})(?:' + delimiters + '*Complete)?'
@@ -112,8 +113,8 @@ patterns = [
     ('sbs', [('Half-SBS', 'Half SBS'),
              ('SBS', None, str.upper)]),
     ('unrated', 'UNRATED'),
-    ('size', ('(\d+(?:\.\d+)?(?:GB|MB))', str.upper)),
-    ('bitDepth', ('(?:8|10)bit', None, str.lower)),
+    ('size', ('(\d+(?:\.\d+)?(?:GB|MB))', None, str.upper)),
+    ('bitDepth', '(8|10)(?:bit)'),
     ('3d', '3D'),
     ('internal', 'iNTERNAL'),
     ('readnfo', 'READNFO')
@@ -122,6 +123,7 @@ patterns = [
 types = {
     'season': 'integer',
     'episode': 'integer',
+    'bitDepth': 'integer',
     'year': 'integer',
     'month': 'integer',
     'day': 'integer',

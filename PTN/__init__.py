@@ -11,5 +11,5 @@ __license__ = 'MIT'
 ptn = PTN()
 
 
-def parse(name, keep_raw=True):
-    return ptn.parse(name, keep_raw)
+def parse(name, standardise=False):
+    return ptn.parse(name, standardise)

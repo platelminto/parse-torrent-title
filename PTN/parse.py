@@ -58,7 +58,7 @@ class PTN(object):
 
         return clean
 
-    def parse(self, name, keep_raw):
+    def parse(self, name, standardise):
         name = name.strip()
         self.parts = {}
         self.torrent = {'name': name}
@@ -136,7 +136,7 @@ class PTN(object):
                     if key in types.keys() and types[key] == 'integer':
                         clean = int(clean)
 
-                if not keep_raw:
+                if standardise:
                     if replace:
                         clean = replace
                     if transform:

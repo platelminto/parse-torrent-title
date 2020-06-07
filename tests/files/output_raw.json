@@ -817,7 +817,7 @@
   },
   {
     "audio": "EAC3 5.1",
-    "bitDepth": "10bit",
+    "bitDepth": 10,
     "codec": "x265",
     "quality": "Webrip",
     "resolution": "1080p",
@@ -862,7 +862,7 @@
   },
   {
     "audio": "EAC3 2.0",
-    "bitDepth": "10bit",
+    "bitDepth": 10,
     "codec": "x265",
     "quality": "WEB-DL",
     "resolution": "576p",
