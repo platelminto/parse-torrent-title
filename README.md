@@ -16,10 +16,10 @@ title of the content.
 
 ### Updates on top of [/u/roidayan's work](https://github.com/roidayan/parse-torrent-name/tree/updates)
 
-- Added ability to return standardised info.
+- Added standardisation of output strings.
 - Added multi-language support.
 - Added multi-episode support.
-- Added various fields (see full field list below).
+- Added various fields (see field list below).
 - Added proper subtitle support.
 - Added proper support for matching episode names.
 - Added support for full `YYYY-MM-DD`-type dates, usually useful for daily shows that otherwise have no episode name.
@@ -66,7 +66,7 @@ parsed is returned in the `excess` field.
 
 ### Raw info
 
-The matches in the torrent name are standardised into specific strings, according to scene rules when possible - `'WEBDL'`, `'WEB DL'`, and `'HDRip'` are all converted to `'WEB-DL'`, for example. `'DDP51'` becomes `'Dolby Digital Plus 5.1'`. `['ita', 'eng']` becomes `['Italian', 'English']`.To disable this, and return just what was matched in the torrent, run:
+The matches in the torrent name are standardised into specific strings, according to scene rules where possible - `'WEBDL'`, `'WEB DL'`, and `'HDRip'` are all converted to `'WEB-DL'`, for example. `'DDP51'` becomes `'Dolby Digital Plus 5.1'`. `['ita', 'eng']` becomes `['Italian', 'English']`.To disable this, and return just what was matched in the torrent, run:
 
 ```py
 import PTN
@@ -225,7 +225,7 @@ $ python setup.py install
 
 ## Contributing
 
-Submit a PR on the `dev` branch, including tests for what gets newly matched (if applicable). Please provide input torrent names in `tests/files/input.json` and full output json objects in `tests/files/output_raw.json` (where the fields `group`, `excess`, and `episodeName` don't have to be included). Also add the output to `tests/files/output_standard.json`, only including fields that are standardised, along with `title`.
+Submit a PR on the `dev` branch, including tests for what gets newly matched (if applicable). Please provide input torrent names in `tests/files/input.json` and full output json objects (with `standardise=False`) in `tests/files/output_raw.json` (where the fields `group`, `excess`, and `episodeName` don't have to be included). Also add the standardised output to `tests/files/output_standard.json`, only including fields that are changed, along with `title`.
 
 ## License
 
