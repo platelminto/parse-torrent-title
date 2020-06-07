@@ -140,7 +140,7 @@ class PTN(object):
                     if replace:
                         clean = replace
                     if transform:
-                        clean = transform(clean)
+                        clean = getattr(clean, transform)()  # For python2 compatibility
 
                     if key == 'subtitles' and len(clean) == 1 and clean[0].lower() == 'subs':
                         clean = 'Available'

@@ -3,8 +3,8 @@
 
 # Patterns are either just a regex, or a tuple (or list of) that contains the regex
 # to match, (optional) what it should be replaced with when keep_raw is False (None
-# if to not replace), and (optional) a function to transform the value after everything
-# (None if to do nothing).
+# if to not replace), and (optional) a string function's name to transform the value
+# after everything (None if to do nothing).
 
 from .extras import get_channel_audio_options, link_pattern_options
 
@@ -54,7 +54,7 @@ patterns = [
      .format(delimiters=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)),
     ('day', '(?:{year}){delimiters}(?:{month}){delimiters}({day})'
      .format(delimiters=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)),
-    ('resolution', [('([0-9]{3,4}p)', None, str.lower),
+    ('resolution', [('([0-9]{3,4}p)', None, 'lower'),
                     ('(1280x720)', '720p')]),
     ('quality', [('WEB[ -]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
                  # Match WEB-DL's first as they can show up with others.
@@ -89,7 +89,7 @@ patterns = [
                ('av1', 'AV1'),
                ('[hx]\.?264', 'H.264'),
                ('[hx]\.?265', 'H.265')]),
-    ('audio', [('MP3', None, str.upper),
+    ('audio', [('MP3', None, 'upper'),
                ('LiNE', 'LiNE'),
                ('Dual[\- ]Audio', 'Dual Audio')
                ] + get_channel_audio_options([
@@ -100,20 +100,20 @@ patterns = [
         ('AAC', 'AAC')
     ])
      ),
-    ('region', ('R[0-9]', None, str.upper)),
+    ('region', ('R[0-9]', None, 'upper')),
     ('extended', '(EXTENDED(:?.CUT)?)'),
     ('hardcoded', 'HC'),
     ('proper', 'PROPER'),
     ('repack', 'REPACK'),
-    ('container', ('(MKV|AVI|MP4)', None, str.upper)),
+    ('container', ('(MKV|AVI|MP4)', None, 'upper')),
     ('widescreen', 'WS'),
     ('website', '^(\[ ?([^\]]+?) ?\])'),
     ('subtitles', subtitles_pattern + '|-?(?:subs?)'),
     ('language', '(' + lang_list_pattern + '+)(?!' + subtitles_pattern + ')'),
     ('sbs', [('Half-SBS', 'Half SBS'),
-             ('SBS', None, str.upper)]),
+             ('SBS', None, 'upper')]),
     ('unrated', 'UNRATED'),
-    ('size', ('(\d+(?:\.\d+)?(?:GB|MB))', None, str.upper)),
+    ('size', ('(\d+(?:\.\d+)?(?:GB|MB))', None, 'upper')),
     ('bitDepth', '(8|10)(?:bit)'),
     ('3d', '3D'),
     ('internal', 'iNTERNAL'),
