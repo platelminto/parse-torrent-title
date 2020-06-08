@@ -717,10 +717,58 @@
     "title": "Accused Guilty or Innocent"
   },
   {
-    "quality": "DVD-Rip",
-    "codec": "H.264",
     "audio": "AAC",
+    "codec": "H.264",
     "container": "MP4",
+    "quality": "DVD-Rip",
     "title": "The Peacemaker"
+  },
+  {
+    "audio": "Dolby Digital",
+    "codec": "H.264",
+    "language": ["Italian","English"],
+    "subtitles": ["Italian","English"],
+    "title": "The Big Bus - Il fantabus"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "language": ["Italian","English"],
+    "quality": "Blu-ray",
+    "subtitles": ["Italian","English"],
+    "title": "The Hunt"
+  },
+  {
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "title": "Near Death"
+  },
+  {
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "title": "The Red Pony"
+  },
+  {
+    "codec": "H.265",
+    "quality": "Blu-ray",
+    "title": "We Were Soldiers"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "language": ["Italian","English"],
+    "subtitles": ["Italian","English"],
+    "title": "Diabolique"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.264",
+    "title": "Road House 2 Last Call"
+  },
+  {
+    "audio": "Dolby TrueHD 7.1",
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "title": "We Summon The Darkness"
   }
 ]

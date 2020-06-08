@@ -98,6 +98,8 @@ patterns['audio'] = [('MP3', None, 'upper'),
                      ('LiNE', 'LiNE'),
                      ('Dual[\- ]Audio', 'Dual Audio')
                      ] + get_channel_audio_options([
+    ('TrueHD', 'Dolby TrueHD'),
+    ('Atmos', 'Dolby Atmos'),
     ('DD|AC-?3', 'Dolby Digital'),
     ('DDP|E-?AC-?3|EC-3', 'Dolby Digital Plus'),
     ('DTS', 'DTS'),
@@ -120,7 +122,7 @@ patterns['sbs'] = [('Half-SBS', 'Half SBS'),
                    ('SBS', None, 'upper')]
 patterns['unrated'] = 'UNRATED'
 patterns['size'] = ('(\d+(?:\.\d+)?(?:GB|MB))', None, 'upper')
-patterns['bitDepth'] = '((8|10)bit)'
+patterns['bitDepth'] = '((8|10)bits?)'
 patterns['3d'] = '3D'
 patterns['internal'] = 'iNTERNAL'
 patterns['readnfo'] = 'READNFO'

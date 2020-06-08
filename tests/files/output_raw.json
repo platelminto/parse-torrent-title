@@ -1053,13 +1053,90 @@
     "title": "Accused Guilty or Innocent"
   },
   {
-    "year": 1997,
-    "resolution": "480p",
-    "quality": "Dvd-Rip",
-    "codec": "X264",
     "audio": "AAC",
+    "codec": "X264",
     "container": "Mp-4",
+    "group": "DSD",
+    "quality": "Dvd-Rip",
+    "resolution": "480p",
     "title": "The Peacemaker",
-    "group": "DSD"
+    "year": 1997
+  },
+  {
+    "audio": "Ac3",
+    "codec": "H264",
+    "group": "MIRCrew",
+    "language": ["ita","eng"],
+    "resolution": "720p",
+    "subtitles": ["ita","eng"],
+    "title": "The Big Bus - Il fantabus",
+    "year": 1976
+  },
+  {
+    "audio": "AC3 5.1",
+    "codec": "H264",
+    "group": "MIRCrew",
+    "language": ["Ita","Eng"],
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "subtitles": ["Ita","Eng"],
+    "title": "The Hunt",
+    "year": 2020
+  },
+  {
+    "audio": "AAC",
+    "codec": "H264",
+    "group": "RARBG",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Near Death",
+    "year": 2004
+  },
+  {
+    "audio": "AAC",
+    "codec": "H264",
+    "group": "RARBG",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "The Red Pony",
+    "year": 1949
+  },
+  {
+    "codec": "H265",
+    "group": "BONE",
+    "quality": "BluRay",
+    "resolution": "720p",
+    "title": "We Were Soldiers",
+    "year": 2002
+  },
+  {
+    "audio": "Ac3-5.1",
+    "codec": "H264",
+    "group": "MIRCrew",
+    "language": ["ita","eng"],
+    "resolution": "720p",
+    "subtitles": ["ita","eng"],
+    "title": "Diabolique",
+    "year": 1996
+  },
+  {
+    "audio": "DD2.0",
+    "codec": "H264",
+    "group": "Will1869",
+    "quality": "HDTV",
+    "resolution": "1080p",
+    "title": "Road House 2 Last Call",
+    "unrated": true,
+    "year": 2006
+  },
+  {
+    "audio": "TrueHD.7.1",
+    "codec": "x264",
+    "encoder": "TGx",
+    "group": "EVO",
+    "quality": "Bluray",
+    "resolution": "1080p",
+    "title": "We Summon The Darkness",
+    "year": 2020
   }
 ]
