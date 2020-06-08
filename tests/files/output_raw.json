@@ -1051,5 +1051,15 @@
     "quality": "HDTV",
     "season": 1,
     "title": "Accused Guilty or Innocent"
+  },
+  {
+    "year": 1997,
+    "resolution": "480p",
+    "quality": "Dvd-Rip",
+    "codec": "X264",
+    "audio": "AAC",
+    "container": "Mp-4",
+    "title": "The Peacemaker",
+    "group": "DSD"
   }
 ]

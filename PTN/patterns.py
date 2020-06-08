@@ -68,7 +68,7 @@ patterns['quality'] = [('WEB[ -]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
                        ('(?:HD)?TC|TELECINE', 'Telecine'),
                        ('(?:DVD)?SCR(?:EENER)?|BDSCR', 'Screener'),
                        ('DDC', 'Digital Distribution Copy'),
-                       ('DVD(?:Rip|Mux)', 'DVD-Rip'),
+                       ('DVD-?(?:Rip|Mux)', 'DVD-Rip'),
                        ('DVDR|DVD-Full|Full-rip', 'DVD-R'),
                        ('PDTV|DVBRip', 'PDTV'),
                        ('DSR(?:ip)?|SATRip|DTHRip', 'DSRip'),
@@ -109,7 +109,8 @@ patterns['extended'] = '(EXTENDED(:?.CUT)?)'
 patterns['hardcoded'] = 'HC'
 patterns['proper'] = 'PROPER'
 patterns['repack'] = 'REPACK'
-patterns['container'] = ('(MKV|AVI|MP4)', None, 'upper')
+patterns['container'] = [('MKV|AVI', None, 'upper'),
+                          ('MP-?4', 'MP4')]
 patterns['widescreen'] = 'WS'
 patterns['website'] = '^(\[ ?([^\]]+?) ?\])'
 patterns['subtitles'] = '((?:{delimiters})?subs?{delimiters}*({langs}*)|({langs}*)(?:multi{delimiters}*)?subs?)' \
