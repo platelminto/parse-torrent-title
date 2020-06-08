@@ -9,23 +9,50 @@ import PTN
 
 
 class ParseTest(unittest.TestCase):
-    def test_parser(self):
+    def test_all_raw(self):
         json_input = os.path.join(os.path.dirname(__file__), 'files/input.json')
         with open(json_input) as input_file:
             torrents = json.load(input_file)
 
-        json_output = os.path.join(os.path.dirname(__file__), 'files/output.json')
+        json_output = os.path.join(os.path.dirname(__file__), 'files/output_raw.json')
+        with open(json_output) as output_file:
+            expected_results = json.load(output_file)
+
+        self.assertEqual(len(torrents), len(expected_results))
+        excess_elements = 0
+        for torrent, expected_result in zip(torrents, expected_results):
+            print('Test: ' + torrent)
+            result = PTN.parse(torrent, standardise=False)
+            if 'excess' in result:
+                print('excess: ' + str(result['excess']))
+                if isinstance(result['excess'], str):
+                    excess_elements += 1
+                else:
+                    excess_elements += len(result['excess'])
+            for key in expected_result:
+                self.assertIn(key, result, torrent)
+                self.assertEqual(expected_result[key], result[key], key)
+            for key in result.keys():
+                if key not in ('group', 'excess', 'encoder'):  # Not needed in tests
+                    self.assertIn(key, expected_result)
+        print('Excess elements total: ' + str(excess_elements))
+
+    def test_standardised(self):
+        json_input = os.path.join(os.path.dirname(__file__), 'files/input.json')
+        with open(json_input) as input_file:
+            torrents = json.load(input_file)
+
+        json_output = os.path.join(os.path.dirname(__file__), 'files/output_standard.json')
         with open(json_output) as output_file:
             expected_results = json.load(output_file)
 
         self.assertEqual(len(torrents), len(expected_results))
 
         for torrent, expected_result in zip(torrents, expected_results):
-            print("Test: " + torrent)
-            result = PTN.parse(torrent)
+            result = PTN.parse(torrent, standardise=True)
             for key in expected_result:
-                self.assertIn(key, result)
-                self.assertEqual(result[key], expected_result[key], key)
+                self.assertIn(key, result, torrent)
+                self.assertEqual(expected_result[key], result[key], '{} - {}'.format(key, torrent))
 
 
 if __name__ == '__main__':

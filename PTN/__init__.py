@@ -5,11 +5,11 @@ from .parse import PTN
 
 __author__ = 'Giorgio Momigliano'
 __email__ = 'gmomigliano@protonmail.com'
-__version__ = '1.4'
+__version__ = '2.0'
 __license__ = 'MIT'
 
 ptn = PTN()
 
 
-def parse(name):
-    return ptn.parse(name)
+def parse(name, standardise=True):
+    return ptn.parse(name, standardise)

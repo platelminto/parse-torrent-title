@@ -1,6 +1,7 @@
 [
   {
     "codec": "x264",
+    "encoder": "ettv",
     "episode": 3,
     "group": "ASAP",
     "quality": "HDTV",
@@ -56,20 +57,20 @@
   },
   {
     "codec": "XviD",
-    "quality": "WEBDL DVDRip",
+    "quality": "WEBDL",
     "title": "Hercules",
     "year": 2014
   },
   {
     "codec": "x264",
-    "quality": "PPV WEB-DL",
+    "quality": "WEB-DL",
     "title": "WWE Hell in a Cell",
     "year": 2014
   },
   {
     "codec": "x264",
     "group": "Ebi",
-    "quality": "PPV.HDTV",
+    "quality": "HDTV",
     "title": "UFC 179"
   },
   {
@@ -420,6 +421,8 @@
   },
   {
     "codec": "x264",
+    "day": 10,
+    "month": 11,
     "quality": "PDTV",
     "title": "WWE Monday Night Raw",
     "widescreen": true,
@@ -640,7 +643,8 @@
   },
   {
     "codec": "x264",
-    "quality": "AMZN WEB-DL",
+    "producer": "AMZN",
+    "quality": "WEB-DL",
     "resolution": "720p",
     "season": 23,
     "title": "South Park"
@@ -655,22 +659,24 @@
   {
     "codec": "XviD",
     "group": "Rezar1337",
+    "language": "SWEDiSH",
     "quality": "DVDRip",
     "season": 2,
     "title": "Bumbibjornarna"
   },
   {
-    "audio": "AAC2",
+    "audio": "AAC2 0",
     "codec": "x264",
     "quality": "HDRip",
     "resolution": "540p",
+    "subtitles": "KOR",
     "title": "The Martian",
     "year": 2015
   },
   {
     "container": "mp4",
-    "episodeName": "Divide and Rule",
     "episode": 9,
+    "episodeName": "Divide and Rule",
     "season": 1,
     "title": "Borgen"
   },
@@ -702,7 +708,8 @@
     "audio": "AAC5.1",
     "codec": "X264",
     "language": "Polish",
-    "quality": "NF WEB-DL",
+    "producer": "NF",
+    "quality": "WEB-DL",
     "resolution": "1080p",
     "season": 1,
     "title": "1983"
@@ -737,7 +744,7 @@
     "language": "English",
     "quality": "HDRip",
     "resolution": "720p",
-    "subtitles": ["Hindi", "Eng"],
+    "subtitles": ["Hindi","Eng"],
     "title": "Joker",
     "year": 2019
   },
@@ -748,7 +755,7 @@
     "language": "Mandarin",
     "quality": "HDRip",
     "resolution": "1080p",
-    "subtitles": ["CHS", "ENG"],
+    "subtitles": ["CHS","ENG"],
     "title": "IP Man And Four Kings",
     "year": 2019
   },
@@ -788,12 +795,14 @@
   },
   {
     "codec": "x264",
-    "quality": "AMZN.WEBRip",
+    "producer": "AMZN",
+    "quality": "WEBRip",
     "resolution": "720p",
     "season": 2,
     "title": "Tom Clancys Jack Ryan"
   },
   {
+    "audio": "DDP 5.1",
     "codec": "x264",
     "language": "Hindi",
     "resolution": "720p",
@@ -811,9 +820,10 @@
   },
   {
     "audio": "EAC3 5.1",
-    "bitDepth": "10bit",
+    "bitDepth": 10,
     "codec": "x265",
-    "quality": "ATVP Webrip",
+    "producer": "ATVP",
+    "quality": "Webrip",
     "resolution": "1080p",
     "season": 1,
     "title": "Home Before Dark",
@@ -849,16 +859,18 @@
     "codec": "H264",
     "episode": [5,6],
     "language": ["ITA","ENG"],
-    "quality": "AMZN.WEB-DLMux",
+    "producer": "AMZN",
+    "quality": "WEB-DLMux",
     "resolution": "1080p",
     "season": 7,
     "title": "The Blacklist"
   },
   {
     "audio": "EAC3 2.0",
-    "bitDepth": "10bit",
+    "bitDepth": 10,
     "codec": "x265",
-    "quality": "AMZN WEB-DL",
+    "producer": "AMZN",
+    "quality": "WEB-DL",
     "resolution": "576p",
     "season": [1,2,3,4,5,6,7,8,9,10],
     "title": "Are You Being Served",
@@ -909,7 +921,8 @@
   {
     "codec": "x264",
     "group": "GalaxyRG",
-    "quality": "AMZN.WEBRip",
+    "producer": "AMZN",
+    "quality": "WEBRip",
     "resolution": "720p",
     "size": "800MB",
     "title": "Label Me",
@@ -934,55 +947,109 @@
     "year": 2020
   },
   {
-    "season": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-    "year": 2014,
-    "codec": "XviD",
     "audio": "Ac3",
-    "subtitles": ["ita", "eng"],
-    "language": ["Italian", "English"],
+    "codec": "XviD",
+    "group": "MIRCrew",
+    "language": ["Italian","English"],
+    "season": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+    "subtitles": ["ita","eng"],
     "title": "Z Nation",
-    "group": "MIRCrew"
+    "year": 2014
   },
   {
-    "year": 2019,
-    "resolution": "1080p",
-    "quality": "BluRay",
     "audio": "AC3",
+    "language": ["ITA","ENG"],
+    "quality": "BluRay",
+    "resolution": "1080p",
     "subtitles": "SUBS",
-    "language": ["ITA", "ENG"],
-    "title": "1917"
+    "title": "1917",
+    "year": 2019
   },
   {
-    "year": 2003,
-    "resolution": "1080p",
-    "quality": "BluRay",
     "codec": "x264",
+    "encoder": "YTS.AG",
+    "quality": "BluRay",
+    "resolution": "1080p",
     "title": "Johnny English",
-    "encoder": "YTS.AG"
+    "year": 2003
   },
   {
-    "year": 2011,
-    "resolution": "1080p",
+    "codec": "x264",
+    "encoder": "MovieOW",
     "quality": "BRRip",
-    "codec": "x264",
+    "resolution": "1080p",
     "title": "Johnny English Reborn",
-    "encoder": "MovieOW"
+    "year": 2011
   },
   {
-    "year": 2018,
-    "resolution": "1080p",
-    "quality": "BluRay",
     "codec": "x264",
+    "encoder": "YTS.AM",
+    "quality": "BluRay",
+    "resolution": "1080p",
     "title": "Johnny English Strikes Again",
-    "encoder": "YTS.AM"
+    "year": 2018
   },
   {
-    "year": 1971,
-    "resolution": "1080p",
-    "quality": "BluRay",
-    "codec": "x265",
     "audio": "EAC3",
+    "codec": "x265",
+    "group": "SARTRE",
+    "quality": "BluRay",
+    "resolution": "1080p",
     "title": "The French Connection",
-    "group": "SARTRE"
+    "year": 1971
+  },
+  {
+    "codec": "H264",
+    "group": "BONE",
+    "quality": "DVDRip",
+    "season": [1,2],
+    "title": "The Thin Blue Line",
+    "year": 1995
+  },
+  {
+    "codec": "x264",
+    "encoder": "TGx",
+    "episode": 10,
+    "group": "mSD",
+    "resolution": "480p",
+    "season": 2,
+    "title": "Heavy Rescue 401"
+  },
+  {
+    "encoder": "TGx",
+    "resolution": "1080p",
+    "title": "Coronation Street",
+    "year": 2020
+  },
+  {
+    "audio": "DDP2.0",
+    "codec": "H.264",
+    "encoder": "TGx",
+    "episode": 66,
+    "episodeName": "No Safe Passage",
+    "group": "NTb",
+    "producer": "AMZN",
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "season": 0,
+    "title": "Deadliest Catch"
+  },
+  {
+    "codec": "x264",
+    "producer": "NF",
+    "quality": "WEB",
+    "resolution": "1080p",
+    "season": 7,
+    "title": "New Girl"
+  },
+  {
+    "codec": "x264",
+    "encoder": "TGx",
+    "episode": 7,
+    "episodeName": "Murdered His Mother or Falsely Accused",
+    "group": "CRiMSON",
+    "quality": "HDTV",
+    "season": 1,
+    "title": "Accused Guilty or Innocent"
   }
 ]
