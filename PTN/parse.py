@@ -66,20 +66,7 @@ class PTN(object):
         self.title_raw = None
 
         for key, pattern_options in [(key, patterns[key]) for key in patterns_ordered]:
-            pattern_options_norm = list()
-            if isinstance(pattern_options, str):
-                pattern_options = [(pattern_options, None, None)]
-            elif isinstance(pattern_options, tuple):
-                pattern_options = [pattern_options]
-            for options in pattern_options:
-                if isinstance(options, str):
-                    pattern_options_norm.append((options, None, None))
-                elif len(options) == 2:  # No transformation
-                    pattern_options_norm.append(options + (None,))
-                else:
-                    pattern_options_norm.append(options)
-
-            pattern_options = pattern_options_norm
+            pattern_options = self.normalise_pattern_options(pattern_options)
 
             for (pattern, replace, transform) in pattern_options:
                 if key not in ('season', 'episode', 'episodeName', 'website'):
@@ -171,9 +158,30 @@ class PTN(object):
         self.try_group(clean)
         self.try_encoder()
 
+        clean = self.clean_excess(clean)
+
         if len(clean) != 0:
             self._part('excess', [], self.excess_raw, clean)
+
         return self.parts
+
+    # Handles all the optional/missing tuple elements into a consistent list.
+    @staticmethod
+    def normalise_pattern_options(pattern_options):
+        pattern_options_norm = list()
+        if isinstance(pattern_options, str):
+            pattern_options = [(pattern_options, None, None)]
+        elif isinstance(pattern_options, tuple):
+            pattern_options = [pattern_options]
+        for options in pattern_options:
+            if isinstance(options, str):
+                pattern_options_norm.append((options, None, None))
+            elif len(options) == 2:  # No transformation
+                pattern_options_norm.append(options + (None,))
+            else:
+                pattern_options_norm.append(options)
+        pattern_options = pattern_options_norm
+        return pattern_options
 
     @staticmethod
     def standardise_languages(clean):
@@ -252,3 +260,12 @@ class PTN(object):
                     self.parts['group'] = group.replace(raw, '')
                     if not self.parts['group'].strip():
                         self.parts.pop('group')
+
+    @staticmethod
+    def clean_excess(excess):
+        cleaned_excess = list()
+        for extra in excess:
+            # re.fullmatch() is not available in python 2.7, so we manually do it with \Z.
+            if not re.match(r'(?:Complete|Season|Full)?[\]\[,.+\-]*(?:Complete|Season|Full)?\Z', extra, re.IGNORECASE):
+                cleaned_excess.append(extra)
+        return cleaned_excess

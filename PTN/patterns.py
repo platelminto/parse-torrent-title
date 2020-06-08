@@ -50,8 +50,8 @@ patterns['season'] = (delimiters + '('  # Season description can't be at the beg
                      '(?:Complete' + delimiters + ')?s([0-9]{1,2})(?:' + patterns['episode'] + ')?|'  # Describes season, optionally with complete or episode
                      '([0-9]{1,2})x[0-9]{2}|'  # Describes 5x02, 12x15 type descriptions
                      '(?:Complete' + delimiters + ')?Season[\. -]([0-9]{1,2})'  # Describes Season.15 type descriptions
-                     ')(?:' + delimiters + '|$)')
-patterns['year'] = '([\[\(]?(' + year_pattern + ')[\]\)]?)'
+                     ')(?:' + delimiters + 'Complete)?(?:' + delimiters + '|$)')
+patterns['year'] = '((' + year_pattern + '))'
 patterns['month'] = '(?:{year}){delimiters}({month}){delimiters}(?:{day})' \
     .format(delimiters=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)
 patterns['day'] = '(?:{year}){delimiters}(?:{month}){delimiters}({day})' \
@@ -83,7 +83,7 @@ patterns['quality'] = [('WEB[ -]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
                        ('PPV(?:Rip)?', 'Pay-Per-View Rip')]
 patterns['producer'] = [('(ATVP)', 'Apple TV+'),
               ('AMZN', 'Amazon Studios'),
-              ('NF', 'Netflix'),
+              ('NF|Netflix', 'Netflix'),
               ('NICK', 'Nickelodeon'),
               ('RED', 'YouTube Premium'),
               ('DSNP', 'Disney Plus')]
@@ -92,7 +92,8 @@ patterns['producer'] = suffix_pattern_with(link_pattern_options(patterns['qualit
 patterns['codec'] = [('xvid', 'Xvid'),
                      ('av1', 'AV1'),
                      ('[hx]\.?264', 'H.264'),
-                     ('[hx]\.?265', 'H.265')]
+                     ('[hx]\.?265', 'H.265'),
+                     ('HEVC', 'H.265')]
 patterns['audio'] = [('MP3', None, 'upper'),
                      ('LiNE', 'LiNE'),
                      ('Dual[\- ]Audio', 'Dual Audio')
@@ -118,7 +119,7 @@ patterns['sbs'] = [('Half-SBS', 'Half SBS'),
                    ('SBS', None, 'upper')]
 patterns['unrated'] = 'UNRATED'
 patterns['size'] = ('(\d+(?:\.\d+)?(?:GB|MB))', None, 'upper')
-patterns['bitDepth'] = '(8|10)(?:bit)'
+patterns['bitDepth'] = '((8|10)bit)'
 patterns['3d'] = '3D'
 patterns['internal'] = 'iNTERNAL'
 patterns['readnfo'] = 'READNFO'
