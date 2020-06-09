@@ -79,4 +79,6 @@ def suffix_pattern_with(suffixes, pattern_options, between='', optional=False):
 # Link a regex-tuple list into a single regex (to be able to use elsewhere while
 # maintaining standardisation functionality).
 def link_pattern_options(pattern_options):
-    return '|'.join([pattern_option[0] for pattern_option in pattern_options])
+    return '(?:' + \
+           '|'.join([pattern_option[0] if not isinstance(pattern_option, str) else pattern_option for pattern_option in pattern_options]) + \
+            ')'
