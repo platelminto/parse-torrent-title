@@ -69,7 +69,7 @@ class PTN(object):
             pattern_options = self.normalise_pattern_options(pattern_options)
 
             for (pattern, replace, transform) in pattern_options:
-                if key not in ('season', 'episode', 'episodeName', 'website'):
+                if key not in ('season', 'episode', 'episodeName', 'website', 'subtitles'):
                     pattern = r'\b{}\b'.format(pattern)
 
                 clean_name = self.get_clean_name(key)
@@ -113,8 +113,14 @@ class PTN(object):
                         clean = int(m[0])
                 elif key == 'language' or key == 'subtitles':
                     # handle multi language
-                    m = re.split(r'{}+'.format(delimiters), match[index['clean']])
-                    clean = list(filter(None, m))
+                    m = re.split(r'{}+'.format(delimiters), match[0])
+                    m = list(filter(None, m))
+                    clean = list()
+                    for x in m:
+                        if len(m) == 1 and re.match('subs?', x, re.I):
+                            clean.append(x)
+                        elif not re.match('subs?', x, re.I):
+                            clean.append(x)
                 elif key in types.keys() and types[key] == 'boolean':
                     clean = True
                 else:

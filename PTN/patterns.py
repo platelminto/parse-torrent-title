@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# Patterns are either just a regex, or a tuple (or list of) that contains the regex
-# to match, (optional) what it should be replaced with when keep_raw is False (None
-# if to not replace), and (optional) a string function's name to transform the value
-# after everything (None if to do nothing).
+# Patterns are either just a regex, or a tuple (or list of tuples) that contain the regex
+# to match, (optional) what it should be replaced with (None if to not replace), and
+# (optional) a string function's name to transform the value after everything (None if
+# to do nothing).
 
 from .extras import *
 
 delimiters = '[\.\s\-\+_\/]'
 langs = [('rus(?:sian)?', 'Russian'),
-         ('(?:True)?fr(?:ench)?', 'French'),
+         ('(?:True)?fre?(?:nch)?', 'French'),
          ('ita(?:liano?)?', 'Italian'),
          ('castellano|spanish', 'Spanish'),
          ('swedish', 'Swedish'),
@@ -115,9 +115,16 @@ patterns['container'] = [('MKV|AVI', None, 'upper'),
                           ('MP-?4', 'MP4')]
 patterns['widescreen'] = 'WS'
 patterns['website'] = '^(\[ ?([^\]]+?) ?\])'
-patterns['subtitles'] = '((?:{delimiters})?subs?{delimiters}*({langs}*)|({langs}*)(?:multi{delimiters}*)?subs?)' \
-    .format(delimiters=delimiters, langs=lang_list_pattern)  # 'subs' can be at beginning or end + '|-?(?:subs?)'
-patterns['language'] = '(' + lang_list_pattern + '+)(?!' + patterns['subtitles'] + ')'
+patterns['subtitles'] = ['(?:{delimiters}*)?subs?{delimiters}*{langs}+'.format(delimiters=delimiters, langs=lang_list_pattern),
+'{langs}+(?=(?:multi[\.\s\-\+_\/]*)?subs?)'.format(delimiters=delimiters, langs=lang_list_pattern),
+                         # Need a pattern just for subs, and can't just make above regexes * over + as we want
+                         # just 'subs' to match last.
+                         '(?:{delimiters}*)?subs?{delimiters}*'.format(delimiters=delimiters, langs=lang_list_pattern),
+                        ]
+patterns['language'] = ['(?:' + lang_list_pattern + '+)(?!' + link_pattern_options(patterns['subtitles']) + ')',
+'(' + lang_list_pattern + '+)(?=' + link_pattern_options(patterns['subtitles'][:-1]) + ')',
+
+                        ]
 patterns['sbs'] = [('Half-SBS', 'Half SBS'),
                    ('SBS', None, 'upper')]
 patterns['unrated'] = 'UNRATED'

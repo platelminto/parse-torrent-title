@@ -770,5 +770,11 @@
     "codec": "H.264",
     "quality": "Blu-ray",
     "title": "We Summon The Darkness"
+  },
+    {
+    "codec": "H.264",
+    "subtitles": "English",
+    "language": ["Italian", "French"],
+    "title": "37°2 le matin - Betty Blue"
   }
 ]

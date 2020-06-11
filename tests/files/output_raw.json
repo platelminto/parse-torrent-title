@@ -949,7 +949,6 @@
   {
     "audio": "Ac3",
     "codec": "XviD",
-    "group": "MIRCrew",
     "language": ["Italian","English"],
     "season": [1,2,3,4,5,6,7,8,9,10,11,12,13],
     "subtitles": ["ita","eng"],
@@ -1138,5 +1137,13 @@
     "resolution": "1080p",
     "title": "We Summon The Darkness",
     "year": 2020
+  },
+  {
+    "year": 1986,
+    "resolution": "720p",
+    "codec": "H264",
+    "subtitles": "Eng",
+    "language": ["ita", "fre"],
+    "title": "37°2 le matin - Betty Blue"
   }
 ]
