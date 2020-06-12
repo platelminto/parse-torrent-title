@@ -225,8 +225,8 @@ class PTN(object):
         # as media with years in them but without a release year.
         for exception in exceptions:
             incorrect_key, incorrect_value = exception['incorrect_parse']
-            if self.parts['title'] == exception['parsed_title'] \
-                and self.parts[incorrect_key] == incorrect_value:
+            if (self.parts['title'] == exception['parsed_title'] and
+               incorrect_key in self.parts and self.parts[incorrect_key] == incorrect_value):
                 self.parts.pop(incorrect_key)
                 self.parts['title'] = exception['actual_title']
 
