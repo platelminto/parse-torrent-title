@@ -121,9 +121,12 @@ patterns['subtitles'] = ['(?:{delimiters}*)?subs?{delimiters}*{langs}+'.format(d
                          # just 'subs' to match last.
                          '(?:{delimiters}*)?subs?{delimiters}*'.format(delimiters=delimiters, langs=lang_list_pattern),
                         ]
-patterns['language'] = ['(?:' + lang_list_pattern + '+)(?!' + link_pattern_options(patterns['subtitles']) + ')',
-'(' + lang_list_pattern + '+)(?=' + link_pattern_options(patterns['subtitles'][:-1]) + ')',
-
+# Language takes precedence over subs when ambiguous - if we have a lang match, and
+# then a subtitles match starting with subs, the first langs are languages, and the
+# rest will be left as subtitles. Otherwise, don't match if there are subtitles matches
+# after the langs.
+patterns['language'] = ['(' + lang_list_pattern + '+)(?=' + patterns['subtitles'][0] + ')',
+                        '(?:' + lang_list_pattern + '+)(?!' + link_pattern_options(patterns['subtitles']) + ')'
                         ]
 patterns['sbs'] = [('Half-SBS', 'Half SBS'),
                    ('SBS', None, 'upper')]
