@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 import re
 from .patterns import patterns, types, delimiters, langs, patterns_ordered
@@ -175,17 +174,18 @@ class PTN(object):
     @staticmethod
     def normalise_pattern_options(pattern_options):
         pattern_options_norm = list()
-        if isinstance(pattern_options, str):
-            pattern_options = [(pattern_options, None, None)]
-        elif isinstance(pattern_options, tuple):
+
+        if isinstance(pattern_options, tuple):
             pattern_options = [pattern_options]
+        elif not isinstance(pattern_options, list):
+            pattern_options = [(pattern_options, None, None)]
         for options in pattern_options:
-            if isinstance(options, str):
-                pattern_options_norm.append((options, None, None))
-            elif len(options) == 2:  # No transformation
+            if len(options) == 2:  # No transformation
                 pattern_options_norm.append(options + (None,))
-            else:
+            elif isinstance(options, tuple):
                 pattern_options_norm.append(options)
+            else:
+                pattern_options_norm.append((options, None, None))
         pattern_options = pattern_options_norm
         return pattern_options
 

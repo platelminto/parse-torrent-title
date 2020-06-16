@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 # Patterns are either just a regex, or a tuple (or list of tuples) that contain the regex
 # to match, (optional) what it should be replaced with (None if to not replace), and

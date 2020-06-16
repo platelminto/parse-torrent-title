@@ -68,10 +68,10 @@ def suffix_pattern_with(suffixes, pattern_options, between='', optional=False):
         if not isinstance(pattern_options, list):
             pattern_options = [pattern_options]
         for pattern_option in pattern_options:
-            if isinstance(pattern_option, str):
-                options.append('({})(?:{})?(?:{}){}'.format(pattern_option, between, suffix, optional_char))
-            else:
+            if isinstance(pattern_option, tuple):
                 options.append(('({})(?:{})?(?:{}){}'.format(pattern_option[0], between, suffix, optional_char),) + pattern_option[1:])
+            else:
+                options.append('({})(?:{})?(?:{}){}'.format(pattern_option, between, suffix, optional_char))
 
     return options
 
