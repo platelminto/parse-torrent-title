@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from __future__ import unicode_literals
+
 import json
 import os
 import unittest
@@ -21,14 +23,14 @@ class ParseTest(unittest.TestCase):
         self.assertEqual(len(torrents), len(expected_results))
         excess_elements = 0
         for torrent, expected_result in zip(torrents, expected_results):
-            print('Test: ' + torrent)
+            print('Test: {}'.format(torrent))
             result = PTN.parse(torrent, standardise=False)
             if 'excess' in result:
-                print('excess: ' + str(result['excess']))
-                if isinstance(result['excess'], str):
-                    excess_elements += 1
-                else:
+                print('excess: {}'.format(result['excess']))
+                if isinstance(result['excess'], list):
                     excess_elements += len(result['excess'])
+                else:
+                    excess_elements += 1
             for key in expected_result:
                 self.assertIn(key, result, torrent)
                 self.assertEqual(expected_result[key], result[key], key)
