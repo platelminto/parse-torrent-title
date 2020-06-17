@@ -1229,5 +1229,20 @@
     "quality": "WEB",
     "title": "EastEnders",
     "year": 2020
+  },
+  {
+    "codec": "h264",
+    "encoder": "TGx",
+    "episode": 7,
+    "group": "TRUMP",
+    "quality": "WEB",
+    "season": 2,
+    "title": "Lost Gold of World War II"
+  },
+  {
+    "encoder": "TGx",
+    "group": "HorribleSubs",
+    "resolution": "360p",
+    "title": "Plunderer"
   }
 ]

@@ -28,7 +28,7 @@ langs = [('rus(?:sian)?', 'Russian'),
 season_range_pattern = '(?:Complete' + delimiters + '*)?(?:' + delimiters + '*)?(?:s(?:easons?)?)?' + delimiters + \
                        '?(?:s?[0-9]{1,2}[\s]*(?:\-|(?:\s*to\s*))[\s]*s?[0-9]{1,2})(?:' + delimiters + '*Complete)?'
 
-lang_list_pattern = '(?:(?:' + link_pattern_options(langs) + ')' + delimiters + '*)'
+lang_list_pattern = '(?<![a-z])(?:(?:' + link_pattern_options(langs) + ')' + delimiters + '*)'
 
 year_pattern = '(?:19[0-9]|20[0-2])[0-9]'
 month_pattern = '0[1-9]|1[0-2]'
@@ -118,7 +118,7 @@ patterns['subtitles'] = ['(?:{delimiters}*)?subs?{delimiters}*{langs}+'.format(d
 '{langs}+(?=(?:multi[\.\s\-\+_\/]*)?subs?)'.format(delimiters=delimiters, langs=lang_list_pattern),
                          # Need a pattern just for subs, and can't just make above regexes * over + as we want
                          # just 'subs' to match last.
-                         '(?:{delimiters}*)?subs?{delimiters}*'.format(delimiters=delimiters, langs=lang_list_pattern),
+                         '(?:{delimiters}*)?(?<![a-z])subs?{delimiters}*'.format(delimiters=delimiters, langs=lang_list_pattern),
                         ]
 # Language takes precedence over subs when ambiguous - if we have a lang match, and
 # then a subtitles match starting with subs, the first langs are languages, and the

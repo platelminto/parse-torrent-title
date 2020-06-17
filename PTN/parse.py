@@ -42,7 +42,6 @@ class PTN(object):
             if raw is not None:
                 self.excess_raw = self.excess_raw.replace(raw, '', 1)
 
-
     @staticmethod
     def _clean_string(string):
         clean = re.sub(r'^ -', '', string)
