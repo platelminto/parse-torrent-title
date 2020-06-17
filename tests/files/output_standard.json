@@ -868,5 +868,23 @@
   },
   {
     "title": "Fruits Basket"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.264",
+    "size": "1.1GB",
+    "subtitles": "English",
+    "title": "Kadakh"
+  },
+  {
+    "codec": "H.265",
+    "quality": "Blu-ray",
+    "title": "Satyagraha"
+  },
+  {
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "subtitles": "Available",
+    "title": "Shuddh Desi Romance"
   }
 ]

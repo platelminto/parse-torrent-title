@@ -588,7 +588,7 @@
     "quality": "BluRay",
     "resolution": "720p",
     "season": 1,
-    "subtitles": "DK",
+    "subtitles": "DKsubs",
     "title": "The X-Files"
   },
   {
@@ -596,7 +596,7 @@
     "quality": "BluRay",
     "resolution": "1080p",
     "season": [1,2,3],
-    "subtitles": "DK",
+    "subtitles": "DKsubs",
     "title": "The X-Files"
   },
   {
@@ -669,7 +669,7 @@
     "codec": "x264",
     "quality": "HDRip",
     "resolution": "540p",
-    "subtitles": "KOR",
+    "subtitles": "KORSUB",
     "title": "The Martian",
     "year": 2015
   },
@@ -744,7 +744,7 @@
     "language": "English",
     "quality": "HDRip",
     "resolution": "720p",
-    "subtitles": ["Hindi","Eng"],
+    "subtitles": ["Hindi","Eng","Multi"],
     "title": "Joker",
     "year": 2019
   },
@@ -807,7 +807,7 @@
     "language": "Hindi",
     "resolution": "720p",
     "season": 1,
-    "subtitles": "E",
+    "subtitles": "ESub",
     "title": "Sacred Games",
     "year": 2018
   },
@@ -1268,7 +1268,7 @@
     "episode": 12,
     "group": "Erai-raws",
     "resolution": "720p",
-    "subtitles": "Subtitle",
+    "subtitles": "Multiple",
     "title": "Kami no Tou"
   },
   {
@@ -1300,7 +1300,7 @@
     "episode": 11,
     "group": "Erai-raws",
     "resolution": "720p",
-    "subtitles": "Subtitle",
+    "subtitles": "Multiple",
     "title": "Shadowverse"
   },
   {
@@ -1315,7 +1315,7 @@
     "episode": 10,
     "group": "Erai-raws",
     "resolution": "720p",
-    "subtitles": "Subtitle",
+    "subtitles": "Multiple",
     "title": "Kitsutsuki Tanteidokoro"
   },
   {
@@ -1323,16 +1323,49 @@
     "episode": 11,
     "group": "Erai-raws",
     "resolution": "720p",
-    "subtitles": "Subtitle",
+    "subtitles": "Multiple",
     "title": "Princess Connect! Re-Dive"
   },
   {
-    "season": 2,
+    "encoder": "TGx",
     "episode": 11,
-    "year": 2019,
-    "resolution": "720p",
-    "title": "Fruits Basket",
     "group": "HorribleSubs",
-    "encoder": "TGx"
+    "resolution": "720p",
+    "season": 2,
+    "title": "Fruits Basket",
+    "year": 2019
+  },
+  {
+    "audio": "DD- 2.0",
+    "codec": "x264",
+    "group": "BonsaiHD",
+    "language": "Hindi",
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "size": "1.1 GB",
+    "subtitles": "ESub",
+    "title": "Kadakh",
+    "year": 2020
+  },
+  {
+    "audio": "AAC 5.1",
+    "bitDepth": 10,
+    "codec": "x265",
+    "group": "RONIN",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Satyagraha",
+    "year": 2013
+  },
+  {
+    "audio": "AAC 5.1",
+    "codec": "x264",
+    "group": "Telly",
+    "language": "Hindi",
+    "quality": "BluRay",
+    "resolution": "720p",
+    "subtitles": "MSubs",
+    "title": "Shuddh Desi Romance",
+    "year": 2013
   }
 ]

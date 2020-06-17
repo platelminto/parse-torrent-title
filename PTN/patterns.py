@@ -116,10 +116,10 @@ patterns['container'] = [('MKV|AVI', None, 'upper'),
 patterns['widescreen'] = 'WS'
 patterns['website'] = '^(\[ ?([^\]]+?) ?\])'
 patterns['subtitles'] = ['(?:{delimiters}*)?sub(?:title)?s?{delimiters}*{langs}+'.format(delimiters=delimiters, langs=lang_list_pattern),
-'{langs}+(?=(?:multi(?:ple)?[\.\s\-\+_\/]*)?sub(?:title)?s?)'.format(delimiters=delimiters, langs=lang_list_pattern),
+'{langs}+(?:(?:m(?:ulti(?:ple)?)?[\.\s\-\+_\/]*)?sub(?:title)?s?)'.format(delimiters=delimiters, langs=lang_list_pattern),
                          # Need a pattern just for subs, and can't just make above regexes * over + as we want
                          # just 'subs' to match last.
-                         '(?:{delimiters}*)?(?<![a-z])sub(?:title)?s?{delimiters}*'.format(delimiters=delimiters, langs=lang_list_pattern),
+                         '(?:{delimiters}*)?(?<![a-z])(?:m(?:ulti(?:ple)?)?[\.\s\-\+_\/]*)?sub(?:title)?s?{delimiters}*'.format(delimiters=delimiters, langs=lang_list_pattern),
                         ]
 # Language takes precedence over subs when ambiguous - if we have a lang match, and
 # then a subtitles match starting with subs, the first langs are languages, and the
