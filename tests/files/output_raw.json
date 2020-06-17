@@ -1241,8 +1241,34 @@
   },
   {
     "encoder": "TGx",
+    "episode": 23,
     "group": "HorribleSubs",
     "resolution": "360p",
     "title": "Plunderer"
+  },
+  {
+    "audio": "AAC",
+    "codec": "x264",
+    "container": "mkv",
+    "episode": 8,
+    "resolution": "1080p",
+    "size": "1.4 GB",
+    "title": "Blood Blockade Battlefront & Beyond",
+    "website": "Golumpa"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 12,
+    "group": "HorribleSubs",
+    "resolution": "480p",
+    "title": "Tower of God"
+  },
+  {
+    "resolution": "720p",
+    "subtitles": "Subtitle",
+    "title": "Kami no Tou",
+    "episode": 12,
+    "group": "Erai-raws",
+    "encoder": "TGx"
   }
 ]

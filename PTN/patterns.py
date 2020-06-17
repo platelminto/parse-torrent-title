@@ -3,7 +3,8 @@
 # Patterns are either just a regex, or a tuple (or list of tuples) that contain the regex
 # to match, (optional) what it should be replaced with (None if to not replace), and
 # (optional) a string function's name to transform the value after everything (None if
-# to do nothing).
+# to do nothing). The transform can also be a tuple (or list of tuples) with function names
+# and list of arguments.
 
 from .extras import *
 
@@ -33,6 +34,8 @@ lang_list_pattern = '(?<![a-z])(?:(?:' + link_pattern_options(langs) + ')' + del
 year_pattern = '(?:19[0-9]|20[0-2])[0-9]'
 month_pattern = '0[1-9]|1[0-2]'
 day_pattern = '[0-2][0-9]|3[01]'
+
+anime_episode_pattern = ' - (\d{1,3})$'  # Has to be at end of title
 
 # Forces an order to go by the regexes, as we want this to be deterministic (different
 # orders can generate different matchings). e.g. "doctor_who_2005..." in input.json
@@ -114,11 +117,11 @@ patterns['container'] = [('MKV|AVI', None, 'upper'),
                           ('MP-?4', 'MP4')]
 patterns['widescreen'] = 'WS'
 patterns['website'] = '^(\[ ?([^\]]+?) ?\])'
-patterns['subtitles'] = ['(?:{delimiters}*)?subs?{delimiters}*{langs}+'.format(delimiters=delimiters, langs=lang_list_pattern),
-'{langs}+(?=(?:multi[\.\s\-\+_\/]*)?subs?)'.format(delimiters=delimiters, langs=lang_list_pattern),
+patterns['subtitles'] = ['(?:{delimiters}*)?sub(?:title)?s?{delimiters}*{langs}+'.format(delimiters=delimiters, langs=lang_list_pattern),
+'{langs}+(?=(?:multi(?:ple)?[\.\s\-\+_\/]*)?sub(?:title)?s?)'.format(delimiters=delimiters, langs=lang_list_pattern),
                          # Need a pattern just for subs, and can't just make above regexes * over + as we want
                          # just 'subs' to match last.
-                         '(?:{delimiters}*)?(?<![a-z])subs?{delimiters}*'.format(delimiters=delimiters, langs=lang_list_pattern),
+                         '(?:{delimiters}*)?(?<![a-z])sub(?:title)?s?{delimiters}*'.format(delimiters=delimiters, langs=lang_list_pattern),
                         ]
 # Language takes precedence over subs when ambiguous - if we have a lang match, and
 # then a subtitles match starting with subs, the first langs are languages, and the
@@ -130,8 +133,8 @@ patterns['language'] = ['(' + lang_list_pattern + '+)(?=' + patterns['subtitles'
 patterns['sbs'] = [('Half-SBS', 'Half SBS'),
                    ('SBS', None, 'upper')]
 patterns['unrated'] = 'UNRATED'
-patterns['size'] = ('(\d+(?:\.\d+)?(?:GB|MB))', None, 'upper')
-patterns['bitDepth'] = '((8|10)bits?)'
+patterns['size'] = ('\d+(?:\.\d+)?\s?(?:GB|MB)', None, [('upper', []), ('replace', [' ', ''])])
+patterns['bitDepth'] = '(8|10)bits?'
 patterns['3d'] = '3D'
 patterns['internal'] = 'iNTERNAL'
 patterns['readnfo'] = 'READNFO'

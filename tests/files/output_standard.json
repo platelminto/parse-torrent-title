@@ -825,5 +825,19 @@
   },
   {
     "title": "Plunderer"
+  },
+  {
+    "codec": "H.264",
+    "container": "MKV",
+    "size": "1.4GB",
+    "title": "Blood Blockade Battlefront & Beyond"
+  },
+  {
+    "title": "Tower of God"
+  },
+    {
+    "subtitles": "Available",
+    "title": "Kami no Tou",
+    "episode": 12
   }
 ]
