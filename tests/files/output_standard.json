@@ -771,10 +771,51 @@
     "quality": "Blu-ray",
     "title": "We Summon The Darkness"
   },
-    {
+  {
     "codec": "H.264",
+    "language": ["Italian","French"],
     "subtitles": "English",
-    "language": ["Italian", "French"],
     "title": "37°2 le matin - Betty Blue"
+  },
+  {
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "title": "Non-Fiction"
+  },
+  {
+    "codec": "H.264",
+    "title": "Spring Night Summer Night"
+  },
+  {
+    "codec": "H.264",
+    "producer": "Amazon Studios",
+    "title": "Insecure"
+  },
+  {
+    "codec": "H.264",
+    "title": "Let It Fall Los Angeles 1982-1992"
+  },
+  {
+    "codec": "H.264",
+    "title": "Dr Phil"
+  },
+  {
+    "audio": "Dolby Digital Plus 5.1",
+    "codec": "H.264",
+    "producer": "Amazon Studios",
+    "title": "Starhunter ReduX"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Jimmy Fallon"
+  },
+  {
+    "title": "Kami no Tou"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "EastEnders"
   }
 ]

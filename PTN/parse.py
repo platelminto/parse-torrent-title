@@ -40,7 +40,7 @@ class PTN(object):
             if name == 'group':
                 self.group_raw = raw
             if raw is not None:
-                self.excess_raw = self.excess_raw.replace(raw, '')
+                self.excess_raw = self.excess_raw.replace(raw, '', 1)
 
 
     @staticmethod

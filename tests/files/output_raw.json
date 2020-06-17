@@ -1139,11 +1139,95 @@
     "year": 2020
   },
   {
-    "year": 1986,
-    "resolution": "720p",
     "codec": "H264",
+    "language": ["ita","fre"],
+    "resolution": "720p",
     "subtitles": "Eng",
-    "language": ["ita", "fre"],
-    "title": "37°2 le matin - Betty Blue"
+    "title": "37°2 le matin - Betty Blue",
+    "year": 1986
+  },
+  {
+    "codec": "x264",
+    "group": "USURY",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Non-Fiction",
+    "year": 2018
+  },
+  {
+    "codec": "x264",
+    "encoder": "TGx",
+    "group": "GHOULS",
+    "quality": "BDRip",
+    "title": "Spring Night Summer Night",
+    "year": 1967
+  },
+  {
+    "codec": "x264",
+    "group": "GalaxyTV",
+    "producer": "AMZN",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "season": 4,
+    "title": "Insecure"
+  },
+  {
+    "codec": "x264",
+    "encoder": "rartv",
+    "group": "W4F",
+    "internal": true,
+    "quality": "HDTV",
+    "title": "Let It Fall Los Angeles 1982-1992",
+    "year": 2017
+  },
+  {
+    "codec": "x264",
+    "day": 19,
+    "encoder": "rartv",
+    "group": "W4F",
+    "month": 4,
+    "quality": "HDTV",
+    "resolution": "720p",
+    "title": "Dr Phil",
+    "year": 2019
+  },
+  {
+    "audio": "DDP5.1",
+    "codec": "x264",
+    "encoder": "rartv",
+    "group": "GLUE",
+    "producer": "AMZN",
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "season": 2,
+    "title": "Starhunter ReduX"
+  },
+  {
+    "codec": "h264",
+    "day": 16,
+    "encoder": "TGx",
+    "group": "TRUMP",
+    "month": 6,
+    "quality": "WEB",
+    "resolution": "720p",
+    "title": "Jimmy Fallon",
+    "year": 2020
+  },
+  {
+    "encoder": "TGx",
+    "episode": 12,
+    "group": "Judas",
+    "season": 1,
+    "title": "Kami no Tou"
+  },
+  {
+    "codec": "h264",
+    "day": 16,
+    "encoder": "TGx",
+    "group": "WEBTUBE",
+    "month": 6,
+    "quality": "WEB",
+    "title": "EastEnders",
+    "year": 2020
   }
 ]
