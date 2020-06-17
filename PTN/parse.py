@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import re
-from .patterns import patterns, types, delimiters, anime_episode_pattern, langs, patterns_ordered
+from .patterns import patterns, types, delimiters, langs, patterns_ordered
 from .extras import exceptions, patterns_ignore_title
 
 
@@ -141,7 +141,6 @@ class PTN(object):
                 self._part(key, match, match[index['raw']], clean)
 
         self.process_title()
-        self.try_anime_episode()
         self.fix_known_exceptions()
 
         # Start process for end, where more general fields (episode name, group, and
@@ -213,14 +212,6 @@ class PTN(object):
             raw = raw[self.start:self.end].split('(')[0]
         clean = self._clean_string(raw)
         self._part('title', [], raw, clean)
-
-    def try_anime_episode(self):
-        title = self.parts['title']
-        x = re.search(anime_episode_pattern, title)
-        if x and 'episode' not in self.parts:
-            episode = int(x.groups()[0])
-            self.parts['title'] = title.replace(x.group(0), '')
-            self.parts['episode'] = episode
 
     def get_clean_name(self, key):
         clean_name = re.sub(r'_', ' ', self.torrent['name'])

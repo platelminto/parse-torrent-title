@@ -835,9 +835,38 @@
   {
     "title": "Tower of God"
   },
-    {
+  {
+    "episode": 12,
     "subtitles": "Available",
-    "title": "Kami no Tou",
-    "episode": 12
+    "title": "Kami no Tou"
+  },
+  {
+    "codec": "H.265",
+    "subtitles": "English",
+    "title": "Plunderer"
+  },
+  {
+    "title": "Tamayomi"
+  },
+  {
+    "title": "Ahiru no Sora"
+  },
+  {
+    "subtitles": "Available",
+    "title": "Shadowverse"
+  },
+  {
+    "title": "A3! Season Spring & Summer"
+  },
+  {
+    "subtitles": "Available",
+    "title": "Kitsutsuki Tanteidokoro"
+  },
+  {
+    "subtitles": "Available",
+    "title": "Princess Connect! Re-Dive"
+  },
+  {
+    "title": "Fruits Basket"
   }
 ]

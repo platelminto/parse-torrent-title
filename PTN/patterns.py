@@ -35,8 +35,6 @@ year_pattern = '(?:19[0-9]|20[0-2])[0-9]'
 month_pattern = '0[1-9]|1[0-2]'
 day_pattern = '[0-2][0-9]|3[01]'
 
-anime_episode_pattern = ' - (\d{1,3})$'  # Has to be at end of title
-
 # Forces an order to go by the regexes, as we want this to be deterministic (different
 # orders can generate different matchings). e.g. "doctor_who_2005..." in input.json
 patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', 'quality',
@@ -46,7 +44,7 @@ patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', '
 
 
 patterns = dict()
-patterns['episode'] = '(?<![a-z])(?:[ex]|ep)(?:[0-9]{1,2}(?:-(?:[ex]|ep)?(?:[0-9]{1,2}))?)(?![0-9])'
+patterns['episode'] = '(?:(?<![a-z])(?:[ex]|ep)(?:[0-9]{1,2}(?:-(?:[ex]|ep)?(?:[0-9]{1,2}))?)(?![0-9])|\s\-\s\d{1,3}\s)'
 patterns['season'] = (delimiters + '('  # Season description can't be at the beginning, must be after this pattern
                      '' + season_range_pattern + '|'  # Describes season ranges
                      '(?:Complete' + delimiters + ')?s([0-9]{1,2})(?:' + patterns['episode'] + ')?|'  # Describes season, optionally with complete or episode

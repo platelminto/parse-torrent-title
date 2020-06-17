@@ -1264,11 +1264,75 @@
     "title": "Tower of God"
   },
   {
-    "resolution": "720p",
-    "subtitles": "Subtitle",
-    "title": "Kami no Tou",
+    "encoder": "TGx",
     "episode": 12,
     "group": "Erai-raws",
+    "resolution": "720p",
+    "subtitles": "Subtitle",
+    "title": "Kami no Tou"
+  },
+  {
+    "bitDepth": 10,
+    "codec": "x265",
+    "encoder": "TGx",
+    "episode": 23,
+    "group": "Judas",
+    "resolution": "1080p",
+    "subtitles": "Eng",
+    "title": "Plunderer"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 12,
+    "group": "HorribleSubs",
+    "resolution": "360p",
+    "title": "Tamayomi"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 36,
+    "group": "HorribleSubs",
+    "resolution": "480p",
+    "title": "Ahiru no Sora"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 11,
+    "group": "Erai-raws",
+    "resolution": "720p",
+    "subtitles": "Subtitle",
+    "title": "Shadowverse"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 11,
+    "group": "HorribleSubs",
+    "resolution": "360p",
+    "title": "A3! Season Spring & Summer"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 10,
+    "group": "Erai-raws",
+    "resolution": "720p",
+    "subtitles": "Subtitle",
+    "title": "Kitsutsuki Tanteidokoro"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 11,
+    "group": "Erai-raws",
+    "resolution": "720p",
+    "subtitles": "Subtitle",
+    "title": "Princess Connect! Re-Dive"
+  },
+  {
+    "season": 2,
+    "episode": 11,
+    "year": 2019,
+    "resolution": "720p",
+    "title": "Fruits Basket",
+    "group": "HorribleSubs",
     "encoder": "TGx"
   }
 ]
