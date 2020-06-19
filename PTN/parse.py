@@ -6,10 +6,6 @@ from .extras import exceptions, patterns_ignore_title
 
 
 class PTN(object):
-    @staticmethod
-    def _escape_regex(string):
-        return re.sub(r'[\-\[\]{}()*+?.,\\^$|#\s]', '\\$&', string)
-
     def __init__(self):
         self.excess_raw = None
         self.torrent_name = None
@@ -69,7 +65,7 @@ class PTN(object):
                 if key not in ('episode', 'website'):
                     pattern = r'\b(?:{})\b'.format(pattern)
 
-                clean_name = self.get_clean_name()
+                clean_name = re.sub(r'_', ' ', self.torrent_name)
 
                 # With multiple matches, we will usually want to use the first match.
                 # For 'year', we instead use the last instance of a year match since,
@@ -123,7 +119,7 @@ class PTN(object):
 
         clean = self.remove_bad_excess(clean)
 
-        if len(clean) != 0:
+        if clean:
             self._part('excess', None, self.excess_raw, clean)
 
         return self.parts
@@ -158,7 +154,9 @@ class PTN(object):
             clean = replace
         if transforms:
             for transform in filter(lambda t: t[0], transforms):
-                clean = getattr(clean, transform[0])(*transform[1])  # For python2 compatibility
+                # For python2 compatibility, we're not able to simply pass functions as str.upper
+                # means different things in 2.7 and 3.5.
+                clean = getattr(clean, transform[0])(*transform[1])
         if key == 'language' or key == 'subtitles':
             clean = self.standardise_languages(clean)
             if not clean:
@@ -167,33 +165,17 @@ class PTN(object):
 
     @staticmethod
     def get_match_index(match):
-        index = dict()
+        index = {'raw': 0, 'clean': 0}
 
         if len(match) > 1:
-            index['raw'] = 0
-            index['clean'] = 0
             # for season we might have it in index 1 or index 2
             # e.g. "5x09"
             for i in range(1, len(match)):
                 if match[i]:
                     index['clean'] = i
                     break
-        else:
-            index['raw'] = 0
-            index['clean'] = 0
 
         return index
-
-    @staticmethod
-    def clean_excess(clean):
-        clean = re.sub(r'(^[-_. ()]+)|([-. ]+$)', '', clean)
-        clean = re.sub(r'[()/]', ' ', clean)
-        match = re.split(r'\.\.+| +', clean)
-        if match and isinstance(match[0], tuple):
-            match = list(match[0])
-        clean = filter(bool, match)
-        clean = [item.strip('-') for item in clean]
-        return clean
 
     def get_match(self, clean_name, key, matches, match_index):
         match = list()
@@ -280,11 +262,6 @@ class PTN(object):
             self.excess_raw = self.excess_raw[:start-shift] + self.excess_raw[end-shift:]
             shift += end - start
 
-    def get_clean_name(self):
-        clean_name = re.sub(r'_', ' ', self.torrent_name)
-
-        return clean_name
-
     # Only use part of the torrent name after the (guessed) title (split at a season or year)
     # to avoid matching certain patterns that could show up in a release title.
     def ignore_before_index(self, clean_name, key):
@@ -310,6 +287,17 @@ class PTN(object):
                incorrect_key in self.parts and self.parts[incorrect_key] == incorrect_value):
                 self.parts.pop(incorrect_key)
                 self.parts['title'] = exception['actual_title']
+
+    @staticmethod
+    def clean_excess(clean):
+        clean = re.sub(r'(^[-_. ()]+)|([-. ]+$)', '', clean)
+        clean = re.sub(r'[()/]', ' ', clean)
+        match = re.split(r'\.\.+| +', clean)
+        if match and isinstance(match[0], tuple):
+            match = list(match[0])
+        clean = filter(bool, match)
+        clean = [item.strip('-') for item in clean]
+        return clean
 
     def try_episode_name(self, clean):
         match = re.findall(episode_name_pattern, clean)

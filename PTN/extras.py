@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # Some titles just can't be parsed without breaking everything else, so here
 # are known those known exceptions. They are executed when the parsed_title and
 # incorrect_parse match within a .parse() dict, removing the latter, and replacing

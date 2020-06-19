@@ -20,16 +20,16 @@ class ParseTest(unittest.TestCase):
         self.assertEqual(len(torrents), len(expected_results))
         excess_elements = 0
         for torrent, expected_result in zip(torrents, expected_results):
-            print('Test: {}'.format(torrent.encode('ascii', 'replace')))
+            print('Test: {}'.format(torrent.encode('utf-8', 'replace')))
             result = PTN.parse(torrent, standardise=False)
             if 'excess' in result:
-                print('excess: {}'.format(str(result['excess']).encode('ascii', 'replace')))
+                print('excess: {}'.format(str(result['excess']).encode('utf-8', 'replace')))
                 if isinstance(result['excess'], list):
                     excess_elements += len(result['excess'])
                 else:
                     excess_elements += 1
             for key in expected_result:
-                self.assertIn(key, result, torrent.encode('ascii', 'replace'))
+                self.assertIn(key, result, torrent.encode('utf-8', 'replace'))
                 self.assertEqual(expected_result[key], result[key], key)
             for key in result.keys():
                 if key not in ('group', 'excess', 'encoder'):  # Not needed in tests
@@ -50,8 +50,8 @@ class ParseTest(unittest.TestCase):
         for torrent, expected_result in zip(torrents, expected_results):
             result = PTN.parse(torrent, standardise=True)
             for key in expected_result:
-                self.assertIn(key, result, torrent.encode('ascii', 'replace'))
-                self.assertEqual(expected_result[key], result[key], '{} - {}'.format(key, torrent.encode('ascii', 'replace')))
+                self.assertIn(key, result, torrent.encode('utf-8', 'replace'))
+                self.assertEqual(expected_result[key], result[key], '{} - {}'.format(key, torrent.encode('utf-8', 'replace')))
 
 
 if __name__ == '__main__':
