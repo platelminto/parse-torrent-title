@@ -1507,5 +1507,57 @@
     "subtitles": "ESub",
     "title": "Kasganj",
     "year": 2019
+  },
+  {
+    "audio": "DD 5.1",
+    "codec": "x264",
+    "group": "MAZE",
+    "language": ["Tam","Tel","Mal"],
+    "quality": "HDRip",
+    "resolution": "720p",
+    "size": "2GB",
+    "subtitles": "MSub",
+    "title": "Penguin",
+    "year": 2020
+  },
+  {
+    "encoder": "TGx",
+    "episode": 12,
+    "group": "Erai-raws",
+    "resolution": "720p",
+    "title": "Kakushigoto"
+  },
+  {
+    "bitDepth": 10,
+    "codec": "x265",
+    "encoder": "TGx",
+    "group": "Judas",
+    "resolution": "1080p",
+    "season": 1,
+    "subtitles": "Eng",
+    "title": "Shaman King"
+  },
+  {
+    "audio": "DDP5.1",
+    "codec": "x264",
+    "encoder": "TGx",
+    "group": "NTG",
+    "language": "JAPANESE",
+    "producer": "NF",
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "title": "A Whisker Away",
+    "year": 2020
+  },
+  {
+    "audio": "dd5.1",
+    "codec": "x265",
+    "container": "mkv",
+    "group": "rmteam",
+    "language": "japanese",
+    "quality": "bluray",
+    "resolution": "1080p",
+    "title": "liz and the blue bird",
+    "year": 2018
   }
 ]

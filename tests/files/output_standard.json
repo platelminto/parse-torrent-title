@@ -966,5 +966,36 @@
     "quality": "WEB-DL",
     "subtitles": "English",
     "title": "Kasganj"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "language": ["Tamil","Telugu","Malayalam"],
+    "quality": "WEB-DL",
+    "subtitles": "Available",
+    "title": "Penguin"
+  },
+  {
+    "title": "Kakushigoto"
+  },
+  {
+    "codec": "H.265",
+    "subtitles": "English",
+    "title": "Shaman King"
+  },
+  {
+    "audio": "Dolby Digital Plus 5.1",
+    "codec": "H.264",
+    "language": "Japanese",
+    "producer": "Netflix",
+    "title": "A Whisker Away"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.265",
+    "container": "MKV",
+    "language": "Japanese",
+    "quality": "Blu-ray",
+    "title": "liz and the blue bird"
   }
 ]

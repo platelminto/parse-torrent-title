@@ -25,8 +25,11 @@ langs = [('rus(?:sian)?', 'Russian'),
          ('kor(?:ean)?', 'Korean'),
          ('bengali', 'Bengali'),
          ('kannada', 'Kannada'),
-         ('tamil', 'Tamil'),
-         ('telugu', 'Telugu'),
+         ('tam(?:il)?', 'Tamil'),
+         ('tel(?:ugu)?', 'Telugu'),
+         ('marathi', 'Marathi'),
+         ('mal(?:ayalam)?', 'Malayalam'),
+         ('japanese', 'Japanese'),
          ('en?(?:g(?:lish)?)?', 'English')  # Must be at end, matches just an 'e'
          ]
 
