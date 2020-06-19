@@ -771,7 +771,7 @@
   },
   {
     "quality": "DVDRip",
-    "resolution": "720p",
+    "resolution": "1080p",
     "season": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28],
     "title": "The Simpsons"
   },
@@ -1367,5 +1367,16 @@
     "subtitles": "MSubs",
     "title": "Shuddh Desi Romance",
     "year": 2013
+  },
+  {
+    "year": 2019,
+    "resolution": "720p",
+    "quality": "HDRip",
+    "codec": "x264",
+    "audio": "DD5.1",
+    "subtitles": "ESub",
+    "size": "1.1GB",
+    "title": "Face 2 Face",
+    "group": "TamilMV"
   }
 ]

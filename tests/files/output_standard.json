@@ -886,5 +886,12 @@
     "quality": "Blu-ray",
     "subtitles": "Available",
     "title": "Shuddh Desi Romance"
+  },
+  {
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "audio": "Dolby Digital 5.1",
+    "subtitles": "English",
+    "title": "Face 2 Face"
   }
 ]

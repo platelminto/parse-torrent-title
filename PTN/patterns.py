@@ -26,8 +26,8 @@ langs = [('rus(?:sian)?', 'Russian'),
          ('en?(?:g(?:lish)?)?', 'English')  # Must be at end, matches just an 'e'
          ]
 
-season_range_pattern = '(?:Complete' + delimiters + '*)?(?:' + delimiters + '*)?(?:s(?:easons?)?)?' + delimiters + \
-                       '?(?:s?[0-9]{1,2}[\s]*(?:\-|(?:\s*to\s*))[\s]*s?[0-9]{1,2})(?:' + delimiters + '*Complete)?'
+season_range_pattern = '(?:Complete' + delimiters + '*)?' + delimiters + '*(?:s(?:easons?)?)' + delimiters + \
+                       '*(?:s?[0-9]{1,2}[\s]*(?:(?:\-|(?:\s*to\s*))[\s]*s?[0-9]{1,2})+)(?:' + delimiters + '*Complete)?'
 
 lang_list_pattern = '(?<![a-z])(?:(?:' + link_pattern_options(langs) + ')' + delimiters + '*)'
 
@@ -45,12 +45,12 @@ patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', '
 
 patterns = dict()
 patterns['episode'] = '(?:(?<![a-z])(?:[ex]|ep)(?:[0-9]{1,2}(?:-(?:[ex]|ep)?(?:[0-9]{1,2}))?)(?![0-9])|\s\-\s\d{1,3}\s)'
-patterns['season'] = (delimiters + '('  # Season description can't be at the beginning, must be after this pattern
+patterns['season'] = ('('  # Season description can't be at the beginning, must be after this pattern
                      '' + season_range_pattern + '|'  # Describes season ranges
                      '(?:Complete' + delimiters + ')?s([0-9]{1,2})(?:' + patterns['episode'] + ')?|'  # Describes season, optionally with complete or episode
                      '([0-9]{1,2})x[0-9]{2}|'  # Describes 5x02, 12x15 type descriptions
                      '(?:Complete' + delimiters + ')?Season[\. -]([0-9]{1,2})'  # Describes Season.15 type descriptions
-                     ')(?:' + delimiters + 'Complete)?(?:' + delimiters + '|$)')
+                     ')')
 patterns['year'] = '((' + year_pattern + '))'
 patterns['month'] = '(?:{year}){delimiters}({month}){delimiters}(?:{day})' \
     .format(delimiters=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)

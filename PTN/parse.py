@@ -27,19 +27,19 @@ class PTN(object):
                 clean = clean[0]  # Avoids making a list if it only has 1 element
             self.parts[name] = clean
 
-        if len(match) != 0:
+        if match:
             # The instructions for extracting title
-            index = self.torrent['name'].find(match[0])
-            if index == 0:
-                self.start = len(match[0])
-            elif self.end is None or index < self.end:
-                self.end = index
+            start, end = match.start(), match.end()
+            if start == 0:
+                self.start = end
+            elif self.end is None or start < self.end:
+                self.end = start
 
         if name != 'excess':
             # The instructions for adding excess
             if name == 'group':
                 self.group_raw = raw
-            if raw is not None:
+            if raw:
                 self.excess_raw = self.excess_raw.replace(raw, '', 1)
 
     @staticmethod
@@ -67,16 +67,10 @@ class PTN(object):
             pattern_options = self.normalise_pattern_options(pattern_options)
 
             for (pattern, replace, transforms) in pattern_options:
-                if key not in ('season', 'episode', 'episodeName', 'website', 'subtitles'):
+                if key not in ('episode', 'website'):
                     pattern = r'\b{}\b'.format(pattern)
 
-                clean_name = self.get_clean_name(key)
-
-                match = re.findall(pattern, clean_name, re.IGNORECASE)
-                if len(match) == 0:
-                    continue
-
-                index = {}
+                clean_name = self.get_clean_name()
 
                 # With multiple matches, we will usually want to use the first match.
                 # For 'year', we instead use the last instance of a year match since,
@@ -85,8 +79,14 @@ class PTN(object):
                 if key == 'year':
                     match_index = -1
 
-                if isinstance(match[match_index], tuple):
-                    match = list(match[match_index])
+                matches = list(re.finditer(pattern, clean_name, re.IGNORECASE))
+                match = self.get_match(clean_name, key, matches, match_index)
+
+                if not match:
+                    continue
+
+                index = {}
+
                 if len(match) > 1:
                     index['raw'] = 0
                     index['clean'] = 0
@@ -106,7 +106,7 @@ class PTN(object):
                     # i.e. S01-S09
                     m = re.findall(r'[0-9]+', match[0])
                     if m and len(m) > 1:
-                        clean = list(range(int(m[0]), int(m[1]) + 1))
+                        clean = list(range(int(m[0]), int(m[-1]) + 1))
                     elif m:
                         clean = int(m[0])
                 elif key == 'language' or key == 'subtitles':
@@ -138,7 +138,7 @@ class PTN(object):
                         if not clean:
                             clean = 'Available'
 
-                self._part(key, match, match[index['raw']], clean)
+                self._part(key, matches[match_index], match[index['raw']], clean)
 
         self.process_title()
         self.fix_known_exceptions()
@@ -166,9 +166,28 @@ class PTN(object):
         clean = self.clean_excess(clean)
 
         if len(clean) != 0:
-            self._part('excess', [], self.excess_raw, clean)
+            self._part('excess', None, self.excess_raw, clean)
 
         return self.parts
+
+    def get_match(self, clean_name, key, matches, match_index):
+        match = list()
+        for m in matches:
+            if m.start() < self.ignore_before_index(clean_name, key):
+                continue
+            groups = m.groups()
+            if not groups:
+                match.append(m.group())
+            else:
+                match.append(m.groups())
+
+        if not match:
+            return None
+
+        if isinstance(match[match_index], tuple):
+            match = list(match[match_index])
+
+        return match
 
     # Handles all the optional/missing tuple elements into a consistent list.
     @staticmethod
@@ -211,20 +230,28 @@ class PTN(object):
         if self.end is not None:
             raw = raw[self.start:self.end].split('(')[0]
         clean = self._clean_string(raw)
-        self._part('title', [], raw, clean)
+        self._part('title', None, raw, clean)
 
-    def get_clean_name(self, key):
+    def get_clean_name(self):
         clean_name = re.sub(r'_', ' ', self.torrent['name'])
-        # Only use part of the torrent name after the (guessed) title (split at a season or year)
-        # to avoid matching certain patterns that could show up in a release title.
+
+        return clean_name
+
+    # Only use part of the torrent name after the (guessed) title (split at a season or year)
+    # to avoid matching certain patterns that could show up in a release title.
+    def ignore_before_index(self, clean_name, key):
+        match = None
         for (ignore_key, ignore_patterns) in patterns_ignore_title:
             if ignore_key == key and not ignore_patterns:
-                clean_name = re.split(self.post_title_pattern, clean_name, 1, re.IGNORECASE)[-1]
+                match = re.search(self.post_title_pattern, clean_name, re.IGNORECASE)
             elif ignore_key == key:
                 for ignore_pattern in ignore_patterns:
                     if re.findall(ignore_pattern, clean_name, re.IGNORECASE):
-                        clean_name = re.split(self.post_title_pattern, clean_name, 1, re.IGNORECASE)[-1]
-        return clean_name
+                        match = re.search(self.post_title_pattern, clean_name, re.IGNORECASE)
+
+        if match:
+            return match.start()
+        return 0
 
     def fix_known_exceptions(self):
         # Considerations for results that are known to cause issues, such
@@ -242,14 +269,14 @@ class PTN(object):
             match = re.findall(patterns['episode'] + r'[._\-\s+]*(' + re.escape(match[0]) + ')',
                                self.torrent['name'], re.IGNORECASE)
             if match:
-                self._part('episodeName', match, match[0], self._clean_string(match[0]))
+                self._part('episodeName', None, match[0], self._clean_string(match[0]))
                 clean = clean.replace(match[0], '')
         return clean
 
     def try_group(self, clean):
         if len(clean) != 0:
             group = clean.pop() + self.group_raw
-            self._part('group', [], group, group)
+            self._part('group', None, group, group)
         # clean group name from having a container name
         if 'group' in self.parts and 'container' in self.parts:
             group = self.parts['group']
@@ -268,7 +295,7 @@ class PTN(object):
                 match = match[0]
                 raw = match[0]
                 if match:
-                    self._part('encoder', match, raw, match[1])
+                    self._part('encoder', None, raw, match[1])
                     self.parts['group'] = group.replace(raw, '')
                     if not self.parts['group'].strip():
                         self.parts.pop('group')
