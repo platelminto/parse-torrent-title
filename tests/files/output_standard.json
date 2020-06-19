@@ -997,5 +997,75 @@
     "language": "Japanese",
     "quality": "Blu-ray",
     "title": "liz and the blue bird"
+  },
+  {
+    "container": "MKV",
+    "language": ["Italian","English"],
+    "producer": "Amazon Studios",
+    "quality": "WEB-DL",
+    "title": "The Flash"
+  },
+  {
+    "audio": "Dolby Digital Plus 5.1",
+    "codec": "H.264",
+    "title": "Harley Quinn"
+  },
+  {
+    "codec": "H.264",
+    "title": "The Killer Truth"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.265",
+    "producer": "HBO Max",
+    "quality": "WEBRip",
+    "title": "The Flintstones"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Jamies Super Food"
+  },
+  {
+    "audio": "Dolby Digital Plus 5.1",
+    "producer": "Amazon Studios",
+    "title": "Blindspot"
+  },
+  {
+    "audio": "Dolby Digital Plus 5.1",
+    "producer": "Amazon Studios",
+    "title": "In the Dark"
+  },
+  {
+    "codec": "H.264",
+    "producer": "Netflix",
+    "title": "Babies"
+  },
+  {
+    "codec": "H.264",
+    "title": "WWE Monday Night RAW"
+  },
+  {
+    "quality": "WEB-DL",
+    "title": "The Rachel Maddow Show"
+  },
+  {
+    "quality": "WEB-DL",
+    "title": "The Last Word with Lawrence O'Donnell"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Design at Your Door"
+  },
+  {
+    "audio": "AAC 2.0",
+    "producer": "MSNBC",
+    "title": "The Rachel Maddow Show"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Lalbazaar"
   }
 ]

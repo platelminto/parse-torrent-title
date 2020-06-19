@@ -97,7 +97,10 @@ patterns['producer'] = [('(ATVP)', 'Apple TV+'),
                         ('RED', 'YouTube Premium'),
                         ('DSNP', 'Disney Plus'),
                         ('Hoichoi', 'Hoichoi'),
-                        ('Zee5', 'ZEE5')]
+                        ('Zee5', 'ZEE5'),
+                        ('HMAX', 'HBO Max'),
+                        ('HULU', 'Hulu Networks'),
+                        ('MS?NBC', 'MSNBC')]
 patterns['producer'] = suffix_pattern_with(link_pattern_options(patterns['quality']),
                                            patterns['producer'], delimiters)
 patterns['codec'] = [('xvid', 'Xvid'),

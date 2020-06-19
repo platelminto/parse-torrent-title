@@ -1559,5 +1559,163 @@
     "resolution": "1080p",
     "title": "liz and the blue bird",
     "year": 2018
+  },
+  {
+    "codec": "H.264",
+    "container": "mkv",
+    "episode": 13,
+    "episodeName": "Il mio amico Grodd",
+    "group": "MeM",
+    "language": ["ITA","ENG"],
+    "producer": "AMZN",
+    "quality": "WEB-DLMux",
+    "repack": true,
+    "resolution": "1080p",
+    "season": 6,
+    "title": "The Flash",
+    "year": 2014
+  },
+  {
+    "audio": "DDP5.1",
+    "codec": "H264",
+    "encoder": "TGx",
+    "episode": 12,
+    "episodeName": "Lovers Quarrel",
+    "group": "NTb",
+    "quality": "WEB-DL",
+    "resolution": "1080p",
+    "season": 2,
+    "title": "Harley Quinn"
+  },
+  {
+    "codec": "x264",
+    "encoder": "TGx",
+    "episode": 5,
+    "episodeName": "Homicide at Home",
+    "group": "CRiMSON",
+    "quality": "HDTV",
+    "season": 1,
+    "title": "The Killer Truth"
+  },
+  {
+    "audio": "AC3 2.0",
+    "bitDepth": 10,
+    "codec": "x265",
+    "encoder": "TAoE",
+    "producer": "HMAX",
+    "quality": "Webrip",
+    "resolution": "1080p",
+    "season": 6,
+    "title": "The Flintstones",
+    "year": 1960
+  },
+  {
+    "codec": "H264",
+    "encoder": "TGx",
+    "episode": 4,
+    "group": "DENTiST",
+    "quality": "WEB",
+    "season": 2,
+    "title": "Jamies Super Food"
+  },
+  {
+    "audio": "DDP5.1",
+    "codec": "H.264",
+    "encoder": "TGx",
+    "episode": 6,
+    "episodeName": "Fire and Brimstone",
+    "group": "NTb",
+    "producer": "AMZN",
+    "quality": "WEB-DL",
+    "resolution": "1080p",
+    "season": 5,
+    "title": "Blindspot"
+  },
+  {
+    "audio": "DDP5.1",
+    "codec": "H.264",
+    "encoder": "TGx",
+    "episode": 10,
+    "episodeName": "The Last Dance",
+    "group": "NTb",
+    "producer": "AMZN",
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "season": 2,
+    "title": "In the Dark",
+    "year": 2019
+  },
+  {
+    "codec": "x264",
+    "group": "GalaxyTV",
+    "producer": "NF",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "season": 2,
+    "title": "Babies"
+  },
+  {
+    "codec": "x264",
+    "day": 16,
+    "encoder": "TGx",
+    "group": "SPORTY",
+    "language": "German",
+    "month": 6,
+    "quality": "HDTV",
+    "resolution": "720p",
+    "title": "WWE Monday Night RAW",
+    "year": 2020
+  },
+  {
+    "day": 18,
+    "group": "Anon",
+    "month": 6,
+    "quality": "WEBDL",
+    "resolution": "540p",
+    "title": "The Rachel Maddow Show",
+    "year": 2020
+  },
+  {
+    "day": 18,
+    "group": "Anon",
+    "month": 6,
+    "quality": "WEBDL",
+    "resolution": "540p",
+    "title": "The Last Word with Lawrence O'Donnell",
+    "year": 2020
+  },
+  {
+    "codec": "h264",
+    "encoder": "TGx",
+    "episode": 3,
+    "episodeName": "Major Bonus Room",
+    "group": "ROBOTS",
+    "quality": "WEB",
+    "season": 1,
+    "title": "Design at Your Door"
+  },
+  {
+    "audio": "AAC2.0",
+    "codec": "H.264",
+    "day": 18,
+    "encoder": "TGx",
+    "group": "BTW",
+    "month": 6,
+    "producer": "MNBC",
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "title": "The Rachel Maddow Show",
+    "year": 2020
+  },
+  {
+    "audio": "AAC",
+    "codec": "x264",
+    "encoder": "Telly",
+    "episode": [1,2,3,4,5,6,7,8,9,10],
+    "language": "Hindi",
+    "quality": "WebRip",
+    "resolution": "720p",
+    "season": 1,
+    "title": "Lalbazaar"
   }
 ]
