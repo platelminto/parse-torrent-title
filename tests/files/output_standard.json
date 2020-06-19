@@ -888,10 +888,83 @@
     "title": "Shuddh Desi Romance"
   },
   {
-    "quality": "WEB-DL",
-    "codec": "H.264",
     "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "quality": "WEB-DL",
     "subtitles": "English",
     "title": "Face 2 Face"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "producer": "Netflix",
+    "size": "800MB",
+    "subtitles": "English",
+    "title": "Chaman Bahar"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.264",
+    "size": "650MB",
+    "subtitles": "English",
+    "title": "Piprabidya"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "producer": "Amazon Studios",
+    "size": "1.1GB",
+    "subtitles": "English",
+    "title": "Penguin"
+  },
+  {
+    "audio": "Dolby Digital",
+    "codec": "H.264",
+    "subtitles": "English",
+    "title": "Kadakh"
+  },
+  {
+    "codec": "H.265",
+    "quality": "Blu-ray",
+    "title": "Satyagraha"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEB-DL",
+    "subtitles": "English",
+    "title": "Kavacham"
+  },
+  {
+    "codec": "H.264",
+    "quality": "BRRip",
+    "subtitles": "English",
+    "title": "M.S. Dhoni: The Untold Story"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "quality": "Blu-ray",
+    "subtitles": "English",
+    "title": "M.S. Dhoni: The Untold Story"
+  },
+  {
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "subtitles": "Available",
+    "title": "Detective Byomkesh Bakshy"
+  },
+  {
+    "codec": "H.264",
+    "container": "MKV",
+    "quality": "WEBRip",
+    "subtitles": "English",
+    "title": "Kasganj"
+  },
+  {
+    "codec": "H.264",
+    "container": "MKV",
+    "producer": "ZEE5",
+    "quality": "WEB-DL",
+    "subtitles": "English",
+    "title": "Kasganj"
   }
 ]

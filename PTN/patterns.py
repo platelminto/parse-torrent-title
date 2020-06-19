@@ -23,6 +23,10 @@ langs = [('rus(?:sian)?', 'Russian'),
          ('polish', 'Polish'),
          ('mandarin', 'Mandarin'),
          ('kor(?:ean)?', 'Korean'),
+         ('bengali', 'Bengali'),
+         ('kannada', 'Kannada'),
+         ('tamil', 'Tamil'),
+         ('telugu', 'Telugu'),
          ('en?(?:g(?:lish)?)?', 'English')  # Must be at end, matches just an 'e'
          ]
 
@@ -78,20 +82,23 @@ patterns['quality'] = [('WEB[ -]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
                        ('HD-Rip', 'HD-Rip'),
                        ('Blu-?Ray', 'Blu-ray'),
                        ('BD?R(?:ip)|BDR', 'BDRip'),
-                       ('BRRip', 'BRRip'),
+                       ('BR-?Rip', 'BRRip'),
                        # Match this last as it can show up with others.
                        ('PPV(?:Rip)?', 'Pay-Per-View Rip')]
 patterns['producer'] = [('(ATVP)', 'Apple TV+'),
-              ('AMZN', 'Amazon Studios'),
-              ('NF|Netflix', 'Netflix'),
-              ('NICK', 'Nickelodeon'),
-              ('RED', 'YouTube Premium'),
-              ('DSNP', 'Disney Plus')]
+                        ('AMZN', 'Amazon Studios'),
+                        ('NF|Netflix', 'Netflix'),
+                        ('NICK', 'Nickelodeon'),
+                        ('RED', 'YouTube Premium'),
+                        ('DSNP', 'Disney Plus'),
+                        ('Hoichoi', 'Hoichoi'),
+                        ('Zee5', 'ZEE5')]
 patterns['producer'] = suffix_pattern_with(link_pattern_options(patterns['quality']),
                                            patterns['producer'], delimiters)
 patterns['codec'] = [('xvid', 'Xvid'),
                      ('av1', 'AV1'),
                      ('[hx]\.?264', 'H.264'),
+                     ('AVC', 'H.264'),
                      ('[hx]\.?265', 'H.265'),
                      ('HEVC', 'H.265')]
 patterns['audio'] = [('MP3', None, 'upper'),

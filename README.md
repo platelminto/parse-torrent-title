@@ -19,6 +19,8 @@ title of the content.
 - Added standardisation of output strings.
 - Added multi-language support.
 - Added multi-episode support.
+- Improved support for anime tv releases.
+- Improved support for Indian releases.
 - Added various fields (see field list below).
 - Added proper subtitle support.
 - Added proper support for matching episode names.
