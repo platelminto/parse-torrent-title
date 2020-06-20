@@ -1873,5 +1873,56 @@
     "season": 1,
     "subtitles": "MultiSub",
     "title": "Thirteen"
+  },
+  {
+    "audio": "AAC 5.1",
+    "codec": "x264",
+    "group": "Telly",
+    "language": "Hindi",
+    "network": "NF",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "subtitles": "ESubs",
+    "title": "Paan Singh Tomar",
+    "year": 2012
+  },
+  {
+    "audio": "AAC2.0",
+    "codec": "H.264",
+    "encoder": "eztv",
+    "episode": 20,
+    "episodeName": "The Army-Navy Game",
+    "group": "AJP69",
+    "network": "HULU",
+    "quality": "WEB-DL",
+    "resolution": "1080p",
+    "season": 1,
+    "title": "MASH"
+  },
+  {
+    "codec": "h264",
+    "encoder": "eztv",
+    "episode": 12,
+    "episodeName": "Family Favorites with Allie",
+    "group": "ROBOTS",
+    "internal": true,
+    "quality": "WEB",
+    "season": 16,
+    "title": "Trishas Southern Kitchen"
+  },
+  {
+    "codec": "Xvid",
+    "group": "ETRG",
+    "language": "Eng",
+    "title": "Split Image",
+    "year": 1982
+  },
+  {
+    "encoder": "TGx",
+    "episode": 11,
+    "group": "HorribleSubs",
+    "resolution": "720p",
+    "season": 2,
+    "title": "Kaguya-sama wa Kokurasetai"
   }
 ]

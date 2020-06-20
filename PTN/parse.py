@@ -2,7 +2,7 @@
 
 import re
 from .patterns import patterns, types, delimiters, langs, patterns_ordered, episode_name_pattern
-from .extras import exceptions, patterns_ignore_title
+from .extras import exceptions, patterns_ignore_title, link_pattern_options
 
 
 class PTN(object):
@@ -14,7 +14,8 @@ class PTN(object):
         self.parts = None
         self.match_slices = None
 
-        self.post_title_pattern = '(?:{}|{})'.format(patterns['season'], patterns['year'])
+        self.post_title_pattern = '(?:{}|{})'.format(link_pattern_options(patterns['season'])
+                                                     , link_pattern_options(patterns['year']))
 
     # Ignored patterns will still remove their match from excess.
     def _part(self, name, match_slice, raw, clean, overwrite=False):

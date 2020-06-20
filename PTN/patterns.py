@@ -54,12 +54,12 @@ patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', '
 
 patterns = dict()
 patterns['episode'] = '(?:(?<![a-z])(?:[ex]|ep)(?:[0-9]{1,2}(?:-(?:[ex]|ep)?(?:[0-9]{1,2}))?)(?![0-9])|\s\-\s\d{1,3}\s)'
-patterns['season'] = ('('  # Season description can't be at the beginning, must be after this pattern
-                     '' + season_range_pattern + '|'  # Describes season ranges
+patterns['season'] = ['s(\d{1,2})\s\-\s\d{1,2}',  # Avoids matching some anime releases season and episode as a season range
+                      ('(' + season_range_pattern + '|'  # Describes season ranges
                      '(?:Complete' + delimiters + ')?s([0-9]{1,2})(?:' + patterns['episode'] + ')?|'  # Describes season, optionally with complete or episode
                      '([0-9]{1,2})x[0-9]{2}|'  # Describes 5x02, 12x15 type descriptions
                      '(?:Complete' + delimiters + ')?Season[\. -]([0-9]{1,2})'  # Describes Season.15 type descriptions
-                     ')')
+                     ')')]
 patterns['year'] = '((' + year_pattern + '))'
 patterns['month'] = '(?:{year}){delimiters}({month}){delimiters}(?:{day})' \
     .format(delimiters=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)
