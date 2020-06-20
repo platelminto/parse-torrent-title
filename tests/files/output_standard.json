@@ -1068,5 +1068,41 @@
     "codec": "H.264",
     "quality": "WEBRip",
     "title": "Lalbazaar"
+  },
+  {
+    "codec": "H.264",
+    "producer": "HBO Max",
+    "title": "Scandalous The Untold Story of the National Enquirer"
+  },
+  {
+    "codec": "H.264",
+    "title": "Turtle Odyssey"
+  },
+  {
+    "codec": "H.264",
+    "title": "Still A Mystery"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.265",
+    "quality": "Blu-ray",
+    "title": "When Bjork Met Attenborough"
+  },
+  {
+    "codec": "H.264",
+    "producer": "Hulu Networks",
+    "title": "And We Go Green"
+  },
+  {
+    "subtitles": "Available",
+    "title": "Ella Fitzgerald - Just One of Those Things"
+  },
+  {
+    "codec": "H.264",
+    "title": "Inventing Tomorrow"
+  },
+  {
+    "codec": "H.264",
+    "title": "Eating Up Easter"
   }
 ]

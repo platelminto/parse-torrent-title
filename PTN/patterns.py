@@ -49,8 +49,8 @@ episode_name_pattern = '((?:(?:[A-Za-z][a-z]+|[A-Za-z])(?:[. \-+_]|$))+)'
 patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', 'quality',
                     'producer', 'codec', 'audio', 'region', 'extended', 'hardcoded', 'proper',
                     'repack', 'container', 'widescreen', 'website', 'subtitles', 'language',
-                    'sbs', 'unrated', 'size', 'bitDepth', '3d', 'internal', 'readnfo']
-
+                    'sbs', 'unrated', 'size', 'bitDepth', '3d', 'internal', 'readnfo',
+                    'documentary']
 
 patterns = dict()
 patterns['episode'] = '(?:(?<![a-z])(?:[ex]|ep)(?:[0-9]{1,2}(?:-(?:[ex]|ep)?(?:[0-9]{1,2}))?)(?![0-9])|\s\-\s\d{1,3}\s)'
@@ -121,7 +121,7 @@ patterns['audio'] = [('MP3', None, 'upper'),
     ('DTS', 'DTS'),
     ('AAC[ \.\-]LC', 'AAC-LC'),
     ('AAC', 'AAC')
-])
+]) + ['5.1', '2.0']
 patterns['region'] = ('R[0-9]', None, 'upper')
 patterns['extended'] = '(EXTENDED(:?.CUT)?)'
 patterns['hardcoded'] = 'HC'
@@ -152,6 +152,7 @@ patterns['bitDepth'] = '(8|10)bits?'
 patterns['3d'] = '3D'
 patterns['internal'] = 'iNTERNAL'
 patterns['readnfo'] = 'READNFO'
+patterns['documentary'] = 'DOCU'
 
 types = {
     'season': 'integer',
@@ -168,5 +169,6 @@ types = {
     'unrated': 'boolean',
     '3d': 'boolean',
     'internal': 'boolean',
-    'readnfo': 'boolean'
+    'readnfo': 'boolean',
+    'documentary': 'boolean'
 }

@@ -1173,6 +1173,7 @@
   },
   {
     "codec": "x264",
+    "documentary": true,
     "encoder": "rartv",
     "group": "W4F",
     "internal": true,
@@ -1718,5 +1719,74 @@
     "resolution": "720p",
     "season": 1,
     "title": "Lalbazaar"
+  },
+  {
+    "codec": "x264",
+    "group": "GalaxyRG",
+    "producer": "HMAX",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "size": "800MB",
+    "title": "Scandalous The Untold Story of the National Enquirer",
+    "year": 2020
+  },
+  {
+    "audio": "5.1",
+    "codec": "x264",
+    "group": "Psyz",
+    "resolution": "1080p",
+    "title": "Turtle Odyssey",
+    "year": 2019
+  },
+  {
+    "codec": "x264",
+    "group": "CAFFEiNE",
+    "quality": "WEBRip",
+    "season": 1,
+    "title": "Still A Mystery"
+  },
+  {
+    "audio": "AC3 2.0",
+    "bitDepth": 10,
+    "codec": "x265",
+    "encoder": "QxR",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "When Bjork Met Attenborough",
+    "year": 2013
+  },
+  {
+    "codec": "x264",
+    "group": "GalaxyRG",
+    "producer": "HULU",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "size": "800MB",
+    "title": "And We Go Green",
+    "year": 2019
+  },
+  {
+    "container": "MP4",
+    "group": "BigJ0554",
+    "subtitles": "subs",
+    "title": "Ella Fitzgerald - Just One of Those Things"
+  },
+  {
+    "codec": "x264",
+    "documentary": true,
+    "encoder": "TGx",
+    "group": "W4F",
+    "quality": "HDTV",
+    "title": "Inventing Tomorrow",
+    "year": 2018
+  },
+  {
+    "codec": "x264",
+    "documentary": true,
+    "encoder": "TGx",
+    "group": "W4F",
+    "quality": "HDTV",
+    "title": "Eating Up Easter",
+    "year": 2018
   }
 ]
