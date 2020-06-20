@@ -66,6 +66,10 @@ class PTN(object):
                     pattern = r'\b(?:{})\b'.format(pattern)
 
                 clean_name = re.sub(r'_', ' ', self.torrent_name)
+                matches = self.get_matches(pattern, clean_name, key)
+
+                if not matches:
+                    continue
 
                 # With multiple matches, we will usually want to use the first match.
                 # For 'year', we instead use the last instance of a year match since,
@@ -74,13 +78,9 @@ class PTN(object):
                 if key == 'year':
                     match_index = -1
 
-                matches = list(re.finditer(pattern, clean_name, re.IGNORECASE))
-                match = self.get_match(clean_name, key, matches, match_index)
+                match = matches[match_index]['match']
 
-                if not match:
-                    continue
-
-                index = self.get_match_index(match)
+                index = self.get_match_indexes(match)
 
                 # patterns for multiseason/episode make the range, and only the range, appear in match[0]
                 if (key == 'season' or key == 'episode') and index['clean'] == 0:
@@ -97,7 +97,7 @@ class PTN(object):
                 if standardise:
                     clean = self.standardise_clean(clean, key, replace, transforms)
 
-                self._part(key, (matches[match_index].start(), matches[match_index].end()),
+                self._part(key, (matches[match_index]['start'], matches[match_index]['end']),
                            match[index['raw']], clean)
 
         self.process_title()
@@ -164,7 +164,7 @@ class PTN(object):
         return clean
 
     @staticmethod
-    def get_match_index(match):
+    def get_match_indexes(match):
         index = {'raw': 0, 'clean': 0}
 
         if len(match) > 1:
@@ -177,24 +177,29 @@ class PTN(object):
 
         return index
 
-    def get_match(self, clean_name, key, matches, match_index):
-        match = list()
+    def get_matches(self, pattern, clean_name, key):
+        grouped_matches = list()
+        matches = list(re.finditer(pattern, clean_name, re.IGNORECASE))
         for m in matches:
             if m.start() < self.ignore_before_index(clean_name, key):
                 continue
             groups = m.groups()
             if not groups:
-                match.append(m.group())
+                grouped_matches.append((m.group(), m.start(), m.end()))
             else:
-                match.append(m.groups())
+                grouped_matches.append((groups, m.start(), m.end()))
 
-        if not match:
-            return None
-
-        if isinstance(match[match_index], tuple):
-            match = list(match[match_index])
-
-        return match
+        parsed_matches = list()
+        for match in grouped_matches:
+            m = match[0]
+            if isinstance(m, tuple):
+                m = list(m)
+            else:
+                m = [m]
+            parsed_matches.append({'match': m,
+                                    'start': match[1],
+                                    'end': match[2]})
+        return parsed_matches
 
     # Handles all the optional/missing tuple elements into a consistent list.
     @staticmethod
