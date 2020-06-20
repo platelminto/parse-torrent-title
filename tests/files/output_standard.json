@@ -139,7 +139,7 @@
     "title": "The Flash"
   },
   {
-    "audio": "Dual Audio",
+    "audio": "Dual",
     "quality": "WEBRip",
     "size": "1400MB",
     "title": "Lucy"
@@ -203,7 +203,7 @@
     "title": "Into The Storm"
   },
   {
-    "audio": "Dual Audio",
+    "audio": "Dual",
     "quality": "WEBRip",
     "title": "Lucy"
   },
@@ -286,13 +286,13 @@
     "title": "Interstellar"
   },
   {
-    "audio": "Dual Audio",
+    "audio": "Dual",
     "container": "AVI",
     "quality": "DVD-Rip",
     "title": "Guardians of the Galaxy"
   },
   {
-    "audio": "Dual Audio",
+    "audio": "Dual",
     "codec": "H.264",
     "container": "MKV",
     "quality": "WEB-DL",
@@ -1169,5 +1169,12 @@
   },
   {
     "title": "Kaguya-sama wa Kokurasetai"
+  },
+  {
+    "quality": "DVD-Rip",
+    "codec": "Xvid",
+    "audio": "Mono",
+    "language": "English",
+    "title": "Five"
   }
 ]

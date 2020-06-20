@@ -115,7 +115,8 @@ patterns['codec'] = [('xvid', 'Xvid'),
                      ('HEVC', 'H.265')]
 patterns['audio'] = [('MP3', None, 'upper'),
                      ('LiNE', 'LiNE'),
-                     ('Dual[\- ]Audio', 'Dual Audio')
+                     ('Dual[\- ]Audio', 'Dual'),
+                     ('1' + delimiters + '?Ch(?:annel)?' + delimiters + '?Audio', 'Mono')
                      ] + get_channel_audio_options([
     ('TrueHD', 'Dolby TrueHD'),
     ('Atmos', 'Dolby Atmos'),
@@ -124,7 +125,7 @@ patterns['audio'] = [('MP3', None, 'upper'),
     ('DTS', 'DTS'),
     ('AAC[ \.\-]LC', 'AAC-LC'),
     ('AAC', 'AAC')
-]) + ['5.1', '2.0']
+]) + ['5.1', ('2.0', 'Dual')]
 patterns['region'] = ('R[0-9]', None, 'upper')
 patterns['extended'] = '(EXTENDED(:?.CUT)?)'
 patterns['hardcoded'] = 'HC'
