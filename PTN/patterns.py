@@ -47,7 +47,7 @@ episode_name_pattern = '((?:(?:[A-Za-z][a-z]+|[A-Za-z])(?:[. \-+_]|$))+)'
 # Forces an order to go by the regexes, as we want this to be deterministic (different
 # orders can generate different matchings). e.g. "doctor_who_2005..." in input.json
 patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', 'quality',
-                    'producer', 'codec', 'audio', 'region', 'extended', 'hardcoded', 'proper',
+                    'network', 'codec', 'audio', 'region', 'extended', 'hardcoded', 'proper',
                     'repack', 'container', 'widescreen', 'website', 'subtitles', 'language',
                     'sbs', 'unrated', 'size', 'bitDepth', '3d', 'internal', 'readnfo',
                     'documentary']
@@ -90,7 +90,7 @@ patterns['quality'] = [('WEB[ -]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
                        ('BR-?Rip', 'BRRip'),
                        # Match this last as it can show up with others.
                        ('PPV(?:Rip)?', 'Pay-Per-View Rip')]
-patterns['producer'] = [('(ATVP)', 'Apple TV+'),
+patterns['network'] = [('ATVP', 'Apple TV+'),
                         ('AMZN', 'Amazon Studios'),
                         ('NF|Netflix', 'Netflix'),
                         ('NICK', 'Nickelodeon'),
@@ -101,9 +101,12 @@ patterns['producer'] = [('(ATVP)', 'Apple TV+'),
                         ('HMAX', 'HBO Max'),
                         ('HULU', 'Hulu Networks'),
                         ('MS?NBC', 'MSNBC'),
-                        ('DCU', 'DC Universe')]
-patterns['producer'] = suffix_pattern_with(link_pattern_options(patterns['quality']),
-                                           patterns['producer'], delimiters)
+                        ('DCU', 'DC Universe'),
+                        ]
+patterns['network'] = suffix_pattern_with(link_pattern_options(patterns['quality']),
+                                           patterns['network'], delimiters)
+# Not all networks always show up just before the quality.
+patterns['network'] += [('BBC', 'BBC')]
 patterns['codec'] = [('xvid', 'Xvid'),
                      ('av1', 'AV1'),
                      ('[hx]\.?264', 'H.264'),

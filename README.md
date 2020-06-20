@@ -142,7 +142,7 @@ PTN.parse('South Park Season 23 Complete 720p AMZN WEB-DL x264 [i_c]')
 #     'codec': 'H.264',
 #     'quality': 'WEB-DL',
 #     'encoder': 'i_c',
-#     'producer': 'Amazon Studios'
+#     'network': 'Amazon Studios'
 # }
 
   
@@ -182,7 +182,7 @@ after correctly getting the season and episode number.
 * internal
 * language
 * month
-* producer
+* network
 * proper
 * quality
 * readnfo

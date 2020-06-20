@@ -53,7 +53,7 @@
   {
     "codec": "H.264",
     "quality": "HDTV",
-    "title": "Marvels Agents of S H I E L D"
+    "title": "Marvel's Agents of S.H.I.E.L.D."
   },
   {
     "audio": "Dolby Digital 5.1",
@@ -444,7 +444,7 @@
   },
   {
     "codec": "H.264",
-    "producer": "Amazon Studios",
+    "network": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "South Park"
   },
@@ -491,7 +491,7 @@
     "audio": "AAC 5.1",
     "codec": "H.264",
     "language": "Polish",
-    "producer": "Netflix",
+    "network": "Netflix",
     "quality": "WEB-DL",
     "title": "1983"
   },
@@ -554,7 +554,7 @@
   },
   {
     "codec": "H.264",
-    "producer": "Amazon Studios",
+    "network": "Amazon Studios",
     "quality": "WEBRip",
     "title": "Tom Clancys Jack Ryan"
   },
@@ -574,7 +574,7 @@
     "audio": "Dolby Digital Plus 5.1",
     "bitDepth": 10,
     "codec": "H.265",
-    "producer": "Apple TV+",
+    "network": "Apple TV+",
     "quality": "WEBRip",
     "title": "Home Before Dark"
   },
@@ -596,7 +596,7 @@
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "language": ["Italian","English"],
-    "producer": "Amazon Studios",
+    "network": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "The Blacklist"
   },
@@ -604,7 +604,7 @@
     "audio": "Dolby Digital Plus 2.0",
     "bitDepth": 10,
     "codec": "H.265",
-    "producer": "Amazon Studios",
+    "network": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "Are You Being Served"
   },
@@ -636,7 +636,7 @@
   },
   {
     "codec": "H.264",
-    "producer": "Amazon Studios",
+    "network": "Amazon Studios",
     "quality": "WEBRip",
     "size": "800MB",
     "title": "Label Me"
@@ -701,13 +701,13 @@
   {
     "audio": "Dolby Digital Plus 2.0",
     "codec": "H.264",
-    "producer": "Amazon Studios",
+    "network": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "Deadliest Catch"
   },
   {
     "codec": "H.264",
-    "producer": "Netflix",
+    "network": "Netflix",
     "quality": "WEBRip",
     "title": "New Girl"
   },
@@ -788,7 +788,7 @@
   },
   {
     "codec": "H.264",
-    "producer": "Amazon Studios",
+    "network": "Amazon Studios",
     "title": "Insecure"
   },
   {
@@ -802,7 +802,7 @@
   {
     "audio": "Dolby Digital Plus 5.1",
     "codec": "H.264",
-    "producer": "Amazon Studios",
+    "network": "Amazon Studios",
     "title": "Starhunter ReduX"
   },
   {
@@ -897,7 +897,7 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "producer": "Netflix",
+    "network": "Netflix",
     "size": "800MB",
     "subtitles": "English",
     "title": "Chaman Bahar"
@@ -912,7 +912,7 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "producer": "Amazon Studios",
+    "network": "Amazon Studios",
     "size": "1.1GB",
     "subtitles": "English",
     "title": "Penguin"
@@ -962,7 +962,7 @@
   {
     "codec": "H.264",
     "container": "MKV",
-    "producer": "ZEE5",
+    "network": "ZEE5",
     "quality": "WEB-DL",
     "subtitles": "English",
     "title": "Kasganj"
@@ -987,7 +987,7 @@
     "audio": "Dolby Digital Plus 5.1",
     "codec": "H.264",
     "language": "Japanese",
-    "producer": "Netflix",
+    "network": "Netflix",
     "title": "A Whisker Away"
   },
   {
@@ -1001,14 +1001,14 @@
   {
     "container": "MKV",
     "language": ["Italian","English"],
-    "producer": "Amazon Studios",
+    "network": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "The Flash"
   },
   {
     "audio": "Dolby Digital Plus 5.1",
     "codec": "H.264",
-    "producer": "DC Universe",
+    "network": "DC Universe",
     "title": "Harley Quinn"
   },
   {
@@ -1018,7 +1018,7 @@
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.265",
-    "producer": "HBO Max",
+    "network": "HBO Max",
     "quality": "WEBRip",
     "title": "The Flintstones"
   },
@@ -1029,17 +1029,17 @@
   },
   {
     "audio": "Dolby Digital Plus 5.1",
-    "producer": "Amazon Studios",
+    "network": "Amazon Studios",
     "title": "Blindspot"
   },
   {
     "audio": "Dolby Digital Plus 5.1",
-    "producer": "Amazon Studios",
+    "network": "Amazon Studios",
     "title": "In the Dark"
   },
   {
     "codec": "H.264",
-    "producer": "Netflix",
+    "network": "Netflix",
     "title": "Babies"
   },
   {
@@ -1061,7 +1061,7 @@
   },
   {
     "audio": "AAC 2.0",
-    "producer": "MSNBC",
+    "network": "MSNBC",
     "title": "The Rachel Maddow Show"
   },
   {
@@ -1071,7 +1071,7 @@
   },
   {
     "codec": "H.264",
-    "producer": "HBO Max",
+    "network": "HBO Max",
     "title": "Scandalous The Untold Story of the National Enquirer"
   },
   {
@@ -1090,7 +1090,7 @@
   },
   {
     "codec": "H.264",
-    "producer": "Hulu Networks",
+    "network": "Hulu Networks",
     "title": "And We Go Green"
   },
   {
@@ -1104,5 +1104,47 @@
   {
     "codec": "H.264",
     "title": "Eating Up Easter"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Trackers"
+  },
+  {
+    "codec": "H.265",
+    "container": "MKV",
+    "title": "When Pop Went Epic"
+  },
+  {
+    "codec": "H.264",
+    "title": "Big Brother AU"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Frontline"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "container": "MKV",
+    "language": ["Italian","English"],
+    "network": "Amazon Studios",
+    "quality": "WEB-DL",
+    "title": "Marvel's Agents of S.H.I.E.L.D."
+  },
+  {
+    "codec": "H.264",
+    "subtitles": "English",
+    "title": "Your Honor"
+  },
+  {
+    "codec": "H.264",
+    "container": "MP4",
+    "title": "The Beat with Ari Melber"
+  },
+  {
+    "codec": "H.264",
+    "subtitles": "Available",
+    "title": "Thirteen"
   }
 ]
