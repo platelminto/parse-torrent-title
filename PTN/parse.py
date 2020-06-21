@@ -118,8 +118,6 @@ class PTN(object):
         self.try_group(clean)
         self.try_encoder()
 
-        clean = self.remove_bad_excess(clean)
-
         if clean:
             self._part('excess', None, self.excess_raw, clean)
 
@@ -134,7 +132,7 @@ class PTN(object):
         for x in m:
             if len(m) == 1 and re.match('subs?', x, re.I):
                 clean.append(x)
-            elif not re.match('subs?', x, re.I):
+            elif not re.match('subs?|soft', x, re.I):
                 clean.append(x)
         return clean
 
@@ -296,14 +294,19 @@ class PTN(object):
 
     @staticmethod
     def clean_excess(clean):
-        clean = re.sub(r'(^[-_. ()]+)|([-. ]+$)', '', clean)
+        clean = re.sub(r'(^[-_. (),]+)|([-. ,]+$)', '', clean)
         clean = re.sub(r'[()/]', ' ', clean)
         match = re.split(r'\.\.+| +', clean)
         if match and isinstance(match[0], tuple):
             match = list(match[0])
         clean = filter(bool, match)
         clean = [item.strip('-') for item in clean]
-        return clean
+        filtered = list()
+        for extra in clean:
+            # re.fullmatch() is not available in python 2.7, so we manually do it with \Z.
+            if not re.match(r'(?:Complete|Season|Full)?[\]\[,.+\-]*(?:Complete|Season|Full)?\Z', extra, re.IGNORECASE):
+                filtered.append(extra)
+        return filtered
 
     def try_episode_name(self, clean):
         match = re.findall(episode_name_pattern, clean)
@@ -342,12 +345,3 @@ class PTN(object):
                     self.parts['group'] = group.replace(raw, '')
                     if not self.parts['group'].strip():
                         self.parts.pop('group')
-
-    @staticmethod
-    def remove_bad_excess(excess):
-        cleaned_excess = list()
-        for extra in excess:
-            # re.fullmatch() is not available in python 2.7, so we manually do it with \Z.
-            if not re.match(r'(?:Complete|Season|Full)?[\]\[,.+\-]*(?:Complete|Season|Full)?\Z', extra, re.IGNORECASE):
-                cleaned_excess.append(extra)
-        return cleaned_excess
