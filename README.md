@@ -177,6 +177,7 @@ after correctly getting the season and episode number.
 * episodeName
 * excess
 * extended
+* fps
 * group
 * hardcoded
 * internal

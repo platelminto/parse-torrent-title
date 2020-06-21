@@ -52,7 +52,7 @@ patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', '
                     'network', 'codec', 'audio', 'region', 'extended', 'hardcoded', 'proper',
                     'repack', 'container', 'widescreen', 'website', 'subtitles', 'language',
                     'sbs', 'unrated', 'size', 'bitDepth', '3d', 'internal', 'readnfo',
-                    'documentary']
+                    'documentary', 'fps']
 
 patterns = dict()
 patterns['episode'] = '(?:(?<![a-z])(?:[ex]|ep)(?:[0-9]{1,2}(?:-(?:[ex]|ep)?(?:[0-9]{1,2}))?)(?![0-9])|\s\-\s\d{1,3}\s)'
@@ -69,7 +69,8 @@ patterns['month'] = '(?:{year}){delimiters}({month}){delimiters}(?:{day})' \
 patterns['day'] = '(?:{year}){delimiters}(?:{month}){delimiters}({day})' \
     .format(delimiters=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)
 patterns['resolution'] = [('([0-9]{3,4}p)', None, 'lower'),
-                          ('(1280x720)', '720p')]
+                          ('(1280x720p?)', '720p'),
+                          ('HD', 'HD')]
 patterns['quality'] = [('WEB[ -]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
                        # Match WEB-DL's first as they can show up with others.
                        ('WEB[ -]?Cap', 'WEBCap'),
@@ -134,12 +135,13 @@ patterns['extended'] = '(EXTENDED(:?.CUT)?)'
 patterns['hardcoded'] = 'HC'
 patterns['proper'] = 'PROPER'
 patterns['repack'] = 'REPACK'
+patterns['fps'] = '([1-9][0-9]{1,2})' + delimiters + '*fps'
 patterns['container'] = [('MKV|AVI', None, 'upper'),
                           ('MP-?4', 'MP4')]
 patterns['widescreen'] = 'WS'
 patterns['website'] = '^(\[ ?([^\]]+?) ?\])'
 patterns['subtitles'] = ['(?:{delimiters}*)?sub(?:title)?s?{delimiters}*{langs}+'.format(delimiters=delimiters, langs=subs_list_pattern),
-'{langs}+(?:(?:m(?:ulti(?:ple)?)?[\.\s\-\+_\/]*)?sub(?:title)?s?)'.format(delimiters=delimiters, langs=subs_list_pattern),
+'(?:soft)?{delimiters}*{langs}+(?:(?:m(?:ulti(?:ple)?)?{delimiters}*)?sub(?:title)?s?)'.format(delimiters=delimiters, langs=subs_list_pattern),
                          # Need a pattern just for subs, and can't just make above regexes * over + as we want
                          # just 'subs' to match last.
                          '(?:{delimiters}*)?(?<![a-z])(?:m(?:ulti(?:ple)?)?[\.\s\-\+_\/]*)?sub(?:title)?s?{delimiters}*'.format(delimiters=delimiters),
@@ -168,6 +170,7 @@ types = {
     'year': 'integer',
     'month': 'integer',
     'day': 'integer',
+    'fps': 'integer',
     'extended': 'boolean',
     'hardcoded': 'boolean',
     'proper': 'boolean',

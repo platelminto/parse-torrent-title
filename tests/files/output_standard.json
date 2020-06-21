@@ -1228,5 +1228,31 @@
     "network": "Netflix",
     "quality": "WEBRip",
     "title": "The Fresh Prince of Bel-Air"
+  },
+  {
+    "title": "Tsugumomo"
+  },
+  {
+    "resolution": "720p",
+    "subtitles": "English",
+    "title": "Black Hollywood: 'They've Gotta Have Us'"
+  },
+  {
+    "codec": "H.264",
+    "title": "Police Ten 7"
+  },
+  {
+    "codec": "H.264",
+    "title": "2nd Chance Charlie"
+  },
+  {
+    "codec": "H.265",
+    "container": "MKV",
+    "title": "Billy and Us"
+  },
+  {
+    "codec": "H.265",
+    "resolution": "720p",
+    "title": "Mystery Diners"
   }
 ]

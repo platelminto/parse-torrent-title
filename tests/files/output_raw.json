@@ -2033,5 +2033,56 @@
     "season": 1,
     "title": "The Fresh Prince of Bel-Air",
     "year": 1990
+  },
+  {
+    "encoder": "TGx",
+    "episode": 12,
+    "group": "HorribleSubs",
+    "resolution": "720p",
+    "season": 2,
+    "title": "Tsugumomo"
+  },
+  {
+    "fps": 50,
+    "network": "BBC",
+    "resolution": "1280x720p",
+    "season": 1,
+    "subtitles": "Eng",
+    "title": "Black Hollywood: 'They've Gotta Have Us'",
+    "year": 2018
+  },
+  {
+    "codec": "x264",
+    "encoder": "TGx",
+    "episode": 13,
+    "group": "FiHTV",
+    "quality": "HDTV",
+    "season": 27,
+    "title": "Police Ten 7"
+  },
+  {
+    "codec": "x264",
+    "encoder": "TGx",
+    "episode": 2,
+    "group": "FiHTV",
+    "quality": "HDTV",
+    "season": 1,
+    "title": "2nd Chance Charlie"
+  },
+  {
+    "audio": "AAC",
+    "codec": "x265",
+    "container": "mkv",
+    "group": "MVGroup.org",
+    "network": "BBC",
+    "quality": "HDTV",
+    "resolution": "1080p",
+    "title": "Billy and Us"
+  },
+  {
+    "codec": "x265",
+    "resolution": "720P",
+    "season": 8,
+    "title": "Mystery Diners"
   }
 ]
