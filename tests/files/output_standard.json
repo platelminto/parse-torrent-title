@@ -53,7 +53,7 @@
   {
     "codec": "H.264",
     "quality": "HDTV",
-    "title": "Marvels Agents of S H I E L D"
+    "title": "Marvel's Agents of S.H.I.E.L.D."
   },
   {
     "audio": "Dolby Digital 5.1",
@@ -139,7 +139,7 @@
     "title": "The Flash"
   },
   {
-    "audio": "Dual Audio",
+    "audio": "Dual",
     "quality": "WEBRip",
     "size": "1400MB",
     "title": "Lucy"
@@ -203,7 +203,7 @@
     "title": "Into The Storm"
   },
   {
-    "audio": "Dual Audio",
+    "audio": "Dual",
     "quality": "WEBRip",
     "title": "Lucy"
   },
@@ -286,13 +286,13 @@
     "title": "Interstellar"
   },
   {
-    "audio": "Dual Audio",
+    "audio": "Dual",
     "container": "AVI",
     "quality": "DVD-Rip",
     "title": "Guardians of the Galaxy"
   },
   {
-    "audio": "Dual Audio",
+    "audio": "Dual",
     "codec": "H.264",
     "container": "MKV",
     "quality": "WEB-DL",
@@ -444,7 +444,7 @@
   },
   {
     "codec": "H.264",
-    "producer": "Amazon Studios",
+    "network": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "South Park"
   },
@@ -491,7 +491,7 @@
     "audio": "AAC 5.1",
     "codec": "H.264",
     "language": "Polish",
-    "producer": "Netflix",
+    "network": "Netflix",
     "quality": "WEB-DL",
     "title": "1983"
   },
@@ -554,7 +554,7 @@
   },
   {
     "codec": "H.264",
-    "producer": "Amazon Studios",
+    "network": "Amazon Studios",
     "quality": "WEBRip",
     "title": "Tom Clancys Jack Ryan"
   },
@@ -574,7 +574,7 @@
     "audio": "Dolby Digital Plus 5.1",
     "bitDepth": 10,
     "codec": "H.265",
-    "producer": "Apple TV+",
+    "network": "Apple TV+",
     "quality": "WEBRip",
     "title": "Home Before Dark"
   },
@@ -596,7 +596,7 @@
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "language": ["Italian","English"],
-    "producer": "Amazon Studios",
+    "network": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "The Blacklist"
   },
@@ -604,7 +604,7 @@
     "audio": "Dolby Digital Plus 2.0",
     "bitDepth": 10,
     "codec": "H.265",
-    "producer": "Amazon Studios",
+    "network": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "Are You Being Served"
   },
@@ -636,7 +636,7 @@
   },
   {
     "codec": "H.264",
-    "producer": "Amazon Studios",
+    "network": "Amazon Studios",
     "quality": "WEBRip",
     "size": "800MB",
     "title": "Label Me"
@@ -701,13 +701,13 @@
   {
     "audio": "Dolby Digital Plus 2.0",
     "codec": "H.264",
-    "producer": "Amazon Studios",
+    "network": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "Deadliest Catch"
   },
   {
     "codec": "H.264",
-    "producer": "Netflix",
+    "network": "Netflix",
     "quality": "WEBRip",
     "title": "New Girl"
   },
@@ -715,5 +715,600 @@
     "codec": "H.264",
     "quality": "HDTV",
     "title": "Accused Guilty or Innocent"
+  },
+  {
+    "audio": "AAC",
+    "codec": "H.264",
+    "container": "MP4",
+    "quality": "DVD-Rip",
+    "title": "The Peacemaker"
+  },
+  {
+    "audio": "Dolby Digital",
+    "codec": "H.264",
+    "language": ["Italian","English"],
+    "subtitles": ["Italian","English"],
+    "title": "The Big Bus - Il fantabus"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "language": ["Italian","English"],
+    "quality": "Blu-ray",
+    "subtitles": ["Italian","English"],
+    "title": "The Hunt"
+  },
+  {
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "title": "Near Death"
+  },
+  {
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "title": "The Red Pony"
+  },
+  {
+    "codec": "H.265",
+    "quality": "Blu-ray",
+    "title": "We Were Soldiers"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "language": ["Italian","English"],
+    "subtitles": ["Italian","English"],
+    "title": "Diabolique"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.264",
+    "title": "Road House 2 Last Call"
+  },
+  {
+    "audio": "Dolby TrueHD 7.1",
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "title": "We Summon The Darkness"
+  },
+  {
+    "codec": "H.264",
+    "language": ["Italian","French"],
+    "subtitles": "English",
+    "title": "37°2 le matin - Betty Blue"
+  },
+  {
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "title": "Non-Fiction"
+  },
+  {
+    "codec": "H.264",
+    "title": "Spring Night Summer Night"
+  },
+  {
+    "codec": "H.264",
+    "network": "Amazon Studios",
+    "title": "Insecure"
+  },
+  {
+    "codec": "H.264",
+    "title": "Let It Fall Los Angeles 1982-1992"
+  },
+  {
+    "codec": "H.264",
+    "title": "Dr Phil"
+  },
+  {
+    "audio": "Dolby Digital Plus 5.1",
+    "codec": "H.264",
+    "network": "Amazon Studios",
+    "title": "Starhunter ReduX"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Jimmy Fallon"
+  },
+  {
+    "title": "Kami no Tou"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "EastEnders"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Lost Gold of World War II"
+  },
+  {
+    "title": "Plunderer"
+  },
+  {
+    "codec": "H.264",
+    "container": "MKV",
+    "size": "1.4GB",
+    "title": "Blood Blockade Battlefront & Beyond"
+  },
+  {
+    "title": "Tower of God"
+  },
+  {
+    "episode": 12,
+    "subtitles": "Available",
+    "title": "Kami no Tou"
+  },
+  {
+    "codec": "H.265",
+    "subtitles": "English",
+    "title": "Plunderer"
+  },
+  {
+    "title": "Tamayomi"
+  },
+  {
+    "title": "Ahiru no Sora"
+  },
+  {
+    "subtitles": "Available",
+    "title": "Shadowverse"
+  },
+  {
+    "title": "A3! Season Spring & Summer"
+  },
+  {
+    "subtitles": "Available",
+    "title": "Kitsutsuki Tanteidokoro"
+  },
+  {
+    "subtitles": "Available",
+    "title": "Princess Connect! Re-Dive"
+  },
+  {
+    "title": "Fruits Basket"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.264",
+    "size": "1.1GB",
+    "subtitles": "English",
+    "title": "Kadakh"
+  },
+  {
+    "codec": "H.265",
+    "quality": "Blu-ray",
+    "title": "Satyagraha"
+  },
+  {
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "subtitles": "Available",
+    "title": "Shuddh Desi Romance"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "quality": "WEB-DL",
+    "subtitles": "English",
+    "title": "Face 2 Face"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "network": "Netflix",
+    "size": "800MB",
+    "subtitles": "English",
+    "title": "Chaman Bahar"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.264",
+    "size": "650MB",
+    "subtitles": "English",
+    "title": "Piprabidya"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "network": "Amazon Studios",
+    "size": "1.1GB",
+    "subtitles": "English",
+    "title": "Penguin"
+  },
+  {
+    "audio": "Dolby Digital",
+    "codec": "H.264",
+    "subtitles": "English",
+    "title": "Kadakh"
+  },
+  {
+    "codec": "H.265",
+    "quality": "Blu-ray",
+    "title": "Satyagraha"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEB-DL",
+    "subtitles": "English",
+    "title": "Kavacham"
+  },
+  {
+    "codec": "H.264",
+    "quality": "BRRip",
+    "subtitles": "English",
+    "title": "M.S. Dhoni: The Untold Story"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "quality": "Blu-ray",
+    "subtitles": "English",
+    "title": "M.S. Dhoni: The Untold Story"
+  },
+  {
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "subtitles": "Available",
+    "title": "Detective Byomkesh Bakshy"
+  },
+  {
+    "codec": "H.264",
+    "container": "MKV",
+    "quality": "WEBRip",
+    "subtitles": "English",
+    "title": "Kasganj"
+  },
+  {
+    "codec": "H.264",
+    "container": "MKV",
+    "network": "ZEE5",
+    "quality": "WEB-DL",
+    "subtitles": "English",
+    "title": "Kasganj"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "language": ["Tamil","Telugu","Malayalam"],
+    "quality": "WEB-DL",
+    "subtitles": "Available",
+    "title": "Penguin"
+  },
+  {
+    "title": "Kakushigoto"
+  },
+  {
+    "codec": "H.265",
+    "subtitles": "English",
+    "title": "Shaman King"
+  },
+  {
+    "audio": "Dolby Digital Plus 5.1",
+    "codec": "H.264",
+    "language": "Japanese",
+    "network": "Netflix",
+    "title": "A Whisker Away"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.265",
+    "container": "MKV",
+    "language": "Japanese",
+    "quality": "Blu-ray",
+    "title": "liz and the blue bird"
+  },
+  {
+    "container": "MKV",
+    "language": ["Italian","English"],
+    "network": "Amazon Studios",
+    "quality": "WEB-DL",
+    "title": "The Flash"
+  },
+  {
+    "audio": "Dolby Digital Plus 5.1",
+    "codec": "H.264",
+    "network": "DC Universe",
+    "title": "Harley Quinn"
+  },
+  {
+    "codec": "H.264",
+    "title": "The Killer Truth"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.265",
+    "network": "HBO Max",
+    "quality": "WEBRip",
+    "title": "The Flintstones"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Jamies Super Food"
+  },
+  {
+    "audio": "Dolby Digital Plus 5.1",
+    "network": "Amazon Studios",
+    "title": "Blindspot"
+  },
+  {
+    "audio": "Dolby Digital Plus 5.1",
+    "network": "Amazon Studios",
+    "title": "In the Dark"
+  },
+  {
+    "codec": "H.264",
+    "network": "Netflix",
+    "title": "Babies"
+  },
+  {
+    "codec": "H.264",
+    "title": "WWE Monday Night RAW"
+  },
+  {
+    "quality": "WEB-DL",
+    "title": "The Rachel Maddow Show"
+  },
+  {
+    "quality": "WEB-DL",
+    "title": "The Last Word with Lawrence O'Donnell"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Design at Your Door"
+  },
+  {
+    "audio": "AAC 2.0",
+    "network": "MSNBC",
+    "title": "The Rachel Maddow Show"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Lalbazaar"
+  },
+  {
+    "codec": "H.264",
+    "network": "HBO Max",
+    "title": "Scandalous The Untold Story of the National Enquirer"
+  },
+  {
+    "codec": "H.264",
+    "title": "Turtle Odyssey"
+  },
+  {
+    "codec": "H.264",
+    "title": "Still A Mystery"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.265",
+    "quality": "Blu-ray",
+    "title": "When Bjork Met Attenborough"
+  },
+  {
+    "codec": "H.264",
+    "network": "Hulu Networks",
+    "title": "And We Go Green"
+  },
+  {
+    "subtitles": "Available",
+    "title": "Ella Fitzgerald - Just One of Those Things"
+  },
+  {
+    "codec": "H.264",
+    "title": "Inventing Tomorrow"
+  },
+  {
+    "codec": "H.264",
+    "title": "Eating Up Easter"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Trackers"
+  },
+  {
+    "codec": "H.265",
+    "container": "MKV",
+    "title": "When Pop Went Epic"
+  },
+  {
+    "codec": "H.264",
+    "title": "Big Brother AU"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Frontline"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "container": "MKV",
+    "language": ["Italian","English"],
+    "network": "Amazon Studios",
+    "quality": "WEB-DL",
+    "title": "Marvel's Agents of S.H.I.E.L.D."
+  },
+  {
+    "codec": "H.264",
+    "subtitles": "English",
+    "title": "Your Honor"
+  },
+  {
+    "codec": "H.264",
+    "container": "MP4",
+    "title": "The Beat with Ari Melber"
+  },
+  {
+    "codec": "H.264",
+    "subtitles": "Available",
+    "title": "Thirteen"
+  },
+  {
+    "codec": "H.264",
+    "network": "Netflix",
+    "subtitles": "English",
+    "title": "Paan Singh Tomar"
+  },
+  {
+    "audio": "AAC 2.0",
+    "network": "Hulu Networks",
+    "title": "MASH"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Trishas Southern Kitchen"
+  },
+  {
+    "language": "English",
+    "title": "Split Image"
+  },
+  {
+    "title": "Kaguya-sama wa Kokurasetai"
+  },
+  {
+    "audio": "Mono",
+    "codec": "Xvid",
+    "language": "English",
+    "quality": "DVD-Rip",
+    "title": "Five"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "NOS4A2"
+  },
+  {
+    "codec": "H.264",
+    "title": "Diners Drive-Ins and Dives"
+  },
+  {
+    "container": "MKV",
+    "title": "Arte"
+  },
+  {
+    "title": "Kaguya-sama wa Kokurasetai! Tensai-tachi no Renai Zunousen"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "network": "Amazon Studios",
+    "title": "Prawaas"
+  },
+  {
+    "container": "MKV",
+    "subtitles": "Available",
+    "title": "Yesterday o Utatte"
+  },
+  {
+    "container": "MKV",
+    "subtitles": "Available",
+    "title": "Honzuki no Gekokujou - Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen"
+  },
+  {
+    "quality": "WEBRip",
+    "title": "Babyteeth"
+  },
+  {
+    "quality": "Blu-ray",
+    "title": "Weekend at Bernie's II"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Naked and Afraid XL"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.265",
+    "network": "Netflix",
+    "quality": "WEBRip",
+    "title": "The Fresh Prince of Bel-Air"
+  },
+  {
+    "title": "Tsugumomo"
+  },
+  {
+    "resolution": "720p",
+    "subtitles": "English",
+    "title": "Black Hollywood: 'They've Gotta Have Us'"
+  },
+  {
+    "codec": "H.264",
+    "title": "Police Ten 7"
+  },
+  {
+    "codec": "H.264",
+    "title": "2nd Chance Charlie"
+  },
+  {
+    "codec": "H.265",
+    "container": "MKV",
+    "title": "Billy and Us"
+  },
+  {
+    "codec": "H.265",
+    "resolution": "720p",
+    "title": "Mystery Diners"
+  },
+  {
+    "quality": "WEB-DL",
+    "title": "Amar"
+  },
+  {
+    "codec": "H.264",
+    "title": "Oolu"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "size": "800MB",
+    "subtitles": "Available",
+    "title": "Vacancy"
+  },
+  {
+    "audio": "Dual",
+    "codec": "H.264",
+    "quality": "WEB-DL",
+    "title": "Darkness Falls"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "language": ["Italian","English"],
+    "title": "Wasp Network"
+  },
+  {
+    "container": "MKV",
+    "language": ["Italian","English"],
+    "quality": "Blu-ray",
+    "title": "Darlin"
+  },
+  {
+    "codec": "H.264",
+    "container": "MP4",
+    "quality": "DVD-Rip",
+    "title": "Wild Target"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "language": ["Italian","Danish"],
+    "title": "Infection-What We Become"
+  },
+  {
+    "codec": "H.264",
+    "language": "Hindi",
+    "title": "Perversion"
+  },
+  {
+    "codec": "H.265",
+    "quality": "Blu-ray",
+    "title": "Casino"
   }
 ]

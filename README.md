@@ -19,6 +19,8 @@ title of the content.
 - Added standardisation of output strings.
 - Added multi-language support.
 - Added multi-episode support.
+- Improved support for anime tv releases.
+- Improved support for Indian releases.
 - Added various fields (see field list below).
 - Added proper subtitle support.
 - Added proper support for matching episode names.
@@ -140,7 +142,7 @@ PTN.parse('South Park Season 23 Complete 720p AMZN WEB-DL x264 [i_c]')
 #     'codec': 'H.264',
 #     'quality': 'WEB-DL',
 #     'encoder': 'i_c',
-#     'producer': 'Amazon Studios'
+#     'network': 'Amazon Studios'
 # }
 
   
@@ -169,17 +171,20 @@ after correctly getting the season and episode number.
 * codec
 * container
 * day
+* documentary
 * encoder
 * episode
 * episodeName
 * excess
 * extended
+* fps
 * group
 * hardcoded
+* hdr
 * internal
 * language
 * month
-* producer
+* network
 * proper
 * quality
 * readnfo

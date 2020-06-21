@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 import json
 import os
@@ -21,21 +20,21 @@ class ParseTest(unittest.TestCase):
         self.assertEqual(len(torrents), len(expected_results))
         excess_elements = 0
         for torrent, expected_result in zip(torrents, expected_results):
-            print('Test: ' + torrent)
+            print('Test: {}'.format(torrent.encode('utf-8', 'replace')))
             result = PTN.parse(torrent, standardise=False)
             if 'excess' in result:
-                print('excess: ' + str(result['excess']))
-                if isinstance(result['excess'], str):
-                    excess_elements += 1
-                else:
+                print('excess: {}'.format(str(result['excess']).encode('utf-8', 'replace')))
+                if isinstance(result['excess'], list):
                     excess_elements += len(result['excess'])
+                else:
+                    excess_elements += 1
             for key in expected_result:
-                self.assertIn(key, result, torrent)
+                self.assertIn(key, result, torrent.encode('utf-8', 'replace'))
                 self.assertEqual(expected_result[key], result[key], key)
             for key in result.keys():
                 if key not in ('group', 'excess', 'encoder'):  # Not needed in tests
                     self.assertIn(key, expected_result)
-        print('Excess elements total: ' + str(excess_elements))
+        print('Excess elements total: {}'.format(excess_elements))
 
     def test_standardised(self):
         json_input = os.path.join(os.path.dirname(__file__), 'files/input.json')
@@ -51,8 +50,8 @@ class ParseTest(unittest.TestCase):
         for torrent, expected_result in zip(torrents, expected_results):
             result = PTN.parse(torrent, standardise=True)
             for key in expected_result:
-                self.assertIn(key, result, torrent)
-                self.assertEqual(expected_result[key], result[key], '{} - {}'.format(key, torrent))
+                self.assertIn(key, result, torrent.encode('utf-8', 'replace'))
+                self.assertEqual(expected_result[key], result[key], '{} - {}'.format(key, torrent.encode('utf-8', 'replace')))
 
 
 if __name__ == '__main__':

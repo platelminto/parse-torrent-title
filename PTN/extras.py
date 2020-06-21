@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # Some titles just can't be parsed without breaking everything else, so here
 # are known those known exceptions. They are executed when the parsed_title and
 # incorrect_parse match within a .parse() dict, removing the latter, and replacing
@@ -11,6 +13,11 @@ exceptions = [
     {
         'parsed_title': 'Marvel\'s Agents of S H I E L D',
         'incorrect_parse': ('title', 'Marvel\'s Agents of S H I E L D'),
+        'actual_title': 'Marvel\'s Agents of S.H.I.E.L.D.'
+    },
+    {
+        'parsed_title': 'Marvels Agents of S H I E L D',
+        'incorrect_parse': ('title', 'Marvels Agents of S H I E L D'),
         'actual_title': 'Marvel\'s Agents of S.H.I.E.L.D.'
     }
 ]
@@ -26,10 +33,11 @@ channels = [(2, 0), (5, 1), (7, 1)]
 
 # Return tuple with regexes for audio name with appended channel types, and without any channels
 def get_channel_audio_options(patterns_with_names):
+    from .patterns import delimiters
     options = list()
     for (audio_pattern, name) in patterns_with_names:
         for (speakers, subwoofers) in channels:
-            options.append(('((?:{})[. \-]*?{}[. \-]?{})'.format(audio_pattern, speakers, subwoofers),
+            options.append(('((?:{}){}*{}[. \-]?{})'.format(audio_pattern, delimiters, speakers, subwoofers),
                 '{} {}.{}'.format(name, speakers, subwoofers)))
         options.append(('({})'.format(audio_pattern), name))  # After for loop, would match first
 
@@ -68,10 +76,10 @@ def suffix_pattern_with(suffixes, pattern_options, between='', optional=False):
         if not isinstance(pattern_options, list):
             pattern_options = [pattern_options]
         for pattern_option in pattern_options:
-            if isinstance(pattern_option, str):
-                options.append('({})(?:{})?(?:{}){}'.format(pattern_option, between, suffix, optional_char))
-            else:
+            if isinstance(pattern_option, tuple):
                 options.append(('({})(?:{})?(?:{}){}'.format(pattern_option[0], between, suffix, optional_char),) + pattern_option[1:])
+            else:
+                options.append('({})(?:{})?(?:{}){}'.format(pattern_option, between, suffix, optional_char))
 
     return options
 
@@ -79,4 +87,8 @@ def suffix_pattern_with(suffixes, pattern_options, between='', optional=False):
 # Link a regex-tuple list into a single regex (to be able to use elsewhere while
 # maintaining standardisation functionality).
 def link_pattern_options(pattern_options):
-    return '|'.join([pattern_option[0] for pattern_option in pattern_options])
+    if not isinstance(pattern_options, list):
+        return pattern_options
+    return '(?:' + \
+           '|'.join([pattern_option[0] if isinstance(pattern_option, tuple) else pattern_option for pattern_option in pattern_options]) + \
+            ')'

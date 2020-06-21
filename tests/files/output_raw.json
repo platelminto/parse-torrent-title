@@ -78,7 +78,7 @@
     "episode": 5,
     "quality": "HDTV",
     "season": 2,
-    "title": "Marvels Agents of S H I E L D"
+    "title": "Marvel's Agents of S.H.I.E.L.D."
   },
   {
     "audio": "DD5.1",
@@ -588,7 +588,7 @@
     "quality": "BluRay",
     "resolution": "720p",
     "season": 1,
-    "subtitles": "DK",
+    "subtitles": "DKsubs",
     "title": "The X-Files"
   },
   {
@@ -596,7 +596,7 @@
     "quality": "BluRay",
     "resolution": "1080p",
     "season": [1,2,3],
-    "subtitles": "DK",
+    "subtitles": "DKsubs",
     "title": "The X-Files"
   },
   {
@@ -643,7 +643,7 @@
   },
   {
     "codec": "x264",
-    "producer": "AMZN",
+    "network": "AMZN",
     "quality": "WEB-DL",
     "resolution": "720p",
     "season": 23,
@@ -669,7 +669,7 @@
     "codec": "x264",
     "quality": "HDRip",
     "resolution": "540p",
-    "subtitles": "KOR",
+    "subtitles": "KORSUB",
     "title": "The Martian",
     "year": 2015
   },
@@ -708,7 +708,7 @@
     "audio": "AAC5.1",
     "codec": "X264",
     "language": "Polish",
-    "producer": "NF",
+    "network": "NF",
     "quality": "WEB-DL",
     "resolution": "1080p",
     "season": 1,
@@ -744,7 +744,7 @@
     "language": "English",
     "quality": "HDRip",
     "resolution": "720p",
-    "subtitles": ["Hindi","Eng"],
+    "subtitles": ["Hindi","Eng","Multi"],
     "title": "Joker",
     "year": 2019
   },
@@ -771,7 +771,7 @@
   },
   {
     "quality": "DVDRip",
-    "resolution": "720p",
+    "resolution": "1080p",
     "season": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28],
     "title": "The Simpsons"
   },
@@ -795,7 +795,7 @@
   },
   {
     "codec": "x264",
-    "producer": "AMZN",
+    "network": "AMZN",
     "quality": "WEBRip",
     "resolution": "720p",
     "season": 2,
@@ -807,7 +807,7 @@
     "language": "Hindi",
     "resolution": "720p",
     "season": 1,
-    "subtitles": "E",
+    "subtitles": "ESub",
     "title": "Sacred Games",
     "year": 2018
   },
@@ -822,7 +822,7 @@
     "audio": "EAC3 5.1",
     "bitDepth": 10,
     "codec": "x265",
-    "producer": "ATVP",
+    "network": "ATVP",
     "quality": "Webrip",
     "resolution": "1080p",
     "season": 1,
@@ -859,7 +859,7 @@
     "codec": "H264",
     "episode": [5,6],
     "language": ["ITA","ENG"],
-    "producer": "AMZN",
+    "network": "AMZN",
     "quality": "WEB-DLMux",
     "resolution": "1080p",
     "season": 7,
@@ -869,7 +869,7 @@
     "audio": "EAC3 2.0",
     "bitDepth": 10,
     "codec": "x265",
-    "producer": "AMZN",
+    "network": "AMZN",
     "quality": "WEB-DL",
     "resolution": "576p",
     "season": [1,2,3,4,5,6,7,8,9,10],
@@ -921,7 +921,7 @@
   {
     "codec": "x264",
     "group": "GalaxyRG",
-    "producer": "AMZN",
+    "network": "AMZN",
     "quality": "WEBRip",
     "resolution": "720p",
     "size": "800MB",
@@ -949,7 +949,6 @@
   {
     "audio": "Ac3",
     "codec": "XviD",
-    "group": "MIRCrew",
     "language": ["Italian","English"],
     "season": [1,2,3,4,5,6,7,8,9,10,11,12,13],
     "subtitles": ["ita","eng"],
@@ -1028,7 +1027,7 @@
     "episode": 66,
     "episodeName": "No Safe Passage",
     "group": "NTb",
-    "producer": "AMZN",
+    "network": "AMZN",
     "quality": "WEB-DL",
     "resolution": "720p",
     "season": 0,
@@ -1036,7 +1035,7 @@
   },
   {
     "codec": "x264",
-    "producer": "NF",
+    "network": "NF",
     "quality": "WEB",
     "resolution": "1080p",
     "season": 7,
@@ -1046,10 +1045,1142 @@
     "codec": "x264",
     "encoder": "TGx",
     "episode": 7,
-    "episodeName": "Murdered His Mother or Falsely Accused",
+    "episodeName": "Murdered His Mother or Falsely Accused Pt2",
     "group": "CRiMSON",
     "quality": "HDTV",
     "season": 1,
     "title": "Accused Guilty or Innocent"
+  },
+  {
+    "audio": "AAC",
+    "codec": "X264",
+    "container": "Mp-4",
+    "group": "DSD",
+    "quality": "Dvd-Rip",
+    "resolution": "480p",
+    "title": "The Peacemaker",
+    "year": 1997
+  },
+  {
+    "audio": "Ac3",
+    "codec": "H264",
+    "group": "MIRCrew",
+    "language": ["ita","eng"],
+    "resolution": "720p",
+    "subtitles": ["ita","eng"],
+    "title": "The Big Bus - Il fantabus",
+    "year": 1976
+  },
+  {
+    "audio": "AC3 5.1",
+    "codec": "H264",
+    "group": "MIRCrew",
+    "language": ["Ita","Eng"],
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "subtitles": ["Ita","Eng"],
+    "title": "The Hunt",
+    "year": 2020
+  },
+  {
+    "audio": "AAC",
+    "codec": "H264",
+    "group": "RARBG",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Near Death",
+    "year": 2004
+  },
+  {
+    "audio": "AAC",
+    "codec": "H264",
+    "group": "RARBG",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "The Red Pony",
+    "year": 1949
+  },
+  {
+    "codec": "H265",
+    "group": "BONE",
+    "quality": "BluRay",
+    "resolution": "720p",
+    "title": "We Were Soldiers",
+    "year": 2002
+  },
+  {
+    "audio": "Ac3-5.1",
+    "codec": "H264",
+    "group": "MIRCrew",
+    "language": ["ita","eng"],
+    "resolution": "720p",
+    "subtitles": ["ita","eng"],
+    "title": "Diabolique",
+    "year": 1996
+  },
+  {
+    "audio": "DD2.0",
+    "codec": "H264",
+    "group": "Will1869",
+    "quality": "HDTV",
+    "resolution": "1080p",
+    "title": "Road House 2 Last Call",
+    "unrated": true,
+    "year": 2006
+  },
+  {
+    "audio": "TrueHD.7.1",
+    "codec": "x264",
+    "encoder": "TGx",
+    "group": "EVO",
+    "quality": "Bluray",
+    "resolution": "1080p",
+    "title": "We Summon The Darkness",
+    "year": 2020
+  },
+  {
+    "codec": "H264",
+    "language": ["ita","fre"],
+    "resolution": "720p",
+    "subtitles": "Eng",
+    "title": "37°2 le matin - Betty Blue",
+    "year": 1986
+  },
+  {
+    "codec": "x264",
+    "group": "USURY",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Non-Fiction",
+    "year": 2018
+  },
+  {
+    "codec": "x264",
+    "encoder": "TGx",
+    "group": "GHOULS",
+    "quality": "BDRip",
+    "title": "Spring Night Summer Night",
+    "year": 1967
+  },
+  {
+    "codec": "x264",
+    "group": "GalaxyTV",
+    "network": "AMZN",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "season": 4,
+    "title": "Insecure"
+  },
+  {
+    "codec": "x264",
+    "documentary": true,
+    "encoder": "rartv",
+    "group": "W4F",
+    "internal": true,
+    "quality": "HDTV",
+    "title": "Let It Fall Los Angeles 1982-1992",
+    "year": 2017
+  },
+  {
+    "codec": "x264",
+    "day": 19,
+    "encoder": "rartv",
+    "group": "W4F",
+    "month": 4,
+    "quality": "HDTV",
+    "resolution": "720p",
+    "title": "Dr Phil",
+    "year": 2019
+  },
+  {
+    "audio": "DDP5.1",
+    "codec": "x264",
+    "encoder": "rartv",
+    "group": "GLUE",
+    "network": "AMZN",
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "season": 2,
+    "title": "Starhunter ReduX"
+  },
+  {
+    "codec": "h264",
+    "day": 16,
+    "encoder": "TGx",
+    "group": "TRUMP",
+    "month": 6,
+    "quality": "WEB",
+    "resolution": "720p",
+    "title": "Jimmy Fallon",
+    "year": 2020
+  },
+  {
+    "encoder": "TGx",
+    "episode": 12,
+    "group": "Judas",
+    "season": 1,
+    "title": "Kami no Tou"
+  },
+  {
+    "codec": "h264",
+    "day": 16,
+    "encoder": "TGx",
+    "group": "WEBTUBE",
+    "month": 6,
+    "quality": "WEB",
+    "title": "EastEnders",
+    "year": 2020
+  },
+  {
+    "codec": "h264",
+    "encoder": "TGx",
+    "episode": 7,
+    "group": "TRUMP",
+    "quality": "WEB",
+    "season": 2,
+    "title": "Lost Gold of World War II"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 23,
+    "group": "HorribleSubs",
+    "resolution": "360p",
+    "title": "Plunderer"
+  },
+  {
+    "audio": "AAC",
+    "codec": "x264",
+    "container": "mkv",
+    "episode": 8,
+    "resolution": "1080p",
+    "size": "1.4 GB",
+    "title": "Blood Blockade Battlefront & Beyond",
+    "website": "Golumpa"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 12,
+    "group": "HorribleSubs",
+    "resolution": "480p",
+    "title": "Tower of God"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 12,
+    "group": "Erai-raws",
+    "resolution": "720p",
+    "subtitles": "Multiple",
+    "title": "Kami no Tou"
+  },
+  {
+    "bitDepth": 10,
+    "codec": "x265",
+    "encoder": "TGx",
+    "episode": 23,
+    "group": "Judas",
+    "resolution": "1080p",
+    "subtitles": "Eng",
+    "title": "Plunderer"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 12,
+    "group": "HorribleSubs",
+    "resolution": "360p",
+    "title": "Tamayomi"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 36,
+    "group": "HorribleSubs",
+    "resolution": "480p",
+    "title": "Ahiru no Sora"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 11,
+    "group": "Erai-raws",
+    "resolution": "720p",
+    "subtitles": "Multiple",
+    "title": "Shadowverse"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 11,
+    "group": "HorribleSubs",
+    "resolution": "360p",
+    "title": "A3! Season Spring & Summer"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 10,
+    "group": "Erai-raws",
+    "resolution": "720p",
+    "subtitles": "Multiple",
+    "title": "Kitsutsuki Tanteidokoro"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 11,
+    "group": "Erai-raws",
+    "resolution": "720p",
+    "subtitles": "Multiple",
+    "title": "Princess Connect! Re-Dive"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 11,
+    "group": "HorribleSubs",
+    "resolution": "720p",
+    "season": 2,
+    "title": "Fruits Basket",
+    "year": 2019
+  },
+  {
+    "audio": "DD- 2.0",
+    "codec": "x264",
+    "group": "BonsaiHD",
+    "language": "Hindi",
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "size": "1.1 GB",
+    "subtitles": "ESub",
+    "title": "Kadakh",
+    "year": 2020
+  },
+  {
+    "audio": "AAC 5.1",
+    "bitDepth": 10,
+    "codec": "x265",
+    "group": "RONIN",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Satyagraha",
+    "year": 2013
+  },
+  {
+    "audio": "AAC 5.1",
+    "codec": "x264",
+    "group": "Telly",
+    "language": "Hindi",
+    "quality": "BluRay",
+    "resolution": "720p",
+    "subtitles": "MSubs",
+    "title": "Shuddh Desi Romance",
+    "year": 2013
+  },
+  {
+    "audio": "DD5.1",
+    "codec": "x264",
+    "group": "TamilMV",
+    "language": "Kannada",
+    "quality": "HDRip",
+    "resolution": "720p",
+    "size": "1.1GB",
+    "subtitles": "ESub",
+    "title": "Face 2 Face",
+    "year": 2019
+  },
+  {
+    "audio": "DD- 5.1",
+    "codec": "x264",
+    "group": "BonsaiHD",
+    "language": "Hindi",
+    "network": "NF",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "size": "800 MB",
+    "subtitles": "ESub",
+    "title": "Chaman Bahar",
+    "year": 2020
+  },
+  {
+    "audio": "DD- 2.0",
+    "codec": "x264",
+    "group": "BonsaiHD",
+    "language": "Bengali",
+    "network": "Hoichoi",
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "size": "650 MB",
+    "subtitles": "ESub",
+    "title": "Piprabidya",
+    "year": 2013
+  },
+  {
+    "audio": "DD- 5.1",
+    "codec": "x264",
+    "group": "BonsaiHD",
+    "language": "Tamil",
+    "network": "AMZN",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "size": "1.1 GB",
+    "subtitles": "ESub",
+    "title": "Penguin",
+    "year": 2020
+  },
+  {
+    "audio": "AC3",
+    "codec": "x264",
+    "group": "Telly",
+    "language": "Hindi",
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "subtitles": "ESubs",
+    "title": "Kadakh",
+    "year": 2020
+  },
+  {
+    "audio": "AAC 5.1",
+    "bitDepth": 10,
+    "codec": "x265",
+    "group": "RONIN",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Satyagraha",
+    "year": 2013
+  },
+  {
+    "codec": "x264",
+    "group": "TamilMV",
+    "language": ["Tamil","Telugu","Hindi"],
+    "proper": true,
+    "quality": "HDRip",
+    "size": "750MB",
+    "subtitles": "ESub",
+    "title": "Kavacham",
+    "year": 2018
+  },
+  {
+    "codec": "x264",
+    "group": "TamilMV",
+    "language": ["Telugu","Tamil"],
+    "quality": "BR-Rip",
+    "size": "450MB",
+    "subtitles": "ESub",
+    "title": "M.S. Dhoni: The Untold Story",
+    "year": 2016
+  },
+  {
+    "audio": "DD5.1",
+    "group": "TamilMV",
+    "language": ["Telugu","Tamil","Hindi"],
+    "quality": "BluRay",
+    "resolution": "720p",
+    "size": "1.6GB",
+    "subtitles": "ESub",
+    "title": "M.S. Dhoni: The Untold Story",
+    "year": 2016
+  },
+  {
+    "audio": "DTS 5.1",
+    "codec": "x264",
+    "group": "Telly",
+    "language": "Hindi",
+    "quality": "BluRay",
+    "resolution": "720p",
+    "subtitles": "MSubs",
+    "title": "Detective Byomkesh Bakshy",
+    "year": 2015
+  },
+  {
+    "audio": "AAC",
+    "codec": "x264",
+    "container": "mkv",
+    "encoder": "Telly",
+    "language": "Hindi",
+    "quality": "WebRip",
+    "resolution": "720p",
+    "subtitles": "ESub",
+    "title": "Kasganj",
+    "year": 2019
+  },
+  {
+    "audio": "AAC 2.0",
+    "codec": "AVC",
+    "container": "mkv",
+    "group": "Telly",
+    "language": "Hindi",
+    "network": "Zee5",
+    "quality": "WebDL",
+    "resolution": "1080p",
+    "subtitles": "ESub",
+    "title": "Kasganj",
+    "year": 2019
+  },
+  {
+    "audio": "DD 5.1",
+    "codec": "x264",
+    "group": "MAZE",
+    "language": ["Tam","Tel","Mal"],
+    "quality": "HDRip",
+    "resolution": "720p",
+    "size": "2GB",
+    "subtitles": "MSub",
+    "title": "Penguin",
+    "year": 2020
+  },
+  {
+    "encoder": "TGx",
+    "episode": 12,
+    "group": "Erai-raws",
+    "resolution": "720p",
+    "title": "Kakushigoto"
+  },
+  {
+    "bitDepth": 10,
+    "codec": "x265",
+    "encoder": "TGx",
+    "group": "Judas",
+    "resolution": "1080p",
+    "season": 1,
+    "subtitles": "Eng",
+    "title": "Shaman King"
+  },
+  {
+    "audio": "DDP5.1",
+    "codec": "x264",
+    "encoder": "TGx",
+    "group": "NTG",
+    "language": "JAPANESE",
+    "network": "NF",
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "title": "A Whisker Away",
+    "year": 2020
+  },
+  {
+    "audio": "dd5.1",
+    "codec": "x265",
+    "container": "mkv",
+    "group": "rmteam",
+    "language": "japanese",
+    "quality": "bluray",
+    "resolution": "1080p",
+    "title": "liz and the blue bird",
+    "year": 2018
+  },
+  {
+    "codec": "H.264",
+    "container": "mkv",
+    "episode": 13,
+    "episodeName": "Il mio amico Grodd",
+    "group": "MeM",
+    "language": ["ITA","ENG"],
+    "network": "AMZN",
+    "quality": "WEB-DLMux",
+    "repack": true,
+    "resolution": "1080p",
+    "season": 6,
+    "title": "The Flash",
+    "year": 2014
+  },
+  {
+    "audio": "DDP5.1",
+    "codec": "H264",
+    "encoder": "TGx",
+    "episode": 12,
+    "episodeName": "Lovers Quarrel",
+    "group": "NTb",
+    "network": "DCU",
+    "quality": "WEB-DL",
+    "resolution": "1080p",
+    "season": 2,
+    "title": "Harley Quinn"
+  },
+  {
+    "codec": "x264",
+    "encoder": "TGx",
+    "episode": 5,
+    "episodeName": "Homicide at Home",
+    "group": "CRiMSON",
+    "quality": "HDTV",
+    "season": 1,
+    "title": "The Killer Truth"
+  },
+  {
+    "audio": "AC3 2.0",
+    "bitDepth": 10,
+    "codec": "x265",
+    "encoder": "TAoE",
+    "network": "HMAX",
+    "quality": "Webrip",
+    "resolution": "1080p",
+    "season": 6,
+    "title": "The Flintstones",
+    "year": 1960
+  },
+  {
+    "codec": "H264",
+    "encoder": "TGx",
+    "episode": 4,
+    "group": "DENTiST",
+    "quality": "WEB",
+    "season": 2,
+    "title": "Jamies Super Food"
+  },
+  {
+    "audio": "DDP5.1",
+    "codec": "H.264",
+    "encoder": "TGx",
+    "episode": 6,
+    "episodeName": "Fire and Brimstone",
+    "group": "NTb",
+    "network": "AMZN",
+    "quality": "WEB-DL",
+    "resolution": "1080p",
+    "season": 5,
+    "title": "Blindspot"
+  },
+  {
+    "audio": "DDP5.1",
+    "codec": "H.264",
+    "encoder": "TGx",
+    "episode": 10,
+    "episodeName": "The Last Dance",
+    "group": "NTb",
+    "network": "AMZN",
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "season": 2,
+    "title": "In the Dark",
+    "year": 2019
+  },
+  {
+    "codec": "x264",
+    "group": "GalaxyTV",
+    "network": "NF",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "season": 2,
+    "title": "Babies"
+  },
+  {
+    "codec": "x264",
+    "day": 16,
+    "encoder": "TGx",
+    "group": "SPORTY",
+    "language": "German",
+    "month": 6,
+    "quality": "HDTV",
+    "resolution": "720p",
+    "title": "WWE Monday Night RAW",
+    "year": 2020
+  },
+  {
+    "day": 18,
+    "group": "Anon",
+    "month": 6,
+    "quality": "WEBDL",
+    "resolution": "540p",
+    "title": "The Rachel Maddow Show",
+    "year": 2020
+  },
+  {
+    "day": 18,
+    "group": "Anon",
+    "month": 6,
+    "quality": "WEBDL",
+    "resolution": "540p",
+    "title": "The Last Word with Lawrence O'Donnell",
+    "year": 2020
+  },
+  {
+    "codec": "h264",
+    "encoder": "TGx",
+    "episode": 3,
+    "episodeName": "Major Bonus Room",
+    "group": "ROBOTS",
+    "quality": "WEB",
+    "season": 1,
+    "title": "Design at Your Door"
+  },
+  {
+    "audio": "AAC2.0",
+    "codec": "H.264",
+    "day": 18,
+    "encoder": "TGx",
+    "group": "BTW",
+    "month": 6,
+    "network": "MNBC",
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "title": "The Rachel Maddow Show",
+    "year": 2020
+  },
+  {
+    "audio": "AAC",
+    "codec": "x264",
+    "encoder": "Telly",
+    "episode": [1,2,3,4,5,6,7,8,9,10],
+    "language": "Hindi",
+    "quality": "WebRip",
+    "resolution": "720p",
+    "season": 1,
+    "title": "Lalbazaar"
+  },
+  {
+    "codec": "x264",
+    "group": "GalaxyRG",
+    "network": "HMAX",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "size": "800MB",
+    "title": "Scandalous The Untold Story of the National Enquirer",
+    "year": 2020
+  },
+  {
+    "audio": "5.1",
+    "codec": "x264",
+    "group": "Psyz",
+    "resolution": "1080p",
+    "title": "Turtle Odyssey",
+    "year": 2019
+  },
+  {
+    "codec": "x264",
+    "group": "CAFFEiNE",
+    "quality": "WEBRip",
+    "season": 1,
+    "title": "Still A Mystery"
+  },
+  {
+    "audio": "AC3 2.0",
+    "bitDepth": 10,
+    "codec": "x265",
+    "encoder": "QxR",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "When Bjork Met Attenborough",
+    "year": 2013
+  },
+  {
+    "codec": "x264",
+    "group": "GalaxyRG",
+    "network": "HULU",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "size": "800MB",
+    "title": "And We Go Green",
+    "year": 2019
+  },
+  {
+    "container": "MP4",
+    "group": "BigJ0554",
+    "subtitles": "subs",
+    "title": "Ella Fitzgerald - Just One of Those Things"
+  },
+  {
+    "codec": "x264",
+    "documentary": true,
+    "encoder": "TGx",
+    "group": "W4F",
+    "quality": "HDTV",
+    "title": "Inventing Tomorrow",
+    "year": 2018
+  },
+  {
+    "codec": "x264",
+    "documentary": true,
+    "encoder": "TGx",
+    "group": "W4F",
+    "quality": "HDTV",
+    "title": "Eating Up Easter",
+    "year": 2018
+  },
+  {
+    "codec": "H264",
+    "encoder": "TGx",
+    "episode": 3,
+    "group": "GHOSTS",
+    "proper": true,
+    "quality": "WEB",
+    "resolution": "720p",
+    "season": 1,
+    "title": "Trackers"
+  },
+  {
+    "audio": "AAC",
+    "codec": "x265",
+    "container": "mkv",
+    "group": "MVGroup.org",
+    "network": "BBC",
+    "quality": "HDTV",
+    "resolution": "1080p",
+    "title": "When Pop Went Epic"
+  },
+  {
+    "codec": "x264",
+    "episode": 6,
+    "group": "Nemo",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "season": 12,
+    "title": "Big Brother AU"
+  },
+  {
+    "codec": "h264",
+    "encoder": "TGx",
+    "episode": 20,
+    "episodeName": "Opioids Inc",
+    "group": "LiGATE",
+    "quality": "WEB",
+    "season": 38,
+    "title": "Frontline"
+  },
+  {
+    "audio": "DD5.1",
+    "codec": "H.264",
+    "container": "mkv",
+    "episode": 3,
+    "episodeName": "Comunisti alieni dal futuro",
+    "group": "MeM",
+    "language": ["ITA","ENG"],
+    "network": "AMZN",
+    "quality": "WEB-DLMux",
+    "resolution": "1080p",
+    "season": 7,
+    "title": "Marvel's Agents of S.H.I.E.L.D."
+  },
+  {
+    "audio": "AAC",
+    "codec": "x264",
+    "group": "Telly",
+    "language": "Hindi",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "season": 1,
+    "subtitles": "ESubs",
+    "title": "Your Honor",
+    "year": 2020
+  },
+  {
+    "codec": "x264",
+    "container": "mp4",
+    "day": 19,
+    "group": "PC",
+    "month": 6,
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "title": "The Beat with Ari Melber",
+    "year": 2020
+  },
+  {
+    "codec": "x264",
+    "group": "StB",
+    "resolution": "720p",
+    "season": 1,
+    "subtitles": "MultiSub",
+    "title": "Thirteen"
+  },
+  {
+    "audio": "AAC 5.1",
+    "codec": "x264",
+    "group": "Telly",
+    "language": "Hindi",
+    "network": "NF",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "subtitles": "ESubs",
+    "title": "Paan Singh Tomar",
+    "year": 2012
+  },
+  {
+    "audio": "AAC2.0",
+    "codec": "H.264",
+    "encoder": "eztv",
+    "episode": 20,
+    "episodeName": "The Army-Navy Game",
+    "group": "AJP69",
+    "network": "HULU",
+    "quality": "WEB-DL",
+    "resolution": "1080p",
+    "season": 1,
+    "title": "MASH"
+  },
+  {
+    "codec": "h264",
+    "encoder": "eztv",
+    "episode": 12,
+    "episodeName": "Family Favorites with Allie",
+    "group": "ROBOTS",
+    "internal": true,
+    "quality": "WEB",
+    "season": 16,
+    "title": "Trishas Southern Kitchen"
+  },
+  {
+    "codec": "Xvid",
+    "group": "ETRG",
+    "language": "Eng",
+    "title": "Split Image",
+    "year": 1982
+  },
+  {
+    "encoder": "TGx",
+    "episode": 11,
+    "group": "HorribleSubs",
+    "resolution": "720p",
+    "season": 2,
+    "title": "Kaguya-sama wa Kokurasetai"
+  },
+  {
+    "audio": "1Ch.Audio",
+    "codec": "XViD",
+    "group": "ETRG",
+    "language": "Eng",
+    "quality": "DVDRip",
+    "title": "Five",
+    "year": 1951
+  },
+  {
+    "codec": "H264",
+    "encoder": "TGx",
+    "episode": 1,
+    "group": "OATH",
+    "quality": "WEB",
+    "resolution": "720p",
+    "season": 2,
+    "title": "NOS4A2"
+  },
+  {
+    "codec": "x264",
+    "encoder": "TGx",
+    "episode": 12,
+    "episodeName": "Sicilian and Seafood",
+    "group": "LiGATE",
+    "quality": "WEBRip",
+    "season": 31,
+    "title": "Diners Drive-Ins and Dives"
+  },
+  {
+    "container": "mkv",
+    "episode": 12,
+    "resolution": "720p",
+    "title": "Arte",
+    "website": "Erai-raws"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 11,
+    "group": "Erai-raws",
+    "resolution": "720p",
+    "season": 2,
+    "title": "Kaguya-sama wa Kokurasetai! Tensai-tachi no Renai Zunousen"
+  },
+  {
+    "audio": "DD+5.1",
+    "codec": "H264",
+    "group": "Dus.IcTv",
+    "network": "AMZN",
+    "quality": "WEB-DL",
+    "resolution": "1080p",
+    "title": "Prawaas",
+    "year": 2020
+  },
+  {
+    "container": "mkv",
+    "episode": 12,
+    "resolution": "720p",
+    "subtitles": "Multiple",
+    "title": "Yesterday o Utatte",
+    "website": "Erai-raws"
+  },
+  {
+    "container": "mkv",
+    "episode": 12,
+    "resolution": "1080p",
+    "season": 2,
+    "subtitles": "Multiple",
+    "title": "Honzuki no Gekokujou - Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen",
+    "website": "Erai-raws"
+  },
+  {
+    "encoder": "YTS",
+    "quality": "WebRip",
+    "resolution": "1080p",
+    "title": "Babyteeth",
+    "year": 2019
+  },
+  {
+    "encoder": "YTS",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Weekend at Bernie's II",
+    "year": 1993
+  },
+  {
+    "codec": "h264",
+    "encoder": "eztv",
+    "episode": 0,
+    "episodeName": "Clothed and Opinionated Part 2",
+    "group": "ROBOTS",
+    "quality": "WEB",
+    "resolution": "720p",
+    "season": 6,
+    "title": "Naked and Afraid XL"
+  },
+  {
+    "audio": "AC3 2.0",
+    "bitDepth": 10,
+    "codec": "x265",
+    "encoder": "TAoE",
+    "network": "NF",
+    "quality": "Webrip",
+    "repack": true,
+    "resolution": "1080p",
+    "season": 1,
+    "title": "The Fresh Prince of Bel-Air",
+    "year": 1990
+  },
+  {
+    "encoder": "TGx",
+    "episode": 12,
+    "group": "HorribleSubs",
+    "resolution": "720p",
+    "season": 2,
+    "title": "Tsugumomo"
+  },
+  {
+    "fps": 50,
+    "network": "BBC",
+    "resolution": "1280x720p",
+    "season": 1,
+    "subtitles": "Eng",
+    "title": "Black Hollywood: 'They've Gotta Have Us'",
+    "year": 2018
+  },
+  {
+    "codec": "x264",
+    "encoder": "TGx",
+    "episode": 13,
+    "group": "FiHTV",
+    "quality": "HDTV",
+    "season": 27,
+    "title": "Police Ten 7"
+  },
+  {
+    "codec": "x264",
+    "encoder": "TGx",
+    "episode": 2,
+    "group": "FiHTV",
+    "quality": "HDTV",
+    "season": 1,
+    "title": "2nd Chance Charlie"
+  },
+  {
+    "audio": "AAC",
+    "codec": "x265",
+    "container": "mkv",
+    "group": "MVGroup.org",
+    "network": "BBC",
+    "quality": "HDTV",
+    "resolution": "1080p",
+    "title": "Billy and Us"
+  },
+  {
+    "codec": "x265",
+    "resolution": "720P",
+    "season": 8,
+    "title": "Mystery Diners"
+  },
+  {
+    "language": ["Hindi","Spanish"],
+    "quality": "HDRip",
+    "resolution": "720p",
+    "size": "800MB",
+    "title": "Amar",
+    "year": 2017
+  },
+  {
+    "codec": "x264",
+    "language": "Malayalam",
+    "quality": "HDTV",
+    "resolution": "720p",
+    "size": "1.4GB",
+    "title": "Oolu",
+    "year": 2019
+  },
+  {
+    "audio": "DD - 2.0",
+    "codec": "x264",
+    "group": "BonsaiHD",
+    "language": ["Hindi","English"],
+    "quality": "Bluray",
+    "resolution": "720p",
+    "size": "800 MB",
+    "subtitles": "MSub",
+    "title": "Vacancy",
+    "year": 2007
+  },
+  {
+    "audio": "Dual-Audio",
+    "codec": "x264",
+    "group": "1XCinema",
+    "language": "Hindi",
+    "quality": "HDRip",
+    "resolution": "720p",
+    "title": "Darkness Falls",
+    "year": 2020
+  },
+  {
+    "audio": "Ac3 5.1",
+    "codec": "H264",
+    "encoder": "ArMor",
+    "language": ["ITA","ENG"],
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "title": "Wasp Network",
+    "year": 2020
+  },
+  {
+    "container": "mkv",
+    "group": "CreW",
+    "language": ["ITA","ENG"],
+    "quality": "Bluray",
+    "resolution": "1080p",
+    "title": "Darlin",
+    "year": 2019
+  },
+  {
+    "audio": "AAC",
+    "codec": "X264",
+    "container": "Mp-4",
+    "group": "DSD",
+    "quality": "Dvd-Rip",
+    "resolution": "480p",
+    "title": "Wild Target",
+    "year": 2010
+  },
+  {
+    "audio": "Ac3 5.1",
+    "codec": "H264",
+    "encoder": "ArMor",
+    "language": ["ITA","DAN"],
+    "quality": "BDRip",
+    "resolution": "1080p",
+    "title": "Infection-What We Become",
+    "year": 2015
+  },
+  {
+    "codec": "x264",
+    "group": "Flizmovies",
+    "language": "HIndi",
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "title": "Perversion",
+    "year": 2020
+  },
+  {
+    "audio": "AAC 7.1",
+    "bitDepth": 10,
+    "codec": "x265",
+    "encoder": "QxR",
+    "hdr": true,
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Casino",
+    "year": 1995
   }
 ]
