@@ -1045,7 +1045,7 @@
     "codec": "x264",
     "encoder": "TGx",
     "episode": 7,
-    "episodeName": "Murdered His Mother or Falsely Accused",
+    "episodeName": "Murdered His Mother or Falsely Accused Pt2",
     "group": "CRiMSON",
     "quality": "HDTV",
     "season": 1,
@@ -1926,12 +1926,112 @@
     "title": "Kaguya-sama wa Kokurasetai"
   },
   {
-    "year": 1951,
-    "quality": "DVDRip",
-    "codec": "XViD",
     "audio": "1Ch.Audio",
+    "codec": "XViD",
+    "group": "ETRG",
     "language": "Eng",
+    "quality": "DVDRip",
     "title": "Five",
-    "group": "ETRG"
+    "year": 1951
+  },
+  {
+    "codec": "H264",
+    "encoder": "TGx",
+    "episode": 1,
+    "group": "OATH",
+    "quality": "WEB",
+    "resolution": "720p",
+    "season": 2,
+    "title": "NOS4A2"
+  },
+  {
+    "codec": "x264",
+    "encoder": "TGx",
+    "episode": 12,
+    "episodeName": "Sicilian and Seafood",
+    "group": "LiGATE",
+    "quality": "WEBRip",
+    "season": 31,
+    "title": "Diners Drive-Ins and Dives"
+  },
+  {
+    "container": "mkv",
+    "episode": 12,
+    "resolution": "720p",
+    "title": "Arte",
+    "website": "Erai-raws"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 11,
+    "group": "Erai-raws",
+    "resolution": "720p",
+    "season": 2,
+    "title": "Kaguya-sama wa Kokurasetai! Tensai-tachi no Renai Zunousen"
+  },
+  {
+    "audio": "DD+5.1",
+    "codec": "H264",
+    "group": "Dus.IcTv",
+    "network": "AMZN",
+    "quality": "WEB-DL",
+    "resolution": "1080p",
+    "title": "Prawaas",
+    "year": 2020
+  },
+  {
+    "container": "mkv",
+    "episode": 12,
+    "resolution": "720p",
+    "subtitles": "Multiple",
+    "title": "Yesterday o Utatte",
+    "website": "Erai-raws"
+  },
+  {
+    "container": "mkv",
+    "episode": 12,
+    "resolution": "1080p",
+    "season": 2,
+    "subtitles": "Multiple",
+    "title": "Honzuki no Gekokujou - Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen",
+    "website": "Erai-raws"
+  },
+  {
+    "encoder": "YTS",
+    "quality": "WebRip",
+    "resolution": "1080p",
+    "title": "Babyteeth",
+    "year": 2019
+  },
+  {
+    "encoder": "YTS",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Weekend at Bernie's II",
+    "year": 1993
+  },
+  {
+    "codec": "h264",
+    "encoder": "eztv",
+    "episode": 0,
+    "episodeName": "Clothed and Opinionated Part 2",
+    "group": "ROBOTS",
+    "quality": "WEB",
+    "resolution": "720p",
+    "season": 6,
+    "title": "Naked and Afraid XL"
+  },
+  {
+    "audio": "AC3 2.0",
+    "bitDepth": 10,
+    "codec": "x265",
+    "encoder": "TAoE",
+    "network": "NF",
+    "quality": "Webrip",
+    "repack": true,
+    "resolution": "1080p",
+    "season": 1,
+    "title": "The Fresh Prince of Bel-Air",
+    "year": 1990
   }
 ]

@@ -1171,10 +1171,62 @@
     "title": "Kaguya-sama wa Kokurasetai"
   },
   {
-    "quality": "DVD-Rip",
-    "codec": "Xvid",
     "audio": "Mono",
+    "codec": "Xvid",
     "language": "English",
+    "quality": "DVD-Rip",
     "title": "Five"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "NOS4A2"
+  },
+  {
+    "codec": "H.264",
+    "title": "Diners Drive-Ins and Dives"
+  },
+  {
+    "container": "MKV",
+    "title": "Arte"
+  },
+  {
+    "title": "Kaguya-sama wa Kokurasetai! Tensai-tachi no Renai Zunousen"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "network": "Amazon Studios",
+    "title": "Prawaas"
+  },
+  {
+    "container": "MKV",
+    "subtitles": "Available",
+    "title": "Yesterday o Utatte"
+  },
+  {
+    "container": "MKV",
+    "subtitles": "Available",
+    "title": "Honzuki no Gekokujou - Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen"
+  },
+  {
+    "quality": "WEBRip",
+    "title": "Babyteeth"
+  },
+  {
+    "quality": "Blu-ray",
+    "title": "Weekend at Bernie's II"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Naked and Afraid XL"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.265",
+    "network": "Netflix",
+    "quality": "WEBRip",
+    "title": "The Fresh Prince of Bel-Air"
   }
 ]

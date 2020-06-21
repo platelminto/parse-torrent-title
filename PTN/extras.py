@@ -33,10 +33,11 @@ channels = [(2, 0), (5, 1), (7, 1)]
 
 # Return tuple with regexes for audio name with appended channel types, and without any channels
 def get_channel_audio_options(patterns_with_names):
+    from .patterns import delimiters
     options = list()
     for (audio_pattern, name) in patterns_with_names:
         for (speakers, subwoofers) in channels:
-            options.append(('((?:{})[. \-]*?{}[. \-]?{})'.format(audio_pattern, speakers, subwoofers),
+            options.append(('((?:{}){}*{}[. \-]?{})'.format(audio_pattern, delimiters, speakers, subwoofers),
                 '{} {}.{}'.format(name, speakers, subwoofers)))
         options.append(('({})'.format(audio_pattern), name))  # After for loop, would match first
 

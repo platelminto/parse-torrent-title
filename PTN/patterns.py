@@ -19,7 +19,7 @@ langs = [('rus(?:sian)?', 'Russian'),
          ('nordic', 'Nordic'),
          ('exyu', 'ExYu'),
          ('chs', 'Chinese'),
-         ('hindi', 'Hindi'),
+         ('hin(?:di)?', 'Hindi'),
          ('polish', 'Polish'),
          ('mandarin', 'Mandarin'),
          ('kor(?:ean)?', 'Korean'),
@@ -36,13 +36,15 @@ langs = [('rus(?:sian)?', 'Russian'),
 season_range_pattern = '(?:Complete' + delimiters + '*)?' + delimiters + '*(?:s(?:easons?)?)' + delimiters + \
                        '*(?:s?[0-9]{1,2}[\s]*(?:(?:\-|(?:\s*to\s*))[\s]*s?[0-9]{1,2})+)(?:' + delimiters + '*Complete)?'
 
-lang_list_pattern = '(?<![a-z])(?:(?:' + link_pattern_options(langs) + ')' + delimiters + '*)'
+lang_list_pattern = r'\b(?:' + link_pattern_options(langs) + '(?:' + delimiters + r'|\b)+)'
+subs_list_pattern = r'\b(?:' + link_pattern_options(langs) + delimiters + '*)'
 
 year_pattern = '(?:19[0-9]|20[0-2])[0-9]'
 month_pattern = '0[1-9]|1[0-2]'
 day_pattern = '[0-2][0-9]|3[01]'
 
-episode_name_pattern = '((?:(?:[A-Za-z][a-z]+|[A-Za-z])(?:[. \-+_]|$))+)'
+episode_name_pattern = '((?:[Pp](?:ar)?t' + delimiters + '*[0-9]|[A-Za-z][a-z]*(?:' + delimiters + \
+                       '|$))+)'
 
 # Forces an order to go by the regexes, as we want this to be deterministic (different
 # orders can generate different matchings). e.g. "doctor_who_2005..." in input.json
@@ -54,12 +56,13 @@ patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', '
 
 patterns = dict()
 patterns['episode'] = '(?:(?<![a-z])(?:[ex]|ep)(?:[0-9]{1,2}(?:-(?:[ex]|ep)?(?:[0-9]{1,2}))?)(?![0-9])|\s\-\s\d{1,3}\s)'
-patterns['season'] = ['s(\d{1,2})\s\-\s\d{1,2}',  # Avoids matching some anime releases season and episode as a season range
-                      ('(' + season_range_pattern + '|'  # Describes season ranges
+patterns['season'] = ['\ss?(\d{1,2})\s\-\s\d{1,2}\s',  # Avoids matching some anime releases season and episode as a season range
+                      '[0-9]{1,2}(?:st|nd|rd|th)' + delimiters + 'season',
+                      (r'\b(' + season_range_pattern + '|'  # Describes season ranges
                      '(?:Complete' + delimiters + ')?s([0-9]{1,2})(?:' + patterns['episode'] + ')?|'  # Describes season, optionally with complete or episode
                      '([0-9]{1,2})x[0-9]{2}|'  # Describes 5x02, 12x15 type descriptions
                      '(?:Complete' + delimiters + ')?Season[\. -]([0-9]{1,2})'  # Describes Season.15 type descriptions
-                     ')')]
+                     r')\b')]
 patterns['year'] = '((' + year_pattern + '))'
 patterns['month'] = '(?:{year}){delimiters}({month}){delimiters}(?:{day})' \
     .format(delimiters=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)
@@ -95,7 +98,7 @@ patterns['network'] = [('ATVP', 'Apple TV+'),
                         ('NF|Netflix', 'Netflix'),
                         ('NICK', 'Nickelodeon'),
                         ('RED', 'YouTube Premium'),
-                        ('DSNP', 'Disney Plus'),
+                        ('DSNY?P', 'Disney Plus'),
                         ('Hoichoi', 'Hoichoi'),
                         ('Zee5', 'ZEE5'),
                         ('HMAX', 'HBO Max'),
@@ -135,11 +138,11 @@ patterns['container'] = [('MKV|AVI', None, 'upper'),
                           ('MP-?4', 'MP4')]
 patterns['widescreen'] = 'WS'
 patterns['website'] = '^(\[ ?([^\]]+?) ?\])'
-patterns['subtitles'] = ['(?:{delimiters}*)?sub(?:title)?s?{delimiters}*{langs}+'.format(delimiters=delimiters, langs=lang_list_pattern),
-'{langs}+(?:(?:m(?:ulti(?:ple)?)?[\.\s\-\+_\/]*)?sub(?:title)?s?)'.format(delimiters=delimiters, langs=lang_list_pattern),
+patterns['subtitles'] = ['(?:{delimiters}*)?sub(?:title)?s?{delimiters}*{langs}+'.format(delimiters=delimiters, langs=subs_list_pattern),
+'{langs}+(?:(?:m(?:ulti(?:ple)?)?[\.\s\-\+_\/]*)?sub(?:title)?s?)'.format(delimiters=delimiters, langs=subs_list_pattern),
                          # Need a pattern just for subs, and can't just make above regexes * over + as we want
                          # just 'subs' to match last.
-                         '(?:{delimiters}*)?(?<![a-z])(?:m(?:ulti(?:ple)?)?[\.\s\-\+_\/]*)?sub(?:title)?s?{delimiters}*'.format(delimiters=delimiters, langs=lang_list_pattern),
+                         '(?:{delimiters}*)?(?<![a-z])(?:m(?:ulti(?:ple)?)?[\.\s\-\+_\/]*)?sub(?:title)?s?{delimiters}*'.format(delimiters=delimiters),
                         ]
 # Language takes precedence over subs when ambiguous - if we have a lang match, and
 # then a subtitles match starting with subs, the first langs are languages, and the

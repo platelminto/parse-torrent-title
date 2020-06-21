@@ -63,7 +63,7 @@ class PTN(object):
             pattern_options = self.normalise_pattern_options(pattern_options)
 
             for (pattern, replace, transforms) in pattern_options:
-                if key not in ('episode', 'website'):
+                if key not in ('season', 'episode', 'website', 'language'):
                     pattern = r'\b(?:{})\b'.format(pattern)
 
                 clean_name = re.sub(r'_', ' ', self.torrent_name)
@@ -332,12 +332,13 @@ class PTN(object):
         if 'group' in self.parts:
             group = self.parts['group']
             pat = r'(\[(.*)\])'
-            match = re.findall(pat, group, flags=re.IGNORECASE)
+            match = re.findall(pat, group, re.IGNORECASE)
             if match:
                 match = match[0]
                 raw = match[0]
                 if match:
-                    self._part('encoder', None, raw, match[1])
+                    if not re.match(r'[\[\],.+\-]*\Z', match[1], re.IGNORECASE):
+                        self._part('encoder', None, raw, match[1])
                     self.parts['group'] = group.replace(raw, '')
                     if not self.parts['group'].strip():
                         self.parts.pop('group')
