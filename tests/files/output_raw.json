@@ -2084,5 +2084,103 @@
     "resolution": "720P",
     "season": 8,
     "title": "Mystery Diners"
+  },
+  {
+    "language": ["Hindi","Spanish"],
+    "quality": "HDRip",
+    "resolution": "720p",
+    "size": "800MB",
+    "title": "Amar",
+    "year": 2017
+  },
+  {
+    "codec": "x264",
+    "language": "Malayalam",
+    "quality": "HDTV",
+    "resolution": "720p",
+    "size": "1.4GB",
+    "title": "Oolu",
+    "year": 2019
+  },
+  {
+    "audio": "DD - 2.0",
+    "codec": "x264",
+    "group": "BonsaiHD",
+    "language": ["Hindi","English"],
+    "quality": "Bluray",
+    "resolution": "720p",
+    "size": "800 MB",
+    "subtitles": "MSub",
+    "title": "Vacancy",
+    "year": 2007
+  },
+  {
+    "audio": "Dual-Audio",
+    "codec": "x264",
+    "group": "1XCinema",
+    "language": "Hindi",
+    "quality": "HDRip",
+    "resolution": "720p",
+    "title": "Darkness Falls",
+    "year": 2020
+  },
+  {
+    "audio": "Ac3 5.1",
+    "codec": "H264",
+    "encoder": "ArMor",
+    "language": ["ITA","ENG"],
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "title": "Wasp Network",
+    "year": 2020
+  },
+  {
+    "container": "mkv",
+    "group": "CreW",
+    "language": ["ITA","ENG"],
+    "quality": "Bluray",
+    "resolution": "1080p",
+    "title": "Darlin",
+    "year": 2019
+  },
+  {
+    "audio": "AAC",
+    "codec": "X264",
+    "container": "Mp-4",
+    "group": "DSD",
+    "quality": "Dvd-Rip",
+    "resolution": "480p",
+    "title": "Wild Target",
+    "year": 2010
+  },
+  {
+    "audio": "Ac3 5.1",
+    "codec": "H264",
+    "encoder": "ArMor",
+    "language": ["ITA","DAN"],
+    "quality": "BDRip",
+    "resolution": "1080p",
+    "title": "Infection-What We Become",
+    "year": 2015
+  },
+  {
+    "codec": "x264",
+    "group": "Flizmovies",
+    "language": "HIndi",
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "title": "Perversion",
+    "year": 2020
+  },
+  {
+    "audio": "AAC 7.1",
+    "bitDepth": 10,
+    "codec": "x265",
+    "encoder": "QxR",
+    "hdr": true,
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Casino",
+    "year": 1995
   }
 ]

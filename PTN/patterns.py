@@ -14,7 +14,7 @@ langs = [('rus(?:sian)?', 'Russian'),
          ('ita(?:liano?)?', 'Italian'),
          ('castellano|spanish', 'Spanish'),
          ('swedish', 'Swedish'),
-         ('dk|danish', 'Danish'),
+         ('dk|dan(?:ish)?', 'Danish'),
          ('german', 'German'),
          ('nordic', 'Nordic'),
          ('exyu', 'ExYu'),
@@ -52,7 +52,7 @@ patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', '
                     'network', 'codec', 'audio', 'region', 'extended', 'hardcoded', 'proper',
                     'repack', 'container', 'widescreen', 'website', 'subtitles', 'language',
                     'sbs', 'unrated', 'size', 'bitDepth', '3d', 'internal', 'readnfo',
-                    'documentary', 'fps']
+                    'documentary', 'fps', 'hdr']
 
 patterns = dict()
 patterns['episode'] = '(?:(?<![a-z])(?:[ex]|ep)(?:[0-9]{1,2}(?:-(?:[ex]|ep)?(?:[0-9]{1,2}))?)(?![0-9])|\s\-\s\d{1,3}\s)'
@@ -119,7 +119,6 @@ patterns['codec'] = [('xvid', 'Xvid'),
                      ('HEVC', 'H.265')]
 patterns['audio'] = [('MP3', None, 'upper'),
                      ('LiNE', 'LiNE'),
-                     ('Dual[\- ]Audio', 'Dual'),
                      ('1' + delimiters + '?Ch(?:annel)?' + delimiters + '?Audio', 'Mono')
                      ] + get_channel_audio_options([
     ('TrueHD', 'Dolby TrueHD'),
@@ -128,7 +127,8 @@ patterns['audio'] = [('MP3', None, 'upper'),
     ('DDP|E-?AC-?3|EC-3', 'Dolby Digital Plus'),
     ('DTS', 'DTS'),
     ('AAC[ \.\-]LC', 'AAC-LC'),
-    ('AAC', 'AAC')
+    ('AAC', 'AAC'),
+    ('Dual[\- ]Audio', 'Dual')
 ]) + ['5.1', ('2.0', 'Dual')]
 patterns['region'] = ('R[0-9]', None, 'upper')
 patterns['extended'] = '(EXTENDED(:?.CUT)?)'
@@ -161,6 +161,7 @@ patterns['bitDepth'] = '(8|10)bits?'
 patterns['3d'] = '3D'
 patterns['internal'] = 'iNTERNAL'
 patterns['readnfo'] = 'READNFO'
+patterns['hdr'] = 'HDR'
 patterns['documentary'] = 'DOCU'
 
 types = {
@@ -180,5 +181,6 @@ types = {
     '3d': 'boolean',
     'internal': 'boolean',
     'readnfo': 'boolean',
-    'documentary': 'boolean'
+    'documentary': 'boolean',
+    'hdr': 'boolean'
 }

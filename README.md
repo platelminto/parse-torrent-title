@@ -180,6 +180,7 @@ after correctly getting the season and episode number.
 * fps
 * group
 * hardcoded
+* hdr
 * internal
 * language
 * month

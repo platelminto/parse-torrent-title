@@ -1254,5 +1254,61 @@
     "codec": "H.265",
     "resolution": "720p",
     "title": "Mystery Diners"
+  },
+  {
+    "quality": "WEB-DL",
+    "title": "Amar"
+  },
+  {
+    "codec": "H.264",
+    "title": "Oolu"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "size": "800MB",
+    "subtitles": "Available",
+    "title": "Vacancy"
+  },
+  {
+    "audio": "Dual",
+    "codec": "H.264",
+    "quality": "WEB-DL",
+    "title": "Darkness Falls"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "language": ["Italian","English"],
+    "title": "Wasp Network"
+  },
+  {
+    "container": "MKV",
+    "language": ["Italian","English"],
+    "quality": "Blu-ray",
+    "title": "Darlin"
+  },
+  {
+    "codec": "H.264",
+    "container": "MP4",
+    "quality": "DVD-Rip",
+    "title": "Wild Target"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "language": ["Italian","Danish"],
+    "title": "Infection-What We Become"
+  },
+  {
+    "codec": "H.264",
+    "language": "Hindi",
+    "title": "Perversion"
+  },
+  {
+    "codec": "H.265",
+    "quality": "Blu-ray",
+    "title": "Casino"
   }
 ]
