@@ -37,7 +37,7 @@ def get_channel_audio_options(patterns_with_names):
     options = list()
     for (audio_pattern, name) in patterns_with_names:
         for (speakers, subwoofers) in channels:
-            options.append(('((?:{}){}*{}[. \-]?{})'.format(audio_pattern, delimiters, speakers, subwoofers),
+            options.append(('((?:{}){}*{}[. \-]?{}(?:ch)?)'.format(audio_pattern, delimiters, speakers, subwoofers),
                 '{} {}.{}'.format(name, speakers, subwoofers)))
         options.append(('({})'.format(audio_pattern), name))  # After for loop, would match first
 
