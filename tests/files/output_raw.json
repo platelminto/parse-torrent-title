@@ -2184,11 +2184,60 @@
     "year": 1995
   },
   {
-    "season": 2,
-    "resolution": "720p",
-    "quality": "Web-DL",
     "audio": "5.1Ch",
-    "website": "zooqle.com",
-    "title": "Parks and Recreation"
+    "quality": "Web-DL",
+    "resolution": "720p",
+    "season": 2,
+    "title": "Parks and Recreation",
+    "website": "zooqle.com"
+  },
+  {
+    "audio": "AAC 5.1",
+    "codec": "x264",
+    "group": "Telly",
+    "language": ["Hindi","English"],
+    "quality": "BluRay",
+    "resolution": "720p",
+    "subtitles": "MSubs",
+    "title": "The Amazing Spider-Man 2",
+    "year": 2014
+  },
+  {
+    "audio": "EAC3 5.1",
+    "bitDepth": 10,
+    "codec": "x265",
+    "container": "mkv",
+    "encoder": "TAoE",
+    "quality": "BDRip",
+    "resolution": "1080p",
+    "title": "Jay And Silent Bob Strike Back",
+    "year": 2001
+  },
+  {
+    "group": "TamilMV",
+    "language": ["Tamil","Hindi","Spanish"],
+    "quality": "BluRay",
+    "resolution": "720p",
+    "size": "950MB",
+    "subtitles": "ESub",
+    "title": "Mother [Madre]",
+    "year": 2016
+  },
+  {
+    "group": "ORG",
+    "language": "Bangla",
+    "quality": "HDRip",
+    "size": "800MB",
+    "title": "Ridoy Jure",
+    "year": 2020
+  },
+  {
+    "year": 2011,
+    "resolution": "720p",
+    "codec": "H264",
+    "container": "mp4",
+    "language": ["Eng", "Rus"],
+    "subtitles": "Multi",
+    "title": "The Deep Blue Sea - Drama"
   }
 ]

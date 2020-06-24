@@ -5,6 +5,8 @@
 # (optional) a string function's name to transform the value after everything (None if
 # to do nothing). The transform can also be a tuple (or list of tuples) with function names
 # and list of arguments.
+# The list of regexes all get matched, but only the first gets added to the returning info,
+# the rest are just matched to be removed from `excess`.
 
 from .extras import *
 
@@ -23,7 +25,7 @@ langs = [('rus(?:sian)?', 'Russian'),
          ('polish', 'Polish'),
          ('mandarin', 'Mandarin'),
          ('kor(?:ean)?', 'Korean'),
-         ('bengali', 'Bengali'),
+         ('bengali|bangla', 'Bengali'),
          ('kannada', 'Kannada'),
          ('tam(?:il)?', 'Tamil'),
          ('tel(?:ugu)?', 'Telugu'),
@@ -50,7 +52,7 @@ episode_name_pattern = '((?:[Pp](?:ar)?t' + delimiters + '*[0-9]|[A-Za-z][a-z]*(
 # orders can generate different matchings). e.g. "doctor_who_2005..." in input.json
 patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', 'quality',
                     'network', 'codec', 'audio', 'region', 'extended', 'hardcoded', 'proper',
-                    'repack', 'container', 'widescreen', 'website', 'subtitles', 'language',
+                    'repack', 'container', 'widescreen', 'website', 'language', 'subtitles',
                     'sbs', 'unrated', 'size', 'bitDepth', '3d', 'internal', 'readnfo',
                     'documentary', 'fps', 'hdr']
 
@@ -143,18 +145,20 @@ patterns['container'] = [('MKV|AVI', None, 'upper'),
                           ('MP-?4', 'MP4')]
 patterns['widescreen'] = 'WS'
 patterns['website'] = '^(\[ ?([^\]]+?) ?\])'
-patterns['subtitles'] = ['(?:{delimiters}*)?sub(?:title)?s?{delimiters}*{langs}+'.format(delimiters=delimiters, langs=subs_list_pattern),
-'(?:soft)?{delimiters}*{langs}+(?:(?:m(?:ulti(?:ple)?)?{delimiters}*)?sub(?:title)?s?)'.format(delimiters=delimiters, langs=subs_list_pattern),
+patterns['subtitles'] = ['sub(?:title)?s?{delimiters}*{langs}+'.format(delimiters=delimiters, langs=subs_list_pattern),
+                         '(?:soft{delimiters}*)?{langs}+(?:(?:m(?:ulti(?:ple)?)?{delimiters}*)?sub(?:title)?s?)'.format(delimiters=delimiters, langs=subs_list_pattern),
                          # Need a pattern just for subs, and can't just make above regexes * over + as we want
                          # just 'subs' to match last.
-                         '(?:{delimiters}*)?(?<![a-z])(?:m(?:ulti(?:ple)?)?[\.\s\-\+_\/]*)?sub(?:title)?s?{delimiters}*'.format(delimiters=delimiters),
+                         '(?:m(?:ulti(?:ple)?)?{delimiters}*)sub(?:title)?s?'.format(delimiters=delimiters, langs=subs_list_pattern),
+                         '(?<![a-z])(?:m(?:ulti(?:ple)?)?[\.\s\-\+_\/]*)?sub(?:title)?s?{delimiters}*'.format(delimiters=delimiters),
                         ]
 # Language takes precedence over subs when ambiguous - if we have a lang match, and
 # then a subtitles match starting with subs, the first langs are languages, and the
 # rest will be left as subtitles. Otherwise, don't match if there are subtitles matches
 # after the langs.
-patterns['language'] = ['(' + lang_list_pattern + '+)(?=' + patterns['subtitles'][0] + ')',
-                        '(?:' + lang_list_pattern + '+)(?!' + link_pattern_options(patterns['subtitles']) + ')'
+patterns['language'] = ['(' + lang_list_pattern + '+)(?:' + delimiters + '*' + patterns['subtitles'][0] + ')',
+                        '(' + lang_list_pattern + '+)(?!' + delimiters + '*' + link_pattern_options(patterns['subtitles']) + ')',
+                        '(' + lang_list_pattern + '+)(?:' + delimiters + '*' + patterns['subtitles'][2] + ')',
                         ]
 patterns['sbs'] = [('Half-SBS', 'Half SBS'),
                    ('SBS', None, 'upper')]

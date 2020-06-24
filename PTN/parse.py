@@ -12,6 +12,7 @@ class PTN(object):
         self.title_start = None
         self.title_end = None
         self.parts = None
+        self.part_slices = None
         self.match_slices = None
 
         self.post_title_pattern = '(?:{}|{})'.format(link_pattern_options(patterns['season'])
@@ -23,6 +24,7 @@ class PTN(object):
             if isinstance(clean, list) and len(clean) == 1:
                 clean = clean[0]  # Avoids making a list if it only has 1 element
             self.parts[name] = clean
+            self.part_slices[name] = match_slice
 
         if match_slice:
             # The instructions for extracting title
@@ -37,7 +39,7 @@ class PTN(object):
             if not match_slice:
                 self.excess_raw = self.excess_raw.replace(raw, '', 1)
             else:
-                self.match_slices.append(match_slice)
+                self.match_slices.append((name, match_slice))
 
     @staticmethod
     def _clean_string(string):
@@ -52,12 +54,13 @@ class PTN(object):
 
     def parse(self, name, standardise):
         name = name.strip()
-        self.parts = {}
+        self.parts = dict()
+        self.part_slices = dict()
         self.torrent_name = name
         self.excess_raw = name
         self.title_start = 0
         self.title_end = None
-        self.match_slices = []
+        self.match_slices = list()
 
         for key, pattern_options in [(key, patterns[key]) for key in patterns_ordered]:
             pattern_options = self.normalise_pattern_options(pattern_options)
@@ -80,14 +83,17 @@ class PTN(object):
                     match_index = -1
 
                 match = matches[match_index]['match']
+                match_start, match_end = matches[match_index]['start'], matches[match_index]['end']
 
                 index = self.get_match_indexes(match)
 
                 # patterns for multiseason/episode make the range, and only the range, appear in match[0]
                 if (key == 'season' or key == 'episode') and index['clean'] == 0:
                     clean = self.get_season_episode(match)
-                elif key == 'language' or key == 'subtitles':
-                    clean = self.get_language_subtitles(match)
+                elif key == 'language':
+                    clean = self.get_language(match)
+                elif key == 'subtitles':
+                    clean = self.get_subtitles(match, match_start)
                 elif key in types.keys() and types[key] == 'boolean':
                     clean = True
                 else:
@@ -98,7 +104,7 @@ class PTN(object):
                 if standardise:
                     clean = self.standardise_clean(clean, key, replace, transforms)
 
-                self._part(key, (matches[match_index]['start'], matches[match_index]['end']),
+                self._part(key, (match_start, match_end),
                            match[index['raw']], clean)
 
         self.process_title()
@@ -123,9 +129,8 @@ class PTN(object):
 
         return self.parts
 
-    @staticmethod
-    def get_language_subtitles(match):
-        # handle multi language
+    def get_subtitles(self, match, match_start):
+        # handle multi subtitles
         m = re.split(r'{}+'.format(delimiters), match[0])
         m = list(filter(None, m))
         clean = list()
@@ -134,6 +139,24 @@ class PTN(object):
                 clean.append(x)
             elif not re.match('subs?|soft', x, re.I):
                 clean.append(x)
+
+        # If this match starts like the language one did, the only match for language
+        # and subtitles is a list of langs directly followed by a subs-string. When this
+        # is true, they would both match on it, but what it likely means is that all the
+        # langs are language, and the subs string just indicates the existance of subtitles.
+        # (e.g. Ita.Eng.MSubs would match Ita and Eng for language and subs - this makes
+        # subs only become MSubs, and leaves language as Ita and Eng)
+        if 'language' in self.part_slices and self.part_slices['language'][0] == match_start:
+            clean = clean[-1]
+
+        return clean
+
+    @staticmethod
+    def get_language(match):
+        # handle multi subtitles
+        m = re.split(r'{}+'.format(delimiters), match[0])
+        clean = list(filter(None, m))
+
         return clean
 
     @staticmethod
@@ -246,7 +269,7 @@ class PTN(object):
     # Merge all the match slices (such as when they overlap), then remove
     # them from excess.
     def process_excess(self):
-        matches = sorted(self.match_slices, key=lambda match: match[0])
+        matches = sorted([x[1] for x in self.match_slices], key=lambda match: match[0])
 
         i = 0
         slices = list()

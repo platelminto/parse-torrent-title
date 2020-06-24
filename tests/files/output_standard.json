@@ -1312,8 +1312,37 @@
     "title": "Casino"
   },
   {
-    "quality": "WEB-DL",
     "audio": "5.1",
+    "quality": "WEB-DL",
     "title": "Parks and Recreation"
+  },
+  {
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "subtitles": "Available",
+    "title": "The Amazing Spider-Man 2"
+  },
+  {
+    "audio": "Dolby Digital Plus 5.1",
+    "codec": "H.265",
+    "container": "MKV",
+    "title": "Jay And Silent Bob Strike Back"
+  },
+  {
+    "quality": "Blu-ray",
+    "subtitles": "English",
+    "title": "Mother [Madre]"
+  },
+  {
+    "language": "Bengali",
+    "quality": "WEB-DL",
+    "title": "Ridoy Jure"
+  },
+    {
+    "codec": "H.264",
+    "container": "MP4",
+    "language": ["English", "Russian"],
+    "subtitles": "Available",
+    "title": "The Deep Blue Sea - Drama"
   }
 ]
