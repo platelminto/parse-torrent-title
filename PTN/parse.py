@@ -84,6 +84,10 @@ class PTN(object):
 
                 match = matches[match_index]['match']
                 match_start, match_end = matches[match_index]['start'], matches[match_index]['end']
+                if key in self.parts:  # We can skip ahead if we already have a matched part
+                    self._part(key, (match_start, match_end),
+                               match[0], None, overwrite=False)
+                    continue
 
                 index = self.get_match_indexes(match)
 
