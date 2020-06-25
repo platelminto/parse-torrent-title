@@ -778,6 +778,7 @@
   {
     "codec": "x264",
     "day": 2,
+    "episodeName": "Alicia Keys",
     "month": 4,
     "quality": "HDTV",
     "title": "Stephen Colbert",
@@ -787,6 +788,7 @@
     "codec": "x264",
     "container": "mkv",
     "day": 1,
+    "episodeName": "Jerry Benner",
     "month": 8,
     "quality": "HDTV",
     "resolution": "720p",
@@ -1207,6 +1209,7 @@
     "codec": "h264",
     "day": 16,
     "encoder": "TGx",
+    "episodeName": "Gwyneth Paltrow",
     "group": "TRUMP",
     "month": 6,
     "quality": "WEB",
@@ -2232,12 +2235,181 @@
     "year": 2020
   },
   {
-    "year": 2011,
-    "resolution": "720p",
     "codec": "H264",
     "container": "mp4",
-    "language": ["Eng", "Rus"],
+    "language": ["Eng","Rus"],
+    "resolution": "720p",
     "subtitles": "Multi",
-    "title": "The Deep Blue Sea - Drama"
+    "title": "The Deep Blue Sea - Drama",
+    "year": 2011
+  },
+  {
+    "audio": "TrueHD 5.1",
+    "bitDepth": 10,
+    "codec": "x265",
+    "container": "mkv",
+    "encoder": "TAoE",
+    "quality": "BDRip",
+    "resolution": "1080p",
+    "title": "Clerks II",
+    "year": 2006
+  },
+  {
+    "title": "Rustlers on Horseback",
+    "year": 1950
+  },
+  {
+    "codec": "H264",
+    "encoder": "TGx",
+    "group": "HUZZAH",
+    "quality": "WEB",
+    "resolution": "1080p",
+    "title": "Athlete A",
+    "year": 2020
+  },
+  {
+    "language": "BANGLA",
+    "quality": "HDRIP",
+    "title": "SHAHENSHA",
+    "year": 2020
+  },
+  {
+    "audio": "DD2.0",
+    "codec": "x264",
+    "group": "CineVood",
+    "language": "Hindi",
+    "network": "AMZN",
+    "quality": "WEB-DL",
+    "subtitles": "Esub",
+    "title": "Rasbhari",
+    "year": 2020
+  },
+  {
+    "audio": "AAC",
+    "codec": "X264",
+    "container": "Mp-4",
+    "group": "DSD",
+    "quality": "Dvd-Rip",
+    "resolution": "480p",
+    "title": "A Walk in the Woods",
+    "year": 2015
+  },
+  {
+    "audio": "FLAC",
+    "container": "MKV",
+    "group": "oan",
+    "resolution": "1080p",
+    "title": "Treasure Planet",
+    "year": 2002
+  },
+  {
+    "audio": "AAC 5.1",
+    "codec": "H265",
+    "group": "CalicoSkies",
+    "language": ["EN","JP"],
+    "resolution": "4K",
+    "title": "L.A. Story",
+    "year": 1991
+  },
+  {
+    "codec": "x265",
+    "encoder": "eztv",
+    "episode": 14,
+    "group": "MeGusta",
+    "resolution": "1080p",
+    "season": 8,
+    "title": "Monk"
+  },
+  {
+    "codec": "x265",
+    "encoder": "eztv",
+    "episode": 2,
+    "group": "MeGusta",
+    "resolution": "1080p",
+    "season": 21,
+    "title": "24 Hours In A And E"
+  },
+  {
+    "codec": "x264",
+    "day": 23,
+    "encoder": "eztv",
+    "episodeName": "John Bolton",
+    "group": "SORNY",
+    "month": 6,
+    "quality": "HDTV",
+    "resolution": "720p",
+    "title": "Stephen Colbert",
+    "year": 2020
+  },
+  {
+    "codec": "h264",
+    "encoder": "eztv",
+    "episode": 15,
+    "episodeName": "Toni Morrison The Pieces I Am",
+    "group": "LiGATE",
+    "quality": "WEB",
+    "resolution": "720p",
+    "season": 33,
+    "title": "American Masters"
+  },
+  {
+    "codec": "x265",
+    "day": 23,
+    "group": "LM",
+    "month": 6,
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "title": "The 11th Hour with Brian Williams",
+    "year": 2020
+  },
+  {
+    "audio": "Dual-Audio",
+    "bitDepth": 10,
+    "codec": "x265",
+    "encoder": "TGx",
+    "group": "Judas",
+    "resolution": "1080p",
+    "season": [1,2],
+    "subtitles": "Eng",
+    "title": "Black Lagoon"
+  },
+  {
+    "bitDepth": 10,
+    "codec": "x265",
+    "encoder": "TGx",
+    "episode": 927,
+    "group": "Judas",
+    "resolution": "1080p",
+    "subtitles": "Multi",
+    "title": "One Piece"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 1,
+    "group": "Judas",
+    "season": 5,
+    "title": "Shokugeki No Soma"
+  },
+  {
+    "audio": "DTS-HDMA 5.1",
+    "codec": "x264",
+    "group": "Hon3yHD",
+    "language": "Hindi",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Dil Chahta Hai",
+    "year": 2001
+  },
+  {
+    "audio": "AAC",
+    "codec": "x264",
+    "group": "CineVood",
+    "language": ["Hindi","Tamil","Bengali"],
+    "network": "AMZN",
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "subtitles": "Esub",
+    "title": "NOS4A2",
+    "year": 2019
   }
 ]

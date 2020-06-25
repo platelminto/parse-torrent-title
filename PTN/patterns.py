@@ -31,7 +31,7 @@ langs = [('rus(?:sian)?', 'Russian'),
          ('tel(?:ugu)?', 'Telugu'),
          ('marathi', 'Marathi'),
          ('mal(?:ayalam)?', 'Malayalam'),
-         ('japanese', 'Japanese'),
+         ('japanese|jp', 'Japanese'),
          ('en?(?:g(?:lish)?)?', 'English')  # Must be at end, matches just an 'e'
          ]
 
@@ -72,7 +72,8 @@ patterns['day'] = '(?:{year}){delimiters}(?:{month}){delimiters}({day})' \
     .format(delimiters=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)
 patterns['resolution'] = [('([0-9]{3,4}p)', None, 'lower'),
                           ('(1280x720p?)', '720p'),
-                          ('HD', 'HD')]
+                          ('HD', 'HD'),
+                          ('4K', '4K')]
 patterns['quality'] = [('WEB[ -]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
                        # Match WEB-DL's first as they can show up with others.
                        ('WEB[ -]?Cap', 'WEBCap'),
@@ -119,13 +120,12 @@ patterns['codec'] = [('xvid', 'Xvid'),
                      ('AVC', 'H.264'),
                      ('[hx]\.?265', 'H.265'),
                      ('HEVC', 'H.265')]
-patterns['audio'] = [('MP3', None, 'upper'),
-                     ('LiNE', 'LiNE'),
-                     ] + get_channel_audio_options([
+patterns['audio'] = get_channel_audio_options([
     ('TrueHD', 'Dolby TrueHD'),
     ('Atmos', 'Dolby Atmos'),
     ('DD|AC-?3', 'Dolby Digital'),
     ('DDP|E-?AC-?3|EC-3', 'Dolby Digital Plus'),
+    ('DTS{delimiters}?HD(?:{delimiters}?MA)?'.format(delimiters=delimiters), 'DTS-HD'),
     ('DTS', 'DTS'),
     ('AAC[ \.\-]LC', 'AAC-LC'),
     ('AAC', 'AAC'),
@@ -133,7 +133,10 @@ patterns['audio'] = [('MP3', None, 'upper'),
 ]) + [('5.1(?:' + delimiters + '?ch(?:annel)?(?:' + delimiters + '?Audio)?)?', '5.1'),
       ('2.0(?:' + delimiters + '?ch(?:annel)?(?:' + delimiters + '?Audio)?)?', 'Dual'),
       ('7.1(?:' + delimiters + '?ch(?:annel)?(?:' + delimiters + '?Audio)?)?', '7.1'),
-      ('1' + delimiters + '?Ch(?:annel)?(?:' + delimiters + '?Audio)?', 'Mono')
+      ('1' + delimiters + '?Ch(?:annel)?(?:' + delimiters + '?Audio)?', 'Mono'),
+      ('FLAC', 'FLAC'),
+      ('MP3', None, 'upper'),
+      ('LiNE', 'LiNE'),
       ]
 patterns['region'] = ('R[0-9]', None, 'upper')
 patterns['extended'] = '(EXTENDED(:?.CUT)?)'
