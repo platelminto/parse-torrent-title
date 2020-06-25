@@ -338,11 +338,13 @@ class PTN(object):
     def try_episode_name(self, clean):
         match = re.findall(episode_name_pattern, clean)
         if match:
-            match = re.findall(patterns['episode'] + r'[._\-\s+]*(' + re.escape(match[0]) + ')',
+            match = re.search('(?:' + patterns['episode'] + '|' + patterns['day'] + r')[._\-\s+]*(' + re.escape(match[0]) + ')',
                                self.torrent_name, re.IGNORECASE)
             if match:
-                self._part('episodeName', None, match[0], self._clean_string(match[0]))
-                clean = clean.replace(match[0], '')
+                match_s, match_e = match.start(2), match.end(2)
+                match = match.group(2)
+                self._part('episodeName', (match_s, match_e), match, self._clean_string(match))
+                clean = clean.replace(match, '')
         return clean
 
     def try_group(self, clean):
