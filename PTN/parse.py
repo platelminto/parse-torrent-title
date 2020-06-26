@@ -2,7 +2,7 @@
 
 import re
 from .patterns import patterns, types, delimiters, langs, patterns_ordered, episode_name_pattern
-from .extras import exceptions, patterns_ignore_title, link_pattern_options
+from .extras import exceptions, patterns_ignore_title, link_patterns
 
 
 class PTN(object):
@@ -15,8 +15,8 @@ class PTN(object):
         self.part_slices = None
         self.match_slices = None
 
-        self.post_title_pattern = '(?:{}|{})'.format(link_pattern_options(patterns['season'])
-                                                     , link_pattern_options(patterns['year']))
+        self.post_title_pattern = '(?:{}|{})'.format(link_patterns(patterns['season'])
+                                                     , link_patterns(patterns['year']))
 
     # Ignored patterns will still remove their match from excess.
     def _part(self, name, match_slice, raw, clean, overwrite=False):
@@ -257,7 +257,7 @@ class PTN(object):
         cleaned_langs = list()
         for lang in clean:
             for (lang_regex, lang_clean) in langs:
-                if re.match(lang_regex, lang, re.IGNORECASE):
+                if re.match(lang_regex, re.sub(link_patterns(patterns['subtitles'][2:]), '', lang, flags=re.I), re.IGNORECASE):
                     cleaned_langs.append(lang_clean)
                     break
         clean = cleaned_langs
@@ -338,11 +338,12 @@ class PTN(object):
     def try_episode_name(self, clean):
         match = re.findall(episode_name_pattern, clean)
         if match:
-            match = re.search('(?:' + patterns['episode'] + '|' + patterns['day'] + r')[._\-\s+]*(' + re.escape(match[0]) + ')',
-                               self.torrent_name, re.IGNORECASE)
+            match = re.search('(?:' + link_patterns(patterns['episode']) + '|' +
+                              patterns['day'] + r')[._\-\s+]*(' + re.escape(match[0]) + ')',
+                              self.torrent_name, re.IGNORECASE)
             if match:
-                match_s, match_e = match.start(2), match.end(2)
-                match = match.group(2)
+                match_s, match_e = match.start(len(match.groups())-1), match.end(len(match.groups())-1)
+                match = match.groups()[-1]
                 self._part('episodeName', (match_s, match_e), match, self._clean_string(match))
                 clean = clean.replace(match, '')
         return clean

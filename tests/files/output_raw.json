@@ -2411,5 +2411,97 @@
     "subtitles": "Esub",
     "title": "NOS4A2",
     "year": 2019
+  },
+  {
+    "bitDepth": 10,
+    "codec": "x265",
+    "encoder": "TGx",
+    "episode": 1,
+    "group": "Judas",
+    "resolution": "1080p",
+    "season": 4,
+    "subtitles": "Multi",
+    "title": "Haikyuu!!"
+  },
+  {
+    "audio": "DD- 2.0",
+    "codec": "x264",
+    "group": "BonsaiHD",
+    "language": "Malayalam",
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "size": "2.5 GB",
+    "subtitles": "ESub",
+    "title": "Moothon: The Elder One",
+    "year": 2019
+  },
+  {
+    "audio": "AC3 5.1",
+    "codec": "H264",
+    "group": "MIRCrew",
+    "language": ["Ita","Fre"],
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "subtitles": ["Ita","Eng"],
+    "title": "Doppia Pelle - Le Daim",
+    "year": 2019
+  },
+  {
+    "audio": "DTS HD Masters 5.1",
+    "codec": "H264",
+    "group": "MIRCrew",
+    "language": ["Ita","Eng"],
+    "resolution": "720p",
+    "subtitles": ["Ita","Eng"],
+    "title": "The Twilight Saga: Breaking Down - Parte 2",
+    "year": 2012
+  },
+  {
+    "audio": "DD- 2.0",
+    "codec": "x264",
+    "group": "BonsaiHD",
+    "language": "Interslavic",
+    "quality": "Bluray",
+    "resolution": "720p",
+    "size": "1.3 GB",
+    "subtitles": "ESub",
+    "title": "The Painted Bird",
+    "year": 2019
+  },
+  {
+    "audio": "DTS-HD.MA.5.1",
+    "codec": "X264",
+    "encoder": "TGx",
+    "group": "EVO",
+    "quality": "Bluray",
+    "resolution": "1080p",
+    "title": "Proximity",
+    "year": 2020
+  },
+  {
+    "codec": "XviD",
+    "quality": "SATRip",
+    "title": "Soviet Cinema - Provintsialki",
+    "year": 1990
+  },
+  {
+    "audio": "AC3 5.1",
+    "codec": "H265",
+    "group": "MIRCrew",
+    "language": ["ITA","ENG"],
+    "resolution": "1080p",
+    "subtitles": ["NUita","eng"],
+    "title": "Just Mercy - Il diritto di opporsi",
+    "year": 2019
+  },
+  {
+    "codec": "x264",
+    "documentary": true,
+    "group": "GalaxyRG",
+    "quality": "HDTV",
+    "resolution": "720p",
+    "size": "800MB",
+    "title": "Mae West Dirty Blonde",
+    "year": 2019
   }
 ]

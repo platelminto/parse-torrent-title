@@ -1421,7 +1421,7 @@
     "title": "Shokugeki No Soma"
   },
   {
-    "audio": "DTS-HD 5.1",
+    "audio": "DTS-HD MA 5.1",
     "codec": "H.264",
     "quality": "Blu-ray",
     "title": "Dil Chahta Hai"
@@ -1431,5 +1431,62 @@
     "network": "Amazon Studios",
     "subtitles": "English",
     "title": "NOS4A2"
+  },
+  {
+    "codec": "H.265",
+    "subtitles": "Available",
+    "title": "Haikyuu!!"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.264",
+    "size": "2.5GB",
+    "subtitles": "English",
+    "title": "Moothon: The Elder One"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "language": ["Italian","French"],
+    "quality": "Blu-ray",
+    "subtitles": ["Italian","English"],
+    "title": "Doppia Pelle - Le Daim"
+  },
+  {
+    "audio": "DTS-HD MA 5.1",
+    "codec": "H.264",
+    "language": ["Italian","English"],
+    "subtitles": ["Italian","English"],
+    "title": "The Twilight Saga: Breaking Down - Parte 2"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "size": "1.3GB",
+    "subtitles": "English",
+    "title": "The Painted Bird"
+  },
+  {
+    "audio": "DTS-HD MA 5.1",
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "title": "Proximity"
+  },
+  {
+    "codec": "Xvid",
+    "quality": "DSRip",
+    "title": "Soviet Cinema - Provintsialki"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.265",
+    "language": ["Italian","English"],
+    "subtitles": ["Italian","English"],
+    "title": "Just Mercy - Il diritto di opporsi"
+  },
+  {
+    "codec": "H.264",
+    "title": "Mae West Dirty Blonde"
   }
 ]

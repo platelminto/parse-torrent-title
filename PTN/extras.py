@@ -86,7 +86,7 @@ def suffix_pattern_with(suffixes, pattern_options, between='', optional=False):
 
 # Link a regex-tuple list into a single regex (to be able to use elsewhere while
 # maintaining standardisation functionality).
-def link_pattern_options(pattern_options):
+def link_patterns(pattern_options):
     if not isinstance(pattern_options, list):
         return pattern_options
     return '(?:' + \
