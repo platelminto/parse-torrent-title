@@ -6,6 +6,7 @@ script: python tests/test_parse.py
 before_install:
 - pip install -U pip
 - python setup.py install
+- pip install regex
 deploy:
   provider: pypi
   user: __token__

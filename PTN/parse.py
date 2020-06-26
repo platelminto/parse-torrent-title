@@ -1,8 +1,17 @@
 #!/usr/bin/env python
 
+import pkgutil
 import re
+import sys
+
 from .patterns import patterns, types, delimiters, langs, patterns_ordered, episode_name_pattern
 from .extras import exceptions, patterns_ignore_title, link_patterns
+
+faster_regex = pkgutil.find_loader('regex')
+if faster_regex is not None and sys.version_info[0] < 3:
+    regex = faster_regex.load_module('regex')
+else:
+    regex = re
 
 
 class PTN(object):
@@ -43,11 +52,11 @@ class PTN(object):
 
     @staticmethod
     def _clean_string(string):
-        clean = re.sub(r'^ -', '', string)
+        clean = regex.sub(r'^ -', '', string)
         if clean.find(' ') == -1 and clean.find('.') != -1:
-            clean = re.sub(r'\.', ' ', clean)
-        clean = re.sub(r'_', ' ', clean)
-        clean = re.sub(r'([\[(_]|- )$', '', clean).strip()
+            clean = regex.sub(r'\.', ' ', clean)
+        clean = regex.sub(r'_', ' ', clean)
+        clean = regex.sub(r'([\[(_]|- )$', '', clean).strip()
         clean = clean.strip(' _-')
 
         return clean
@@ -69,7 +78,7 @@ class PTN(object):
                 if key not in ('season', 'episode', 'website', 'language'):
                     pattern = r'\b(?:{})\b'.format(pattern)
 
-                clean_name = re.sub(r'_', ' ', self.torrent_name)
+                clean_name = regex.sub(r'_', ' ', self.torrent_name)
                 matches = self.get_matches(pattern, clean_name, key)
 
                 if not matches:
@@ -118,8 +127,8 @@ class PTN(object):
 
         # Start process for end, where more general fields (episode name, group, and
         # encoder) get set.
-        clean = re.sub(r'(^[-. ()]+)|([-. ]+$)', '', self.excess_raw)
-        clean = re.sub(r'[()/]', ' ', clean)
+        clean = regex.sub(r'(^[-. ()]+)|([-. ]+$)', '', self.excess_raw)
+        clean = regex.sub(r'[()/]', ' ', clean)
 
         clean = self.try_episode_name(clean)
 
@@ -135,13 +144,13 @@ class PTN(object):
 
     def get_subtitles(self, match, match_start):
         # handle multi subtitles
-        m = re.split(r'{}+'.format(delimiters), match[0])
+        m = regex.split(r'{}+'.format(delimiters), match[0])
         m = list(filter(None, m))
         clean = list()
         for x in m:
-            if len(m) == 1 and re.match('subs?', x, re.I):
+            if len(m) == 1 and regex.match('subs?', x, regex.I):
                 clean.append(x)
-            elif not re.match('subs?|soft', x, re.I):
+            elif not regex.match('subs?|soft', x, regex.I):
                 clean.append(x)
 
         # If this match starts like the language one did, the only match for language
@@ -158,7 +167,7 @@ class PTN(object):
     @staticmethod
     def get_language(match):
         # handle multi subtitles
-        m = re.split(r'{}+'.format(delimiters), match[0])
+        m = regex.split(r'{}+'.format(delimiters), match[0])
         clean = list(filter(None, m))
 
         return clean
@@ -168,7 +177,7 @@ class PTN(object):
         # handle multi season/episode
         # e.g. S01-S09
         clean = None
-        m = re.findall(r'[0-9]+', match[0])
+        m = regex.findall(r'[0-9]+', match[0])
         if m and len(m) > 1:
             clean = list(range(int(m[0]), int(m[-1]) + 1))
         elif m:
@@ -205,7 +214,7 @@ class PTN(object):
 
     def get_matches(self, pattern, clean_name, key):
         grouped_matches = list()
-        matches = list(re.finditer(pattern, clean_name, re.IGNORECASE))
+        matches = list(regex.finditer(pattern, clean_name, regex.IGNORECASE))
         for m in matches:
             if m.start() < self.ignore_before_index(clean_name, key):
                 continue
@@ -257,7 +266,7 @@ class PTN(object):
         cleaned_langs = list()
         for lang in clean:
             for (lang_regex, lang_clean) in langs:
-                if re.match(lang_regex, re.sub(link_patterns(patterns['subtitles'][2:]), '', lang, flags=re.I), re.IGNORECASE):
+                if regex.match(lang_regex, regex.sub(link_patterns(patterns['subtitles'][2:]), '', lang, flags=regex.I), regex.IGNORECASE):
                     cleaned_langs.append(lang_clean)
                     break
         clean = cleaned_langs
@@ -299,11 +308,11 @@ class PTN(object):
         match = None
         for (ignore_key, ignore_patterns) in patterns_ignore_title:
             if ignore_key == key and not ignore_patterns:
-                match = re.search(self.post_title_pattern, clean_name, re.IGNORECASE)
+                match = regex.search(self.post_title_pattern, clean_name, regex.IGNORECASE)
             elif ignore_key == key:
                 for ignore_pattern in ignore_patterns:
-                    if re.findall(ignore_pattern, clean_name, re.IGNORECASE):
-                        match = re.search(self.post_title_pattern, clean_name, re.IGNORECASE)
+                    if regex.findall(ignore_pattern, clean_name, regex.IGNORECASE):
+                        match = regex.search(self.post_title_pattern, clean_name, regex.IGNORECASE)
 
         if match:
             return match.start()
@@ -321,9 +330,9 @@ class PTN(object):
 
     @staticmethod
     def clean_excess(clean):
-        clean = re.sub(r'(^[-_. (),]+)|([-. ,]+$)', '', clean)
-        clean = re.sub(r'[()/]', ' ', clean)
-        match = re.split(r'\.\.+| +', clean)
+        clean = regex.sub(r'(^[-_. (),]+)|([-. ,]+$)', '', clean)
+        clean = regex.sub(r'[()/]', ' ', clean)
+        match = regex.split(r'\.\.+| +', clean)
         if match and isinstance(match[0], tuple):
             match = list(match[0])
         clean = filter(bool, match)
@@ -331,16 +340,16 @@ class PTN(object):
         filtered = list()
         for extra in clean:
             # re.fullmatch() is not available in python 2.7, so we manually do it with \Z.
-            if not re.match(r'(?:Complete|Season|Full)?[\]\[,.+\-]*(?:Complete|Season|Full)?\Z', extra, re.IGNORECASE):
+            if not regex.match(r'(?:Complete|Season|Full)?[\]\[,.+\-]*(?:Complete|Season|Full)?\Z', extra, regex.IGNORECASE):
                 filtered.append(extra)
         return filtered
 
     def try_episode_name(self, clean):
-        match = re.findall(episode_name_pattern, clean)
+        match = regex.findall(episode_name_pattern, clean)
         if match:
-            match = re.search('(?:' + link_patterns(patterns['episode']) + '|' +
-                              patterns['day'] + r')[._\-\s+]*(' + re.escape(match[0]) + ')',
-                              self.torrent_name, re.IGNORECASE)
+            match = regex.search('(?:' + link_patterns(patterns['episode']) + '|' +
+                              patterns['day'] + r')[._\-\s+]*(' + regex.escape(match[0]) + ')',
+                              self.torrent_name, regex.IGNORECASE)
             if match:
                 match_s, match_e = match.start(len(match.groups())-1), match.end(len(match.groups())-1)
                 match = match.groups()[-1]
@@ -365,12 +374,12 @@ class PTN(object):
         if 'group' in self.parts:
             group = self.parts['group']
             pat = r'(\[(.*)\])'
-            match = re.findall(pat, group, re.IGNORECASE)
+            match = regex.findall(pat, group, regex.IGNORECASE)
             if match:
                 match = match[0]
                 raw = match[0]
                 if match:
-                    if not re.match(r'[\[\],.+\-]*\Z', match[1], re.IGNORECASE):
+                    if not regex.match(r'[\[\],.+\-]*\Z', match[1], regex.IGNORECASE):
                         self._part('encoder', None, raw, match[1])
                     self.parts['group'] = group.replace(raw, '')
                     if not self.parts['group'].strip():
