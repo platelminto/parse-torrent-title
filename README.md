@@ -51,6 +51,18 @@ extracted and returned in a dictionary. Text which couldn't be
 parsed is returned in the `excess` field.
 
 ```py
+PTN.parse('The Walking Dead S05E03 720p HDTV x264-ASAP[ettv]')
+# {
+#     'group': 'ASAP',
+#     'title': 'The Walking Dead',
+#     'season':  5,
+#     'episode': 3,
+#     'resolution': '720p',
+#     'codec': 'H.264',
+#     'quality': 'HDTV',
+#     'encoder': 'ettv'
+# }
+
 PTN.parse('Vacancy (2007) 720p Bluray Dual Audio [Hindi + English] ⭐800 MB⭐ DD - 2.0 MSub x264 - Shadow (BonsaiHD)')
 # {
 #     'group': 'BonsaiHD',
@@ -148,7 +160,7 @@ Submit a PR on the `dev` branch, including tests for what gets newly matched (if
 
 ## Additions to parse-torrent-name
 
-Below are the additions that have been made to [/u/divijbindlish's original repo](https://github.com/divijbindlish/parse-torrent-name), including other contributors' work. This was initially forked from [here](https://github.com/roidayan/parse-torrent-name/tree/updates), but a lot of extra work has been done since, and given that the original repo is inactive, it was unforked and renamed.
+Below are the additions that have been made to [/u/divijbindlish's original repo](https://github.com/divijbindlish/parse-torrent-name), including other contributors' work. parse-torrent-title was initially forked from [here](https://github.com/roidayan/parse-torrent-name/tree/updates), but a lot of extra work has been done since, and given that the original repo is inactive, it was unforked.
 
 ### Updates on top of [/u/roidayan's work](https://github.com/roidayan/parse-torrent-name/tree/updates)
 
@@ -168,7 +180,7 @@ Below are the additions that have been made to [/u/divijbindlish's original repo
 - Added more tests and cleaned up previous ones.
 
 
-### [/u/roidayan's work](https://github.com/roidayan/parse-torrent-name/tree/updates) on top of [/u/divijbindlish's original python port](https://github.com/divijbindlish/parse-torrent-name)
+### [/u/roidayan's work](https://github.com/roidayan/parse-torrent-name/tree/updates) on top of [the original](https://github.com/divijbindlish/parse-torrent-name)
 
 - Added support for complete season parsing (either just a full season, or a range), not just single episodes.
 - Added to various fields' patterns.
