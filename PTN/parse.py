@@ -1,16 +1,8 @@
 #!/usr/bin/env python
-
-import pkgutil
-import re
-import sys
-
-from .patterns import patterns, types, delimiters, langs, patterns_ordered, episode_name_pattern
+from . import re
+from .post import post_processing_before_excess, post_processing_after_excess
+from .patterns import patterns, types, delimiters, langs, patterns_ordered
 from .extras import exceptions, patterns_ignore_title, link_patterns
-
-# Regex in python 2 is very slow so we check if the faster 'regex' library is available.
-faster_regex = pkgutil.find_loader('regex')
-if faster_regex is not None and sys.version_info[0] < 3:
-    re = faster_regex.load_module('regex')
 
 
 class PTN(object):
@@ -112,23 +104,16 @@ class PTN(object):
         self.process_title()
         self.fix_known_exceptions()
 
-        self.fix_subtitles_no_language()
+        unmatched = self.process_unmatched()
 
-        self.process_excess()
-        # Start process for end, where more general fields (episode name, group, and
-        # encoder) get set.
-        clean = re.sub(r'(^[-. ()]+)|([-. ]+$)', '', self.excess_raw)
-        clean = re.sub(r'[()/]', ' ', clean)
+        for f in post_processing_before_excess:
+            unmatched = f(self, unmatched)
 
-        clean = self.try_episode_name(clean)
+        if unmatched:
+            self._part('excess', None, unmatched, self.clean_excess(unmatched))
 
-        clean = self.clean_excess(clean)
-
-        self.try_group(clean)
-        self.try_encoder()
-
-        if clean:
-            self._part('excess', None, self.excess_raw, clean)
+        for f in post_processing_after_excess:
+            f(self)
 
         return self.parts
 
@@ -299,25 +284,37 @@ class PTN(object):
         self.match_slices = slices
 
     def process_title(self):
-        unmatched = list()
-        prev_start = 0
-        # Find all unmatched strings that aren't just punctuation
-        for (start, end) in self.match_slices:
-            if not re.match(delimiters + '*\Z', self.torrent_name[prev_start:start]):
-                unmatched.append((prev_start, start))
-            prev_start = end
+        unmatched = self.unmatched_list(keep_punctuation=False)
 
         # Use the first one as the title
         if unmatched:
-            title = unmatched[0]
-            title_start, title_end = title[0], title[1]
+            title_start, title_end = unmatched[0][0], unmatched[0][1]
 
-            raw = self.torrent_name[title_start:title_end].split('(')[0]
+            raw = self.torrent_name[title_start:title_end]#.split('(')[0]
+            if '(' in raw:
+                title_end = self.torrent_name.index('(', title_start)
+                raw = raw.split('(')[0]
             clean = self._clean_string(raw)
             self._part('title', (title_start, title_end), raw, clean)
             self.merge_match_slices()
         else:
             self._part('title', None, '', '')
+
+    def unmatched_list(self, keep_punctuation=True):
+        unmatched = list()
+        prev_start = 0
+        end = len(self.torrent_name)  # A default so the last append won't crash if nothing has matched
+        # Find all unmatched strings that aren't just punctuation
+        for (start, end) in self.match_slices:
+            if keep_punctuation or not re.match(delimiters + '*\Z', self.torrent_name[prev_start:start]):
+                unmatched.append((prev_start, start))
+            prev_start = end
+
+        # Add the last unmatched slice
+        if keep_punctuation or not re.match(delimiters + '*\Z', self.torrent_name[end:]):
+            unmatched.append((end, len(self.torrent_name)))
+
+        return unmatched
 
     def fix_known_exceptions(self):
         # Considerations for results that are known to cause issues, such
@@ -329,71 +326,29 @@ class PTN(object):
                 self.parts.pop(incorrect_key)
                 self._part('title', None, exception['actual_title'], exception['actual_title'], overwrite=True)
 
-    def fix_subtitles_no_language(self):
-        if 'language' not in self.parts and 'subtitles' in self.parts and \
-            (len(self.parts['subtitles']) if isinstance(self.parts['subtitles'], list) else 0) > 1:
-            self._part('language', None, None, self.parts['subtitles'][0])
-            self._part('subtitles', None, None, self.parts['subtitles'][1:], overwrite=True)
-
-    def process_excess(self):
+    def process_unmatched(self):
         shift = 0
         for (start, end) in self.match_slices:
             self.excess_raw = self.excess_raw[:start-shift] + self.excess_raw[end-shift:]
             shift += end - start
 
-    def try_episode_name(self, clean):
-        match = re.findall(episode_name_pattern, clean)
-        if match:
-            match = re.search('(?:' + link_patterns(patterns['episode']) + '|' +
-                              patterns['day'] + r')[._\-\s+]*(' + re.escape(match[0]) + ')',
-                              self.torrent_name, re.IGNORECASE)
-            if match:
-                match_s, match_e = match.start(len(match.groups())-1), match.end(len(match.groups())-1)
-                match = match.groups()[-1]
-                self._part('episodeName', (match_s, match_e), match, self._clean_string(match))
-                clean = clean.replace(match, '')
-        return clean
+        clean = re.sub(r'(^[-. ()]+)|([-. ]+$)', '', self.excess_raw)
+        return re.sub(r'[()/]', ' ', clean)
 
-    @staticmethod
-    def clean_excess(clean):
-        clean = re.sub(r'(^[-_. (),]+)|([-. ,]+$)', '', clean)
-        clean = re.sub(r'[()/]', ' ', clean)
-        match = re.split(r'\.\.+| +', clean)
-        if match and isinstance(match[0], tuple):
-            match = list(match[0])
-        clean = filter(bool, match)
-        clean = [item.strip('-') for item in clean]
+    def clean_excess(self, clean):
+        unmatched = list()
+        for (start, end) in self.unmatched_list():
+            unmatched.append(self.torrent_name[start:end])
+
+        unmatched_clean = list()
+        for raw in unmatched:
+            clean = re.sub(r'(^[-_. (),]+)|([-. ,]+$)', '', raw)
+            clean = re.sub(r'[()/]', ' ', clean)
+            unmatched_clean.append(clean)
+
         filtered = list()
-        for extra in clean:
+        for extra in unmatched_clean:
             # re.fullmatch() is not available in python 2.7, so we manually do it with \Z.
             if not re.match(r'(?:Complete|Season|Full)?[\]\[,.+\-]*(?:Complete|Season|Full)?\Z', extra, re.IGNORECASE):
                 filtered.append(extra)
         return filtered
-
-    def try_group(self, clean):
-        if len(clean) != 0:
-            group = clean.pop()
-            self._part('group', None, group, group)
-        # clean group name from having a container name
-        if 'group' in self.parts and 'container' in self.parts:
-            group = self.parts['group']
-            container = self.parts['container']
-            if group.lower().endswith('.' + container.lower()):
-                group = group[:-(len(container) + 1)]
-                self._part('group', None, group, group, overwrite=True)
-
-    def try_encoder(self):
-        # split group name and encoder, adding the latter to self.parts
-        if 'group' in self.parts:
-            group = self.parts['group']
-            pat = r'(\[(.*)\])'
-            match = re.findall(pat, group, re.IGNORECASE)
-            if match:
-                match = match[0]
-                raw = match[0]
-                if match:
-                    if not re.match(r'[\[\],.+\-]*\Z', match[1], re.IGNORECASE):
-                        self._part('encoder', None, raw, match[1])
-                    self._part('group', None, group.replace(raw, ''), group.replace(raw, ''), overwrite=True)
-                    if not self.parts['group'].strip():
-                        self.parts.pop('group')

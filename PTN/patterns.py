@@ -10,7 +10,7 @@
 
 from .extras import *
 
-delimiters = '[\.\s\-\+_\/]'
+delimiters = '[\.\s\-\+_\/()]'
 langs = [('rus(?:sian)?', 'Russian'),
          ('(?:True)?fre?(?:nch)?', 'French'),
          ('(?:nu)?ita(?:liano?)?', 'Italian'),
@@ -39,9 +39,6 @@ langs = [('rus(?:sian)?', 'Russian'),
 
 season_range_pattern = '(?:Complete' + delimiters + '*)?' + delimiters + '*(?:s(?:easons?)?)' + delimiters + \
                        '*(?:s?[0-9]{1,2}[\s]*(?:(?:\-|(?:\s*to\s*))[\s]*s?[0-9]{1,2})+)(?:' + delimiters + '*Complete)?'
-
-lang_list_pattern = r'\b(?:' + link_patterns(langs) + '(?:' + delimiters + r'|\b)+)'
-subs_list_pattern = r'\b(?:' + link_patterns(langs) + delimiters + '*)'
 
 year_pattern = '(?:19[0-9]|20[0-2])[0-9]'
 month_pattern = '0[1-9]|1[0-2]'
@@ -149,6 +146,7 @@ patterns['audio'] = get_channel_audio_options([
       ('FLAC', 'FLAC'),
       ('MP3', None, 'upper'),
       ('LiNE', 'LiNE'),
+      ('(?:Original|Org)' + delimiters + 'Aud(?:io)?', 'Original')
       ]
 patterns['region'] = ('R[0-9]', None, 'upper')
 patterns['extended'] = '(EXTENDED(:?.CUT)?)'
@@ -160,6 +158,12 @@ patterns['container'] = [('MKV|AVI', None, 'upper'),
                           ('MP-?4', 'MP4')]
 patterns['widescreen'] = 'WS'
 patterns['website'] = '^(\[ ?([^\]]+?) ?\])'
+
+lang_list_pattern = r'\b(?:' + link_patterns(langs) + '(?:' + \
+                    delimiters + '+' + link_patterns(patterns['audio']) + ')?' + \
+                    '(?:' + delimiters + r'+|\b))'
+subs_list_pattern = r'\b(?:' + link_patterns(langs) + delimiters + '*)'
+
 patterns['subtitles'] = ['sub(?:title)?s?{delimiters}*{langs}+'.format(delimiters=delimiters, langs=subs_list_pattern),
                          '(?:soft{delimiters}*)?{langs}+(?:(?:m(?:ulti(?:ple)?)?{delimiters}*)?sub(?:title)?s?)'.format(delimiters=delimiters, langs=subs_list_pattern),
                          # Need a pattern just for subs, and can't just make above regexes * over + as we want
@@ -172,7 +176,7 @@ patterns['subtitles'] = ['sub(?:title)?s?{delimiters}*{langs}+'.format(delimiter
 # rest will be left as subtitles. Otherwise, don't match if there are subtitles matches
 # after the langs.
 patterns['language'] = ['(' + lang_list_pattern + '+)(?:' + delimiters + '*' + patterns['subtitles'][0] + ')',
-                        '(' + lang_list_pattern + '+)(?!' + delimiters + '*' + link_patterns(patterns['subtitles']) + ')',
+                        '(' + lang_list_pattern + '+)' + '' + '(?!' + delimiters + '*' + link_patterns(patterns['subtitles']) + ')',
                         '(' + lang_list_pattern + '+)(?:' + delimiters + '*' + patterns['subtitles'][2] + ')',
                         ]
 patterns['sbs'] = [('Half-SBS', 'Half SBS'),
