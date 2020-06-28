@@ -2540,5 +2540,19 @@
     "remastered": true,
     "title": "X2 X-Men United",
     "year": 2003
+  },
+  {
+    "audio": "DD- 2.0",
+    "codec": "x264",
+    "directorsCut": true,
+    "group": "BonsaiHD",
+    "hardcoded": true,
+    "language": "Hindi",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "size": "1.5 GB",
+    "subtitles": "ESub",
+    "title": "#Yaaram",
+    "year": 2019
   }
 ]

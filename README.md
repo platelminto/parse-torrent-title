@@ -123,6 +123,7 @@ PTN.parse('A freakishly cool movie or TV episode', standardise=False)
 * **codec**         *(string)*
 * **container**     *(string)*
 * **day**           *(integer)*
+* **directorsCut**  *(boolean)*
 * **documentary**   *(boolean)*
 * **encoder**       *(string)*
 * **episode**       *(integer, integer list)*
