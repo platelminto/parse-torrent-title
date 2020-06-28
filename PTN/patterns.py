@@ -59,8 +59,9 @@ patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', '
                     'fps', 'hdr', 'limited', 'remastered']
 
 patterns = dict()
-patterns['episode'] = ['(?<![a-z])(?:[ex]|ep)(?:[0-9]{1,2}(?:-(?:[ex]|ep)?(?:[0-9]{1,2}))?)(?![0-9])',
-                       '\s\-\s\d{1,3}\s'  # Very specific as it could match too liberally otherwise
+patterns['episode'] = ['(?<![a-z])(?:e|ep)(?:[0-9]{1,2}(?:-(?:e|ep)?(?:[0-9]{1,2}))?)(?![0-9])',
+                       '\s\-\s\d{1,3}\s',  # Very specific as it could match too liberally otherwise
+                       r'\b[0-9]{1,2}x([0-9]{2})\b'
                        ]
 patterns['season'] = ['\ss?(\d{1,2})\s\-\s\d{1,2}\s',  # Avoids matching some anime releases season and episode as a season range
                       r'\b' + season_range_pattern + r'\b',  # Describes season ranges
