@@ -2554,5 +2554,35 @@
     "subtitles": "ESub",
     "title": "#Yaaram",
     "year": 2019
+  },
+  {
+    "audio": "Ac3 5.1",
+    "codec": "H264",
+    "encoder": "ArMor",
+    "language": ["ITA","SPA"],
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "title": "Nessuno sa chi io sono qui-Nadie sabe que estoy aqui",
+    "year": 2020
+  },
+  {
+    "audio": "Ac3 2.0",
+    "codec": "H264",
+    "encoder": "ArMor",
+    "language": ["ITA","ENG"],
+    "quality": "BDRip",
+    "resolution": "1080p",
+    "title": "L.ultima corve",
+    "year": 1973
+  },
+  {
+    "audio": "Ac3 2.0",
+    "codec": "H264",
+    "encoder": "ArMor",
+    "language": ["ITA","ENG"],
+    "quality": "BDRip",
+    "resolution": "1080p",
+    "title": "La signora di Shanghai-The lady from Shanghai",
+    "year": 1947
   }
 ]
