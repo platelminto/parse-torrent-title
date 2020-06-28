@@ -33,6 +33,7 @@ langs = [('rus(?:sian)?', 'Russian'),
          ('mal(?:ayalam)?', 'Malayalam'),
          ('japanese|jp', 'Japanese'),
          ('interslavic', 'Interslavic'),
+         ('ara(?:bic)?', 'Arabic'),
          ('en?(?:g(?:lish)?)?', 'English')  # Must be at end, matches just an 'e'
          ]
 
@@ -63,8 +64,8 @@ patterns['episode'] = ['(?<![a-z])(?:[ex]|ep)(?:[0-9]{1,2}(?:-(?:[ex]|ep)?(?:[0-
                        ]
 patterns['season'] = ['\ss?(\d{1,2})\s\-\s\d{1,2}\s',  # Avoids matching some anime releases season and episode as a season range
                       r'\b' + season_range_pattern + r'\b',  # Describes season ranges
-                      r'\b(?:Complete' + delimiters + ')?s([0-9]{1,2})' + link_patterns(patterns['episode']) + r'?\b',
                       # Describes season, optionally with complete or episode
+                      r'\b(?:Complete' + delimiters + ')?s([0-9]{1,2})' + link_patterns(patterns['episode']) + r'?\b',
                       r'\b([0-9]{1,2})x[0-9]{2}\b',  # Describes 5x02, 12x15 type descriptions
                       '[0-9]{1,2}(?:st|nd|rd|th)' + delimiters + 'season',
                       r'\b(?:Complete' + delimiters + r')?Season[\. -][0-9]{1,2}\b',  # Describes Season.15 type descriptions
