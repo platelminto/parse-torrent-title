@@ -56,7 +56,7 @@ patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', '
                     'codec', 'audio', 'region', 'extended', 'hardcoded', 'proper', 'repack',
                     'container', 'widescreen', 'website', 'documentary', 'language', 'subtitles',
                     'sbs', 'unrated', 'size', 'bitDepth', '3d', 'internal', 'readnfo', 'network',
-                    'fps', 'hdr']
+                    'fps', 'hdr', 'limited']
 
 patterns = dict()
 patterns['episode'] = ['(?<![a-z])(?:[ex]|ep)(?:[0-9]{1,2}(?:-(?:[ex]|ep)?(?:[0-9]{1,2}))?)(?![0-9])',
@@ -184,6 +184,7 @@ patterns['internal'] = 'iNTERNAL'
 patterns['readnfo'] = 'READNFO'
 patterns['hdr'] = 'HDR'
 patterns['documentary'] = 'DOCU(?:menta?ry)?'
+patterns['limited'] = 'LIMITED'
 
 types = {
     'season': 'integer',
@@ -203,5 +204,6 @@ types = {
     'internal': 'boolean',
     'readnfo': 'boolean',
     'documentary': 'boolean',
-    'hdr': 'boolean'
+    'hdr': 'boolean',
+    'limited': 'boolean'
 }

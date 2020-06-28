@@ -2505,13 +2505,23 @@
     "year": 2019
   },
   {
-    "year": 2013,
-    "website": "06",
     "documentary": true,
-    "subtitles": "ara",
-    "network": "BBC",
-    "title": "The Ottomans: Europe's Muslim Emperors",
+    "encoder": "Etcohod",
     "language": "eng",
-    "encoder": "Etcohod"
+    "network": "BBC",
+    "subtitles": "ara",
+    "title": "The Ottomans: Europe's Muslim Emperors",
+    "website": "06",
+    "year": 2013
+  },
+  {
+    "codec": "x264",
+    "encoder": "TGx",
+    "group": "Chakra",
+    "limited": true,
+    "quality": "BluRay",
+    "resolution": "720p",
+    "title": "War",
+    "year": 2019
   }
 ]
