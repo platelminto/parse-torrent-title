@@ -995,6 +995,7 @@
     "codec": "x265",
     "group": "SARTRE",
     "quality": "BluRay",
+    "remastered": true,
     "resolution": "1080p",
     "title": "The French Connection",
     "year": 1971
@@ -2523,5 +2524,13 @@
     "resolution": "720p",
     "title": "War",
     "year": 2019
+  },
+  {
+    "codec": "XviD",
+    "group": "B4ND1T69",
+    "quality": "BRRip",
+    "remastered": true,
+    "title": "X-Men",
+    "year": 2000
   }
 ]
