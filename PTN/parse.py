@@ -105,12 +105,11 @@ class PTN(object):
         self.fix_known_exceptions()
 
         unmatched = self.process_unmatched()
-
         for f in post_processing_before_excess:
             unmatched = f(self, unmatched)
 
         if unmatched:
-            self._part('excess', None, unmatched, self.clean_excess(unmatched))
+            self._part('excess', None, unmatched, self.clean_unmatched())
 
         for f in post_processing_after_excess:
             f(self)
@@ -290,7 +289,13 @@ class PTN(object):
         if unmatched:
             title_start, title_end = unmatched[0][0], unmatched[0][1]
 
-            raw = self.torrent_name[title_start:title_end]#.split('(')[0]
+            # If our unmatched is after the first 3 matches, we assume the title is missing
+            # (or more likely got parsed as something else), as no torrents have it that
+            # far away from the beginning of the release title.
+            if title_start > sorted(self.part_slices.values(), key=lambda s: s[0])[min(3, len(self.part_slices)-1)][0]:
+                self._part('title', None, '', '')
+
+            raw = self.torrent_name[title_start:title_end]
             if '(' in raw:
                 title_end = self.torrent_name.index('(', title_start)
                 raw = raw.split('(')[0]
@@ -301,6 +306,7 @@ class PTN(object):
             self._part('title', None, '', '')
 
     def unmatched_list(self, keep_punctuation=True):
+        self.merge_match_slices()  # TODO look at removing this around
         unmatched = list()
         prev_start = 0
         end = len(self.torrent_name)  # A default so the last append won't crash if nothing has matched
@@ -326,6 +332,7 @@ class PTN(object):
                 self.parts.pop(incorrect_key)
                 self._part('title', None, exception['actual_title'], exception['actual_title'], overwrite=True)
 
+    # TODO pretty sure this and self.excess_raw aren't really needed.
     def process_unmatched(self):
         shift = 0
         for (start, end) in self.match_slices:
@@ -335,20 +342,20 @@ class PTN(object):
         clean = re.sub(r'(^[-. ()]+)|([-. ]+$)', '', self.excess_raw)
         return re.sub(r'[()/]', ' ', clean)
 
-    def clean_excess(self, clean):
+    def clean_unmatched(self):
         unmatched = list()
         for (start, end) in self.unmatched_list():
             unmatched.append(self.torrent_name[start:end])
 
         unmatched_clean = list()
         for raw in unmatched:
-            clean = re.sub(r'(^[-_. (),]+)|([-. ,]+$)', '', raw)
+            clean = re.sub(r'(^[-_.\s(),]+)|([-.\s,]+$)', '', raw)
             clean = re.sub(r'[()/]', ' ', clean)
-            unmatched_clean.append(clean)
+            unmatched_clean += re.split(r'\.\.+|\s+', clean)
 
         filtered = list()
         for extra in unmatched_clean:
             # re.fullmatch() is not available in python 2.7, so we manually do it with \Z.
-            if not re.match(r'(?:Complete|Season|Full)?[\]\[,.+\-]*(?:Complete|Season|Full)?\Z', extra, re.IGNORECASE):
+            if not re.match(r'(?:Complete|Season|Full)?[\]\[,.+\- ]*(?:Complete|Season|Full)?\Z', extra, re.IGNORECASE):
                 filtered.append(extra)
         return filtered

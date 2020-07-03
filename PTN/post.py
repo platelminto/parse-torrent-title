@@ -22,7 +22,7 @@ def try_episode_name(self, unmatched):
                           patterns['day'] + r')[._\-\s+]*(' + re.escape(match[0]) + ')',
                           self.torrent_name, re.IGNORECASE)
         if match:
-            match_s, match_e = match.start(len(match.groups()) - 1), match.end(len(match.groups()) - 1)
+            match_s, match_e = match.start(len(match.groups())), match.end(len(match.groups()))
             match = match.groups()[-1]
             self._part('episodeName', (match_s, match_e), match, self._clean_string(match))
             unmatched = unmatched.replace(match, '')
