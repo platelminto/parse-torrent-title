@@ -71,10 +71,10 @@ patterns['season'] = ['\ss?(\d{1,2})\s\-\s\d{1,2}\s',  # Avoids matching some an
 # The first 4 season regexes won't have 'Part' in them.
 patterns['episode'] += [link_patterns(patterns['season'][4:]) + delimiters + '*P(?:ar)?t' + delimiters + '*(\d{1,3})']
 patterns['year'] = '((' + year_pattern + '))'
-patterns['month'] = '(?:{year}){delimiters}({month}){delimiters}(?:{day})' \
-    .format(delimiters=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)
-patterns['day'] = '(?:{year}){delimiters}(?:{month}){delimiters}({day})' \
-    .format(delimiters=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)
+patterns['month'] = '(?:{year}){d}({month}){d}(?:{day})' \
+    .format(d=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)
+patterns['day'] = '(?:{year}){d}(?:{month}){d}({day})' \
+    .format(d=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)
 patterns['resolution'] = [('([0-9]{3,4}p)', None, 'lower'),
                           ('(1280x720p?)', '720p'),
                           ('FHD', '1080p'),
@@ -98,7 +98,7 @@ patterns['quality'] = [('WEB[ -]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
                        ('D?TVRip|DVBRip', 'TVRip'),
                        ('VODR(?:ip)?', 'VODRip'),
                        ('HD-Rip', 'HD-Rip'),
-                       ('Blu-?Ray', 'Blu-ray'),
+                       ('Blu-?Ray(?:{d}Rip)?'.format(d=delimiters), 'Blu-ray'),
                        ('BD?R(?:ip)|BDR', 'BDRip'),  # TODO add BluRay Rip, maybe remove above
                        ('BR-?Rip', 'BRRip'),
                        # Match this last as it can show up with others.
@@ -133,16 +133,16 @@ patterns['audio'] = get_channel_audio_options([
     ('Atmos', 'Dolby Atmos'),
     ('DD|AC-?3', 'Dolby Digital'),
     ('DDP|E-?AC-?3|EC-3', 'Dolby Digital Plus'),
-    ('DTS{delimiters}?HD(?:{delimiters}?(?:MA|Masters?(?:{delimiters}Audio)?))'.format(delimiters=delimiters), 'DTS-HD MA'),
-    ('DTS{delimiters}?HD'.format(delimiters=delimiters), 'DTS-HD'),
+    ('DTS{d}?HD(?:{d}?(?:MA|Masters?(?:{d}Audio)?))'.format(d=delimiters), 'DTS-HD MA'),
+    ('DTS{d}?HD'.format(d=delimiters), 'DTS-HD'),
     ('DTS', 'DTS'),
     ('AAC[ \.\-]LC', 'AAC-LC'),
     ('AAC', 'AAC'),
     ('Dual[\- ]Audio', 'Dual')
-]) + [('5.1(?:' + delimiters + '?ch(?:annel)?(?:' + delimiters + '?Audio)?)?', '5.1'),
-      ('2.0(?:' + delimiters + '?ch(?:annel)?(?:' + delimiters + '?Audio)?)?', 'Dual'),
-      ('7.1(?:' + delimiters + '?ch(?:annel)?(?:' + delimiters + '?Audio)?)?', '7.1'),
-      ('1' + delimiters + '?Ch(?:annel)?(?:' + delimiters + '?Audio)?', 'Mono'),
+]) + [('5.1(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), '5.1'),
+      ('2.0(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), 'Dual'),
+      ('7.1(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), '7.1'),
+      ('1{d}?Ch(?:annel)?(?:{d}?Audio)?'.format(d=delimiters), 'Mono'),
       ('FLAC', 'FLAC'),
       ('MP3', None, 'upper'),
       ('LiNE', 'LiNE'),
@@ -164,12 +164,12 @@ lang_list_pattern = r'\b(?:' + link_patterns(langs) + '(?:' + \
                     '(?:' + delimiters + r'+|\b))'
 subs_list_pattern = r'\b(?:' + link_patterns(langs) + delimiters + '*)'
 
-patterns['subtitles'] = ['sub(?:title)?s?{delimiters}*{langs}+'.format(delimiters=delimiters, langs=subs_list_pattern),
-                         '(?:soft{delimiters}*)?{langs}+(?:(?:m(?:ulti(?:ple)?)?{delimiters}*)?sub(?:title)?s?)'.format(delimiters=delimiters, langs=subs_list_pattern),
+patterns['subtitles'] = ['sub(?:title)?s?{d}*{langs}+'.format(d=delimiters, langs=subs_list_pattern),
+                         '(?:soft{d}*)?{langs}+(?:(?:m(?:ulti(?:ple)?)?{d}*)?sub(?:title)?s?)'.format(d=delimiters, langs=subs_list_pattern),
                          # Need a pattern just for subs, and can't just make above regexes * over + as we want
                          # just 'subs' to match last.
-                         '(?:m(?:ulti(?:ple)?)?{delimiters}*)sub(?:title)?s?'.format(delimiters=delimiters),
-                         '(?:m(?:ulti(?:ple)?)?[\.\s\-\+_\/]*)?sub(?:title)?s?{delimiters}*'.format(delimiters=delimiters),
+                         '(?:m(?:ulti(?:ple)?)?{d}*)sub(?:title)?s?'.format(d=delimiters),
+                         '(?:m(?:ulti(?:ple)?)?[\.\s\-\+_\/]*)?sub(?:title)?s?{d}*'.format(d=delimiters),
                         ]
 # Language takes precedence over subs when ambiguous - if we have a lang match, and
 # then a subtitles match starting with subs, the first langs are languages, and the
