@@ -98,8 +98,8 @@ patterns['quality'] = [('WEB[ -]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
                        ('D?TVRip|DVBRip', 'TVRip'),
                        ('VODR(?:ip)?', 'VODRip'),
                        ('HD-Rip', 'HD-Rip'),
-                       ('Blu-?Ray(?:{d}Rip)?'.format(d=delimiters), 'Blu-ray'),
-                       ('BD?R(?:ip)|BDR', 'BDRip'),  # TODO add BluRay Rip, maybe remove above
+                       ('Blu-?Ray{d}Rip|BDR(?:ip)?'.format(d=delimiters), 'BDRip'),
+                       ('Blu-?Ray', 'Blu-ray'),
                        ('BR-?Rip', 'BRRip'),
                        # Match this last as it can show up with others.
                        ('PPV(?:Rip)?', 'Pay-Per-View Rip')]
