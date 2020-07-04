@@ -2584,5 +2584,15 @@
     "resolution": "1080p",
     "title": "La signora di Shanghai-The lady from Shanghai",
     "year": 1947
+  },
+  {
+    "group": "TamilMV",
+    "language": ["Telugu","Tamil","Hindi","Chi"],
+    "quality": "BluRay",
+    "resolution": "720p",
+    "size": "1.1GB",
+    "subtitles": "ESub",
+    "title": "The Four",
+    "year": 2012
   }
 ]

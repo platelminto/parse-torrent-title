@@ -1531,5 +1531,11 @@
     "codec": "H.264",
     "language": ["Italian","English"],
     "title": "La signora di Shanghai-The lady from Shanghai"
+  },
+  {
+    "language": ["Telugu","Tamil","Hindi","Chinese"],
+    "quality": "Blu-ray",
+    "subtitles": "English",
+    "title": "The Four"
   }
 ]
