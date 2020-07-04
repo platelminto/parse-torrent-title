@@ -49,7 +49,7 @@ day_pattern = '[0-2][0-9]|3[01]'
 
 episode_name_pattern = '((?:[Pp](?:ar)?t' + delimiters + '*[0-9]|[A-Za-z][a-z]*(?:' + delimiters + \
                        '|$))+)'
-pre_group_encoder_pattern = '[^\s\.\[\]\-]*\s+(?:-\s)?[^\s\.\[\]\-]*$'
+pre_group_encoder_pattern = '[^\s\.\[\]\-]*\s*(?:-\s)?[^\s\.\[\]\-]*$'
 
 # Forces an order to go by the regexes, as we want this to be deterministic (different
 # orders can generate different matchings). e.g. "doctor_who_2005..." in input.json
@@ -149,14 +149,14 @@ patterns['audio'] = get_channel_audio_options([
     ('AAC[ \.\-]LC', 'AAC-LC'),
     ('AAC', 'AAC'),
     ('Dual[\- ]Audio', 'Dual')
-]) + [('5.1(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), '5.1'),
-      ('2.0(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?|2CH'.format(d=delimiters), 'Dual'),
-      ('7.1(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), '7.1'),
-      ('1{d}?Ch(?:annel)?(?:{d}?Audio)?'.format(d=delimiters), 'Mono'),
+]) + [('7.1(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), '7.1'),
       ('FLAC', 'FLAC'),
+      ('5.1(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), '5.1'),
       ('MP3', None, 'upper'),
+      ('2.0(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?|2CH|stereo'.format(d=delimiters), 'Dual'),
+      ('1{d}?Ch(?:annel)?(?:{d}?Audio)?'.format(d=delimiters), 'Mono'),
+      ('(?:Original|Org)' + delimiters + 'Aud(?:io)?', 'Original'),
       ('LiNE', 'LiNE'),
-      ('(?:Original|Org)' + delimiters + 'Aud(?:io)?', 'Original')
       ]
 patterns['region'] = ('R[0-9]', None, 'upper')
 patterns['extended'] = '(EXTENDED(:?.CUT)?)'

@@ -86,7 +86,7 @@ def try_encoder(self):
             raw = match[0]
             if match:
                 if not re.match(r'[\[\],.+\-]*\Z', match[1], re.IGNORECASE):
-                    # Might be written by pre_excess method, so we overwrite it.
+                    # Might be written by pre_excess method, but we overwrite it.
                     self._part('encoder', None, match[1], overwrite=True)
                 self._part('group', None, group.replace(raw, ''), overwrite=True)
                 if not self.parts['group'].strip():
