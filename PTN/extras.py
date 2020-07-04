@@ -96,4 +96,4 @@ def link_patterns(pattern_options):
         return pattern_options
     return '(?:' + \
            '|'.join([pattern_option[0] if isinstance(pattern_option, tuple) else pattern_option for pattern_option in pattern_options]) + \
-            ')'
+           ')'

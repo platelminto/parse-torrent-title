@@ -144,6 +144,7 @@ PTN.parse('A freakishly cool movie or TV episode', standardise=False)
 * **readnfo**       *(boolean)*
 * **region**        *(string)*
 * **remastered**    *(boolean)*
+* **remux**         *(boolean)*
 * **repack**        *(boolean)*
 * **resolution**    *(string)*
 * **sbs**           *(string)*

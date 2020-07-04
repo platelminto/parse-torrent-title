@@ -2677,5 +2677,112 @@
     "title": "Scooby-Doo Goes Hollywood",
     "upscaled": true,
     "year": 1980
+  },
+  {
+    "audio": "AC3",
+    "codec": "x264",
+    "group": "Telly",
+    "language": "Hindi",
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "subtitles": "ESubs",
+    "title": "Sarkar 3",
+    "year": 2017
+  },
+  {
+    "audio": "DD.2.0",
+    "codec": "AVC",
+    "group": "Dus.IcTv",
+    "network": "AMZN",
+    "quality": "WEB.DL",
+    "resolution": "1080p",
+    "title": "Jagga Jagravan Joga",
+    "year": 2020
+  },
+  {
+    "audio": "AAC",
+    "codec": "x264",
+    "container": "mp4",
+    "episode": 11,
+    "episodeName": "Oceans Most Powerful",
+    "group": "MVGroup.org",
+    "quality": "HDTV",
+    "resolution": "1080p",
+    "season": 2,
+    "title": "Sea Monsters"
+  },
+  {
+    "audio": "DD 5.1",
+    "codec": "x264",
+    "group": "Telly",
+    "language": "Urdu",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "subtitles": "ESubs",
+    "title": "Dukhtar",
+    "year": 2014
+  },
+  {
+    "group": "LMH123",
+    "language": "Punjabi",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "subtitles": "ESubs",
+    "title": "Main Teri Tu Mera",
+    "year": 2016
+  },
+  {
+    "language": "Kannada",
+    "quality": "HDRip",
+    "resolution": "720p",
+    "title": "RangiTaranga",
+    "year": 2015
+  },
+  {
+    "codec": "x265",
+    "group": "RARBG",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "McFarland USA",
+    "year": 2015
+  },
+  {
+    "audio": "DTS-HD.MA.5.1",
+    "codec": "AVC",
+    "group": "FGT",
+    "quality": "BluRay",
+    "remux": true,
+    "resolution": "1080p",
+    "title": "Jasper Mall",
+    "year": 2020
+  },
+  {
+    "codec": "x265",
+    "group": "VXT",
+    "language": "JAPANESE",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Lupin III The First",
+    "year": 2019
+  },
+  {
+    "codec": "x265",
+    "group": "VXT",
+    "language": "JAPANESE",
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "subtitles": "ENSUBBED",
+    "title": "The Rule for a Vagabond",
+    "year": 1965
+  },
+  {
+    "audio": "AAC",
+    "codec": "H264",
+    "group": "VXT",
+    "language": "PORTUGUESE",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Cousins",
+    "year": 2019
   }
 ]

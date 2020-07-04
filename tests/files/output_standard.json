@@ -1582,5 +1582,67 @@
     "container": "MKV",
     "quality": "DVD-Rip",
     "title": "Scooby-Doo Goes Hollywood"
+  },
+  {
+    "audio": "Dolby Digital",
+    "codec": "H.264",
+    "subtitles": "English",
+    "title": "Sarkar 3"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.264",
+    "network": "Amazon Studios",
+    "quality": "WEB-DL",
+    "title": "Jagga Jagravan Joga"
+  },
+  {
+    "codec": "H.264",
+    "container": "MP4",
+    "title": "Sea Monsters"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "subtitles": "English",
+    "title": "Dukhtar"
+  },
+  {
+    "subtitles": "English",
+    "title": "Main Teri Tu Mera"
+  },
+  {
+    "quality": "WEB-DL",
+    "title": "RangiTaranga"
+  },
+  {
+    "codec": "H.265",
+    "quality": "Blu-ray",
+    "title": "McFarland USA"
+  },
+  {
+    "audio": "DTS-HD MA 5.1",
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "title": "Jasper Mall"
+  },
+  {
+    "codec": "H.265",
+    "language": "Japanese",
+    "quality": "Blu-ray",
+    "title": "Lupin III The First"
+  },
+  {
+    "codec": "H.265",
+    "language": "Japanese",
+    "subtitles": "English",
+    "title": "The Rule for a Vagabond"
+  },
+  {
+    "codec": "H.264",
+    "language": "Portuguese",
+    "quality": "Blu-ray",
+    "title": "Cousins"
   }
 ]

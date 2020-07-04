@@ -13,6 +13,7 @@ from .patterns import episode_name_pattern, patterns, langs
 # what they used.
 
 
+# Try and find the episode name.
 def try_episode_name(self, unmatched):
     match = re.findall(episode_name_pattern, unmatched)
     # First we see if there's a match in unmatched, then we look if it's after an episode
@@ -37,6 +38,7 @@ post_processing_before_excess = [
 # After excess functions take in just the parse object, and shouldn't return anything.
 
 
+# Group is assumed to be the last element of `excess`.
 def try_group(self):
     if 'excess' not in self.parts:
         return
@@ -54,8 +56,8 @@ def try_group(self):
         self._part('excess', None, excess, overwrite=True)
 
 
+# Split group name and encoder, adding the latter to self.parts
 def try_encoder(self):
-    # split group name and encoder, adding the latter to self.parts
     if 'group' in self.parts:
         group = self.parts['group']
         pat = r'(\[(.*)\])'

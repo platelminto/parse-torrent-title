@@ -34,6 +34,9 @@ langs = [('rus(?:sian)?', 'Russian'),
          ('japanese|ja?p', 'Japanese'),
          ('interslavic', 'Interslavic'),
          ('ara(?:bic)?', 'Arabic'),
+         ('urdu', 'Urdu'),
+         ('punjabi', 'Punjabi'),
+         ('portuguese', 'Portuguese'),
          ('en?(?:g(?:lish)?)?', 'English')  # Must be at end, matches just an 'e'
          ]
 
@@ -54,11 +57,12 @@ patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', '
                     'container', 'widescreen', 'website', 'documentary', 'language', 'subtitles',
                     'sbs', 'unrated', 'size', 'bitDepth', '3d', 'internal', 'readnfo', 'network',
                     'fps', 'hdr', 'limited', 'remastered', 'directorsCut', 'upscaled', 'untouched',
-                    ]
+                    'remux']
 
 patterns = dict()
 patterns['episode'] = ['(?<![a-z])(?:e|ep)(?:[0-9]{1,2}(?:-(?:e|ep)?(?:[0-9]{1,2}))?)(?![0-9])',
-                       '\s\-\s\d{1,3}\s',  # Very specific as it could match too liberally otherwise
+                       # Very specific as it could match too liberally
+                       '\s\-\s\d{1,3}\s',
                        r'\b[0-9]{1,2}x([0-9]{2})\b'
                        ]
 patterns['season'] = ['\ss?(\d{1,2})\s\-\s\d{1,2}\s',  # Avoids matching some anime releases season and episode as a season range
@@ -67,6 +71,7 @@ patterns['season'] = ['\ss?(\d{1,2})\s\-\s\d{1,2}\s',  # Avoids matching some an
                       r'\b(?:Complete' + delimiters + ')?s([0-9]{1,2})' + link_patterns(patterns['episode']) + r'?\b',
                       r'\b([0-9]{1,2})x[0-9]{2}\b',  # Describes 5x02, 12x15 type descriptions
                       '[0-9]{1,2}(?:st|nd|rd|th)' + delimiters + 'season',
+                      'Series' + delimiters + '\d{1,2}',
                       r'\b(?:Complete' + delimiters + r')?Season[\. -][0-9]{1,2}\b',  # Describes Season.15 type descriptions
                       ]
 # The first 4 season regexes won't have 'Part' in them.
@@ -79,9 +84,10 @@ patterns['day'] = '(?:{year}){d}(?:{month}){d}({day})' \
 patterns['resolution'] = [('([0-9]{3,4}p)', None, 'lower'),
                           ('(1280x720p?)', '720p'),
                           ('FHD', '1080p'),
+                          ('UHD', 'UHD'),
                           ('HD', 'HD'),
                           ('4K', '4K')]
-patterns['quality'] = [('WEB[ -]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
+patterns['quality'] = [('WEB[ -\.]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
                        # Match WEB-DL's first as they can show up with others.
                        ('WEB[ -]?Cap', 'WEBCap'),
                        ('W[EB]B[ -]?(?:Rip)|WEB', 'WEBRip'),
@@ -165,12 +171,12 @@ lang_list_pattern = r'\b(?:' + link_patterns(langs) + '(?:' + \
                     '(?:' + delimiters + r'+|\b))'
 subs_list_pattern = r'\b(?:' + link_patterns(langs) + delimiters + '*)'
 
-patterns['subtitles'] = ['sub(?:title)?s?{d}*{langs}+'.format(d=delimiters, langs=subs_list_pattern),
-                         '(?:soft{d}*)?{langs}+(?:(?:m(?:ulti(?:ple)?)?{d}*)?sub(?:title)?s?)'.format(d=delimiters, langs=subs_list_pattern),
+patterns['subtitles'] = ['sub(?:title|bed)?s?{d}*{langs}+'.format(d=delimiters, langs=subs_list_pattern),
+                         '(?:soft{d}*)?{langs}+(?:(?:m(?:ulti(?:ple)?)?{d}*)?sub(?:title|bed)?s?)'.format(d=delimiters, langs=subs_list_pattern),
                          # Need a pattern just for subs, and can't just make above regexes * over + as we want
                          # just 'subs' to match last.
-                         '(?:m(?:ulti(?:ple)?)?{d}*)sub(?:title)?s?'.format(d=delimiters),
-                         '(?:m(?:ulti(?:ple)?)?[\.\s\-\+_\/]*)?sub(?:title)?s?{d}*'.format(d=delimiters),
+                         '(?:m(?:ulti(?:ple)?)?{d}*)sub(?:title|bed)?s?'.format(d=delimiters),
+                         '(?:m(?:ulti(?:ple)?)?[\.\s\-\+_\/]*)?sub(?:title|bed)?s?{d}*'.format(d=delimiters),
                         ]
 # Language takes precedence over subs when ambiguous - if we have a lang match, and
 # then a subtitles match starting with subs, the first langs are languages, and the
@@ -195,6 +201,7 @@ patterns['remastered'] = 'REMASTERED'
 patterns['directorsCut'] = 'DC'
 patterns['upscaled'] = '(?:AI{d}*)?upscaled?'.format(d=delimiters)
 patterns['untouched'] = 'untouched'
+patterns['remux'] = 'REMUX'
 
 types = {
     'season': 'integer',
@@ -220,4 +227,5 @@ types = {
     'directorsCut': 'boolean',
     'upscaled': 'boolean',
     'untouched': 'boolean',
+    'remux': 'boolean',
 }
