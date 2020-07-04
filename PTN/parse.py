@@ -160,11 +160,12 @@ class PTN(object):
     # to avoid matching certain patterns that could show up in a release title.
     def ignore_before_index(self, clean_name, key):
         match = None
-        for (ignore_key, ignore_patterns) in patterns_ignore_title:
-            if ignore_key == key and not ignore_patterns:
+        if key in patterns_ignore_title:
+            patterns_ignored = patterns_ignore_title[key]
+            if not patterns_ignored:
                 match = re.search(self.post_title_pattern, clean_name, re.IGNORECASE)
-            elif ignore_key == key:
-                for ignore_pattern in ignore_patterns:
+            else:
+                for ignore_pattern in patterns_ignored:
                     if re.findall(ignore_pattern, clean_name, re.IGNORECASE):
                         match = re.search(self.post_title_pattern, clean_name, re.IGNORECASE)
 
