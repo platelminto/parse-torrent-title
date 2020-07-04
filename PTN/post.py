@@ -34,10 +34,16 @@ def try_encoder_before_group(self, unmatched):
     match = re.findall(pre_group_encoder_pattern, unmatched.strip())
 
     if match:
-        match = re.search(r'[\s\-]' + re.escape(match[0]) + '$', self.torrent_name, re.IGNORECASE)
+        found_match = None
+        for m in match:
+            full_title_match = re.search(r'[\s\-](' + re.escape(m) + ')(?:$|\.' + link_patterns(patterns['container']) + ')', self.torrent_name, re.IGNORECASE)
+            if full_title_match:
+                found_match = full_title_match
+                break
+        match = found_match
         if match:
             match_s, match_e = match.start(0), match.end(0)
-            encoder_and_group = list(filter(None, re.split(r'[\-\s]', match.group(0))))
+            encoder_and_group = list(filter(None, re.split(r'[\-\s\)]', match.groups()[0])))
             if len(encoder_and_group) == 2:
                 encoder_raw = encoder_and_group[0]
                 group_raw = encoder_and_group[1]
@@ -77,20 +83,20 @@ def try_group(self):
 
 # Split group name and encoder, adding the latter to self.parts
 def try_encoder(self):
-    if 'group' in self.parts:
-        group = self.parts['group']
-        pat = r'(\[(.*)\])'
-        match = re.findall(pat, group, re.IGNORECASE)
+    if 'group' not in self.parts or 'encoder' in self.parts:
+        return
+    group = self.parts['group']
+    pat = r'(\[(.*)\])'
+    match = re.findall(pat, group, re.IGNORECASE)
+    if match:
+        match = match[0]
+        raw = match[0]
         if match:
-            match = match[0]
-            raw = match[0]
-            if match:
-                if not re.match(r'[\[\],.+\-]*\Z', match[1], re.IGNORECASE):
-                    # Might be written by pre_excess method, but we overwrite it.
-                    self._part('encoder', None, match[1], overwrite=True)
-                self._part('group', None, group.replace(raw, ''), overwrite=True)
-                if not self.parts['group'].strip():
-                    self.parts.pop('group')
+            if not re.match(r'[\[\],.+\-]*\Z', match[1], re.IGNORECASE):
+                self._part('encoder', None, match[1])
+            self._part('group', None, group.replace(raw, ''), overwrite=True)
+            if not self.parts['group'].strip():
+                self.parts.pop('group')
 
 
 # If this match starts like the language one did, the only match for language

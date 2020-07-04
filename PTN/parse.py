@@ -29,11 +29,11 @@ class PTN(object):
 
     @staticmethod
     def _clean_string(string):
-        clean = re.sub(r'^( -|\()', '', string)
+        clean = re.sub(r'^( -|\(|\[)', '', string)
         if clean.find(' ') == -1 and clean.find('.') != -1:
             clean = re.sub(r'\.', ' ', clean)
         clean = re.sub(r'_', ' ', clean)
-        clean = re.sub(r'([\[)_]|- )$', '', clean).strip()
+        clean = re.sub(r'([\[)_\]]|- )$', '', clean).strip()
         clean = clean.strip(' _-')
 
         return clean
