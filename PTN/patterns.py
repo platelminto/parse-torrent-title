@@ -31,7 +31,7 @@ langs = [('rus(?:sian)?', 'Russian'),
          ('tel(?:ugu)?', 'Telugu'),
          ('marathi', 'Marathi'),
          ('mal(?:ayalam)?', 'Malayalam'),
-         ('japanese|jp', 'Japanese'),
+         ('japanese|ja?p', 'Japanese'),
          ('interslavic', 'Interslavic'),
          ('ara(?:bic)?', 'Arabic'),
          ('en?(?:g(?:lish)?)?', 'English')  # Must be at end, matches just an 'e'
@@ -53,7 +53,8 @@ patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', '
                     'codec', 'audio', 'region', 'extended', 'hardcoded', 'proper', 'repack',
                     'container', 'widescreen', 'website', 'documentary', 'language', 'subtitles',
                     'sbs', 'unrated', 'size', 'bitDepth', '3d', 'internal', 'readnfo', 'network',
-                    'fps', 'hdr', 'limited', 'remastered', 'directorsCut']
+                    'fps', 'hdr', 'limited', 'remastered', 'directorsCut', 'upscaled', 'untouched',
+                    ]
 
 patterns = dict()
 patterns['episode'] = ['(?<![a-z])(?:e|ep)(?:[0-9]{1,2}(?:-(?:e|ep)?(?:[0-9]{1,2}))?)(?![0-9])',
@@ -120,7 +121,7 @@ patterns['network'] = suffix_pattern_with(link_patterns(patterns['quality']),
 patterns['network'] += [('BBC', 'BBC'),
                         ('Hoichoi', 'Hoichoi'),
                         ('Zee5', 'ZEE5'),
-                        ]
+                        ('Hallmark', 'Hallmark')]
 patterns['codec'] = [('xvid', 'Xvid'),
                      ('av1', 'AV1'),
                      ('[hx]\.?264', 'H.264'),
@@ -140,7 +141,7 @@ patterns['audio'] = get_channel_audio_options([
     ('AAC', 'AAC'),
     ('Dual[\- ]Audio', 'Dual')
 ]) + [('5.1(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), '5.1'),
-      ('2.0(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), 'Dual'),
+      ('2.0(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?|2CH'.format(d=delimiters), 'Dual'),
       ('7.1(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), '7.1'),
       ('1{d}?Ch(?:annel)?(?:{d}?Audio)?'.format(d=delimiters), 'Mono'),
       ('FLAC', 'FLAC'),
@@ -192,6 +193,8 @@ patterns['documentary'] = 'DOCU(?:menta?ry)?'
 patterns['limited'] = 'LIMITED'
 patterns['remastered'] = 'REMASTERED'
 patterns['directorsCut'] = 'DC'
+patterns['upscaled'] = '(?:AI{d}*)?upscaled?'.format(d=delimiters)
+patterns['untouched'] = 'untouched'
 
 types = {
     'season': 'integer',
@@ -215,4 +218,6 @@ types = {
     'limited': 'boolean',
     'remastered': 'boolean',
     'directorsCut': 'boolean',
+    'upscaled': 'boolean',
+    'untouched': 'boolean',
 }

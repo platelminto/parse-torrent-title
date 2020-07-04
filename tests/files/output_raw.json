@@ -566,6 +566,7 @@
     "language": "Hindi",
     "resolution": "720p",
     "title": "Akira",
+    "upscaled": true,
     "year": 2016
   },
   {
@@ -619,8 +620,8 @@
   {
     "container": "mp4",
     "episode": 7,
-    "episodeName": "Chi Jap",
     "group": "ZhuixinFan",
+    "language": ["Chi","Jap"],
     "quality": "HDTVrip",
     "resolution": "1280X720",
     "title": "Boku Unmei no Hito desu"
@@ -2104,6 +2105,7 @@
     "resolution": "720p",
     "size": "1.4GB",
     "title": "Oolu",
+    "untouched": true,
     "year": 2019
   },
   {
@@ -2310,6 +2312,7 @@
     "language": ["EN","JP"],
     "resolution": "4K",
     "title": "L.A. Story",
+    "upscaled": true,
     "year": 1991
   },
   {
@@ -2411,6 +2414,7 @@
     "resolution": "720p",
     "subtitles": "Esub",
     "title": "NOS4A2",
+    "untouched": true,
     "year": 2019
   },
   {
@@ -2434,6 +2438,7 @@
     "size": "2.5 GB",
     "subtitles": "ESub",
     "title": "Moothon: The Elder One",
+    "untouched": true,
     "year": 2019
   },
   {
@@ -2594,5 +2599,83 @@
     "subtitles": "ESub",
     "title": "The Four",
     "year": 2012
+  },
+  {
+    "audio": "2CH",
+    "codec": "x264",
+    "group": "BonsaiHD",
+    "language": "Hindi",
+    "network": "AMZN",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "size": "1.2 GB",
+    "subtitles": "ESub",
+    "title": "Samrat & Co.",
+    "year": 2014
+  },
+  {
+    "codec": "X264",
+    "group": "Solar",
+    "network": "Hallmark",
+    "quality": "HDRip",
+    "resolution": "720p",
+    "title": "Tulips in Spring",
+    "year": 2016
+  },
+  {
+    "audio": "DD- 5.1",
+    "codec": "x265",
+    "group": "BonsaiHD",
+    "language": ["English","spanish"],
+    "network": "NF",
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "size": "950 MB",
+    "title": "Adu",
+    "year": 2020
+  },
+  {
+    "codec": "X264",
+    "group": "Solar",
+    "network": "Hallmark",
+    "quality": "HDTV",
+    "resolution": "720P",
+    "title": "When Sparks Fly",
+    "year": 2014
+  },
+  {
+    "audio": "DD 5.1",
+    "codec": "x264",
+    "group": "MAZE",
+    "language": ["English","Hindi"],
+    "quality": "HDRip",
+    "resolution": "720p",
+    "size": "2GB",
+    "subtitles": "MSub",
+    "title": "The Fxxk-It List",
+    "year": 2020
+  },
+  {
+    "audio": "DTS-HD MA 7.1",
+    "bitDepth": 10,
+    "codec": "x265",
+    "container": "mkv",
+    "encoder": "TAoE",
+    "quality": "BDRip",
+    "resolution": "1080p",
+    "title": "The Twilight Saga Breaking Dawn - Part 2",
+    "year": 2012
+  },
+  {
+    "audio": "AAC 1.0",
+    "bitDepth": 10,
+    "codec": "x265",
+    "container": "mkv",
+    "encoder": "TAoE",
+    "quality": "Dvdrip",
+    "resolution": "1080p",
+    "title": "Scooby-Doo Goes Hollywood",
+    "upscaled": true,
+    "year": 1980
   }
 ]

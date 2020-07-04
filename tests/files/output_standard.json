@@ -427,6 +427,7 @@
   },
   {
     "container": "MP4",
+    "language": ["Chinese","Japanese"],
     "quality": "HDTV",
     "resolution": "720p",
     "title": "Boku Unmei no Hito desu"
@@ -1537,5 +1538,49 @@
     "quality": "Blu-ray",
     "subtitles": "English",
     "title": "The Four"
+  },
+  {
+    "audio": "Dual",
+    "codec": "H.264",
+    "network": "Amazon Studios",
+    "size": "1.2GB",
+    "subtitles": "English",
+    "title": "Samrat & Co."
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEB-DL",
+    "title": "Tulips in Spring"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.265",
+    "language": ["English","Spanish"],
+    "network": "Netflix",
+    "size": "950MB",
+    "title": "Adu"
+  },
+  {
+    "codec": "H.264",
+    "resolution": "720p",
+    "title": "When Sparks Fly"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "quality": "WEB-DL",
+    "subtitles": "Available",
+    "title": "The Fxxk-It List"
+  },
+  {
+    "codec": "H.265",
+    "container": "MKV",
+    "title": "The Twilight Saga Breaking Dawn - Part 2"
+  },
+  {
+    "codec": "H.265",
+    "container": "MKV",
+    "quality": "DVD-Rip",
+    "title": "Scooby-Doo Goes Hollywood"
   }
 ]
