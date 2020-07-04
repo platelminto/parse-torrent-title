@@ -49,6 +49,7 @@ day_pattern = '[0-2][0-9]|3[01]'
 
 episode_name_pattern = '((?:[Pp](?:ar)?t' + delimiters + '*[0-9]|[A-Za-z][a-z]*(?:' + delimiters + \
                        '|$))+)'
+pre_group_encoder_pattern = '[^\s\.\[\]\-]*\s+(?:-\s)?[^\s\.\[\]\-]*$'
 
 # Forces an order to go by the regexes, as we want this to be deterministic (different
 # orders can generate different matchings). e.g. "doctor_who_2005..." in input.json
@@ -123,11 +124,13 @@ patterns['network'] = [('ATVP', 'Apple TV+'),
                         ]
 patterns['network'] = suffix_pattern_with(link_patterns(patterns['quality']),
                                           patterns['network'], delimiters)
-# Not all networks always show up just before the quality.
+# Not all networks always show up just before the quality, so if they're unlikely to clash,
+# they should be added here.
 patterns['network'] += [('BBC', 'BBC'),
                         ('Hoichoi', 'Hoichoi'),
                         ('Zee5', 'ZEE5'),
-                        ('Hallmark', 'Hallmark')]
+                        ('Hallmark', 'Hallmark'),
+                        ('Sony\s?LIV', 'SONY LIV')]
 patterns['codec'] = [('xvid', 'Xvid'),
                      ('av1', 'AV1'),
                      ('[hx]\.?264', 'H.264'),

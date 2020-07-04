@@ -29,11 +29,11 @@ class PTN(object):
 
     @staticmethod
     def _clean_string(string):
-        clean = re.sub(r'^ -', '', string)
+        clean = re.sub(r'^( -|\()', '', string)
         if clean.find(' ') == -1 and clean.find('.') != -1:
             clean = re.sub(r'\.', ' ', clean)
         clean = re.sub(r'_', ' ', clean)
-        clean = re.sub(r'([\[(_]|- )$', '', clean).strip()
+        clean = re.sub(r'([\[)_]|- )$', '', clean).strip()
         clean = clean.strip(' _-')
 
         return clean
@@ -100,7 +100,9 @@ class PTN(object):
             unmatched = f(self, unmatched)
 
         # clean_unmatched() depends on the before_excess methods adding more match slices.
-        self._part('excess', None, self.clean_unmatched())
+        cleaned_unmatched = self.clean_unmatched()
+        if cleaned_unmatched:
+            self._part('excess', None, cleaned_unmatched)
 
         for f in post_processing_after_excess:
             f(self)
@@ -320,8 +322,7 @@ class PTN(object):
         for (start, end) in self.unmatched_list():
             unmatched += self.torrent_name[start:end]
 
-        clean = re.sub(r'(^[-. ()]+)|([-. ]+$)', '', unmatched)
-        return re.sub(r'[()/]', ' ', clean)
+        return unmatched
 
     def clean_unmatched(self):
         unmatched = list()

@@ -1346,6 +1346,7 @@
     "codec": "x264",
     "group": "BonsaiHD",
     "language": "Hindi",
+    "network": "SonyLiv",
     "quality": "WEB-DL",
     "resolution": "720p",
     "size": "1.1 GB",
@@ -2455,6 +2456,7 @@
   {
     "audio": "DTS HD Masters 5.1",
     "codec": "H264",
+    "encoder": "SnakeSPL",
     "group": "MIRCrew",
     "language": ["Ita","Eng"],
     "resolution": "720p",
@@ -2493,6 +2495,7 @@
   {
     "audio": "AC3 5.1",
     "codec": "H265",
+    "encoder": "Sp33dy94",
     "group": "MIRCrew",
     "language": ["ITA","ENG"],
     "resolution": "1080p",
@@ -2625,6 +2628,7 @@
   {
     "audio": "DD- 5.1",
     "codec": "x265",
+    "encoder": "Shadow",
     "group": "BonsaiHD",
     "language": ["English","spanish"],
     "network": "NF",
@@ -2714,6 +2718,7 @@
   {
     "audio": "DD 5.1",
     "codec": "x264",
+    "encoder": "LOKiHD",
     "group": "Telly",
     "language": "Urdu",
     "quality": "BluRay",

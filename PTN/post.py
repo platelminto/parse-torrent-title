@@ -5,7 +5,7 @@
 from . import re
 
 from .extras import link_patterns
-from .patterns import episode_name_pattern, patterns, langs
+from .patterns import episode_name_pattern, patterns, langs, pre_group_encoder_pattern, delimiters
 
 
 # Before excess functions (before we split what was unmatched in the title into a list).
@@ -30,17 +30,36 @@ def try_episode_name(self, unmatched):
     return unmatched
 
 
+def try_encoder_before_group(self, unmatched):
+    match = re.findall(pre_group_encoder_pattern, unmatched.strip())
+
+    if match:
+        match = re.search(r'[\s\-]' + re.escape(match[0]) + '$', self.torrent_name, re.IGNORECASE)
+        if match:
+            match_s, match_e = match.start(0), match.end(0)
+            encoder_and_group = list(filter(None, re.split(r'[\-\s]', match.group(0))))
+            if len(encoder_and_group) == 2:
+                encoder_raw = encoder_and_group[0]
+                group_raw = encoder_and_group[1]
+                self._part('encoder', (match_s, match_e - len(group_raw)), self._clean_string(encoder_raw))
+                self._part('group', (match_s + len(encoder_raw), match_e), self._clean_string(group_raw))
+                unmatched = unmatched.replace(match.group(0), '')
+
+    return unmatched
+
+
 post_processing_before_excess = [
     try_episode_name,
+    try_encoder_before_group,
 ]
 
 
 # After excess functions take in just the parse object, and shouldn't return anything.
 
 
-# Group is assumed to be the last element of `excess`.
+# Group is assumed to be the last element of `excess`, if not already added.
 def try_group(self):
-    if 'excess' not in self.parts:
+    if 'excess' not in self.parts or 'group' in self.parts:
         return
     excess = self.parts['excess']
     if not isinstance(excess, list):
@@ -67,7 +86,8 @@ def try_encoder(self):
             raw = match[0]
             if match:
                 if not re.match(r'[\[\],.+\-]*\Z', match[1], re.IGNORECASE):
-                    self._part('encoder', None, match[1])
+                    # Might be written by pre_excess method, so we overwrite it.
+                    self._part('encoder', None, match[1], overwrite=True)
                 self._part('group', None, group.replace(raw, ''), overwrite=True)
                 if not self.parts['group'].strip():
                     self.parts.pop('group')
@@ -88,6 +108,8 @@ def fix_same_subtitles_language_match(self):
         self._part('subtitles', None, subs, overwrite=True)
 
 
+# If there are no languages, but subtitles were matched, we should assume the first lang
+# is the actual language, and remove it from the subtitles.
 def fix_subtitles_no_language(self):
     if 'language' not in self.parts and 'subtitles' in self.parts and \
         isinstance(self.parts['subtitles'], list) and len(self.parts['subtitles']) > 1:
