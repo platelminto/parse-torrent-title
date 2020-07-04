@@ -427,6 +427,7 @@
   },
   {
     "container": "MP4",
+    "language": ["Chinese","Japanese"],
     "quality": "HDTV",
     "resolution": "720p",
     "title": "Boku Unmei no Hito desu"
@@ -661,7 +662,7 @@
   {
     "audio": "Dolby Digital",
     "language": ["Italian","English"],
-    "quality": "Blu-ray",
+    "quality": "BDRip",
     "subtitles": "Available",
     "title": "1917"
   },
@@ -1310,5 +1311,338 @@
     "codec": "H.265",
     "quality": "Blu-ray",
     "title": "Casino"
+  },
+  {
+    "audio": "5.1",
+    "quality": "WEB-DL",
+    "title": "Parks and Recreation"
+  },
+  {
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "subtitles": "Available",
+    "title": "The Amazing Spider-Man 2"
+  },
+  {
+    "audio": "Dolby Digital Plus 5.1",
+    "codec": "H.265",
+    "container": "MKV",
+    "title": "Jay And Silent Bob Strike Back"
+  },
+  {
+    "quality": "Blu-ray",
+    "subtitles": "English",
+    "title": "Mother [Madre]"
+  },
+  {
+    "language": "Bengali",
+    "quality": "WEB-DL",
+    "title": "Ridoy Jure"
+  },
+  {
+    "codec": "H.264",
+    "container": "MP4",
+    "language": ["English","Russian"],
+    "subtitles": "Available",
+    "title": "The Deep Blue Sea - Drama"
+  },
+  {
+    "audio": "Dolby TrueHD 5.1",
+    "codec": "H.265",
+    "container": "MKV",
+    "title": "Clerks II"
+  },
+  {
+    "title": "Rustlers on Horseback"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Athlete A"
+  },
+  {
+    "language": "Bengali",
+    "quality": "WEB-DL",
+    "title": "SHAHENSHA"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.264",
+    "network": "Amazon Studios",
+    "subtitles": "English",
+    "title": "Rasbhari"
+  },
+  {
+    "codec": "H.264",
+    "container": "MP4",
+    "quality": "DVD-Rip",
+    "title": "A Walk in the Woods"
+  },
+  {
+    "title": "Treasure Planet"
+  },
+  {
+    "codec": "H.265",
+    "language": ["English","Japanese"],
+    "title": "L.A. Story"
+  },
+  {
+    "codec": "H.265",
+    "title": "Monk"
+  },
+  {
+    "codec": "H.265",
+    "title": "24 Hours In A And E"
+  },
+  {
+    "codec": "H.264",
+    "title": "Stephen Colbert"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "American Masters"
+  },
+  {
+    "codec": "H.265",
+    "title": "The 11th Hour with Brian Williams"
+  },
+  {
+    "audio": "Dual",
+    "codec": "H.265",
+    "subtitles": "English",
+    "title": "Black Lagoon"
+  },
+  {
+    "codec": "H.265",
+    "subtitles": "Available",
+    "title": "One Piece"
+  },
+  {
+    "title": "Shokugeki No Soma"
+  },
+  {
+    "audio": "DTS-HD MA 5.1",
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "title": "Dil Chahta Hai"
+  },
+  {
+    "codec": "H.264",
+    "network": "Amazon Studios",
+    "subtitles": "English",
+    "title": "NOS4A2"
+  },
+  {
+    "codec": "H.265",
+    "subtitles": "Available",
+    "title": "Haikyuu!!"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.264",
+    "size": "2.5GB",
+    "subtitles": "English",
+    "title": "Moothon: The Elder One"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "language": ["Italian","French"],
+    "quality": "Blu-ray",
+    "subtitles": ["Italian","English"],
+    "title": "Doppia Pelle - Le Daim"
+  },
+  {
+    "audio": "DTS-HD MA 5.1",
+    "codec": "H.264",
+    "language": ["Italian","English"],
+    "subtitles": ["Italian","English"],
+    "title": "The Twilight Saga: Breaking Down - Parte 2"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "size": "1.3GB",
+    "subtitles": "English",
+    "title": "The Painted Bird"
+  },
+  {
+    "audio": "DTS-HD MA 5.1",
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "title": "Proximity"
+  },
+  {
+    "codec": "Xvid",
+    "quality": "DSRip",
+    "title": "Soviet Cinema - Provintsialki"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.265",
+    "language": ["Italian","English"],
+    "subtitles": ["Italian","English"],
+    "title": "Just Mercy - Il diritto di opporsi"
+  },
+  {
+    "codec": "H.264",
+    "title": "Mae West Dirty Blonde"
+  },
+  {
+    "language": "English",
+    "subtitles": "Arabic",
+    "title": "The Ottomans: Europe's Muslim Emperors"
+  },
+  {
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "title": "War"
+  },
+  {
+    "codec": "Xvid",
+    "title": "X-Men"
+  },
+  {
+    "codec": "Xvid",
+    "title": "X2 X-Men United"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.264",
+    "size": "1.5GB",
+    "subtitles": "English",
+    "title": "#Yaaram"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "language": ["Italian","Spanish"],
+    "title": "Nessuno sa chi io sono qui-Nadie sabe que estoy aqui"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.264",
+    "language": ["Italian","English"],
+    "title": "L.ultima corve"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.264",
+    "language": ["Italian","English"],
+    "title": "La signora di Shanghai-The lady from Shanghai"
+  },
+  {
+    "language": ["Telugu","Tamil","Hindi","Chinese"],
+    "quality": "Blu-ray",
+    "subtitles": "English",
+    "title": "The Four"
+  },
+  {
+    "audio": "Dual",
+    "codec": "H.264",
+    "network": "Amazon Studios",
+    "size": "1.2GB",
+    "subtitles": "English",
+    "title": "Samrat & Co."
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEB-DL",
+    "title": "Tulips in Spring"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.265",
+    "language": ["English","Spanish"],
+    "network": "Netflix",
+    "size": "950MB",
+    "title": "Adu"
+  },
+  {
+    "codec": "H.264",
+    "resolution": "720p",
+    "title": "When Sparks Fly"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "quality": "WEB-DL",
+    "subtitles": "Available",
+    "title": "The Fxxk-It List"
+  },
+  {
+    "codec": "H.265",
+    "container": "MKV",
+    "title": "The Twilight Saga Breaking Dawn - Part 2"
+  },
+  {
+    "codec": "H.265",
+    "container": "MKV",
+    "quality": "DVD-Rip",
+    "title": "Scooby-Doo Goes Hollywood"
+  },
+  {
+    "audio": "Dolby Digital",
+    "codec": "H.264",
+    "subtitles": "English",
+    "title": "Sarkar 3"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "codec": "H.264",
+    "network": "Amazon Studios",
+    "quality": "WEB-DL",
+    "title": "Jagga Jagravan Joga"
+  },
+  {
+    "codec": "H.264",
+    "container": "MP4",
+    "title": "Sea Monsters"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "subtitles": "English",
+    "title": "Dukhtar"
+  },
+  {
+    "subtitles": "English",
+    "title": "Main Teri Tu Mera"
+  },
+  {
+    "quality": "WEB-DL",
+    "title": "RangiTaranga"
+  },
+  {
+    "codec": "H.265",
+    "quality": "Blu-ray",
+    "title": "McFarland USA"
+  },
+  {
+    "audio": "DTS-HD MA 5.1",
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "title": "Jasper Mall"
+  },
+  {
+    "codec": "H.265",
+    "language": "Japanese",
+    "quality": "Blu-ray",
+    "title": "Lupin III The First"
+  },
+  {
+    "codec": "H.265",
+    "language": "Japanese",
+    "subtitles": "English",
+    "title": "The Rule for a Vagabond"
+  },
+  {
+    "codec": "H.264",
+    "language": "Portuguese",
+    "quality": "Blu-ray",
+    "title": "Cousins"
   }
 ]

@@ -566,6 +566,7 @@
     "language": "Hindi",
     "resolution": "720p",
     "title": "Akira",
+    "upscaled": true,
     "year": 2016
   },
   {
@@ -619,8 +620,8 @@
   {
     "container": "mp4",
     "episode": 7,
-    "episodeName": "Chi Jap",
     "group": "ZhuixinFan",
+    "language": ["Chi","Jap"],
     "quality": "HDTVrip",
     "resolution": "1280X720",
     "title": "Boku Unmei no Hito desu"
@@ -778,6 +779,7 @@
   {
     "codec": "x264",
     "day": 2,
+    "episodeName": "Alicia Keys",
     "month": 4,
     "quality": "HDTV",
     "title": "Stephen Colbert",
@@ -787,6 +789,7 @@
     "codec": "x264",
     "container": "mkv",
     "day": 1,
+    "episodeName": "Jerry Benner",
     "month": 8,
     "quality": "HDTV",
     "resolution": "720p",
@@ -958,7 +961,7 @@
   {
     "audio": "AC3",
     "language": ["ITA","ENG"],
-    "quality": "BluRay",
+    "quality": "BluRay Rip",
     "resolution": "1080p",
     "subtitles": "SUBS",
     "title": "1917",
@@ -993,6 +996,7 @@
     "codec": "x265",
     "group": "SARTRE",
     "quality": "BluRay",
+    "remastered": true,
     "resolution": "1080p",
     "title": "The French Connection",
     "year": 1971
@@ -1207,6 +1211,7 @@
     "codec": "h264",
     "day": 16,
     "encoder": "TGx",
+    "episodeName": "Gwyneth Paltrow",
     "group": "TRUMP",
     "month": 6,
     "quality": "WEB",
@@ -2100,6 +2105,7 @@
     "resolution": "720p",
     "size": "1.4GB",
     "title": "Oolu",
+    "untouched": true,
     "year": 2019
   },
   {
@@ -2182,5 +2188,601 @@
     "resolution": "1080p",
     "title": "Casino",
     "year": 1995
+  },
+  {
+    "audio": "5.1Ch",
+    "quality": "Web-DL",
+    "resolution": "720p",
+    "season": 2,
+    "title": "Parks and Recreation",
+    "website": "zooqle.com"
+  },
+  {
+    "audio": "AAC 5.1",
+    "codec": "x264",
+    "group": "Telly",
+    "language": ["Hindi","English"],
+    "quality": "BluRay",
+    "resolution": "720p",
+    "subtitles": "MSubs",
+    "title": "The Amazing Spider-Man 2",
+    "year": 2014
+  },
+  {
+    "audio": "EAC3 5.1",
+    "bitDepth": 10,
+    "codec": "x265",
+    "container": "mkv",
+    "encoder": "TAoE",
+    "quality": "BDRip",
+    "resolution": "1080p",
+    "title": "Jay And Silent Bob Strike Back",
+    "year": 2001
+  },
+  {
+    "group": "TamilMV",
+    "language": ["Tamil","Hindi","Spanish"],
+    "quality": "BluRay",
+    "resolution": "720p",
+    "size": "950MB",
+    "subtitles": "ESub",
+    "title": "Mother [Madre]",
+    "year": 2016
+  },
+  {
+    "group": "ORG",
+    "language": "Bangla",
+    "quality": "HDRip",
+    "size": "800MB",
+    "title": "Ridoy Jure",
+    "year": 2020
+  },
+  {
+    "codec": "H264",
+    "container": "mp4",
+    "language": ["Eng","Rus"],
+    "resolution": "720p",
+    "subtitles": "Multi",
+    "title": "The Deep Blue Sea - Drama",
+    "year": 2011
+  },
+  {
+    "audio": "TrueHD 5.1",
+    "bitDepth": 10,
+    "codec": "x265",
+    "container": "mkv",
+    "encoder": "TAoE",
+    "quality": "BDRip",
+    "resolution": "1080p",
+    "title": "Clerks II",
+    "year": 2006
+  },
+  {
+    "title": "Rustlers on Horseback",
+    "year": 1950
+  },
+  {
+    "codec": "H264",
+    "encoder": "TGx",
+    "group": "HUZZAH",
+    "quality": "WEB",
+    "resolution": "1080p",
+    "title": "Athlete A",
+    "year": 2020
+  },
+  {
+    "language": "BANGLA",
+    "quality": "HDRIP",
+    "title": "SHAHENSHA",
+    "year": 2020
+  },
+  {
+    "audio": "DD2.0",
+    "codec": "x264",
+    "group": "CineVood",
+    "language": "Hindi",
+    "network": "AMZN",
+    "quality": "WEB-DL",
+    "subtitles": "Esub",
+    "title": "Rasbhari",
+    "year": 2020
+  },
+  {
+    "audio": "AAC",
+    "codec": "X264",
+    "container": "Mp-4",
+    "group": "DSD",
+    "quality": "Dvd-Rip",
+    "resolution": "480p",
+    "title": "A Walk in the Woods",
+    "year": 2015
+  },
+  {
+    "audio": "FLAC",
+    "container": "MKV",
+    "group": "oan",
+    "resolution": "1080p",
+    "title": "Treasure Planet",
+    "year": 2002
+  },
+  {
+    "audio": "AAC 5.1",
+    "codec": "H265",
+    "group": "CalicoSkies",
+    "language": ["EN","JP"],
+    "resolution": "4K",
+    "title": "L.A. Story",
+    "upscaled": true,
+    "year": 1991
+  },
+  {
+    "codec": "x265",
+    "encoder": "eztv",
+    "episode": 14,
+    "group": "MeGusta",
+    "resolution": "1080p",
+    "season": 8,
+    "title": "Monk"
+  },
+  {
+    "codec": "x265",
+    "encoder": "eztv",
+    "episode": 2,
+    "group": "MeGusta",
+    "resolution": "1080p",
+    "season": 21,
+    "title": "24 Hours In A And E"
+  },
+  {
+    "codec": "x264",
+    "day": 23,
+    "encoder": "eztv",
+    "episodeName": "John Bolton",
+    "group": "SORNY",
+    "month": 6,
+    "quality": "HDTV",
+    "resolution": "720p",
+    "title": "Stephen Colbert",
+    "year": 2020
+  },
+  {
+    "codec": "h264",
+    "encoder": "eztv",
+    "episode": 15,
+    "episodeName": "Toni Morrison The Pieces I Am",
+    "group": "LiGATE",
+    "quality": "WEB",
+    "resolution": "720p",
+    "season": 33,
+    "title": "American Masters"
+  },
+  {
+    "codec": "x265",
+    "day": 23,
+    "group": "LM",
+    "month": 6,
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "title": "The 11th Hour with Brian Williams",
+    "year": 2020
+  },
+  {
+    "audio": "Dual-Audio",
+    "bitDepth": 10,
+    "codec": "x265",
+    "encoder": "TGx",
+    "group": "Judas",
+    "resolution": "1080p",
+    "season": [1,2],
+    "subtitles": "Eng",
+    "title": "Black Lagoon"
+  },
+  {
+    "bitDepth": 10,
+    "codec": "x265",
+    "encoder": "TGx",
+    "episode": 927,
+    "group": "Judas",
+    "resolution": "1080p",
+    "subtitles": "Multi",
+    "title": "One Piece"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 1,
+    "group": "Judas",
+    "season": 5,
+    "title": "Shokugeki No Soma"
+  },
+  {
+    "audio": "DTS-HDMA 5.1",
+    "codec": "x264",
+    "group": "Hon3yHD",
+    "language": "Hindi",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Dil Chahta Hai",
+    "year": 2001
+  },
+  {
+    "audio": "AAC",
+    "codec": "x264",
+    "group": "CineVood",
+    "language": ["Hindi","Tamil","Bengali"],
+    "network": "AMZN",
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "subtitles": "Esub",
+    "title": "NOS4A2",
+    "untouched": true,
+    "year": 2019
+  },
+  {
+    "bitDepth": 10,
+    "codec": "x265",
+    "encoder": "TGx",
+    "episode": 1,
+    "group": "Judas",
+    "resolution": "1080p",
+    "season": 4,
+    "subtitles": "Multi",
+    "title": "Haikyuu!!"
+  },
+  {
+    "audio": "DD- 2.0",
+    "codec": "x264",
+    "group": "BonsaiHD",
+    "language": "Malayalam",
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "size": "2.5 GB",
+    "subtitles": "ESub",
+    "title": "Moothon: The Elder One",
+    "untouched": true,
+    "year": 2019
+  },
+  {
+    "audio": "AC3 5.1",
+    "codec": "H264",
+    "group": "MIRCrew",
+    "language": ["Ita","Fre"],
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "subtitles": ["Ita","Eng"],
+    "title": "Doppia Pelle - Le Daim",
+    "year": 2019
+  },
+  {
+    "audio": "DTS HD Masters 5.1",
+    "codec": "H264",
+    "group": "MIRCrew",
+    "language": ["Ita","Eng"],
+    "resolution": "720p",
+    "subtitles": ["Ita","Eng"],
+    "title": "The Twilight Saga: Breaking Down - Parte 2",
+    "year": 2012
+  },
+  {
+    "audio": "DD- 2.0",
+    "codec": "x264",
+    "group": "BonsaiHD",
+    "language": "Interslavic",
+    "quality": "Bluray",
+    "resolution": "720p",
+    "size": "1.3 GB",
+    "subtitles": "ESub",
+    "title": "The Painted Bird",
+    "year": 2019
+  },
+  {
+    "audio": "DTS-HD.MA.5.1",
+    "codec": "X264",
+    "encoder": "TGx",
+    "group": "EVO",
+    "quality": "Bluray",
+    "resolution": "1080p",
+    "title": "Proximity",
+    "year": 2020
+  },
+  {
+    "codec": "XviD",
+    "quality": "SATRip",
+    "title": "Soviet Cinema - Provintsialki",
+    "year": 1990
+  },
+  {
+    "audio": "AC3 5.1",
+    "codec": "H265",
+    "group": "MIRCrew",
+    "language": ["ITA","ENG"],
+    "resolution": "1080p",
+    "subtitles": ["NUita","eng"],
+    "title": "Just Mercy - Il diritto di opporsi",
+    "year": 2019
+  },
+  {
+    "codec": "x264",
+    "documentary": true,
+    "group": "GalaxyRG",
+    "quality": "HDTV",
+    "resolution": "720p",
+    "size": "800MB",
+    "title": "Mae West Dirty Blonde",
+    "year": 2019
+  },
+  {
+    "documentary": true,
+    "encoder": "Etcohod",
+    "language": "eng",
+    "network": "BBC",
+    "subtitles": "ara",
+    "title": "The Ottomans: Europe's Muslim Emperors",
+    "website": "06",
+    "year": 2013
+  },
+  {
+    "codec": "x264",
+    "encoder": "TGx",
+    "group": "Chakra",
+    "limited": true,
+    "quality": "BluRay",
+    "resolution": "720p",
+    "title": "War",
+    "year": 2019
+  },
+  {
+    "codec": "XviD",
+    "group": "B4ND1T69",
+    "quality": "BRRip",
+    "remastered": true,
+    "title": "X-Men",
+    "year": 2000
+  },
+  {
+    "codec": "XviD",
+    "group": "B4ND1T69",
+    "quality": "BRRip",
+    "remastered": true,
+    "title": "X2 X-Men United",
+    "year": 2003
+  },
+  {
+    "audio": "DD- 2.0",
+    "codec": "x264",
+    "directorsCut": true,
+    "group": "BonsaiHD",
+    "hardcoded": true,
+    "language": "Hindi",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "size": "1.5 GB",
+    "subtitles": "ESub",
+    "title": "#Yaaram",
+    "year": 2019
+  },
+  {
+    "audio": "Ac3 5.1",
+    "codec": "H264",
+    "encoder": "ArMor",
+    "language": ["ITA","SPA"],
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "title": "Nessuno sa chi io sono qui-Nadie sabe que estoy aqui",
+    "year": 2020
+  },
+  {
+    "audio": "Ac3 2.0",
+    "codec": "H264",
+    "encoder": "ArMor",
+    "language": ["ITA","ENG"],
+    "quality": "BDRip",
+    "resolution": "1080p",
+    "title": "L.ultima corve",
+    "year": 1973
+  },
+  {
+    "audio": "Ac3 2.0",
+    "codec": "H264",
+    "encoder": "ArMor",
+    "language": ["ITA","ENG"],
+    "quality": "BDRip",
+    "resolution": "1080p",
+    "title": "La signora di Shanghai-The lady from Shanghai",
+    "year": 1947
+  },
+  {
+    "group": "TamilMV",
+    "language": ["Telugu","Tamil","Hindi","Chi"],
+    "quality": "BluRay",
+    "resolution": "720p",
+    "size": "1.1GB",
+    "subtitles": "ESub",
+    "title": "The Four",
+    "year": 2012
+  },
+  {
+    "audio": "2CH",
+    "codec": "x264",
+    "group": "BonsaiHD",
+    "language": "Hindi",
+    "network": "AMZN",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "size": "1.2 GB",
+    "subtitles": "ESub",
+    "title": "Samrat & Co.",
+    "year": 2014
+  },
+  {
+    "codec": "X264",
+    "group": "Solar",
+    "network": "Hallmark",
+    "quality": "HDRip",
+    "resolution": "720p",
+    "title": "Tulips in Spring",
+    "year": 2016
+  },
+  {
+    "audio": "DD- 5.1",
+    "codec": "x265",
+    "group": "BonsaiHD",
+    "language": ["English","spanish"],
+    "network": "NF",
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "size": "950 MB",
+    "title": "Adu",
+    "year": 2020
+  },
+  {
+    "codec": "X264",
+    "group": "Solar",
+    "network": "Hallmark",
+    "quality": "HDTV",
+    "resolution": "720P",
+    "title": "When Sparks Fly",
+    "year": 2014
+  },
+  {
+    "audio": "DD 5.1",
+    "codec": "x264",
+    "group": "MAZE",
+    "language": ["English","Hindi"],
+    "quality": "HDRip",
+    "resolution": "720p",
+    "size": "2GB",
+    "subtitles": "MSub",
+    "title": "The Fxxk-It List",
+    "year": 2020
+  },
+  {
+    "audio": "DTS-HD MA 7.1",
+    "bitDepth": 10,
+    "codec": "x265",
+    "container": "mkv",
+    "encoder": "TAoE",
+    "quality": "BDRip",
+    "resolution": "1080p",
+    "title": "The Twilight Saga Breaking Dawn - Part 2",
+    "year": 2012
+  },
+  {
+    "audio": "AAC 1.0",
+    "bitDepth": 10,
+    "codec": "x265",
+    "container": "mkv",
+    "encoder": "TAoE",
+    "quality": "Dvdrip",
+    "resolution": "1080p",
+    "title": "Scooby-Doo Goes Hollywood",
+    "upscaled": true,
+    "year": 1980
+  },
+  {
+    "audio": "AC3",
+    "codec": "x264",
+    "group": "Telly",
+    "language": "Hindi",
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "subtitles": "ESubs",
+    "title": "Sarkar 3",
+    "year": 2017
+  },
+  {
+    "audio": "DD.2.0",
+    "codec": "AVC",
+    "group": "Dus.IcTv",
+    "network": "AMZN",
+    "quality": "WEB.DL",
+    "resolution": "1080p",
+    "title": "Jagga Jagravan Joga",
+    "year": 2020
+  },
+  {
+    "audio": "AAC",
+    "codec": "x264",
+    "container": "mp4",
+    "episode": 11,
+    "episodeName": "Oceans Most Powerful",
+    "group": "MVGroup.org",
+    "quality": "HDTV",
+    "resolution": "1080p",
+    "season": 2,
+    "title": "Sea Monsters"
+  },
+  {
+    "audio": "DD 5.1",
+    "codec": "x264",
+    "group": "Telly",
+    "language": "Urdu",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "subtitles": "ESubs",
+    "title": "Dukhtar",
+    "year": 2014
+  },
+  {
+    "group": "LMH123",
+    "language": "Punjabi",
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "subtitles": "ESubs",
+    "title": "Main Teri Tu Mera",
+    "year": 2016
+  },
+  {
+    "language": "Kannada",
+    "quality": "HDRip",
+    "resolution": "720p",
+    "title": "RangiTaranga",
+    "year": 2015
+  },
+  {
+    "codec": "x265",
+    "group": "RARBG",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "McFarland USA",
+    "year": 2015
+  },
+  {
+    "audio": "DTS-HD.MA.5.1",
+    "codec": "AVC",
+    "group": "FGT",
+    "quality": "BluRay",
+    "remux": true,
+    "resolution": "1080p",
+    "title": "Jasper Mall",
+    "year": 2020
+  },
+  {
+    "codec": "x265",
+    "group": "VXT",
+    "language": "JAPANESE",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Lupin III The First",
+    "year": 2019
+  },
+  {
+    "codec": "x265",
+    "group": "VXT",
+    "language": "JAPANESE",
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "subtitles": "ENSUBBED",
+    "title": "The Rule for a Vagabond",
+    "year": 1965
+  },
+  {
+    "audio": "AAC",
+    "codec": "H264",
+    "group": "VXT",
+    "language": "PORTUGUESE",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Cousins",
+    "year": 2019
   }
 ]

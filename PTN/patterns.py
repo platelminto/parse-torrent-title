@@ -5,39 +5,43 @@
 # (optional) a string function's name to transform the value after everything (None if
 # to do nothing). The transform can also be a tuple (or list of tuples) with function names
 # and list of arguments.
+# The list of regexes all get matched, but only the first gets added to the returning info,
+# the rest are just matched to be removed from `excess`.
 
 from .extras import *
 
-delimiters = '[\.\s\-\+_\/]'
+delimiters = '[\.\s\-\+_\/()]'
 langs = [('rus(?:sian)?', 'Russian'),
          ('(?:True)?fre?(?:nch)?', 'French'),
-         ('ita(?:liano?)?', 'Italian'),
-         ('castellano|spanish', 'Spanish'),
+         ('(?:nu)?ita(?:liano?)?', 'Italian'),
+         ('castellano|spa(?:nish)?|es', 'Spanish'),
          ('swedish', 'Swedish'),
          ('dk|dan(?:ish)?', 'Danish'),
-         ('german', 'German'),
+         ('ger(?:man)?', 'German'),
          ('nordic', 'Nordic'),
          ('exyu', 'ExYu'),
-         ('chs', 'Chinese'),
+         ('chs|chi(?:nese)?', 'Chinese'),
          ('hin(?:di)?', 'Hindi'),
          ('polish', 'Polish'),
          ('mandarin', 'Mandarin'),
          ('kor(?:ean)?', 'Korean'),
-         ('bengali', 'Bengali'),
+         ('bengali|bangla', 'Bengali'),
          ('kannada', 'Kannada'),
          ('tam(?:il)?', 'Tamil'),
          ('tel(?:ugu)?', 'Telugu'),
          ('marathi', 'Marathi'),
          ('mal(?:ayalam)?', 'Malayalam'),
-         ('japanese', 'Japanese'),
+         ('japanese|ja?p', 'Japanese'),
+         ('interslavic', 'Interslavic'),
+         ('ara(?:bic)?', 'Arabic'),
+         ('urdu', 'Urdu'),
+         ('punjabi', 'Punjabi'),
+         ('portuguese', 'Portuguese'),
          ('en?(?:g(?:lish)?)?', 'English')  # Must be at end, matches just an 'e'
          ]
 
 season_range_pattern = '(?:Complete' + delimiters + '*)?' + delimiters + '*(?:s(?:easons?)?)' + delimiters + \
                        '*(?:s?[0-9]{1,2}[\s]*(?:(?:\-|(?:\s*to\s*))[\s]*s?[0-9]{1,2})+)(?:' + delimiters + '*Complete)?'
-
-lang_list_pattern = r'\b(?:' + link_pattern_options(langs) + '(?:' + delimiters + r'|\b)+)'
-subs_list_pattern = r'\b(?:' + link_pattern_options(langs) + delimiters + '*)'
 
 year_pattern = '(?:19[0-9]|20[0-2])[0-9]'
 month_pattern = '0[1-9]|1[0-2]'
@@ -49,29 +53,41 @@ episode_name_pattern = '((?:[Pp](?:ar)?t' + delimiters + '*[0-9]|[A-Za-z][a-z]*(
 # Forces an order to go by the regexes, as we want this to be deterministic (different
 # orders can generate different matchings). e.g. "doctor_who_2005..." in input.json
 patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', 'quality',
-                    'network', 'codec', 'audio', 'region', 'extended', 'hardcoded', 'proper',
-                    'repack', 'container', 'widescreen', 'website', 'subtitles', 'language',
-                    'sbs', 'unrated', 'size', 'bitDepth', '3d', 'internal', 'readnfo',
-                    'documentary', 'fps', 'hdr']
+                    'codec', 'audio', 'region', 'extended', 'hardcoded', 'proper', 'repack',
+                    'container', 'widescreen', 'website', 'documentary', 'language', 'subtitles',
+                    'sbs', 'unrated', 'size', 'bitDepth', '3d', 'internal', 'readnfo', 'network',
+                    'fps', 'hdr', 'limited', 'remastered', 'directorsCut', 'upscaled', 'untouched',
+                    'remux']
 
 patterns = dict()
-patterns['episode'] = '(?:(?<![a-z])(?:[ex]|ep)(?:[0-9]{1,2}(?:-(?:[ex]|ep)?(?:[0-9]{1,2}))?)(?![0-9])|\s\-\s\d{1,3}\s)'
+patterns['episode'] = ['(?<![a-z])(?:e|ep)(?:[0-9]{1,2}(?:-(?:e|ep)?(?:[0-9]{1,2}))?)(?![0-9])',
+                       # Very specific as it could match too liberally
+                       '\s\-\s\d{1,3}\s',
+                       r'\b[0-9]{1,2}x([0-9]{2})\b'
+                       ]
 patterns['season'] = ['\ss?(\d{1,2})\s\-\s\d{1,2}\s',  # Avoids matching some anime releases season and episode as a season range
+                      r'\b' + season_range_pattern + r'\b',  # Describes season ranges
+                      # Describes season, optionally with complete or episode
+                      r'\b(?:Complete' + delimiters + ')?s([0-9]{1,2})' + link_patterns(patterns['episode']) + r'?\b',
+                      r'\b([0-9]{1,2})x[0-9]{2}\b',  # Describes 5x02, 12x15 type descriptions
                       '[0-9]{1,2}(?:st|nd|rd|th)' + delimiters + 'season',
-                      (r'\b(' + season_range_pattern + '|'  # Describes season ranges
-                     '(?:Complete' + delimiters + ')?s([0-9]{1,2})(?:' + patterns['episode'] + ')?|'  # Describes season, optionally with complete or episode
-                     '([0-9]{1,2})x[0-9]{2}|'  # Describes 5x02, 12x15 type descriptions
-                     '(?:Complete' + delimiters + ')?Season[\. -]([0-9]{1,2})'  # Describes Season.15 type descriptions
-                     r')\b')]
+                      'Series' + delimiters + '\d{1,2}',
+                      r'\b(?:Complete' + delimiters + r')?Season[\. -][0-9]{1,2}\b',  # Describes Season.15 type descriptions
+                      ]
+# The first 4 season regexes won't have 'Part' in them.
+patterns['episode'] += [link_patterns(patterns['season'][4:]) + delimiters + '*P(?:ar)?t' + delimiters + '*(\d{1,3})']
 patterns['year'] = '((' + year_pattern + '))'
-patterns['month'] = '(?:{year}){delimiters}({month}){delimiters}(?:{day})' \
-    .format(delimiters=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)
-patterns['day'] = '(?:{year}){delimiters}(?:{month}){delimiters}({day})' \
-    .format(delimiters=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)
+patterns['month'] = '(?:{year}){d}({month}){d}(?:{day})' \
+    .format(d=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)
+patterns['day'] = '(?:{year}){d}(?:{month}){d}({day})' \
+    .format(d=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)
 patterns['resolution'] = [('([0-9]{3,4}p)', None, 'lower'),
                           ('(1280x720p?)', '720p'),
-                          ('HD', 'HD')]
-patterns['quality'] = [('WEB[ -]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
+                          ('FHD', '1080p'),
+                          ('UHD', 'UHD'),
+                          ('HD', 'HD'),
+                          ('4K', '4K')]
+patterns['quality'] = [('WEB[ -\.]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
                        # Match WEB-DL's first as they can show up with others.
                        ('WEB[ -]?Cap', 'WEBCap'),
                        ('W[EB]B[ -]?(?:Rip)|WEB', 'WEBRip'),
@@ -89,8 +105,8 @@ patterns['quality'] = [('WEB[ -]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
                        ('D?TVRip|DVBRip', 'TVRip'),
                        ('VODR(?:ip)?', 'VODRip'),
                        ('HD-Rip', 'HD-Rip'),
+                       ('Blu-?Ray{d}Rip|BDR(?:ip)?'.format(d=delimiters), 'BDRip'),
                        ('Blu-?Ray', 'Blu-ray'),
-                       ('BD?R(?:ip)|BDR', 'BDRip'),
                        ('BR-?Rip', 'BRRip'),
                        # Match this last as it can show up with others.
                        ('PPV(?:Rip)?', 'Pay-Per-View Rip')]
@@ -100,36 +116,45 @@ patterns['network'] = [('ATVP', 'Apple TV+'),
                         ('NICK', 'Nickelodeon'),
                         ('RED', 'YouTube Premium'),
                         ('DSNY?P', 'Disney Plus'),
-                        ('Hoichoi', 'Hoichoi'),
-                        ('Zee5', 'ZEE5'),
                         ('HMAX', 'HBO Max'),
                         ('HULU', 'Hulu Networks'),
                         ('MS?NBC', 'MSNBC'),
                         ('DCU', 'DC Universe'),
                         ]
-patterns['network'] = suffix_pattern_with(link_pattern_options(patterns['quality']),
-                                           patterns['network'], delimiters)
+patterns['network'] = suffix_pattern_with(link_patterns(patterns['quality']),
+                                          patterns['network'], delimiters)
 # Not all networks always show up just before the quality.
-patterns['network'] += [('BBC', 'BBC')]
+patterns['network'] += [('BBC', 'BBC'),
+                        ('Hoichoi', 'Hoichoi'),
+                        ('Zee5', 'ZEE5'),
+                        ('Hallmark', 'Hallmark')]
 patterns['codec'] = [('xvid', 'Xvid'),
                      ('av1', 'AV1'),
                      ('[hx]\.?264', 'H.264'),
                      ('AVC', 'H.264'),
                      ('[hx]\.?265', 'H.265'),
-                     ('HEVC', 'H.265')]
-patterns['audio'] = [('MP3', None, 'upper'),
-                     ('LiNE', 'LiNE'),
-                     ('1' + delimiters + '?Ch(?:annel)?' + delimiters + '?Audio', 'Mono')
-                     ] + get_channel_audio_options([
+                     ('HEVC', 'H.265'),
+                     ('[h]\.?263', 'H.263')]
+patterns['audio'] = get_channel_audio_options([
     ('TrueHD', 'Dolby TrueHD'),
     ('Atmos', 'Dolby Atmos'),
     ('DD|AC-?3', 'Dolby Digital'),
     ('DDP|E-?AC-?3|EC-3', 'Dolby Digital Plus'),
+    ('DTS{d}?HD(?:{d}?(?:MA|Masters?(?:{d}Audio)?))'.format(d=delimiters), 'DTS-HD MA'),
+    ('DTS{d}?HD'.format(d=delimiters), 'DTS-HD'),
     ('DTS', 'DTS'),
     ('AAC[ \.\-]LC', 'AAC-LC'),
     ('AAC', 'AAC'),
     ('Dual[\- ]Audio', 'Dual')
-]) + ['5.1', ('2.0', 'Dual')]
+]) + [('5.1(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), '5.1'),
+      ('2.0(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?|2CH'.format(d=delimiters), 'Dual'),
+      ('7.1(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), '7.1'),
+      ('1{d}?Ch(?:annel)?(?:{d}?Audio)?'.format(d=delimiters), 'Mono'),
+      ('FLAC', 'FLAC'),
+      ('MP3', None, 'upper'),
+      ('LiNE', 'LiNE'),
+      ('(?:Original|Org)' + delimiters + 'Aud(?:io)?', 'Original')
+      ]
 patterns['region'] = ('R[0-9]', None, 'upper')
 patterns['extended'] = '(EXTENDED(:?.CUT)?)'
 patterns['hardcoded'] = 'HC'
@@ -140,18 +165,26 @@ patterns['container'] = [('MKV|AVI', None, 'upper'),
                           ('MP-?4', 'MP4')]
 patterns['widescreen'] = 'WS'
 patterns['website'] = '^(\[ ?([^\]]+?) ?\])'
-patterns['subtitles'] = ['(?:{delimiters}*)?sub(?:title)?s?{delimiters}*{langs}+'.format(delimiters=delimiters, langs=subs_list_pattern),
-'(?:soft)?{delimiters}*{langs}+(?:(?:m(?:ulti(?:ple)?)?{delimiters}*)?sub(?:title)?s?)'.format(delimiters=delimiters, langs=subs_list_pattern),
+
+lang_list_pattern = r'\b(?:' + link_patterns(langs) + '(?:' + \
+                    delimiters + '+' + link_patterns(patterns['audio']) + ')?' + \
+                    '(?:' + delimiters + r'+|\b))'
+subs_list_pattern = r'\b(?:' + link_patterns(langs) + delimiters + '*)'
+
+patterns['subtitles'] = ['sub(?:title|bed)?s?{d}*{langs}+'.format(d=delimiters, langs=subs_list_pattern),
+                         '(?:soft{d}*)?{langs}+(?:(?:m(?:ulti(?:ple)?)?{d}*)?sub(?:title|bed)?s?)'.format(d=delimiters, langs=subs_list_pattern),
                          # Need a pattern just for subs, and can't just make above regexes * over + as we want
                          # just 'subs' to match last.
-                         '(?:{delimiters}*)?(?<![a-z])(?:m(?:ulti(?:ple)?)?[\.\s\-\+_\/]*)?sub(?:title)?s?{delimiters}*'.format(delimiters=delimiters),
+                         '(?:m(?:ulti(?:ple)?)?{d}*)sub(?:title|bed)?s?'.format(d=delimiters),
+                         '(?:m(?:ulti(?:ple)?)?[\.\s\-\+_\/]*)?sub(?:title|bed)?s?{d}*'.format(d=delimiters),
                         ]
 # Language takes precedence over subs when ambiguous - if we have a lang match, and
 # then a subtitles match starting with subs, the first langs are languages, and the
 # rest will be left as subtitles. Otherwise, don't match if there are subtitles matches
 # after the langs.
-patterns['language'] = ['(' + lang_list_pattern + '+)(?=' + patterns['subtitles'][0] + ')',
-                        '(?:' + lang_list_pattern + '+)(?!' + link_pattern_options(patterns['subtitles']) + ')'
+patterns['language'] = ['(' + lang_list_pattern + '+)(?:' + delimiters + '*' + patterns['subtitles'][0] + ')',
+                        '(' + lang_list_pattern + '+)' + '' + '(?!' + delimiters + '*' + link_patterns(patterns['subtitles']) + ')',
+                        '(' + lang_list_pattern + '+)(?:' + delimiters + '*' + patterns['subtitles'][2] + ')',
                         ]
 patterns['sbs'] = [('Half-SBS', 'Half SBS'),
                    ('SBS', None, 'upper')]
@@ -162,7 +195,13 @@ patterns['3d'] = '3D'
 patterns['internal'] = 'iNTERNAL'
 patterns['readnfo'] = 'READNFO'
 patterns['hdr'] = 'HDR'
-patterns['documentary'] = 'DOCU'
+patterns['documentary'] = 'DOCU(?:menta?ry)?'
+patterns['limited'] = 'LIMITED'
+patterns['remastered'] = 'REMASTERED'
+patterns['directorsCut'] = 'DC'
+patterns['upscaled'] = '(?:AI{d}*)?upscaled?'.format(d=delimiters)
+patterns['untouched'] = 'untouched'
+patterns['remux'] = 'REMUX'
 
 types = {
     'season': 'integer',
@@ -182,5 +221,11 @@ types = {
     'internal': 'boolean',
     'readnfo': 'boolean',
     'documentary': 'boolean',
-    'hdr': 'boolean'
+    'hdr': 'boolean',
+    'limited': 'boolean',
+    'remastered': 'boolean',
+    'directorsCut': 'boolean',
+    'upscaled': 'boolean',
+    'untouched': 'boolean',
+    'remux': 'boolean',
 }

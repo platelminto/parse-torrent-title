@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+# Helper functions for patterns.py
+
+
 # Some titles just can't be parsed without breaking everything else, so here
 # are known those known exceptions. They are executed when the parsed_title and
 # incorrect_parse match within a .parse() dict, removing the latter, and replacing
@@ -25,10 +28,12 @@ exceptions = [
 # Patterns that should only try to be matched after the 'title delimiter', either a year
 # or a season. So if we have a language in the title it won't cause issues by getting matched.
 # Empty list indicates to always do so, as opposed to matching specific regexes.
-patterns_ignore_title = [('language', []), ('audio', ['LiNE'])]
+patterns_ignore_title = {'language': [], 'audio': ['LiNE'], 'network': ['Hallmark'],
+                         'untouched': [], 'internal': [], 'limited': [],
+                         'proper': [], 'extended': []}
 
 
-channels = [(2, 0), (5, 1), (7, 1)]
+channels = [(1, 0), (2, 0), (5, 1), (7, 1)]
 
 
 # Return tuple with regexes for audio name with appended channel types, and without any channels
@@ -37,7 +42,7 @@ def get_channel_audio_options(patterns_with_names):
     options = list()
     for (audio_pattern, name) in patterns_with_names:
         for (speakers, subwoofers) in channels:
-            options.append(('((?:{}){}*{}[. \-]?{})'.format(audio_pattern, delimiters, speakers, subwoofers),
+            options.append(('((?:{}){}*{}[. \-]?{}(?:ch)?)'.format(audio_pattern, delimiters, speakers, subwoofers),
                 '{} {}.{}'.format(name, speakers, subwoofers)))
         options.append(('({})'.format(audio_pattern), name))  # After for loop, would match first
 
@@ -86,9 +91,9 @@ def suffix_pattern_with(suffixes, pattern_options, between='', optional=False):
 
 # Link a regex-tuple list into a single regex (to be able to use elsewhere while
 # maintaining standardisation functionality).
-def link_pattern_options(pattern_options):
+def link_patterns(pattern_options):
     if not isinstance(pattern_options, list):
         return pattern_options
     return '(?:' + \
            '|'.join([pattern_option[0] if isinstance(pattern_option, tuple) else pattern_option for pattern_option in pattern_options]) + \
-            ')'
+           ')'
