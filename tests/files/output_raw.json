@@ -2795,5 +2795,48 @@
     "resolution": "1080p",
     "title": "Cousins",
     "year": 2019
+  },
+  {
+    "quality": "BrRip",
+    "resolution": "720p",
+    "title": "Easy Rider",
+    "year": 1969
+  },
+  {
+    "audio": "DD+5.1",
+    "codec": "x264",
+    "group": "TamilMV",
+    "language": "Hindi",
+    "quality": "HDRip",
+    "resolution": "720p",
+    "size": "1.3GB",
+    "subtitles": "ESub",
+    "title": "PENALTY",
+    "year": 2019
+  },
+  {
+    "audio": "Dual-Audio",
+    "codec": "x264",
+    "language": "Hindi",
+    "quality": "HDRip",
+    "resolution": "720p",
+    "title": "Wasp Network",
+    "year": 2019
+  },
+  {
+    "group": "DQLDR",
+    "quality": "BRRIP",
+    "resolution": "576p",
+    "title": "The Gentlemen",
+    "year": 2019
+  },
+  {
+    "codec": "h264",
+    "encoder": "TGx",
+    "episode": 1,
+    "group": "WEBTUBE",
+    "quality": "WEB",
+    "season": 1,
+    "title": "Nicos Menu Mission"
   }
 ]

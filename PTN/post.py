@@ -36,7 +36,7 @@ def try_encoder_before_group(self, unmatched):
     if match:
         found_match = None
         for m in match:
-            full_title_match = re.search(r'[\s\-](' + re.escape(m) + ')(?:$|\.' + link_patterns(patterns['container']) + ')', self.torrent_name, re.IGNORECASE)
+            full_title_match = re.search(r'[\s\-](' + re.escape(m) + ')(?:\.' + link_patterns(patterns['container']) + ')?$', self.torrent_name, re.I)
             if full_title_match:
                 found_match = full_title_match
                 break
@@ -124,8 +124,9 @@ def fix_subtitles_no_language(self):
 
 
 # Language matches, to support multi-language releases that have the audio with each
-# language, will contain audio info. We remove non-lang matching items from this list.
-def fix_audio_in_language(self):
+# language, will contain audio info (or simply extra strings like 'dub').
+# We remove non-lang matching items from this list.
+def filter_non_languages(self):
     if 'language' in self.parts and isinstance(self.parts['language'], list):
         languages = list(self.parts['language'])
         for lang in self.parts['language']:
@@ -145,5 +146,5 @@ post_processing_after_excess = [
     try_encoder,
     fix_same_subtitles_language_match,
     fix_subtitles_no_language,
-    fix_audio_in_language,
+    filter_non_languages,
 ]

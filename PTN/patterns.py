@@ -170,7 +170,7 @@ patterns['widescreen'] = 'WS'
 patterns['website'] = '^(\[ ?([^\]]+?) ?\])'
 
 lang_list_pattern = r'\b(?:' + link_patterns(langs) + '(?:' + \
-                    delimiters + '+' + link_patterns(patterns['audio']) + ')?' + \
+                    delimiters + '+(?:dub|' + link_patterns(patterns['audio']) + '))?' + \
                     '(?:' + delimiters + r'+|\b))'
 subs_list_pattern = r'\b(?:' + link_patterns(langs) + delimiters + '*)'
 

@@ -1645,5 +1645,31 @@
     "language": "Portuguese",
     "quality": "Blu-ray",
     "title": "Cousins"
+  },
+  {
+    "quality": "BRRip",
+    "title": "Easy Rider"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "quality": "WEB-DL",
+    "subtitles": "English",
+    "title": "PENALTY"
+  },
+  {
+    "audio": "Dual",
+    "codec": "H.264",
+    "quality": "WEB-DL",
+    "title": "Wasp Network"
+  },
+  {
+    "quality": "BRRip",
+    "title": "The Gentlemen"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Nicos Menu Mission"
   }
 ]
