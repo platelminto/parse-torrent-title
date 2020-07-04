@@ -31,7 +31,7 @@ Requirements are **optional**. That being said, the `regex` library increases pe
 $ pip install -r requirements.txt
 ```
 
-With Python 3, the default `re` module is faster than `regex`, so will always use it regardless of installed requirements.
+With Python 3, the default `re` module is faster than `regex`, so it will always be used regardless of installed requirements.
 
 ## Why?
 
