@@ -31,7 +31,7 @@ Requirements are **optional**. That being said, the `regex` library increases pe
 $ pip install -r requirements.txt
 ```
 
-Python 3 is entirely unaffected by this, and has no requirements.
+With Python 3, the default `re` module is faster than `regex`, so will always use it regardless of installed requirements.
 
 ## Why?
 
@@ -175,7 +175,7 @@ Below are the additions that have been made to [/u/divijbindlish's original repo
 - Added multi-episode support.
 - Improved support for anime tv releases.
 - Improved support for Indian releases.
-- Added various fields (see field list below).
+- Added various fields (see field list above).
 - Added proper subtitle support.
 - Added proper support for matching episode names.
 - Added support for full `YYYY-MM-DD`-type dates, usually useful for daily shows that otherwise have no episode name.
