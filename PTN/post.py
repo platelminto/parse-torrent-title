@@ -9,8 +9,8 @@ from .patterns import episode_name_pattern, patterns, langs
 
 
 # Before excess functions (before we split what was unmatched in the title into a list).
-# They all take in an argument representing this leftover, and must return it minus
-# what they used, in addition to the parse object.
+# They all take in the parse object and what was unmatched, and must return the latter minus
+# what they used.
 
 
 def try_episode_name(self, unmatched):
@@ -24,7 +24,7 @@ def try_episode_name(self, unmatched):
         if match:
             match_s, match_e = match.start(len(match.groups())), match.end(len(match.groups()))
             match = match.groups()[-1]
-            self._part('episodeName', (match_s, match_e), match, self._clean_string(match))
+            self._part('episodeName', (match_s, match_e), self._clean_string(match))
             unmatched = unmatched.replace(match, '')
     return unmatched
 
@@ -32,6 +32,7 @@ def try_episode_name(self, unmatched):
 post_processing_before_excess = [
     try_episode_name,
 ]
+
 
 # After excess functions take in just the parse object, and shouldn't return anything.
 
@@ -45,22 +46,12 @@ def try_group(self):
 
     if excess:
         group = excess.pop()
-        self._part('group', None, group, group)
+        self._part('group', None, group)
 
     if not excess:
         self.parts.pop('excess')
     else:
-        self._part('excess', None, None, excess, overwrite=True)
-
-
-def fix_group_container(self):
-    # clean group name from having a container name
-    if 'group' in self.parts and 'container' in self.parts:
-        group = self.parts['group']
-        container = self.parts['container']
-        if group.lower().endswith('.' + container.lower()):
-            group = group[:-(len(container) + 1)]
-            self._part('group', None, group, group, overwrite=True)
+        self._part('excess', None, excess, overwrite=True)
 
 
 def try_encoder(self):
@@ -74,17 +65,32 @@ def try_encoder(self):
             raw = match[0]
             if match:
                 if not re.match(r'[\[\],.+\-]*\Z', match[1], re.IGNORECASE):
-                    self._part('encoder', None, raw, match[1])
-                self._part('group', None, group.replace(raw, ''), group.replace(raw, ''), overwrite=True)
+                    self._part('encoder', None, match[1])
+                self._part('group', None, group.replace(raw, ''), overwrite=True)
                 if not self.parts['group'].strip():
                     self.parts.pop('group')
 
 
+# If this match starts like the language one did, the only match for language
+# and subtitles is a list of langs directly followed by a subs-string. When this
+# is true, they would both match on it, but what it likely means is that all the
+# langs are language, and the subs string just indicates the existance of subtitles.
+# (e.g. Ita.Eng.MSubs would match Ita and Eng for language and subs - this makes
+# subs only become MSubs, and leaves language as Ita and Eng)
+def fix_same_subtitles_language_match(self):
+    if 'language' in self.part_slices and 'subtitles' in self.part_slices and \
+        self.part_slices['language'][0] == self.part_slices['subtitles'][0]:
+        subs = self.parts['subtitles'][-1]
+        if self.standardise:
+            subs = 'Available'
+        self._part('subtitles', None, subs, overwrite=True)
+
+
 def fix_subtitles_no_language(self):
     if 'language' not in self.parts and 'subtitles' in self.parts and \
-        (len(self.parts['subtitles']) if isinstance(self.parts['subtitles'], list) else 0) > 1:
-        self._part('language', None, None, self.parts['subtitles'][0])
-        self._part('subtitles', None, None, self.parts['subtitles'][1:], overwrite=True)
+        isinstance(self.parts['subtitles'], list) and len(self.parts['subtitles']) > 1:
+        self._part('language', None, self.parts['subtitles'][0])
+        self._part('subtitles', None, self.parts['subtitles'][1:], overwrite=True)
 
 
 # Language matches, to support multi-language releases that have the audio with each
@@ -101,13 +107,13 @@ def fix_audio_in_language(self):
             if not matched:
                 languages.remove(lang)
 
-        self._part('language', None, None, languages, overwrite=True)
+        self._part('language', self.part_slices['language'], languages, overwrite=True)
 
 
 post_processing_after_excess = [
     try_group,
-    fix_group_container,
     try_encoder,
+    fix_same_subtitles_language_match,
     fix_subtitles_no_language,
     fix_audio_in_language,
 ]
