@@ -28,10 +28,12 @@ exceptions = [
 # Patterns that should only try to be matched after the 'title delimiter', either a year
 # or a season. So if we have a language in the title it won't cause issues by getting matched.
 # Empty list indicates to always do so, as opposed to matching specific regexes.
-patterns_ignore_title = [('language', []), ('audio', ['LiNE'])]
+patterns_ignore_title = {'language': [], 'audio': ['LiNE'], 'network': ['Hallmark'],
+                         'untouched': [], 'internal': [], 'limited': [],
+                         'proper': [], 'extended': []}
 
 
-channels = [(2, 0), (5, 1), (7, 1)]
+channels = [(1, 0), (2, 0), (5, 1), (7, 1)]
 
 
 # Return tuple with regexes for audio name with appended channel types, and without any channels
