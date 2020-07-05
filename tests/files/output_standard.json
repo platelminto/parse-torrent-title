@@ -1671,5 +1671,37 @@
     "codec": "H.264",
     "quality": "WEBRip",
     "title": "Nicos Menu Mission"
+  },
+  {
+    "codec": "H.264",
+    "title": "If Loving You Is Wrong"
+  },
+  {
+    "title": "Digimon Adventure"
+  },
+  {
+    "title": "Kavali"
+  },
+  {
+    "codec": "H.264",
+    "container": "MKV",
+    "language": ["Italian","English"],
+    "quality": "AHDTV",
+    "title": "Gangs Of London"
+  },
+  {
+    "codec": "H.264",
+    "container": "MKV",
+    "language": ["Italian","English"],
+    "quality": "Blu-ray",
+    "title": "Fear the Walking Dead"
+  },
+  {
+    "codec": "H.264",
+    "title": "2nd Chance Charlie"
+  },
+  {
+    "codec": "H.264",
+    "title": "Police Ten 7"
   }
 ]

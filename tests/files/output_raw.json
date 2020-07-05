@@ -1256,6 +1256,7 @@
     "audio": "AAC",
     "codec": "x264",
     "container": "mkv",
+    "encoder": "78481C9C",
     "episode": 8,
     "resolution": "1080p",
     "size": "1.4 GB",
@@ -2838,5 +2839,73 @@
     "quality": "WEB",
     "season": 1,
     "title": "Nicos Menu Mission"
+  },
+  {
+    "codec": "x264",
+    "encoder": "eztv",
+    "episode": 11,
+    "episodeName": "I Need A Hero",
+    "group": "mSD",
+    "resolution": "480p",
+    "season": 5,
+    "title": "If Loving You Is Wrong"
+  },
+  {
+    "encoder": "TGx",
+    "episode": 5,
+    "group": "Judas",
+    "season": 1,
+    "title": "Digimon Adventure",
+    "year": 2020
+  },
+  {
+    "group": "MovCr",
+    "language": "Hindi",
+    "resolution": "720p",
+    "size": "450MB",
+    "title": "Kavali",
+    "year": 2020
+  },
+  {
+    "codec": "x264",
+    "container": "mkv",
+    "episode": 1,
+    "group": "Morpheus",
+    "language": ["ITA","ENG"],
+    "quality": "AHDTVMux",
+    "resolution": "1080p",
+    "season": 1,
+    "title": "Gangs Of London"
+  },
+  {
+    "codec": "x264",
+    "container": "mkv",
+    "episode": 9,
+    "episodeName": "Canale 4",
+    "group": "MeM",
+    "language": ["ITA","ENG"],
+    "quality": "Bluray",
+    "resolution": "1080p",
+    "season": 5,
+    "title": "Fear the Walking Dead"
+  },
+  {
+    "codec": "x264",
+    "encoder": "eztv",
+    "episode": 5,
+    "group": "FiHTV",
+    "quality": "HDTV",
+    "resolution": "720p",
+    "season": 1,
+    "title": "2nd Chance Charlie"
+  },
+  {
+    "codec": "x264",
+    "encoder": "eztv",
+    "episode": 15,
+    "group": "FiHTV",
+    "quality": "HDTV",
+    "season": 27,
+    "title": "Police Ten 7"
   }
 ]

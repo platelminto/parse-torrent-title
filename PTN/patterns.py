@@ -47,7 +47,7 @@ year_pattern = '(?:19[0-9]|20[0-2])[0-9]'
 month_pattern = '0[1-9]|1[0-2]'
 day_pattern = '[0-2][0-9]|3[01]'
 
-episode_name_pattern = '((?:[Pp](?:ar)?t' + delimiters + '*[0-9]|[A-Za-z][a-z]*(?:' + delimiters + \
+episode_name_pattern = '((?:[Pp](?:ar)?t' + delimiters + '*[0-9]|(?:[A-Za-z]|[0-9])[a-z]*(?:' + delimiters + \
                        '|$))+)'
 pre_group_encoder_pattern = '[^\s\.\[\]\-\(\)]+\)\s{0,2}\[[^\s\-]+\]|[^\s\.\[\]\-\(\)]+\s{0,2}(?:-\s)?[^\s\.\[\]\-]+$'
 
@@ -64,7 +64,8 @@ patterns = dict()
 patterns['episode'] = ['(?<![a-z])(?:e|ep)(?:[0-9]{1,2}(?:-(?:e|ep)?(?:[0-9]{1,2}))?)(?![0-9])',
                        # Very specific as it could match too liberally
                        '\s\-\s\d{1,3}\s',
-                       r'\b[0-9]{1,2}x([0-9]{2})\b'
+                       r'\b[0-9]{1,2}x([0-9]{2})\b',
+                       r'\bepisod(?:e|io)' + delimiters + r'\d{1,2}\b',
                        ]
 patterns['season'] = ['\ss?(\d{1,2})\s\-\s\d{1,2}\s',  # Avoids matching some anime releases season and episode as a season range
                       r'\b' + season_range_pattern + r'\b',  # Describes season ranges
@@ -102,6 +103,7 @@ patterns['quality'] = [('WEB[ -\.]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
                        ('DVDR|DVD-Full|Full-rip', 'DVD-R'),
                        ('PDTV|DVBRip', 'PDTV'),
                        ('DSR(?:ip)?|SATRip|DTHRip', 'DSRip'),
+                       ('AHDTV(?:Mux)?', 'AHDTV'),
                        ('HDTV(?:Rip)?', 'HDTV'),
                        ('D?TVRip|DVBRip', 'TVRip'),
                        ('VODR(?:ip)?', 'VODRip'),
@@ -170,7 +172,7 @@ patterns['widescreen'] = 'WS'
 patterns['website'] = '^(\[ ?([^\]]+?) ?\])'
 
 lang_list_pattern = r'\b(?:' + link_patterns(langs) + '(?:' + \
-                    delimiters + '+(?:dub|' + link_patterns(patterns['audio']) + '))?' + \
+                    delimiters + '+(?:dub(?:bed)?|' + link_patterns(patterns['audio']) + '))?' + \
                     '(?:' + delimiters + r'+|\b))'
 subs_list_pattern = r'\b(?:' + link_patterns(langs) + delimiters + '*)'
 
