@@ -10,36 +10,6 @@
 
 from .extras import *
 
-delimiters = '[\.\s\-\+_\/(),]'
-langs = [('rus(?:sian)?', 'Russian'),
-         ('(?:True)?fre?(?:nch)?', 'French'),
-         ('(?:nu)?ita(?:liano?)?', 'Italian'),
-         ('castellano|spa(?:nish)?|es', 'Spanish'),
-         ('swedish', 'Swedish'),
-         ('dk|dan(?:ish)?', 'Danish'),
-         ('ger(?:man)?', 'German'),
-         ('nordic', 'Nordic'),
-         ('exyu', 'ExYu'),
-         ('chs|chi(?:nese)?', 'Chinese'),
-         ('hin(?:di)?', 'Hindi'),
-         ('polish', 'Polish'),
-         ('mandarin', 'Mandarin'),
-         ('kor(?:ean)?', 'Korean'),
-         ('bengali|bangla', 'Bengali'),
-         ('kannada', 'Kannada'),
-         ('tam(?:il)?', 'Tamil'),
-         ('tel(?:ugu)?', 'Telugu'),
-         ('marathi', 'Marathi'),
-         ('mal(?:ayalam)?', 'Malayalam'),
-         ('japanese|ja?p', 'Japanese'),
-         ('interslavic', 'Interslavic'),
-         ('ara(?:bic)?', 'Arabic'),
-         ('urdu', 'Urdu'),
-         ('punjabi', 'Punjabi'),
-         ('portuguese', 'Portuguese'),
-         ('en?(?:g(?:lish)?)?', 'English')  # Must be at end, matches just an 'e'
-         ]
-
 season_range_pattern = '(?:Complete' + delimiters + '*)?' + delimiters + '*(?:s(?:easons?)?)' + delimiters + \
                        '*(?:s?[0-9]{1,2}[\s]*(?:(?:\-|(?:\s*to\s*))[\s]*s?[0-9]{1,2})+)(?:' + delimiters + '*Complete)?'
 
@@ -58,7 +28,7 @@ patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', '
                     'container', 'widescreen', 'website', 'documentary', 'language', 'subtitles',
                     'sbs', 'unrated', 'size', 'bitDepth', '3d', 'internal', 'readnfo', 'network',
                     'fps', 'hdr', 'limited', 'remastered', 'directorsCut', 'upscaled', 'untouched',
-                    'remux', 'internationalCut']
+                    'remux', 'internationalCut', 'genre']
 
 patterns = dict()
 patterns['episode'] = ['(?<![a-z])(?:e|ep)(?:[0-9]{1,2}(?:-(?:e|ep)?(?:[0-9]{1,2}))?)(?![0-9])',
@@ -78,7 +48,7 @@ patterns['season'] = ['\ss?(\d{1,2})\s\-\s\d{1,2}\s',  # Avoids matching some an
                       ]
 # The first 4 season regexes won't have 'Part' in them.
 patterns['episode'] += [link_patterns(patterns['season'][4:]) + delimiters + '*P(?:ar)?t' + delimiters + '*(\d{1,3})']
-patterns['year'] = '((' + year_pattern + '))'
+patterns['year'] = year_pattern
 patterns['month'] = '(?:{year}){d}({month}){d}(?:{day})' \
     .format(d=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)
 patterns['day'] = '(?:{year}){d}(?:{month}){d}({day})' \
@@ -137,7 +107,7 @@ patterns['codec'] = [('xvid', 'Xvid'),
                      ('av1', 'AV1'),
                      ('[hx]\.?264', 'H.264'),
                      ('AVC', 'H.264'),
-                     ('[hx]\.?265', 'H.265'),
+                     ('[hx]\.?265', 'H.265'),  # Separate so if both are present, it won't pollute excess.
                      ('HEVC', 'H.265'),
                      ('[h]\.?263', 'H.263')]
 patterns['audio'] = get_channel_audio_options([
@@ -208,6 +178,8 @@ patterns['upscaled'] = '(?:AI{d}*)?upscaled?'.format(d=delimiters)
 patterns['untouched'] = 'untouched'
 patterns['remux'] = 'REMUX'
 patterns['internationalCut'] = 'International{d}Cut'.format(d=delimiters)
+# Spaces are only allowed before the genre list if after a word boundary or punctuation
+patterns['genre'] = r'\b\s*[\(\-\]]+\s*((?:' + link_patterns(genres) + delimiters + r'?)+)\b'
 
 types = {
     'season': 'integer',

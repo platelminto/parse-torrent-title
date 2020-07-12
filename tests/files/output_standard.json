@@ -1345,7 +1345,7 @@
     "container": "MP4",
     "language": ["English","Russian"],
     "subtitles": "Available",
-    "title": "The Deep Blue Sea - Drama"
+    "title": "The Deep Blue Sea"
   },
   {
     "audio": "Dolby TrueHD 5.1",
@@ -1704,10 +1704,35 @@
     "codec": "H.264",
     "title": "Police Ten 7"
   },
-    {
+  {
     "quality": "WEBRip",
     "audio": "Dual",
     "language": ["Hindi", "Marathi"],
     "title": "Nude"
+  },
+  {
+    "quality": "Blu-ray",
+    "codec": "H.265",
+    "title": "X-men The Last Stand"
+  },
+  {
+    "genre": ["Comedy", "Western"],
+    "title": "The Kissing Bandit"
+  },
+  {
+    "title": "The King of Comedy"
+  },
+  {
+    "genre": "Comedy",
+    "title": "The Mouse on the Moon"
+  },
+  {
+    "codec": "H.264",
+    "audio": "Dolby Digital Plus 2.0",
+    "network": "Amazon Studios",
+    "title": "Romantic Comedy"
+  },
+  {
+    "title": "Sugarfoot"
   }
 ]

@@ -2247,10 +2247,11 @@
   {
     "codec": "H264",
     "container": "mp4",
+    "genre": "Drama",
     "language": ["Eng","Rus"],
     "resolution": "720p",
     "subtitles": "Multi",
-    "title": "The Deep Blue Sea - Drama",
+    "title": "The Deep Blue Sea",
     "year": 2011
   },
   {
@@ -2266,6 +2267,7 @@
     "year": 2006
   },
   {
+    "genre": "Western",
     "title": "Rustlers on Horseback",
     "year": 1950
   },
@@ -2798,6 +2800,7 @@
     "year": 2019
   },
   {
+    "genre": "Drama",
     "quality": "BrRip",
     "resolution": "720p",
     "title": "Easy Rider",
@@ -2916,5 +2919,46 @@
     "language": ["HIN", "MARATHI"],
     "internationalCut": true,
     "title": "Nude"
+  },
+  {
+    "year": 2006,
+    "resolution": "1080p",
+    "quality": "BluRay",
+    "codec": "x265",
+    "audio": "AAC 6.1",
+    "bitDepth": 10,
+    "title": "X-men The Last Stand",
+    "group": "Vyndros"
+  },
+  {
+    "year": 1948,
+    "resolution": "720p",
+    "genre": ["Comedy", "West"],
+    "title": "The Kissing Bandit"
+  },
+  {
+    "year": 1982,
+    "title": "The King of Comedy"
+  },
+  {
+    "year": 1963,
+    "genre": "comedy", 
+    "title": "The Mouse on the Moon"
+  },
+  {
+    "year": 2019,
+    "resolution": "1080p",
+    "quality": "WEBRip",
+    "codec": "x264",
+    "audio": "DDP2.0",
+    "network": "AMZN",
+    "title": "Romantic Comedy",
+    "group": "TEPES",
+    "encoder": "TGx"
+  },
+  {
+    "year": 1951,
+    "genre": ["Action", "Western"],
+    "title": "Sugarfoot"
   }
 ]

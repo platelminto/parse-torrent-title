@@ -131,6 +131,7 @@ PTN.parse('A freakishly cool movie or TV episode', standardise=False)
 * **excess**        *(string, string list)*
 * **extended**      *(boolean)*
 * **fps**           *(integer)*
+* **genre**         *(string, string list)*
 * **group**         *(string)*
 * **hardcoded**     *(boolean)*
 * **hdr**           *(boolean)*
