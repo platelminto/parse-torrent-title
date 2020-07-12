@@ -93,6 +93,7 @@ patterns['network'] = [('ATVP', 'Apple TV+'),
                         ('HULU', 'Hulu Networks'),
                         ('MS?NBC', 'MSNBC'),
                         ('DCU', 'DC Universe'),
+                        ('ID', 'Investigation Discovery'),
                         ]
 patterns['network'] = suffix_pattern_with(link_patterns(patterns['quality']),
                                           patterns['network'], delimiters)
@@ -169,7 +170,7 @@ patterns['bitDepth'] = '(8|10)bits?'
 patterns['3d'] = '3D'
 patterns['internal'] = 'iNTERNAL'
 patterns['readnfo'] = 'READNFO'
-patterns['hdr'] = 'HDR'
+patterns['hdr'] = 'HDR(?:10)?'
 patterns['documentary'] = 'DOCU(?:menta?ry)?'
 patterns['limited'] = 'LIMITED'
 patterns['remastered'] = 'REMASTERED'

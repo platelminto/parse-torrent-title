@@ -1705,18 +1705,18 @@
     "title": "Police Ten 7"
   },
   {
-    "quality": "WEBRip",
     "audio": "Dual",
-    "language": ["Hindi", "Marathi"],
+    "language": ["Hindi","Marathi"],
+    "quality": "WEBRip",
     "title": "Nude"
   },
   {
-    "quality": "Blu-ray",
     "codec": "H.265",
+    "quality": "Blu-ray",
     "title": "X-men The Last Stand"
   },
   {
-    "genre": ["Comedy", "Western"],
+    "genre": ["Comedy","Western"],
     "title": "The Kissing Bandit"
   },
   {
@@ -1727,12 +1727,31 @@
     "title": "The Mouse on the Moon"
   },
   {
-    "codec": "H.264",
     "audio": "Dolby Digital Plus 2.0",
+    "codec": "H.264",
     "network": "Amazon Studios",
     "title": "Romantic Comedy"
   },
   {
     "title": "Sugarfoot"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Valeries Home Cooking"
+  },
+  {
+    "audio": "AAC 2.0",
+    "codec": "H.264",
+    "network": "Investigation Discovery",
+    "title": "American Monster"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "language": ["Italian","English","German","Spanish"],
+    "quality": "DVD-Rip",
+    "subtitles": "Available",
+    "title": "Professor Marston and the Wonder Women"
   }
 ]

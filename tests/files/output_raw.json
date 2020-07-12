@@ -2912,53 +2912,89 @@
     "title": "Police Ten 7"
   },
   {
-    "year": 2018,
-    "resolution": "720p",
-    "quality": "WEB Rip",
     "audio": "Dual Audios",
-    "language": ["HIN", "MARATHI"],
     "internationalCut": true,
-    "title": "Nude"
+    "language": ["HIN","MARATHI"],
+    "quality": "WEB Rip",
+    "resolution": "720p",
+    "title": "Nude",
+    "year": 2018
   },
   {
-    "year": 2006,
-    "resolution": "1080p",
-    "quality": "BluRay",
-    "codec": "x265",
     "audio": "AAC 6.1",
     "bitDepth": 10,
-    "title": "X-men The Last Stand",
-    "group": "Vyndros"
-  },
-  {
-    "year": 1948,
-    "resolution": "720p",
-    "genre": ["Comedy", "West"],
-    "title": "The Kissing Bandit"
-  },
-  {
-    "year": 1982,
-    "title": "The King of Comedy"
-  },
-  {
-    "year": 1963,
-    "genre": "comedy", 
-    "title": "The Mouse on the Moon"
-  },
-  {
-    "year": 2019,
+    "codec": "x265",
+    "group": "Vyndros",
+    "quality": "BluRay",
     "resolution": "1080p",
-    "quality": "WEBRip",
-    "codec": "x264",
-    "audio": "DDP2.0",
-    "network": "AMZN",
-    "title": "Romantic Comedy",
-    "group": "TEPES",
-    "encoder": "TGx"
+    "title": "X-men The Last Stand",
+    "year": 2006
   },
   {
-    "year": 1951,
-    "genre": ["Action", "Western"],
-    "title": "Sugarfoot"
+    "genre": ["Comedy","West"],
+    "resolution": "720p",
+    "title": "The Kissing Bandit",
+    "year": 1948
+  },
+  {
+    "title": "The King of Comedy",
+    "year": 1982
+  },
+  {
+    "genre": "comedy",
+    "title": "The Mouse on the Moon",
+    "year": 1963
+  },
+  {
+    "audio": "DDP2.0",
+    "codec": "x264",
+    "encoder": "TGx",
+    "group": "TEPES",
+    "network": "AMZN",
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "title": "Romantic Comedy",
+    "year": 2019
+  },
+  {
+    "genre": ["Action","Western"],
+    "title": "Sugarfoot",
+    "year": 1951
+  },
+  {
+    "codec": "h264",
+    "encoder": "eztv",
+    "episode": 10,
+    "episodeName": "Lights Camera Eat",
+    "group": "ROBOTS",
+    "internal": true,
+    "quality": "WEB",
+    "resolution": "720p",
+    "season": 11,
+    "title": "Valeries Home Cooking"
+  },
+  {
+    "audio": "AAC2.0",
+    "codec": "x264",
+    "encoder": "eztv",
+    "episode": 6,
+    "episodeName": "My Body",
+    "group": "BOOP",
+    "network": "ID",
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "season": 5,
+    "title": "American Monster"
+  },
+  {
+    "audio": "Ac3 5.1",
+    "codec": "H264",
+    "encoder": "SnakeSPL",
+    "group": "MIRCrew",
+    "language": ["Ita","Eng","Deu","Esp"],
+    "quality": "DVDRip",
+    "subtitles": "Multisub",
+    "title": "Professor Marston and the Wonder Women",
+    "year": 2017
   }
 ]
