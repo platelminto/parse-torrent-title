@@ -1,7 +1,43 @@
 #!/usr/bin/env python
 
-# Helper functions for patterns.py
+# Helper functions and constants for patterns.py
 
+delimiters = '[\.\s\-\+_\/(),]'
+
+langs = [('rus(?:sian)?', 'Russian'),
+         ('(?:True)?fre?(?:nch)?', 'French'),
+         ('(?:nu)?ita(?:liano?)?', 'Italian'),
+         ('castellano|spa(?:nish)?|es', 'Spanish'),
+         ('swedish', 'Swedish'),
+         ('dk|dan(?:ish)?', 'Danish'),
+         ('ger(?:man)?', 'German'),
+         ('nordic', 'Nordic'),
+         ('exyu', 'ExYu'),
+         ('chs|chi(?:nese)?', 'Chinese'),
+         ('hin(?:di)?', 'Hindi'),
+         ('polish', 'Polish'),
+         ('mandarin', 'Mandarin'),
+         ('kor(?:ean)?', 'Korean'),
+         ('bengali|bangla', 'Bengali'),
+         ('kannada', 'Kannada'),
+         ('tam(?:il)?', 'Tamil'),
+         ('tel(?:ugu)?', 'Telugu'),
+         ('marathi', 'Marathi'),
+         ('mal(?:ayalam)?', 'Malayalam'),
+         ('japanese|ja?p', 'Japanese'),
+         ('interslavic', 'Interslavic'),
+         ('ara(?:bic)?', 'Arabic'),
+         ('urdu', 'Urdu'),
+         ('punjabi', 'Punjabi'),
+         ('portuguese', 'Portuguese'),
+         ('en?(?:g(?:lish)?)?', 'English')  # Must be at end, matches just an 'e'
+         ]
+
+genres = [('Sci-?Fi', 'Sci-Fi'),
+          ('Drama', 'Drama'),
+          ('Comedy', 'Comedy'),
+          ('West(?:\.|ern)?', 'Western'),
+          ('Action', 'Action')]
 
 # Some titles just can't be parsed without breaking everything else, so here
 # are known those known exceptions. They are executed when the parsed_title and
@@ -33,12 +69,11 @@ patterns_ignore_title = {'language': [], 'audio': ['LiNE'], 'network': ['Hallmar
                          'proper': [], 'extended': []}
 
 
-channels = [(1, 0), (2, 0), (5, 1), (7, 1)]
+channels = [(1, 0), (2, 0), (5, 1), (6, 1), (7, 1)]
 
 
 # Return tuple with regexes for audio name with appended channel types, and without any channels
 def get_channel_audio_options(patterns_with_names):
-    from .patterns import delimiters
     options = list()
     for (audio_pattern, name) in patterns_with_names:
         for (speakers, subwoofers) in channels:
