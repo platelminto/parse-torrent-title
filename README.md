@@ -53,19 +53,19 @@ parsed is returned in the `excess` field.
 ```py
 PTN.parse('The Walking Dead S05E03 720p HDTV x264-ASAP[ettv]')
 # {
-#     'group': 'ASAP',
+#     'encoder': 'ASAP',
 #     'title': 'The Walking Dead',
 #     'season':  5,
 #     'episode': 3,
 #     'resolution': '720p',
 #     'codec': 'H.264',
 #     'quality': 'HDTV',
-#     'encoder': 'ettv'
+#     'website': 'ettv'
 # }
 
 PTN.parse('Vacancy (2007) 720p Bluray Dual Audio [Hindi + English] ⭐800 MB⭐ DD - 2.0 MSub x264 - Shadow (BonsaiHD)')
 # {
-#     'group': 'BonsaiHD',
+#     'encoder': 'Shadow',
 #     'title': 'Vacancy',
 #     'resolution': '720p',
 #     'codec': 'H.264',
@@ -75,12 +75,13 @@ PTN.parse('Vacancy (2007) 720p Bluray Dual Audio [Hindi + English] ⭐800 MB⭐ 
 #     'language': ['Hindi', 'English'],
 #     'subtitles': 'Available',
 #     'size': 800MB,
-#     'excess': ['⭐⭐', 'Shadow']
+#     'website': BonsaiHD
+#     'excess': '⭐⭐'
 # }
 
 PTN.parse('Deadliest.Catch.S00E66.No.Safe.Passage.720p.AMZN.WEB-DL.DDP2.0.H.264-NTb[TGx]')
 # {
-#     'group': 'NTb',
+#     'encoder': 'NTb',
 #     'title': 'Deadliest Catch',
 #     'resolution': '720p',
 #     'codec': 'H.264',
@@ -90,12 +91,12 @@ PTN.parse('Deadliest.Catch.S00E66.No.Safe.Passage.720p.AMZN.WEB-DL.DDP2.0.H.264-
 #     'episode': 66,
 #     'quality': 'WEB-DL',
 #     'episodeName': 'No Safe Passage',
-#     'encoder': 'TGx'
+#     'website': 'TGx'
 # }
 
 PTN.parse('Z Nation (2014)S01-01-13 (2014) Full Season.XviD - Italian English.Ac3.Sub.ita.eng.MIRCrew')
 # {
-#     'group': '.MIRCrew',
+#     'website': 'MIRCrew',
 #     'title': 'Z Nation',
 #     'season': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
 #     'codec': 'Xvid',
@@ -132,7 +133,6 @@ PTN.parse('A freakishly cool movie or TV episode', standardise=False)
 * **extended**      *(boolean)*
 * **fps**           *(integer)*
 * **genre**         *(string, string list)*
-* **group**         *(string)*
 * **hardcoded**     *(boolean)*
 * **hdr**           *(boolean)*
 * **internal**      *(boolean)*
@@ -164,7 +164,7 @@ PTN.parse('A freakishly cool movie or TV episode', standardise=False)
 
 ## Contributing
 
-Submit a PR on the `dev` branch, including tests for what gets newly matched (if applicable). Please provide input torrent names in `tests/files/input.json` and full output json objects (with `standardise=False`) in `tests/files/output_raw.json` (where the fields `group`, `excess`, and `episodeName` don't have to be included). Also add the standardised output to `tests/files/output_standard.json`, only including fields that are changed, along with `title`.
+Submit a PR on the `dev` branch, including tests for what gets newly matched (if applicable). Please provide input torrent names in `tests/files/input.json` and full output json objects (with `standardise=False`) in `tests/files/output_raw.json` (where the fields `encoder`, `excess`, `website`, and `episodeName` don't have to be included). Also add the standardised output to `tests/files/output_standard.json`, only including fields that are changed, along with `title`.
 
 ## Additions to parse-torrent-name
 
@@ -185,6 +185,7 @@ Below are the additions that have been made to [/u/divijbindlish's original repo
 - Added exceptions list for media with known, non-fixable issues.
 - Expanded and improved matching for various fields.
 - Fixed incorrect parsing of titles containing years.
+- Fixed groups/encoders/websites mixups: a group/encoder is now just called an encoder, and a public tracker site goes under website.
 - Added more tests and cleaned up previous ones.
 
 

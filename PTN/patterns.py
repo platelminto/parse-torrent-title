@@ -19,7 +19,7 @@ day_pattern = '[0-2][0-9]|3[01]'
 
 episode_name_pattern = '((?:[Pp](?:ar)?t' + delimiters + '*[0-9]|(?:[A-Za-z]|[0-9])[a-z]*(?:' + delimiters + \
                        '|$))+)'
-pre_group_encoder_pattern = '[^\s\.\[\]\-\(\)]+\)\s{0,2}\[[^\s\-]+\]|[^\s\.\[\]\-\(\)]+\s{0,2}(?:-\s)?[^\s\.\[\]\-]+$'
+pre_website_encoder_pattern = '[^\s\.\[\]\-\(\)]+\)\s{0,2}\[[^\s\-]+\]|[^\s\.\[\]\-\(\)]+\s{0,2}(?:-\s)?[^\s\.\[\]\-]+$'
 
 # Forces an order to go by the regexes, as we want this to be deterministic (different
 # orders can generate different matchings). e.g. "doctor_who_2005..." in input.json

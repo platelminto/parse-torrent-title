@@ -1,9 +1,9 @@
 [
   {
     "codec": "x264",
-    "encoder": "ettv",
+    "website": "ettv",
     "episode": 3,
-    "group": "ASAP",
+    "encoder": "ASAP",
     "quality": "HDTV",
     "resolution": "720p",
     "season": 5,
@@ -31,7 +31,7 @@
   },
   {
     "codec": "x264",
-    "group": "YIFY",
+    "encoder": "YIFY",
     "quality": "BrRip",
     "resolution": "720p",
     "title": "22 Jump Street",
@@ -41,7 +41,7 @@
     "audio": "DD5.1",
     "codec": "H264",
     "extended": true,
-    "group": "RARBG",
+    "encoder": "RARBG",
     "quality": "WEB-DL",
     "resolution": "1080p",
     "title": "Hercules",
@@ -50,7 +50,7 @@
   {
     "codec": "XViD",
     "extended": true,
-    "group": "juggs",
+    "encoder": "juggs",
     "quality": "HDRip",
     "title": "Hercules",
     "year": 2014
@@ -69,7 +69,7 @@
   },
   {
     "codec": "x264",
-    "group": "Ebi",
+    "encoder": "Ebi",
     "quality": "HDTV",
     "title": "UFC 179"
   },
@@ -107,9 +107,9 @@
   },
   {
     "codec": "x264",
-    "encoder": "ettv",
+    "website": "ettv",
     "episode": 6,
-    "group": "KILLERS",
+    "encoder": "KILLERS",
     "quality": "HDTV",
     "season": 2,
     "title": "Marvels Agents of S.H.I.E.L.D."
@@ -123,7 +123,7 @@
     "audio": "DD5.1",
     "codec": "H.264",
     "episode": 3,
-    "group": "Cyphanix",
+    "encoder": "Cyphanix",
     "quality": "WEB-DL",
     "resolution": "1080p",
     "season": 5,
@@ -235,7 +235,7 @@
   },
   {
     "codec": "x264",
-    "encoder": "eztv",
+    "website": "eztv",
     "episode": 1,
     "quality": "HDTV",
     "repack": true,
@@ -346,10 +346,10 @@
   },
   {
     "codec": "x264",
-    "encoder": "rartv",
+    "website": "rartv",
     "episode": 11,
     "episodeName": "Dark Water",
-    "group": "FoV",
+    "encoder": "FoV",
     "quality": "HDTV",
     "resolution": "720p",
     "season": 8,
@@ -437,7 +437,7 @@
     "codec": "x264",
     "episode": 12,
     "episodeName": "death in heaven",
-    "group": "fov",
+    "encoder": "fov",
     "quality": "hdtv",
     "resolution": "720p",
     "season": 8,
@@ -470,7 +470,7 @@
   {
     "codec": "X264",
     "episode": 7,
-    "group": "DIMENSION",
+    "encoder": "DIMENSION",
     "quality": "HDTV",
     "resolution": "720p",
     "season": 7,
@@ -515,7 +515,7 @@
   },
   {
     "codec": "x264",
-    "encoder": "PRiME",
+    "website": "PRiME",
     "quality": "BDRip",
     "title": "Red Sonja Queen Of Plagues",
     "year": 2016
@@ -553,8 +553,8 @@
   },
   {
     "codec": "x264",
-    "encoder": "PRiME",
-    "group": "W4F",
+    "website": "PRiME",
+    "encoder": "W4F",
     "internal": true,
     "quality": "DVDRip",
     "title": "Return To Snowy River",
@@ -585,7 +585,7 @@
   },
   {
     "codec": "x264",
-    "group": "RAPiDCOWS",
+    "encoder": "RAPiDCOWS",
     "quality": "BluRay",
     "resolution": "720p",
     "season": 1,
@@ -602,7 +602,7 @@
   },
   {
     "codec": "x264",
-    "group": "GECKOS",
+    "encoder": "GECKOS",
     "quality": "BluRay",
     "resolution": "1080p",
     "season": [1,2,3,4,5,6,7,8,9],
@@ -610,7 +610,7 @@
   },
   {
     "codec": "x264",
-    "group": "Scene",
+    "encoder": "Scene",
     "quality": "HDTV",
     "resolution": "720p",
     "season": 3,
@@ -620,7 +620,7 @@
   {
     "container": "mp4",
     "episode": 7,
-    "group": "ZhuixinFan",
+    "encoder": "ZhuixinFan",
     "language": ["Chi","Jap"],
     "quality": "HDTVrip",
     "resolution": "1280X720",
@@ -629,7 +629,7 @@
   {
     "audio": "DTS5.1",
     "codec": "x264",
-    "group": "TWA",
+    "encoder": "TWA",
     "language": "NORDiC",
     "quality": "BluRay",
     "resolution": "720p",
@@ -659,7 +659,7 @@
   },
   {
     "codec": "XviD",
-    "group": "Rezar1337",
+    "encoder": "Rezar1337",
     "language": "SWEDiSH",
     "quality": "DVDRip",
     "season": 2,
@@ -718,7 +718,7 @@
   {
     "audio": "AAC",
     "codec": "x264",
-    "encoder": "GWC",
+    "website": "GWC",
     "quality": "BRRip",
     "season": 1,
     "subtitles": "E",
@@ -848,10 +848,10 @@
   },
   {
     "codec": "x264",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 0,
     "episodeName": "Coyotes Journal Coyote And His Faithful Crew",
-    "group": "ROBOTS",
+    "encoder": "ROBOTS",
     "internal": true,
     "quality": "WEB",
     "season": 1,
@@ -881,7 +881,7 @@
   },
   {
     "codec": "H264",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 16,
     "quality": "WEB",
     "season": 6,
@@ -905,8 +905,8 @@
   },
   {
     "codec": "x264",
-    "encoder": "EtHD",
-    "group": "BARGAiN",
+    "website": "EtHD",
+    "encoder": "BARGAiN",
     "quality": "BluRay",
     "resolution": "1080p",
     "title": "Dag Vreemde Man",
@@ -914,8 +914,8 @@
   },
   {
     "codec": "x264",
-    "encoder": "EtHD",
-    "group": "BARGAiN",
+    "website": "EtHD",
+    "encoder": "BARGAiN",
     "quality": "BluRay",
     "resolution": "1080p",
     "title": "Boi",
@@ -923,7 +923,7 @@
   },
   {
     "codec": "x264",
-    "group": "GalaxyRG",
+    "encoder": "GalaxyRG",
     "network": "AMZN",
     "quality": "WEBRip",
     "resolution": "720p",
@@ -933,9 +933,9 @@
   },
   {
     "codec": "h264",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": [1,2],
-    "group": "FaiLED",
+    "encoder": "FaiLED",
     "quality": "WEB",
     "resolution": "720p",
     "season": 3,
@@ -943,8 +943,8 @@
   },
   {
     "codec": "x264",
-    "encoder": "TGx",
-    "group": "SHADOW",
+    "website": "TGx",
+    "encoder": "SHADOW",
     "quality": "HDRip",
     "title": "The Hand Bag",
     "year": 2020
@@ -969,7 +969,7 @@
   },
   {
     "codec": "x264",
-    "encoder": "YTS.AG",
+    "website": "YTS.AG",
     "quality": "BluRay",
     "resolution": "1080p",
     "title": "Johnny English",
@@ -977,7 +977,7 @@
   },
   {
     "codec": "x264",
-    "encoder": "MovieOW",
+    "website": "MovieOW",
     "quality": "BRRip",
     "resolution": "1080p",
     "title": "Johnny English Reborn",
@@ -985,7 +985,7 @@
   },
   {
     "codec": "x264",
-    "encoder": "YTS.AM",
+    "website": "YTS.AM",
     "quality": "BluRay",
     "resolution": "1080p",
     "title": "Johnny English Strikes Again",
@@ -994,7 +994,7 @@
   {
     "audio": "EAC3",
     "codec": "x265",
-    "group": "SARTRE",
+    "encoder": "SARTRE",
     "quality": "BluRay",
     "remastered": true,
     "resolution": "1080p",
@@ -1003,7 +1003,7 @@
   },
   {
     "codec": "H264",
-    "group": "BONE",
+    "encoder": "BONE",
     "quality": "DVDRip",
     "season": [1,2],
     "title": "The Thin Blue Line",
@@ -1011,15 +1011,15 @@
   },
   {
     "codec": "x264",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 10,
-    "group": "mSD",
+    "encoder": "mSD",
     "resolution": "480p",
     "season": 2,
     "title": "Heavy Rescue 401"
   },
   {
-    "encoder": "TGx",
+    "website": "TGx",
     "resolution": "1080p",
     "title": "Coronation Street",
     "year": 2020
@@ -1027,10 +1027,10 @@
   {
     "audio": "DDP2.0",
     "codec": "H.264",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 66,
     "episodeName": "No Safe Passage",
-    "group": "NTb",
+    "encoder": "NTb",
     "network": "AMZN",
     "quality": "WEB-DL",
     "resolution": "720p",
@@ -1047,10 +1047,10 @@
   },
   {
     "codec": "x264",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 7,
     "episodeName": "Murdered His Mother or Falsely Accused Pt2",
-    "group": "CRiMSON",
+    "encoder": "CRiMSON",
     "quality": "HDTV",
     "season": 1,
     "title": "Accused Guilty or Innocent"
@@ -1059,7 +1059,7 @@
     "audio": "AAC",
     "codec": "X264",
     "container": "Mp-4",
-    "group": "DSD",
+    "encoder": "DSD",
     "quality": "Dvd-Rip",
     "resolution": "480p",
     "title": "The Peacemaker",
@@ -1068,7 +1068,7 @@
   {
     "audio": "Ac3",
     "codec": "H264",
-    "group": "MIRCrew",
+    "encoder": "MIRCrew",
     "language": ["ita","eng"],
     "resolution": "720p",
     "subtitles": ["ita","eng"],
@@ -1078,7 +1078,7 @@
   {
     "audio": "AC3 5.1",
     "codec": "H264",
-    "group": "MIRCrew",
+    "encoder": "MIRCrew",
     "language": ["Ita","Eng"],
     "quality": "BluRay",
     "resolution": "1080p",
@@ -1089,7 +1089,7 @@
   {
     "audio": "AAC",
     "codec": "H264",
-    "group": "RARBG",
+    "encoder": "RARBG",
     "quality": "BluRay",
     "resolution": "1080p",
     "title": "Near Death",
@@ -1098,7 +1098,7 @@
   {
     "audio": "AAC",
     "codec": "H264",
-    "group": "RARBG",
+    "encoder": "RARBG",
     "quality": "BluRay",
     "resolution": "1080p",
     "title": "The Red Pony",
@@ -1106,7 +1106,7 @@
   },
   {
     "codec": "H265",
-    "group": "BONE",
+    "encoder": "BONE",
     "quality": "BluRay",
     "resolution": "720p",
     "title": "We Were Soldiers",
@@ -1115,7 +1115,7 @@
   {
     "audio": "Ac3-5.1",
     "codec": "H264",
-    "group": "MIRCrew",
+    "encoder": "MIRCrew",
     "language": ["ita","eng"],
     "resolution": "720p",
     "subtitles": ["ita","eng"],
@@ -1125,7 +1125,7 @@
   {
     "audio": "DD2.0",
     "codec": "H264",
-    "group": "Will1869",
+    "encoder": "Will1869",
     "quality": "HDTV",
     "resolution": "1080p",
     "title": "Road House 2 Last Call",
@@ -1135,8 +1135,8 @@
   {
     "audio": "TrueHD.7.1",
     "codec": "x264",
-    "encoder": "TGx",
-    "group": "EVO",
+    "website": "TGx",
+    "encoder": "EVO",
     "quality": "Bluray",
     "resolution": "1080p",
     "title": "We Summon The Darkness",
@@ -1152,7 +1152,7 @@
   },
   {
     "codec": "x264",
-    "group": "USURY",
+    "encoder": "USURY",
     "quality": "BluRay",
     "resolution": "1080p",
     "title": "Non-Fiction",
@@ -1160,15 +1160,15 @@
   },
   {
     "codec": "x264",
-    "encoder": "TGx",
-    "group": "GHOULS",
+    "website": "TGx",
+    "encoder": "GHOULS",
     "quality": "BDRip",
     "title": "Spring Night Summer Night",
     "year": 1967
   },
   {
     "codec": "x264",
-    "group": "GalaxyTV",
+    "encoder": "GalaxyTV",
     "network": "AMZN",
     "quality": "WEBRip",
     "resolution": "720p",
@@ -1178,8 +1178,8 @@
   {
     "codec": "x264",
     "documentary": true,
-    "encoder": "rartv",
-    "group": "W4F",
+    "website": "rartv",
+    "encoder": "W4F",
     "internal": true,
     "quality": "HDTV",
     "title": "Let It Fall Los Angeles 1982-1992",
@@ -1188,8 +1188,8 @@
   {
     "codec": "x264",
     "day": 19,
-    "encoder": "rartv",
-    "group": "W4F",
+    "website": "rartv",
+    "encoder": "W4F",
     "month": 4,
     "quality": "HDTV",
     "resolution": "720p",
@@ -1199,8 +1199,8 @@
   {
     "audio": "DDP5.1",
     "codec": "x264",
-    "encoder": "rartv",
-    "group": "GLUE",
+    "website": "rartv",
+    "encoder": "GLUE",
     "network": "AMZN",
     "quality": "WEBRip",
     "resolution": "1080p",
@@ -1210,9 +1210,9 @@
   {
     "codec": "h264",
     "day": 16,
-    "encoder": "TGx",
+    "website": "TGx",
     "episodeName": "Gwyneth Paltrow",
-    "group": "TRUMP",
+    "encoder": "TRUMP",
     "month": 6,
     "quality": "WEB",
     "resolution": "720p",
@@ -1220,17 +1220,17 @@
     "year": 2020
   },
   {
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 12,
-    "group": "Judas",
+    "encoder": "Judas",
     "season": 1,
     "title": "Kami no Tou"
   },
   {
     "codec": "h264",
     "day": 16,
-    "encoder": "TGx",
-    "group": "WEBTUBE",
+    "website": "TGx",
+    "encoder": "WEBTUBE",
     "month": 6,
     "quality": "WEB",
     "title": "EastEnders",
@@ -1238,17 +1238,17 @@
   },
   {
     "codec": "h264",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 7,
-    "group": "TRUMP",
+    "encoder": "TRUMP",
     "quality": "WEB",
     "season": 2,
     "title": "Lost Gold of World War II"
   },
   {
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 23,
-    "group": "HorribleSubs",
+    "encoder": "HorribleSubs",
     "resolution": "360p",
     "title": "Plunderer"
   },
@@ -1256,7 +1256,7 @@
     "audio": "AAC",
     "codec": "x264",
     "container": "mkv",
-    "encoder": "78481C9C",
+    "website": "78481C9C",
     "episode": 8,
     "resolution": "1080p",
     "size": "1.4 GB",
@@ -1264,16 +1264,16 @@
     "website": "Golumpa"
   },
   {
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 12,
-    "group": "HorribleSubs",
+    "encoder": "HorribleSubs",
     "resolution": "480p",
     "title": "Tower of God"
   },
   {
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 12,
-    "group": "Erai-raws",
+    "encoder": "Erai-raws",
     "resolution": "720p",
     "subtitles": "Multiple",
     "title": "Kami no Tou"
@@ -1281,62 +1281,62 @@
   {
     "bitDepth": 10,
     "codec": "x265",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 23,
-    "group": "Judas",
+    "encoder": "Judas",
     "resolution": "1080p",
     "subtitles": "Eng",
     "title": "Plunderer"
   },
   {
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 12,
-    "group": "HorribleSubs",
+    "encoder": "HorribleSubs",
     "resolution": "360p",
     "title": "Tamayomi"
   },
   {
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 36,
-    "group": "HorribleSubs",
+    "encoder": "HorribleSubs",
     "resolution": "480p",
     "title": "Ahiru no Sora"
   },
   {
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 11,
-    "group": "Erai-raws",
+    "encoder": "Erai-raws",
     "resolution": "720p",
     "subtitles": "Multiple",
     "title": "Shadowverse"
   },
   {
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 11,
-    "group": "HorribleSubs",
+    "encoder": "HorribleSubs",
     "resolution": "360p",
     "title": "A3! Season Spring & Summer"
   },
   {
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 10,
-    "group": "Erai-raws",
+    "encoder": "Erai-raws",
     "resolution": "720p",
     "subtitles": "Multiple",
     "title": "Kitsutsuki Tanteidokoro"
   },
   {
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 11,
-    "group": "Erai-raws",
+    "encoder": "Erai-raws",
     "resolution": "720p",
     "subtitles": "Multiple",
     "title": "Princess Connect! Re-Dive"
   },
   {
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 11,
-    "group": "HorribleSubs",
+    "encoder": "HorribleSubs",
     "resolution": "720p",
     "season": 2,
     "title": "Fruits Basket",
@@ -1345,7 +1345,7 @@
   {
     "audio": "DD- 2.0",
     "codec": "x264",
-    "group": "BonsaiHD",
+    "website": "BonsaiHD",
     "language": "Hindi",
     "network": "SonyLiv",
     "quality": "WEB-DL",
@@ -1359,7 +1359,7 @@
     "audio": "AAC 5.1",
     "bitDepth": 10,
     "codec": "x265",
-    "group": "RONIN",
+    "encoder": "RONIN",
     "quality": "BluRay",
     "resolution": "1080p",
     "title": "Satyagraha",
@@ -1368,18 +1368,19 @@
   {
     "audio": "AAC 5.1",
     "codec": "x264",
-    "group": "Telly",
+    "encoder": "LOKiHD",
     "language": "Hindi",
     "quality": "BluRay",
     "resolution": "720p",
     "subtitles": "MSubs",
     "title": "Shuddh Desi Romance",
+    "website": "Telly",
     "year": 2013
   },
   {
     "audio": "DD5.1",
     "codec": "x264",
-    "group": "TamilMV",
+    "encoder": "TamilMV",
     "language": "Kannada",
     "quality": "HDRip",
     "resolution": "720p",
@@ -1391,7 +1392,7 @@
   {
     "audio": "DD- 5.1",
     "codec": "x264",
-    "group": "BonsaiHD",
+    "website": "BonsaiHD",
     "language": "Hindi",
     "network": "NF",
     "quality": "WEBRip",
@@ -1404,7 +1405,7 @@
   {
     "audio": "DD- 2.0",
     "codec": "x264",
-    "group": "BonsaiHD",
+    "website": "BonsaiHD",
     "language": "Bengali",
     "network": "Hoichoi",
     "quality": "WEB-DL",
@@ -1417,7 +1418,7 @@
   {
     "audio": "DD- 5.1",
     "codec": "x264",
-    "group": "BonsaiHD",
+    "website": "BonsaiHD",
     "language": "Tamil",
     "network": "AMZN",
     "quality": "WEBRip",
@@ -1430,7 +1431,8 @@
   {
     "audio": "AC3",
     "codec": "x264",
-    "group": "Telly",
+    "website": "Telly",
+    "encoder": "LOKiHD",
     "language": "Hindi",
     "quality": "WEBRip",
     "resolution": "1080p",
@@ -1442,7 +1444,7 @@
     "audio": "AAC 5.1",
     "bitDepth": 10,
     "codec": "x265",
-    "group": "RONIN",
+    "encoder": "RONIN",
     "quality": "BluRay",
     "resolution": "1080p",
     "title": "Satyagraha",
@@ -1450,7 +1452,7 @@
   },
   {
     "codec": "x264",
-    "group": "TamilMV",
+    "encoder": "TamilMV",
     "language": ["Tamil","Telugu","Hindi"],
     "proper": true,
     "quality": "HDRip",
@@ -1461,7 +1463,7 @@
   },
   {
     "codec": "x264",
-    "group": "TamilMV",
+    "encoder": "TamilMV",
     "language": ["Telugu","Tamil"],
     "quality": "BR-Rip",
     "size": "450MB",
@@ -1471,7 +1473,7 @@
   },
   {
     "audio": "DD5.1",
-    "group": "TamilMV",
+    "encoder": "TamilMV",
     "language": ["Telugu","Tamil","Hindi"],
     "quality": "BluRay",
     "resolution": "720p",
@@ -1483,19 +1485,20 @@
   {
     "audio": "DTS 5.1",
     "codec": "x264",
-    "group": "Telly",
+    "encoder": "LOKiHD",
     "language": "Hindi",
     "quality": "BluRay",
     "resolution": "720p",
     "subtitles": "MSubs",
     "title": "Detective Byomkesh Bakshy",
+    "website": "Telly",
     "year": 2015
   },
   {
     "audio": "AAC",
     "codec": "x264",
     "container": "mkv",
-    "encoder": "Telly",
+    "website": "Telly",
     "language": "Hindi",
     "quality": "WebRip",
     "resolution": "720p",
@@ -1507,7 +1510,7 @@
     "audio": "AAC 2.0",
     "codec": "AVC",
     "container": "mkv",
-    "group": "Telly",
+    "encoder": "Telly",
     "language": "Hindi",
     "network": "Zee5",
     "quality": "WebDL",
@@ -1519,7 +1522,7 @@
   {
     "audio": "DD 5.1",
     "codec": "x264",
-    "group": "MAZE",
+    "encoder": "MAZE",
     "language": ["Tam","Tel","Mal"],
     "quality": "HDRip",
     "resolution": "720p",
@@ -1529,17 +1532,17 @@
     "year": 2020
   },
   {
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 12,
-    "group": "Erai-raws",
+    "encoder": "Erai-raws",
     "resolution": "720p",
     "title": "Kakushigoto"
   },
   {
     "bitDepth": 10,
     "codec": "x265",
-    "encoder": "TGx",
-    "group": "Judas",
+    "website": "TGx",
+    "encoder": "Judas",
     "resolution": "1080p",
     "season": 1,
     "subtitles": "Eng",
@@ -1548,8 +1551,8 @@
   {
     "audio": "DDP5.1",
     "codec": "x264",
-    "encoder": "TGx",
-    "group": "NTG",
+    "website": "TGx",
+    "encoder": "NTG",
     "language": "JAPANESE",
     "network": "NF",
     "quality": "WEBRip",
@@ -1561,7 +1564,7 @@
     "audio": "dd5.1",
     "codec": "x265",
     "container": "mkv",
-    "group": "rmteam",
+    "encoder": "rmteam",
     "language": "japanese",
     "quality": "bluray",
     "resolution": "1080p",
@@ -1573,7 +1576,7 @@
     "container": "mkv",
     "episode": 13,
     "episodeName": "Il mio amico Grodd",
-    "group": "MeM",
+    "encoder": "MeM",
     "language": ["ITA","ENG"],
     "network": "AMZN",
     "quality": "WEB-DLMux",
@@ -1586,10 +1589,10 @@
   {
     "audio": "DDP5.1",
     "codec": "H264",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 12,
     "episodeName": "Lovers Quarrel",
-    "group": "NTb",
+    "encoder": "NTb",
     "network": "DCU",
     "quality": "WEB-DL",
     "resolution": "1080p",
@@ -1598,10 +1601,10 @@
   },
   {
     "codec": "x264",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 5,
     "episodeName": "Homicide at Home",
-    "group": "CRiMSON",
+    "encoder": "CRiMSON",
     "quality": "HDTV",
     "season": 1,
     "title": "The Killer Truth"
@@ -1610,8 +1613,8 @@
     "audio": "AC3 2.0",
     "bitDepth": 10,
     "codec": "x265",
+    "website": "TAoE",
     "encoder": "Goki",
-    "group": "TAoE",
     "network": "HMAX",
     "quality": "Webrip",
     "resolution": "1080p",
@@ -1621,9 +1624,9 @@
   },
   {
     "codec": "H264",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 4,
-    "group": "DENTiST",
+    "encoder": "DENTiST",
     "quality": "WEB",
     "season": 2,
     "title": "Jamies Super Food"
@@ -1631,10 +1634,10 @@
   {
     "audio": "DDP5.1",
     "codec": "H.264",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 6,
     "episodeName": "Fire and Brimstone",
-    "group": "NTb",
+    "encoder": "NTb",
     "network": "AMZN",
     "quality": "WEB-DL",
     "resolution": "1080p",
@@ -1644,10 +1647,10 @@
   {
     "audio": "DDP5.1",
     "codec": "H.264",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 10,
     "episodeName": "The Last Dance",
-    "group": "NTb",
+    "encoder": "NTb",
     "network": "AMZN",
     "quality": "WEB-DL",
     "resolution": "720p",
@@ -1657,7 +1660,7 @@
   },
   {
     "codec": "x264",
-    "group": "GalaxyTV",
+    "encoder": "GalaxyTV",
     "network": "NF",
     "quality": "WEBRip",
     "resolution": "720p",
@@ -1667,8 +1670,8 @@
   {
     "codec": "x264",
     "day": 16,
-    "encoder": "TGx",
-    "group": "SPORTY",
+    "website": "TGx",
+    "encoder": "SPORTY",
     "language": "German",
     "month": 6,
     "quality": "HDTV",
@@ -1678,7 +1681,7 @@
   },
   {
     "day": 18,
-    "group": "Anon",
+    "encoder": "Anon",
     "month": 6,
     "quality": "WEBDL",
     "resolution": "540p",
@@ -1687,7 +1690,7 @@
   },
   {
     "day": 18,
-    "group": "Anon",
+    "encoder": "Anon",
     "month": 6,
     "quality": "WEBDL",
     "resolution": "540p",
@@ -1696,10 +1699,10 @@
   },
   {
     "codec": "h264",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 3,
     "episodeName": "Major Bonus Room",
-    "group": "ROBOTS",
+    "encoder": "ROBOTS",
     "quality": "WEB",
     "season": 1,
     "title": "Design at Your Door"
@@ -1708,8 +1711,8 @@
     "audio": "AAC2.0",
     "codec": "H.264",
     "day": 18,
-    "encoder": "TGx",
-    "group": "BTW",
+    "website": "TGx",
+    "encoder": "BTW",
     "month": 6,
     "network": "MNBC",
     "quality": "WEB-DL",
@@ -1720,7 +1723,7 @@
   {
     "audio": "AAC",
     "codec": "x264",
-    "encoder": "Telly",
+    "website": "Telly",
     "episode": [1,2,3,4,5,6,7,8,9,10],
     "language": "Hindi",
     "quality": "WebRip",
@@ -1730,7 +1733,7 @@
   },
   {
     "codec": "x264",
-    "group": "GalaxyRG",
+    "encoder": "GalaxyRG",
     "network": "HMAX",
     "quality": "WEBRip",
     "resolution": "720p",
@@ -1741,14 +1744,13 @@
   {
     "audio": "5.1",
     "codec": "x264",
-    "group": "Psyz",
     "resolution": "1080p",
     "title": "Turtle Odyssey",
     "year": 2019
   },
   {
     "codec": "x264",
-    "group": "CAFFEiNE",
+    "encoder": "CAFFEiNE",
     "quality": "WEBRip",
     "season": 1,
     "title": "Still A Mystery"
@@ -1757,8 +1759,8 @@
     "audio": "AC3 2.0",
     "bitDepth": 10,
     "codec": "x265",
+    "website": "QxR",
     "encoder": "Silence",
-    "group": "QxR",
     "quality": "BluRay",
     "resolution": "1080p",
     "title": "When Bjork Met Attenborough",
@@ -1766,7 +1768,7 @@
   },
   {
     "codec": "x264",
-    "group": "GalaxyRG",
+    "encoder": "GalaxyRG",
     "network": "HULU",
     "quality": "WEBRip",
     "resolution": "720p",
@@ -1776,15 +1778,15 @@
   },
   {
     "container": "MP4",
-    "group": "BigJ0554",
+    "encoder": "BigJ0554",
     "subtitles": "subs",
     "title": "Ella Fitzgerald - Just One of Those Things"
   },
   {
     "codec": "x264",
     "documentary": true,
-    "encoder": "TGx",
-    "group": "W4F",
+    "website": "TGx",
+    "encoder": "W4F",
     "quality": "HDTV",
     "title": "Inventing Tomorrow",
     "year": 2018
@@ -1792,17 +1794,17 @@
   {
     "codec": "x264",
     "documentary": true,
-    "encoder": "TGx",
-    "group": "W4F",
+    "website": "TGx",
+    "encoder": "W4F",
     "quality": "HDTV",
     "title": "Eating Up Easter",
     "year": 2018
   },
   {
     "codec": "H264",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 3,
-    "group": "GHOSTS",
+    "encoder": "GHOSTS",
     "proper": true,
     "quality": "WEB",
     "resolution": "720p",
@@ -1813,7 +1815,7 @@
     "audio": "AAC",
     "codec": "x265",
     "container": "mkv",
-    "group": "MVGroup.org",
+    "encoder": "MVGroup.org",
     "network": "BBC",
     "quality": "HDTV",
     "resolution": "1080p",
@@ -1822,7 +1824,7 @@
   {
     "codec": "x264",
     "episode": 6,
-    "group": "Nemo",
+    "encoder": "Nemo",
     "quality": "WEBRip",
     "resolution": "720p",
     "season": 12,
@@ -1830,10 +1832,10 @@
   },
   {
     "codec": "h264",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 20,
     "episodeName": "Opioids Inc",
-    "group": "LiGATE",
+    "encoder": "LiGATE",
     "quality": "WEB",
     "season": 38,
     "title": "Frontline"
@@ -1844,7 +1846,7 @@
     "container": "mkv",
     "episode": 3,
     "episodeName": "Comunisti alieni dal futuro",
-    "group": "MeM",
+    "encoder": "MeM",
     "language": ["ITA","ENG"],
     "network": "AMZN",
     "quality": "WEB-DLMux",
@@ -1855,7 +1857,7 @@
   {
     "audio": "AAC",
     "codec": "x264",
-    "group": "Telly",
+    "encoder": "LOKiHD",
     "language": "Hindi",
     "quality": "WEBRip",
     "resolution": "720p",
@@ -1868,7 +1870,7 @@
     "codec": "x264",
     "container": "mp4",
     "day": 19,
-    "group": "PC",
+    "encoder": "PC",
     "month": 6,
     "quality": "WEBRip",
     "resolution": "720p",
@@ -1877,7 +1879,7 @@
   },
   {
     "codec": "x264",
-    "group": "StB",
+    "encoder": "StB",
     "resolution": "720p",
     "season": 1,
     "subtitles": "MultiSub",
@@ -1886,22 +1888,23 @@
   {
     "audio": "AAC 5.1",
     "codec": "x264",
-    "group": "Telly",
+    "encoder": "LOKiHD",
     "language": "Hindi",
     "network": "NF",
     "quality": "WEBRip",
     "resolution": "720p",
     "subtitles": "ESubs",
     "title": "Paan Singh Tomar",
+    "website": "Telly",
     "year": 2012
   },
   {
     "audio": "AAC2.0",
     "codec": "H.264",
-    "encoder": "eztv",
+    "website": "eztv",
     "episode": 20,
     "episodeName": "The Army-Navy Game",
-    "group": "AJP69",
+    "encoder": "AJP69",
     "network": "HULU",
     "quality": "WEB-DL",
     "resolution": "1080p",
@@ -1910,10 +1913,10 @@
   },
   {
     "codec": "h264",
-    "encoder": "eztv",
+    "website": "eztv",
     "episode": 12,
     "episodeName": "Family Favorites with Allie",
-    "group": "ROBOTS",
+    "encoder": "ROBOTS",
     "internal": true,
     "quality": "WEB",
     "season": 16,
@@ -1921,15 +1924,15 @@
   },
   {
     "codec": "Xvid",
-    "group": "ETRG",
+    "encoder": "ETRG",
     "language": "Eng",
     "title": "Split Image",
     "year": 1982
   },
   {
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 11,
-    "group": "HorribleSubs",
+    "encoder": "HorribleSubs",
     "resolution": "720p",
     "season": 2,
     "title": "Kaguya-sama wa Kokurasetai"
@@ -1937,7 +1940,7 @@
   {
     "audio": "1Ch.Audio",
     "codec": "XViD",
-    "group": "ETRG",
+    "encoder": "ETRG",
     "language": "Eng",
     "quality": "DVDRip",
     "title": "Five",
@@ -1945,9 +1948,9 @@
   },
   {
     "codec": "H264",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 1,
-    "group": "OATH",
+    "encoder": "OATH",
     "quality": "WEB",
     "resolution": "720p",
     "season": 2,
@@ -1955,10 +1958,10 @@
   },
   {
     "codec": "x264",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 12,
     "episodeName": "Sicilian and Seafood",
-    "group": "LiGATE",
+    "encoder": "LiGATE",
     "quality": "WEBRip",
     "season": 31,
     "title": "Diners Drive-Ins and Dives"
@@ -1971,9 +1974,9 @@
     "website": "Erai-raws"
   },
   {
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 11,
-    "group": "Erai-raws",
+    "encoder": "Erai-raws",
     "resolution": "720p",
     "season": 2,
     "title": "Kaguya-sama wa Kokurasetai! Tensai-tachi no Renai Zunousen"
@@ -1981,7 +1984,7 @@
   {
     "audio": "DD+5.1",
     "codec": "H264",
-    "group": "Dus.IcTv",
+    "encoder": "Dus.IcTv",
     "network": "AMZN",
     "quality": "WEB-DL",
     "resolution": "1080p",
@@ -2006,14 +2009,14 @@
     "website": "Erai-raws"
   },
   {
-    "encoder": "YTS",
+    "website": "YTS",
     "quality": "WebRip",
     "resolution": "1080p",
     "title": "Babyteeth",
     "year": 2019
   },
   {
-    "encoder": "YTS",
+    "website": "YTS",
     "quality": "BluRay",
     "resolution": "1080p",
     "title": "Weekend at Bernie's II",
@@ -2021,10 +2024,10 @@
   },
   {
     "codec": "h264",
-    "encoder": "eztv",
+    "website": "eztv",
     "episode": 0,
     "episodeName": "Clothed and Opinionated Part 2",
-    "group": "ROBOTS",
+    "encoder": "ROBOTS",
     "quality": "WEB",
     "resolution": "720p",
     "season": 6,
@@ -2034,8 +2037,8 @@
     "audio": "AC3 2.0",
     "bitDepth": 10,
     "codec": "x265",
+    "website": "TAoE",
     "encoder": "DNU",
-    "group": "TAoE",
     "network": "NF",
     "quality": "Webrip",
     "repack": true,
@@ -2045,9 +2048,9 @@
     "year": 1990
   },
   {
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 12,
-    "group": "HorribleSubs",
+    "encoder": "HorribleSubs",
     "resolution": "720p",
     "season": 2,
     "title": "Tsugumomo"
@@ -2063,18 +2066,18 @@
   },
   {
     "codec": "x264",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 13,
-    "group": "FiHTV",
+    "encoder": "FiHTV",
     "quality": "HDTV",
     "season": 27,
     "title": "Police Ten 7"
   },
   {
     "codec": "x264",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 2,
-    "group": "FiHTV",
+    "encoder": "FiHTV",
     "quality": "HDTV",
     "season": 1,
     "title": "2nd Chance Charlie"
@@ -2083,7 +2086,7 @@
     "audio": "AAC",
     "codec": "x265",
     "container": "mkv",
-    "group": "MVGroup.org",
+    "encoder": "MVGroup.org",
     "network": "BBC",
     "quality": "HDTV",
     "resolution": "1080p",
@@ -2116,7 +2119,7 @@
   {
     "audio": "DD - 2.0",
     "codec": "x264",
-    "group": "BonsaiHD",
+    "website": "BonsaiHD",
     "language": ["Hindi","English"],
     "quality": "Bluray",
     "resolution": "720p",
@@ -2128,7 +2131,7 @@
   {
     "audio": "Dual-Audio",
     "codec": "x264",
-    "group": "1XCinema",
+    "encoder": "1XCinema",
     "language": "Hindi",
     "quality": "HDRip",
     "resolution": "720p",
@@ -2138,7 +2141,7 @@
   {
     "audio": "Ac3 5.1",
     "codec": "H264",
-    "encoder": "ArMor",
+    "website": "ArMor",
     "language": ["ITA","ENG"],
     "quality": "WEBRip",
     "resolution": "1080p",
@@ -2147,7 +2150,7 @@
   },
   {
     "container": "mkv",
-    "group": "CreW",
+    "encoder": "CreW",
     "language": ["ITA","ENG"],
     "quality": "Bluray",
     "resolution": "1080p",
@@ -2158,7 +2161,7 @@
     "audio": "AAC",
     "codec": "X264",
     "container": "Mp-4",
-    "group": "DSD",
+    "encoder": "DSD",
     "quality": "Dvd-Rip",
     "resolution": "480p",
     "title": "Wild Target",
@@ -2167,7 +2170,7 @@
   {
     "audio": "Ac3 5.1",
     "codec": "H264",
-    "encoder": "ArMor",
+    "website": "ArMor",
     "language": ["ITA","DAN"],
     "quality": "BDRip",
     "resolution": "1080p",
@@ -2176,7 +2179,7 @@
   },
   {
     "codec": "x264",
-    "group": "Flizmovies",
+    "encoder": "Flizmovies",
     "language": "HIndi",
     "quality": "WEB-DL",
     "resolution": "720p",
@@ -2187,8 +2190,8 @@
     "audio": "AAC 7.1",
     "bitDepth": 10,
     "codec": "x265",
+    "website": "QxR",
     "encoder": "afm72",
-    "group": "QxR",
     "hdr": true,
     "quality": "BluRay",
     "resolution": "1080p",
@@ -2206,7 +2209,6 @@
   {
     "audio": "AAC 5.1",
     "codec": "x264",
-    "group": "Telly",
     "language": ["Hindi","English"],
     "quality": "BluRay",
     "resolution": "720p",
@@ -2219,15 +2221,15 @@
     "bitDepth": 10,
     "codec": "x265",
     "container": "mkv",
+    "website": "TAoE",
     "encoder": "xtrem3x",
-    "group": "TAoE",
     "quality": "BDRip",
     "resolution": "1080p",
     "title": "Jay And Silent Bob Strike Back",
     "year": 2001
   },
   {
-    "group": "TamilMV",
+    "encoder": "TamilMV",
     "language": ["Tamil","Hindi","Spanish"],
     "quality": "BluRay",
     "resolution": "720p",
@@ -2237,7 +2239,7 @@
     "year": 2016
   },
   {
-    "group": "ORG",
+    "encoder": "ORG",
     "language": "Bangla",
     "quality": "HDRip",
     "size": "800MB",
@@ -2260,7 +2262,6 @@
     "codec": "x265",
     "container": "mkv",
     "encoder": "xtrem3x",
-    "group": "TAoE",
     "quality": "BDRip",
     "resolution": "1080p",
     "title": "Clerks II",
@@ -2273,8 +2274,8 @@
   },
   {
     "codec": "H264",
-    "encoder": "TGx",
-    "group": "HUZZAH",
+    "website": "TGx",
+    "encoder": "HUZZAH",
     "quality": "WEB",
     "resolution": "1080p",
     "title": "Athlete A",
@@ -2289,7 +2290,7 @@
   {
     "audio": "DD2.0",
     "codec": "x264",
-    "group": "CineVood",
+    "encoder": "CineVood",
     "language": "Hindi",
     "network": "AMZN",
     "quality": "WEB-DL",
@@ -2301,7 +2302,7 @@
     "audio": "AAC",
     "codec": "X264",
     "container": "Mp-4",
-    "group": "DSD",
+    "encoder": "DSD",
     "quality": "Dvd-Rip",
     "resolution": "480p",
     "title": "A Walk in the Woods",
@@ -2310,7 +2311,7 @@
   {
     "audio": "FLAC",
     "container": "MKV",
-    "group": "oan",
+    "encoder": "oan",
     "resolution": "1080p",
     "title": "Treasure Planet",
     "year": 2002
@@ -2318,7 +2319,7 @@
   {
     "audio": "AAC 5.1",
     "codec": "H265",
-    "group": "CalicoSkies",
+    "encoder": "CalicoSkies",
     "language": ["EN","JP"],
     "resolution": "4K",
     "title": "L.A. Story",
@@ -2327,18 +2328,18 @@
   },
   {
     "codec": "x265",
-    "encoder": "eztv",
+    "website": "eztv",
     "episode": 14,
-    "group": "MeGusta",
+    "encoder": "MeGusta",
     "resolution": "1080p",
     "season": 8,
     "title": "Monk"
   },
   {
     "codec": "x265",
-    "encoder": "eztv",
+    "website": "eztv",
     "episode": 2,
-    "group": "MeGusta",
+    "encoder": "MeGusta",
     "resolution": "1080p",
     "season": 21,
     "title": "24 Hours In A And E"
@@ -2346,9 +2347,9 @@
   {
     "codec": "x264",
     "day": 23,
-    "encoder": "eztv",
+    "website": "eztv",
     "episodeName": "John Bolton",
-    "group": "SORNY",
+    "encoder": "SORNY",
     "month": 6,
     "quality": "HDTV",
     "resolution": "720p",
@@ -2357,10 +2358,10 @@
   },
   {
     "codec": "h264",
-    "encoder": "eztv",
+    "website": "eztv",
     "episode": 15,
     "episodeName": "Toni Morrison The Pieces I Am",
-    "group": "LiGATE",
+    "encoder": "LiGATE",
     "quality": "WEB",
     "resolution": "720p",
     "season": 33,
@@ -2369,7 +2370,7 @@
   {
     "codec": "x265",
     "day": 23,
-    "group": "LM",
+    "encoder": "LM",
     "month": 6,
     "quality": "WEBRip",
     "resolution": "1080p",
@@ -2380,8 +2381,8 @@
     "audio": "Dual-Audio",
     "bitDepth": 10,
     "codec": "x265",
-    "encoder": "TGx",
-    "group": "Judas",
+    "website": "TGx",
+    "encoder": "Judas",
     "resolution": "1080p",
     "season": [1,2],
     "subtitles": "Eng",
@@ -2390,24 +2391,24 @@
   {
     "bitDepth": 10,
     "codec": "x265",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 927,
-    "group": "Judas",
+    "encoder": "Judas",
     "resolution": "1080p",
     "subtitles": "Multi",
     "title": "One Piece"
   },
   {
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 1,
-    "group": "Judas",
+    "encoder": "Judas",
     "season": 5,
     "title": "Shokugeki No Soma"
   },
   {
     "audio": "DTS-HDMA 5.1",
     "codec": "x264",
-    "group": "Hon3yHD",
+    "encoder": "Hon3yHD",
     "language": "Hindi",
     "quality": "BluRay",
     "resolution": "1080p",
@@ -2417,7 +2418,7 @@
   {
     "audio": "AAC",
     "codec": "x264",
-    "group": "CineVood",
+    "encoder": "CineVood",
     "language": ["Hindi","Tamil","Bengali"],
     "network": "AMZN",
     "quality": "WEB-DL",
@@ -2430,9 +2431,9 @@
   {
     "bitDepth": 10,
     "codec": "x265",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 1,
-    "group": "Judas",
+    "encoder": "Judas",
     "resolution": "1080p",
     "season": 4,
     "subtitles": "Multi",
@@ -2441,7 +2442,7 @@
   {
     "audio": "DD- 2.0",
     "codec": "x264",
-    "group": "BonsaiHD",
+    "website": "BonsaiHD",
     "language": "Malayalam",
     "quality": "WEB-DL",
     "resolution": "720p",
@@ -2454,7 +2455,7 @@
   {
     "audio": "AC3 5.1",
     "codec": "H264",
-    "group": "MIRCrew",
+    "encoder": "MIRCrew",
     "language": ["Ita","Fre"],
     "quality": "BluRay",
     "resolution": "1080p",
@@ -2465,7 +2466,8 @@
   {
     "audio": "DTS HD Masters 5.1",
     "codec": "H264",
-    "group": "MIRCrew",
+    "encoder": "SnakeSPL",
+    "website": "MIRCrew",
     "language": ["Ita","Eng"],
     "resolution": "720p",
     "subtitles": ["Ita","Eng"],
@@ -2475,7 +2477,7 @@
   {
     "audio": "DD- 2.0",
     "codec": "x264",
-    "group": "BonsaiHD",
+    "website": "BonsaiHD",
     "language": "Interslavic",
     "quality": "Bluray",
     "resolution": "720p",
@@ -2487,8 +2489,8 @@
   {
     "audio": "DTS-HD.MA.5.1",
     "codec": "X264",
-    "encoder": "TGx",
-    "group": "EVO",
+    "website": "TGx",
+    "encoder": "EVO",
     "quality": "Bluray",
     "resolution": "1080p",
     "title": "Proximity",
@@ -2503,8 +2505,8 @@
   {
     "audio": "AC3 5.1",
     "codec": "H265",
+    "website": "MIRCrew",
     "encoder": "Sp33dy94",
-    "group": "MIRCrew",
     "language": ["ITA","ENG"],
     "resolution": "1080p",
     "subtitles": ["NUita","eng"],
@@ -2514,7 +2516,7 @@
   {
     "codec": "x264",
     "documentary": true,
-    "group": "GalaxyRG",
+    "encoder": "GalaxyRG",
     "quality": "HDTV",
     "resolution": "720p",
     "size": "800MB",
@@ -2523,7 +2525,7 @@
   },
   {
     "documentary": true,
-    "encoder": "Etcohod",
+    "website": "Etcohod",
     "language": "eng",
     "network": "BBC",
     "subtitles": "ara",
@@ -2533,8 +2535,8 @@
   },
   {
     "codec": "x264",
-    "encoder": "TGx",
-    "group": "Chakra",
+    "website": "TGx",
+    "encoder": "Chakra",
     "limited": true,
     "quality": "BluRay",
     "resolution": "720p",
@@ -2543,7 +2545,7 @@
   },
   {
     "codec": "XviD",
-    "group": "B4ND1T69",
+    "encoder": "B4ND1T69",
     "quality": "BRRip",
     "remastered": true,
     "title": "X-Men",
@@ -2551,7 +2553,7 @@
   },
   {
     "codec": "XviD",
-    "group": "B4ND1T69",
+    "encoder": "B4ND1T69",
     "quality": "BRRip",
     "remastered": true,
     "title": "X2 X-Men United",
@@ -2561,7 +2563,7 @@
     "audio": "DD- 2.0",
     "codec": "x264",
     "directorsCut": true,
-    "group": "BonsaiHD",
+    "website": "BonsaiHD",
     "hardcoded": true,
     "language": "Hindi",
     "quality": "WEBRip",
@@ -2574,7 +2576,7 @@
   {
     "audio": "Ac3 5.1",
     "codec": "H264",
-    "encoder": "ArMor",
+    "website": "ArMor",
     "language": ["ITA","SPA"],
     "quality": "WEBRip",
     "resolution": "1080p",
@@ -2584,7 +2586,7 @@
   {
     "audio": "Ac3 2.0",
     "codec": "H264",
-    "encoder": "ArMor",
+    "website": "ArMor",
     "language": ["ITA","ENG"],
     "quality": "BDRip",
     "resolution": "1080p",
@@ -2594,7 +2596,7 @@
   {
     "audio": "Ac3 2.0",
     "codec": "H264",
-    "encoder": "ArMor",
+    "website": "ArMor",
     "language": ["ITA","ENG"],
     "quality": "BDRip",
     "resolution": "1080p",
@@ -2602,7 +2604,7 @@
     "year": 1947
   },
   {
-    "group": "TamilMV",
+    "encoder": "TamilMV",
     "language": ["Telugu","Tamil","Hindi","Chi"],
     "quality": "BluRay",
     "resolution": "720p",
@@ -2614,7 +2616,7 @@
   {
     "audio": "2CH",
     "codec": "x264",
-    "group": "BonsaiHD",
+    "website": "BonsaiHD",
     "language": "Hindi",
     "network": "AMZN",
     "quality": "WEBRip",
@@ -2626,7 +2628,7 @@
   },
   {
     "codec": "X264",
-    "group": "Solar",
+    "encoder": "Solar",
     "network": "Hallmark",
     "quality": "HDRip",
     "resolution": "720p",
@@ -2636,7 +2638,7 @@
   {
     "audio": "DD- 5.1",
     "codec": "x265",
-    "group": "BonsaiHD",
+    "website": "BonsaiHD",
     "language": ["English","spanish"],
     "network": "NF",
     "quality": "WEB-DL",
@@ -2647,7 +2649,7 @@
   },
   {
     "codec": "X264",
-    "group": "Solar",
+    "encoder": "Solar",
     "network": "Hallmark",
     "quality": "HDTV",
     "resolution": "720P",
@@ -2657,7 +2659,7 @@
   {
     "audio": "DD 5.1",
     "codec": "x264",
-    "group": "MAZE",
+    "encoder": "MAZE",
     "language": ["English","Hindi"],
     "quality": "HDRip",
     "resolution": "720p",
@@ -2671,8 +2673,8 @@
     "bitDepth": 10,
     "codec": "x265",
     "container": "mkv",
+    "website": "TAoE",
     "encoder": "r0b0t",
-    "group": "TAoE",
     "quality": "BDRip",
     "resolution": "1080p",
     "title": "The Twilight Saga Breaking Dawn - Part 2",
@@ -2683,8 +2685,8 @@
     "bitDepth": 10,
     "codec": "x265",
     "container": "mkv",
+    "website": "TAoE",
     "encoder": "Frys",
-    "group": "TAoE",
     "quality": "Dvdrip",
     "resolution": "1080p",
     "title": "Scooby-Doo Goes Hollywood",
@@ -2694,7 +2696,6 @@
   {
     "audio": "AC3",
     "codec": "x264",
-    "group": "Telly",
     "language": "Hindi",
     "quality": "WEBRip",
     "resolution": "1080p",
@@ -2705,7 +2706,7 @@
   {
     "audio": "DD.2.0",
     "codec": "AVC",
-    "group": "Dus.IcTv",
+    "encoder": "Dus.IcTv",
     "network": "AMZN",
     "quality": "WEB.DL",
     "resolution": "1080p",
@@ -2718,7 +2719,7 @@
     "container": "mp4",
     "episode": 11,
     "episodeName": "Oceans Most Powerful",
-    "group": "MVGroup.org",
+    "encoder": "MVGroup.org",
     "quality": "HDTV",
     "resolution": "1080p",
     "season": 2,
@@ -2727,8 +2728,8 @@
   {
     "audio": "DD 5.1",
     "codec": "x264",
+    "website": "Telly",
     "encoder": "LOKiHD",
-    "group": "Telly",
     "language": "Urdu",
     "quality": "BluRay",
     "resolution": "1080p",
@@ -2737,7 +2738,7 @@
     "year": 2014
   },
   {
-    "group": "LMH123",
+    "encoder": "LMH123",
     "language": "Punjabi",
     "quality": "WEBRip",
     "resolution": "720p",
@@ -2754,7 +2755,7 @@
   },
   {
     "codec": "x265",
-    "group": "RARBG",
+    "encoder": "RARBG",
     "quality": "BluRay",
     "resolution": "1080p",
     "title": "McFarland USA",
@@ -2763,7 +2764,7 @@
   {
     "audio": "DTS-HD.MA.5.1",
     "codec": "AVC",
-    "group": "FGT",
+    "encoder": "FGT",
     "quality": "BluRay",
     "remux": true,
     "resolution": "1080p",
@@ -2772,7 +2773,7 @@
   },
   {
     "codec": "x265",
-    "group": "VXT",
+    "encoder": "VXT",
     "language": "JAPANESE",
     "quality": "BluRay",
     "resolution": "1080p",
@@ -2781,7 +2782,7 @@
   },
   {
     "codec": "x265",
-    "group": "VXT",
+    "encoder": "VXT",
     "language": "JAPANESE",
     "quality": "WEBRip",
     "resolution": "1080p",
@@ -2792,7 +2793,7 @@
   {
     "audio": "AAC",
     "codec": "H264",
-    "group": "VXT",
+    "encoder": "VXT",
     "language": "PORTUGUESE",
     "quality": "BluRay",
     "resolution": "1080p",
@@ -2809,7 +2810,7 @@
   {
     "audio": "DD+5.1",
     "codec": "x264",
-    "group": "TamilMV",
+    "encoder": "TamilMV",
     "language": "Hindi",
     "quality": "HDRip",
     "resolution": "720p",
@@ -2828,7 +2829,7 @@
     "year": 2019
   },
   {
-    "group": "DQLDR",
+    "encoder": "DQLDR",
     "quality": "BRRIP",
     "resolution": "576p",
     "title": "The Gentlemen",
@@ -2836,33 +2837,33 @@
   },
   {
     "codec": "h264",
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 1,
-    "group": "WEBTUBE",
+    "encoder": "WEBTUBE",
     "quality": "WEB",
     "season": 1,
     "title": "Nicos Menu Mission"
   },
   {
     "codec": "x264",
-    "encoder": "eztv",
+    "website": "eztv",
     "episode": 11,
     "episodeName": "I Need A Hero",
-    "group": "mSD",
+    "encoder": "mSD",
     "resolution": "480p",
     "season": 5,
     "title": "If Loving You Is Wrong"
   },
   {
-    "encoder": "TGx",
+    "website": "TGx",
     "episode": 5,
-    "group": "Judas",
+    "encoder": "Judas",
     "season": 1,
     "title": "Digimon Adventure",
     "year": 2020
   },
   {
-    "group": "MovCr",
+    "encoder": "MovCr",
     "language": "Hindi",
     "resolution": "720p",
     "size": "450MB",
@@ -2873,7 +2874,7 @@
     "codec": "x264",
     "container": "mkv",
     "episode": 1,
-    "group": "Morpheus",
+    "encoder": "Morpheus",
     "language": ["ITA","ENG"],
     "quality": "AHDTVMux",
     "resolution": "1080p",
@@ -2885,7 +2886,7 @@
     "container": "mkv",
     "episode": 9,
     "episodeName": "Canale 4",
-    "group": "MeM",
+    "encoder": "MeM",
     "language": ["ITA","ENG"],
     "quality": "Bluray",
     "resolution": "1080p",
@@ -2894,9 +2895,9 @@
   },
   {
     "codec": "x264",
-    "encoder": "eztv",
+    "website": "eztv",
     "episode": 5,
-    "group": "FiHTV",
+    "encoder": "FiHTV",
     "quality": "HDTV",
     "resolution": "720p",
     "season": 1,
@@ -2904,9 +2905,9 @@
   },
   {
     "codec": "x264",
-    "encoder": "eztv",
+    "website": "eztv",
     "episode": 15,
-    "group": "FiHTV",
+    "encoder": "FiHTV",
     "quality": "HDTV",
     "season": 27,
     "title": "Police Ten 7"
@@ -2924,7 +2925,7 @@
     "audio": "AAC 6.1",
     "bitDepth": 10,
     "codec": "x265",
-    "group": "Vyndros",
+    "encoder": "Vyndros",
     "quality": "BluRay",
     "resolution": "1080p",
     "title": "X-men The Last Stand",
@@ -2948,8 +2949,8 @@
   {
     "audio": "DDP2.0",
     "codec": "x264",
-    "encoder": "TGx",
-    "group": "TEPES",
+    "website": "TGx",
+    "encoder": "TEPES",
     "network": "AMZN",
     "quality": "WEBRip",
     "resolution": "1080p",
@@ -2963,10 +2964,10 @@
   },
   {
     "codec": "h264",
-    "encoder": "eztv",
+    "website": "eztv",
     "episode": 10,
     "episodeName": "Lights Camera Eat",
-    "group": "ROBOTS",
+    "encoder": "ROBOTS",
     "internal": true,
     "quality": "WEB",
     "resolution": "720p",
@@ -2976,10 +2977,10 @@
   {
     "audio": "AAC2.0",
     "codec": "x264",
-    "encoder": "eztv",
+    "website": "eztv",
     "episode": 6,
     "episodeName": "My Body",
-    "group": "BOOP",
+    "encoder": "BOOP",
     "network": "ID",
     "quality": "WEB-DL",
     "resolution": "720p",
@@ -2989,8 +2990,8 @@
   {
     "audio": "Ac3 5.1",
     "codec": "H264",
+    "website": "MIRCrew",
     "encoder": "SnakeSPL",
-    "group": "MIRCrew",
     "language": ["Ita","Eng","Deu","Esp"],
     "quality": "DVDRip",
     "subtitles": "Multisub",
