@@ -135,6 +135,7 @@ PTN.parse('A freakishly cool movie or TV episode', standardise=False)
 * **hardcoded**     *(boolean)*
 * **hdr**           *(boolean)*
 * **internal**      *(boolean)*
+* **internationalCut** *(boolean)*
 * **language**      *(string, string list)*
 * **limited**       *(boolean)*
 * **month**         *(integer)*

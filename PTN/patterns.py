@@ -10,7 +10,7 @@
 
 from .extras import *
 
-delimiters = '[\.\s\-\+_\/()]'
+delimiters = '[\.\s\-\+_\/(),]'
 langs = [('rus(?:sian)?', 'Russian'),
          ('(?:True)?fre?(?:nch)?', 'French'),
          ('(?:nu)?ita(?:liano?)?', 'Italian'),
@@ -58,7 +58,7 @@ patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', '
                     'container', 'widescreen', 'website', 'documentary', 'language', 'subtitles',
                     'sbs', 'unrated', 'size', 'bitDepth', '3d', 'internal', 'readnfo', 'network',
                     'fps', 'hdr', 'limited', 'remastered', 'directorsCut', 'upscaled', 'untouched',
-                    'remux']
+                    'remux', 'internationalCut']
 
 patterns = dict()
 patterns['episode'] = ['(?<![a-z])(?:e|ep)(?:[0-9]{1,2}(?:-(?:e|ep)?(?:[0-9]{1,2}))?)(?![0-9])',
@@ -150,7 +150,7 @@ patterns['audio'] = get_channel_audio_options([
     ('DTS', 'DTS'),
     ('AAC[ \.\-]LC', 'AAC-LC'),
     ('AAC', 'AAC'),
-    ('Dual[\- ]Audio', 'Dual')
+    ('Dual{d}Audios?'.format(d=delimiters), 'Dual')
 ]) + [('7.1(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), '7.1'),
       ('FLAC', 'FLAC'),
       ('5.1(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), '5.1'),
@@ -207,6 +207,7 @@ patterns['directorsCut'] = 'DC'
 patterns['upscaled'] = '(?:AI{d}*)?upscaled?'.format(d=delimiters)
 patterns['untouched'] = 'untouched'
 patterns['remux'] = 'REMUX'
+patterns['internationalCut'] = 'International{d}Cut'.format(d=delimiters)
 
 types = {
     'season': 'integer',
@@ -233,4 +234,5 @@ types = {
     'upscaled': 'boolean',
     'untouched': 'boolean',
     'remux': 'boolean',
+    'internationalCut': 'boolean',
 }
