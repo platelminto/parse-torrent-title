@@ -36,7 +36,9 @@ def try_encoder_before_website(self, unmatched):
     if match:
         found_match = None
         for m in match:
-            full_title_match = re.search(r'[\s\-](' + re.escape(m) + ')(?:\.' + link_patterns(patterns['container']) + ')?$', self.torrent_name, re.I)
+            full_title_match = re.search(
+                r'[\s\-](' + re.escape(m) + ')(?:\.' + link_patterns(patterns['container']) + ')?$', self.torrent_name,
+                re.I)
             if full_title_match:
                 found_match = full_title_match
                 break
@@ -48,7 +50,8 @@ def try_encoder_before_website(self, unmatched):
                 encoder_raw = encoder_and_site[0]
                 site_raw = encoder_and_site[1]
                 self._part('encoder', (match_s, match_e - len(site_raw)), self._clean_string(encoder_raw))
-                self._part('website', (match_s + len(encoder_raw), match_e), self._clean_string(site_raw), overwrite=True)
+                self._part('website', (match_s + len(encoder_raw), match_e), self._clean_string(site_raw),
+                           overwrite=True)
                 unmatched = unmatched.replace(match.group(0), '')
 
     return unmatched
@@ -116,7 +119,7 @@ def fix_same_subtitles_language_match(self):
 # is the actual language, and remove it from the subtitles.
 def fix_subtitles_no_language(self):
     if 'language' not in self.parts and 'subtitles' in self.parts and \
-        isinstance(self.parts['subtitles'], list) and len(self.parts['subtitles']) > 1:
+            isinstance(self.parts['subtitles'], list) and len(self.parts['subtitles']) > 1:
         self._part('language', None, self.parts['subtitles'][0])
         self._part('subtitles', None, self.parts['subtitles'][1:], overwrite=True)
 

@@ -53,7 +53,7 @@ patterns['month'] = '(?:{year}){d}({month}){d}(?:{day})' \
     .format(d=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)
 patterns['day'] = '(?:{year}){d}(?:{month}){d}({day})' \
     .format(d=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)
-patterns['resolution'] = [('([0-9]{3,4}p)', None, 'lower'),
+patterns['resolution'] = [('([0-9]{3,4}(?:p|i))', None, 'lower'),
                           ('(1280x720p?)', '720p'),
                           ('FHD', '1080p'),
                           ('UHD', 'UHD'),

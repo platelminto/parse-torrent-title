@@ -2997,5 +2997,16 @@
     "subtitles": "Multisub",
     "title": "Professor Marston and the Wonder Women",
     "year": 2017
+  },
+  {
+    "year": 2011,
+    "resolution": "1080i",
+    "quality": "BluRay",
+    "codec": "AVC",
+    "audio": "DTS-HD.MA.5.1",
+    "container": "mkv",
+    "remux": true,
+    "title": "Extraterrestrial",
+    "encoder": "FraMeSToR"
   }
 ]
