@@ -873,6 +873,7 @@
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.264",
+    "network": "SONY LIV",
     "size": "1.1GB",
     "subtitles": "English",
     "title": "Kadakh"
@@ -1344,7 +1345,7 @@
     "container": "MP4",
     "language": ["English","Russian"],
     "subtitles": "Available",
-    "title": "The Deep Blue Sea - Drama"
+    "title": "The Deep Blue Sea"
   },
   {
     "audio": "Dolby TrueHD 5.1",
@@ -1644,5 +1645,120 @@
     "language": "Portuguese",
     "quality": "Blu-ray",
     "title": "Cousins"
+  },
+  {
+    "quality": "BRRip",
+    "title": "Easy Rider"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "quality": "WEB-DL",
+    "subtitles": "English",
+    "title": "PENALTY"
+  },
+  {
+    "audio": "Dual",
+    "codec": "H.264",
+    "quality": "WEB-DL",
+    "title": "Wasp Network"
+  },
+  {
+    "quality": "BRRip",
+    "title": "The Gentlemen"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Nicos Menu Mission"
+  },
+  {
+    "codec": "H.264",
+    "title": "If Loving You Is Wrong"
+  },
+  {
+    "title": "Digimon Adventure"
+  },
+  {
+    "title": "Kavali"
+  },
+  {
+    "codec": "H.264",
+    "container": "MKV",
+    "language": ["Italian","English"],
+    "quality": "AHDTV",
+    "title": "Gangs Of London"
+  },
+  {
+    "codec": "H.264",
+    "container": "MKV",
+    "language": ["Italian","English"],
+    "quality": "Blu-ray",
+    "title": "Fear the Walking Dead"
+  },
+  {
+    "codec": "H.264",
+    "title": "2nd Chance Charlie"
+  },
+  {
+    "codec": "H.264",
+    "title": "Police Ten 7"
+  },
+  {
+    "audio": "Dual",
+    "language": ["Hindi","Marathi"],
+    "quality": "WEBRip",
+    "title": "Nude"
+  },
+  {
+    "codec": "H.265",
+    "quality": "Blu-ray",
+    "title": "X-men The Last Stand"
+  },
+  {
+    "genre": ["Comedy","Western"],
+    "title": "The Kissing Bandit"
+  },
+  {
+    "title": "The King of Comedy"
+  },
+  {
+    "genre": "Comedy",
+    "title": "The Mouse on the Moon"
+  },
+  {
+    "audio": "Dolby Digital Plus 2.0",
+    "codec": "H.264",
+    "network": "Amazon Studios",
+    "title": "Romantic Comedy"
+  },
+  {
+    "title": "Sugarfoot"
+  },
+  {
+    "codec": "H.264",
+    "quality": "WEBRip",
+    "title": "Valeries Home Cooking"
+  },
+  {
+    "audio": "AAC 2.0",
+    "codec": "H.264",
+    "network": "Investigation Discovery",
+    "title": "American Monster"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "language": ["Italian","English","German","Spanish"],
+    "quality": "DVD-Rip",
+    "subtitles": "Available",
+    "title": "Professor Marston and the Wonder Women"
+  },
+    {
+    "quality": "Blu-ray",
+    "codec": "H.264",
+    "audio": "DTS-HD MA 5.1",
+    "container": "MKV",
+    "title": "Extraterrestrial"
   }
 ]

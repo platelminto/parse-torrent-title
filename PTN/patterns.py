@@ -10,36 +10,6 @@
 
 from .extras import *
 
-delimiters = '[\.\s\-\+_\/()]'
-langs = [('rus(?:sian)?', 'Russian'),
-         ('(?:True)?fre?(?:nch)?', 'French'),
-         ('(?:nu)?ita(?:liano?)?', 'Italian'),
-         ('castellano|spa(?:nish)?|es', 'Spanish'),
-         ('swedish', 'Swedish'),
-         ('dk|dan(?:ish)?', 'Danish'),
-         ('ger(?:man)?', 'German'),
-         ('nordic', 'Nordic'),
-         ('exyu', 'ExYu'),
-         ('chs|chi(?:nese)?', 'Chinese'),
-         ('hin(?:di)?', 'Hindi'),
-         ('polish', 'Polish'),
-         ('mandarin', 'Mandarin'),
-         ('kor(?:ean)?', 'Korean'),
-         ('bengali|bangla', 'Bengali'),
-         ('kannada', 'Kannada'),
-         ('tam(?:il)?', 'Tamil'),
-         ('tel(?:ugu)?', 'Telugu'),
-         ('marathi', 'Marathi'),
-         ('mal(?:ayalam)?', 'Malayalam'),
-         ('japanese|ja?p', 'Japanese'),
-         ('interslavic', 'Interslavic'),
-         ('ara(?:bic)?', 'Arabic'),
-         ('urdu', 'Urdu'),
-         ('punjabi', 'Punjabi'),
-         ('portuguese', 'Portuguese'),
-         ('en?(?:g(?:lish)?)?', 'English')  # Must be at end, matches just an 'e'
-         ]
-
 season_range_pattern = '(?:Complete' + delimiters + '*)?' + delimiters + '*(?:s(?:easons?)?)' + delimiters + \
                        '*(?:s?[0-9]{1,2}[\s]*(?:(?:\-|(?:\s*to\s*))[\s]*s?[0-9]{1,2})+)(?:' + delimiters + '*Complete)?'
 
@@ -47,8 +17,9 @@ year_pattern = '(?:19[0-9]|20[0-2])[0-9]'
 month_pattern = '0[1-9]|1[0-2]'
 day_pattern = '[0-2][0-9]|3[01]'
 
-episode_name_pattern = '((?:[Pp](?:ar)?t' + delimiters + '*[0-9]|[A-Za-z][a-z]*(?:' + delimiters + \
+episode_name_pattern = '((?:[Pp](?:ar)?t' + delimiters + '*[0-9]|(?:[A-Za-z]|[0-9])[a-z]*(?:' + delimiters + \
                        '|$))+)'
+pre_website_encoder_pattern = '[^\s\.\[\]\-\(\)]+\)\s{0,2}\[[^\s\-]+\]|[^\s\.\[\]\-\(\)]+\s{0,2}(?:-\s)?[^\s\.\[\]\-]+$'
 
 # Forces an order to go by the regexes, as we want this to be deterministic (different
 # orders can generate different matchings). e.g. "doctor_who_2005..." in input.json
@@ -57,13 +28,14 @@ patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', '
                     'container', 'widescreen', 'website', 'documentary', 'language', 'subtitles',
                     'sbs', 'unrated', 'size', 'bitDepth', '3d', 'internal', 'readnfo', 'network',
                     'fps', 'hdr', 'limited', 'remastered', 'directorsCut', 'upscaled', 'untouched',
-                    'remux']
+                    'remux', 'internationalCut', 'genre']
 
 patterns = dict()
 patterns['episode'] = ['(?<![a-z])(?:e|ep)(?:[0-9]{1,2}(?:-(?:e|ep)?(?:[0-9]{1,2}))?)(?![0-9])',
                        # Very specific as it could match too liberally
                        '\s\-\s\d{1,3}\s',
-                       r'\b[0-9]{1,2}x([0-9]{2})\b'
+                       r'\b[0-9]{1,2}x([0-9]{2})\b',
+                       r'\bepisod(?:e|io)' + delimiters + r'\d{1,2}\b',
                        ]
 patterns['season'] = ['\ss?(\d{1,2})\s\-\s\d{1,2}\s',  # Avoids matching some anime releases season and episode as a season range
                       r'\b' + season_range_pattern + r'\b',  # Describes season ranges
@@ -76,12 +48,12 @@ patterns['season'] = ['\ss?(\d{1,2})\s\-\s\d{1,2}\s',  # Avoids matching some an
                       ]
 # The first 4 season regexes won't have 'Part' in them.
 patterns['episode'] += [link_patterns(patterns['season'][4:]) + delimiters + '*P(?:ar)?t' + delimiters + '*(\d{1,3})']
-patterns['year'] = '((' + year_pattern + '))'
+patterns['year'] = year_pattern
 patterns['month'] = '(?:{year}){d}({month}){d}(?:{day})' \
     .format(d=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)
 patterns['day'] = '(?:{year}){d}(?:{month}){d}({day})' \
     .format(d=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)
-patterns['resolution'] = [('([0-9]{3,4}p)', None, 'lower'),
+patterns['resolution'] = [('([0-9]{3,4}(?:p|i))', None, 'lower'),
                           ('(1280x720p?)', '720p'),
                           ('FHD', '1080p'),
                           ('UHD', 'UHD'),
@@ -101,6 +73,7 @@ patterns['quality'] = [('WEB[ -\.]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
                        ('DVDR|DVD-Full|Full-rip', 'DVD-R'),
                        ('PDTV|DVBRip', 'PDTV'),
                        ('DSR(?:ip)?|SATRip|DTHRip', 'DSRip'),
+                       ('AHDTV(?:Mux)?', 'AHDTV'),
                        ('HDTV(?:Rip)?', 'HDTV'),
                        ('D?TVRip|DVBRip', 'TVRip'),
                        ('VODR(?:ip)?', 'VODRip'),
@@ -120,19 +93,22 @@ patterns['network'] = [('ATVP', 'Apple TV+'),
                         ('HULU', 'Hulu Networks'),
                         ('MS?NBC', 'MSNBC'),
                         ('DCU', 'DC Universe'),
+                        ('ID', 'Investigation Discovery'),
                         ]
 patterns['network'] = suffix_pattern_with(link_patterns(patterns['quality']),
                                           patterns['network'], delimiters)
-# Not all networks always show up just before the quality.
+# Not all networks always show up just before the quality, so if they're unlikely to clash,
+# they should be added here.
 patterns['network'] += [('BBC', 'BBC'),
                         ('Hoichoi', 'Hoichoi'),
                         ('Zee5', 'ZEE5'),
-                        ('Hallmark', 'Hallmark')]
+                        ('Hallmark', 'Hallmark'),
+                        ('Sony\s?LIV', 'SONY LIV')]
 patterns['codec'] = [('xvid', 'Xvid'),
                      ('av1', 'AV1'),
                      ('[hx]\.?264', 'H.264'),
                      ('AVC', 'H.264'),
-                     ('[hx]\.?265', 'H.265'),
+                     ('[hx]\.?265', 'H.265'),  # Separate so if both are present, it won't pollute excess.
                      ('HEVC', 'H.265'),
                      ('[h]\.?263', 'H.263')]
 patterns['audio'] = get_channel_audio_options([
@@ -145,15 +121,15 @@ patterns['audio'] = get_channel_audio_options([
     ('DTS', 'DTS'),
     ('AAC[ \.\-]LC', 'AAC-LC'),
     ('AAC', 'AAC'),
-    ('Dual[\- ]Audio', 'Dual')
-]) + [('5.1(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), '5.1'),
-      ('2.0(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?|2CH'.format(d=delimiters), 'Dual'),
-      ('7.1(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), '7.1'),
-      ('1{d}?Ch(?:annel)?(?:{d}?Audio)?'.format(d=delimiters), 'Mono'),
+    ('Dual{d}Audios?'.format(d=delimiters), 'Dual')
+]) + [('7.1(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), '7.1'),
       ('FLAC', 'FLAC'),
+      ('5.1(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), '5.1'),
       ('MP3', None, 'upper'),
+      ('2.0(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?|2CH|stereo'.format(d=delimiters), 'Dual'),
+      ('1{d}?Ch(?:annel)?(?:{d}?Audio)?'.format(d=delimiters), 'Mono'),
+      ('(?:Original|Org)' + delimiters + 'Aud(?:io)?', 'Original'),
       ('LiNE', 'LiNE'),
-      ('(?:Original|Org)' + delimiters + 'Aud(?:io)?', 'Original')
       ]
 patterns['region'] = ('R[0-9]', None, 'upper')
 patterns['extended'] = '(EXTENDED(:?.CUT)?)'
@@ -167,7 +143,7 @@ patterns['widescreen'] = 'WS'
 patterns['website'] = '^(\[ ?([^\]]+?) ?\])'
 
 lang_list_pattern = r'\b(?:' + link_patterns(langs) + '(?:' + \
-                    delimiters + '+' + link_patterns(patterns['audio']) + ')?' + \
+                    delimiters + '+(?:dub(?:bed)?|' + link_patterns(patterns['audio']) + '))?' + \
                     '(?:' + delimiters + r'+|\b))'
 subs_list_pattern = r'\b(?:' + link_patterns(langs) + delimiters + '*)'
 
@@ -194,7 +170,7 @@ patterns['bitDepth'] = '(8|10)bits?'
 patterns['3d'] = '3D'
 patterns['internal'] = 'iNTERNAL'
 patterns['readnfo'] = 'READNFO'
-patterns['hdr'] = 'HDR'
+patterns['hdr'] = 'HDR(?:10)?'
 patterns['documentary'] = 'DOCU(?:menta?ry)?'
 patterns['limited'] = 'LIMITED'
 patterns['remastered'] = 'REMASTERED'
@@ -202,6 +178,9 @@ patterns['directorsCut'] = 'DC'
 patterns['upscaled'] = '(?:AI{d}*)?upscaled?'.format(d=delimiters)
 patterns['untouched'] = 'untouched'
 patterns['remux'] = 'REMUX'
+patterns['internationalCut'] = 'International{d}Cut'.format(d=delimiters)
+# Spaces are only allowed before the genre list if after a word boundary or punctuation
+patterns['genre'] = r'\b\s*[\(\-\]]+\s*((?:' + link_patterns(genres) + delimiters + r'?)+)\b'
 
 types = {
     'season': 'integer',
@@ -228,4 +207,5 @@ types = {
     'upscaled': 'boolean',
     'untouched': 'boolean',
     'remux': 'boolean',
+    'internationalCut': 'boolean',
 }

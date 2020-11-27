@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 from . import re
 from .post import post_processing_before_excess, post_processing_after_excess
-from .patterns import patterns, types, delimiters, langs, patterns_ordered
-from .extras import exceptions, patterns_ignore_title, link_patterns
+from .patterns import patterns, types, delimiters, patterns_ordered
+from .extras import exceptions, patterns_ignore_title, link_patterns, langs, genres
 
 
 class PTN(object):
@@ -29,11 +29,11 @@ class PTN(object):
 
     @staticmethod
     def _clean_string(string):
-        clean = re.sub(r'^ -', '', string)
+        clean = re.sub(r'^( -|\(|\[)', '', string)
         if clean.find(' ') == -1 and clean.find('.') != -1:
             clean = re.sub(r'\.', ' ', clean)
         clean = re.sub(r'_', ' ', clean)
-        clean = re.sub(r'([\[(_]|- )$', '', clean).strip()
+        clean = re.sub(r'([\[)_\]]|- )$', '', clean).strip()
         clean = clean.strip(' _-')
 
         return clean
@@ -50,7 +50,7 @@ class PTN(object):
             pattern_options = self.normalise_pattern_options(pattern_options)
 
             for (pattern, replace, transforms) in pattern_options:
-                if key not in ('season', 'episode', 'website', 'language'):
+                if key not in ('season', 'episode', 'website', 'language', 'genre'):
                     pattern = r'\b(?:{})\b'.format(pattern)
 
                 clean_name = re.sub(r'_', ' ', self.torrent_name)
@@ -74,12 +74,12 @@ class PTN(object):
 
                 index = self.get_match_indexes(match)
 
-                if key == 'season' or key == 'episode':
+                if key in ('season', 'episode'):
                     clean = self.get_season_episode(match)
-                elif key == 'language':
-                    clean = self.get_language(match)
                 elif key == 'subtitles':
                     clean = self.get_subtitles(match)
+                elif key in ('language', 'genre'):
+                    clean = self.split_multi(match)
                 elif key in types.keys() and types[key] == 'boolean':
                     clean = True
                 else:
@@ -100,7 +100,9 @@ class PTN(object):
             unmatched = f(self, unmatched)
 
         # clean_unmatched() depends on the before_excess methods adding more match slices.
-        self._part('excess', None, self.clean_unmatched())
+        cleaned_unmatched = self.clean_unmatched()
+        if cleaned_unmatched:
+            self._part('excess', None, cleaned_unmatched)
 
         for f in post_processing_after_excess:
             f(self)
@@ -198,8 +200,8 @@ class PTN(object):
         return clean
 
     @staticmethod
-    def get_language(match):
-        # handle multi subtitles
+    def split_multi(match):
+        # handle multi languages
         m = re.split(r'{}+'.format(delimiters), match[0])
         clean = list(filter(None, m))
 
@@ -211,6 +213,7 @@ class PTN(object):
         m = re.split(r'{}+'.format(delimiters), match[0])
         m = list(filter(None, m))
         clean = list()
+        # If it's only 1 result, it's fine if it's just 'subs'.
         if len(m) == 1:
             clean = m
         else:
@@ -232,6 +235,8 @@ class PTN(object):
             clean = self.standardise_languages(clean)
             if not clean:
                 clean = 'Available'
+        if key == 'genre':
+            clean = self.standardise_genres(clean)
         return clean
 
     @staticmethod
@@ -245,6 +250,16 @@ class PTN(object):
                     break
         clean = cleaned_langs
         return clean
+
+    @staticmethod
+    def standardise_genres(clean):
+        standard_genres = list()
+        for genre in clean:
+            for (regex, clean) in genres:
+                if re.match(regex, genre, re.IGNORECASE):
+                    standard_genres.append(clean)
+                    break
+        return standard_genres
 
     # Merge all the match slices (such as when they overlap), then remove
     # them from excess.
@@ -320,8 +335,7 @@ class PTN(object):
         for (start, end) in self.unmatched_list():
             unmatched += self.torrent_name[start:end]
 
-        clean = re.sub(r'(^[-. ()]+)|([-. ]+$)', '', unmatched)
-        return re.sub(r'[()/]', ' ', clean)
+        return unmatched
 
     def clean_unmatched(self):
         unmatched = list()
