@@ -37,7 +37,8 @@ genres = [('Sci-?Fi', 'Sci-Fi'),
           ('Drama', 'Drama'),
           ('Comedy', 'Comedy'),
           ('West(?:\.|ern)?', 'Western'),
-          ('Action', 'Action')]
+          ('Action', 'Action'),
+          ('Adventure', 'Adventure')]
 
 # Some titles just can't be parsed without breaking everything else, so here
 # are known those known exceptions. They are executed when the parsed_title and
