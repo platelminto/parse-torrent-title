@@ -59,6 +59,11 @@ exceptions = [
         'parsed_title': 'Marvels Agents of S H I E L D',
         'incorrect_parse': ('title', 'Marvels Agents of S H I E L D'),
         'actual_title': 'Marvel\'s Agents of S.H.I.E.L.D.'
+    },
+    {
+        'parsed_title': 'Magnum P I',
+        'incorrect_parse': ('title', 'Magnum P I'),
+        'actual_title': 'Magnum P.I.'
     }
 ]
 

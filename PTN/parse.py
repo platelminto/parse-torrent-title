@@ -50,7 +50,7 @@ class PTN(object):
             pattern_options = self.normalise_pattern_options(pattern_options)
 
             for (pattern, replace, transforms) in pattern_options:
-                if key not in ('season', 'episode', 'website', 'language', 'genre'):
+                if key not in ('season', 'episode', 'site', 'language', 'genre'):
                     pattern = r'\b(?:{})\b'.format(pattern)
 
                 clean_name = re.sub(r'_', ' ', self.torrent_name)

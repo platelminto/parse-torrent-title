@@ -30,7 +30,7 @@ def try_episode_name(self, unmatched):
     return unmatched
 
 
-def try_encoder_before_website(self, unmatched):
+def try_encoder_before_site(self, unmatched):
     match = re.findall(pre_website_encoder_pattern, unmatched.strip())
 
     if match:
@@ -50,7 +50,7 @@ def try_encoder_before_website(self, unmatched):
                 encoder_raw = encoder_and_site[0]
                 site_raw = encoder_and_site[1]
                 self._part('encoder', (match_s, match_e - len(site_raw)), self._clean_string(encoder_raw))
-                self._part('website', (match_s + len(encoder_raw), match_e), self._clean_string(site_raw),
+                self._part('site', (match_s + len(encoder_raw), match_e), self._clean_string(site_raw),
                            overwrite=True)
                 unmatched = unmatched.replace(match.group(0), '')
 
@@ -59,7 +59,7 @@ def try_encoder_before_website(self, unmatched):
 
 post_processing_before_excess = [
     try_episode_name,
-    try_encoder_before_website,
+    try_encoder_before_site,
 ]
 
 
@@ -85,7 +85,7 @@ def try_encoder(self):
 
 
 # Split encoder name and site, adding the latter to self.parts
-def try_website(self):
+def try_site(self):
     if 'encoder' not in self.parts or 'website' in self.parts:
         return
     encoder = self.parts['encoder']
@@ -96,7 +96,7 @@ def try_website(self):
         raw = match[0]
         if match:
             if not re.match(r'[\[\],.+\-]*\Z', match[1], re.IGNORECASE):
-                self._part('website', None, match[1])
+                self._part('site', None, match[1])
             self._part('encoder', None, encoder.replace(raw, ''), overwrite=True)
 
 
@@ -144,7 +144,7 @@ def filter_non_languages(self):
 
 post_processing_after_excess = [
     try_encoder,
-    try_website,
+    try_site,
     fix_same_subtitles_language_match,
     fix_subtitles_no_language,
     filter_non_languages,

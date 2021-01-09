@@ -32,7 +32,7 @@ class ParseTest(unittest.TestCase):
                 self.assertIn(key, result, torrent.encode('utf-8', 'replace'))
                 self.assertEqual(expected_result[key], result[key], key)
             for key in result.keys():
-                if key not in ('encoder', 'excess', 'website'):  # Not needed in tests
+                if key not in ('encoder', 'excess', 'site'):  # Not needed in tests
                     self.assertIn(key, expected_result)
         print('Excess elements total: {}'.format(excess_elements))
 

@@ -25,7 +25,7 @@ pre_website_encoder_pattern = '[^\s\.\[\]\-\(\)]+\)\s{0,2}\[[^\s\-]+\]|[^\s\.\[\
 # orders can generate different matchings). e.g. "doctor_who_2005..." in input.json
 patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', 'quality',
                     'codec', 'audio', 'region', 'extended', 'hardcoded', 'proper', 'repack',
-                    'container', 'widescreen', 'website', 'documentary', 'language', 'subtitles',
+                    'container', 'widescreen', 'site', 'documentary', 'language', 'subtitles',
                     'sbs', 'unrated', 'size', 'bitDepth', '3d', 'internal', 'readnfo', 'network',
                     'fps', 'hdr', 'limited', 'remastered', 'directorsCut', 'upscaled', 'untouched',
                     'remux', 'internationalCut', 'genre']
@@ -140,7 +140,7 @@ patterns['fps'] = '([1-9][0-9]{1,2})' + delimiters + '*fps'
 patterns['container'] = [('MKV|AVI', None, 'upper'),
                           ('MP-?4', 'MP4')]
 patterns['widescreen'] = 'WS'
-patterns['website'] = '^(\[ ?([^\]]+?) ?\])'
+patterns['site'] = '^(\[ ?([^\]]+?) ?\])'
 
 lang_list_pattern = r'\b(?:' + link_patterns(langs) + '(?:' + \
                     delimiters + '+(?:dub(?:bed)?|' + link_patterns(patterns['audio']) + '))?' + \

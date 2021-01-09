@@ -1754,11 +1754,15 @@
     "subtitles": "Available",
     "title": "Professor Marston and the Wonder Women"
   },
-    {
-    "quality": "Blu-ray",
-    "codec": "H.264",
+  {
     "audio": "DTS-HD MA 5.1",
+    "codec": "H.264",
     "container": "MKV",
+    "quality": "Blu-ray",
     "title": "Extraterrestrial"
+  },
+  {
+    "codec": "H.264",
+    "title": "Magnum P.I."
   }
 ]

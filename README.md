@@ -151,20 +151,20 @@ PTN.parse('A freakishly cool movie or TV episode', standardise=False)
 * **resolution**    *(string)*
 * **sbs**           *(string)*
 * **season**        *(integer, integer list)*
+* **site**       *(string)*
 * **size**          *(string)*
 * **subtitles**     *(string, string list)*
 * **title**         *(string)*
 * **unrated**       *(boolean)*
 * **untouched**     *(boolean)*
 * **upscaled**      *(boolean)*
-* **website**       *(string)*
 * **widescreen**    *(boolean)*
 * **year**          *(integer)*
 * **3d**            *(boolean)*
 
 ## Contributing
 
-Submit a PR on the `dev` branch, including tests for what gets newly matched (if applicable). Please provide input torrent names in `tests/files/input.json` and full output json objects (with `standardise=False`) in `tests/files/output_raw.json` (where the fields `encoder`, `excess`, `website`, and `episodeName` don't have to be included). Also add the standardised output to `tests/files/output_standard.json`, only including fields that are changed, along with `title`.
+Submit a PR on the `dev` branch, including tests for what gets newly matched (if applicable). Please provide input torrent names in `tests/files/input.json` and full output json objects (with `standardise=False`) in `tests/files/output_raw.json` (where the fields `encoder`, `excess`, `site`, and `episodeName` don't have to be included). Also add the standardised output to `tests/files/output_standard.json`, only including fields that are changed, along with `title`.
 
 ## Additions to parse-torrent-name
 
