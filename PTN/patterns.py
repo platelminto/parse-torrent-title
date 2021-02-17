@@ -108,7 +108,8 @@ patterns['codec'] = [('xvid', 'Xvid'),
                      ('av1', 'AV1'),
                      ('[hx]\.?264', 'H.264'),
                      ('AVC', 'H.264'),
-                     ('[hx]\.?265', 'H.265'),  # Separate so if both are present, it won't pollute excess.
+                     ('HEVC(?:{d}Main{d}?10P?)', 'H.265 Main 10'),
+                     ('[hx]\.?265', 'H.265'),  # Separate from HEVC so if both are present, it won't pollute excess.
                      ('HEVC', 'H.265'),
                      ('[h]\.?263', 'H.263')]
 patterns['audio'] = get_channel_audio_options([
