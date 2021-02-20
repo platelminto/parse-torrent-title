@@ -31,7 +31,7 @@ patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', '
                     'remux', 'internationalCut', 'genre']
 
 patterns = dict()
-patterns['episode'] = ['(?<![a-z])(?:e|ep)(?:[0-9]{1,2}(?:-(?:e|ep)?(?:[0-9]{1,2}))?)(?![0-9])',
+patterns['episode'] = ['(?<![a-z])(?:e|ep)(?:[0-9]{1,2}(?:-?(?:e|ep)?(?:[0-9]{1,2}))?)(?![0-9])',
                        # Very specific as it could match too liberally
                        '\s\-\s\d{1,3}\s',
                        r'\b[0-9]{1,2}x([0-9]{2})\b',
@@ -108,7 +108,7 @@ patterns['codec'] = [('xvid', 'Xvid'),
                      ('av1', 'AV1'),
                      ('[hx]\.?264', 'H.264'),
                      ('AVC', 'H.264'),
-                     ('HEVC(?:{d}Main{d}?10P?)', 'H.265 Main 10'),
+                     ('HEVC(?:{d}Main{d}?10P?)'.format(d=delimiters), 'H.265 Main 10'),
                      ('[hx]\.?265', 'H.265'),  # Separate from HEVC so if both are present, it won't pollute excess.
                      ('HEVC', 'H.265'),
                      ('[h]\.?263', 'H.263')]

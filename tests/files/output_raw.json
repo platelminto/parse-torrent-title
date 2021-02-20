@@ -3016,5 +3016,16 @@
     "season": 3,
     "title": "Magnum P.I.",
     "year": 2018
+  },
+  {
+    "season": 9,
+    "episode": [23, 24],
+    "resolution": "720p",
+    "quality": "BluRay",
+    "codec": "x264",
+    "audio": "DD5.1",
+    "container": "mkv",
+    "title": "Friends",
+    "encoder": "NTb"
   }
 ]

@@ -1764,5 +1764,12 @@
   {
     "codec": "H.264",
     "title": "Magnum P.I."
+  },
+  {
+    "quality": "Blu-ray",
+    "codec": "H.264",
+    "audio": "Dolby Digital 5.1",
+    "container": "MKV",
+    "title": "Friends"
   }
 ]
