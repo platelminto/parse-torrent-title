@@ -181,7 +181,7 @@ class PTN(object):
 
         if len(match) > 1:
             # for season we might have it in index 1 or index 2
-            # e.g. "5x09"
+            # e.g. "5x09" TODO is this weirdness necessary
             for i in range(1, len(match)):
                 if match[i]:
                     index['clean'] = i

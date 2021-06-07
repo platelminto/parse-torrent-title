@@ -46,7 +46,7 @@ improved by passing in the year, which can also be extracted using this library.
 
 ## Examples
 
-Both movies and TV (seasons & episodes) can be parsed. All meaningful information is
+Movies, series (seasons & episodes), and subtitles can be parsed. All meaningful information is
 extracted and returned in a dictionary. Text which couldn't be
 parsed is returned in the `excess` field.
 
@@ -122,7 +122,7 @@ PTN.parse('A freakishly cool movie or TV episode', standardise=False)
 * **audio**         *(string)*
 * **bitDepth**      *(integer)*
 * **codec**         *(string)*
-* **container**     *(string)*
+* **filetype**     *(string)*
 * **day**           *(integer)*
 * **directorsCut**  *(boolean)*
 * **documentary**   *(boolean)*

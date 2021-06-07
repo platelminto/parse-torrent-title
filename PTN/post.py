@@ -37,7 +37,7 @@ def try_encoder_before_site(self, unmatched):
         found_match = None
         for m in match:
             full_title_match = re.search(
-                r'[\s\-](' + re.escape(m) + ')(?:\.' + link_patterns(patterns['container']) + ')?$', self.torrent_name,
+                r'[\s\-](' + re.escape(m) + ')(?:\.' + link_patterns(patterns['filetype']) + ')?$', self.torrent_name,
                 re.I)
             if full_title_match:
                 found_match = full_title_match

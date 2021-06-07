@@ -405,7 +405,7 @@
   },
   {
     "audio": "Dual Audio",
-    "container": "AVI",
+    "filetype": "AVI",
     "quality": "DVDRip",
     "title": "Guardians of the Galaxy",
     "year": 2014
@@ -413,7 +413,7 @@
   {
     "audio": "Dual Audio",
     "codec": "x264",
-    "container": "MKV",
+    "filetype": "MKV",
     "quality": "WEB-DL",
     "resolution": "720p",
     "title": "Eliza Graves",
@@ -618,7 +618,7 @@
     "year": 2014
   },
   {
-    "container": "mp4",
+    "filetype": "mp4",
     "encoder": "ZhuixinFan",
     "episode": 7,
     "language": ["Chi","Jap"],
@@ -675,7 +675,7 @@
     "year": 2015
   },
   {
-    "container": "mp4",
+    "filetype": "mp4",
     "episode": 9,
     "episodeName": "Divide and Rule",
     "season": 1,
@@ -787,7 +787,7 @@
   },
   {
     "codec": "x264",
-    "container": "mkv",
+    "filetype": "mkv",
     "day": 1,
     "episodeName": "Jerry Benner",
     "month": 8,
@@ -896,7 +896,7 @@
   },
   {
     "codec": "x264",
-    "container": "MP4",
+    "filetype": "MP4",
     "quality": "WEB-DL",
     "resolution": "720p",
     "season": 2,
@@ -1058,7 +1058,7 @@
   {
     "audio": "AAC",
     "codec": "X264",
-    "container": "Mp-4",
+    "filetype": "Mp-4",
     "encoder": "DSD",
     "quality": "Dvd-Rip",
     "resolution": "480p",
@@ -1255,7 +1255,7 @@
   {
     "audio": "AAC",
     "codec": "x264",
-    "container": "mkv",
+    "filetype": "mkv",
     "episode": 8,
     "resolution": "1080p",
     "site": "Golumpa",
@@ -1496,7 +1496,7 @@
   {
     "audio": "AAC",
     "codec": "x264",
-    "container": "mkv",
+    "filetype": "mkv",
     "language": "Hindi",
     "quality": "WebRip",
     "resolution": "720p",
@@ -1508,7 +1508,7 @@
   {
     "audio": "AAC 2.0",
     "codec": "AVC",
-    "container": "mkv",
+    "filetype": "mkv",
     "encoder": "Telly",
     "language": "Hindi",
     "network": "Zee5",
@@ -1562,7 +1562,7 @@
   {
     "audio": "dd5.1",
     "codec": "x265",
-    "container": "mkv",
+    "filetype": "mkv",
     "encoder": "rmteam",
     "language": "japanese",
     "quality": "bluray",
@@ -1572,7 +1572,7 @@
   },
   {
     "codec": "H.264",
-    "container": "mkv",
+    "filetype": "mkv",
     "encoder": "MeM",
     "episode": 13,
     "episodeName": "Il mio amico Grodd",
@@ -1776,7 +1776,7 @@
     "year": 2019
   },
   {
-    "container": "MP4",
+    "filetype": "MP4",
     "encoder": "BigJ0554",
     "subtitles": "subs",
     "title": "Ella Fitzgerald - Just One of Those Things"
@@ -1813,7 +1813,7 @@
   {
     "audio": "AAC",
     "codec": "x265",
-    "container": "mkv",
+    "filetype": "mkv",
     "encoder": "MVGroup.org",
     "network": "BBC",
     "quality": "HDTV",
@@ -1842,7 +1842,7 @@
   {
     "audio": "DD5.1",
     "codec": "H.264",
-    "container": "mkv",
+    "filetype": "mkv",
     "encoder": "MeM",
     "episode": 3,
     "episodeName": "Comunisti alieni dal futuro",
@@ -1867,7 +1867,7 @@
   },
   {
     "codec": "x264",
-    "container": "mp4",
+    "filetype": "mp4",
     "day": 19,
     "encoder": "PC",
     "month": 6,
@@ -1966,7 +1966,7 @@
     "title": "Diners Drive-Ins and Dives"
   },
   {
-    "container": "mkv",
+    "filetype": "mkv",
     "episode": 12,
     "resolution": "720p",
     "site": "Erai-raws",
@@ -1991,7 +1991,7 @@
     "year": 2020
   },
   {
-    "container": "mkv",
+    "filetype": "mkv",
     "episode": 12,
     "resolution": "720p",
     "site": "Erai-raws",
@@ -1999,7 +1999,7 @@
     "title": "Yesterday o Utatte"
   },
   {
-    "container": "mkv",
+    "filetype": "mkv",
     "episode": 12,
     "resolution": "1080p",
     "season": 2,
@@ -2084,7 +2084,7 @@
   {
     "audio": "AAC",
     "codec": "x265",
-    "container": "mkv",
+    "filetype": "mkv",
     "encoder": "MVGroup.org",
     "network": "BBC",
     "quality": "HDTV",
@@ -2148,7 +2148,7 @@
     "year": 2020
   },
   {
-    "container": "mkv",
+    "filetype": "mkv",
     "encoder": "CreW",
     "language": ["ITA","ENG"],
     "quality": "Bluray",
@@ -2159,7 +2159,7 @@
   {
     "audio": "AAC",
     "codec": "X264",
-    "container": "Mp-4",
+    "filetype": "Mp-4",
     "encoder": "DSD",
     "quality": "Dvd-Rip",
     "resolution": "480p",
@@ -2219,7 +2219,7 @@
     "audio": "EAC3 5.1",
     "bitDepth": 10,
     "codec": "x265",
-    "container": "mkv",
+    "filetype": "mkv",
     "encoder": "xtrem3x",
     "quality": "BDRip",
     "resolution": "1080p",
@@ -2247,7 +2247,7 @@
   },
   {
     "codec": "H264",
-    "container": "mp4",
+    "filetype": "mp4",
     "genre": "Drama",
     "language": ["Eng","Rus"],
     "resolution": "720p",
@@ -2259,7 +2259,7 @@
     "audio": "TrueHD 5.1",
     "bitDepth": 10,
     "codec": "x265",
-    "container": "mkv",
+    "filetype": "mkv",
     "encoder": "xtrem3x",
     "quality": "BDRip",
     "resolution": "1080p",
@@ -2300,7 +2300,7 @@
   {
     "audio": "AAC",
     "codec": "X264",
-    "container": "Mp-4",
+    "filetype": "Mp-4",
     "encoder": "DSD",
     "quality": "Dvd-Rip",
     "resolution": "480p",
@@ -2309,7 +2309,7 @@
   },
   {
     "audio": "FLAC",
-    "container": "MKV",
+    "filetype": "MKV",
     "encoder": "oan",
     "resolution": "1080p",
     "title": "Treasure Planet",
@@ -2670,7 +2670,7 @@
     "audio": "DTS-HD MA 7.1",
     "bitDepth": 10,
     "codec": "x265",
-    "container": "mkv",
+    "filetype": "mkv",
     "encoder": "r0b0t",
     "quality": "BDRip",
     "resolution": "1080p",
@@ -2682,7 +2682,7 @@
     "audio": "AAC 1.0",
     "bitDepth": 10,
     "codec": "x265",
-    "container": "mkv",
+    "filetype": "mkv",
     "encoder": "Frys",
     "quality": "Dvdrip",
     "resolution": "1080p",
@@ -2714,7 +2714,7 @@
   {
     "audio": "AAC",
     "codec": "x264",
-    "container": "mp4",
+    "filetype": "mp4",
     "encoder": "MVGroup.org",
     "episode": 11,
     "episodeName": "Oceans Most Powerful",
@@ -2870,7 +2870,7 @@
   },
   {
     "codec": "x264",
-    "container": "mkv",
+    "filetype": "mkv",
     "encoder": "Morpheus",
     "episode": 1,
     "language": ["ITA","ENG"],
@@ -2881,7 +2881,7 @@
   },
   {
     "codec": "x264",
-    "container": "mkv",
+    "filetype": "mkv",
     "encoder": "MeM",
     "episode": 9,
     "episodeName": "Canale 4",
@@ -2999,7 +2999,7 @@
   {
     "audio": "DTS-HD.MA.5.1",
     "codec": "AVC",
-    "container": "mkv",
+    "filetype": "mkv",
     "encoder": "FraMeSToR",
     "quality": "BluRay",
     "remux": true,
@@ -3024,8 +3024,17 @@
     "quality": "BluRay",
     "codec": "x264",
     "audio": "DD5.1",
-    "container": "mkv",
+    "filetype": "mkv",
     "title": "Friends",
     "encoder": "NTb"
+  },
+  {
+    "year": 2004,
+    "resolution": "1080p",
+    "quality": "BluRay",
+    "codec": "x264",
+    "filetype": "srt",
+    "title": "Shrek 2",
+    "encoder": "YIFY"
   }
 ]

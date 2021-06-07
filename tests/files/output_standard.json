@@ -287,14 +287,14 @@
   },
   {
     "audio": "Dual",
-    "container": "AVI",
+    "filetype": "AVI",
     "quality": "DVD-Rip",
     "title": "Guardians of the Galaxy"
   },
   {
     "audio": "Dual",
     "codec": "H.264",
-    "container": "MKV",
+    "filetype": "MKV",
     "quality": "WEB-DL",
     "title": "Eliza Graves"
   },
@@ -426,7 +426,7 @@
     "title": "The Flash"
   },
   {
-    "container": "MP4",
+    "filetype": "MP4",
     "language": ["Chinese","Japanese"],
     "quality": "HDTV",
     "resolution": "720p",
@@ -468,7 +468,7 @@
     "title": "The Martian"
   },
   {
-    "container": "MP4",
+    "filetype": "MP4",
     "title": "Borgen"
   },
   {
@@ -549,7 +549,7 @@
   },
   {
     "codec": "H.264",
-    "container": "MKV",
+    "filetype": "MKV",
     "quality": "HDTV",
     "title": "Jimmy Not Funny"
   },
@@ -620,7 +620,7 @@
   },
   {
     "codec": "H.264",
-    "container": "MP4",
+    "filetype": "MP4",
     "quality": "WEB-DL",
     "size": "4.3GB",
     "title": "Marvels Iron Fist"
@@ -720,7 +720,7 @@
   {
     "audio": "AAC",
     "codec": "H.264",
-    "container": "MP4",
+    "filetype": "MP4",
     "quality": "DVD-Rip",
     "title": "The Peacemaker"
   },
@@ -829,7 +829,7 @@
   },
   {
     "codec": "H.264",
-    "container": "MKV",
+    "filetype": "MKV",
     "size": "1.4GB",
     "title": "Blood Blockade Battlefront & Beyond"
   },
@@ -956,14 +956,14 @@
   },
   {
     "codec": "H.264",
-    "container": "MKV",
+    "filetype": "MKV",
     "quality": "WEBRip",
     "subtitles": "English",
     "title": "Kasganj"
   },
   {
     "codec": "H.264",
-    "container": "MKV",
+    "filetype": "MKV",
     "network": "ZEE5",
     "quality": "WEB-DL",
     "subtitles": "English",
@@ -995,13 +995,13 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.265",
-    "container": "MKV",
+    "filetype": "MKV",
     "language": "Japanese",
     "quality": "Blu-ray",
     "title": "liz and the blue bird"
   },
   {
-    "container": "MKV",
+    "filetype": "MKV",
     "language": ["Italian","English"],
     "network": "Amazon Studios",
     "quality": "WEB-DL",
@@ -1114,7 +1114,7 @@
   },
   {
     "codec": "H.265",
-    "container": "MKV",
+    "filetype": "MKV",
     "title": "When Pop Went Epic"
   },
   {
@@ -1128,7 +1128,7 @@
   },
   {
     "audio": "Dolby Digital 5.1",
-    "container": "MKV",
+    "filetype": "MKV",
     "language": ["Italian","English"],
     "network": "Amazon Studios",
     "quality": "WEB-DL",
@@ -1141,7 +1141,7 @@
   },
   {
     "codec": "H.264",
-    "container": "MP4",
+    "filetype": "MP4",
     "title": "The Beat with Ari Melber"
   },
   {
@@ -1189,7 +1189,7 @@
     "title": "Diners Drive-Ins and Dives"
   },
   {
-    "container": "MKV",
+    "filetype": "MKV",
     "title": "Arte"
   },
   {
@@ -1202,12 +1202,12 @@
     "title": "Prawaas"
   },
   {
-    "container": "MKV",
+    "filetype": "MKV",
     "subtitles": "Available",
     "title": "Yesterday o Utatte"
   },
   {
-    "container": "MKV",
+    "filetype": "MKV",
     "subtitles": "Available",
     "title": "Honzuki no Gekokujou - Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen"
   },
@@ -1249,7 +1249,7 @@
   },
   {
     "codec": "H.265",
-    "container": "MKV",
+    "filetype": "MKV",
     "title": "Billy and Us"
   },
   {
@@ -1286,14 +1286,14 @@
     "title": "Wasp Network"
   },
   {
-    "container": "MKV",
+    "filetype": "MKV",
     "language": ["Italian","English"],
     "quality": "Blu-ray",
     "title": "Darlin"
   },
   {
     "codec": "H.264",
-    "container": "MP4",
+    "filetype": "MP4",
     "quality": "DVD-Rip",
     "title": "Wild Target"
   },
@@ -1327,7 +1327,7 @@
   {
     "audio": "Dolby Digital Plus 5.1",
     "codec": "H.265",
-    "container": "MKV",
+    "filetype": "MKV",
     "title": "Jay And Silent Bob Strike Back"
   },
   {
@@ -1342,7 +1342,7 @@
   },
   {
     "codec": "H.264",
-    "container": "MP4",
+    "filetype": "MP4",
     "language": ["English","Russian"],
     "subtitles": "Available",
     "title": "The Deep Blue Sea"
@@ -1350,7 +1350,7 @@
   {
     "audio": "Dolby TrueHD 5.1",
     "codec": "H.265",
-    "container": "MKV",
+    "filetype": "MKV",
     "title": "Clerks II"
   },
   {
@@ -1375,7 +1375,7 @@
   },
   {
     "codec": "H.264",
-    "container": "MP4",
+    "filetype": "MP4",
     "quality": "DVD-Rip",
     "title": "A Walk in the Woods"
   },
@@ -1575,12 +1575,12 @@
   },
   {
     "codec": "H.265",
-    "container": "MKV",
+    "filetype": "MKV",
     "title": "The Twilight Saga Breaking Dawn - Part 2"
   },
   {
     "codec": "H.265",
-    "container": "MKV",
+    "filetype": "MKV",
     "quality": "DVD-Rip",
     "title": "Scooby-Doo Goes Hollywood"
   },
@@ -1599,7 +1599,7 @@
   },
   {
     "codec": "H.264",
-    "container": "MP4",
+    "filetype": "MP4",
     "title": "Sea Monsters"
   },
   {
@@ -1684,14 +1684,14 @@
   },
   {
     "codec": "H.264",
-    "container": "MKV",
+    "filetype": "MKV",
     "language": ["Italian","English"],
     "quality": "AHDTV",
     "title": "Gangs Of London"
   },
   {
     "codec": "H.264",
-    "container": "MKV",
+    "filetype": "MKV",
     "language": ["Italian","English"],
     "quality": "Blu-ray",
     "title": "Fear the Walking Dead"
@@ -1757,7 +1757,7 @@
   {
     "audio": "DTS-HD MA 5.1",
     "codec": "H.264",
-    "container": "MKV",
+    "filetype": "MKV",
     "quality": "Blu-ray",
     "title": "Extraterrestrial"
   },
@@ -1769,7 +1769,13 @@
     "quality": "Blu-ray",
     "codec": "H.264",
     "audio": "Dolby Digital 5.1",
-    "container": "MKV",
+    "filetype": "MKV",
     "title": "Friends"
+  },
+  {
+    "quality": "Blu-ray",
+    "codec": "H.264",
+    "filetype": "SRT",
+    "title": "Shrek 2"
   }
 ]
