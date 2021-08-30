@@ -1893,5 +1893,11 @@
     "audio": "AAC 2.0",
     "filetype": "MKV",
     "network": "Animal Planet Live"
+  },
+  {
+    "codec": "H.264",
+    "audio": "Dolby Digital 2.0",
+    "filetype": "MKV",
+    "network": "DirecTV Stream"
   }
 ]

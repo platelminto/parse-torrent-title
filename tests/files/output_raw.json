@@ -3303,5 +3303,17 @@
     "title": "Mystery of the Lost Islands",
     "episodeName": "Shark Island",
     "encoder": "BOOP"
+  },
+  {
+    "season": 1,
+    "episode": 1,
+    "quality": "WEB-DL",
+    "codec": "x264",
+    "audio": "DD2.0",
+    "filetype": "mkv",
+    "network": "DTV",
+    "title": "Mr Mercedes",
+    "episodeName": "Pilot",
+    "encoder": "BTW"
   }
 ]
