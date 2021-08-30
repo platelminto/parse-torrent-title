@@ -1797,5 +1797,9 @@
   {
     "audio": "AAC 2.0",
     "network": "Adult Swim"
+  },
+  {
+    "audio": "AAC 2.0",
+    "network": "Crave"
   }
 ]

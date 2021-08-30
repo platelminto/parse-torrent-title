@@ -3085,5 +3085,15 @@
     "network": "AS",
     "title": "The Shivering Truth",
     "encoder": "BTN"
+  },
+  {
+    "season": 5,
+    "resolution": "720p",
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "audio": "AAC2.0",
+    "network": "CRAV",
+    "title": "Letterkenny",
+    "encoder": "BTW"
   }
 ]
