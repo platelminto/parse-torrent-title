@@ -1144,6 +1144,7 @@
   },
   {
     "codec": "H264",
+    "directorsCut": true,
     "language": ["ita","fre"],
     "resolution": "720p",
     "subtitles": "Eng",
@@ -3036,5 +3037,161 @@
     "filetype": "srt",
     "title": "Shrek 2",
     "encoder": "YIFY"
+  },
+  {
+    "year": 2006,
+    "resolution": "720p",
+    "quality": "HDDVD",
+    "codec": "x264",
+    "audio": "DD5.1",
+    "title": "Accepted",
+    "encoder": "EbP"
+  },
+  {
+    "season": 12,
+    "resolution": "1080p",
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "audio": "DD+2.0",
+    "network": "Amazon",
+    "title": "Its Always Sunny In Philadelphia",
+    "encoder": "CtrlHD"
+  },
+  {
+    "season": 1,
+    "resolution": "1080p",
+    "quality": "WEBRip",
+    "codec": "H.264",
+    "audio": "DD5.1",
+    "network": "HBO",
+    "title": "Animals",
+    "encoder": "monkee"
+  },
+  {
+    "season": 2,
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "audio": "AAC2.0",
+    "network": "iT",
+    "title": "SpongeBob SquarePants",
+    "encoder": "NOGRP"
+  },
+  {
+    "season": 1,
+    "resolution": "1080p",
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "audio": "AAC2.0",
+    "network": "AS",
+    "title": "The Shivering Truth",
+    "encoder": "BTN"
+  },
+  {
+    "season": 5,
+    "resolution": "720p",
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "audio": "AAC2.0",
+    "network": "CRAV",
+    "title": "Letterkenny",
+    "encoder": "BTW"
+  },
+  {
+    "season": 7,
+    "resolution": "1080p",
+    "quality": "WEBRip",
+    "codec": "x264",
+    "audio": "AAC2.0",
+    "network": "CC",
+    "title": "Workaholics",
+    "encoder": "BTW"
+  },
+  {
+    "season": 1,
+    "resolution": "1080p",
+    "quality": "WEBRip",
+    "codec": "x264",
+    "audio": "AAC2.0",
+    "network": "SESO",
+    "title": "HarmonQuest",
+    "encoder": "BTW"
+  },
+  {
+    "season": 1,
+    "resolution": "1080p",
+    "quality": "WEB-DL",
+    "codec": "x264",
+    "network": "VRV",
+    "title": "Bee and Puppycat",
+    "encoder": "Bernd_Lauert"
+  },
+  {
+    "season": 3,
+    "resolution": "1080p",
+    "quality": "WEB-DL",
+    "codec": "x264",
+    "audio": "DDP5.1",
+    "network": "PCOK",
+    "title": "A P Bio",
+    "encoder": "NTb"
+  },
+  {
+    "season": 1,
+    "episode": 1,
+    "resolution": "540p",
+    "quality": "WEB-DL",
+    "codec": "x264",
+    "audio": "AAC2.0",
+    "filetype": "mkv",
+    "network": "CBS",
+    "title": "Star Trek Discovery",
+    "episodeName": "The Vulcan Hello",
+    "encoder": "AJP69"
+  },
+  {
+    "year": 1990,
+    "resolution": "1080p",
+    "quality": "BluRay",
+    "codec": "VC-1",
+    "audio": "TrueHD.5.1",
+    "filetype": "mkv",
+    "remux": true,
+    "title": "IMAX Blue Planet",
+    "encoder": "EPSiLON"
+  },
+  {
+    "year": 2017,
+    "resolution": "720p",
+    "quality": "BluRay",
+    "codec": "x264",
+    "audio": "DD-EX",
+    "title": "John Wick Chapter 2",
+    "encoder": "TayTO"
+  },
+  {
+    "season": 2,
+    "resolution": "1080p",
+    "quality": "BluRay",
+    "codec": "AVC",
+    "audio": "DTSMA",
+    "remux": true,
+    "title": "Archer"
+  },
+  {
+    "season": 1,
+    "resolution": "720p",
+    "quality": "BluRay",
+    "codec": "x264",
+    "audio": "FLAC2.0",
+    "title": "Peaky Blinders",
+    "encoder": "DON"
+  },
+  {
+    "season": 1,
+    "quality": "DVDRip",
+    "codec": "x264",
+    "audio": "OGG",
+    "title": "Ghost Stories",
+    "encoder": "Exiled-Destiny"
   }
 ]

@@ -81,19 +81,29 @@ patterns['quality'] = [('WEB[ -\.]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
                        ('Blu-?Ray{d}Rip|BDR(?:ip)?'.format(d=delimiters), 'BDRip'),
                        ('Blu-?Ray', 'Blu-ray'),
                        ('BR-?Rip', 'BRRip'),
+                       ('HDDVD', 'HD DVD'),
                        # Match this last as it can show up with others.
                        ('PPV(?:Rip)?', 'Pay-Per-View Rip')]
 patterns['network'] = [('ATVP', 'Apple TV+'),
-                        ('AMZN', 'Amazon Studios'),
+                        ('AMZN|Amazon', 'Amazon Studios'),
                         ('NF|Netflix', 'Netflix'),
                         ('NICK', 'Nickelodeon'),
                         ('RED', 'YouTube Premium'),
                         ('DSNY?P', 'Disney Plus'),
                         ('HMAX', 'HBO Max'),
+                        ('HBO', 'HBO'),
                         ('HULU', 'Hulu Networks'),
                         ('MS?NBC', 'MSNBC'),
                         ('DCU', 'DC Universe'),
                         ('ID', 'Investigation Discovery'),
+                        ('iT', 'iTunes'),
+                        ('AS', 'Adult Swim'),
+                        ('CRAV', 'Crave'),
+                        ('CC', 'Comedy Central'),
+                        ('SESO', 'Seeso'),
+                        ('VRV', 'VRV'),
+                        ('PCOK', 'Peacock'),
+                        ('CBS', 'CBS'),
                         ]
 patterns['network'] = suffix_pattern_with(link_patterns(patterns['quality']),
                                           patterns['network'], delimiters)
@@ -111,20 +121,25 @@ patterns['codec'] = [('xvid', 'Xvid'),
                      ('HEVC(?:{d}Main{d}?10P?)'.format(d=delimiters), 'H.265 Main 10'),
                      ('[hx]\.?265', 'H.265'),  # Separate from HEVC so if both are present, it won't pollute excess.
                      ('HEVC', 'H.265'),
-                     ('[h]\.?263', 'H.263')]
+                     ('[h]\.?263', 'H.263'),
+                     ('VC-1', 'VC-1'),
+                     ]
 patterns['audio'] = get_channel_audio_options([
     ('TrueHD', 'Dolby TrueHD'),
     ('Atmos', 'Dolby Atmos'),
+    ('DD-EX', 'Dolby Digital EX'),
     ('DD|AC-?3|DolbyD', 'Dolby Digital'),
     ('DDP|E-?AC-?3|EC-3', 'Dolby Digital Plus'),
     ('DTS{d}?HD(?:{d}?(?:MA|Masters?(?:{d}Audio)?))'.format(d=delimiters), 'DTS-HD MA'),
+    ('DTSMA', 'DTS-HD MA'),
     ('DTS{d}?HD'.format(d=delimiters), 'DTS-HD'),
     ('DTS', 'DTS'),
     ('AAC[ \.\-]LC', 'AAC-LC'),
     ('AAC', 'AAC'),
-    ('Dual{d}Audios?'.format(d=delimiters), 'Dual')
+    ('Dual{d}Audios?'.format(d=delimiters), 'Dual'),
+    ('FLAC', 'FLAC'),
+    ('OGG', 'OGG'),
 ]) + [('7.1(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), '7.1'),
-      ('FLAC', 'FLAC'),
       ('5.1(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), '5.1'),
       ('MP3', None, 'upper'),
       ('2.0(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?|2CH|stereo'.format(d=delimiters), 'Dual'),
@@ -175,7 +190,7 @@ patterns['hdr'] = 'HDR(?:10)?'
 patterns['documentary'] = 'DOCU(?:menta?ry)?'
 patterns['limited'] = 'LIMITED'
 patterns['remastered'] = 'REMASTERED'
-patterns['directorsCut'] = 'DC'
+patterns['directorsCut'] = 'DC|Director\'?s.?Cut'
 patterns['upscaled'] = '(?:AI{d}*)?upscaled?'.format(d=delimiters)
 patterns['untouched'] = 'untouched'
 patterns['remux'] = 'REMUX'

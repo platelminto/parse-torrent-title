@@ -1777,5 +1777,76 @@
     "codec": "H.264",
     "filetype": "SRT",
     "title": "Shrek 2"
+  },
+  {
+    "quality": "HD DVD",
+    "codec": "H.264",
+    "audio": "Dolby Digital 5.1"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "network": "Amazon Studios"
+  },
+  {
+    "audio": "Dolby Digital 5.1"
+  },
+  {
+    "audio": "AAC 2.0",
+    "network": "iTunes"
+  },
+  {
+    "audio": "AAC 2.0",
+    "network": "Adult Swim"
+  },
+  {
+    "audio": "AAC 2.0",
+    "network": "Crave"
+  },
+  {
+    "codec": "H.264",
+    "audio": "AAC 2.0",
+    "network": "Comedy Central"
+  },
+  {
+    "codec": "H.264",
+    "audio": "AAC 2.0",
+    "network": "Seeso"
+  },
+  {
+    "codec": "H.264"
+  },
+  {
+    "codec": "H.264",
+    "audio": "Dolby Digital Plus 5.1",
+    "network": "Peacock"
+  },
+  {
+    "codec": "H.264",
+    "audio": "AAC 2.0",
+    "filetype": "MKV"
+  },
+  {
+    "quality": "Blu-ray",
+    "audio": "Dolby TrueHD 5.1",
+    "filetype": "MKV"
+  },
+  {
+    "quality": "Blu-ray",
+    "codec": "H.264",
+    "audio": "Dolby Digital EX"
+  },
+  {
+    "quality": "Blu-ray",
+    "codec": "H.264",
+    "audio": "DTS-HD MA"
+  },
+  {
+    "quality": "Blu-ray",
+    "codec": "H.264",
+    "audio": "FLAC 2.0"
+  },
+  {
+    "quality": "DVD-Rip",
+    "codec": "H.264"
   }
 ]
