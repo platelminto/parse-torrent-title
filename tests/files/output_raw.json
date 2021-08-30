@@ -3095,5 +3095,15 @@
     "network": "CRAV",
     "title": "Letterkenny",
     "encoder": "BTW"
+  },
+  {
+    "season": 7,
+    "resolution": "1080p",
+    "quality": "WEBRip",
+    "codec": "x264",
+    "audio": "AAC2.0",
+    "network": "CC",
+    "title": "Workaholics",
+    "encoder": "BTW"
   }
 ]
