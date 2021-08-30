@@ -3205,5 +3205,19 @@
     "network": "iP",
     "title": "Rick Steins Road To Mexico",
     "encoder": "RTN"
+  },
+  {
+    "season": 7,
+    "episode": 1,
+    "resolution": "1080p",
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "audio": "AAC2.0",
+    "repack": true,
+    "filetype": "mkv",
+    "network": "NBC",
+    "title": "Road to the NHL Winter Classic",
+    "episodeName": "Rangers vs Sabres Part1",
+    "encoder": "BTW"
   }
 ]
