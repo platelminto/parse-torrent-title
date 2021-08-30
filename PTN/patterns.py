@@ -104,6 +104,7 @@ patterns['network'] = [('ATVP', 'Apple TV+'),
                         ('VRV', 'VRV'),
                         ('PCOK', 'Peacock'),
                         ('CBS', 'CBS'),
+                        ('iP', 'BBC iPlayer'),
                         ]
 patterns['network'] = suffix_pattern_with(link_patterns(patterns['quality']),
                                           patterns['network'], delimiters)

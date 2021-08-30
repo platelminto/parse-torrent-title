@@ -3193,5 +3193,17 @@
     "audio": "OGG",
     "title": "Ghost Stories",
     "encoder": "Exiled-Destiny"
+  },
+  {
+    "season": 1,
+    "episode": 1,
+    "resolution": "720p",
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "audio": "AAC2.0",
+    "filetype": "mkv",
+    "network": "iP",
+    "title": "Rick Steins Road To Mexico",
+    "encoder": "RTN"
   }
 ]
