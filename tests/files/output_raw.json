@@ -3270,5 +3270,16 @@
     "title": "Octonauts",
     "episodeName": "The Great Swamp Search",
     "encoder": "RTN"
+  },
+  {
+    "season": 1,
+    "episode": 1,
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "audio": "AAC2.0",
+    "filetype": "mkv",
+    "network": "RTE",
+    "title": "Nowhere Fast",
+    "encoder": "RTN"
   }
 ]
