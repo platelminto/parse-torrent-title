@@ -3115,5 +3115,14 @@
     "network": "SESO",
     "title": "HarmonQuest",
     "encoder": "BTW"
+  },
+  {
+    "season": 1,
+    "resolution": "1080p",
+    "quality": "WEB-DL",
+    "codec": "x264",
+    "network": "VRV",
+    "title": "Bee and Puppycat",
+    "encoder": "Bernd_Lauert"
   }
 ]
