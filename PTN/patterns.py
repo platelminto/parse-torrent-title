@@ -26,7 +26,7 @@ pre_website_encoder_pattern = '[^\s\.\[\]\-\(\)]+\)\s{0,2}\[[^\s\-]+\]|[^\s\.\[\
 patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', 'quality',
                     'codec', 'audio', 'region', 'extended', 'hardcoded', 'proper', 'repack',
                     'filetype', 'widescreen', 'site', 'documentary', 'language', 'subtitles',
-                    'sbs', 'unrated', 'size', 'bitDepth', '3d', 'internal', 'readnfo', 'network',
+                    'sbs', 'unrated', 'size', 'bitDepth', '3d', 'internal', 'readnfo', 'provider',
                     'fps', 'hdr', 'limited', 'remastered', 'directorsCut', 'upscaled', 'untouched',
                     'remux', 'internationalCut', 'genre']
 
@@ -84,7 +84,7 @@ patterns['quality'] = [('WEB[ -\.]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
                        ('HDDVD', 'HD DVD'),
                        # Match this last as it can show up with others.
                        ('PPV(?:Rip)?', 'Pay-Per-View Rip')]
-patterns['network'] = [('ATVP', 'Apple TV+'),
+patterns['provider'] = [('ATVP', 'Apple TV+'),
                         ('AMZN|Amazon', 'Amazon Studios'),
                         ('NF|Netflix', 'Netflix'),
                         ('NICK', 'Nickelodeon'),
@@ -116,11 +116,11 @@ patterns['network'] = [('ATVP', 'Apple TV+'),
                         ('DTV', 'DirecTV Stream'),
                         ('VICE', 'VICE'),
                         ]
-patterns['network'] = suffix_pattern_with(link_patterns(patterns['quality']),
-                                          patterns['network'], delimiters)
-# Not all networks always show up just before the quality, so if they're unlikely to clash,
+patterns['provider'] = suffix_pattern_with(link_patterns(patterns['quality']),
+                                          patterns['provider'], delimiters)
+# Not all providers always show up just before the quality, so if they're unlikely to clash,
 # they should be added here.
-patterns['network'] += [('BBC', 'BBC'),
+patterns['provider'] += [('BBC', 'BBC'),
                         ('Hoichoi', 'Hoichoi'),
                         ('Zee5', 'ZEE5'),
                         ('Hallmark', 'Hallmark'),

@@ -86,7 +86,7 @@ PTN.parse('Deadliest.Catch.S00E66.No.Safe.Passage.720p.AMZN.WEB-DL.DDP2.0.H.264-
 #     'resolution': '720p',
 #     'codec': 'H.264',
 #     'audio' : 'Dolby Digital Plus 2.0',
-#     'network': 'Amazon Studios',
+#     'provider': 'Amazon Studios',
 #     'season':  0,
 #     'episode': 66,
 #     'quality': 'WEB-DL',
@@ -122,7 +122,7 @@ PTN.parse('A freakishly cool movie or TV episode', standardise=False)
 * **audio**         *(string)*
 * **bitDepth**      *(integer)*
 * **codec**         *(string)*
-* **filetype**     *(string)*
+* **filetype**      *(string)*
 * **day**           *(integer)*
 * **directorsCut**  *(boolean)*
 * **documentary**   *(boolean)*
@@ -140,7 +140,7 @@ PTN.parse('A freakishly cool movie or TV episode', standardise=False)
 * **language**      *(string, string list)*
 * **limited**       *(boolean)*
 * **month**         *(integer)*
-* **network**       *(string)*
+* **provider**      *(string)*
 * **proper**        *(boolean)*
 * **quality**       *(string)*
 * **readnfo**       *(boolean)*
@@ -151,7 +151,7 @@ PTN.parse('A freakishly cool movie or TV episode', standardise=False)
 * **resolution**    *(string)*
 * **sbs**           *(string)*
 * **season**        *(integer, integer list)*
-* **site**       *(string)*
+* **site**          *(string)*
 * **size**          *(string)*
 * **subtitles**     *(string, string list)*
 * **title**         *(string)*

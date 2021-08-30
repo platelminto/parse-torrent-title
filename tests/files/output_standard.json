@@ -445,7 +445,7 @@
   },
   {
     "codec": "H.264",
-    "network": "Amazon Studios",
+    "provider": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "South Park"
   },
@@ -492,7 +492,7 @@
     "audio": "AAC 5.1",
     "codec": "H.264",
     "language": "Polish",
-    "network": "Netflix",
+    "provider": "Netflix",
     "quality": "WEB-DL",
     "title": "1983"
   },
@@ -555,7 +555,7 @@
   },
   {
     "codec": "H.264",
-    "network": "Amazon Studios",
+    "provider": "Amazon Studios",
     "quality": "WEBRip",
     "title": "Tom Clancys Jack Ryan"
   },
@@ -575,7 +575,7 @@
     "audio": "Dolby Digital Plus 5.1",
     "bitDepth": 10,
     "codec": "H.265",
-    "network": "Apple TV+",
+    "provider": "Apple TV+",
     "quality": "WEBRip",
     "title": "Home Before Dark"
   },
@@ -597,7 +597,7 @@
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "language": ["Italian","English"],
-    "network": "Amazon Studios",
+    "provider": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "The Blacklist"
   },
@@ -605,7 +605,7 @@
     "audio": "Dolby Digital Plus 2.0",
     "bitDepth": 10,
     "codec": "H.265",
-    "network": "Amazon Studios",
+    "provider": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "Are You Being Served"
   },
@@ -637,7 +637,7 @@
   },
   {
     "codec": "H.264",
-    "network": "Amazon Studios",
+    "provider": "Amazon Studios",
     "quality": "WEBRip",
     "size": "800MB",
     "title": "Label Me"
@@ -702,13 +702,13 @@
   {
     "audio": "Dolby Digital Plus 2.0",
     "codec": "H.264",
-    "network": "Amazon Studios",
+    "provider": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "Deadliest Catch"
   },
   {
     "codec": "H.264",
-    "network": "Netflix",
+    "provider": "Netflix",
     "quality": "WEBRip",
     "title": "New Girl"
   },
@@ -789,7 +789,7 @@
   },
   {
     "codec": "H.264",
-    "network": "Amazon Studios",
+    "provider": "Amazon Studios",
     "title": "Insecure"
   },
   {
@@ -803,7 +803,7 @@
   {
     "audio": "Dolby Digital Plus 5.1",
     "codec": "H.264",
-    "network": "Amazon Studios",
+    "provider": "Amazon Studios",
     "title": "Starhunter ReduX"
   },
   {
@@ -873,7 +873,7 @@
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.264",
-    "network": "SONY LIV",
+    "provider": "SONY LIV",
     "size": "1.1GB",
     "subtitles": "English",
     "title": "Kadakh"
@@ -899,7 +899,7 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "network": "Netflix",
+    "provider": "Netflix",
     "size": "800MB",
     "subtitles": "English",
     "title": "Chaman Bahar"
@@ -914,7 +914,7 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "network": "Amazon Studios",
+    "provider": "Amazon Studios",
     "size": "1.1GB",
     "subtitles": "English",
     "title": "Penguin"
@@ -964,7 +964,7 @@
   {
     "codec": "H.264",
     "filetype": "MKV",
-    "network": "ZEE5",
+    "provider": "ZEE5",
     "quality": "WEB-DL",
     "subtitles": "English",
     "title": "Kasganj"
@@ -989,7 +989,7 @@
     "audio": "Dolby Digital Plus 5.1",
     "codec": "H.264",
     "language": "Japanese",
-    "network": "Netflix",
+    "provider": "Netflix",
     "title": "A Whisker Away"
   },
   {
@@ -1003,14 +1003,14 @@
   {
     "filetype": "MKV",
     "language": ["Italian","English"],
-    "network": "Amazon Studios",
+    "provider": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "The Flash"
   },
   {
     "audio": "Dolby Digital Plus 5.1",
     "codec": "H.264",
-    "network": "DC Universe",
+    "provider": "DC Universe",
     "title": "Harley Quinn"
   },
   {
@@ -1020,7 +1020,7 @@
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.265",
-    "network": "HBO Max",
+    "provider": "HBO Max",
     "quality": "WEBRip",
     "title": "The Flintstones"
   },
@@ -1031,17 +1031,17 @@
   },
   {
     "audio": "Dolby Digital Plus 5.1",
-    "network": "Amazon Studios",
+    "provider": "Amazon Studios",
     "title": "Blindspot"
   },
   {
     "audio": "Dolby Digital Plus 5.1",
-    "network": "Amazon Studios",
+    "provider": "Amazon Studios",
     "title": "In the Dark"
   },
   {
     "codec": "H.264",
-    "network": "Netflix",
+    "provider": "Netflix",
     "title": "Babies"
   },
   {
@@ -1063,7 +1063,7 @@
   },
   {
     "audio": "AAC 2.0",
-    "network": "MSNBC",
+    "provider": "MSNBC",
     "title": "The Rachel Maddow Show"
   },
   {
@@ -1073,7 +1073,7 @@
   },
   {
     "codec": "H.264",
-    "network": "HBO Max",
+    "provider": "HBO Max",
     "title": "Scandalous The Untold Story of the National Enquirer"
   },
   {
@@ -1092,7 +1092,7 @@
   },
   {
     "codec": "H.264",
-    "network": "Hulu Networks",
+    "provider": "Hulu Networks",
     "title": "And We Go Green"
   },
   {
@@ -1130,7 +1130,7 @@
     "audio": "Dolby Digital 5.1",
     "filetype": "MKV",
     "language": ["Italian","English"],
-    "network": "Amazon Studios",
+    "provider": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "Marvel's Agents of S.H.I.E.L.D."
   },
@@ -1151,13 +1151,13 @@
   },
   {
     "codec": "H.264",
-    "network": "Netflix",
+    "provider": "Netflix",
     "subtitles": "English",
     "title": "Paan Singh Tomar"
   },
   {
     "audio": "AAC 2.0",
-    "network": "Hulu Networks",
+    "provider": "Hulu Networks",
     "title": "MASH"
   },
   {
@@ -1198,7 +1198,7 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "network": "Amazon Studios",
+    "provider": "Amazon Studios",
     "title": "Prawaas"
   },
   {
@@ -1227,7 +1227,7 @@
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.265",
-    "network": "Netflix",
+    "provider": "Netflix",
     "quality": "WEBRip",
     "title": "The Fresh Prince of Bel-Air"
   },
@@ -1369,7 +1369,7 @@
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.264",
-    "network": "Amazon Studios",
+    "provider": "Amazon Studios",
     "subtitles": "English",
     "title": "Rasbhari"
   },
@@ -1430,7 +1430,7 @@
   },
   {
     "codec": "H.264",
-    "network": "Amazon Studios",
+    "provider": "Amazon Studios",
     "subtitles": "English",
     "title": "NOS4A2"
   },
@@ -1543,7 +1543,7 @@
   {
     "audio": "Dual",
     "codec": "H.264",
-    "network": "Amazon Studios",
+    "provider": "Amazon Studios",
     "size": "1.2GB",
     "subtitles": "English",
     "title": "Samrat & Co."
@@ -1557,7 +1557,7 @@
     "audio": "Dolby Digital 5.1",
     "codec": "H.265",
     "language": ["English","Spanish"],
-    "network": "Netflix",
+    "provider": "Netflix",
     "size": "950MB",
     "title": "Adu"
   },
@@ -1593,7 +1593,7 @@
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.264",
-    "network": "Amazon Studios",
+    "provider": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "Jagga Jagravan Joga"
   },
@@ -1729,7 +1729,7 @@
   {
     "audio": "Dolby Digital Plus 2.0",
     "codec": "H.264",
-    "network": "Amazon Studios",
+    "provider": "Amazon Studios",
     "title": "Romantic Comedy"
   },
   {
@@ -1743,7 +1743,7 @@
   {
     "audio": "AAC 2.0",
     "codec": "H.264",
-    "network": "Investigation Discovery",
+    "provider": "Investigation Discovery",
     "title": "American Monster"
   },
   {
@@ -1785,32 +1785,32 @@
   },
   {
     "audio": "Dolby Digital 2.0",
-    "network": "Amazon Studios"
+    "provider": "Amazon Studios"
   },
   {
     "audio": "Dolby Digital 5.1"
   },
   {
     "audio": "AAC 2.0",
-    "network": "iTunes"
+    "provider": "iTunes"
   },
   {
     "audio": "AAC 2.0",
-    "network": "Adult Swim"
+    "provider": "Adult Swim"
   },
   {
     "audio": "AAC 2.0",
-    "network": "Crave"
-  },
-  {
-    "codec": "H.264",
-    "audio": "AAC 2.0",
-    "network": "Comedy Central"
+    "provider": "Crave"
   },
   {
     "codec": "H.264",
     "audio": "AAC 2.0",
-    "network": "Seeso"
+    "provider": "Comedy Central"
+  },
+  {
+    "codec": "H.264",
+    "audio": "AAC 2.0",
+    "provider": "Seeso"
   },
   {
     "codec": "H.264"
@@ -1818,7 +1818,7 @@
   {
     "codec": "H.264",
     "audio": "Dolby Digital Plus 5.1",
-    "network": "Peacock"
+    "provider": "Peacock"
   },
   {
     "codec": "H.264",
@@ -1852,7 +1852,7 @@
   {
     "audio": "AAC 2.0",
     "filetype": "MKV",
-    "network": "BBC iPlayer"
+    "provider": "BBC iPlayer"
   },
   {
     "audio": "AAC 2.0",
@@ -1870,35 +1870,35 @@
   {
     "audio": "AAC 2.0",
     "filetype": "MKV",
-    "network": "Stan."
+    "provider": "Stan."
   },
   {
     "codec": "H.264",
     "audio": "AAC 2.0",
     "filetype": "MKV",
-    "network": "DisneyNOW"
+    "provider": "DisneyNOW"
   },
   {
     "audio": "AAC 2.0",
     "filetype": "MKV",
-    "network": "RTE Player"
+    "provider": "RTE Player"
   },
   {
     "codec": "H.264",
     "audio": "AAC 2.0",
-    "network": "Crunchyroll"
+    "provider": "Crunchyroll"
   },
   {
     "codec": "H.264",
     "audio": "AAC 2.0",
     "filetype": "MKV",
-    "network": "Animal Planet Live"
+    "provider": "Animal Planet Live"
   },
   {
     "codec": "H.264",
     "audio": "Dolby Digital 2.0",
     "filetype": "MKV",
-    "network": "DirecTV Stream"
+    "provider": "DirecTV Stream"
   },
   {
     "codec": "H.264",
