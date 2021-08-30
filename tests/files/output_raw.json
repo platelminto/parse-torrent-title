@@ -3257,5 +3257,18 @@
     "title": "Philip K Dicks Electric Dreams",
     "episodeName": "The Hood Maker",
     "encoder": "BTW"
+  },
+  {
+    "season": 4,
+    "episode": 15,
+    "resolution": "720p",
+    "quality": "WEBRip",
+    "codec": "x264",
+    "audio": "AAC2.0",
+    "filetype": "mkv",
+    "network": "DSNY",
+    "title": "Octonauts",
+    "episodeName": "The Great Swamp Search",
+    "encoder": "RTN"
   }
 ]
