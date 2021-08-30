@@ -3219,5 +3219,18 @@
     "title": "Road to the NHL Winter Classic",
     "episodeName": "Rangers vs Sabres Part1",
     "encoder": "BTW"
+  },
+  {
+    "season": 1,
+    "episode": 1,
+    "resolution": "1080p",
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "audio": "AAC2.0",
+    "filetype": "mkv",
+    "network": "AMC",
+    "title": "Robert Kirkmans Secret History of Comics",
+    "episodeName": "The Mighty Misfits Who Made Marvel",
+    "encoder": "BOOP"
   }
 ]
