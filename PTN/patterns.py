@@ -136,9 +136,9 @@ patterns['audio'] = get_channel_audio_options([
     ('DTS', 'DTS'),
     ('AAC[ \.\-]LC', 'AAC-LC'),
     ('AAC', 'AAC'),
-    ('Dual{d}Audios?'.format(d=delimiters), 'Dual')
+    ('Dual{d}Audios?'.format(d=delimiters), 'Dual'),
+    ('FLAC', 'FLAC'),
 ]) + [('7.1(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), '7.1'),
-      ('FLAC', 'FLAC'),
       ('5.1(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?'.format(d=delimiters), '5.1'),
       ('MP3', None, 'upper'),
       ('2.0(?:{d}?ch(?:annel)?(?:{d}?Audio)?)?|2CH|stereo'.format(d=delimiters), 'Dual'),

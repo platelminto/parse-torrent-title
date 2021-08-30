@@ -3176,5 +3176,14 @@
     "audio": "DTSMA",
     "remux": true,
     "title": "Archer"
+  },
+  {
+    "season": 1,
+    "resolution": "720p",
+    "quality": "BluRay",
+    "codec": "x264",
+    "audio": "FLAC2.0",
+    "title": "Peaky Blinders",
+    "encoder": "DON"
   }
 ]

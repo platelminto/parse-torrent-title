@@ -1839,5 +1839,10 @@
     "quality": "Blu-ray",
     "codec": "H.264",
     "audio": "DTS-HD MA"
+  },
+  {
+    "quality": "Blu-ray",
+    "codec": "H.264",
+    "audio": "FLAC 2.0"
   }
 ]
