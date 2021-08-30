@@ -1144,6 +1144,7 @@
   },
   {
     "codec": "H264",
+    "directorsCut": true,
     "language": ["ita","fre"],
     "resolution": "720p",
     "subtitles": "Eng",

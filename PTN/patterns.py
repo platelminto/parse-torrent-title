@@ -175,7 +175,7 @@ patterns['hdr'] = 'HDR(?:10)?'
 patterns['documentary'] = 'DOCU(?:menta?ry)?'
 patterns['limited'] = 'LIMITED'
 patterns['remastered'] = 'REMASTERED'
-patterns['directorsCut'] = 'DC'
+patterns['directorsCut'] = 'DC|Director\'?s.?Cut'
 patterns['upscaled'] = '(?:AI{d}*)?upscaled?'.format(d=delimiters)
 patterns['untouched'] = 'untouched'
 patterns['remux'] = 'REMUX'
