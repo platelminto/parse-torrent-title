@@ -3290,5 +3290,18 @@
     "network": "CR",
     "title": "New Game",
     "encoder": "HorribleSubs"
-  }  
+  },
+  {
+    "season": 1,
+    "episode": 1,
+    "resolution": "1080p",
+    "quality": "WEB-DL",
+    "codec": "x264",
+    "audio": "AAC2.0",
+    "filetype": "mkv",
+    "network": "ANPL",
+    "title": "Mystery of the Lost Islands",
+    "episodeName": "Shark Island",
+    "encoder": "BOOP"
+  }
 ]
