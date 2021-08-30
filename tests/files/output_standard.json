@@ -1834,5 +1834,10 @@
     "quality": "Blu-ray",
     "codec": "H.264",
     "audio": "Dolby Digital EX"
+  },
+  {
+    "quality": "Blu-ray",
+    "codec": "H.264",
+    "audio": "DTS-HD MA"
   }
 ]

@@ -131,6 +131,7 @@ patterns['audio'] = get_channel_audio_options([
     ('DD|AC-?3|DolbyD', 'Dolby Digital'),
     ('DDP|E-?AC-?3|EC-3', 'Dolby Digital Plus'),
     ('DTS{d}?HD(?:{d}?(?:MA|Masters?(?:{d}Audio)?))'.format(d=delimiters), 'DTS-HD MA'),
+    ('DTSMA', 'DTS-HD MA'),
     ('DTS{d}?HD'.format(d=delimiters), 'DTS-HD'),
     ('DTS', 'DTS'),
     ('AAC[ \.\-]LC', 'AAC-LC'),

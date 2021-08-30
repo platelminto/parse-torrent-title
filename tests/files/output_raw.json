@@ -3167,5 +3167,14 @@
     "audio": "DD-EX",
     "title": "John Wick Chapter 2",
     "encoder": "TayTO"
+  },
+  {
+    "season": 2,
+    "resolution": "1080p",
+    "quality": "BluRay",
+    "codec": "AVC",
+    "audio": "DTSMA",
+    "remux": true,
+    "title": "Archer"
   }
 ]
