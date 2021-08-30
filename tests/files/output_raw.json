@@ -3315,5 +3315,18 @@
     "title": "Mr Mercedes",
     "episodeName": "Pilot",
     "encoder": "BTW"
+  },
+  {
+    "season": 1,
+    "episode": 1,
+    "resolution": "1080p",
+    "quality": "WEB-DL",
+    "codec": "x264",
+    "audio": "AAC2.0",
+    "filetype": "mkv",
+    "network": "VICE",
+    "title": "Most Expensivest",
+    "episodeName": "Treat Yo Self",
+    "encoder": "BOOP"
   }
 ]
