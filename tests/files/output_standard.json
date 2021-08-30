@@ -1814,5 +1814,10 @@
   },
   {
     "codec": "H.264"
+  },
+  {
+    "codec": "H.264",
+    "audio": "Dolby Digital Plus 5.1",
+    "network": "Peacock"
   }
 ]
