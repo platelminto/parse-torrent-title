@@ -81,6 +81,7 @@ patterns['quality'] = [('WEB[ -\.]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
                        ('Blu-?Ray{d}Rip|BDR(?:ip)?'.format(d=delimiters), 'BDRip'),
                        ('Blu-?Ray', 'Blu-ray'),
                        ('BR-?Rip', 'BRRip'),
+                       ('HDDVD', 'HD DVD'),
                        # Match this last as it can show up with others.
                        ('PPV(?:Rip)?', 'Pay-Per-View Rip')]
 patterns['network'] = [('ATVP', 'Apple TV+'),

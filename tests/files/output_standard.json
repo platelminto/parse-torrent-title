@@ -1777,5 +1777,10 @@
     "codec": "H.264",
     "filetype": "SRT",
     "title": "Shrek 2"
+  },
+  {
+    "quality": "HD DVD",
+    "codec": "H.264",
+    "audio": "Dolby Digital 5.1"
   }
 ]
