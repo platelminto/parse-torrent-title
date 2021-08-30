@@ -3245,5 +3245,17 @@
     "title": "Ready Jet Go",
     "episodeName": "Chore Day",
     "encoder": "SynHD"
+  },
+  {
+    "season": 1,
+    "episode": 1,
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "audio": "AAC2.0",
+    "filetype": "mkv",
+    "network": "STAN",
+    "title": "Philip K Dicks Electric Dreams",
+    "episodeName": "The Hood Maker",
+    "encoder": "BTW"
   }
 ]
