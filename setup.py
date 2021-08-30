@@ -19,7 +19,7 @@ setup(
     long_description_content_type='text/markdown',
     packages=['PTN'],
     keywords=('parse parser torrent torrents name names proper rename '
-              'movie movies tv show shows series extract find quality '
+              'movie movies tv show shows series extract find source '
               'group codec audio resolution title season episode year '
               'information filename filenames file files meaningful'),
     classifiers=[

@@ -23,7 +23,7 @@ pre_website_encoder_pattern = '[^\s\.\[\]\-\(\)]+\)\s{0,2}\[[^\s\-]+\]|[^\s\.\[\
 
 # Forces an order to go by the regexes, as we want this to be deterministic (different
 # orders can generate different matchings). e.g. "doctor_who_2005..." in input.json
-patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', 'quality',
+patterns_ordered = ['season', 'episode', 'year', 'month', 'day', 'resolution', 'source',
                     'codec', 'audio', 'region', 'extended', 'hardcoded', 'proper', 'repack',
                     'filetype', 'widescreen', 'site', 'documentary', 'language', 'subtitles',
                     'sbs', 'unrated', 'size', 'bitDepth', '3d', 'internal', 'readnfo', 'provider',
@@ -59,7 +59,7 @@ patterns['resolution'] = [('([0-9]{3,4}(?:p|i))', None, 'lower'),
                           ('UHD', 'UHD'),
                           ('HD', 'HD'),
                           ('4K', '4K')]
-patterns['quality'] = [('WEB[ -\.]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
+patterns['source'] = [('WEB[ -\.]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
                        # Match WEB-DL's first as they can show up with others.
                        ('WEB[ -]?Cap', 'WEBCap'),
                        ('W[EB]B[ -]?(?:Rip)|WEB', 'WEBRip'),
@@ -116,9 +116,9 @@ patterns['provider'] = [('ATVP', 'Apple TV+'),
                         ('DTV', 'DirecTV Stream'),
                         ('VICE', 'VICE'),
                         ]
-patterns['provider'] = suffix_pattern_with(link_patterns(patterns['quality']),
+patterns['provider'] = suffix_pattern_with(link_patterns(patterns['source']),
                                           patterns['provider'], delimiters)
-# Not all providers always show up just before the quality, so if they're unlikely to clash,
+# Not all providers always show up just before the source, so if they're unlikely to clash,
 # they should be added here.
 patterns['provider'] += [('BBC', 'BBC'),
                         ('Hoichoi', 'Hoichoi'),

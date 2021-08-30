@@ -59,7 +59,7 @@ PTN.parse('The Walking Dead S05E03 720p HDTV x264-ASAP[ettv]')
 #     'episode': 3,
 #     'resolution': '720p',
 #     'codec': 'H.264',
-#     'quality': 'HDTV',
+#     'source': 'HDTV',
 #     'website': 'ettv'
 # }
 
@@ -71,7 +71,7 @@ PTN.parse('Vacancy (2007) 720p Bluray Dual Audio [Hindi + English] ⭐800 MB⭐ 
 #     'codec': 'H.264',
 #     'year':  2007,
 #     'audio': 'Dolby Digital 2.0',
-#     'quality': 'Blu-ray',
+#     'source': 'Blu-ray',
 #     'language': ['Hindi', 'English'],
 #     'subtitles': 'Available',
 #     'size': 800MB,
@@ -89,7 +89,7 @@ PTN.parse('Deadliest.Catch.S00E66.No.Safe.Passage.720p.AMZN.WEB-DL.DDP2.0.H.264-
 #     'provider': 'Amazon Studios',
 #     'season':  0,
 #     'episode': 66,
-#     'quality': 'WEB-DL',
+#     'source': 'WEB-DL',
 #     'episodeName': 'No Safe Passage',
 #     'website': 'TGx'
 # }
@@ -142,7 +142,7 @@ PTN.parse('A freakishly cool movie or TV episode', standardise=False)
 * **month**         *(integer)*
 * **provider**      *(string)*
 * **proper**        *(boolean)*
-* **quality**       *(string)*
+* **source**        *(string)*
 * **readnfo**       *(boolean)*
 * **region**        *(string)*
 * **remastered**    *(boolean)*
