@@ -3134,5 +3134,18 @@
     "network": "PCOK",
     "title": "A P Bio",
     "encoder": "NTb"
+  },
+  {
+    "season": 1,
+    "episode": 1,
+    "resolution": "540p",
+    "quality": "WEB-DL",
+    "codec": "x264",
+    "audio": "AAC2.0",
+    "filetype": "mkv",
+    "network": "CBS",
+    "title": "Star Trek Discovery",
+    "episodeName": "The Vulcan Hello",
+    "encoder": "AJP69"
   }
 ]
