@@ -3056,5 +3056,15 @@
     "network": "Amazon",
     "title": "Its Always Sunny In Philadelphia",
     "encoder": "CtrlHD"
+  },
+  {
+    "season": 1,
+    "resolution": "1080p",
+    "quality": "WEBRip",
+    "codec": "H.264",
+    "audio": "DD5.1",
+    "network": "HBO",
+    "title": "Animals",
+    "encoder": "monkee"
   }
 ]
