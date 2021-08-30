@@ -3281,5 +3281,14 @@
     "network": "RTE",
     "title": "Nowhere Fast",
     "encoder": "RTN"
-  }
+  },
+  {
+    "season": 2,
+    "quality": "WEB-DL",
+    "codec": "x264",
+    "audio": "AAC2.0",
+    "network": "CR",
+    "title": "New Game",
+    "encoder": "HorribleSubs"
+  }  
 ]

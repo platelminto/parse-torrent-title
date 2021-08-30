@@ -1882,5 +1882,10 @@
     "audio": "AAC 2.0",
     "filetype": "MKV",
     "network": "RTE Player"
+  },
+  {
+    "codec": "H.264",
+    "audio": "AAC 2.0",
+    "network": "Crunchyroll"
   }
 ]
