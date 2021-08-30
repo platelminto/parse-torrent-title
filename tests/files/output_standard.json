@@ -1782,5 +1782,9 @@
     "quality": "HD DVD",
     "codec": "H.264",
     "audio": "Dolby Digital 5.1"
+  },
+  {
+    "audio": "Dolby Digital 2.0",
+    "network": "Amazon Studios"
   }
 ]

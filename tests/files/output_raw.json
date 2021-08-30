@@ -3046,5 +3046,15 @@
     "audio": "DD5.1",
     "title": "Accepted",
     "encoder": "EbP"
+  },
+  {
+    "season": 12,
+    "resolution": "1080p",
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "audio": "DD+2.0",
+    "network": "Amazon",
+    "title": "Its Always Sunny In Philadelphia",
+    "encoder": "CtrlHD"
   }
 ]

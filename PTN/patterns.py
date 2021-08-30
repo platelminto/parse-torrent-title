@@ -85,7 +85,7 @@ patterns['quality'] = [('WEB[ -\.]?DL(?:Rip|Mux)?|HDRip', 'WEB-DL'),
                        # Match this last as it can show up with others.
                        ('PPV(?:Rip)?', 'Pay-Per-View Rip')]
 patterns['network'] = [('ATVP', 'Apple TV+'),
-                        ('AMZN', 'Amazon Studios'),
+                        ('AMZN|Amazon', 'Amazon Studios'),
                         ('NF|Netflix', 'Netflix'),
                         ('NICK', 'Nickelodeon'),
                         ('RED', 'YouTube Premium'),
