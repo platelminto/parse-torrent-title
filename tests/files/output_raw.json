@@ -3075,5 +3075,15 @@
     "network": "iT",
     "title": "SpongeBob SquarePants",
     "encoder": "NOGRP"
+  },
+  {
+    "season": 1,
+    "resolution": "1080p",
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "audio": "AAC2.0",
+    "network": "AS",
+    "title": "The Shivering Truth",
+    "encoder": "BTN"
   }
 ]

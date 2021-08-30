@@ -1793,5 +1793,9 @@
   {
     "audio": "AAC 2.0",
     "network": "iTunes"
+  },
+  {
+    "audio": "AAC 2.0",
+    "network": "Adult Swim"
   }
 ]
