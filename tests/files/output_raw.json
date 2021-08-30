@@ -3105,5 +3105,15 @@
     "network": "CC",
     "title": "Workaholics",
     "encoder": "BTW"
+  },
+  {
+    "season": 1,
+    "resolution": "1080p",
+    "quality": "WEBRip",
+    "codec": "x264",
+    "audio": "AAC2.0",
+    "network": "SESO",
+    "title": "HarmonQuest",
+    "encoder": "BTW"
   }
 ]
