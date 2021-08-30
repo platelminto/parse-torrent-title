@@ -3147,5 +3147,16 @@
     "title": "Star Trek Discovery",
     "episodeName": "The Vulcan Hello",
     "encoder": "AJP69"
+  },
+  {
+    "year": 1990,
+    "resolution": "1080p",
+    "quality": "BluRay",
+    "codec": "VC-1",
+    "audio": "TrueHD.5.1",
+    "filetype": "mkv",
+    "remux": true,
+    "title": "IMAX Blue Planet",
+    "encoder": "EPSiLON"
   }
 ]
