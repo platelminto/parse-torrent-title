@@ -3232,5 +3232,18 @@
     "title": "Robert Kirkmans Secret History of Comics",
     "episodeName": "The Mighty Misfits Who Made Marvel",
     "encoder": "BOOP"
+  },
+  {
+    "season": 1,
+    "episode": 12,
+    "resolution": "720p",
+    "quality": "WEBRip",
+    "codec": "x264",
+    "audio": "AAC2.0",
+    "filetype": "mkv",
+    "network": "PBS",
+    "title": "Ready Jet Go",
+    "episodeName": "Chore Day",
+    "encoder": "SynHD"
   }
 ]
