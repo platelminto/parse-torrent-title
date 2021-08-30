@@ -3185,5 +3185,13 @@
     "audio": "FLAC2.0",
     "title": "Peaky Blinders",
     "encoder": "DON"
+  },
+  {
+    "season": 1,
+    "quality": "DVDRip",
+    "codec": "x264",
+    "audio": "OGG",
+    "title": "Ghost Stories",
+    "encoder": "Exiled-Destiny"
   }
 ]
