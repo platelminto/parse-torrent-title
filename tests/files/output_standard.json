@@ -1829,5 +1829,10 @@
     "quality": "Blu-ray",
     "audio": "Dolby TrueHD 5.1",
     "filetype": "MKV"
+  },
+  {
+    "quality": "Blu-ray",
+    "codec": "H.264",
+    "audio": "Dolby Digital EX"
   }
 ]

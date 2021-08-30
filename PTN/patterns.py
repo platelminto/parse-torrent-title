@@ -127,6 +127,7 @@ patterns['codec'] = [('xvid', 'Xvid'),
 patterns['audio'] = get_channel_audio_options([
     ('TrueHD', 'Dolby TrueHD'),
     ('Atmos', 'Dolby Atmos'),
+    ('DD-EX', 'Dolby Digital EX'),
     ('DD|AC-?3|DolbyD', 'Dolby Digital'),
     ('DDP|E-?AC-?3|EC-3', 'Dolby Digital Plus'),
     ('DTS{d}?HD(?:{d}?(?:MA|Masters?(?:{d}Audio)?))'.format(d=delimiters), 'DTS-HD MA'),

@@ -3158,5 +3158,14 @@
     "remux": true,
     "title": "IMAX Blue Planet",
     "encoder": "EPSiLON"
+  },
+  {
+    "year": 2017,
+    "resolution": "720p",
+    "quality": "BluRay",
+    "codec": "x264",
+    "audio": "DD-EX",
+    "title": "John Wick Chapter 2",
+    "encoder": "TayTO"
   }
 ]
