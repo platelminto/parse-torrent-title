@@ -3066,5 +3066,14 @@
     "network": "HBO",
     "title": "Animals",
     "encoder": "monkee"
+  },
+  {
+    "season": 2,
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "audio": "AAC2.0",
+    "network": "iT",
+    "title": "SpongeBob SquarePants",
+    "encoder": "NOGRP"
   }
 ]

@@ -1789,5 +1789,9 @@
   },
   {
     "audio": "Dolby Digital 5.1"
+  },
+  {
+    "audio": "AAC 2.0",
+    "network": "iTunes"
   }
 ]
