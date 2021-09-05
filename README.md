@@ -143,6 +143,7 @@ PTN.parse('An even cooler movie or TV episode', coherent_types=True)
 * **episodeName**   *(string)*
 * **excess**        *(string, string list)*
 * **extended**      *(boolean)*
+* **filetype**      *(string)*
 * **fps**           *(integer)*
 * **genre**         *(string, string list)*
 * **hardcoded**     *(boolean)*
