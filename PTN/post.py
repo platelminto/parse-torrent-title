@@ -89,6 +89,8 @@ def try_site(self):
     if 'encoder' not in self.parts or 'website' in self.parts:
         return
     encoder = self.parts['encoder']
+    if self.coherent_types:
+        encoder = encoder[0]
     pat = r'(\[(.*)\])'
     match = re.findall(pat, encoder, re.IGNORECASE)
     if match:

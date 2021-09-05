@@ -117,6 +117,18 @@ The matches in the torrent name are standardised into specific strings, accordin
 PTN.parse('A freakishly cool movie or TV episode', standardise=False)
 ```
 
+### Types of parts
+
+The types of parts can be strings, integers, booleans, or lists of the first 2. To simplify this, you can enable the `coherent_types` flag. This will override the types described below according to these rules:
+- `title` and `episodeName` will always be strings.
+- All other non-boolean fields will become lists of the type they currently are. For example, `language` will always be a list of strings, and `episode` a list of episodes. This can be weird for some fields, but it avoids a lot of `isinstance` calls - just always use `x in y` and you should be fine.
+- Boolean types will remain as booleans.
+
+To enable this flag:
+```py
+PTN.parse('An even cooler movie or TV episode', coherent_types=True)
+```
+
 ### Parts extracted
 
 * **audio**         *(string)*

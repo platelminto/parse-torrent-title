@@ -19,5 +19,6 @@ __license__ = 'MIT'
 ptn = PTN()
 
 
-def parse(name, standardise=True):
-    return ptn.parse(name, standardise)
+# TODO change coherent_types default to True in 3.0
+def parse(name, standardise=True, coherent_types=False):
+    return ptn.parse(name, standardise, coherent_types)

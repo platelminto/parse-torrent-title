@@ -12,14 +12,21 @@ class PTN(object):
         self.part_slices = None
         self.match_slices = None
         self.standardise = None
+        self.coherent_types = None
 
         self.post_title_pattern = '(?:{}|{})'.format(link_patterns(patterns['season']),
                                                      link_patterns(patterns['year']))
 
     def _part(self, name, match_slice, clean, overwrite=False):
         if overwrite or name not in self.parts:
-            if isinstance(clean, list) and len(clean) == 1:
-                clean = clean[0]  # Avoids making a list if it only has 1 element
+            if self.coherent_types:
+                if name not in ["title", "episodeName"] and not isinstance(clean, bool):
+                    if not isinstance(clean, list):
+                        clean = [clean]
+            else:
+                if isinstance(clean, list) and len(clean) == 1:
+                    clean = clean[0]  # Avoids making a list if it only has 1 element
+
             self.parts[name] = clean
             self.part_slices[name] = match_slice
 
@@ -38,13 +45,14 @@ class PTN(object):
 
         return clean
 
-    def parse(self, name, standardise):
+    def parse(self, name, standardise, coherent_types):
         name = name.strip()
         self.parts = dict()
         self.part_slices = dict()
         self.torrent_name = name
         self.match_slices = list()
         self.standardise = standardise
+        self.coherent_types = coherent_types
 
         for key, pattern_options in [(key, patterns[key]) for key in patterns_ordered]:
             pattern_options = self.normalise_pattern_options(pattern_options)
@@ -67,7 +75,8 @@ class PTN(object):
                     match_index = -1
 
                 match = matches[match_index]['match']
-                match_start, match_end = matches[match_index]['start'], matches[match_index]['end']
+                match_start, match_end = matches[match_index]['start'], \
+                                         matches[match_index]['end']
                 if key in self.parts:  # We can skip ahead if we already have a matched part
                     self._part(key, (match_start, match_end), None, overwrite=False)
                     continue
@@ -123,11 +132,13 @@ class PTN(object):
                 pattern_options_norm.append(options + (None,))
             elif isinstance(options, tuple):
                 if isinstance(options[2], tuple):
-                    pattern_options_norm.append(tuple(list(options[:2]) + [[options[2]]]))
+                    pattern_options_norm.append(
+                        tuple(list(options[:2]) + [[options[2]]]))
                 elif isinstance(options[2], list):
                     pattern_options_norm.append(options)
                 else:
-                    pattern_options_norm.append(tuple(list(options[:2]) + [[(options[2], [])]]))
+                    pattern_options_norm.append(
+                        tuple(list(options[:2]) + [[(options[2], [])]]))
 
             else:
                 pattern_options_norm.append((options, None, None))
@@ -169,7 +180,8 @@ class PTN(object):
             else:
                 for ignore_pattern in patterns_ignored:
                     if re.findall(ignore_pattern, clean_name, re.IGNORECASE):
-                        match = re.search(self.post_title_pattern, clean_name, re.IGNORECASE)
+                        match = re.search(self.post_title_pattern, clean_name,
+                                          re.IGNORECASE)
 
         if match:
             return match.start()
@@ -244,7 +256,9 @@ class PTN(object):
         cleaned_langs = list()
         for lang in clean:
             for (lang_regex, lang_clean) in langs:
-                if re.match(lang_regex, re.sub(link_patterns(patterns['subtitles'][2:]), '', lang, flags=re.I),
+                if re.match(lang_regex,
+                            re.sub(link_patterns(patterns['subtitles'][2:]), '', lang,
+                                   flags=re.I),
                             re.IGNORECASE):
                     cleaned_langs.append(lang_clean)
                     break
@@ -291,7 +305,8 @@ class PTN(object):
             # If our unmatched is after the first 3 matches, we assume the title is missing
             # (or more likely got parsed as something else), as no torrents have it that
             # far away from the beginning of the release title.
-            if title_start > sorted(self.part_slices.values(), key=lambda s: s[0])[min(3, len(self.part_slices)-1)][0]:
+            if title_start > sorted(self.part_slices.values(), key=lambda s: s[0])[
+                min(3, len(self.part_slices) - 1)][0]:
                 self._part('title', None, '')
 
             raw = self.torrent_name[title_start:title_end]
@@ -307,15 +322,18 @@ class PTN(object):
         self.merge_match_slices()
         unmatched = list()
         prev_start = 0
-        end = len(self.torrent_name)  # A default so the last append won't crash if nothing has matched
+        # A default so the last append won't crash if nothing has matched
+        end = len(self.torrent_name)
         # Find all unmatched strings that aren't just punctuation
         for (start, end) in self.match_slices:
-            if keep_punctuation or not re.match(delimiters + r'*\Z', self.torrent_name[prev_start:start]):
+            if keep_punctuation or not re.match(delimiters + r'*\Z',
+                                                self.torrent_name[prev_start:start]):
                 unmatched.append((prev_start, start))
             prev_start = end
 
         # Add the last unmatched slice
-        if keep_punctuation or not re.match(delimiters + r'*\Z', self.torrent_name[end:]):
+        if keep_punctuation or not re.match(delimiters + r'*\Z',
+                                            self.torrent_name[end:]):
             unmatched.append((end, len(self.torrent_name)))
 
         return unmatched
@@ -325,10 +343,13 @@ class PTN(object):
         # as media with years in them but without a release year.
         for exception in exceptions:
             incorrect_key, incorrect_value = exception['incorrect_parse']
-            if (self.parts['title'] == exception['parsed_title'] and
-                incorrect_key in self.parts and self.parts[incorrect_key] == incorrect_value):
-                self.parts.pop(incorrect_key)
-                self._part('title', None, exception['actual_title'], overwrite=True)
+            if self.parts['title'] == exception[
+                'parsed_title'] and incorrect_key in self.parts:
+                if (self.parts[incorrect_key] == incorrect_value or
+                        (self.coherent_types and incorrect_value in self.parts[incorrect_key])):
+                    self.parts.pop(incorrect_key)
+                    self._part('title', None, exception['actual_title'], overwrite=True)
+
 
     def get_unmatched(self):
         unmatched = ''
@@ -351,6 +372,8 @@ class PTN(object):
         filtered = list()
         for extra in unmatched_clean:
             # re.fullmatch() is not available in python 2.7, so we manually do it with \Z.
-            if not re.match(r'(?:Complete|Season|Full)?[\]\[,.+\- ]*(?:Complete|Season|Full)?\Z', extra, re.IGNORECASE):
+            if not re.match(
+                r'(?:Complete|Season|Full)?[\]\[,.+\- ]*(?:Complete|Season|Full)?\Z',
+                extra, re.IGNORECASE):
                 filtered.append(extra)
         return filtered
