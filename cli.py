@@ -13,7 +13,7 @@ parser.add_argument(
     action="store_const",
     const=False,
     default=True,
-    help="whether to standardise the output",
+    help="don't standardise the output",
 )
 args = parser.parse_args()
 
