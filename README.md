@@ -134,7 +134,6 @@ PTN.parse('An even cooler movie or TV episode', coherent_types=True)
 * **audio**         *(string)*
 * **bitDepth**      *(integer)*
 * **codec**         *(string)*
-* **filetype**     *(string)*
 * **day**           *(integer)*
 * **directorsCut**  *(boolean)*
 * **documentary**   *(boolean)*

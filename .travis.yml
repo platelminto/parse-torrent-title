@@ -2,12 +2,17 @@ language: python
 python:
 - '2.7'
 - '3.5'
+sudo: true
 script: python tests/test_parse.py
 before_install:
 - pip install -U pip
 - python setup.py install
+- python3 --version
 install:
   - pip install -r requirements.txt
+before_deploy:
+  - python3 -m venv ~/venv
+  - source ~/venv/bin/activate
 deploy:
   provider: pypi
   user: __token__
