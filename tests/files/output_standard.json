@@ -1935,5 +1935,11 @@
   {
     "quality": "Blu-ray",
     "title": "Hero Mask"
+  },
+  {
+    "resolution": "1080p",
+    "quality": "BDRip",
+    "codec": "H.264",
+    "title": "Nisekoi"
   }
 ]

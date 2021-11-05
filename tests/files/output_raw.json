@@ -3377,5 +3377,14 @@
     "remux": true,
     "title": "Hero Mask",
     "site": "npz"
+  },
+  {
+    "season": [1, 2],
+    "resolution": "1920x1080",
+    "quality": "BDrip",
+    "codec": "x264",
+    "audio": "FLAC",
+    "site": "CBT",
+    "title": "Nisekoi"
   }
 ]
