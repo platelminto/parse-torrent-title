@@ -195,7 +195,7 @@ patterns['sbs'] = [('Half-SBS', 'Half SBS'),
                    ('SBS', None, 'upper')]
 patterns['unrated'] = 'UNRATED'
 patterns['size'] = ('\d+(?:\.\d+)?\s?(?:GB|MB)', None, [('upper', []), ('replace', [' ', ''])])
-patterns['bitDepth'] = '(8|10)bits?'
+patterns['bitDepth'] = '(8|10)-?bits?'
 patterns['3d'] = '3D'
 patterns['internal'] = 'iNTERNAL'
 patterns['readnfo'] = 'READNFO'
