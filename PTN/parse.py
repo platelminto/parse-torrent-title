@@ -315,11 +315,18 @@ class PTN(object):
             # case will lose its translated title (which is mostly fine I think).
             m = re.search('\(|\[.{,3}\]', raw)
             if m:
-                title_end = m.start()
-                raw = raw[:title_end]
+                relative_title_end = m.start()
+                raw = raw[:relative_title_end]
+                title_end = relative_title_end + title_start
+            # Similar logic as above, but looking at beginning of string unmatched brackets.
+            m = re.search('^(?:\)|\[.*\])', raw)
+            if m:
+                relative_title_start = m.end()
+                raw = raw[relative_title_start:]
+                title_start = relative_title_start + title_start
             clean = self._clean_string(raw)
             # Re-add title_start to unrelative the index from raw to self.torrent_name
-            self._part('title', (title_start, title_start+title_end), clean)
+            self._part('title', (title_start, title_end), clean)
         else:
             self._part('title', None, '')
 
