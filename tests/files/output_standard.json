@@ -1922,5 +1922,10 @@
     "codec": "H.264",
     "audio": "Dual",
     "title": "Naruto"
+  },
+  {
+    "quality": "Blu-ray",
+    "audio": "Dolby TrueHD",
+    "title": "Attack on Titan"
   }
 ]

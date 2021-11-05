@@ -3355,5 +3355,13 @@
     "audio": "Dual Audio",
     "site": "JySzE",
     "title": "Naruto"
+  },
+  {
+    "season": [1, 2, 3],
+    "resolution": "1080p",
+    "quality": "Blu-Ray",
+    "audio": "TrueHD",
+    "remux": true,
+    "title": "Attack on Titan"
   }
 ]

@@ -37,8 +37,10 @@ patterns['episode'] = ['(?<![a-z])(?:e|ep)(?:[0-9]{1,2}(?:-?(?:e|ep)?(?:[0-9]{1,
                        r'\b[0-9]{1,2}x([0-9]{2})\b',
                        r'\bepisod(?:e|io)' + delimiters + r'\d{1,2}\b',
                        ]
+# If adding season patterns, remember to look at episode, as it uses the last few!
 patterns['season'] = ['\ss?(\d{1,2})\s\-\s\d{1,2}\s',  # Avoids matching some anime releases season and episode as a season range
                       r'\b' + season_range_pattern + r'\b',  # Describes season ranges
+                      r'(?:s\d{1,2}\.){2,}\b',  # for S01.S02.etc. patterns
                       # Describes season, optionally with complete or episode
                       r'\b(?:Complete' + delimiters + ')?s([0-9]{1,2})' + link_patterns(patterns['episode']) + r'?\b',
                       r'\b([0-9]{1,2})x[0-9]{2}\b',  # Describes 5x02, 12x15 type descriptions
@@ -47,7 +49,7 @@ patterns['season'] = ['\ss?(\d{1,2})\s\-\s\d{1,2}\s',  # Avoids matching some an
                       r'\b(?:Complete' + delimiters + r')?Season[\. -][0-9]{1,2}\b',  # Describes Season.15 type descriptions
                       ]
 # The first 4 season regexes won't have 'Part' in them.
-patterns['episode'] += [link_patterns(patterns['season'][4:]) + delimiters + '*P(?:ar)?t' + delimiters + '*(\d{1,3})']
+patterns['episode'] += [link_patterns(patterns['season'][5:]) + delimiters + '*P(?:ar)?t' + delimiters + '*(\d{1,3})']
 patterns['year'] = year_pattern
 patterns['month'] = '(?:{year}){d}({month}){d}(?:{day})' \
     .format(d=delimiters, year=year_pattern, month=month_pattern, day=day_pattern)
