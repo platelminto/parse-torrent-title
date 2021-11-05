@@ -3369,5 +3369,13 @@
     "quality": "USBD",
     "remux": true,
     "title": "Black Clover"
+  },
+  {
+    "season": [1, 2],
+    "resolution": "1080p",
+    "quality": "BD",
+    "remux": true,
+    "title": "Hero Mask",
+    "site": "npz"
   }
 ]
