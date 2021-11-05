@@ -3363,5 +3363,11 @@
     "audio": "TrueHD",
     "remux": true,
     "title": "Attack on Titan"
+  },
+  {
+    "season": 1,
+    "quality": "USBD",
+    "remux": true,
+    "title": "Black Clover"
   }
 ]
