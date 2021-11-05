@@ -305,16 +305,21 @@ class PTN(object):
             # If our unmatched is after the first 3 matches, we assume the title is missing
             # (or more likely got parsed as something else), as no torrents have it that
             # far away from the beginning of the release title.
-            if title_start > sorted(self.part_slices.values(), key=lambda s: s[0])[
-                min(3, len(self.part_slices) - 1)][0]:
+            if len(self.part_slices) > 3 and title_start > sorted(self.part_slices.values(), key=lambda s: s[0])[
+                3][0]:
                 self._part('title', None, '')
 
             raw = self.torrent_name[title_start:title_end]
-            if '(' in raw:
-                title_end = self.torrent_name.index('(', title_start)
-                raw = raw.split('(')[0]
+            # Something in square brackets with 3 chars or less is too weird to be right.
+            # If this seems too arbitrary, make it any square bracket, and Mother test
+            # case will lose its translated title (which is mostly fine I think).
+            m = re.search('\(|\[.{,3}\]', raw)
+            if m:
+                title_end = m.start()
+                raw = raw[:title_end]
             clean = self._clean_string(raw)
-            self._part('title', (title_start, title_end), clean)
+            # Re-add title_start to unrelative the index from raw to self.torrent_name
+            self._part('title', (title_start, title_start+title_end), clean)
         else:
             self._part('title', None, '')
 
@@ -349,7 +354,6 @@ class PTN(object):
                         (self.coherent_types and incorrect_value in self.parts[incorrect_key])):
                     self.parts.pop(incorrect_key)
                     self._part('title', None, exception['actual_title'], overwrite=True)
-
 
     def get_unmatched(self):
         unmatched = ''

@@ -2382,6 +2382,7 @@
     "bitDepth": 10,
     "codec": "x265",
     "encoder": "Judas",
+    "quality": "BD",
     "resolution": "1080p",
     "season": [1,2],
     "site": "TGx",
@@ -3328,5 +3329,31 @@
     "title": "Most Expensivest",
     "episodeName": "Treat Yo Self",
     "encoder": "BOOP"
+  },
+  {
+    "resolution": "1080p",
+    "quality": "BD",
+    "codec": "H.264",
+    "audio": "FLAC",
+    "site": "Anonymous",
+    "bitDepth": 10,
+    "title": "Non Non Biyori"
+  },
+  {
+    "quality": "BD",
+    "site": "Arjix",
+    "remux": true,
+    "title": "Darling in the Franxx"
+  },
+  {
+    "quality": "BDremux",
+    "site": "BDremux",
+    "title": "One Piece Movies Collection"
+  },
+  {
+    "codec": "x264",
+    "audio": "Dual Audio",
+    "site": "JySzE",
+    "title": "Naruto"
   }
 ]

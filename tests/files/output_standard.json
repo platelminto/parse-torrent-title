@@ -1411,6 +1411,7 @@
   {
     "audio": "Dual",
     "codec": "H.265",
+    "quality": "Blu-ray",
     "subtitles": "English",
     "title": "Black Lagoon"
   },
@@ -1904,5 +1905,22 @@
     "codec": "H.264",
     "audio": "AAC 2.0",
     "filetype": "MKV"
+  },
+  {
+    "quality": "Blu-ray",
+    "title": "Non Non Biyori"
+  },
+  {
+    "quality": "Blu-ray",
+    "title": "Darling in the Franxx"
+  },
+  {
+    "quality": "Blu-ray",
+    "title": "One Piece Movies Collection"
+  },
+  {
+    "codec": "H.264",
+    "audio": "Dual",
+    "title": "Naruto"
   }
 ]
