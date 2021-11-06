@@ -177,7 +177,7 @@ PTN.parse('An even cooler movie or TV episode', coherent_types=True)
 
 ## Contributing
 
-Submit a PR on the `dev` branch, including tests for what gets newly matched (if applicable). Please provide input torrent names in `tests/files/input.json` and full output json objects (with `standardise=False`) in `tests/files/output_raw.json` (where the fields `encoder`, `excess`, `site`, and `episodeName` don't have to be included). Also add the standardised output to `tests/files/output_standard.json`, only including fields that are changed, along with `title`.
+Submit a PR on the `dev` branch, including tests for what gets newly matched (if applicable), having run the `pre-commit` hooks. Please provide input torrent names in `tests/files/input.json` and full output json objects (with `standardise=False`) in `tests/files/output_raw.json` (where the fields `encoder`, `excess`, `site`, and `episodeName` don't have to be included). Also add the standardised output to `tests/files/output_standard.json`, only including fields that are changed, along with `title`.
 
 ## Additions to parse-torrent-name
 
