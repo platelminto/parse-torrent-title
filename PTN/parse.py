@@ -313,7 +313,7 @@ class PTN(object):
             # Something in square brackets with 3 chars or less is too weird to be right.
             # If this seems too arbitrary, make it any square bracket, and Mother test
             # case will lose its translated title (which is mostly fine I think).
-            m = re.search('\(|\[.{,3}\]', raw)
+            m = re.search('\(|\[(?:.{,3}|.*\d.*)\]?$', raw, flags=re.I)
             if m:
                 relative_title_end = m.start()
                 raw = raw[:relative_title_end]

@@ -3386,5 +3386,11 @@
     "audio": "FLAC",
     "site": "CBT",
     "title": "Nisekoi"
+  },
+  {
+    "codec": "HEVC",
+    "audio": "Dual Audio",
+    "site": "YURI",
+    "title": "Kimi no Suizou o Tabetai"
   }
 ]

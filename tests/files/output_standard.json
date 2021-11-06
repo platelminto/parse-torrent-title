@@ -1941,5 +1941,10 @@
     "quality": "BDRip",
     "codec": "H.264",
     "title": "Nisekoi"
+  },
+  {
+    "codec": "H.265",
+    "audio": "Dual",
+    "title": "Kimi no Suizou o Tabetai"
   }
 ]
