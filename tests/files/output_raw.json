@@ -3392,5 +3392,14 @@
     "audio": "Dual Audio",
     "site": "YURI",
     "title": "Kimi no Suizou o Tabetai"
+  },
+  {
+    "resolution": "1080p",
+    "audio": "Dual-Audio",
+    "site": "FFF-Remux",
+    "remux": true,
+    "title": "Accel World",
+    "season": 1,
+    "episode": 24
   }
 ]

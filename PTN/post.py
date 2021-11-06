@@ -144,10 +144,24 @@ def filter_non_languages(self):
         self._part('language', self.part_slices['language'], languages, overwrite=True)
 
 
+def try_vague_season_episode(self):
+    title = self.parts['title']
+    m = re.search("(\d{1,2})-(\d{1,2})$", title)
+    if m:
+        if "season" not in self.parts and "episode" not in self.parts:
+            new_title = title[:m.start()]
+            offset = self.part_slices['title'][0]
+            # Setting the match slices here doesn't actually matter, but good practice.
+            self._part('season', (offset+m.start(1), offset+m.end(1)), int(m.group(1)))
+            self._part('episode', (offset+m.start(2), offset+m.end(2)), int(m.group(2)))
+            self._part('title', (offset, offset+len(new_title)), self._clean_string(new_title), overwrite=True)
+
+
 post_processing_after_excess = [
     try_encoder,
     try_site,
     fix_same_subtitles_language_match,
     fix_subtitles_no_language,
     filter_non_languages,
+    try_vague_season_episode,
 ]
