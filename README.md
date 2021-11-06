@@ -8,7 +8,7 @@
 Originally based off of [this JavaScript
 library](https://github.com/jzjzjzj/parse-torrent-name).
 
-Extract all possible media information from a filename. Multiple regex 
+Extract all possible media information from a filename. Multiple regex
 rules are applied on the filename, each of which extracts appropriate
 information. If a rule matches, the corresponding part
 is removed from the filename. Finally, what remains is taken as the
