@@ -8,7 +8,7 @@
 Originally based off of [this JavaScript
 library](https://github.com/jzjzjzj/parse-torrent-name).
 
-Extract all possible media information from a filename. Multiple regex 
+Extract all possible media information from a filename. Multiple regex
 rules are applied on the filename, each of which extracts appropriate
 information. If a rule matches, the corresponding part
 is removed from the filename. Finally, what remains is taken as the
@@ -176,7 +176,7 @@ PTN.parse('An even cooler movie or TV episode', coherent_types=True)
 
 ## Contributing
 
-Submit a PR on the `dev` branch, including tests for what gets newly matched (if applicable). Please provide input torrent names in `tests/files/input.json` and full output json objects (with `standardise=False`) in `tests/files/output_raw.json` (where the fields `encoder`, `excess`, `site`, and `episodeName` don't have to be included). Also add the standardised output to `tests/files/output_standard.json`, only including fields that are changed, along with `title`.
+Submit a PR on the `dev` branch, including tests for what gets newly matched (if applicable), having run the `pre-commit` hooks. Please provide input torrent names in `tests/files/input.json` and full output json objects (with `standardise=False`) in `tests/files/output_raw.json` (where the fields `encoder`, `excess`, `site`, and `episodeName` don't have to be included). Also add the standardised output to `tests/files/output_standard.json`, only including fields that are changed, along with `title`.
 
 ## Additions to parse-torrent-name
 

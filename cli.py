@@ -21,10 +21,12 @@ parser.add_argument(
     action="store_const",
     const=True,
     default=False,
-    help="make all non-boolean fields (outside of title and episodeName) into lists."
+    help="make all non-boolean fields (outside of title and episodeName) into lists.",
 )
 args = parser.parse_args()
 
-parsed = PTN.parse(args.torrent, standardise=args.standardise, coherent_types=args.coherent_types)
+parsed = PTN.parse(
+    args.torrent, standardise=args.standardise, coherent_types=args.coherent_types
+)
 
 print(json.dumps(parsed, indent=2))
