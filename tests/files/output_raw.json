@@ -618,9 +618,9 @@
     "year": 2014
   },
   {
-    "filetype": "mp4",
     "encoder": "ZhuixinFan",
     "episode": 7,
+    "filetype": "mp4",
     "language": ["Chi","Jap"],
     "quality": "HDTVrip",
     "resolution": "1280X720",
@@ -675,9 +675,9 @@
     "year": 2015
   },
   {
-    "filetype": "mp4",
     "episode": 9,
     "episodeName": "Divide and Rule",
+    "filetype": "mp4",
     "season": 1,
     "title": "Borgen"
   },
@@ -787,9 +787,9 @@
   },
   {
     "codec": "x264",
-    "filetype": "mkv",
     "day": 1,
     "episodeName": "Jerry Benner",
+    "filetype": "mkv",
     "month": 8,
     "quality": "HDTV",
     "resolution": "720p",
@@ -1058,8 +1058,8 @@
   {
     "audio": "AAC",
     "codec": "X264",
-    "filetype": "Mp-4",
     "encoder": "DSD",
+    "filetype": "Mp-4",
     "quality": "Dvd-Rip",
     "resolution": "480p",
     "title": "The Peacemaker",
@@ -1256,8 +1256,8 @@
   {
     "audio": "AAC",
     "codec": "x264",
-    "filetype": "mkv",
     "episode": 8,
+    "filetype": "mkv",
     "resolution": "1080p",
     "site": "Golumpa",
     "size": "1.4 GB",
@@ -1509,8 +1509,8 @@
   {
     "audio": "AAC 2.0",
     "codec": "AVC",
-    "filetype": "mkv",
     "encoder": "Telly",
+    "filetype": "mkv",
     "language": "Hindi",
     "network": "Zee5",
     "quality": "WebDL",
@@ -1563,8 +1563,8 @@
   {
     "audio": "dd5.1",
     "codec": "x265",
-    "filetype": "mkv",
     "encoder": "rmteam",
+    "filetype": "mkv",
     "language": "japanese",
     "quality": "bluray",
     "resolution": "1080p",
@@ -1573,10 +1573,10 @@
   },
   {
     "codec": "H.264",
-    "filetype": "mkv",
     "encoder": "MeM",
     "episode": 13,
     "episodeName": "Il mio amico Grodd",
+    "filetype": "mkv",
     "language": ["ITA","ENG"],
     "network": "AMZN",
     "quality": "WEB-DLMux",
@@ -1777,8 +1777,8 @@
     "year": 2019
   },
   {
-    "filetype": "MP4",
     "encoder": "BigJ0554",
+    "filetype": "MP4",
     "subtitles": "subs",
     "title": "Ella Fitzgerald - Just One of Those Things"
   },
@@ -1814,8 +1814,8 @@
   {
     "audio": "AAC",
     "codec": "x265",
-    "filetype": "mkv",
     "encoder": "MVGroup.org",
+    "filetype": "mkv",
     "network": "BBC",
     "quality": "HDTV",
     "resolution": "1080p",
@@ -1843,10 +1843,10 @@
   {
     "audio": "DD5.1",
     "codec": "H.264",
-    "filetype": "mkv",
     "encoder": "MeM",
     "episode": 3,
     "episodeName": "Comunisti alieni dal futuro",
+    "filetype": "mkv",
     "language": ["ITA","ENG"],
     "network": "AMZN",
     "quality": "WEB-DLMux",
@@ -1868,9 +1868,9 @@
   },
   {
     "codec": "x264",
-    "filetype": "mp4",
     "day": 19,
     "encoder": "PC",
+    "filetype": "mp4",
     "month": 6,
     "quality": "WEBRip",
     "resolution": "720p",
@@ -1967,8 +1967,8 @@
     "title": "Diners Drive-Ins and Dives"
   },
   {
-    "filetype": "mkv",
     "episode": 12,
+    "filetype": "mkv",
     "resolution": "720p",
     "site": "Erai-raws",
     "title": "Arte"
@@ -1992,16 +1992,16 @@
     "year": 2020
   },
   {
-    "filetype": "mkv",
     "episode": 12,
+    "filetype": "mkv",
     "resolution": "720p",
     "site": "Erai-raws",
     "subtitles": "Multiple",
     "title": "Yesterday o Utatte"
   },
   {
-    "filetype": "mkv",
     "episode": 12,
+    "filetype": "mkv",
     "resolution": "1080p",
     "season": 2,
     "site": "Erai-raws",
@@ -2085,8 +2085,8 @@
   {
     "audio": "AAC",
     "codec": "x265",
-    "filetype": "mkv",
     "encoder": "MVGroup.org",
+    "filetype": "mkv",
     "network": "BBC",
     "quality": "HDTV",
     "resolution": "1080p",
@@ -2149,8 +2149,8 @@
     "year": 2020
   },
   {
-    "filetype": "mkv",
     "encoder": "CreW",
+    "filetype": "mkv",
     "language": ["ITA","ENG"],
     "quality": "Bluray",
     "resolution": "1080p",
@@ -2160,8 +2160,8 @@
   {
     "audio": "AAC",
     "codec": "X264",
-    "filetype": "Mp-4",
     "encoder": "DSD",
+    "filetype": "Mp-4",
     "quality": "Dvd-Rip",
     "resolution": "480p",
     "title": "Wild Target",
@@ -2220,8 +2220,8 @@
     "audio": "EAC3 5.1",
     "bitDepth": 10,
     "codec": "x265",
-    "filetype": "mkv",
     "encoder": "xtrem3x",
+    "filetype": "mkv",
     "quality": "BDRip",
     "resolution": "1080p",
     "site": "TAoE",
@@ -2260,8 +2260,8 @@
     "audio": "TrueHD 5.1",
     "bitDepth": 10,
     "codec": "x265",
-    "filetype": "mkv",
     "encoder": "xtrem3x",
+    "filetype": "mkv",
     "quality": "BDRip",
     "resolution": "1080p",
     "title": "Clerks II",
@@ -2301,8 +2301,8 @@
   {
     "audio": "AAC",
     "codec": "X264",
-    "filetype": "Mp-4",
     "encoder": "DSD",
+    "filetype": "Mp-4",
     "quality": "Dvd-Rip",
     "resolution": "480p",
     "title": "A Walk in the Woods",
@@ -2310,8 +2310,8 @@
   },
   {
     "audio": "FLAC",
-    "filetype": "MKV",
     "encoder": "oan",
+    "filetype": "MKV",
     "resolution": "1080p",
     "title": "Treasure Planet",
     "year": 2002
@@ -2672,8 +2672,8 @@
     "audio": "DTS-HD MA 7.1",
     "bitDepth": 10,
     "codec": "x265",
-    "filetype": "mkv",
     "encoder": "r0b0t",
+    "filetype": "mkv",
     "quality": "BDRip",
     "resolution": "1080p",
     "site": "TAoE",
@@ -2684,8 +2684,8 @@
     "audio": "AAC 1.0",
     "bitDepth": 10,
     "codec": "x265",
-    "filetype": "mkv",
     "encoder": "Frys",
+    "filetype": "mkv",
     "quality": "Dvdrip",
     "resolution": "1080p",
     "site": "TAoE",
@@ -2716,10 +2716,10 @@
   {
     "audio": "AAC",
     "codec": "x264",
-    "filetype": "mp4",
     "encoder": "MVGroup.org",
     "episode": 11,
     "episodeName": "Oceans Most Powerful",
+    "filetype": "mp4",
     "quality": "HDTV",
     "resolution": "1080p",
     "season": 2,
@@ -2872,9 +2872,9 @@
   },
   {
     "codec": "x264",
-    "filetype": "mkv",
     "encoder": "Morpheus",
     "episode": 1,
+    "filetype": "mkv",
     "language": ["ITA","ENG"],
     "quality": "AHDTVMux",
     "resolution": "1080p",
@@ -2883,10 +2883,10 @@
   },
   {
     "codec": "x264",
-    "filetype": "mkv",
     "encoder": "MeM",
     "episode": 9,
     "episodeName": "Canale 4",
+    "filetype": "mkv",
     "language": ["ITA","ENG"],
     "quality": "Bluray",
     "resolution": "1080p",
@@ -3001,8 +3001,8 @@
   {
     "audio": "DTS-HD.MA.5.1",
     "codec": "AVC",
-    "filetype": "mkv",
     "encoder": "FraMeSToR",
+    "filetype": "mkv",
     "quality": "BluRay",
     "remux": true,
     "resolution": "1080i",
@@ -3020,329 +3020,329 @@
     "year": 2018
   },
   {
-    "season": 9,
-    "episode": [23, 24],
-    "resolution": "720p",
-    "quality": "BluRay",
-    "codec": "x264",
     "audio": "DD5.1",
+    "codec": "x264",
+    "encoder": "NTb",
+    "episode": [23,24],
     "filetype": "mkv",
-    "title": "Friends",
-    "encoder": "NTb"
-  },
-  {
-    "year": 2004,
-    "resolution": "1080p",
     "quality": "BluRay",
+    "resolution": "720p",
+    "season": 9,
+    "title": "Friends"
+  },
+  {
     "codec": "x264",
+    "encoder": "YIFY",
     "filetype": "srt",
+    "quality": "BluRay",
+    "resolution": "1080p",
     "title": "Shrek 2",
-    "encoder": "YIFY"
+    "year": 2004
   },
   {
-    "year": 2006,
-    "resolution": "720p",
+    "audio": "DD5.1",
+    "codec": "x264",
+    "encoder": "EbP",
     "quality": "HDDVD",
-    "codec": "x264",
-    "audio": "DD5.1",
-    "title": "Accepted",
-    "encoder": "EbP"
-  },
-  {
-    "season": 12,
-    "resolution": "1080p",
-    "quality": "WEB-DL",
-    "codec": "H.264",
-    "audio": "DD+2.0",
-    "network": "Amazon",
-    "title": "Its Always Sunny In Philadelphia",
-    "encoder": "CtrlHD"
-  },
-  {
-    "season": 1,
-    "resolution": "1080p",
-    "quality": "WEBRip",
-    "codec": "H.264",
-    "audio": "DD5.1",
-    "network": "HBO",
-    "title": "Animals",
-    "encoder": "monkee"
-  },
-  {
-    "season": 2,
-    "quality": "WEB-DL",
-    "codec": "H.264",
-    "audio": "AAC2.0",
-    "network": "iT",
-    "title": "SpongeBob SquarePants",
-    "encoder": "NOGRP"
-  },
-  {
-    "season": 1,
-    "resolution": "1080p",
-    "quality": "WEB-DL",
-    "codec": "H.264",
-    "audio": "AAC2.0",
-    "network": "AS",
-    "title": "The Shivering Truth",
-    "encoder": "BTN"
-  },
-  {
-    "season": 5,
     "resolution": "720p",
-    "quality": "WEB-DL",
+    "title": "Accepted",
+    "year": 2006
+  },
+  {
+    "audio": "DD+2.0",
     "codec": "H.264",
+    "encoder": "CtrlHD",
+    "network": "Amazon",
+    "quality": "WEB-DL",
+    "resolution": "1080p",
+    "season": 12,
+    "title": "Its Always Sunny In Philadelphia"
+  },
+  {
+    "audio": "DD5.1",
+    "codec": "H.264",
+    "encoder": "monkee",
+    "network": "HBO",
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "season": 1,
+    "title": "Animals"
+  },
+  {
     "audio": "AAC2.0",
+    "codec": "H.264",
+    "encoder": "NOGRP",
+    "network": "iT",
+    "quality": "WEB-DL",
+    "season": 2,
+    "title": "SpongeBob SquarePants"
+  },
+  {
+    "audio": "AAC2.0",
+    "codec": "H.264",
+    "encoder": "BTN",
+    "network": "AS",
+    "quality": "WEB-DL",
+    "resolution": "1080p",
+    "season": 1,
+    "title": "The Shivering Truth"
+  },
+  {
+    "audio": "AAC2.0",
+    "codec": "H.264",
+    "encoder": "BTW",
     "network": "CRAV",
-    "title": "Letterkenny",
-    "encoder": "BTW"
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "season": 5,
+    "title": "Letterkenny"
   },
   {
-    "season": 7,
-    "resolution": "1080p",
-    "quality": "WEBRip",
-    "codec": "x264",
     "audio": "AAC2.0",
+    "codec": "x264",
+    "encoder": "BTW",
     "network": "CC",
-    "title": "Workaholics",
-    "encoder": "BTW"
-  },
-  {
-    "season": 1,
-    "resolution": "1080p",
     "quality": "WEBRip",
-    "codec": "x264",
+    "resolution": "1080p",
+    "season": 7,
+    "title": "Workaholics"
+  },
+  {
     "audio": "AAC2.0",
+    "codec": "x264",
+    "encoder": "BTW",
     "network": "SESO",
-    "title": "HarmonQuest",
-    "encoder": "BTW"
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "season": 1,
+    "title": "HarmonQuest"
   },
   {
-    "season": 1,
-    "resolution": "1080p",
-    "quality": "WEB-DL",
     "codec": "x264",
+    "encoder": "Bernd_Lauert",
     "network": "VRV",
-    "title": "Bee and Puppycat",
-    "encoder": "Bernd_Lauert"
-  },
-  {
-    "season": 3,
+    "quality": "WEB-DL",
     "resolution": "1080p",
-    "quality": "WEB-DL",
-    "codec": "x264",
-    "audio": "DDP5.1",
-    "network": "PCOK",
-    "title": "A P Bio",
-    "encoder": "NTb"
+    "season": 1,
+    "title": "Bee and Puppycat"
   },
   {
-    "season": 1,
-    "episode": 1,
-    "resolution": "540p",
-    "quality": "WEB-DL",
+    "audio": "DDP5.1",
     "codec": "x264",
+    "encoder": "NTb",
+    "network": "PCOK",
+    "quality": "WEB-DL",
+    "resolution": "1080p",
+    "season": 3,
+    "title": "A P Bio"
+  },
+  {
     "audio": "AAC2.0",
+    "codec": "x264",
+    "encoder": "AJP69",
+    "episode": 1,
+    "episodeName": "The Vulcan Hello",
     "filetype": "mkv",
     "network": "CBS",
-    "title": "Star Trek Discovery",
-    "episodeName": "The Vulcan Hello",
-    "encoder": "AJP69"
+    "quality": "WEB-DL",
+    "resolution": "540p",
+    "season": 1,
+    "title": "Star Trek Discovery"
   },
   {
-    "year": 1990,
-    "resolution": "1080p",
-    "quality": "BluRay",
-    "codec": "VC-1",
     "audio": "TrueHD.5.1",
+    "codec": "VC-1",
+    "encoder": "EPSiLON",
     "filetype": "mkv",
-    "remux": true,
-    "title": "IMAX Blue Planet",
-    "encoder": "EPSiLON"
-  },
-  {
-    "year": 2017,
-    "resolution": "720p",
     "quality": "BluRay",
-    "codec": "x264",
-    "audio": "DD-EX",
-    "title": "John Wick Chapter 2",
-    "encoder": "TayTO"
-  },
-  {
-    "season": 2,
+    "remux": true,
     "resolution": "1080p",
+    "title": "IMAX Blue Planet",
+    "year": 1990
+  },
+  {
+    "audio": "DD-EX",
+    "codec": "x264",
+    "encoder": "TayTO",
     "quality": "BluRay",
-    "codec": "AVC",
+    "resolution": "720p",
+    "title": "John Wick Chapter 2",
+    "year": 2017
+  },
+  {
     "audio": "DTSMA",
+    "codec": "AVC",
+    "quality": "BluRay",
     "remux": true,
+    "resolution": "1080p",
+    "season": 2,
     "title": "Archer"
   },
   {
-    "season": 1,
-    "resolution": "720p",
-    "quality": "BluRay",
-    "codec": "x264",
     "audio": "FLAC2.0",
-    "title": "Peaky Blinders",
-    "encoder": "DON"
-  },
-  {
-    "season": 1,
-    "quality": "DVDRip",
     "codec": "x264",
-    "audio": "OGG",
-    "title": "Ghost Stories",
-    "encoder": "Exiled-Destiny"
+    "encoder": "DON",
+    "quality": "BluRay",
+    "resolution": "720p",
+    "season": 1,
+    "title": "Peaky Blinders"
   },
   {
+    "audio": "OGG",
+    "codec": "x264",
+    "encoder": "Exiled-Destiny",
+    "quality": "DVDRip",
     "season": 1,
-    "episode": 1,
-    "resolution": "720p",
-    "quality": "WEB-DL",
-    "codec": "H.264",
+    "title": "Ghost Stories"
+  },
+  {
     "audio": "AAC2.0",
+    "codec": "H.264",
+    "encoder": "RTN",
+    "episode": 1,
     "filetype": "mkv",
     "network": "iP",
-    "title": "Rick Steins Road To Mexico",
-    "encoder": "RTN"
+    "quality": "WEB-DL",
+    "resolution": "720p",
+    "season": 1,
+    "title": "Rick Steins Road To Mexico"
   },
   {
-    "season": 7,
-    "episode": 1,
-    "resolution": "1080p",
-    "quality": "WEB-DL",
-    "codec": "H.264",
     "audio": "AAC2.0",
-    "repack": true,
+    "codec": "H.264",
+    "encoder": "BTW",
+    "episode": 1,
+    "episodeName": "Rangers vs Sabres Part1",
     "filetype": "mkv",
     "network": "NBC",
-    "title": "Road to the NHL Winter Classic",
-    "episodeName": "Rangers vs Sabres Part1",
-    "encoder": "BTW"
+    "quality": "WEB-DL",
+    "repack": true,
+    "resolution": "1080p",
+    "season": 7,
+    "title": "Road to the NHL Winter Classic"
   },
   {
-    "season": 1,
-    "episode": 1,
-    "resolution": "1080p",
-    "quality": "WEB-DL",
-    "codec": "H.264",
     "audio": "AAC2.0",
+    "codec": "H.264",
+    "encoder": "BOOP",
+    "episode": 1,
+    "episodeName": "The Mighty Misfits Who Made Marvel",
     "filetype": "mkv",
     "network": "AMC",
-    "title": "Robert Kirkmans Secret History of Comics",
-    "episodeName": "The Mighty Misfits Who Made Marvel",
-    "encoder": "BOOP"
+    "quality": "WEB-DL",
+    "resolution": "1080p",
+    "season": 1,
+    "title": "Robert Kirkmans Secret History of Comics"
   },
   {
-    "season": 1,
-    "episode": 12,
-    "resolution": "720p",
-    "quality": "WEBRip",
-    "codec": "x264",
     "audio": "AAC2.0",
+    "codec": "x264",
+    "encoder": "SynHD",
+    "episode": 12,
+    "episodeName": "Chore Day",
     "filetype": "mkv",
     "network": "PBS",
-    "title": "Ready Jet Go",
-    "episodeName": "Chore Day",
-    "encoder": "SynHD"
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "season": 1,
+    "title": "Ready Jet Go"
   },
   {
-    "season": 1,
-    "episode": 1,
-    "quality": "WEB-DL",
-    "codec": "H.264",
     "audio": "AAC2.0",
+    "codec": "H.264",
+    "encoder": "BTW",
+    "episode": 1,
+    "episodeName": "The Hood Maker",
     "filetype": "mkv",
     "network": "STAN",
-    "title": "Philip K Dicks Electric Dreams",
-    "episodeName": "The Hood Maker",
-    "encoder": "BTW"
+    "quality": "WEB-DL",
+    "season": 1,
+    "title": "Philip K Dicks Electric Dreams"
   },
   {
-    "season": 4,
-    "episode": 15,
-    "resolution": "720p",
-    "quality": "WEBRip",
-    "codec": "x264",
     "audio": "AAC2.0",
+    "codec": "x264",
+    "encoder": "RTN",
+    "episode": 15,
+    "episodeName": "The Great Swamp Search",
     "filetype": "mkv",
     "network": "DSNY",
-    "title": "Octonauts",
-    "episodeName": "The Great Swamp Search",
-    "encoder": "RTN"
+    "quality": "WEBRip",
+    "resolution": "720p",
+    "season": 4,
+    "title": "Octonauts"
   },
   {
-    "season": 1,
-    "episode": 1,
-    "quality": "WEB-DL",
-    "codec": "H.264",
     "audio": "AAC2.0",
+    "codec": "H.264",
+    "encoder": "RTN",
+    "episode": 1,
     "filetype": "mkv",
     "network": "RTE",
-    "title": "Nowhere Fast",
-    "encoder": "RTN"
-  },
-  {
-    "season": 2,
     "quality": "WEB-DL",
-    "codec": "x264",
-    "audio": "AAC2.0",
-    "network": "CR",
-    "title": "New Game",
-    "encoder": "HorribleSubs"
-  },
-  {
     "season": 1,
-    "episode": 1,
-    "resolution": "1080p",
-    "quality": "WEB-DL",
-    "codec": "x264",
+    "title": "Nowhere Fast"
+  },
+  {
     "audio": "AAC2.0",
+    "codec": "x264",
+    "encoder": "HorribleSubs",
+    "network": "CR",
+    "quality": "WEB-DL",
+    "season": 2,
+    "title": "New Game"
+  },
+  {
+    "audio": "AAC2.0",
+    "codec": "x264",
+    "encoder": "BOOP",
+    "episode": 1,
+    "episodeName": "Shark Island",
     "filetype": "mkv",
     "network": "ANPL",
-    "title": "Mystery of the Lost Islands",
-    "episodeName": "Shark Island",
-    "encoder": "BOOP"
+    "quality": "WEB-DL",
+    "resolution": "1080p",
+    "season": 1,
+    "title": "Mystery of the Lost Islands"
   },
   {
-    "season": 1,
-    "episode": 1,
-    "quality": "WEB-DL",
-    "codec": "x264",
     "audio": "DD2.0",
+    "codec": "x264",
+    "encoder": "BTW",
+    "episode": 1,
+    "episodeName": "Pilot",
     "filetype": "mkv",
     "network": "DTV",
-    "title": "Mr Mercedes",
-    "episodeName": "Pilot",
-    "encoder": "BTW"
+    "quality": "WEB-DL",
+    "season": 1,
+    "title": "Mr Mercedes"
   },
   {
-    "season": 1,
-    "episode": 1,
-    "resolution": "1080p",
-    "quality": "WEB-DL",
-    "codec": "x264",
     "audio": "AAC2.0",
+    "codec": "x264",
+    "encoder": "BOOP",
+    "episode": 1,
+    "episodeName": "Treat Yo Self",
     "filetype": "mkv",
     "network": "VICE",
-    "title": "Most Expensivest",
-    "episodeName": "Treat Yo Self",
-    "encoder": "BOOP"
+    "quality": "WEB-DL",
+    "resolution": "1080p",
+    "season": 1,
+    "title": "Most Expensivest"
   },
   {
-    "resolution": "1080p",
-    "quality": "BD",
-    "codec": "H.264",
     "audio": "FLAC",
-    "site": "Anonymous",
     "bitDepth": 10,
+    "codec": "H.264",
+    "quality": "BD",
+    "resolution": "1080p",
+    "site": "Anonymous",
     "title": "Non Non Biyori"
   },
   {
     "quality": "BD",
-    "site": "Arjix",
     "remux": true,
+    "site": "Arjix",
     "title": "Darling in the Franxx"
   },
   {
@@ -3351,55 +3351,111 @@
     "title": "One Piece Movies Collection"
   },
   {
-    "codec": "x264",
     "audio": "Dual Audio",
+    "codec": "x264",
     "site": "JySzE",
     "title": "Naruto"
   },
   {
-    "season": [1, 2, 3],
-    "resolution": "1080p",
-    "quality": "Blu-Ray",
     "audio": "TrueHD",
+    "quality": "Blu-Ray",
     "remux": true,
+    "resolution": "1080p",
+    "season": [1,2,3],
     "title": "Attack on Titan"
   },
   {
-    "season": 1,
     "quality": "USBD",
     "remux": true,
+    "season": 1,
     "title": "Black Clover"
   },
   {
-    "season": [1, 2],
-    "resolution": "1080p",
     "quality": "BD",
     "remux": true,
-    "title": "Hero Mask",
-    "site": "npz"
+    "resolution": "1080p",
+    "season": [1,2],
+    "site": "npz",
+    "title": "Hero Mask"
   },
   {
-    "season": [1, 2],
-    "resolution": "1920x1080",
-    "quality": "BDrip",
-    "codec": "x264",
     "audio": "FLAC",
+    "codec": "x264",
+    "quality": "BDrip",
+    "resolution": "1920x1080",
+    "season": [1,2],
     "site": "CBT",
     "title": "Nisekoi"
   },
   {
-    "codec": "HEVC",
     "audio": "Dual Audio",
+    "codec": "HEVC",
     "site": "YURI",
     "title": "Kimi no Suizou o Tabetai"
   },
   {
-    "resolution": "1080p",
     "audio": "Dual-Audio",
-    "site": "FFF-Remux",
+    "episode": 24,
     "remux": true,
-    "title": "Accel World",
+    "resolution": "1080p",
     "season": 1,
-    "episode": 24
+    "site": "FFF-Remux",
+    "title": "Accel World"
+  },
+  {
+    "audio": "DD5 1",
+    "codec": "X 264",
+    "quality": "BRRip",
+    "resolution": "1080p",
+    "title": "The Djinn",
+    "year": 2021
+  },
+  {
+    "genre": "drama",
+    "language": "Albania",
+    "title": "Hive",
+    "year": 2021
+  },
+  {
+    "genre": "drama",
+    "language": "Egypt",
+    "title": "Souad",
+    "year": 2021
+  },
+  {
+    "genre": "drama",
+    "language": "Poland",
+    "title": "Swinki",
+    "year": 2009
+  },
+  {
+    "genre": "thriller",
+    "title": "Dead Heat on a Merry Go Round",
+    "year": 1966
+  },
+  {
+    "audio": "AC3",
+    "codec": "x264",
+    "filetype": "Mp4",
+    "resolution": "1080p",
+    "season": [1,2,3,4,5,6],
+    "title": "Justified"
+  },
+  {
+    "codec": "x264",
+    "quality": "BluRay",
+    "resolution": "720p",
+    "site": "MoviesFD",
+    "title": "Movie 43",
+    "year": 2013
+  },
+  {
+    "codec": "x264",
+    "language": "French",
+    "quality": "BluRay",
+    "resolution": "720p",
+    "site": "MoviesFD",
+    "title": "Mommy",
+    "year": 2014
   }
 ]

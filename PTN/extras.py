@@ -16,7 +16,7 @@ langs = [
     ("exyu", "ExYu"),
     ("chs|chi(?:nese)?", "Chinese"),
     ("hin(?:di)?", "Hindi"),
-    ("polish", "Polish"),
+    ("polish|poland", "Polish"),
     ("mandarin", "Mandarin"),
     ("kor(?:ean)?", "Korean"),
     ("bengali|bangla", "Bengali"),
@@ -31,6 +31,8 @@ langs = [
     ("urdu", "Urdu"),
     ("punjabi", "Punjabi"),
     ("portuguese", "Portuguese"),
+    ("albanian?", "Albanian"),
+    ("egypt(?:ian)?", "Egyptian"),
     ("en?(?:g(?:lish)?)?", "English"),  # Must be at end, matches just an 'e'
 ]
 
@@ -41,6 +43,7 @@ genres = [
     ("West(?:\.|ern)?", "Western"),
     ("Action", "Action"),
     ("Adventure", "Adventure"),
+    ("Thriller", "Thriller"),
 ]
 
 # Some titles just can't be parsed without breaking everything else, so here

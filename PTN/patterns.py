@@ -209,15 +209,15 @@ patterns["network"] += [
 patterns["codec"] = [
     ("xvid", "Xvid"),
     ("av1", "AV1"),
-    ("[hx]\.?264", "H.264"),
+    ("[hx]{d}?264".format(d=delimiters), "H.264"),
     ("AVC", "H.264"),
     ("HEVC(?:{d}Main{d}?10P?)".format(d=delimiters), "H.265 Main 10"),
     (
-        "[hx]\.?265",
+        "[hx]{d}?265".format(d=delimiters),
         "H.265",
     ),  # Separate from HEVC so if both are present, it won't pollute excess.
     ("HEVC", "H.265"),
-    ("[h]\.?263", "H.263"),
+    ("[h]{d}?263".format(d=delimiters), "H.263"),
     ("VC-1", "VC-1"),
 ]
 patterns["audio"] = get_channel_audio_options(

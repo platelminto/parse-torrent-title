@@ -1767,22 +1767,22 @@
     "title": "Magnum P.I."
   },
   {
-    "quality": "Blu-ray",
-    "codec": "H.264",
     "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
     "filetype": "MKV",
+    "quality": "Blu-ray",
     "title": "Friends"
   },
   {
-    "quality": "Blu-ray",
     "codec": "H.264",
     "filetype": "SRT",
+    "quality": "Blu-ray",
     "title": "Shrek 2"
   },
   {
-    "quality": "HD DVD",
+    "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "audio": "Dolby Digital 5.1"
+    "quality": "HD DVD"
   },
   {
     "audio": "Dolby Digital 2.0",
@@ -1804,51 +1804,51 @@
     "network": "Crave"
   },
   {
-    "codec": "H.264",
     "audio": "AAC 2.0",
+    "codec": "H.264",
     "network": "Comedy Central"
   },
   {
-    "codec": "H.264",
     "audio": "AAC 2.0",
+    "codec": "H.264",
     "network": "Seeso"
   },
   {
     "codec": "H.264"
   },
   {
-    "codec": "H.264",
     "audio": "Dolby Digital Plus 5.1",
+    "codec": "H.264",
     "network": "Peacock"
   },
   {
-    "codec": "H.264",
     "audio": "AAC 2.0",
+    "codec": "H.264",
     "filetype": "MKV"
   },
   {
-    "quality": "Blu-ray",
     "audio": "Dolby TrueHD 5.1",
-    "filetype": "MKV"
+    "filetype": "MKV",
+    "quality": "Blu-ray"
   },
   {
-    "quality": "Blu-ray",
+    "audio": "Dolby Digital EX",
     "codec": "H.264",
-    "audio": "Dolby Digital EX"
+    "quality": "Blu-ray"
   },
   {
-    "quality": "Blu-ray",
+    "audio": "DTS-HD MA",
     "codec": "H.264",
-    "audio": "DTS-HD MA"
+    "quality": "Blu-ray"
   },
   {
-    "quality": "Blu-ray",
+    "audio": "FLAC 2.0",
     "codec": "H.264",
-    "audio": "FLAC 2.0"
+    "quality": "Blu-ray"
   },
   {
-    "quality": "DVD-Rip",
-    "codec": "H.264"
+    "codec": "H.264",
+    "quality": "DVD-Rip"
   },
   {
     "audio": "AAC 2.0",
@@ -1864,8 +1864,8 @@
     "filetype": "MKV"
   },
   {
-    "codec": "H.264",
     "audio": "AAC 2.0",
+    "codec": "H.264",
     "filetype": "MKV"
   },
   {
@@ -1874,8 +1874,8 @@
     "network": "Stan."
   },
   {
-    "codec": "H.264",
     "audio": "AAC 2.0",
+    "codec": "H.264",
     "filetype": "MKV",
     "network": "DisneyNOW"
   },
@@ -1885,25 +1885,25 @@
     "network": "RTE Player"
   },
   {
-    "codec": "H.264",
     "audio": "AAC 2.0",
+    "codec": "H.264",
     "network": "Crunchyroll"
   },
   {
-    "codec": "H.264",
     "audio": "AAC 2.0",
+    "codec": "H.264",
     "filetype": "MKV",
     "network": "Animal Planet Live"
   },
   {
-    "codec": "H.264",
     "audio": "Dolby Digital 2.0",
+    "codec": "H.264",
     "filetype": "MKV",
     "network": "DirecTV Stream"
   },
   {
-    "codec": "H.264",
     "audio": "AAC 2.0",
+    "codec": "H.264",
     "filetype": "MKV"
   },
   {
@@ -1919,13 +1919,13 @@
     "title": "One Piece Movies Collection"
   },
   {
-    "codec": "H.264",
     "audio": "Dual",
+    "codec": "H.264",
     "title": "Naruto"
   },
   {
-    "quality": "Blu-ray",
     "audio": "Dolby TrueHD",
+    "quality": "Blu-ray",
     "title": "Attack on Titan"
   },
   {
@@ -1937,18 +1937,58 @@
     "title": "Hero Mask"
   },
   {
-    "resolution": "1080p",
-    "quality": "BDRip",
     "codec": "H.264",
+    "quality": "BDRip",
+    "resolution": "1080p",
     "title": "Nisekoi"
   },
   {
-    "codec": "H.265",
     "audio": "Dual",
+    "codec": "H.265",
     "title": "Kimi no Suizou o Tabetai"
   },
   {
     "audio": "Dual",
     "title": "Accel World"
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "title": "The Djinn"
+  },
+  {
+    "genre": "Drama",
+    "language": "Albanian",
+    "title": "Hive"
+  },
+  {
+    "genre": "Drama",
+    "language": "Egyptian",
+    "title": "Souad"
+  },
+  {
+    "genre": "Drama",
+    "language": "Polish",
+    "title": "Swinki"
+  },
+  {
+    "genre": "Thriller",
+    "title": "Dead Heat on a Merry Go Round"
+  },
+  {
+    "audio": "Dolby Digital",
+    "codec": "H.264",
+    "filetype": "MP4",
+    "title": "Justified"
+  },
+  {
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "title": "Movie 43"
+  },
+  {
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "title": "Mommy"
   }
 ]
