@@ -51,6 +51,9 @@ extracted and returned in a dictionary. Text which couldn't be
 parsed is returned in the `excess` field.
 
 ```py
+import PTN
+
+
 PTN.parse('The Walking Dead S05E03 720p HDTV x264-ASAP[ettv]')
 # {
 #     'encoder': 'ASAP',
