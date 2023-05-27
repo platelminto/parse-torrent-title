@@ -2149,7 +2149,7 @@
     "year": 2020
   },
   {
-    "encoder": "CreW",
+    "encoder": "iDN",
     "filetype": "mkv",
     "language": ["ITA","ENG"],
     "quality": "Bluray",
@@ -3457,5 +3457,18 @@
     "site": "MoviesFD",
     "title": "Mommy",
     "year": 2014
+  },
+  {
+    "codec": "x265",
+    "encoder": "R4RBG",
+    "quality": "WEBRip",
+    "resolution": "1080p",
+    "site": "TGx",
+    "title": "Rendez Vous.",
+    "year": 2015
+  },
+  {
+    "filetype": "mkv",
+    "title": "The Best Offer"
   }
 ]

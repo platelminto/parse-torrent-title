@@ -255,9 +255,9 @@ patterns["hardcoded"] = "HC"
 patterns["proper"] = "PROPER"
 patterns["repack"] = "REPACK"
 patterns["fps"] = "([1-9][0-9]{1,2})" + delimiters + "*fps"
-patterns["filetype"] = [("MKV|AVI|(?:SRT|SUB|SSA)$", None, "upper"), ("MP-?4", "MP4")]
+patterns["filetype"] = [(r"\.?(MKV|AVI|(?:SRT|SUB|SSA)$)", None, "upper"), ("MP-?4", "MP4")]
 patterns["widescreen"] = "WS"
-patterns["site"] = "^(\[ ?([^\]]+?) ?\])"
+patterns["site"] = r"^(\[ ?([^\]]+?) ?\])"
 
 lang_list_pattern = (
     r"\b(?:"
