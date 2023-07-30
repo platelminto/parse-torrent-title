@@ -953,7 +953,7 @@
     "audio": "Ac3",
     "codec": "XviD",
     "language": ["Italian","English"],
-    "season": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+    "season": 1,
     "subtitles": ["ita","eng"],
     "title": "Z Nation",
     "year": 2014

@@ -3,7 +3,6 @@
 > Extract media information from torrent-like filename
 
 ![Python versions](https://img.shields.io/badge/Python-2.7%2C%203.5-brightgreen.svg?style=flat-square)
-[![Build Status](https://travis-ci.com/platelminto/parse-torrent-title.svg?branch=master)](https://travis-ci.com/platelminto/parse-torrent-title)
 
 Originally based off of [this JavaScript
 library](https://github.com/jzjzjzj/parse-torrent-name).
