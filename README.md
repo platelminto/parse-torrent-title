@@ -96,20 +96,45 @@ PTN.parse('Deadliest.Catch.S00E66.No.Safe.Passage.720p.AMZN.WEB-DL.DDP2.0.H.264-
 #     'website': 'TGx'
 # }
 
-PTN.parse('Z Nation (2014)S01-01-13 (2014) Full Season.XviD - Italian English.Ac3.Sub.ita.eng.MIRCrew')
+PTN.parse('Insecure.S04.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV')
 # {
-#     'website': 'MIRCrew',
-#     'title': 'Z Nation',
-#     'season': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-#     'codec': 'Xvid',
-#     'year':  2014,
-#     'audio': 'Dolby Digital',
-#     'language': ['Italian', 'English'],
-#     'subtitles': ['Italian', 'English']
+#     'title': 'Insecure'
+#     'encoder': 'GalaxyTV',
+#     'codec': 'H.264',
+#     'season': 4,
+#     'resolution': '720p',
+#     'network': 'Amazon Studios',
+#     'quality': 'WEBRip',
 # }
 ```
 
 More examples (inputs and outputs) can be found looking through `tests/files`.
+
+## CLI
+
+You can use PTN from your command line, where the output will be printed as JSON:
+
+```sh
+$ python cli.py 'Insecure.S04.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV'
+
+ {
+     'title': 'Insecure'
+     'encoder': 'GalaxyTV',
+     'codec': 'H.264',
+     'season': 4,
+     'resolution': '720p',
+     'network': 'Amazon Studios',
+     'quality': 'WEBRip',
+ }
+```
+
+For help, use the `-h` or `--help` flag:
+
+```sh
+$ python cli.py --help
+```
+
+This will provide a brief overview of the available options and their usage.
 
 ### Raw info
 
@@ -117,6 +142,12 @@ The matches in the torrent name are standardised into specific strings, accordin
 
 ```py
 PTN.parse('A freakishly cool movie or TV episode', standardise=False)
+```
+
+In the CLI, you can use the `--raw` flag:
+
+```sh
+$ python cli.py --raw 'A freakishly cool movie or TV episode'
 ```
 
 ### Types of parts
@@ -129,6 +160,12 @@ The types of parts can be strings, integers, booleans, or lists of the first 2. 
 To enable this flag:
 ```py
 PTN.parse('An even cooler movie or TV episode', coherent_types=True)
+```
+
+In the CLI, you can use the `--coherent-types` flag:
+
+```sh
+$ python cli.py --coherent-types 'A freakishly cool movie or TV episode'
 ```
 
 ### Parts extracted
@@ -200,6 +237,7 @@ Below are the additions that have been made to [/u/divijbindlish's original repo
 - Expanded and improved matching for various fields.
 - Fixed incorrect parsing of titles containing years.
 - Fixed groups/encoders/websites mixups: a group/encoder is now just called an encoder, and a public tracker site goes under website.
+- Added a basic CLI.
 - Added more tests and cleaned up previous ones.
 
 
