@@ -2019,5 +2019,11 @@
     "codec": "H.264",
     "resolution": "720p",
     "title": "Sons of Anarchy"
+  },
+  {
+    "filetype": "MKV",
+    "codec": "H.264",
+    "audio": "AAC 2.0",
+    "title": "Lollapalooza"
   }
 ]

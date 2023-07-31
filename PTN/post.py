@@ -14,14 +14,16 @@ from .patterns import episode_name_pattern, langs, patterns, pre_website_encoder
 # Try and find the episode name.
 def try_episode_name(self, unmatched):
     match = re.findall(episode_name_pattern, unmatched)
-    # First we see if there's a match in unmatched, then we look if it's after an episode
-    # or a day in the full release title.
+    # First we see if there's a match in unmatched, then we look if it's after an episode, a day,
+    # or a year, in the full release title.
     if match:
         match = re.search(
             "(?:"
             + link_patterns(patterns["episode"])
             + "|"
             + patterns["day"]
+            + "|"
+            + patterns["year"]
             + r")[._\-\s+]*("
             + re.escape(match[0])
             + ")",

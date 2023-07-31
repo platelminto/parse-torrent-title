@@ -31,9 +31,20 @@ def get_standard_data():
     return zip(torrents, expected_results)
 
 
+total_excess = 0
+
+
+@pytest.fixture(scope="module", autouse=True)
+def setup_and_teardown():
+    global total_excess
+    total_excess = 0
+    yield  # where testing happens
+    print("\nExcess elements total: {}".format(total_excess))
+
+
 @pytest.mark.parametrize("torrent,expected_result", get_raw_data())
 def test_all_raw(torrent, expected_result):
-    total_excess = 0
+    global total_excess
     result = PTN.parse(torrent, standardise=False)
     if "excess" in result:
         if isinstance(result["excess"], list):
@@ -48,8 +59,6 @@ def test_all_raw(torrent, expected_result):
     for key in result.keys():
         if key not in ("encoder", "excess", "site"):  # Not needed in tests
             assert key in expected_result
-
-    print("Excess elements total: {}".format(total_excess))
 
 
 @pytest.mark.parametrize("torrent,expected_result", get_standard_data())

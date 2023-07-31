@@ -3496,5 +3496,15 @@
     "resolution": "1280 x 720",
     "title": "Sons of Anarchy",
     "season": 3
+  },
+  {
+    "filetype": "mkv",
+    "resolution": "1080p",
+    "codec": "x264",
+    "episodeName": "Cat Dealers",
+    "quality": "WEB-DL",
+    "year": 2022,
+    "audio": "AAC2.0",
+    "title": "Lollapalooza"
   }
 ]
