@@ -3490,5 +3490,11 @@
   {
     "title": "tick tick...BOOM",
     "filetype": "mp4"
+  },
+  {
+    "codec": "x264",
+    "resolution": "1280 x 720",
+    "title": "Sons of Anarchy",
+    "season": 3
   }
 ]

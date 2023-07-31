@@ -128,8 +128,8 @@ patterns["day"] = "(?:{year}){d}(?:{month}){d}({day})".format(
 )
 patterns["resolution"] = [
     ("([0-9]{3,4}(?:p|i))", None, "lower"),
-    ("(1280x720p?)", "720p"),
-    ("FHD|1920x1080p?", "1080p"),
+    ("(1280{d}?x{d}?720p?)".format(d=delimiters), "720p"),
+    ("FHD|1920{d}?x{d}?1080p?".format(d=delimiters), "1080p"),
     ("UHD", "UHD"),
     ("HD", "HD"),
     ("4K", "4K"),
