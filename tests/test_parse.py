@@ -42,7 +42,7 @@ def test_all_raw(torrent, expected_result):
             total_excess += 1
     for key in expected_result:
         assert key in result, "'{}' was missing for \n{}".format(key, torrent)
-        assert expected_result[key] == result[key], "'{}' failed for \n{}".format(
+        assert result[key] == expected_result[key], "'{}' failed for \n{}".format(
             key, torrent
         )
     for key in result.keys():
@@ -57,6 +57,6 @@ def test_standardised(torrent, expected_result):
     result = PTN.parse(torrent, standardise=True)
     for key in expected_result:
         assert key in result, "'{}' was missing for \n{}".format(key, torrent)
-        assert expected_result[key] == result[key], "'{}' failed for \n{}".format(
+        assert result[key] == expected_result[key], "'{}' failed for \n{}".format(
             key, torrent
         )

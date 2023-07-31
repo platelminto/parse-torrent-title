@@ -226,6 +226,8 @@ Below are the additions that have been made to [/u/divijbindlish's original repo
 - Added standardisation of output strings.
 - Added multi-language support.
 - Added multi-episode support.
+- Added a basic CLI.
+- Added thread safety.
 - Improved support for anime tv releases.
 - Improved support for Indian releases.
 - Added various fields (see field list above).
@@ -237,7 +239,6 @@ Below are the additions that have been made to [/u/divijbindlish's original repo
 - Expanded and improved matching for various fields.
 - Fixed incorrect parsing of titles containing years.
 - Fixed groups/encoders/websites mixups: a group/encoder is now just called an encoder, and a public tracker site goes under website.
-- Added a basic CLI.
 - Added more tests and cleaned up previous ones.
 
 
