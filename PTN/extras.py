@@ -51,7 +51,6 @@ genres = [
 # incorrect_parse match within a .parse() dict, removing the latter, and replacing
 # the former with actual_title.
 exceptions = [
-    {"parsed_title": "", "incorrect_parse": ("year", 1983), "actual_title": "1983"},
     {
         "parsed_title": "Marvel's Agents of S H I E L D",
         "incorrect_parse": ("title", "Marvel's Agents of S H I E L D"),

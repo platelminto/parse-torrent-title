@@ -197,6 +197,12 @@ def try_vague_season_episode(self):
             )
 
 
+def use_year_as_title_if_absent(self):
+    if "year" in self.parts and not self.parts.get("title"):
+        self._part("title", None, str(self.parts["year"]), overwrite=True)
+        self.parts.pop("year")
+
+
 post_processing_after_excess = [
     try_encoder,
     try_site,
@@ -204,4 +210,5 @@ post_processing_after_excess = [
     fix_subtitles_no_language,
     filter_non_languages,
     try_vague_season_episode,
+    use_year_as_title_if_absent,
 ]
