@@ -9,4 +9,3 @@ venv*/
 .idea/
 
 tests/files/seen_inputs.json
-tests/test_generator.py
