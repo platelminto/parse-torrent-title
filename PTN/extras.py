@@ -16,7 +16,7 @@ langs = [
     ("exyu", "ExYu"),
     ("chs|chi(?:nese)?", "Chinese"),
     ("hin(?:di)?", "Hindi"),
-    ("polish|poland", "Polish"),
+    ("polish|poland|pl", "Polish"),
     ("mandarin", "Mandarin"),
     ("kor(?:ean)?", "Korean"),
     ("bengali|bangla", "Bengali"),
