@@ -92,6 +92,8 @@ patterns["episode"] = [
     "\s\-\s\d{1,3}\s",
     r"\b[0-9]{1,2}x([0-9]{2})\b",
     r"\bepisod(?:e|io)" + delimiters + r"\d{1,2}\b",
+    # support for S1EP(01-08) type descriptions
+    r"\bs\d{1,2}ep[\(\[](\d{1,2}-\d{1,2})[\)\]]",
 ]
 # If adding season patterns, remember to look at episode, as it uses the last few!
 patterns["season"] = [
@@ -110,10 +112,12 @@ patterns["season"] = [
     r"\b(?:Complete"
     + delimiters
     + r")?Season[\. -][0-9]{1,2}\b",  # Describes Season.15 type descriptions
+    # Describes S1EP(01-08) type descriptions
+    r"\bs(\d{1,2})ep\b"
 ]
 # The first 4 season regexes won't have 'Part' in them.
 patterns["episode"] += [
-    link_patterns(patterns["season"][5:])
+    link_patterns(patterns["season"][5:-1])
     + delimiters
     + "*P(?:ar)?t"
     + delimiters
@@ -130,6 +134,7 @@ patterns["resolution"] = [
     ("([0-9]{3,4}(?:p|i))", None, "lower"),
     ("(1280x720p?)", "720p"),
     ("FHD|1920x1080p?", "1080p"),
+    ("4K|3840x2160p?", "2160p"),
     ("UHD", "UHD"),
     ("HD", "HD"),
     ("4K", "4K"),
@@ -160,6 +165,7 @@ patterns["quality"] = [
     ("HDDVD", "HD DVD"),
     # Match this last as it can show up with others.
     ("PPV(?:Rip)?", "Pay-Per-View Rip"),
+    ("4K UHD", "4K UHD"),
 ]
 patterns["network"] = [
     ("ATVP", "Apple TV+"),
