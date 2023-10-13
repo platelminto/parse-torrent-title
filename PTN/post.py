@@ -14,14 +14,16 @@ from .patterns import episode_name_pattern, langs, patterns, pre_website_encoder
 # Try and find the episode name.
 def try_episode_name(self, unmatched):
     match = re.findall(episode_name_pattern, unmatched)
-    # First we see if there's a match in unmatched, then we look if it's after an episode
-    # or a day in the full release title.
+    # First we see if there's a match in unmatched, then we look if it's after an episode, a day,
+    # or a year, in the full release title.
     if match:
         match = re.search(
             "(?:"
             + link_patterns(patterns["episode"])
             + "|"
             + patterns["day"]
+            + "|"
+            + patterns["year"]
             + r")[._\-\s+]*("
             + re.escape(match[0])
             + ")",
@@ -197,6 +199,12 @@ def try_vague_season_episode(self):
             )
 
 
+def use_year_as_title_if_absent(self):
+    if "year" in self.parts and not self.parts.get("title"):
+        self._part("title", None, str(self.parts["year"]), overwrite=True)
+        self.parts.pop("year")
+
+
 post_processing_after_excess = [
     try_encoder,
     try_site,
@@ -204,4 +212,5 @@ post_processing_after_excess = [
     fix_subtitles_no_language,
     filter_non_languages,
     try_vague_season_episode,
+    use_year_as_title_if_absent,
 ]

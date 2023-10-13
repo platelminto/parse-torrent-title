@@ -953,7 +953,7 @@
     "audio": "Ac3",
     "codec": "XviD",
     "language": ["Italian","English"],
-    "season": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+    "season": 1,
     "subtitles": ["ita","eng"],
     "title": "Z Nation",
     "year": 2014
@@ -3470,5 +3470,41 @@
   {
     "filetype": "mkv",
     "title": "The Best Offer"
+  },
+  {
+    "audio": "DDP2.0",
+    "filetype": "mkv",
+    "title": "What If...",
+    "quality": "WEB-DL",
+    "year": 2010,
+    "codec": "H264",
+    "resolution": "1080p"
+  },
+  {
+    "title": "Eu gosto do Homem-Aranha... y dai",
+    "resolution": "1080p",
+    "codec": "H264",
+    "filetype": "mkv",
+    "audio": "AAC2.0"
+  },
+  {
+    "title": "tick tick...BOOM",
+    "filetype": "mp4"
+  },
+  {
+    "codec": "x264",
+    "resolution": "1280 x 720",
+    "title": "Sons of Anarchy",
+    "season": 3
+  },
+  {
+    "filetype": "mkv",
+    "resolution": "1080p",
+    "codec": "x264",
+    "episodeName": "Cat Dealers",
+    "quality": "WEB-DL",
+    "year": 2022,
+    "audio": "AAC2.0",
+    "title": "Lollapalooza"
   }
 ]

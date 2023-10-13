@@ -24,7 +24,7 @@ season_range_pattern = (
     + delimiters
     + "*(?:s(?:easons?)?)"
     + delimiters
-    + "*(?:s?[0-9]{1,2}[\s]*(?:(?:\-|(?:\s*to\s*))[\s]*s?[0-9]{1,2})+)(?:"
+    + "*(?:s?[0-9]{1,2}[\s]*(?:(?:\-|(?:\s*to\s*))[\s]*s?[0-9]{1,2}))(?:"
     + delimiters
     + "*Complete)?"
 )
@@ -132,8 +132,8 @@ patterns["day"] = "(?:{year}){d}(?:{month}){d}({day})".format(
 )
 patterns["resolution"] = [
     ("([0-9]{3,4}(?:p|i))", None, "lower"),
-    ("(1280x720p?)", "720p"),
-    ("FHD|1920x1080p?", "1080p"),
+    ("(1280{d}?x{d}?720p?)".format(d=delimiters), "720p"),
+    ("FHD|1920{d}?x{d}?1080p?".format(d=delimiters), "1080p"),
     ("4K|3840x2160p?", "2160p"),
     ("UHD", "UHD"),
     ("HD", "HD"),
@@ -261,7 +261,10 @@ patterns["hardcoded"] = "HC"
 patterns["proper"] = "PROPER"
 patterns["repack"] = "REPACK"
 patterns["fps"] = "([1-9][0-9]{1,2})" + delimiters + "*fps"
-patterns["filetype"] = [(r"\.?(MKV|AVI|(?:SRT|SUB|SSA)$)", None, "upper"), ("MP-?4", "MP4")]
+patterns["filetype"] = [
+    (r"\.?(MKV|AVI|(?:SRT|SUB|SSA)$)", None, "upper"),
+    ("MP-?4", "MP4"),
+]
 patterns["widescreen"] = "WS"
 patterns["site"] = r"^(\[ ?([^\]]+?) ?\])"
 
