@@ -479,7 +479,10 @@
   },
   {
     "episode": 20,
-    "language": ["rus","eng"],
+    "language": [
+      "rus",
+      "eng"
+    ],
     "resolution": "720p",
     "season": 2,
     "title": "Community"
@@ -596,7 +599,11 @@
     "codec": "x265",
     "quality": "BluRay",
     "resolution": "1080p",
-    "season": [1,2,3],
+    "season": [
+      1,
+      2,
+      3
+    ],
     "subtitles": "DKsubs",
     "title": "The X-Files"
   },
@@ -605,7 +612,17 @@
     "encoder": "GECKOS",
     "quality": "BluRay",
     "resolution": "1080p",
-    "season": [1,2,3,4,5,6,7,8,9],
+    "season": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
     "title": "The X-Files"
   },
   {
@@ -621,7 +638,10 @@
     "encoder": "ZhuixinFan",
     "episode": 7,
     "filetype": "mp4",
-    "language": ["Chi","Jap"],
+    "language": [
+      "Chi",
+      "Jap"
+    ],
     "quality": "HDTVrip",
     "resolution": "1280X720",
     "title": "Boku Unmei no Hito desu"
@@ -745,7 +765,11 @@
     "language": "English",
     "quality": "HDRip",
     "resolution": "720p",
-    "subtitles": ["Hindi","Eng","Multi"],
+    "subtitles": [
+      "Hindi",
+      "Eng",
+      "Multi"
+    ],
     "title": "Joker",
     "year": 2019
   },
@@ -756,16 +780,36 @@
     "language": "Mandarin",
     "quality": "HDRip",
     "resolution": "1080p",
-    "subtitles": ["CHS","ENG"],
+    "subtitles": [
+      "CHS",
+      "ENG"
+    ],
     "title": "IP Man And Four Kings",
     "year": 2019
   },
   {
-    "season": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+    "season": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
     "title": "American Dad!"
   },
   {
-    "language": ["ITA","ENG"],
+    "language": [
+      "ITA",
+      "ENG"
+    ],
     "quality": "DVDrip",
     "season": 1,
     "title": "The Simpsons"
@@ -773,7 +817,36 @@
   {
     "quality": "DVDRip",
     "resolution": "1080p",
-    "season": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28],
+    "season": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
     "title": "The Simpsons"
   },
   {
@@ -818,7 +891,12 @@
     "codec": "X264",
     "quality": "HDTV",
     "resolution": "720p",
-    "season": [1,2,3,4],
+    "season": [
+      1,
+      2,
+      3,
+      4
+    ],
     "title": "Homeland"
   },
   {
@@ -860,8 +938,14 @@
   {
     "audio": "DD5.1",
     "codec": "H264",
-    "episode": [5,6],
-    "language": ["ITA","ENG"],
+    "episode": [
+      5,
+      6
+    ],
+    "language": [
+      "ITA",
+      "ENG"
+    ],
     "network": "AMZN",
     "quality": "WEB-DLMux",
     "resolution": "1080p",
@@ -875,7 +959,18 @@
     "network": "AMZN",
     "quality": "WEB-DL",
     "resolution": "576p",
-    "season": [1,2,3,4,5,6,7,8,9,10],
+    "season": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
     "title": "Are You Being Served",
     "year": 1972
   },
@@ -934,7 +1029,10 @@
   {
     "codec": "h264",
     "encoder": "FaiLED",
-    "episode": [1,2],
+    "episode": [
+      1,
+      2
+    ],
     "quality": "WEB",
     "resolution": "720p",
     "season": 3,
@@ -952,15 +1050,24 @@
   {
     "audio": "Ac3",
     "codec": "XviD",
-    "language": ["Italian","English"],
+    "language": [
+      "Italian",
+      "English"
+    ],
     "season": 1,
-    "subtitles": ["ita","eng"],
+    "subtitles": [
+      "ita",
+      "eng"
+    ],
     "title": "Z Nation",
     "year": 2014
   },
   {
     "audio": "AC3",
-    "language": ["ITA","ENG"],
+    "language": [
+      "ITA",
+      "ENG"
+    ],
     "quality": "BluRay Rip",
     "resolution": "1080p",
     "subtitles": "SUBS",
@@ -1005,7 +1112,10 @@
     "codec": "H264",
     "encoder": "BONE",
     "quality": "DVDRip",
-    "season": [1,2],
+    "season": [
+      1,
+      2
+    ],
     "title": "The Thin Blue Line",
     "year": 1995
   },
@@ -1069,9 +1179,15 @@
     "audio": "Ac3",
     "codec": "H264",
     "encoder": "MIRCrew",
-    "language": ["ita","eng"],
+    "language": [
+      "ita",
+      "eng"
+    ],
     "resolution": "720p",
-    "subtitles": ["ita","eng"],
+    "subtitles": [
+      "ita",
+      "eng"
+    ],
     "title": "The Big Bus - Il fantabus",
     "year": 1976
   },
@@ -1079,10 +1195,16 @@
     "audio": "AC3 5.1",
     "codec": "H264",
     "encoder": "MIRCrew",
-    "language": ["Ita","Eng"],
+    "language": [
+      "Ita",
+      "Eng"
+    ],
     "quality": "BluRay",
     "resolution": "1080p",
-    "subtitles": ["Ita","Eng"],
+    "subtitles": [
+      "Ita",
+      "Eng"
+    ],
     "title": "The Hunt",
     "year": 2020
   },
@@ -1116,9 +1238,15 @@
     "audio": "Ac3-5.1",
     "codec": "H264",
     "encoder": "MIRCrew",
-    "language": ["ita","eng"],
+    "language": [
+      "ita",
+      "eng"
+    ],
     "resolution": "720p",
-    "subtitles": ["ita","eng"],
+    "subtitles": [
+      "ita",
+      "eng"
+    ],
     "title": "Diabolique",
     "year": 1996
   },
@@ -1145,7 +1273,10 @@
   {
     "codec": "H264",
     "directorsCut": true,
-    "language": ["ita","fre"],
+    "language": [
+      "ita",
+      "fre"
+    ],
     "resolution": "720p",
     "subtitles": "Eng",
     "title": "37°2 le matin - Betty Blue",
@@ -1453,7 +1584,11 @@
   {
     "codec": "x264",
     "encoder": "TamilMV",
-    "language": ["Tamil","Telugu","Hindi"],
+    "language": [
+      "Tamil",
+      "Telugu",
+      "Hindi"
+    ],
     "proper": true,
     "quality": "HDRip",
     "size": "750MB",
@@ -1464,7 +1599,10 @@
   {
     "codec": "x264",
     "encoder": "TamilMV",
-    "language": ["Telugu","Tamil"],
+    "language": [
+      "Telugu",
+      "Tamil"
+    ],
     "quality": "BR-Rip",
     "size": "450MB",
     "subtitles": "ESub",
@@ -1474,7 +1612,11 @@
   {
     "audio": "DD5.1",
     "encoder": "TamilMV",
-    "language": ["Telugu","Tamil","Hindi"],
+    "language": [
+      "Telugu",
+      "Tamil",
+      "Hindi"
+    ],
     "quality": "BluRay",
     "resolution": "720p",
     "size": "1.6GB",
@@ -1523,7 +1665,11 @@
     "audio": "DD 5.1",
     "codec": "x264",
     "encoder": "MAZE",
-    "language": ["Tam","Tel","Mal"],
+    "language": [
+      "Tam",
+      "Tel",
+      "Mal"
+    ],
     "quality": "HDRip",
     "resolution": "720p",
     "size": "2GB",
@@ -1577,7 +1723,10 @@
     "episode": 13,
     "episodeName": "Il mio amico Grodd",
     "filetype": "mkv",
-    "language": ["ITA","ENG"],
+    "language": [
+      "ITA",
+      "ENG"
+    ],
     "network": "AMZN",
     "quality": "WEB-DLMux",
     "repack": true,
@@ -1723,7 +1872,18 @@
   {
     "audio": "AAC",
     "codec": "x264",
-    "episode": [1,2,3,4,5,6,7,8,9,10],
+    "episode": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
     "language": "Hindi",
     "quality": "WebRip",
     "resolution": "720p",
@@ -1847,7 +2007,10 @@
     "episode": 3,
     "episodeName": "Comunisti alieni dal futuro",
     "filetype": "mkv",
-    "language": ["ITA","ENG"],
+    "language": [
+      "ITA",
+      "ENG"
+    ],
     "network": "AMZN",
     "quality": "WEB-DLMux",
     "resolution": "1080p",
@@ -2099,7 +2262,10 @@
     "title": "Mystery Diners"
   },
   {
-    "language": ["Hindi","Spanish"],
+    "language": [
+      "Hindi",
+      "Spanish"
+    ],
     "quality": "HDRip",
     "resolution": "720p",
     "size": "800MB",
@@ -2119,7 +2285,10 @@
   {
     "audio": "DD - 2.0",
     "codec": "x264",
-    "language": ["Hindi","English"],
+    "language": [
+      "Hindi",
+      "English"
+    ],
     "quality": "Bluray",
     "resolution": "720p",
     "site": "BonsaiHD",
@@ -2141,7 +2310,10 @@
   {
     "audio": "Ac3 5.1",
     "codec": "H264",
-    "language": ["ITA","ENG"],
+    "language": [
+      "ITA",
+      "ENG"
+    ],
     "quality": "WEBRip",
     "resolution": "1080p",
     "site": "ArMor",
@@ -2151,7 +2323,10 @@
   {
     "encoder": "iDN",
     "filetype": "mkv",
-    "language": ["ITA","ENG"],
+    "language": [
+      "ITA",
+      "ENG"
+    ],
     "quality": "Bluray",
     "resolution": "1080p",
     "title": "Darlin",
@@ -2170,7 +2345,10 @@
   {
     "audio": "Ac3 5.1",
     "codec": "H264",
-    "language": ["ITA","DAN"],
+    "language": [
+      "ITA",
+      "DAN"
+    ],
     "quality": "BDRip",
     "resolution": "1080p",
     "site": "ArMor",
@@ -2209,7 +2387,10 @@
   {
     "audio": "AAC 5.1",
     "codec": "x264",
-    "language": ["Hindi","English"],
+    "language": [
+      "Hindi",
+      "English"
+    ],
     "quality": "BluRay",
     "resolution": "720p",
     "subtitles": "MSubs",
@@ -2230,7 +2411,11 @@
   },
   {
     "encoder": "TamilMV",
-    "language": ["Tamil","Hindi","Spanish"],
+    "language": [
+      "Tamil",
+      "Hindi",
+      "Spanish"
+    ],
     "quality": "BluRay",
     "resolution": "720p",
     "size": "950MB",
@@ -2250,7 +2435,10 @@
     "codec": "H264",
     "filetype": "mp4",
     "genre": "Drama",
-    "language": ["Eng","Rus"],
+    "language": [
+      "Eng",
+      "Rus"
+    ],
     "resolution": "720p",
     "subtitles": "Multi",
     "title": "The Deep Blue Sea",
@@ -2320,7 +2508,10 @@
     "audio": "AAC 5.1",
     "codec": "H265",
     "encoder": "CalicoSkies",
-    "language": ["EN","JP"],
+    "language": [
+      "EN",
+      "JP"
+    ],
     "resolution": "4K",
     "title": "L.A. Story",
     "upscaled": true,
@@ -2384,7 +2575,10 @@
     "encoder": "Judas",
     "quality": "BD",
     "resolution": "1080p",
-    "season": [1,2],
+    "season": [
+      1,
+      2
+    ],
     "site": "TGx",
     "subtitles": "Eng",
     "title": "Black Lagoon"
@@ -2420,7 +2614,11 @@
     "audio": "AAC",
     "codec": "x264",
     "encoder": "CineVood",
-    "language": ["Hindi","Tamil","Bengali"],
+    "language": [
+      "Hindi",
+      "Tamil",
+      "Bengali"
+    ],
     "network": "AMZN",
     "quality": "WEB-DL",
     "resolution": "720p",
@@ -2457,10 +2655,16 @@
     "audio": "AC3 5.1",
     "codec": "H264",
     "encoder": "MIRCrew",
-    "language": ["Ita","Fre"],
+    "language": [
+      "Ita",
+      "Fre"
+    ],
     "quality": "BluRay",
     "resolution": "1080p",
-    "subtitles": ["Ita","Eng"],
+    "subtitles": [
+      "Ita",
+      "Eng"
+    ],
     "title": "Doppia Pelle - Le Daim",
     "year": 2019
   },
@@ -2468,10 +2672,16 @@
     "audio": "DTS HD Masters 5.1",
     "codec": "H264",
     "encoder": "SnakeSPL",
-    "language": ["Ita","Eng"],
+    "language": [
+      "Ita",
+      "Eng"
+    ],
     "resolution": "720p",
     "site": "MIRCrew",
-    "subtitles": ["Ita","Eng"],
+    "subtitles": [
+      "Ita",
+      "Eng"
+    ],
     "title": "The Twilight Saga: Breaking Down - Parte 2",
     "year": 2012
   },
@@ -2507,10 +2717,16 @@
     "audio": "AC3 5.1",
     "codec": "H265",
     "encoder": "Sp33dy94",
-    "language": ["ITA","ENG"],
+    "language": [
+      "ITA",
+      "ENG"
+    ],
     "resolution": "1080p",
     "site": "MIRCrew",
-    "subtitles": ["NUita","eng"],
+    "subtitles": [
+      "NUita",
+      "eng"
+    ],
     "title": "Just Mercy - Il diritto di opporsi",
     "year": 2019
   },
@@ -2576,7 +2792,10 @@
   {
     "audio": "Ac3 5.1",
     "codec": "H264",
-    "language": ["ITA","SPA"],
+    "language": [
+      "ITA",
+      "SPA"
+    ],
     "quality": "WEBRip",
     "resolution": "1080p",
     "site": "ArMor",
@@ -2586,7 +2805,10 @@
   {
     "audio": "Ac3 2.0",
     "codec": "H264",
-    "language": ["ITA","ENG"],
+    "language": [
+      "ITA",
+      "ENG"
+    ],
     "quality": "BDRip",
     "resolution": "1080p",
     "site": "ArMor",
@@ -2596,7 +2818,10 @@
   {
     "audio": "Ac3 2.0",
     "codec": "H264",
-    "language": ["ITA","ENG"],
+    "language": [
+      "ITA",
+      "ENG"
+    ],
     "quality": "BDRip",
     "resolution": "1080p",
     "site": "ArMor",
@@ -2605,7 +2830,12 @@
   },
   {
     "encoder": "TamilMV",
-    "language": ["Telugu","Tamil","Hindi","Chi"],
+    "language": [
+      "Telugu",
+      "Tamil",
+      "Hindi",
+      "Chi"
+    ],
     "quality": "BluRay",
     "resolution": "720p",
     "size": "1.1GB",
@@ -2638,7 +2868,10 @@
   {
     "audio": "DD- 5.1",
     "codec": "x265",
-    "language": ["English","spanish"],
+    "language": [
+      "English",
+      "spanish"
+    ],
     "network": "NF",
     "quality": "WEB-DL",
     "resolution": "720p",
@@ -2660,7 +2893,10 @@
     "audio": "DD 5.1",
     "codec": "x264",
     "encoder": "MAZE",
-    "language": ["English","Hindi"],
+    "language": [
+      "English",
+      "Hindi"
+    ],
     "quality": "HDRip",
     "resolution": "720p",
     "size": "2GB",
@@ -2875,7 +3111,10 @@
     "encoder": "Morpheus",
     "episode": 1,
     "filetype": "mkv",
-    "language": ["ITA","ENG"],
+    "language": [
+      "ITA",
+      "ENG"
+    ],
     "quality": "AHDTVMux",
     "resolution": "1080p",
     "season": 1,
@@ -2887,7 +3126,10 @@
     "episode": 9,
     "episodeName": "Canale 4",
     "filetype": "mkv",
-    "language": ["ITA","ENG"],
+    "language": [
+      "ITA",
+      "ENG"
+    ],
     "quality": "Bluray",
     "resolution": "1080p",
     "season": 5,
@@ -2915,7 +3157,10 @@
   {
     "audio": "Dual Audios",
     "internationalCut": true,
-    "language": ["HIN","MARATHI"],
+    "language": [
+      "HIN",
+      "MARATHI"
+    ],
     "quality": "WEB Rip",
     "resolution": "720p",
     "title": "Nude",
@@ -2932,7 +3177,10 @@
     "year": 2006
   },
   {
-    "genre": ["Comedy","West"],
+    "genre": [
+      "Comedy",
+      "West"
+    ],
     "resolution": "720p",
     "title": "The Kissing Bandit",
     "year": 1948
@@ -2958,7 +3206,10 @@
     "year": 2019
   },
   {
-    "genre": ["Action","Western"],
+    "genre": [
+      "Action",
+      "Western"
+    ],
     "title": "Sugarfoot",
     "year": 1951
   },
@@ -2991,7 +3242,12 @@
     "audio": "Ac3 5.1",
     "codec": "H264",
     "encoder": "SnakeSPL",
-    "language": ["Ita","Eng","Deu","Esp"],
+    "language": [
+      "Ita",
+      "Eng",
+      "Deu",
+      "Esp"
+    ],
     "quality": "DVDRip",
     "site": "MIRCrew",
     "subtitles": "Multisub",
@@ -3023,7 +3279,10 @@
     "audio": "DD5.1",
     "codec": "x264",
     "encoder": "NTb",
-    "episode": [23,24],
+    "episode": [
+      23,
+      24
+    ],
     "filetype": "mkv",
     "quality": "BluRay",
     "resolution": "720p",
@@ -3361,7 +3620,11 @@
     "quality": "Blu-Ray",
     "remux": true,
     "resolution": "1080p",
-    "season": [1,2,3],
+    "season": [
+      1,
+      2,
+      3
+    ],
     "title": "Attack on Titan"
   },
   {
@@ -3374,7 +3637,10 @@
     "quality": "BD",
     "remux": true,
     "resolution": "1080p",
-    "season": [1,2],
+    "season": [
+      1,
+      2
+    ],
     "site": "npz",
     "title": "Hero Mask"
   },
@@ -3383,7 +3649,10 @@
     "codec": "x264",
     "quality": "BDrip",
     "resolution": "1920x1080",
-    "season": [1,2],
+    "season": [
+      1,
+      2
+    ],
     "site": "CBT",
     "title": "Nisekoi"
   },
@@ -3438,7 +3707,14 @@
     "codec": "x264",
     "filetype": "Mp4",
     "resolution": "1080p",
-    "season": [1,2,3,4,5,6],
+    "season": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
     "title": "Justified"
   },
   {
@@ -3506,5 +3782,64 @@
     "year": 2022,
     "audio": "AAC2.0",
     "title": "Lollapalooza"
+  },
+  {
+    "season": 1,
+    "resolution": "720p",
+    "quality": "BluRay",
+    "codec": "x265",
+    "site": "Crazy4TV.com",
+    "title": "Dark Matter"
+  },
+  {
+    "year": 2021,
+    "resolution": "1080p",
+    "quality": "WEB",
+    "codec": "H264",
+    "site": "www.Torrenting.com",
+    "language": "FRENCH",
+    "title": "Presque."
+  },
+  {
+    "year": 2023,
+    "resolution": "720p",
+    "quality": "HDRip",
+    "codec": "x265",
+    "audio": "DDP5.1",
+    "filetype": "mkv",
+    "site": "www.1TamilBlasters.sbs",
+    "language": "Tamil",
+    "subtitles": "ESub",
+    "sbs": "sbs",
+    "size": "900MB",
+    "title": "Lucky Man"
+  },
+  {
+    "season": 1,
+    "episode": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "year": 2023,
+    "quality": "HDRip",
+    "codec": "x264",
+    "audio": "AAC",
+    "site": "www.1TamilBlasters.art",
+    "language": [
+      "Tam",
+      "Mal",
+      "Tel",
+      "Kan"
+    ],
+    "subtitles": "ESub",
+    "size": "1.2GB",
+    "title": "Sultan of Delhi"
   }
 ]
