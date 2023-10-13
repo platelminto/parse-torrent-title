@@ -266,7 +266,7 @@ patterns["filetype"] = [
     ("MP-?4", "MP4"),
 ]
 patterns["widescreen"] = "WS"
-patterns["site"] = r"^(\[ ?([^\]]+?) ?\])"
+patterns["site"] = [r"^(\[ ?([^\]]+?) ?\])", r"^((?:www\.)?[\w-]+\.[\w]+)\s-"]
 
 lang_list_pattern = (
     r"\b(?:"
