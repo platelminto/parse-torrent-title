@@ -87,15 +87,15 @@ patterns_ordered = [
 
 patterns = {}
 patterns["episode"] = [
-    "(?<![a-z])(?:e|ep)(?:[0-9]{1,2}(?:-?(?:e|ep)?(?:[0-9]{1,2}))?)(?![0-9])",
+    r"(?<![a-z])(?:e|ep)(?:\(?[0-9]{1,2}(?:-?(?:e|ep)?(?:[0-9]{1,2}))?\)?)(?![0-9])",
     # Very specific as it could match too liberally
-    "\s\-\s\d{1,3}\s",
+    r"\s\-\s\d{1,3}\s",
     r"\b[0-9]{1,2}x([0-9]{2})\b",
     r"\bepisod(?:e|io)" + delimiters + r"\d{1,2}\b",
 ]
 # If adding season patterns, remember to look at episode, as it uses the last few!
 patterns["season"] = [
-    "\ss?(\d{1,2})\s\-\s\d{1,2}\s",  # Avoids matching some anime releases season and episode as a season range
+    r"\ss?(\d{1,2})\s\-\s\d{1,2}\s",  # Avoids matching some anime releases season and episode as a season range
     r"\b" + season_range_pattern + r"\b",  # Describes season ranges
     r"(?:s\d{1,2}[.+\s]*){2,}\b",  # for S01.S02.etc. patterns
     # Describes season, optionally with complete or episode
@@ -130,6 +130,7 @@ patterns["resolution"] = [
     ("([0-9]{3,4}(?:p|i))", None, "lower"),
     ("(1280{d}?x{d}?720p?)".format(d=delimiters), "720p"),
     ("FHD|1920{d}?x{d}?1080p?".format(d=delimiters), "1080p"),
+    ("3840x2160p?", "2160p"),
     ("UHD", "UHD"),
     ("HD", "HD"),
     ("4K", "4K"),
@@ -260,7 +261,7 @@ patterns["filetype"] = [
     ("MP-?4", "MP4"),
 ]
 patterns["widescreen"] = "WS"
-patterns["site"] = r"^(\[ ?([^\]]+?) ?\])"
+patterns["site"] = [r"^(\[ ?([^\]]+?)\s?\])", r"^((?:www\.)?[\w-]+\.[\w]{2,4})\s-\s?"]
 
 lang_list_pattern = (
     r"\b(?:"
