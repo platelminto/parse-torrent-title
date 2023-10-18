@@ -330,10 +330,7 @@
     "title": "Sons of Anarchy"
   },
   {
-    "language": [
-      "Russian",
-      "English"
-    ],
+    "language": ["Russian","English"],
     "title": "Community"
   },
   {
@@ -430,10 +427,7 @@
   },
   {
     "filetype": "MP4",
-    "language": [
-      "Chinese",
-      "Japanese"
-    ],
+    "language": ["Chinese","Japanese"],
     "quality": "HDTV",
     "resolution": "720p",
     "title": "Boku Unmei no Hito desu"
@@ -525,10 +519,7 @@
     "codec": "H.264",
     "language": "English",
     "quality": "WEB-DL",
-    "subtitles": [
-      "Hindi",
-      "English"
-    ],
+    "subtitles": ["Hindi","English"],
     "title": "Joker"
   },
   {
@@ -536,20 +527,14 @@
     "codec": "H.264",
     "language": "Mandarin",
     "quality": "WEB-DL",
-    "subtitles": [
-      "Chinese",
-      "English"
-    ],
+    "subtitles": ["Chinese","English"],
     "title": "IP Man And Four Kings"
   },
   {
     "title": "American Dad!"
   },
   {
-    "language": [
-      "Italian",
-      "English"
-    ],
+    "language": ["Italian","English"],
     "quality": "DVD-Rip",
     "title": "The Simpsons"
   },
@@ -611,10 +596,7 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "language": [
-      "Italian",
-      "English"
-    ],
+    "language": ["Italian","English"],
     "network": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "The Blacklist"
@@ -673,22 +655,13 @@
   {
     "audio": "Dolby Digital",
     "codec": "Xvid",
-    "language": [
-      "Italian",
-      "English"
-    ],
-    "subtitles": [
-      "Italian",
-      "English"
-    ],
+    "language": ["Italian","English"],
+    "subtitles": ["Italian","English"],
     "title": "Z Nation"
   },
   {
     "audio": "Dolby Digital",
-    "language": [
-      "Italian",
-      "English"
-    ],
+    "language": ["Italian","English"],
     "quality": "BDRip",
     "subtitles": "Available",
     "title": "1917"
@@ -754,28 +727,16 @@
   {
     "audio": "Dolby Digital",
     "codec": "H.264",
-    "language": [
-      "Italian",
-      "English"
-    ],
-    "subtitles": [
-      "Italian",
-      "English"
-    ],
+    "language": ["Italian","English"],
+    "subtitles": ["Italian","English"],
     "title": "The Big Bus - Il fantabus"
   },
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "language": [
-      "Italian",
-      "English"
-    ],
+    "language": ["Italian","English"],
     "quality": "Blu-ray",
-    "subtitles": [
-      "Italian",
-      "English"
-    ],
+    "subtitles": ["Italian","English"],
     "title": "The Hunt"
   },
   {
@@ -796,14 +757,8 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "language": [
-      "Italian",
-      "English"
-    ],
-    "subtitles": [
-      "Italian",
-      "English"
-    ],
+    "language": ["Italian","English"],
+    "subtitles": ["Italian","English"],
     "title": "Diabolique"
   },
   {
@@ -819,10 +774,7 @@
   },
   {
     "codec": "H.264",
-    "language": [
-      "Italian",
-      "French"
-    ],
+    "language": ["Italian","French"],
     "subtitles": "English",
     "title": "37°2 le matin - Betty Blue"
   },
@@ -1020,11 +972,7 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "language": [
-      "Tamil",
-      "Telugu",
-      "Malayalam"
-    ],
+    "language": ["Tamil","Telugu","Malayalam"],
     "quality": "WEB-DL",
     "subtitles": "Available",
     "title": "Penguin"
@@ -1054,10 +1002,7 @@
   },
   {
     "filetype": "MKV",
-    "language": [
-      "Italian",
-      "English"
-    ],
+    "language": ["Italian","English"],
     "network": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "The Flash"
@@ -1184,10 +1129,7 @@
   {
     "audio": "Dolby Digital 5.1",
     "filetype": "MKV",
-    "language": [
-      "Italian",
-      "English"
-    ],
+    "language": ["Italian","English"],
     "network": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "Marvel's Agents of S.H.I.E.L.D."
@@ -1340,18 +1282,12 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "language": [
-      "Italian",
-      "English"
-    ],
+    "language": ["Italian","English"],
     "title": "Wasp Network"
   },
   {
     "filetype": "MKV",
-    "language": [
-      "Italian",
-      "English"
-    ],
+    "language": ["Italian","English"],
     "quality": "Blu-ray",
     "title": "Darlin"
   },
@@ -1364,10 +1300,7 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "language": [
-      "Italian",
-      "Danish"
-    ],
+    "language": ["Italian","Danish"],
     "title": "Infection-What We Become"
   },
   {
@@ -1410,10 +1343,7 @@
   {
     "codec": "H.264",
     "filetype": "MP4",
-    "language": [
-      "English",
-      "Russian"
-    ],
+    "language": ["English","Russian"],
     "subtitles": "Available",
     "title": "The Deep Blue Sea"
   },
@@ -1454,10 +1384,7 @@
   },
   {
     "codec": "H.265",
-    "language": [
-      "English",
-      "Japanese"
-    ],
+    "language": ["English","Japanese"],
     "title": "L.A. Story"
   },
   {
@@ -1523,28 +1450,16 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "language": [
-      "Italian",
-      "French"
-    ],
+    "language": ["Italian","French"],
     "quality": "Blu-ray",
-    "subtitles": [
-      "Italian",
-      "English"
-    ],
+    "subtitles": ["Italian","English"],
     "title": "Doppia Pelle - Le Daim"
   },
   {
     "audio": "DTS-HD MA 5.1",
     "codec": "H.264",
-    "language": [
-      "Italian",
-      "English"
-    ],
-    "subtitles": [
-      "Italian",
-      "English"
-    ],
+    "language": ["Italian","English"],
+    "subtitles": ["Italian","English"],
     "title": "The Twilight Saga: Breaking Down - Parte 2"
   },
   {
@@ -1569,14 +1484,8 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.265",
-    "language": [
-      "Italian",
-      "English"
-    ],
-    "subtitles": [
-      "Italian",
-      "English"
-    ],
+    "language": ["Italian","English"],
+    "subtitles": ["Italian","English"],
     "title": "Just Mercy - Il diritto di opporsi"
   },
   {
@@ -1611,37 +1520,23 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "language": [
-      "Italian",
-      "Spanish"
-    ],
+    "language": ["Italian","Spanish"],
     "title": "Nessuno sa chi io sono qui-Nadie sabe que estoy aqui"
   },
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.264",
-    "language": [
-      "Italian",
-      "English"
-    ],
+    "language": ["Italian","English"],
     "title": "L.ultima corve"
   },
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.264",
-    "language": [
-      "Italian",
-      "English"
-    ],
+    "language": ["Italian","English"],
     "title": "La signora di Shanghai-The lady from Shanghai"
   },
   {
-    "language": [
-      "Telugu",
-      "Tamil",
-      "Hindi",
-      "Chinese"
-    ],
+    "language": ["Telugu","Tamil","Hindi","Chinese"],
     "quality": "Blu-ray",
     "subtitles": "English",
     "title": "The Four"
@@ -1662,10 +1557,7 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.265",
-    "language": [
-      "English",
-      "Spanish"
-    ],
+    "language": ["English","Spanish"],
     "network": "Netflix",
     "size": "950MB",
     "title": "Adu"
@@ -1794,20 +1686,14 @@
   {
     "codec": "H.264",
     "filetype": "MKV",
-    "language": [
-      "Italian",
-      "English"
-    ],
+    "language": ["Italian","English"],
     "quality": "AHDTV",
     "title": "Gangs Of London"
   },
   {
     "codec": "H.264",
     "filetype": "MKV",
-    "language": [
-      "Italian",
-      "English"
-    ],
+    "language": ["Italian","English"],
     "quality": "Blu-ray",
     "title": "Fear the Walking Dead"
   },
@@ -1821,10 +1707,7 @@
   },
   {
     "audio": "Dual",
-    "language": [
-      "Hindi",
-      "Marathi"
-    ],
+    "language": ["Hindi","Marathi"],
     "quality": "WEBRip",
     "title": "Nude"
   },
@@ -1834,10 +1717,7 @@
     "title": "X-men The Last Stand"
   },
   {
-    "genre": [
-      "Comedy",
-      "Western"
-    ],
+    "genre": ["Comedy","Western"],
     "title": "The Kissing Bandit"
   },
   {
@@ -1870,12 +1750,7 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "language": [
-      "Italian",
-      "English",
-      "German",
-      "Spanish"
-    ],
+    "language": ["Italian","English","German","Spanish"],
     "quality": "DVD-Rip",
     "subtitles": "Available",
     "title": "Professor Marston and the Wonder Women"
@@ -2153,19 +2028,19 @@
   },
   {
     "audio": "Dolby Digital Plus 2.0",
-    "filetype": "MKV",
-    "title": "What If...",
-    "codec": "H.264"
-  },
-  {
-    "title": "Eu gosto do Homem-Aranha... y dai",
     "codec": "H.264",
     "filetype": "MKV",
-    "audio": "AAC 2.0"
+    "title": "What If..."
   },
   {
-    "title": "tick tick...BOOM",
-    "filetype": "MP4"
+    "audio": "AAC 2.0",
+    "codec": "H.264",
+    "filetype": "MKV",
+    "title": "Eu gosto do Homem-Aranha... y dai"
+  },
+  {
+    "filetype": "MP4",
+    "title": "tick tick...BOOM"
   },
   {
     "codec": "H.264",
@@ -2173,54 +2048,76 @@
     "title": "Sons of Anarchy"
   },
   {
-    "filetype": "MKV",
-    "codec": "H.264",
     "audio": "AAC 2.0",
+    "codec": "H.264",
+    "filetype": "MKV",
     "title": "Lollapalooza"
   },
   {
-    "quality": "Blu-ray",
     "codec": "H.265",
+    "quality": "Blu-ray",
     "title": "Dark Matter"
   },
   {
-    "quality": "WEBRip",
     "codec": "H.264",
     "language": "French",
+    "quality": "WEBRip",
     "title": "Presque"
   },
   {
-    "quality": "WEB-DL",
-    "codec": "H.265",
     "audio": "Dolby Digital Plus 5.1",
+    "codec": "H.265",
     "filetype": "MKV",
-    "subtitles": "English",
+    "quality": "WEB-DL",
     "sbs": "SBS",
+    "subtitles": "English",
     "title": "Lucky Man"
   },
   {
-    "quality": "WEB-DL",
     "codec": "H.264",
-    "language": [
-      "Tamil",
-      "Malayalam",
-      "Telugu",
-      "Kannada"
-    ],
+    "language": ["Tamil","Malayalam","Telugu","Kannada"],
+    "quality": "WEB-DL",
     "subtitles": "English",
     "title": "Sultan of Delhi"
   },
   {
     "audio": "Custom",
-    "title": "Mission Impossible",
+    "filetype": "MKV",
     "language": "Polish",
-    "filetype": "MKV"
+    "title": "Mission Impossible"
   },
   {
-    "quality": "Blu-ay",
-    "title": "Black Rain",
     "audio": "DTS-ES 6.1",
+    "filetype": "MKV",
     "language": "Spanish",
-    "filetype": "MKV"
+    "quality": "Blu-ray",
+    "title": "Black Rain"
+  },
+  {
+    "audio": "Dolby Digital EX 5.1",
+    "codec": "H.264",
+    "filetype": "ISO",
+    "quality": "Blu-ray",
+    "title": "Bolt"
+  },
+  {
+    "audio": "DTS:X 7.1",
+    "codec": "H.265",
+    "filetype": "MKV",
+    "quality": "Blu-ray",
+    "title": "Casino"
+  },
+  {
+    "audio": "HE-AAC 2.0",
+    "codec": "H.264",
+    "filetype": "MKV",
+    "network": "Netflix",
+    "title": "Seinfeld"
+  },
+  {
+    "audio": "HE-AAC v2",
+    "filetype": "MKV",
+    "language": "Polish",
+    "title": "Escape Room Tournament of Champions"
   }
 ]

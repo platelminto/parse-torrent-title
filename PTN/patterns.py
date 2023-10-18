@@ -220,24 +220,31 @@ patterns["codec"] = [
     ("HEVC", "H.265"),
     ("[h]{d}?263".format(d=delimiters), "H.263"),
     ("VC-1", "VC-1"),
+    ("MPEG{d}?2".format(d=delimiters), "MPEG-2"),
 ]
 patterns["audio"] = get_channel_audio_options(
     [
         ("TrueHD", "Dolby TrueHD"),
         ("Atmos", "Dolby Atmos"),
-        ("DD-EX", "Dolby Digital EX"),
-        ("DD|AC-?3|DolbyD", "Dolby Digital"),
-        ("DDP|E-?AC-?3|EC-3", "Dolby Digital Plus"),
+        ("DD{d}?EX".format(d=delimiters), "Dolby Digital EX"),
+        ("DD|AC{d}?3|DolbyD".format(d=delimiters), "Dolby Digital"),
+        ("DDP|E{d}?AC{d}?3|EC{d}?3".format(d=delimiters), "Dolby Digital Plus"),
         (
             "DTS{d}?HD(?:{d}?(?:MA|Masters?(?:{d}Audio)?))".format(d=delimiters),
             "DTS-HD MA",
         ),
         ("DTSMA", "DTS-HD MA"),
         ("DTS{d}?HD".format(d=delimiters), "DTS-HD"),
+        ("DTS{d}?ES".format(d=delimiters), "DTS-ES"),
+        ("DTS{d}?EX".format(d=delimiters), "DTS-EX"),
+        ("DTS{d}?X".format(d=delimiters), "DTS:X"),
         ("DTS", "DTS"),
-        ("AAC[ \.\-]LC", "AAC-LC"),
+        ("HE{d}?AAC".format(d=delimiters), "HE-AAC"),
+        ("HE{d}?AACv2".format(d=delimiters), "HE-AAC v2"),
+        ("AAC{d}?LC".format(d=delimiters), "AAC-LC"),
         ("AAC", "AAC"),
         ("Dual{d}Audios?".format(d=delimiters), "Dual"),
+        ("Custom{d}Audios?".format(d=delimiters), "Custom"),
         ("FLAC", "FLAC"),
         ("OGG", "OGG"),
     ]
@@ -259,6 +266,7 @@ patterns["fps"] = "([1-9][0-9]{1,2})" + delimiters + "*fps"
 patterns["filetype"] = [
     (r"\.?(MKV|AVI|(?:SRT|SUB|SSA)$)", None, "upper"),
     ("MP-?4", "MP4"),
+    (r"\.?(iso)$", "ISO"),
 ]
 patterns["widescreen"] = "WS"
 patterns["site"] = [r"^(\[ ?([^\]]+?)\s?\])", r"^((?:www\.)?[\w-]+\.[\w]{2,4})\s-\s?"]

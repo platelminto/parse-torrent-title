@@ -83,7 +83,7 @@ patterns_ignore_title = {
 }
 
 
-channels = [(1, 0), (2, 0), (5, 1), (6, 1), (7, 1)]
+channels = [(1, 0), (2, 0), (5, 0), (5, 1), (6, 1), (7, 1)]
 
 
 # Return tuple with regexes for audio name with appended channel types, and without any channels
