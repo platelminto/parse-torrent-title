@@ -3386,7 +3386,7 @@
     "title": "Bee and Puppycat"
   },
   {
-    "audio": "DDP5.1",
+    "audio": "DDP5.0",
     "codec": "x264",
     "encoder": "NTb",
     "network": "PCOK",
@@ -3841,5 +3841,27 @@
     "subtitles": "ESub",
     "size": "1.2GB",
     "title": "Sultan of Delhi"
+  },
+  {
+    "year": 1996,
+    "audio": "Custom.Audio",
+    "encoder": "Spedboy",
+    "title": "Mission Impossible",
+    "resolution": "1080p",
+    "language": "PL",
+    "filetype": "mkv"
+  },
+  {
+    "year": 1989,
+    "quality": "BluRay",
+    "excess": "MULTi",
+    "codec": "MPEG-2",
+    "title": "Black Rain",
+    "audio": "DTS-ES.6.1",
+    "remux": true,
+    "resolution": "1080p",
+    "encoder": "LTS",
+    "language": "ES",
+    "filetype": "mkv"
   }
 ]
