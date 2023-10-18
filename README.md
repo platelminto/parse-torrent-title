@@ -215,7 +215,9 @@ $ python cli.py --coherent-types 'A freakishly cool movie or TV episode'
 
 ## Contributing
 
-Submit a PR on the `dev` branch, including tests for what gets newly matched (if applicable), having run the `pre-commit` hooks. Please provide input torrent names in `tests/files/input.json` and full output json objects (with `standardise=False`) in `tests/files/output_raw.json` (where the fields `encoder`, `excess`, `site`, and `episodeName` don't have to be included). Also add the standardised output to `tests/files/output_standard.json`, only including fields that are changed, along with `title`.
+Submit a PR on the `dev` branch, including tests for what gets newly matched (if applicable), having run the `pre-commit` hooks. Add the titles you want to add to the tests in `tests/test_generator`'s main method (in `add_titles()`), it will automatically add what's needed to `files/input.json`, `files/output_raw.json`, and `files/output_standard.json`. The fields `encoder`, `excess`, `site`, and `episodeName` don't always have to be correct - if they're giving you issues, or seem wrong, feel free to remove them from the output test files.
+
+(What it does: `add_titles()` adds input torrent names to `tests/files/input.json` and full output json objects (with `standardise=False`) to `tests/files/output_raw.json`. It also adds the standardised output to `tests/files/output_standard.json`, only including fields that are changed, along with `title`.)
 
 ## Additions to parse-torrent-name
 
