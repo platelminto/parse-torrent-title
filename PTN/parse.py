@@ -39,7 +39,14 @@ class PTN(object):
     def _clean_string(string):
         clean = re.sub(r"^( -|\(|\[)", "", string)
         if clean.find(" ") == -1 and clean.find(".") != -1:
-            clean = re.sub(r"\.", " ", clean)
+            # 4 dots likely means we want an ellipsis and a space
+            clean = re.sub(r"\.{4,}", "... ", clean)
+
+            # Replace any instances of less than 3 dots with a space
+            # Lookarounds are used to prevent the 3-dots (ellipses) from being replaced
+            clean = re.sub(r"(?<!\.)\.\.(?!\.)", " ", clean)
+            clean = re.sub(r"(?<!\.)\.(?!\.\.)", " ", clean)
+
         clean = re.sub(r"_", " ", clean)
         clean = re.sub(r"([\[)_\]]|- )$", "", clean).strip()
         clean = clean.strip(" _-")
@@ -219,7 +226,6 @@ class PTN(object):
 
     @staticmethod
     def split_multi(match):
-        # handle multi languages
         m = re.split(r"{}+".format(delimiters), match[0])
         clean = list(filter(None, m))
 

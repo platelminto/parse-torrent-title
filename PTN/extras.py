@@ -16,14 +16,14 @@ langs = [
     ("exyu", "ExYu"),
     ("chs|chi(?:nese)?", "Chinese"),
     ("hin(?:di)?", "Hindi"),
-    ("polish|poland", "Polish"),
+    ("polish|poland|pl", "Polish"),
     ("mandarin", "Mandarin"),
     ("kor(?:ean)?", "Korean"),
-    ("bengali|bangla", "Bengali"),
-    ("kannada", "Kannada"),
+    ("ben(?:gali)?|bangla", "Bengali"),
+    ("kan(?:nada)?", "Kannada"),
     ("tam(?:il)?", "Tamil"),
     ("tel(?:ugu)?", "Telugu"),
-    ("marathi", "Marathi"),
+    ("mar(?:athi)?", "Marathi"),
     ("mal(?:ayalam)?", "Malayalam"),
     ("japanese|ja?p", "Japanese"),
     ("interslavic", "Interslavic"),
@@ -51,7 +51,6 @@ genres = [
 # incorrect_parse match within a .parse() dict, removing the latter, and replacing
 # the former with actual_title.
 exceptions = [
-    {"parsed_title": "", "incorrect_parse": ("year", 1983), "actual_title": "1983"},
     {
         "parsed_title": "Marvel's Agents of S H I E L D",
         "incorrect_parse": ("title", "Marvel's Agents of S H I E L D"),
@@ -84,7 +83,7 @@ patterns_ignore_title = {
 }
 
 
-channels = [(1, 0), (2, 0), (5, 1), (6, 1), (7, 1)]
+channels = [(1, 0), (2, 0), (5, 0), (5, 1), (6, 1), (7, 1)]
 
 
 # Return tuple with regexes for audio name with appended channel types, and without any channels

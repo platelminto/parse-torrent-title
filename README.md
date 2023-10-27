@@ -3,7 +3,6 @@
 > Extract media information from torrent-like filename
 
 ![Python versions](https://img.shields.io/badge/Python-2.7%2C%203.5-brightgreen.svg?style=flat-square)
-[![Build Status](https://travis-ci.com/platelminto/parse-torrent-title.svg?branch=master)](https://travis-ci.com/platelminto/parse-torrent-title)
 
 Originally based off of [this JavaScript
 library](https://github.com/jzjzjzj/parse-torrent-name).
@@ -97,20 +96,45 @@ PTN.parse('Deadliest.Catch.S00E66.No.Safe.Passage.720p.AMZN.WEB-DL.DDP2.0.H.264-
 #     'website': 'TGx'
 # }
 
-PTN.parse('Z Nation (2014)S01-01-13 (2014) Full Season.XviD - Italian English.Ac3.Sub.ita.eng.MIRCrew')
+PTN.parse('Insecure.S04.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV')
 # {
-#     'website': 'MIRCrew',
-#     'title': 'Z Nation',
-#     'season': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-#     'codec': 'Xvid',
-#     'year':  2014,
-#     'audio': 'Dolby Digital',
-#     'language': ['Italian', 'English'],
-#     'subtitles': ['Italian', 'English']
+#     'title': 'Insecure'
+#     'encoder': 'GalaxyTV',
+#     'codec': 'H.264',
+#     'season': 4,
+#     'resolution': '720p',
+#     'network': 'Amazon Studios',
+#     'quality': 'WEBRip',
 # }
 ```
 
 More examples (inputs and outputs) can be found looking through `tests/files`.
+
+## CLI
+
+You can use PTN from your command line, where the output will be printed as JSON:
+
+```sh
+$ python cli.py 'Insecure.S04.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV'
+
+ {
+     'title': 'Insecure'
+     'encoder': 'GalaxyTV',
+     'codec': 'H.264',
+     'season': 4,
+     'resolution': '720p',
+     'network': 'Amazon Studios',
+     'quality': 'WEBRip',
+ }
+```
+
+For help, use the `-h` or `--help` flag:
+
+```sh
+$ python cli.py --help
+```
+
+This will provide a brief overview of the available options and their usage.
 
 ### Raw info
 
@@ -118,6 +142,12 @@ The matches in the torrent name are standardised into specific strings, accordin
 
 ```py
 PTN.parse('A freakishly cool movie or TV episode', standardise=False)
+```
+
+In the CLI, you can use the `--raw` flag:
+
+```sh
+$ python cli.py --raw 'A freakishly cool movie or TV episode'
 ```
 
 ### Types of parts
@@ -130,6 +160,12 @@ The types of parts can be strings, integers, booleans, or lists of the first 2. 
 To enable this flag:
 ```py
 PTN.parse('An even cooler movie or TV episode', coherent_types=True)
+```
+
+In the CLI, you can use the `--coherent-types` flag:
+
+```sh
+$ python cli.py --coherent-types 'A freakishly cool movie or TV episode'
 ```
 
 ### Parts extracted
@@ -179,7 +215,9 @@ PTN.parse('An even cooler movie or TV episode', coherent_types=True)
 
 ## Contributing
 
-Submit a PR on the `dev` branch, including tests for what gets newly matched (if applicable), having run the `pre-commit` hooks. Please provide input torrent names in `tests/files/input.json` and full output json objects (with `standardise=False`) in `tests/files/output_raw.json` (where the fields `encoder`, `excess`, `site`, and `episodeName` don't have to be included). Also add the standardised output to `tests/files/output_standard.json`, only including fields that are changed, along with `title`.
+Submit a PR on the `dev` branch, including tests for what gets newly matched (if applicable), having run the `pre-commit` hooks. Add the titles you want to add to the tests in `tests/test_generator`'s main method (in `add_titles()`), it will automatically add what's needed to `files/input.json`, `files/output_raw.json`, and `files/output_standard.json`. The fields `encoder`, `excess`, `site`, and `episodeName` don't always have to be correct - if they're giving you issues, or seem wrong, feel free to remove them from the output test files.
+
+(What it does: `add_titles()` adds input torrent names to `tests/files/input.json` and full output json objects (with `standardise=False`) to `tests/files/output_raw.json`. It also adds the standardised output to `tests/files/output_standard.json`, only including fields that are changed, along with `title`.)
 
 ## Additions to parse-torrent-name
 
@@ -190,6 +228,8 @@ Below are the additions that have been made to [/u/divijbindlish's original repo
 - Added standardisation of output strings.
 - Added multi-language support.
 - Added multi-episode support.
+- Added a basic CLI.
+- Added thread safety.
 - Improved support for anime tv releases.
 - Improved support for Indian releases.
 - Added various fields (see field list above).

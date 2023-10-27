@@ -953,7 +953,7 @@
     "audio": "Ac3",
     "codec": "XviD",
     "language": ["Italian","English"],
-    "season": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+    "season": 1,
     "subtitles": ["ita","eng"],
     "title": "Z Nation",
     "year": 2014
@@ -3127,7 +3127,7 @@
     "title": "Bee and Puppycat"
   },
   {
-    "audio": "DDP5.1",
+    "audio": "DDP5.0",
     "codec": "x264",
     "encoder": "NTb",
     "network": "PCOK",
@@ -3470,5 +3470,156 @@
   {
     "filetype": "mkv",
     "title": "The Best Offer"
+  },
+  {
+    "audio": "DDP2.0",
+    "codec": "H264",
+    "filetype": "mkv",
+    "quality": "WEB-DL",
+    "resolution": "1080p",
+    "title": "What If...",
+    "year": 2010
+  },
+  {
+    "audio": "AAC2.0",
+    "codec": "H264",
+    "filetype": "mkv",
+    "resolution": "1080p",
+    "title": "Eu gosto do Homem-Aranha... y dai"
+  },
+  {
+    "filetype": "mp4",
+    "title": "tick tick...BOOM"
+  },
+  {
+    "codec": "x264",
+    "resolution": "1280 x 720",
+    "season": 3,
+    "title": "Sons of Anarchy"
+  },
+  {
+    "audio": "AAC2.0",
+    "codec": "x264",
+    "episodeName": "Cat Dealers",
+    "filetype": "mkv",
+    "quality": "WEB-DL",
+    "resolution": "1080p",
+    "title": "Lollapalooza",
+    "year": 2022
+  },
+  {
+    "codec": "x265",
+    "quality": "BluRay",
+    "resolution": "720p",
+    "season": 1,
+    "site": "Crazy4TV.com",
+    "title": "Dark Matter"
+  },
+  {
+    "codec": "H264",
+    "language": "FRENCH",
+    "quality": "WEB",
+    "resolution": "1080p",
+    "site": "www.Torrenting.com",
+    "title": "Presque",
+    "year": 2021
+  },
+  {
+    "audio": "DDP5.1",
+    "codec": "x265",
+    "filetype": "mkv",
+    "language": "Tamil",
+    "quality": "HDRip",
+    "resolution": "720p",
+    "sbs": "sbs",
+    "site": "www.1TamilBlasters.sbs",
+    "size": "900MB",
+    "subtitles": "ESub",
+    "title": "Lucky Man",
+    "year": 2023
+  },
+  {
+    "audio": "AAC",
+    "codec": "x264",
+    "episode": [1,2,3,4,5,6,7,8,9],
+    "language": ["Tam","Mal","Tel","Kan"],
+    "quality": "HDRip",
+    "season": 1,
+    "site": "www.1TamilBlasters.art",
+    "size": "1.2GB",
+    "subtitles": "ESub",
+    "title": "Sultan of Delhi",
+    "year": 2023
+  },
+  {
+    "audio": "Custom.Audio",
+    "encoder": "Spedboy",
+    "filetype": "mkv",
+    "language": "PL",
+    "resolution": "1080p",
+    "title": "Mission Impossible",
+    "year": 1996
+  },
+  {
+    "audio": "DTS-ES.6.1",
+    "codec": "MPEG-2",
+    "encoder": "LTS",
+    "excess": "MULTi",
+    "filetype": "mkv",
+    "language": "ES",
+    "quality": "BluRay",
+    "remux": true,
+    "resolution": "1080p",
+    "title": "Black Rain",
+    "year": 1989
+  },
+  {
+    "3d": true,
+    "audio": "DD.EX.5.1",
+    "codec": "AVC",
+    "encoder": "SnOoP-UPR",
+    "excess": "MULTI",
+    "filetype": "iso",
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "Bolt",
+    "year": 2008
+  },
+  {
+    "audio": "DTS-X7.1",
+    "codec": "HEVC",
+    "encoder": "DENDA",
+    "excess": "MULTi",
+    "filetype": "mkv",
+    "hdr": true,
+    "quality": "Blu-ray",
+    "remux": true,
+    "resolution": "2160p",
+    "title": "Casino",
+    "year": 1995
+  },
+  {
+    "audio": "HE-AAC2.0",
+    "codec": "H264",
+    "encoder": "Ralf",
+    "episode": [23,24],
+    "episodeName": "The Pilot",
+    "filetype": "mkv",
+    "network": "NF",
+    "quality": "WEB-DL",
+    "resolution": "1080p",
+    "season": 4,
+    "title": "Seinfeld"
+  },
+  {
+    "audio": "HE-AACv2",
+    "codec": "AV1",
+    "extended": true,
+    "filetype": "mkv",
+    "language": "PL",
+    "quality": "BRRip",
+    "resolution": "1080p",
+    "title": "Escape Room Tournament of Champions",
+    "year": 2021
   }
 ]

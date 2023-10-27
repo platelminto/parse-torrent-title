@@ -24,7 +24,7 @@ season_range_pattern = (
     + delimiters
     + "*(?:s(?:easons?)?)"
     + delimiters
-    + "*(?:s?[0-9]{1,2}[\s]*(?:(?:\-|(?:\s*to\s*))[\s]*s?[0-9]{1,2})+)(?:"
+    + "*(?:s?[0-9]{1,2}[\s]*(?:(?:\-|(?:\s*to\s*))[\s]*s?[0-9]{1,2}))(?:"
     + delimiters
     + "*Complete)?"
 )
@@ -87,15 +87,15 @@ patterns_ordered = [
 
 patterns = {}
 patterns["episode"] = [
-    "(?<![a-z])(?:e|ep)(?:[0-9]{1,2}(?:-?(?:e|ep)?(?:[0-9]{1,2}))?)(?![0-9])",
+    r"(?<![a-z])(?:e|ep)(?:\(?[0-9]{1,2}(?:-?(?:e|ep)?(?:[0-9]{1,2}))?\)?)(?![0-9])",
     # Very specific as it could match too liberally
-    "\s\-\s\d{1,3}\s",
+    r"\s\-\s\d{1,3}\s",
     r"\b[0-9]{1,2}x([0-9]{2})\b",
     r"\bepisod(?:e|io)" + delimiters + r"\d{1,2}\b",
 ]
 # If adding season patterns, remember to look at episode, as it uses the last few!
 patterns["season"] = [
-    "\ss?(\d{1,2})\s\-\s\d{1,2}\s",  # Avoids matching some anime releases season and episode as a season range
+    r"\ss?(\d{1,2})\s\-\s\d{1,2}\s",  # Avoids matching some anime releases season and episode as a season range
     r"\b" + season_range_pattern + r"\b",  # Describes season ranges
     r"(?:s\d{1,2}[.+\s]*){2,}\b",  # for S01.S02.etc. patterns
     # Describes season, optionally with complete or episode
@@ -128,8 +128,9 @@ patterns["day"] = "(?:{year}){d}(?:{month}){d}({day})".format(
 )
 patterns["resolution"] = [
     ("([0-9]{3,4}(?:p|i))", None, "lower"),
-    ("(1280x720p?)", "720p"),
-    ("FHD|1920x1080p?", "1080p"),
+    ("(1280{d}?x{d}?720p?)".format(d=delimiters), "720p"),
+    ("FHD|1920{d}?x{d}?1080p?".format(d=delimiters), "1080p"),
+    ("3840x2160p?", "2160p"),
     ("UHD", "UHD"),
     ("HD", "HD"),
     ("4K", "4K"),
@@ -219,24 +220,31 @@ patterns["codec"] = [
     ("HEVC", "H.265"),
     ("[h]{d}?263".format(d=delimiters), "H.263"),
     ("VC-1", "VC-1"),
+    ("MPEG{d}?2".format(d=delimiters), "MPEG-2"),
 ]
 patterns["audio"] = get_channel_audio_options(
     [
         ("TrueHD", "Dolby TrueHD"),
         ("Atmos", "Dolby Atmos"),
-        ("DD-EX", "Dolby Digital EX"),
-        ("DD|AC-?3|DolbyD", "Dolby Digital"),
-        ("DDP|E-?AC-?3|EC-3", "Dolby Digital Plus"),
+        ("DD{d}?EX".format(d=delimiters), "Dolby Digital EX"),
+        ("DD|AC{d}?3|DolbyD".format(d=delimiters), "Dolby Digital"),
+        ("DDP|E{d}?AC{d}?3|EC{d}?3".format(d=delimiters), "Dolby Digital Plus"),
         (
             "DTS{d}?HD(?:{d}?(?:MA|Masters?(?:{d}Audio)?))".format(d=delimiters),
             "DTS-HD MA",
         ),
         ("DTSMA", "DTS-HD MA"),
         ("DTS{d}?HD".format(d=delimiters), "DTS-HD"),
+        ("DTS{d}?ES".format(d=delimiters), "DTS-ES"),
+        ("DTS{d}?EX".format(d=delimiters), "DTS-EX"),
+        ("DTS{d}?X".format(d=delimiters), "DTS:X"),
         ("DTS", "DTS"),
-        ("AAC[ \.\-]LC", "AAC-LC"),
+        ("HE{d}?AAC".format(d=delimiters), "HE-AAC"),
+        ("HE{d}?AACv2".format(d=delimiters), "HE-AAC v2"),
+        ("AAC{d}?LC".format(d=delimiters), "AAC-LC"),
         ("AAC", "AAC"),
         ("Dual{d}Audios?".format(d=delimiters), "Dual"),
+        ("Custom{d}Audios?".format(d=delimiters), "Custom"),
         ("FLAC", "FLAC"),
         ("OGG", "OGG"),
     ]
@@ -255,9 +263,13 @@ patterns["hardcoded"] = "HC"
 patterns["proper"] = "PROPER"
 patterns["repack"] = "REPACK"
 patterns["fps"] = "([1-9][0-9]{1,2})" + delimiters + "*fps"
-patterns["filetype"] = [(r"\.?(MKV|AVI|(?:SRT|SUB|SSA)$)", None, "upper"), ("MP-?4", "MP4")]
+patterns["filetype"] = [
+    (r"\.?(MKV|AVI|(?:SRT|SUB|SSA)$)", None, "upper"),
+    ("MP-?4", "MP4"),
+    (r"\.?(iso)$", "ISO"),
+]
 patterns["widescreen"] = "WS"
-patterns["site"] = r"^(\[ ?([^\]]+?) ?\])"
+patterns["site"] = [r"^(\[ ?([^\]]+?)\s?\])", r"^((?:www\.)?[\w-]+\.[\w]{2,4})\s-\s?"]
 
 lang_list_pattern = (
     r"\b(?:"
