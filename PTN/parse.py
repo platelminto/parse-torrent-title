@@ -328,16 +328,16 @@ class PTN(object):
                 self._part("title", None, "")
 
             raw = self.torrent_name[title_start:title_end]
-            # Something in square brackets with 3 chars or less is too weird to be right.
+            # Something in square brackets with 3 chars or fewer is too weird to be right.
             # If this seems too arbitrary, make it any square bracket, and Mother test
             # case will lose its translated title (which is mostly fine I think).
-            m = re.search("\(|(?:\[(?:.{,3}\]|[^\]]*\d[^\]]*\]?))", raw, flags=re.I)
+            m = re.search(r"\(|(?:\[(?:.{,3}\]|[^\]]*\d[^\]]*\]?))", raw, flags=re.I)
             if m:
                 relative_title_end = m.start()
                 raw = raw[:relative_title_end]
                 title_end = relative_title_end + title_start
             # Similar logic as above, but looking at beginning of string unmatched brackets.
-            m = re.search("^(?:\)|\[.*\])", raw)
+            m = re.search(r"^(?:\)|\[.*\])", raw)
             if m:
                 relative_title_start = m.end()
                 raw = raw[relative_title_start:]
@@ -367,6 +367,10 @@ class PTN(object):
             delimiters + r"*\Z", self.torrent_name[end:]
         ):
             unmatched.append((end, len(self.torrent_name)))
+
+        # If nothing matched, assume the whole thing is the title
+        if not self.match_slices:
+            unmatched.append((0, len(self.torrent_name)))
 
         return unmatched
 
