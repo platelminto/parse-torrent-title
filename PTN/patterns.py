@@ -110,6 +110,9 @@ patterns["season"] = [
     r"\b(?:Complete"
     + delimiters
     + r")?Season[\. -][0-9]{1,2}\b",  # Describes Season.15 type descriptions
+    # r"\b(?:Seasons?)"
+    # + delimiters
+    # + r"(\d{1,2})" + "(?:(?:" + delimiters + r"|&|and|to)(\d{1,2}))+\b"
 ]
 # The first 4 season regexes won't have 'Part' in them.
 patterns["episode"] += [

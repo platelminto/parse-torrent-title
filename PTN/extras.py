@@ -46,6 +46,12 @@ genres = [
     ("Thriller", "Thriller"),
 ]
 
+# Match strings like "complete series" for tv seasons/series, matching within the final title string.
+complete_series = [
+    r"(?:the\s)?complete\s(?:series|season|collection)$",
+    r"(?:the)\scomplete\s?(?:series|season|collection)?$",
+]
+
 # Some titles just can't be parsed without breaking everything else, so here
 # are known those known exceptions. They are executed when the parsed_title and
 # incorrect_parse match within a .parse() dict, removing the latter, and replacing
