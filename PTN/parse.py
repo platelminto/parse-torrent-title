@@ -232,8 +232,12 @@ class PTN(object):
         m = re.findall(r"[0-9]+", match[0])
         if m and len(m) > 1:
             clean = list(range(int(m[0]), int(m[-1]) + 1))
+        # This elif exists entirely for the Seasons 1, 2, 3, 4, etc. case. No other regex gives a number in match[1].
+        elif len(match) > 1 and match[1] and m:
+            clean = list(range(int(m[0]), int(match[1]) + 1))
         elif m:
             clean = int(m[0])
+
         return clean
 
     @staticmethod

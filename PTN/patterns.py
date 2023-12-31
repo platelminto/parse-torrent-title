@@ -102,6 +102,9 @@ patterns["episode"] = [
 ]
 # If adding season patterns, remember to look at episode, as it uses the last few!
 patterns["season"] = [
+    r"\b(?:Seasons?)"
+    + delimiters
+    + r"(\d{1,2})" + "(?:(?:" + delimiters + r"|&|and|to){1,3}(\d{1,2})){2,}\b",
     r"\ss?(\d{1,2})\s\-\s\d{1,2}\s",  # Avoids matching some anime releases season and episode as a season range
     r"\b" + season_range_pattern + r"\b",  # Describes season ranges
     r"(?:s\d{1,2}[.+\s]*){2,}\b",  # for S01.S02.etc. patterns
@@ -117,13 +120,10 @@ patterns["season"] = [
     r"\b(?:Complete"
     + delimiters
     + r")?Season[\. -][0-9]{1,2}\b",  # Describes Season.15 type descriptions
-    # r"\b(?:Seasons?)"
-    # + delimiters
-    # + r"(\d{1,2})" + "(?:(?:" + delimiters + r"|&|and|to)(\d{1,2}))+\b"
 ]
 # The first 4 season regexes won't have 'Part' in them.
 patterns["episode"] += [
-    link_patterns(patterns["season"][5:])
+    link_patterns(patterns["season"][6:])
     + delimiters
     + "*P(?:ar)?t"
     + delimiters
