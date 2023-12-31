@@ -40,7 +40,7 @@ episode_name_pattern = (
     + delimiters
     + "|$))+)"
 )
-pre_website_encoder_pattern = r"[^\s\.\[\]\-\(\)]+\)\s{0,2}\[[^\s\-]+\]|[^\s\.\[\]\-\(\)]+\s{0,2}(?:-\s)?[^\s\.\[\]\-]+$"
+pre_website_encoder_pattern = r"[^\s\.\[\]\-\(\)]+\)\s*\[[^\s\-]+\]|[^\s\.\[\]\-\(\)]+\s*(?:-\s)?[^\s\.\[\]\-]+$"
 
 # Forces an order to go by the regexes, as we want this to be deterministic (different
 # orders can generate different matchings). e.g. "doctor_who_2005..." in input.json
@@ -279,7 +279,7 @@ patterns["filetype"] = [
     (r"\.?(iso)$", "ISO"),
 ]
 patterns["widescreen"] = "WS"
-patterns["site"] = [r"^(\[ ?([^\]]+?)\s?\])", r"^((?:www\.)?[\w-]+\.[\w]{2,4})\s-\s?"]
+patterns["site"] = [r"^(\[ ?([^\]]+?)\s?\])", r"^((?:www\.)?[\w-]+\.[\w]{2,4})\s+-\s*"]
 
 lang_list_pattern = (
     r"\b(?:"
