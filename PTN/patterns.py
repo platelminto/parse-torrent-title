@@ -45,13 +45,13 @@ pre_website_encoder_pattern = r"[^\s\.\[\]\-\(\)]+\)\s{0,2}\[[^\s\-]+\]|[^\s\.\[
 # Forces an order to go by the regexes, as we want this to be deterministic (different
 # orders can generate different matchings). e.g. "doctor_who_2005..." in input.json
 patterns_ordered = [
+    "resolution",
+    "quality",
     "season",
     "episode",
     "year",
     "month",
     "day",
-    "resolution",
-    "quality",
     "codec",
     "audio",
     "region",
@@ -83,6 +83,13 @@ patterns_ordered = [
     "remux",
     "internationalCut",
     "genre",
+]
+
+
+# Added recently. Instead of annoying punctuation/overlap stuff, since most patterns should have no overlap,
+# add ones that are causing issues here (if it makes sense).
+patterns_no_overlap = [
+    "resolution"
 ]
 
 patterns = {}
