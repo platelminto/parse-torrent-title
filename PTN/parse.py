@@ -287,7 +287,7 @@ class PTN(object):
                 if re.match(
                     lang_regex,
                     re.sub(
-                        link_patterns(patterns["subtitles"][2:]), "", lang, flags=re.I
+                        link_patterns(patterns["subtitles"][-2:]), "", lang, flags=re.I
                     ),
                     re.IGNORECASE,
                 ):
