@@ -293,13 +293,15 @@ lang_list_pattern = (
     + delimiters
     + r"+|\b))"
 )
-subs_list_pattern = r"\b(?:" + link_patterns(langs) + delimiters + "*)"
+subs_list_pattern = r"(?:" + link_patterns(langs) + delimiters + "*)"
 
 patterns["subtitles"] = [
     "sub(?:title|bed)?s?{d}*{langs}+".format(d=delimiters, langs=subs_list_pattern),
     "(?:soft{d}*)?{langs}+(?:(?:m(?:ulti(?:ple)?)?{d}*)?sub(?:title|bed)?s?)".format(
         d=delimiters, langs=subs_list_pattern
     ),
+    ("VOSTFR", ["French"]),
+    # The following are patterns just for the 'subs' strings. Add normal sub stuff above.
     # Need a pattern just for subs, and can't just make above regexes * over + as we want
     # just 'subs' to match last.
     "(?:m(?:ulti(?:ple)?)?{d}*)sub(?:title|bed)?s?".format(d=delimiters),
@@ -331,7 +333,7 @@ patterns["language"] = [
     + "+)(?:"
     + delimiters
     + "*"
-    + patterns["subtitles"][2]
+    + patterns["subtitles"][-2]
     + ")",
 ]
 patterns["sbs"] = [("Half-SBS", "Half SBS"), ("SBS", None, "upper")]

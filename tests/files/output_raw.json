@@ -3641,5 +3641,25 @@
   {
     "season": [1,2,3,4,5,6],
     "title": "The Sopranos"
+  },
+  {
+    "codec": "x264",
+    "encoder": "AMB3R",
+    "episode": 7,
+    "filetype": "mkv",
+    "quality": "HDTV",
+    "season": 6,
+    "subtitles": "SUBFRENCH",
+    "title": "The Walking Dead"
+  },
+  {
+    "audio": "aac",
+    "codec": "h264",
+    "filetype": "mkv",
+    "quality": "WEBDL",
+    "resolution": "720p",
+    "subtitles": "VOSTFR",
+    "title": "The Good German",
+    "year": 2006
   }
 ]

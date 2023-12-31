@@ -2135,5 +2135,19 @@
   },
   {
     "title": "The Sopranos"
+  },
+  {
+    "codec": "H.264",
+    "filetype": "MKV",
+    "subtitles": "French",
+    "title": "The Walking Dead"
+  },
+  {
+    "audio": "AAC",
+    "codec": "H.264",
+    "filetype": "MKV",
+    "quality": "WEB-DL",
+    "subtitles": "French",
+    "title": "The Good German"
   }
 ]
