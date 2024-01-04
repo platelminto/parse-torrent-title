@@ -136,19 +136,20 @@ patterns["month"] = "(?:{year}){d}({month}){d}(?:{day})".format(
 patterns["day"] = "(?:{year}){d}(?:{month}){d}({day})".format(
     d=delimiters, year=year_pattern, month=month_pattern, day=day_pattern
 )
-# resolution pattern according to https://ihax.io/display-resolution-explained/ and GPT4
+# resolution pattern according to https://ihax.io/display-resolution-explained/ and GPT4.
+# order from highest to lowest due to some torrent name having '4K HD' in them but its technically 4K. also this will temporarily fix for QHD.
 patterns["resolution"] = [
     (r"([0-9]{3,4}(?:p|i))", None, "lower"),  # Generic pattern for resolutions like 480p, 720p, 1080p, etc.
-    (r"(SD)", "480p"),  # Pattern for Standard Definition
-    (r"(qHD)", "540p"),  # Pattern for quarter High Definition
-    (r"(HD|1280{d}?x{d}?720p?)".format(d=delimiters), "720p"),  # Pattern for HD / 720p
-    (r"(Full HD|FHD|1920{d}?x{d}?1080p?)".format(d=delimiters), "1080p"),  # Pattern for Full HD / 1080p
-    (r"(2K|2048{d}?x{d}?1080p?)".format(d=delimiters), "2K"),  # Pattern for 2K
-    (r"(QHD|QuadHD|WQHD|2560{d}?x{d}?1440p?)".format(d=delimiters), "1440p"),  # Pattern for QHD / 1440p
+    (r"(8K|7680{d}?x{d}?4320p?)".format(d=delimiters), "8K"),  # Pattern for 8K
+    (r"(5K|5120{d}?x{d}?2880p?)".format(d=delimiters), "5K"),  # Pattern for 5K
     (r"(4K UHD|UHD|3840{d}?x{d}?2160p?)".format(d=delimiters), "2160p"),  # Pattern for 4K UHD / 2160p
     (r"(4K|4096{d}?x{d}?2160p?)".format(d=delimiters), "4K"),  # Pattern for 4K / Cinema 4K
-    (r"(5K|5120{d}?x{d}?2880p?)".format(d=delimiters), "5K"),  # Pattern for 5K
-    (r"(8K|7680{d}?x{d}?4320p?)".format(d=delimiters), "8K"),  # Pattern for 8K
+    (r"(QHD|QuadHD|WQHD|2560{d}?x{d}?1440p?)".format(d=delimiters), "1440p"),  # Pattern for QHD / 1440p
+    (r"(2K|2048{d}?x{d}?1080p?)".format(d=delimiters), "2K"),  # Pattern for 2K
+    (r"(Full HD|FHD|1920{d}?x{d}?1080p?)".format(d=delimiters), "1080p"),  # Pattern for Full HD / 1080p
+    (r"(HD|1280{d}?x{d}?720p?)".format(d=delimiters), "720p"),  # Pattern for HD / 720p
+    (r"(qHD)", "540p"),  # Pattern for quarter High Definition
+    (r"(SD)", "480p"),  # Pattern for Standard Definition
 ]
 patterns["quality"] = [
     ("WEB[ -\.]?DL(?:Rip|Mux)?|HDRip", "WEB-DL"),
