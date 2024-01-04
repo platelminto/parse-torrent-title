@@ -3669,5 +3669,18 @@
     "filetype": "mkv",
     "resolution": "1080p",
     "title": "Eu gosto do Homem-Aranha e dai"
+  },
+  {
+    "audio": "AAC",
+    "codec": "x264",
+    "filetype": "mkv",
+    "language": "Tamil",
+    "resolution": "QHD",
+    "site": "www.1TamilBlasters.lat",
+    "size": "3.4GB",
+    "subtitles": "ESub",
+    "title": "Thuritham",
+    "untouched": true,
+    "year": 2023
   }
 ]
