@@ -61,11 +61,11 @@ patterns_ordered = [
     "repack",
     "filetype",
     "widescreen",
+    "sbs",
     "site",
     "documentary",
     "language",
     "subtitles",
-    "sbs",
     "unrated",
     "size",
     "bitDepth",
@@ -86,10 +86,15 @@ patterns_ordered = [
 ]
 
 
-# Added recently. Instead of annoying punctuation/overlap stuff, since most patterns should have no overlap,
-# add ones that are causing issues here (if it makes sense).
-patterns_no_overlap = [
-    "resolution"
+# Some patterns overlap with others. Season & episode do this a lot. Without something like this, we'd get issues like
+# the Avatar test: ... Complete Series 1080p ... 'Series 10' would be matched as a season, but the 10 is
+# from 1080p, which also gets matched.
+patterns_allow_overlap = [
+    "season",
+    "episode",
+    "language",
+    "subtitles",
+    "sbs"
 ]
 
 patterns = {}

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from . import re
 from .extras import exceptions, genres, langs, link_patterns, patterns_ignore_title
-from .patterns import delimiters, patterns, patterns_ordered, types, patterns_no_overlap
+from .patterns import delimiters, patterns, patterns_ordered, types, patterns_allow_overlap
 from .post import post_processing_after_excess, post_processing_before_excess
 
 
@@ -113,7 +113,7 @@ class PTN(object):
 
                 part_overlaps = False
                 for part, part_slices in self.part_slices.items():
-                    if part in patterns_no_overlap:
+                    if part not in patterns_allow_overlap:
                         # Strict smaller/larger than since punctuation can overlap.
                         if (
                             (part_slices[0] < match_start < part_slices[1])
