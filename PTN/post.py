@@ -219,6 +219,15 @@ def use_year_as_title_if_absent(self):
         self.parts.pop("year")
 
 
+def remove_empty_parts(self):
+    non_empty_parts = {}
+    for part in self.parts:
+        if self.parts[part] != "":
+            non_empty_parts[part] = self.parts[part]
+
+    self.parts = non_empty_parts
+
+
 post_processing_after_excess = [
     try_encoder,
     try_site,
@@ -227,4 +236,5 @@ post_processing_after_excess = [
     filter_non_languages,
     try_vague_season_episode,
     use_year_as_title_if_absent,
+    remove_empty_parts,
 ]

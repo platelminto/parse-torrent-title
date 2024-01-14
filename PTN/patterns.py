@@ -142,7 +142,7 @@ patterns["day"] = "(?:{year}){d}(?:{month}){d}({day})".format(
     d=delimiters, year=year_pattern, month=month_pattern, day=day_pattern
 )
 # resolution pattern according to https://ihax.io/display-resolution-explained/ and GPT4.
-# order from highest to lowest due to some torrent name having '4K HD' in them but its technically 4K. also this will temporarily fix for QHD.
+# order from highest to lowest due to some torrent name having '4K HD' in them but its technically 4K.
 patterns["resolution"] = [
     (r"([0-9]{3,4}(?:p|i))", None, "lower"),  # Generic pattern for resolutions like 480p, 720p, 1080p, etc.
     (r"(8K|7680{d}?x{d}?4320p?)".format(d=delimiters), "8K"),  # Pattern for 8K
@@ -156,6 +156,7 @@ patterns["resolution"] = [
     (r"(qHD)", "540p"),  # Pattern for quarter High Definition
     (r"(SD)", "480p"),  # Pattern for Standard Definition
 ]
+
 patterns["quality"] = [
     ("WEB[ -\.]?DL(?:Rip|Mux)?|HDRip", "WEB-DL"),
     # Match WEB-DL's first as they can show up with others.
@@ -307,6 +308,7 @@ lang_list_pattern = (
 subs_list_pattern = r"(?:" + link_patterns(langs) + delimiters + "*)"
 
 patterns["subtitles"] = [
+    # Below must stay first, see patterns["language"]
     "sub(?:title|bed)?s?{d}*{langs}+".format(d=delimiters, langs=subs_list_pattern),
     "(?:soft{d}*)?{langs}+(?:(?:m(?:ulti(?:ple)?)?{d}*)?sub(?:title|bed)?s?)".format(
         d=delimiters, langs=subs_list_pattern
@@ -315,6 +317,7 @@ patterns["subtitles"] = [
     # The following are patterns just for the 'subs' strings. Add normal sub stuff above.
     # Need a pattern just for subs, and can't just make above regexes * over + as we want
     # just 'subs' to match last.
+    # The second-last one must stay second-last, see patterns["language"]
     "(?:m(?:ulti(?:ple)?)?{d}*)sub(?:title|bed)?s?".format(d=delimiters),
     "(?:m(?:ulti(?:ple)?)?[\.\s\-\+_\/]*)?sub(?:title|bed)?s?{d}*".format(d=delimiters),
 ]
