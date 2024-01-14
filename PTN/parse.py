@@ -14,7 +14,7 @@ class PTN(object):
         self.standardise = None
         self.coherent_types = None
 
-        self.post_title_pattern = "(?:{}|{})".format(
+        self.post_title_pattern = "(?:{}|{}|720p|1080p)".format(
             link_patterns(patterns["season"]), link_patterns(patterns["year"])
         )
 
