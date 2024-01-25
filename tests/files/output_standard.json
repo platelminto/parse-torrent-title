@@ -2164,5 +2164,17 @@
     "resolution": "1440p",
     "subtitles": "English",
     "title": "Thuritham"
+  },
+  {
+    "codec": "H.264",
+    "filetype": "MKV",
+    "quality": "WEB-DL",
+    "subtitles": "English",
+    "title": "Raja Vikramarka"
+  },
+  {
+    "codec": "H.264",
+    "filetype": "MKV",
+    "title": "Kotha Rangula Prapancham"
   }
 ]

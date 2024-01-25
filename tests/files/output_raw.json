@@ -3682,5 +3682,28 @@
     "title": "Thuritham",
     "untouched": true,
     "year": 2023
+  },
+  {
+    "audio": "AAC",
+    "codec": "x264",
+    "encoder": "HQ",
+    "filetype": "mkv",
+    "language": "Tamil",
+    "quality": "HDRip",
+    "site": "www.1TamilMV.world",
+    "size": "400MB",
+    "subtitles": "ESub",
+    "title": "Raja Vikramarka",
+    "year": 2024
+  },
+  {
+    "codec": "x264",
+    "encoder": "Clean",
+    "filetype": "mkv",
+    "language": "Telugu",
+    "site": "www.1TamilMV.world",
+    "size": "700MB",
+    "title": "Kotha Rangula Prapancham",
+    "year": 2024
   }
 ]
