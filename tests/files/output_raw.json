@@ -3396,7 +3396,6 @@
   {
     "audio": "Dual-Audio",
     "episode": 24,
-    "remux": true,
     "resolution": "1080p",
     "season": 1,
     "site": "FFF-Remux",
@@ -3563,10 +3562,7 @@
   {
     "audio": "DTS-ES.6.1",
     "codec": "MPEG-2",
-    "encoder": "LTS",
-    "excess": "MULTi",
     "filetype": "mkv",
-    "language": "ES",
     "quality": "BluRay",
     "remux": true,
     "resolution": "1080p",
@@ -3666,6 +3662,13 @@
     "site": "www.Torrenting.com",
     "title": "Anatomy Of A Fall",
     "year": 2023
+  },
+  {
+    "audio": "AAC2.0",
+    "codec": "H264",
+    "filetype": "mkv",
+    "resolution": "1080p",
+    "title": "Eu gosto do Homem-Aranha e dai"
   },
   {
     "audio": "AAC",

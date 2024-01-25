@@ -2089,7 +2089,6 @@
   {
     "audio": "DTS-ES 6.1",
     "filetype": "MKV",
-    "language": "Spanish",
     "quality": "Blu-ray",
     "title": "Black Rain"
   },
@@ -2152,6 +2151,12 @@
   },
   {
     "title": "Anatomy Of A Fall"
+  },
+  {
+    "audio": "AAC 2.0",
+    "codec": "H.264",
+    "filetype": "MKV",
+    "title": "Eu gosto do Homem-Aranha e dai"
   },
   {
     "codec": "H.264",
