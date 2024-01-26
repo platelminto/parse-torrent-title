@@ -3682,5 +3682,15 @@
     "title": "Thuritham",
     "untouched": true,
     "year": 2023
+  },
+  {
+    "audio": "DTS",
+    "codec": "x264",
+    "encoder": "WiKi",
+    "extended": true,
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "The Lord of the Rings",
+    "year": 2001
   }
 ]

@@ -2164,5 +2164,10 @@
     "resolution": "1440p",
     "subtitles": "English",
     "title": "Thuritham"
+  },
+  {
+    "codec": "H.264",
+    "quality": "Blu-ray",
+    "title": "The Lord of the Rings"
   }
 ]
