@@ -215,9 +215,12 @@ $ python cli.py --coherent-types 'A freakishly cool movie or TV episode'
 
 ## Contributing
 
-Submit a PR on the `dev` branch, including tests for what gets newly matched (if applicable), having run the `pre-commit` hooks. Add the titles you want to add to the tests in `tests/test_generator`'s main method (in `add_titles()`), it will automatically add what's needed to `files/input.json`, `files/output_raw.json`, and `files/output_standard.json`. The fields `encoder`, `excess`, `site`, and `episodeName` don't always have to be correct - if they're giving you issues, or seem wrong, feel free to remove them from the output test files.
+Submit a PR on the `dev` branch. If you have changed the regex for a pattern, I can assume this is because you had a title that was being incorrectly processed, and your change fixes it. Please add the title to the test suite!
 
-(What it does: `add_titles()` adds input torrent names to `tests/files/input.json` and full output json objects (with `standardise=False`) to `tests/files/output_raw.json`. It also adds the standardised output to `tests/files/output_standard.json`, only including fields that are changed, along with `title`.)
+To add new titles to the tests, you have 2 options (the first is easier):
+- Add the titles to `tests/test_generator`'s main method (in `add_titles()`), and run it. When asked for input, type 's', and it will automatically add what's needed to `files/input.json`, `files/output_raw.json`, and `files/output_standard.json`. The fields `encoder`, `excess`, `site`, and `episodeName` don't always have to be correct - if they're giving you issues, or seem wrong, feel free to manually remove them from the output test files.
+
+- Otherwise, you must add input torrent names to `tests/files/input.json` and full output json objects (with `standardise=False`) to `tests/files/output_raw.json`. Also add the standardised output to `tests/files/output_standard.json`, only including fields that are different from `output_raw.json`, along with `title`.
 
 ## Additions to parse-torrent-name
 
