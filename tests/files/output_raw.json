@@ -3705,5 +3705,15 @@
     "size": "700MB",
     "title": "Kotha Rangula Prapancham",
     "year": 2024
+  },
+  {
+    "audio": "DTS",
+    "codec": "x264",
+    "encoder": "WiKi",
+    "extended": true,
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "The Lord of the Rings",
+    "year": 2001
   }
 ]

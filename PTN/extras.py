@@ -85,7 +85,7 @@ patterns_ignore_title = {
     "internal": [],
     "limited": [],
     "proper": [],
-    "extended": [],
+    "extended": [r"(EXTENDED{d}(?!(?:CUT|EDITIONS?)))".format(d=delimiters)],
 }
 
 
