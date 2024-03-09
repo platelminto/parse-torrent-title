@@ -281,7 +281,14 @@ patterns["audio"] = get_channel_audio_options(
     ("LiNE", "LiNE"),
 ]
 patterns["region"] = ("R[0-9]", None, "upper")
-patterns["extended"] = "(EXTENDED(:?.CUT)?)"
+
+# If changing below, remember to change patterns_ignore_title (in extras.py) too.
+patterns["extended"] = [
+    "(EXTENDED)",
+    "(EXTENDED{d}(?:(?:CUT|EDITIONS?)))".format(d=delimiters),
+    ]
+
+
 patterns["hardcoded"] = "HC"
 patterns["proper"] = "PROPER"
 patterns["repack"] = "REPACK"

@@ -1,7 +1,7 @@
 import json
 
 import feedparser
-import numpy
+import numpy  # It is insane that this is needed. Can likely be removed easily.
 
 INDENT = 2
 SPACE = " "

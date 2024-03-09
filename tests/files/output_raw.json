@@ -3701,5 +3701,14 @@
     "edition": "Extended Edition",
     "title": "The Lord of the Rings The Fellowship of the Ring",
     "encoder": "BOREDOR"
+  },
+    "audio": "DTS",
+    "codec": "x264",
+    "encoder": "WiKi",
+    "extended": true,
+    "quality": "BluRay",
+    "resolution": "1080p",
+    "title": "The Lord of the Rings",
+    "year": 2001
   }
 ]
