@@ -83,6 +83,7 @@ patterns_ordered = [
     "remux",
     "internationalCut",
     "genre",
+    "edition",
 ]
 
 
@@ -357,6 +358,20 @@ patterns["language"] = [
     + patterns["subtitles"][-2]
     + ")",
 ]
+
+patterns["edition"] = [
+    (r"\b\d{{2,3}}(th)?{d}Anniversary{d}(Edition|Ed)?\b".format(d=delimiters), "Anniversary Edition"),
+    (r"\bUltimate{d}Edition\b".format(d=delimiters), "Ultimate Edition"),
+    (r"\bExtended{d}Director\"?s\b".format(d=delimiters), "Directors Cut"), # Needs to be before "Extended"
+    (r"\bExtended\b", "Extended Edition"),
+    (r"\bDirector\"?s{d}Cut\b".format(d=delimiters), "Directors Cut"),
+    (r"\bCollector\"?s\b", "Collectors Edition"),
+    (r"\bTheatrical\b", "Theatrical"),
+    (r"\bUncut\b", "Uncut"),
+    (r"\bIMAX\b", "IMAX"),
+    (r"\bDiamond\b", "Diamond Edition"),  # Might be too loose?
+]
+
 patterns["sbs"] = [("Half-SBS", "Half SBS"), ("SBS", None, "upper")]
 patterns["unrated"] = "UNRATED"
 patterns["size"] = (
@@ -408,4 +423,5 @@ types = {
     "untouched": "boolean",
     "remux": "boolean",
     "internationalCut": "boolean",
+    "edition": "string",
 }

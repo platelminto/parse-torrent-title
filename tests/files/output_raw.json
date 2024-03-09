@@ -3684,6 +3684,24 @@
     "year": 2023
   },
   {
+    "resolution": "1080p",
+    "year": 1993,
+    "edition": "Anniversary Edition",
+    "title": "Jurassic Park"
+  },
+  {
+    "resolution": "2160p",
+    "quality": "Blu-ray",
+    "year": 2001,
+    "codec": "H.265",
+    "audio": "Dolby TrueHD 7.1",
+    "extended": true,
+    "bitDepth": 10,
+    "hdr": true,
+    "edition": "Extended Edition",
+    "title": "The Lord of the Rings The Fellowship of the Ring",
+    "encoder": "BOREDOR"
+  },
     "audio": "DTS",
     "codec": "x264",
     "encoder": "WiKi",
