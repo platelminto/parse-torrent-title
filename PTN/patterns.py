@@ -298,7 +298,9 @@ patterns["filetype"] = [
     (r"\.?(iso)$", "ISO"),
 ]
 patterns["widescreen"] = "WS"
-patterns["site"] = [r"^(\[ ?([^\]]+?)\s?\])", r"^((?:www\.)?[\w-]+\.[\w]{2,4})\s+-\s*"]
+
+# Valid the sites with strict URL rules and then other possible sites with more relaxed rules
+patterns["site"] = [r"^(www\.[\w-]+\.[\w-]+)\s+-\s*", r"^((?:www\.)?[\w-]+\.[\w-]+(?:\.[\w-]+)?)\s+-\s*", r"^(\[ ?([^\]]+?)\s?\])"]
 
 lang_list_pattern = (
     r"\b(?:"

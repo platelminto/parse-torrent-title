@@ -76,7 +76,7 @@ def try_encoder_before_site(self, unmatched):
                     "site",
                     (match_s + len(encoder_raw), match_e),
                     self._clean_string(site_raw),
-                    overwrite=True,
+                    overwrite=False,
                 )
                 unmatched = unmatched.replace(match.group(0), "")
 

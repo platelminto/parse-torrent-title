@@ -2167,6 +2167,18 @@
   },
   {
     "codec": "H.264",
+    "filetype": "MKV",
+    "quality": "WEB-DL",
+    "subtitles": "English",
+    "title": "Raja Vikramarka"
+  },
+  {
+    "codec": "H.264",
+    "filetype": "MKV",
+    "title": "Kotha Rangula Prapancham"
+  },
+  {
+    "codec": "H.264",
     "quality": "Blu-ray",
     "title": "The Lord of the Rings"
   }
