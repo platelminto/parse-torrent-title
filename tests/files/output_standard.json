@@ -263,7 +263,9 @@
   {
     "audio": "AAC",
     "codec": "H.264",
-    "language": "Hindi",
+    "languages": [
+      "Hindi"
+    ],
     "quality": "Screener",
     "title": "The Shaukeens"
   },
@@ -281,7 +283,9 @@
   {
     "audio": "AAC",
     "codec": "H.264",
-    "language": "English",
+    "languages": [
+      "English"
+    ],
     "quality": "Cam",
     "title": "Interstellar"
   },
@@ -330,7 +334,10 @@
     "title": "Sons of Anarchy"
   },
   {
-    "language": ["Russian","English"],
+    "languages": [
+      "Russian",
+      "English"
+    ],
     "title": "Community"
   },
   {
@@ -388,7 +395,9 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "language": "Hindi",
+    "languages": [
+      "Hindi"
+    ],
     "title": "Akira"
   },
   {
@@ -406,14 +415,20 @@
   {
     "codec": "H.264",
     "quality": "Blu-ray",
-    "subtitles": "Danish",
-    "title": "The X-Files"
+    "subtitles": [
+      "Danish"
+    ],
+    "title": "The X-Files",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.265",
     "quality": "Blu-ray",
-    "subtitles": "Danish",
-    "title": "The X-Files"
+    "subtitles": [
+      "Danish"
+    ],
+    "title": "The X-Files",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
@@ -427,7 +442,10 @@
   },
   {
     "filetype": "MP4",
-    "language": ["Chinese","Japanese"],
+    "languages": [
+      "Chinese",
+      "Japanese"
+    ],
     "quality": "HDTV",
     "resolution": "720p",
     "title": "Boku Unmei no Hito desu"
@@ -435,7 +453,9 @@
   {
     "audio": "DTS 5.1",
     "codec": "H.264",
-    "language": "Nordic",
+    "languages": [
+      "Nordic"
+    ],
     "quality": "Blu-ray",
     "title": "Blind"
   },
@@ -456,7 +476,9 @@
   },
   {
     "codec": "Xvid",
-    "language": "Swedish",
+    "languages": [
+      "Swedish"
+    ],
     "quality": "DVD-Rip",
     "title": "Bumbibjornarna"
   },
@@ -464,8 +486,11 @@
     "audio": "AAC 2.0",
     "codec": "H.264",
     "quality": "WEB-DL",
-    "subtitles": "Korean",
-    "title": "The Martian"
+    "subtitles": [
+      "Korean"
+    ],
+    "title": "The Martian",
+    "is_subtitle_available": true
   },
   {
     "filetype": "MP4",
@@ -491,7 +516,9 @@
   {
     "audio": "AAC 5.1",
     "codec": "H.264",
-    "language": "Polish",
+    "languages": [
+      "Polish"
+    ],
     "network": "Netflix",
     "quality": "WEB-DL",
     "title": "1983"
@@ -500,41 +527,65 @@
     "audio": "AAC",
     "codec": "H.264",
     "quality": "BRRip",
-    "subtitles": "English",
-    "title": "The Bridge"
+    "subtitles": [
+      "English"
+    ],
+    "title": "The Bridge",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
     "quality": "WEB-DL",
-    "subtitles": "ExYu",
-    "title": "The Meg"
+    "subtitles": [
+      "ExYu"
+    ],
+    "title": "The Meg",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
     "quality": "Cam",
-    "subtitles": "English",
-    "title": "Dragon Ball Super: Broly"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Dragon Ball Super: Broly",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
-    "language": "English",
+    "languages": [
+      "English"
+    ],
     "quality": "WEB-DL",
-    "subtitles": ["Hindi","English"],
-    "title": "Joker"
+    "subtitles": [
+      "Hindi",
+      "English"
+    ],
+    "title": "Joker",
+    "is_subtitle_available": true
   },
   {
     "audio": "AAC",
     "codec": "H.264",
-    "language": "Mandarin",
+    "languages": [
+      "Chinese"
+    ],
     "quality": "WEB-DL",
-    "subtitles": ["Chinese","English"],
-    "title": "IP Man And Four Kings"
+    "subtitles": [
+      "Chinese",
+      "English"
+    ],
+    "title": "IP Man And Four Kings",
+    "is_subtitle_available": true
   },
   {
     "title": "American Dad!"
   },
   {
-    "language": ["Italian","English"],
+    "languages": [
+      "Italian",
+      "English"
+    ],
     "quality": "DVD-Rip",
     "title": "The Simpsons"
   },
@@ -562,9 +613,14 @@
   {
     "audio": "Dolby Digital Plus 5.1",
     "codec": "H.264",
-    "language": "Hindi",
-    "subtitles": "English",
-    "title": "Sacred Games"
+    "languages": [
+      "Hindi"
+    ],
+    "subtitles": [
+      "English"
+    ],
+    "title": "Sacred Games",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
@@ -596,7 +652,10 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "language": ["Italian","English"],
+    "languages": [
+      "Italian",
+      "English"
+    ],
     "network": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "The Blacklist"
@@ -655,16 +714,30 @@
   {
     "audio": "Dolby Digital",
     "codec": "Xvid",
-    "language": ["Italian","English"],
-    "subtitles": ["Italian","English"],
-    "title": "Z Nation"
+    "languages": [
+      "Italian",
+      "English"
+    ],
+    "subtitles": [
+      "Italian",
+      "English"
+    ],
+    "title": "Z Nation",
+    "is_subtitle_available": true
   },
   {
     "audio": "Dolby Digital",
-    "language": ["Italian","English"],
+    "languages": [
+      "Italian",
+      "English"
+    ],
     "quality": "BDRip",
-    "subtitles": "Available",
-    "title": "1917"
+    "subtitles": [
+      "Italian",
+      "English"
+    ],
+    "title": "1917",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
@@ -727,17 +800,31 @@
   {
     "audio": "Dolby Digital",
     "codec": "H.264",
-    "language": ["Italian","English"],
-    "subtitles": ["Italian","English"],
-    "title": "The Big Bus - Il fantabus"
+    "languages": [
+      "Italian",
+      "English"
+    ],
+    "subtitles": [
+      "Italian",
+      "English"
+    ],
+    "title": "The Big Bus - Il fantabus",
+    "is_subtitle_available": true
   },
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "language": ["Italian","English"],
+    "languages": [
+      "Italian",
+      "English"
+    ],
     "quality": "Blu-ray",
-    "subtitles": ["Italian","English"],
-    "title": "The Hunt"
+    "subtitles": [
+      "Italian",
+      "English"
+    ],
+    "title": "The Hunt",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
@@ -757,9 +844,16 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "language": ["Italian","English"],
-    "subtitles": ["Italian","English"],
-    "title": "Diabolique"
+    "languages": [
+      "Italian",
+      "English"
+    ],
+    "subtitles": [
+      "Italian",
+      "English"
+    ],
+    "title": "Diabolique",
+    "is_subtitle_available": true
   },
   {
     "audio": "Dolby Digital 2.0",
@@ -774,9 +868,15 @@
   },
   {
     "codec": "H.264",
-    "language": ["Italian","French"],
-    "subtitles": "English",
-    "title": "37°2 le matin - Betty Blue"
+    "languages": [
+      "Italian",
+      "French"
+    ],
+    "subtitles": [
+      "English"
+    ],
+    "title": "37°2 le matin - Betty Blue",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
@@ -837,14 +937,18 @@
     "title": "Tower of God"
   },
   {
-    "episode": 12,
-    "subtitles": "Available",
+    "episodes": [
+      12
+    ],
     "title": "Kami no Tou"
   },
   {
     "codec": "H.265",
-    "subtitles": "English",
-    "title": "Plunderer"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Plunderer",
+    "is_subtitle_available": true
   },
   {
     "title": "Tamayomi"
@@ -853,18 +957,15 @@
     "title": "Ahiru no Sora"
   },
   {
-    "subtitles": "Available",
     "title": "Shadowverse"
   },
   {
     "title": "A3! Season Spring & Summer"
   },
   {
-    "subtitles": "Available",
     "title": "Kitsutsuki Tanteidokoro"
   },
   {
-    "subtitles": "Available",
     "title": "Princess Connect! Re-Dive"
   },
   {
@@ -875,8 +976,11 @@
     "codec": "H.264",
     "network": "SONY LIV",
     "size": "1.1GB",
-    "subtitles": "English",
-    "title": "Kadakh"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Kadakh",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.265",
@@ -886,44 +990,58 @@
   {
     "codec": "H.264",
     "quality": "Blu-ray",
-    "subtitles": "Available",
     "title": "Shuddh Desi Romance"
   },
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "quality": "WEB-DL",
-    "subtitles": "English",
-    "title": "Face 2 Face"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Face 2 Face",
+    "is_subtitle_available": true
   },
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "network": "Netflix",
     "size": "800MB",
-    "subtitles": "English",
-    "title": "Chaman Bahar"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Chaman Bahar",
+    "is_subtitle_available": true
   },
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.264",
     "size": "650MB",
-    "subtitles": "English",
-    "title": "Piprabidya"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Piprabidya",
+    "is_subtitle_available": true
   },
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "network": "Amazon Studios",
     "size": "1.1GB",
-    "subtitles": "English",
-    "title": "Penguin"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Penguin",
+    "is_subtitle_available": true
   },
   {
     "audio": "Dolby Digital",
     "codec": "H.264",
-    "subtitles": "English",
-    "title": "Kadakh"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Kadakh",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.265",
@@ -933,62 +1051,90 @@
   {
     "codec": "H.264",
     "quality": "WEB-DL",
-    "subtitles": "English",
-    "title": "Kavacham"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Kavacham",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
     "quality": "BRRip",
-    "subtitles": "English",
-    "title": "M.S. Dhoni: The Untold Story"
+    "subtitles": [
+      "English"
+    ],
+    "title": "M.S. Dhoni: The Untold Story",
+    "is_subtitle_available": true
   },
   {
     "audio": "Dolby Digital 5.1",
     "quality": "Blu-ray",
-    "subtitles": "English",
-    "title": "M.S. Dhoni: The Untold Story"
+    "subtitles": [
+      "English"
+    ],
+    "title": "M.S. Dhoni: The Untold Story",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
     "quality": "Blu-ray",
-    "subtitles": "Available",
     "title": "Detective Byomkesh Bakshy"
   },
   {
     "codec": "H.264",
     "filetype": "MKV",
     "quality": "WEBRip",
-    "subtitles": "English",
-    "title": "Kasganj"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Kasganj",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
     "filetype": "MKV",
     "network": "ZEE5",
     "quality": "WEB-DL",
-    "subtitles": "English",
-    "title": "Kasganj"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Kasganj",
+    "is_subtitle_available": true
   },
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "language": ["Tamil","Telugu","Malayalam"],
+    "languages": [
+      "Tamil",
+      "Telugu",
+      "Malayalam"
+    ],
     "quality": "WEB-DL",
-    "subtitles": "Available",
-    "title": "Penguin"
+    "subtitles": [
+      "Tamil",
+      "Telugu",
+      "Malayalam"
+    ],
+    "title": "Penguin",
+    "is_subtitle_available": true
   },
   {
     "title": "Kakushigoto"
   },
   {
     "codec": "H.265",
-    "subtitles": "English",
-    "title": "Shaman King"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Shaman King",
+    "is_subtitle_available": true
   },
   {
     "audio": "Dolby Digital Plus 5.1",
     "codec": "H.264",
-    "language": "Japanese",
+    "languages": [
+      "Japanese"
+    ],
     "network": "Netflix",
     "title": "A Whisker Away"
   },
@@ -996,13 +1142,18 @@
     "audio": "Dolby Digital 5.1",
     "codec": "H.265",
     "filetype": "MKV",
-    "language": "Japanese",
+    "languages": [
+      "Japanese"
+    ],
     "quality": "Blu-ray",
     "title": "liz and the blue bird"
   },
   {
     "filetype": "MKV",
-    "language": ["Italian","English"],
+    "languages": [
+      "Italian",
+      "English"
+    ],
     "network": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "The Flash"
@@ -1096,7 +1247,6 @@
     "title": "And We Go Green"
   },
   {
-    "subtitles": "Available",
     "title": "Ella Fitzgerald - Just One of Those Things"
   },
   {
@@ -1129,15 +1279,21 @@
   {
     "audio": "Dolby Digital 5.1",
     "filetype": "MKV",
-    "language": ["Italian","English"],
+    "languages": [
+      "Italian",
+      "English"
+    ],
     "network": "Amazon Studios",
     "quality": "WEB-DL",
     "title": "Marvel's Agents of S.H.I.E.L.D."
   },
   {
     "codec": "H.264",
-    "subtitles": "English",
-    "title": "Your Honor"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Your Honor",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
@@ -1146,14 +1302,16 @@
   },
   {
     "codec": "H.264",
-    "subtitles": "Available",
     "title": "Thirteen"
   },
   {
     "codec": "H.264",
     "network": "Netflix",
-    "subtitles": "English",
-    "title": "Paan Singh Tomar"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Paan Singh Tomar",
+    "is_subtitle_available": true
   },
   {
     "audio": "AAC 2.0",
@@ -1166,7 +1324,9 @@
     "title": "Trishas Southern Kitchen"
   },
   {
-    "language": "English",
+    "languages": [
+      "English"
+    ],
     "title": "Split Image"
   },
   {
@@ -1175,7 +1335,9 @@
   {
     "audio": "Mono",
     "codec": "Xvid",
-    "language": "English",
+    "languages": [
+      "English"
+    ],
     "quality": "DVD-Rip",
     "title": "Five"
   },
@@ -1203,12 +1365,10 @@
   },
   {
     "filetype": "MKV",
-    "subtitles": "Available",
     "title": "Yesterday o Utatte"
   },
   {
     "filetype": "MKV",
-    "subtitles": "Available",
     "title": "Honzuki no Gekokujou - Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen"
   },
   {
@@ -1236,8 +1396,11 @@
   },
   {
     "resolution": "720p",
-    "subtitles": "English",
-    "title": "Black Hollywood: 'They've Gotta Have Us'"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Black Hollywood: 'They've Gotta Have Us'",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
@@ -1270,7 +1433,6 @@
     "codec": "H.264",
     "quality": "Blu-ray",
     "size": "800MB",
-    "subtitles": "Available",
     "title": "Vacancy"
   },
   {
@@ -1282,12 +1444,18 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "language": ["Italian","English"],
+    "languages": [
+      "Italian",
+      "English"
+    ],
     "title": "Wasp Network"
   },
   {
     "filetype": "MKV",
-    "language": ["Italian","English"],
+    "languages": [
+      "Italian",
+      "English"
+    ],
     "quality": "Blu-ray",
     "title": "Darlin"
   },
@@ -1300,12 +1468,17 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "language": ["Italian","Danish"],
+    "languages": [
+      "Italian",
+      "Danish"
+    ],
     "title": "Infection-What We Become"
   },
   {
     "codec": "H.264",
-    "language": "Hindi",
+    "languages": [
+      "Hindi"
+    ],
     "title": "Perversion"
   },
   {
@@ -1321,7 +1494,6 @@
   {
     "codec": "H.264",
     "quality": "Blu-ray",
-    "subtitles": "Available",
     "title": "The Amazing Spider-Man 2"
   },
   {
@@ -1332,20 +1504,32 @@
   },
   {
     "quality": "Blu-ray",
-    "subtitles": "English",
-    "title": "Mother [Madre]"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Mother [Madre]",
+    "is_subtitle_available": true
   },
   {
-    "language": "Bengali",
+    "languages": [
+      "Bengali"
+    ],
     "quality": "WEB-DL",
     "title": "Ridoy Jure"
   },
   {
     "codec": "H.264",
     "filetype": "MP4",
-    "language": ["English","Russian"],
-    "subtitles": "Available",
-    "title": "The Deep Blue Sea"
+    "languages": [
+      "English",
+      "Russian"
+    ],
+    "subtitles": [
+      "English",
+      "Russian"
+    ],
+    "title": "The Deep Blue Sea",
+    "is_subtitle_available": true
   },
   {
     "audio": "Dolby TrueHD 5.1",
@@ -1362,7 +1546,9 @@
     "title": "Athlete A"
   },
   {
-    "language": "Bengali",
+    "languages": [
+      "Bengali"
+    ],
     "quality": "WEB-DL",
     "title": "SHAHENSHA"
   },
@@ -1370,8 +1556,11 @@
     "audio": "Dolby Digital 2.0",
     "codec": "H.264",
     "network": "Amazon Studios",
-    "subtitles": "English",
-    "title": "Rasbhari"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Rasbhari",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
@@ -1384,7 +1573,10 @@
   },
   {
     "codec": "H.265",
-    "language": ["English","Japanese"],
+    "languages": [
+      "English",
+      "Japanese"
+    ],
     "title": "L.A. Story"
   },
   {
@@ -1412,12 +1604,14 @@
     "audio": "Dual",
     "codec": "H.265",
     "quality": "Blu-ray",
-    "subtitles": "English",
-    "title": "Black Lagoon"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Black Lagoon",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.265",
-    "subtitles": "Available",
     "title": "One Piece"
   },
   {
@@ -1432,43 +1626,65 @@
   {
     "codec": "H.264",
     "network": "Amazon Studios",
-    "subtitles": "English",
-    "title": "NOS4A2"
+    "subtitles": [
+      "English"
+    ],
+    "title": "NOS4A2",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.265",
-    "subtitles": "Available",
     "title": "Haikyuu!!"
   },
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.264",
     "size": "2.5GB",
-    "subtitles": "English",
-    "title": "Moothon: The Elder One"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Moothon: The Elder One",
+    "is_subtitle_available": true
   },
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "language": ["Italian","French"],
+    "languages": [
+      "Italian",
+      "French"
+    ],
     "quality": "Blu-ray",
-    "subtitles": ["Italian","English"],
-    "title": "Doppia Pelle - Le Daim"
+    "subtitles": [
+      "Italian",
+      "English"
+    ],
+    "title": "Doppia Pelle - Le Daim",
+    "is_subtitle_available": true
   },
   {
     "audio": "DTS-HD MA 5.1",
     "codec": "H.264",
-    "language": ["Italian","English"],
-    "subtitles": ["Italian","English"],
-    "title": "The Twilight Saga: Breaking Down - Parte 2"
+    "languages": [
+      "Italian",
+      "English"
+    ],
+    "subtitles": [
+      "Italian",
+      "English"
+    ],
+    "title": "The Twilight Saga: Breaking Down - Parte 2",
+    "is_subtitle_available": true
   },
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.264",
     "quality": "Blu-ray",
     "size": "1.3GB",
-    "subtitles": "English",
-    "title": "The Painted Bird"
+    "subtitles": [
+      "English"
+    ],
+    "title": "The Painted Bird",
+    "is_subtitle_available": true
   },
   {
     "audio": "DTS-HD MA 5.1",
@@ -1484,18 +1700,30 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.265",
-    "language": ["Italian","English"],
-    "subtitles": ["Italian","English"],
-    "title": "Just Mercy - Il diritto di opporsi"
+    "languages": [
+      "Italian",
+      "English"
+    ],
+    "subtitles": [
+      "Italian",
+      "English"
+    ],
+    "title": "Just Mercy - Il diritto di opporsi",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
     "title": "Mae West Dirty Blonde"
   },
   {
-    "language": "English",
-    "subtitles": "Arabic",
-    "title": "The Ottomans: Europe's Muslim Emperors"
+    "languages": [
+      "English"
+    ],
+    "subtitles": [
+      "Arabic"
+    ],
+    "title": "The Ottomans: Europe's Muslim Emperors",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
@@ -1514,40 +1742,63 @@
     "audio": "Dolby Digital 2.0",
     "codec": "H.264",
     "size": "1.5GB",
-    "subtitles": "English",
-    "title": "#Yaaram"
+    "subtitles": [
+      "English"
+    ],
+    "title": "#Yaaram",
+    "is_subtitle_available": true
   },
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "language": ["Italian","Spanish"],
+    "languages": [
+      "Italian",
+      "Spanish"
+    ],
     "title": "Nessuno sa chi io sono qui-Nadie sabe que estoy aqui"
   },
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.264",
-    "language": ["Italian","English"],
+    "languages": [
+      "Italian",
+      "English"
+    ],
     "title": "L.ultima corve"
   },
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.264",
-    "language": ["Italian","English"],
+    "languages": [
+      "Italian",
+      "English"
+    ],
     "title": "La signora di Shanghai-The lady from Shanghai"
   },
   {
-    "language": ["Telugu","Tamil","Hindi","Chinese"],
+    "languages": [
+      "Telugu",
+      "Tamil",
+      "Hindi",
+      "Chinese"
+    ],
     "quality": "Blu-ray",
-    "subtitles": "English",
-    "title": "The Four"
+    "subtitles": [
+      "English"
+    ],
+    "title": "The Four",
+    "is_subtitle_available": true
   },
   {
     "audio": "Dual",
     "codec": "H.264",
     "network": "Amazon Studios",
     "size": "1.2GB",
-    "subtitles": "English",
-    "title": "Samrat & Co."
+    "subtitles": [
+      "English"
+    ],
+    "title": "Samrat & Co.",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
@@ -1557,7 +1808,10 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.265",
-    "language": ["English","Spanish"],
+    "languages": [
+      "English",
+      "Spanish"
+    ],
     "network": "Netflix",
     "size": "950MB",
     "title": "Adu"
@@ -1571,7 +1825,6 @@
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "quality": "WEB-DL",
-    "subtitles": "Available",
     "title": "The Fxxk-It List"
   },
   {
@@ -1588,8 +1841,11 @@
   {
     "audio": "Dolby Digital",
     "codec": "H.264",
-    "subtitles": "English",
-    "title": "Sarkar 3"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Sarkar 3",
+    "is_subtitle_available": true
   },
   {
     "audio": "Dolby Digital 2.0",
@@ -1607,12 +1863,18 @@
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "quality": "Blu-ray",
-    "subtitles": "English",
-    "title": "Dukhtar"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Dukhtar",
+    "is_subtitle_available": true
   },
   {
-    "subtitles": "English",
-    "title": "Main Teri Tu Mera"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Main Teri Tu Mera",
+    "is_subtitle_available": true
   },
   {
     "quality": "WEB-DL",
@@ -1631,19 +1893,28 @@
   },
   {
     "codec": "H.265",
-    "language": "Japanese",
+    "languages": [
+      "Japanese"
+    ],
     "quality": "Blu-ray",
     "title": "Lupin III The First"
   },
   {
     "codec": "H.265",
-    "language": "Japanese",
-    "subtitles": "English",
-    "title": "The Rule for a Vagabond"
+    "languages": [
+      "Japanese"
+    ],
+    "subtitles": [
+      "English"
+    ],
+    "title": "The Rule for a Vagabond",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
-    "language": "Portuguese",
+    "languages": [
+      "Portuguese"
+    ],
     "quality": "Blu-ray",
     "title": "Cousins"
   },
@@ -1655,8 +1926,11 @@
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "quality": "WEB-DL",
-    "subtitles": "English",
-    "title": "PENALTY"
+    "subtitles": [
+      "English"
+    ],
+    "title": "PENALTY",
+    "is_subtitle_available": true
   },
   {
     "audio": "Dual",
@@ -1686,14 +1960,20 @@
   {
     "codec": "H.264",
     "filetype": "MKV",
-    "language": ["Italian","English"],
+    "languages": [
+      "Italian",
+      "English"
+    ],
     "quality": "AHDTV",
     "title": "Gangs Of London"
   },
   {
     "codec": "H.264",
     "filetype": "MKV",
-    "language": ["Italian","English"],
+    "languages": [
+      "Italian",
+      "English"
+    ],
     "quality": "Blu-ray",
     "title": "Fear the Walking Dead"
   },
@@ -1707,7 +1987,10 @@
   },
   {
     "audio": "Dual",
-    "language": ["Hindi","Marathi"],
+    "languages": [
+      "Hindi",
+      "Marathi"
+    ],
     "quality": "WEBRip",
     "title": "Nude"
   },
@@ -1717,14 +2000,19 @@
     "title": "X-men The Last Stand"
   },
   {
-    "genre": ["Comedy","Western"],
+    "genres": [
+      "Comedy",
+      "Western"
+    ],
     "title": "The Kissing Bandit"
   },
   {
     "title": "The King of Comedy"
   },
   {
-    "genre": "Comedy",
+    "genres": [
+      "Comedy"
+    ],
     "title": "The Mouse on the Moon"
   },
   {
@@ -1750,10 +2038,21 @@
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "language": ["Italian","English","German","Spanish"],
+    "languages": [
+      "Italian",
+      "English",
+      "German",
+      "Spanish"
+    ],
     "quality": "DVD-Rip",
-    "subtitles": "Available",
-    "title": "Professor Marston and the Wonder Women"
+    "subtitles": [
+      "Italian",
+      "English",
+      "German",
+      "Spanish"
+    ],
+    "title": "Professor Marston and the Wonder Women",
+    "is_subtitle_available": true
   },
   {
     "audio": "DTS-HD MA 5.1",
@@ -1984,22 +2283,36 @@
     "title": "The Djinn"
   },
   {
-    "genre": "Drama",
-    "language": "Albanian",
+    "genres": [
+      "Drama"
+    ],
+    "languages": [
+      "Albanian"
+    ],
     "title": "Hive"
   },
   {
-    "genre": "Drama",
-    "language": "Egyptian",
+    "genres": [
+      "Drama"
+    ],
+    "languages": [
+      "Egyptian"
+    ],
     "title": "Souad"
   },
   {
-    "genre": "Drama",
-    "language": "Polish",
+    "genres": [
+      "Drama"
+    ],
+    "languages": [
+      "Polish"
+    ],
     "title": "Swinki"
   },
   {
-    "genre": "Thriller",
+    "genres": [
+      "Thriller"
+    ],
     "title": "Dead Heat on a Merry Go Round"
   },
   {
@@ -2060,7 +2373,9 @@
   },
   {
     "codec": "H.264",
-    "language": "French",
+    "languages": [
+      "French"
+    ],
     "quality": "WEBRip",
     "title": "Presque"
   },
@@ -2070,20 +2385,33 @@
     "filetype": "MKV",
     "quality": "WEB-DL",
     "sbs": "SBS",
-    "subtitles": "English",
-    "title": "Lucky Man"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Lucky Man",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
-    "language": ["Tamil","Malayalam","Telugu","Kannada"],
+    "languages": [
+      "Tamil",
+      "Malayalam",
+      "Telugu",
+      "Kannada"
+    ],
     "quality": "WEB-DL",
-    "subtitles": "English",
-    "title": "Sultan of Delhi"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Sultan of Delhi",
+    "is_subtitle_available": true
   },
   {
     "audio": "Custom",
     "filetype": "MKV",
-    "language": "Polish",
+    "languages": [
+      "Polish"
+    ],
     "title": "Mission Impossible"
   },
   {
@@ -2116,7 +2444,9 @@
   {
     "audio": "HE-AAC v2",
     "filetype": "MKV",
-    "language": "Polish",
+    "languages": [
+      "Polish"
+    ],
     "title": "Escape Room Tournament of Champions"
   },
   {
@@ -2138,16 +2468,22 @@
   {
     "codec": "H.264",
     "filetype": "MKV",
-    "subtitles": "French",
-    "title": "The Walking Dead"
+    "subtitles": [
+      "French"
+    ],
+    "title": "The Walking Dead",
+    "is_subtitle_available": true
   },
   {
     "audio": "AAC",
     "codec": "H.264",
     "filetype": "MKV",
     "quality": "WEB-DL",
-    "subtitles": "French",
-    "title": "The Good German"
+    "subtitles": [
+      "French"
+    ],
+    "title": "The Good German",
+    "is_subtitle_available": true
   },
   {
     "title": "Anatomy Of A Fall"
@@ -2162,15 +2498,21 @@
     "codec": "H.264",
     "filetype": "MKV",
     "resolution": "1440p",
-    "subtitles": "English",
-    "title": "Thuritham"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Thuritham",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
     "filetype": "MKV",
     "quality": "WEB-DL",
-    "subtitles": "English",
-    "title": "Raja Vikramarka"
+    "subtitles": [
+      "English"
+    ],
+    "title": "Raja Vikramarka",
+    "is_subtitle_available": true
   },
   {
     "codec": "H.264",
@@ -2181,5 +2523,103 @@
     "codec": "H.264",
     "quality": "Blu-ray",
     "title": "The Lord of the Rings"
+  },
+  {
+    "languages": [
+      "Russian",
+      "Ukrainian"
+    ],
+    "quality": "Blu-ray",
+    "title": "Deadpool"
+  },
+  {
+    "audio": "Dolby Digital",
+    "codec": "Xvid",
+    "languages": [
+      "French"
+    ],
+    "quality": "DVD-Rip",
+    "title": "127 Heures"
+  },
+  {
+    "languages": [
+      "English",
+      "Portuguese"
+    ],
+    "title": "Men in Black International"
+  },
+  {
+    "codec": "Xvid",
+    "languages": [
+      "Polish"
+    ],
+    "quality": "DVD-Rip",
+    "title": "Quarantine"
+  },
+  {
+    "codec": "Xvid",
+    "languages": [
+      "Korean"
+    ],
+    "title": "All Love"
+  },
+  {
+    "codec": "H.264",
+    "languages": [
+      "Korean"
+    ],
+    "subtitles": [
+      "English"
+    ],
+    "title": "Atonement",
+    "is_subtitle_available": true
+  },
+  {
+    "audio": "Dolby Digital 5.1",
+    "codec": "H.264",
+    "languages": [
+      "Hebrew"
+    ],
+    "network": "Netflix",
+    "title": "Fauda"
+  },
+  {
+    "codec": "H.264",
+    "quality": "BRRip",
+    "title": "Chinese Zodiac"
+  },
+  {
+    "codec": "H.264",
+    "filetype": "MKV",
+    "title": "Thai Massage"
+  },
+  {
+    "audio": "Dolby TrueHD 7.1",
+    "codec": "H.264",
+    "title": "] Hitman"
+  },
+  {
+    "audio": "Dolby Digital Plus 5.1",
+    "network": "Netflix",
+    "title": "Last Call for Istanbul"
+  },
+  {
+    "quality": "DVD-Rip",
+    "title": "Blue Crush"
+  },
+  {
+    "title": "Rebirth"
+  },
+  {
+    "codec": "H.265",
+    "filetype": "MKV",
+    "title": "08 Планета обезьян Революция"
+  },
+  {
+    "quality": "DVD-Rip",
+    "title": "The fruit is ripe / Griechische Feigen"
+  },
+  {
+    "title": "Кнiганошы"
   }
 ]

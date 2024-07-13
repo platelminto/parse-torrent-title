@@ -1,15 +1,5 @@
 #!/usr/bin/env python
 
-import pkgutil
-import sys
-
-# Regex in python 2 is very slow so we check if the faster 'regex' library is available.
-faster_regex = pkgutil.find_loader("regex")
-if faster_regex is not None and sys.version_info[0] < 3:
-    re = faster_regex.load_module("regex")
-else:
-    re = pkgutil.find_loader("re").load_module("re")
-
 from .parse import PTN
 
 __author__ = "Giorgio Momigliano"
@@ -17,6 +7,17 @@ __email__ = "gmomigliano@protonmail.com"
 __version__ = "2.8.2"
 __license__ = "MIT"
 
+# Singleton instance of PTN
+_ptn_instance = PTN()
 
-def parse(name, standardise=True, coherent_types=False):
-    return PTN().parse(name, standardise, coherent_types)
+
+def parse(name: str, standardise: bool = True, coherent_types: bool = False) -> dict:
+    """
+    Parse the torrent title into its components.
+
+    :param name: The torrent name to parse.
+    :param standardise: Whether to standardise the parsed values.
+    :param coherent_types: Whether to ensure coherent types in the parsed results.
+    :return: A dictionary of parsed components.
+    """
+    return _ptn_instance.parse(name, standardise, coherent_types)

@@ -57,8 +57,8 @@ PTN.parse('The Walking Dead S05E03 720p HDTV x264-ASAP[ettv]')
 # {
 #     'encoder': 'ASAP',
 #     'title': 'The Walking Dead',
-#     'season':  5,
-#     'episode': 3,
+#     'seasons': [5],
+#     'episodes': [3],
 #     'resolution': '720p',
 #     'codec': 'H.264',
 #     'quality': 'HDTV',
@@ -74,8 +74,9 @@ PTN.parse('Vacancy (2007) 720p Bluray Dual Audio [Hindi + English] ⭐800 MB⭐ 
 #     'year':  2007,
 #     'audio': 'Dolby Digital 2.0',
 #     'quality': 'Blu-ray',
-#     'language': ['Hindi', 'English'],
-#     'subtitles': 'Available',
+#     'languages': ['Hindi', 'English'],
+#     'subtitles': ['Hindi', 'English'],
+#     'is_subtitle_available': True,
 #     'size': 800MB,
 #     'website': BonsaiHD
 #     'excess': '⭐⭐'
@@ -89,8 +90,8 @@ PTN.parse('Deadliest.Catch.S00E66.No.Safe.Passage.720p.AMZN.WEB-DL.DDP2.0.H.264-
 #     'codec': 'H.264',
 #     'audio' : 'Dolby Digital Plus 2.0',
 #     'network': 'Amazon Studios',
-#     'season':  0,
-#     'episode': 66,
+#     'seasons':  [0],
+#     'episodes': [66],
 #     'quality': 'WEB-DL',
 #     'episodeName': 'No Safe Passage',
 #     'website': 'TGx'
@@ -101,7 +102,7 @@ PTN.parse('Insecure.S04.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV')
 #     'title': 'Insecure'
 #     'encoder': 'GalaxyTV',
 #     'codec': 'H.264',
-#     'season': 4,
+#     'seasons': [4],
 #     'resolution': '720p',
 #     'network': 'Amazon Studios',
 #     'quality': 'WEBRip',
@@ -121,7 +122,7 @@ $ python cli.py 'Insecure.S04.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV'
      'title': 'Insecure'
      'encoder': 'GalaxyTV',
      'codec': 'H.264',
-     'season': 4,
+     'seasons': [4],
      'resolution': '720p',
      'network': 'Amazon Studios',
      'quality': 'WEBRip',
@@ -154,7 +155,7 @@ $ python cli.py --raw 'A freakishly cool movie or TV episode'
 
 The types of parts can be strings, integers, booleans, or lists of the first 2. To simplify this, you can enable the `coherent_types` flag. This will override the types described below according to these rules:
 - `title` and `episodeName` will always be strings.
-- All other non-boolean fields will become lists of the type they currently are. For example, `language` will always be a list of strings, and `episode` a list of episodes. This can be weird for some fields, but it avoids a lot of `isinstance` calls - just always use `x in y` and you should be fine.
+- All other non-boolean fields will become lists of the type they currently are. For example, `languages` will always be a list of strings, and `episodes` a list of episodes. This can be weird for some fields, but it avoids a lot of `isinstance` calls - just always use `x in y` and you should be fine.
 - Boolean types will remain as booleans.
 
 To enable this flag:
@@ -177,18 +178,18 @@ $ python cli.py --coherent-types 'A freakishly cool movie or TV episode'
 * **directorsCut**  *(boolean)*
 * **documentary**   *(boolean)*
 * **encoder**       *(string)*
-* **episode**       *(integer, integer list)*
+* **episodes**      *(integer list)*
 * **episodeName**   *(string)*
 * **excess**        *(string, string list)*
 * **extended**      *(boolean)*
 * **filetype**      *(string)*
 * **fps**           *(integer)*
-* **genre**         *(string, string list)*
+* **genre**         *(string list)*
 * **hardcoded**     *(boolean)*
 * **hdr**           *(boolean)*
 * **internal**      *(boolean)*
 * **internationalCut** *(boolean)*
-* **language**      *(string, string list)*
+* **languages**      *(string list)*
 * **limited**       *(boolean)*
 * **month**         *(integer)*
 * **network**       *(string)*
@@ -201,10 +202,10 @@ $ python cli.py --coherent-types 'A freakishly cool movie or TV episode'
 * **repack**        *(boolean)*
 * **resolution**    *(string)*
 * **sbs**           *(string)*
-* **season**        *(integer, integer list)*
+* **season**        *(integer list)*
 * **site**       *(string)*
 * **size**          *(string)*
-* **subtitles**     *(string, string list)*
+* **subtitles**     *(string list)*
 * **title**         *(string)*
 * **unrated**       *(boolean)*
 * **untouched**     *(boolean)*
@@ -218,7 +219,7 @@ $ python cli.py --coherent-types 'A freakishly cool movie or TV episode'
 Submit a PR on the `dev` branch. If you have changed the regex for a pattern, I can assume this is because you had a title that was being incorrectly processed, and your change fixes it. Please add the title to the test suite!
 
 To add new titles to the tests, you have 2 options (the first is easier):
-- Add the titles to `tests/test_generator`'s main method (in `add_titles()`), and run it. When asked for input, type 's', and it will automatically add what's needed to `files/input.json`, `files/output_raw.json`, and `files/output_standard.json`. The fields `encoder`, `excess`, `site`, and `episodeName` don't always have to be correct - if they're giving you issues, or seem wrong, feel free to manually remove them from the output test files.
+- Add the titles to `tests/generate_test_data.py`'s main method (in `add_titles()`), and run it. When asked for input, type 's', and it will automatically add what's needed to `files/input.json`, `files/output_raw.json`, and `files/output_standard.json`. The fields `encoder`, `excess`, `site`, and `episodeName` don't always have to be correct - if they're giving you issues, or seem wrong, feel free to manually remove them from the output test files.
 
 - Otherwise, you must add input torrent names to `tests/files/input.json` and full output json objects (with `standardise=False`) to `tests/files/output_raw.json`. Also add the standardised output to `tests/files/output_standard.json`, only including fields that are different from `output_raw.json`, along with `title`.
 

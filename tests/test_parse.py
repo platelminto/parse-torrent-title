@@ -11,24 +11,14 @@ def load_json_file(file_name):
         return json.load(input_file)
 
 
-def get_raw_data():
-    json_input = os.path.join(os.path.dirname(__file__), "files/input.json")
+def get_test_data(file_name_input, file_name_output):
+    json_input = os.path.join(os.path.dirname(__file__), file_name_input)
     torrents = load_json_file(json_input)
 
-    json_output = os.path.join(os.path.dirname(__file__), "files/output_raw.json")
+    json_output = os.path.join(os.path.dirname(__file__), file_name_output)
     expected_results = load_json_file(json_output)
 
-    return zip(torrents, expected_results)
-
-
-def get_standard_data():
-    json_input = os.path.join(os.path.dirname(__file__), "files/input.json")
-    torrents = load_json_file(json_input)
-
-    json_output = os.path.join(os.path.dirname(__file__), "files/output_standard.json")
-    expected_results = load_json_file(json_output)
-
-    return zip(torrents, expected_results)
+    return list(zip(torrents, expected_results))
 
 
 class TestTorrentParser:
@@ -40,30 +30,42 @@ class TestTorrentParser:
 
     @classmethod
     def teardown_class(cls):
-        print("\nExcess elements total: {}".format(cls.total_excess))
+        print(f"\nExcess elements total: {cls.total_excess}")
 
-    @pytest.mark.parametrize("torrent,expected_result", get_raw_data())
+    @pytest.mark.parametrize("torrent,expected_result", get_test_data("files/input.json", "files/output_raw.json"))
     def test_all_raw(self, torrent, expected_result):
+        print(f"Testing raw: {torrent}")
+        print(f"Expected raw result: {expected_result}")
         result = PTN.parse(torrent, standardise=False)
+        print(f"Parsed raw result: {result}")
+        self._check_excess(result)
+        self._assert_results(result, expected_result, torrent, check_extras=True)
+
+    @pytest.mark.parametrize("torrent,expected_result", get_test_data("files/input.json", "files/output_standard.json"))
+    def test_standardised(self, torrent, expected_result):
+        print(f"Testing standardised: {torrent}")
+        print(f"Expected standardised result: {expected_result}")
+        result = PTN.parse(torrent, standardise=True)
+        print(f"Parsed standardised result: {result}")
+        self._assert_results(result, expected_result, torrent, check_extras=False)
+
+    def _check_excess(self, result):
         if "excess" in result:
             if isinstance(result["excess"], list):
-                TestTorrentParser.total_excess += len(result["excess"])
+                self.total_excess += len(result["excess"])
             else:
-                TestTorrentParser.total_excess += 1
-        for key in expected_result:
-            assert key in result, "'{}' was missing for \n{}".format(key, torrent)
-            assert result[key] == expected_result[key], "'{}' failed for \n{}".format(
-                key, torrent
-            )
-        for key in result.keys():
-            if key not in ("encoder", "excess", "site"):  # Not needed in tests
-                assert key in expected_result
+                self.total_excess += 1
 
-    @pytest.mark.parametrize("torrent,expected_result", get_standard_data())
-    def test_standardised(self, torrent, expected_result):
-        result = PTN.parse(torrent, standardise=True)
+    def _assert_results(self, result, expected_result, torrent, check_extras):
         for key in expected_result:
-            assert key in result, "'{}' was missing for \n{}".format(key, torrent)
-            assert result[key] == expected_result[key], "'{}' failed for \n{}".format(
-                key, torrent
-            )
+            assert key in result, f"'{key}' was missing for \n{torrent}"
+            assert result[key] == expected_result[key], f"'{key}' failed for \n{torrent}\nExpected: {expected_result[key]}\nFound: {result[key]}"
+
+        if check_extras:
+            # Check that there are no unexpected keys in the result for raw test cases
+            unexpected_keys = set(result.keys()) - set(expected_result.keys()) - {"encoder", "excess", "site"}
+            assert not unexpected_keys, f"Unexpected keys found in result for \n{torrent}: {unexpected_keys}"
+
+
+if __name__ == "__main__":
+    pytest.main()
