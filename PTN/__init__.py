@@ -1,14 +1,20 @@
 #!/usr/bin/env python
-
-import pkgutil
 import sys
 
-# Regex in python 2 is very slow so we check if the faster 'regex' library is available.
-faster_regex = pkgutil.find_loader("regex")
-if faster_regex is not None and sys.version_info[0] < 3:
-    re = faster_regex.load_module("regex")
-else:
-    re = pkgutil.find_loader("re").load_module("re")
+
+if sys.version_info.major == 3:
+    import importlib
+
+    re = importlib.import_module("re")
+
+elif sys.version_info.major == 2:
+    import pkgutil
+    # Regex in python 2 is very slow so we check if the faster 'regex' library is available.
+    faster_regex = pkgutil.find_loader("regex")
+    if faster_regex is not None:
+        re = faster_regex.load_module("regex")
+    else:
+        re = pkgutil.find_loader("re").load_module("re")
 
 from .parse import PTN
 
