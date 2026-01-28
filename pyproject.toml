@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "parse-torrent-title"
+version = "2.8.2"
+description = "Extract media information from torrent-like filename"
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Giorgio Momigliano", email = "gmomigliano@protonmail.com" }
+]
+requires-python = ">=3.8"
+keywords = [
+    "parse", "parser", "torrent", "torrents", "name", "names", "proper", "rename",
+    "movie", "movies", "tv", "show", "shows", "series", "extract", "find", "quality",
+    "group", "codec", "audio", "resolution", "title", "season", "episode", "year",
+    "information", "filename", "filenames", "file", "files", "meaningful"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Topic :: Text Processing",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[project.urls]
+Homepage = "https://github.com/platelminto/parse-torrent-title"
+Repository = "https://github.com/platelminto/parse-torrent-title"
+
+[dependency-groups]
+dev = [
+    "black",
+    "feedparser",
+    "numpy",
+    "pytest",
+]
+
+[tool.flake8]
+max-line-length = 88
+select = ["C", "E", "F", "W", "B", "B950"]
+extend-ignore = ["E203", "E501", "W605", "E402"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/PTN",
+    "/tests",
+    "/LICENSE",
+    "/README.md",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["PTN"]

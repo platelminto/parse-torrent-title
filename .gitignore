@@ -6,6 +6,7 @@ env/
 venv*/
 
 *.pyc
+__pycache__/
 .idea/
 
 tests/files/seen_inputs.json

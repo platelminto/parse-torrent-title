@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv python install ${{ matrix.python-version }}
+      - run: uv sync
+      - run: uv run pytest
+
+  publish:
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - name: Get local version
+        id: local
+        run: echo "version=$(uv run python -c "import tomllib; print(tomllib.load(open('pyproject.toml','rb'))['project']['version'])")" >> $GITHUB_OUTPUT
+      - name: Get PyPI version
+        id: pypi
+        run: |
+          pypi_version=$(curl -s https://pypi.org/pypi/parse-torrent-title/json | uv run python -c "import sys,json; print(json.load(sys.stdin).get('info',{}).get('version','0.0.0'))")
+          echo "version=$pypi_version" >> $GITHUB_OUTPUT
+      - name: Publish if newer
+        if: steps.local.outputs.version != steps.pypi.outputs.version
+        run: |
+          uv build
+          uv publish --trusted-publishing always

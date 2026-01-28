@@ -1,5 +1,0 @@
-black
-feedparser
-numpy
-pytest
-setuptools

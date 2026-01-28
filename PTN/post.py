@@ -2,7 +2,7 @@
 
 # Post-processing functions that run after the main parsing.
 
-from . import re
+import re
 from .extras import link_patterns, complete_series
 from .patterns import episode_name_pattern, langs, patterns, pre_website_encoder_pattern
 

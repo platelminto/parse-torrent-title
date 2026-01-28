@@ -1,19 +1,12 @@
 #!/usr/bin/env python
-from . import re
+import re
 from .extras import exceptions, genres, langs, link_patterns, patterns_ignore_title
 from .patterns import delimiters, patterns, patterns_ordered, types, patterns_allow_overlap
 from .post import post_processing_after_excess, post_processing_before_excess
 
 
-class PTN(object):
+class PTN:
     def __init__(self):
-        self.torrent_name = None
-        self.parts = None
-        self.part_slices = None
-        self.match_slices = None
-        self.standardise = None
-        self.coherent_types = None
-
         self.post_title_pattern = "(?:{}|{}|720p|1080p)".format(
             link_patterns(patterns["season"]), link_patterns(patterns["year"])
         )
@@ -55,12 +48,12 @@ class PTN(object):
 
     def parse(self, name, standardise, coherent_types):
         name = name.strip()
-        self.parts = {}
-        self.part_slices = {}
-        self.torrent_name = name
-        self.match_slices = []
-        self.standardise = standardise
-        self.coherent_types = coherent_types
+        self.parts: dict = {}
+        self.part_slices: dict = {}
+        self.torrent_name: str = name
+        self.match_slices: list = []
+        self.standardise: bool = standardise
+        self.coherent_types: bool = coherent_types
 
         for key, pattern_options in [(key, patterns[key]) for key in patterns_ordered]:
             pattern_options = self.normalise_pattern_options(pattern_options)
@@ -268,8 +261,6 @@ class PTN(object):
             clean = replace
         if transforms:
             for transform in filter(lambda t: t[0], transforms):
-                # For python2 compatibility, we're not able to simply pass functions as str.upper
-                # means different things in 2.7 and 3.5.
                 clean = getattr(clean, transform[0])(*transform[1])
         if key == "language" or key == "subtitles":
             clean = self.standardise_languages(clean)
@@ -425,7 +416,6 @@ class PTN(object):
 
         filtered = []
         for extra in unmatched_clean:
-            # re.fullmatch() is not available in python 2.7, so we manually do it with \Z.
             if not re.match(
                 r"(?:Complete|Season|Full)?[\]\[,.+\- ]*(?:Complete|Season|Full)?\Z",
                 extra,

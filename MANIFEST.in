@@ -1,4 +1,0 @@
-include LICENSE
-include MANIFEST.in
-include tests/files/*.json
-include README.md
