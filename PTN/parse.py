@@ -183,20 +183,31 @@ class PTN:
                 
                 # Check if this match is part of a larger hyphenated term
                 # (e.g., "HD" in "DTS-HD")
-                # Look at surrounding characters
+                # We want to skip matches that are in the middle of compound terms
                 is_within_hyphenated_term = False
+                has_hyphen_before = False
+                has_hyphen_after = False
+                
                 if match_start > 0 and self.torrent_name[match_start - 1] == '-':
                     # Check if there's a non-delimiter character before the hyphen
                     if match_start > 1 and not re.match(delimiters, self.torrent_name[match_start - 2]):
-                        is_within_hyphenated_term = True
+                        has_hyphen_before = True
+                        
                 if match_end < len(self.torrent_name) and self.torrent_name[match_end] == '-':
                     # Check if there's a non-delimiter character after the hyphen
                     if match_end + 1 < len(self.torrent_name) and not re.match(delimiters, self.torrent_name[match_end + 1]):
+                        has_hyphen_after = True
+                
+                # Only skip if BOTH sides have hyphens (e.g., "something-HD-something")
+                # OR if it's before a hyphen and the match is very short/ambiguous (like "HD")
+                if key in ["resolution"]:
+                    match_text = self.torrent_name[match_start:match_end]
+                    # Skip if it's a short ambiguous term like "HD" that's part of a compound
+                    if has_hyphen_before or (has_hyphen_after and len(match_text) <= 3):
                         is_within_hyphenated_term = True
                 
-                # Skip this match if it's within a hyphenated term and is ambiguous
-                # (e.g., "HD" could be part of "DTS-HD" or standalone resolution)
-                if is_within_hyphenated_term and key in ["resolution"]:
+                # Skip this match if it's within a hyphenated term
+                if is_within_hyphenated_term:
                     # Still mark as matched to track the slice, but don't add to parts
                     self._part(key, (match_start, match_end), None, overwrite=False)
                     continue

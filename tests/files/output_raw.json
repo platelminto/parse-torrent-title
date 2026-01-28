@@ -1174,7 +1174,7 @@
     "encoder": "DSD",
     "filetype": "Mp-4",
     "quality": "Dvd-Rip",
-    "resolution": "480p",
+    "resolution": null,
     "title": "The Peacemaker",
     "year": 1997
   },
@@ -1254,7 +1254,10 @@
     "year": 1996
   },
   {
-    "audio": "DD2.0",
+    "audio": [
+      "DD2.0",
+      "AC3"
+    ],
     "codec": "H264",
     "encoder": "Will1869",
     "quality": "HDTV",
@@ -1264,7 +1267,10 @@
     "year": 2006
   },
   {
-    "audio": "TrueHD.7.1",
+    "audio": [
+      "TrueHD.7.1",
+      "Atmos"
+    ],
     "codec": "x264",
     "encoder": "EVO",
     "quality": "Bluray",
@@ -1477,7 +1483,10 @@
     "year": 2019
   },
   {
-    "audio": "DD- 2.0",
+    "audio": [
+      "DD- 2.0",
+      "AAC"
+    ],
     "codec": "x264",
     "language": "Hindi",
     "network": "SonyLiv",
@@ -1537,7 +1546,10 @@
     "year": 2020
   },
   {
-    "audio": "DD- 2.0",
+    "audio": [
+      "DD- 2.0",
+      "AAC"
+    ],
     "codec": "x264",
     "language": "Bengali",
     "network": "Hoichoi",
@@ -1550,7 +1562,10 @@
     "year": 2013
   },
   {
-    "audio": "DD- 5.1",
+    "audio": [
+      "DD- 5.1",
+      "AAC"
+    ],
     "codec": "x264",
     "language": "Tamil",
     "network": "AMZN",
@@ -1673,7 +1688,10 @@
       "Tel",
       "Mal"
     ],
-    "quality": "HDRip",
+    "quality": [
+      "HDRip",
+      "WEB"
+    ],
     "resolution": "720p",
     "size": "2GB",
     "subtitles": "MSub",
@@ -1905,7 +1923,10 @@
     "year": 2020
   },
   {
-    "audio": "5.1",
+    "audio": [
+      "5.1",
+      "2.0"
+    ],
     "codec": "x264",
     "resolution": "1080p",
     "title": "Turtle Odyssey",
@@ -2286,7 +2307,10 @@
     "year": 2019
   },
   {
-    "audio": "DD - 2.0",
+    "audio": [
+      "DD - 2.0",
+      "Dual Audio"
+    ],
     "codec": "x264",
     "language": [
       "Hindi",
@@ -2341,7 +2365,7 @@
     "encoder": "DSD",
     "filetype": "Mp-4",
     "quality": "Dvd-Rip",
-    "resolution": "480p",
+    "resolution": null,
     "title": "Wild Target",
     "year": 2010
   },
@@ -2479,7 +2503,10 @@
     "year": 2020
   },
   {
-    "audio": "DD2.0",
+    "audio": [
+      "DD2.0",
+      "AAC"
+    ],
     "codec": "x264",
     "encoder": "CineVood",
     "language": "Hindi",
@@ -2495,7 +2522,7 @@
     "encoder": "DSD",
     "filetype": "Mp-4",
     "quality": "Dvd-Rip",
-    "resolution": "480p",
+    "resolution": null,
     "title": "A Walk in the Woods",
     "year": 2015
   },
@@ -2508,7 +2535,10 @@
     "year": 2002
   },
   {
-    "audio": "AAC 5.1",
+    "audio": [
+      "AAC 5.1",
+      "stereo"
+    ],
     "codec": "H265",
     "encoder": "CalicoSkies",
     "language": [
@@ -2679,7 +2709,10 @@
       "Ita",
       "Eng"
     ],
-    "resolution": "720p",
+    "resolution": [
+      "720p",
+      "HD"
+    ],
     "site": "MIRCrew",
     "subtitles": [
       "Ita",
@@ -2869,7 +2902,10 @@
     "year": 2016
   },
   {
-    "audio": "DD- 5.1",
+    "audio": [
+      "DD- 5.1",
+      "Dual Audio"
+    ],
     "codec": "x265",
     "language": [
       "English",
@@ -2900,7 +2936,10 @@
       "English",
       "Hindi"
     ],
-    "quality": "HDRip",
+    "quality": [
+      "HDRip",
+      "WEB"
+    ],
     "resolution": "720p",
     "size": "2GB",
     "subtitles": "MSub",
@@ -3184,7 +3223,10 @@
       "Comedy",
       "West"
     ],
-    "resolution": "720p",
+    "resolution": [
+      "720p",
+      "HD"
+    ],
     "title": "The Kissing Bandit",
     "year": 1948
   },
@@ -3619,7 +3661,10 @@
     "title": "Naruto"
   },
   {
-    "audio": "TrueHD",
+    "audio": [
+      "TrueHD",
+      "Dual-Audio"
+    ],
     "quality": "Blu-Ray",
     "remux": true,
     "resolution": "1080p",
@@ -3660,13 +3705,19 @@
     "title": "Nisekoi"
   },
   {
-    "audio": "Dual Audio",
+    "audio": [
+      "Dual Audio",
+      "FLAC"
+    ],
     "codec": "HEVC",
     "site": "YURI",
     "title": "Kimi no Suizou o Tabetai"
   },
   {
-    "audio": "Dual-Audio",
+    "audio": [
+      "Dual-Audio",
+      "FLAC"
+    ],
     "episode": 24,
     "resolution": "1080p",
     "season": 1,
@@ -3803,7 +3854,10 @@
     "year": 2021
   },
   {
-    "audio": "DDP5.1",
+    "audio": [
+      "DDP5.1",
+      "AAC"
+    ],
     "codec": "x265",
     "filetype": "mkv",
     "language": "Tamil",
@@ -3865,7 +3919,10 @@
   },
   {
     "3d": true,
-    "audio": "DD.EX.5.1",
+    "audio": [
+      "DD.EX.5.1",
+      "DTS-HD.MA"
+    ],
     "codec": "AVC",
     "encoder": "SnOoP-UPR",
     "excess": "MULTI",
@@ -3884,7 +3941,10 @@
     "hdr": true,
     "quality": "Blu-ray",
     "remux": true,
-    "resolution": "2160p",
+    "resolution": [
+      "2160p",
+      "UHD"
+    ],
     "title": "Casino",
     "year": 1995
   },
@@ -3979,7 +4039,10 @@
     "codec": "x264",
     "filetype": "mkv",
     "language": "Tamil",
-    "resolution": "QHD",
+    "resolution": [
+      "QHD",
+      "2K"
+    ],
     "site": "www.1TamilBlasters.lat",
     "size": "3.4GB",
     "subtitles": "ESub",

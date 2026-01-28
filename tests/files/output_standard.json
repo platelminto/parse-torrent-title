@@ -2,12 +2,14 @@
   {
     "codec": "H.264",
     "quality": "HDTV",
-    "title": "The Walking Dead"
+    "title": "The Walking Dead",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "quality": "BRRip",
-    "title": "Hercules"
+    "title": "Hercules",
+    "resolution": "1080p"
   },
   {
     "codec": "Xvid",
@@ -22,13 +24,15 @@
   {
     "codec": "H.264",
     "quality": "BRRip",
-    "title": "22 Jump Street"
+    "title": "22 Jump Street",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "quality": "WEB-DL",
-    "title": "Hercules"
+    "title": "Hercules",
+    "resolution": "1080p"
   },
   {
     "codec": "Xvid",
@@ -37,17 +41,26 @@
   },
   {
     "codec": "Xvid",
-    "quality": "WEB-DL",
+    "quality": [
+      "WEB-DL",
+      "DVD-Rip"
+    ],
     "title": "Hercules"
   },
   {
     "codec": "H.264",
-    "quality": "WEB-DL",
+    "quality": [
+      "WEB-DL",
+      "Pay-Per-View Rip"
+    ],
     "title": "WWE Hell in a Cell"
   },
   {
     "codec": "H.264",
-    "quality": "HDTV",
+    "quality": [
+      "HDTV",
+      "Pay-Per-View Rip"
+    ],
     "title": "UFC 179"
   },
   {
@@ -59,17 +72,20 @@
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "quality": "WEB-DL",
-    "title": "X-Men Days of Future Past"
+    "title": "X-Men Days of Future Past",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "quality": "Cam",
-    "title": "Guardians Of The Galaxy"
+    "title": "Guardians Of The Galaxy",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital 5.1",
     "quality": "WEB-DL",
-    "title": "Marvel's Agents of S.H.I.E.L.D."
+    "title": "Marvel's Agents of S.H.I.E.L.D.",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
@@ -84,7 +100,8 @@
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "quality": "WEB-DL",
-    "title": "The Walking Dead"
+    "title": "The Walking Dead",
+    "resolution": "1080p"
   },
   {
     "audio": "LiNE",
@@ -159,7 +176,8 @@
   {
     "codec": "H.264",
     "quality": "BRRip",
-    "title": "2047 - Sights of Death"
+    "title": "2047 - Sights of Death",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
@@ -182,13 +200,15 @@
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "quality": "WEB-DL",
-    "title": "Dawn Of The Planet of The Apes"
+    "title": "Dawn Of The Planet of The Apes",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "quality": "WEB-DL",
-    "title": "Teenage Mutant Ninja Turtles"
+    "title": "Teenage Mutant Ninja Turtles",
+    "resolution": "720p"
   },
   {
     "audio": "AAC",
@@ -200,23 +220,27 @@
     "audio": "AAC 2.0",
     "codec": "H.264",
     "quality": "WEB-DL",
-    "title": "Into The Storm"
+    "title": "Into The Storm",
+    "resolution": "1080p"
   },
   {
     "audio": "Dual",
     "quality": "WEBRip",
-    "title": "Lucy"
+    "title": "Lucy",
+    "resolution": "720p"
   },
   {
     "audio": "DTS",
     "codec": "H.264",
     "quality": "BRRip",
-    "title": "Into The Storm"
+    "title": "Into The Storm",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "Sin City A Dame to Kill For"
+    "title": "Sin City A Dame to Kill For",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
@@ -247,7 +271,8 @@
   {
     "codec": "H.264",
     "quality": "HDTV",
-    "title": "Doctor Who"
+    "title": "Doctor Who",
+    "resolution": "720p"
   },
   {
     "audio": "AAC",
@@ -276,7 +301,8 @@
     "audio": "AAC 2.0",
     "codec": "H.264",
     "quality": "WEBRip",
-    "title": "Annabelle"
+    "title": "Annabelle",
+    "resolution": "1080p"
   },
   {
     "audio": "AAC",
@@ -296,7 +322,8 @@
     "codec": "H.264",
     "filetype": "MKV",
     "quality": "WEB-DL",
-    "title": "Eliza Graves"
+    "title": "Eliza Graves",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
@@ -309,12 +336,14 @@
   {
     "codec": "H.264",
     "quality": "HDTV",
-    "title": "doctor who"
+    "title": "doctor who",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "breaking bad"
+    "title": "breaking bad",
+    "resolution": "720p"
   },
   {
     "title": "Game of Thrones"
@@ -322,39 +351,45 @@
   {
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "sons of anarchy"
+    "title": "sons of anarchy",
+    "resolution": "480p"
   },
   {
     "codec": "H.264",
     "quality": "HDTV",
-    "title": "Sons of Anarchy"
+    "title": "Sons of Anarchy",
+    "resolution": "720p"
   },
   {
     "language": [
       "Russian",
       "English"
     ],
-    "title": "Community"
+    "title": "Community",
+    "resolution": "720p"
   },
   {
     "audio": "AAC",
     "codec": "H.264",
     "quality": "BRRip",
     "sbs": "SBS",
-    "title": "The Jungle Book"
+    "title": "The Jungle Book",
+    "resolution": "1080p"
   },
   {
     "audio": "AAC",
     "codec": "H.264",
     "quality": "BRRip",
     "sbs": "Half SBS",
-    "title": "Ant-Man"
+    "title": "Ant-Man",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital",
     "codec": "H.264",
     "quality": "WEB-DL",
-    "title": "Ice Age Collision Course"
+    "title": "Ice Age Collision Course",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
@@ -364,7 +399,8 @@
   {
     "quality": "WEB-DL",
     "size": "900MB",
-    "title": "The Purge: Election Year"
+    "title": "The Purge: Election Year",
+    "resolution": "720p"
   },
   {
     "quality": "Telesync",
@@ -375,13 +411,15 @@
     "codec": "H.265",
     "quality": "Blu-ray",
     "size": "999MB",
-    "title": "The Hateful Eight"
+    "title": "The Hateful Eight",
+    "resolution": "720p"
   },
   {
     "audio": "AAC",
     "codec": "H.264",
     "quality": "BRRip",
-    "title": "The Boss"
+    "title": "The Boss",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
@@ -392,7 +430,8 @@
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "language": "Hindi",
-    "title": "Akira"
+    "title": "Akira",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital",
@@ -410,23 +449,27 @@
     "codec": "H.264",
     "quality": "Blu-ray",
     "subtitles": "Danish",
-    "title": "The X-Files"
+    "title": "The X-Files",
+    "resolution": "720p"
   },
   {
     "codec": "H.265",
     "quality": "Blu-ray",
     "subtitles": "Danish",
-    "title": "The X-Files"
+    "title": "The X-Files",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "The X-Files"
+    "title": "The X-Files",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "quality": "HDTV",
-    "title": "The Flash"
+    "title": "The Flash",
+    "resolution": "720p"
   },
   {
     "filetype": "MP4",
@@ -443,17 +486,20 @@
     "codec": "H.264",
     "language": "Nordic",
     "quality": "Blu-ray",
-    "title": "Blind"
+    "title": "Blind",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
-    "title": "Family Guy"
+    "title": "Family Guy",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "network": "Amazon Studios",
     "quality": "WEB-DL",
-    "title": "South Park"
+    "title": "South Park",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
@@ -471,7 +517,8 @@
     "codec": "H.264",
     "quality": "WEB-DL",
     "subtitles": "Korean",
-    "title": "The Martian"
+    "title": "The Martian",
+    "resolution": "540p"
   },
   {
     "filetype": "MP4",
@@ -481,18 +528,21 @@
     "audio": "AAC",
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "The Legend of 1900"
+    "title": "The Legend of 1900",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "2001 A Space Odyssey"
+    "title": "2001 A Space Odyssey",
+    "resolution": "1080p"
   },
   {
     "audio": "AAC 5.1",
     "codec": "H.264",
     "quality": "WEBRip",
-    "title": "Impractical Jokers The Movie"
+    "title": "Impractical Jokers The Movie",
+    "resolution": "1080p"
   },
   {
     "audio": "AAC 5.1",
@@ -500,7 +550,8 @@
     "language": "Polish",
     "network": "Netflix",
     "quality": "WEB-DL",
-    "title": "1983"
+    "title": "1983",
+    "resolution": "1080p"
   },
   {
     "audio": "AAC",
@@ -513,7 +564,8 @@
     "codec": "H.264",
     "quality": "WEB-DL",
     "subtitles": "ExYu",
-    "title": "The Meg"
+    "title": "The Meg",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
@@ -529,7 +581,8 @@
       "Hindi",
       "English"
     ],
-    "title": "Joker"
+    "title": "Joker",
+    "resolution": "720p"
   },
   {
     "audio": "AAC",
@@ -540,7 +593,8 @@
       "Chinese",
       "English"
     ],
-    "title": "IP Man And Four Kings"
+    "title": "IP Man And Four Kings",
+    "resolution": "1080p"
   },
   {
     "title": "American Dad!"
@@ -555,7 +609,8 @@
   },
   {
     "quality": "DVD-Rip",
-    "title": "The Simpsons"
+    "title": "The Simpsons",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
@@ -566,25 +621,29 @@
     "codec": "H.264",
     "filetype": "MKV",
     "quality": "HDTV",
-    "title": "Jimmy Not Funny"
+    "title": "Jimmy Not Funny",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "network": "Amazon Studios",
     "quality": "WEBRip",
-    "title": "Tom Clancys Jack Ryan"
+    "title": "Tom Clancys Jack Ryan",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital Plus 5.1",
     "codec": "H.264",
     "language": "Hindi",
     "subtitles": "English",
-    "title": "Sacred Games"
+    "title": "Sacred Games",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "quality": "HDTV",
-    "title": "Homeland"
+    "title": "Homeland",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital Plus 5.1",
@@ -592,7 +651,8 @@
     "codec": "H.265",
     "network": "Apple TV+",
     "quality": "WEBRip",
-    "title": "Home Before Dark"
+    "title": "Home Before Dark",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
@@ -601,7 +661,8 @@
   },
   {
     "codec": "H.264",
-    "title": "Roswell New Mexico"
+    "title": "Roswell New Mexico",
+    "resolution": "480p"
   },
   {
     "codec": "H.264",
@@ -617,7 +678,8 @@
     ],
     "network": "Amazon Studios",
     "quality": "WEB-DL",
-    "title": "The Blacklist"
+    "title": "The Blacklist",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital Plus 2.0",
@@ -625,7 +687,8 @@
     "codec": "H.265",
     "network": "Amazon Studios",
     "quality": "WEB-DL",
-    "title": "Are You Being Served"
+    "title": "Are You Being Served",
+    "resolution": "576p"
   },
   {
     "codec": "H.264",
@@ -641,29 +704,34 @@
     "filetype": "MP4",
     "quality": "WEB-DL",
     "size": "4.3GB",
-    "title": "Marvels Iron Fist"
+    "title": "Marvels Iron Fist",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "Dag Vreemde Man"
+    "title": "Dag Vreemde Man",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "Boi"
+    "title": "Boi",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "network": "Amazon Studios",
     "quality": "WEBRip",
     "size": "800MB",
-    "title": "Label Me"
+    "title": "Label Me",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "quality": "WEBRip",
-    "title": "A Touch Of Cloth"
+    "title": "A Touch Of Cloth",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
@@ -691,28 +759,33 @@
     ],
     "quality": "BDRip",
     "subtitles": "Available",
-    "title": "1917"
+    "title": "1917",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "Johnny English"
+    "title": "Johnny English",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "quality": "BRRip",
-    "title": "Johnny English Reborn"
+    "title": "Johnny English Reborn",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "Johnny English Strikes Again"
+    "title": "Johnny English Strikes Again",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital Plus",
     "codec": "H.265",
     "quality": "Blu-ray",
-    "title": "The French Connection"
+    "title": "The French Connection",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
@@ -721,23 +794,27 @@
   },
   {
     "codec": "H.264",
-    "title": "Heavy Rescue 401"
+    "title": "Heavy Rescue 401",
+    "resolution": "480p"
   },
   {
-    "title": "Coronation Street"
+    "title": "Coronation Street",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital Plus 2.0",
     "codec": "H.264",
     "network": "Amazon Studios",
     "quality": "WEB-DL",
-    "title": "Deadliest Catch"
+    "title": "Deadliest Catch",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "network": "Netflix",
     "quality": "WEBRip",
-    "title": "New Girl"
+    "title": "New Girl",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
@@ -749,7 +826,8 @@
     "codec": "H.264",
     "filetype": "MP4",
     "quality": "DVD-Rip",
-    "title": "The Peacemaker"
+    "title": "The Peacemaker",
+    "resolution": null
   },
   {
     "audio": "Dolby Digital",
@@ -762,7 +840,8 @@
       "Italian",
       "English"
     ],
-    "title": "The Big Bus - Il fantabus"
+    "title": "The Big Bus - Il fantabus",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital 5.1",
@@ -776,22 +855,28 @@
       "Italian",
       "English"
     ],
-    "title": "The Hunt"
+    "title": "The Hunt",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "Near Death"
+    "title": "Near Death",
+    "audio": "AAC",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "The Red Pony"
+    "title": "The Red Pony",
+    "audio": "AAC",
+    "resolution": "1080p"
   },
   {
     "codec": "H.265",
     "quality": "Blu-ray",
-    "title": "We Were Soldiers"
+    "title": "We Were Soldiers",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital 5.1",
@@ -804,18 +889,25 @@
       "Italian",
       "English"
     ],
-    "title": "Diabolique"
+    "title": "Diabolique",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.264",
-    "title": "Road House 2 Last Call"
+    "title": "Road House 2 Last Call",
+    "quality": "HDTV",
+    "resolution": "1080p"
   },
   {
-    "audio": "Dolby TrueHD 7.1",
+    "audio": [
+      "Dolby TrueHD 7.1",
+      "Dolby Atmos"
+    ],
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "We Summon The Darkness"
+    "title": "We Summon The Darkness",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
@@ -824,40 +916,51 @@
       "French"
     ],
     "subtitles": "English",
-    "title": "37\u00b02 le matin - Betty Blue"
+    "title": "37\u00b02 le matin - Betty Blue",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "Non-Fiction"
+    "title": "Non-Fiction",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
-    "title": "Spring Night Summer Night"
+    "title": "Spring Night Summer Night",
+    "quality": "BDRip"
   },
   {
     "codec": "H.264",
     "network": "Amazon Studios",
-    "title": "Insecure"
+    "title": "Insecure",
+    "quality": "WEBRip",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
-    "title": "Let It Fall Los Angeles 1982-1992"
+    "title": "Let It Fall Los Angeles 1982-1992",
+    "quality": "HDTV"
   },
   {
     "codec": "H.264",
-    "title": "Dr Phil"
+    "title": "Dr Phil",
+    "quality": "HDTV",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital Plus 5.1",
     "codec": "H.264",
     "network": "Amazon Studios",
-    "title": "Starhunter ReduX"
+    "title": "Starhunter ReduX",
+    "quality": "WEBRip",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "quality": "WEBRip",
-    "title": "Jimmy Fallon"
+    "title": "Jimmy Fallon",
+    "resolution": "720p"
   },
   {
     "title": "Kami no Tou"
@@ -873,76 +976,100 @@
     "title": "Lost Gold of World War II"
   },
   {
-    "title": "Plunderer"
+    "title": "Plunderer",
+    "resolution": "360p"
   },
   {
     "codec": "H.264",
     "filetype": "MKV",
     "size": "1.4GB",
-    "title": "Blood Blockade Battlefront & Beyond"
+    "title": "Blood Blockade Battlefront & Beyond",
+    "audio": "AAC",
+    "resolution": "1080p"
   },
   {
-    "title": "Tower of God"
+    "title": "Tower of God",
+    "resolution": "480p"
   },
   {
     "episode": 12,
     "subtitles": "Available",
-    "title": "Kami no Tou"
+    "title": "Kami no Tou",
+    "resolution": "720p"
   },
   {
     "codec": "H.265",
     "subtitles": "English",
-    "title": "Plunderer"
+    "title": "Plunderer",
+    "resolution": "1080p"
   },
   {
-    "title": "Tamayomi"
+    "title": "Tamayomi",
+    "resolution": "360p"
   },
   {
-    "title": "Ahiru no Sora"
-  },
-  {
-    "subtitles": "Available",
-    "title": "Shadowverse"
-  },
-  {
-    "title": "A3! Season Spring & Summer"
+    "title": "Ahiru no Sora",
+    "resolution": "480p"
   },
   {
     "subtitles": "Available",
-    "title": "Kitsutsuki Tanteidokoro"
+    "title": "Shadowverse",
+    "resolution": "720p"
+  },
+  {
+    "title": "A3! Season Spring & Summer",
+    "resolution": "360p"
   },
   {
     "subtitles": "Available",
-    "title": "Princess Connect! Re-Dive"
+    "title": "Kitsutsuki Tanteidokoro",
+    "resolution": "720p"
   },
   {
-    "title": "Fruits Basket"
+    "subtitles": "Available",
+    "title": "Princess Connect! Re-Dive",
+    "resolution": "720p"
   },
   {
-    "audio": "Dolby Digital 2.0",
+    "title": "Fruits Basket",
+    "resolution": "720p"
+  },
+  {
+    "audio": [
+      "Dolby Digital 2.0",
+      "AAC",
+      "Dual"
+    ],
     "codec": "H.264",
     "network": "SONY LIV",
     "size": "1.1GB",
     "subtitles": "English",
-    "title": "Kadakh"
+    "title": "Kadakh",
+    "quality": "WEB-DL",
+    "resolution": "720p"
   },
   {
     "codec": "H.265",
     "quality": "Blu-ray",
-    "title": "Satyagraha"
+    "title": "Satyagraha",
+    "audio": "AAC 5.1",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "quality": "Blu-ray",
     "subtitles": "Available",
-    "title": "Shuddh Desi Romance"
+    "title": "Shuddh Desi Romance",
+    "audio": "AAC 5.1",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "quality": "WEB-DL",
     "subtitles": "English",
-    "title": "Face 2 Face"
+    "title": "Face 2 Face",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital 5.1",
@@ -950,33 +1077,50 @@
     "network": "Netflix",
     "size": "800MB",
     "subtitles": "English",
-    "title": "Chaman Bahar"
+    "title": "Chaman Bahar",
+    "quality": "WEBRip",
+    "resolution": "720p"
   },
   {
-    "audio": "Dolby Digital 2.0",
+    "audio": [
+      "Dolby Digital 2.0",
+      "AAC",
+      "Dual"
+    ],
     "codec": "H.264",
     "size": "650MB",
     "subtitles": "English",
-    "title": "Piprabidya"
+    "title": "Piprabidya",
+    "quality": "WEB-DL",
+    "resolution": "720p"
   },
   {
-    "audio": "Dolby Digital 5.1",
+    "audio": [
+      "Dolby Digital 5.1",
+      "AAC"
+    ],
     "codec": "H.264",
     "network": "Amazon Studios",
     "size": "1.1GB",
     "subtitles": "English",
-    "title": "Penguin"
+    "title": "Penguin",
+    "quality": "WEBRip",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital",
     "codec": "H.264",
     "subtitles": "English",
-    "title": "Kadakh"
+    "title": "Kadakh",
+    "quality": "WEBRip",
+    "resolution": "1080p"
   },
   {
     "codec": "H.265",
     "quality": "Blu-ray",
-    "title": "Satyagraha"
+    "title": "Satyagraha",
+    "audio": "AAC 5.1",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
@@ -994,20 +1138,25 @@
     "audio": "Dolby Digital 5.1",
     "quality": "Blu-ray",
     "subtitles": "English",
-    "title": "M.S. Dhoni: The Untold Story"
+    "title": "M.S. Dhoni: The Untold Story",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "quality": "Blu-ray",
     "subtitles": "Available",
-    "title": "Detective Byomkesh Bakshy"
+    "title": "Detective Byomkesh Bakshy",
+    "audio": "DTS 5.1",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "filetype": "MKV",
     "quality": "WEBRip",
     "subtitles": "English",
-    "title": "Kasganj"
+    "title": "Kasganj",
+    "audio": "AAC",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
@@ -1015,7 +1164,9 @@
     "network": "ZEE5",
     "quality": "WEB-DL",
     "subtitles": "English",
-    "title": "Kasganj"
+    "title": "Kasganj",
+    "audio": "AAC 2.0",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital 5.1",
@@ -1025,24 +1176,32 @@
       "Telugu",
       "Malayalam"
     ],
-    "quality": "WEB-DL",
+    "quality": [
+      "WEB-DL",
+      "WEBRip"
+    ],
     "subtitles": "Available",
-    "title": "Penguin"
+    "title": "Penguin",
+    "resolution": "720p"
   },
   {
-    "title": "Kakushigoto"
+    "title": "Kakushigoto",
+    "resolution": "720p"
   },
   {
     "codec": "H.265",
     "subtitles": "English",
-    "title": "Shaman King"
+    "title": "Shaman King",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital Plus 5.1",
     "codec": "H.264",
     "language": "Japanese",
     "network": "Netflix",
-    "title": "A Whisker Away"
+    "title": "A Whisker Away",
+    "quality": "WEBRip",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital 5.1",
@@ -1050,7 +1209,8 @@
     "filetype": "MKV",
     "language": "Japanese",
     "quality": "Blu-ray",
-    "title": "liz and the blue bird"
+    "title": "liz and the blue bird",
+    "resolution": "1080p"
   },
   {
     "filetype": "MKV",
@@ -1060,24 +1220,30 @@
     ],
     "network": "Amazon Studios",
     "quality": "WEB-DL",
-    "title": "The Flash"
+    "title": "The Flash",
+    "codec": "H.264",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital Plus 5.1",
     "codec": "H.264",
     "network": "DC Universe",
-    "title": "Harley Quinn"
+    "title": "Harley Quinn",
+    "quality": "WEB-DL",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
-    "title": "The Killer Truth"
+    "title": "The Killer Truth",
+    "quality": "HDTV"
   },
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.265",
     "network": "HBO Max",
     "quality": "WEBRip",
-    "title": "The Flintstones"
+    "title": "The Flintstones",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
@@ -1087,29 +1253,41 @@
   {
     "audio": "Dolby Digital Plus 5.1",
     "network": "Amazon Studios",
-    "title": "Blindspot"
+    "title": "Blindspot",
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital Plus 5.1",
     "network": "Amazon Studios",
-    "title": "In the Dark"
+    "title": "In the Dark",
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "network": "Netflix",
-    "title": "Babies"
+    "title": "Babies",
+    "quality": "WEBRip",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
-    "title": "WWE Monday Night RAW"
+    "title": "WWE Monday Night RAW",
+    "quality": "HDTV",
+    "resolution": "720p"
   },
   {
     "quality": "WEB-DL",
-    "title": "The Rachel Maddow Show"
+    "title": "The Rachel Maddow Show",
+    "resolution": "540p"
   },
   {
     "quality": "WEB-DL",
-    "title": "The Last Word with Lawrence O'Donnell"
+    "title": "The Last Word with Lawrence O'Donnell",
+    "resolution": "540p"
   },
   {
     "codec": "H.264",
@@ -1119,36 +1297,52 @@
   {
     "audio": "AAC 2.0",
     "network": "MSNBC",
-    "title": "The Rachel Maddow Show"
+    "title": "The Rachel Maddow Show",
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "quality": "WEBRip",
-    "title": "Lalbazaar"
+    "title": "Lalbazaar",
+    "audio": "AAC",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "network": "HBO Max",
-    "title": "Scandalous The Untold Story of the National Enquirer"
+    "title": "Scandalous The Untold Story of the National Enquirer",
+    "quality": "WEBRip",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
-    "title": "Turtle Odyssey"
+    "title": "Turtle Odyssey",
+    "audio": [
+      "5.1",
+      "Dual"
+    ],
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
-    "title": "Still A Mystery"
+    "title": "Still A Mystery",
+    "quality": "WEBRip"
   },
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.265",
     "quality": "Blu-ray",
-    "title": "When Bjork Met Attenborough"
+    "title": "When Bjork Met Attenborough",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "network": "Hulu Networks",
-    "title": "And We Go Green"
+    "title": "And We Go Green",
+    "quality": "WEBRip",
+    "resolution": "720p"
   },
   {
     "subtitles": "Available",
@@ -1156,25 +1350,33 @@
   },
   {
     "codec": "H.264",
-    "title": "Inventing Tomorrow"
+    "title": "Inventing Tomorrow",
+    "quality": "HDTV"
   },
   {
     "codec": "H.264",
-    "title": "Eating Up Easter"
+    "title": "Eating Up Easter",
+    "quality": "HDTV"
   },
   {
     "codec": "H.264",
     "quality": "WEBRip",
-    "title": "Trackers"
+    "title": "Trackers",
+    "resolution": "720p"
   },
   {
     "codec": "H.265",
     "filetype": "MKV",
-    "title": "When Pop Went Epic"
+    "title": "When Pop Went Epic",
+    "audio": "AAC",
+    "quality": "HDTV",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
-    "title": "Big Brother AU"
+    "title": "Big Brother AU",
+    "quality": "WEBRip",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
@@ -1190,33 +1392,47 @@
     ],
     "network": "Amazon Studios",
     "quality": "WEB-DL",
-    "title": "Marvel's Agents of S.H.I.E.L.D."
+    "title": "Marvel's Agents of S.H.I.E.L.D.",
+    "codec": "H.264",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "subtitles": "English",
-    "title": "Your Honor"
+    "title": "Your Honor",
+    "audio": "AAC",
+    "quality": "WEBRip",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "filetype": "MP4",
-    "title": "The Beat with Ari Melber"
+    "title": "The Beat with Ari Melber",
+    "quality": "WEBRip",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "subtitles": "Available",
-    "title": "Thirteen"
+    "title": "Thirteen",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "network": "Netflix",
     "subtitles": "English",
-    "title": "Paan Singh Tomar"
+    "title": "Paan Singh Tomar",
+    "audio": "AAC 5.1",
+    "quality": "WEBRip",
+    "resolution": "720p"
   },
   {
     "audio": "AAC 2.0",
     "network": "Hulu Networks",
-    "title": "MASH"
+    "title": "MASH",
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
@@ -1225,10 +1441,12 @@
   },
   {
     "language": "English",
-    "title": "Split Image"
+    "title": "Split Image",
+    "codec": "Xvid"
   },
   {
-    "title": "Kaguya-sama wa Kokurasetai"
+    "title": "Kaguya-sama wa Kokurasetai",
+    "resolution": "720p"
   },
   {
     "audio": "Mono",
@@ -1240,57 +1458,70 @@
   {
     "codec": "H.264",
     "quality": "WEBRip",
-    "title": "NOS4A2"
+    "title": "NOS4A2",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
-    "title": "Diners Drive-Ins and Dives"
+    "title": "Diners Drive-Ins and Dives",
+    "quality": "WEBRip"
   },
   {
     "filetype": "MKV",
-    "title": "Arte"
+    "title": "Arte",
+    "resolution": "720p"
   },
   {
-    "title": "Kaguya-sama wa Kokurasetai! Tensai-tachi no Renai Zunousen"
+    "title": "Kaguya-sama wa Kokurasetai! Tensai-tachi no Renai Zunousen",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "network": "Amazon Studios",
-    "title": "Prawaas"
+    "title": "Prawaas",
+    "quality": "WEB-DL",
+    "resolution": "1080p"
   },
   {
     "filetype": "MKV",
     "subtitles": "Available",
-    "title": "Yesterday o Utatte"
+    "title": "Yesterday o Utatte",
+    "resolution": "720p"
   },
   {
     "filetype": "MKV",
     "subtitles": "Available",
-    "title": "Honzuki no Gekokujou - Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen"
+    "title": "Honzuki no Gekokujou - Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen",
+    "resolution": "1080p"
   },
   {
     "quality": "WEBRip",
-    "title": "Babyteeth"
+    "title": "Babyteeth",
+    "resolution": "1080p"
   },
   {
     "quality": "Blu-ray",
-    "title": "Weekend at Bernie's II"
+    "title": "Weekend at Bernie's II",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "quality": "WEBRip",
-    "title": "Naked and Afraid XL"
+    "title": "Naked and Afraid XL",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.265",
     "network": "Netflix",
     "quality": "WEBRip",
-    "title": "The Fresh Prince of Bel-Air"
+    "title": "The Fresh Prince of Bel-Air",
+    "resolution": "1080p"
   },
   {
-    "title": "Tsugumomo"
+    "title": "Tsugumomo",
+    "resolution": "720p"
   },
   {
     "resolution": "720p",
@@ -1299,16 +1530,21 @@
   },
   {
     "codec": "H.264",
-    "title": "Police Ten 7"
+    "title": "Police Ten 7",
+    "quality": "HDTV"
   },
   {
     "codec": "H.264",
-    "title": "2nd Chance Charlie"
+    "title": "2nd Chance Charlie",
+    "quality": "HDTV"
   },
   {
     "codec": "H.265",
     "filetype": "MKV",
-    "title": "Billy and Us"
+    "title": "Billy and Us",
+    "audio": "AAC",
+    "quality": "HDTV",
+    "resolution": "1080p"
   },
   {
     "codec": "H.265",
@@ -1317,25 +1553,33 @@
   },
   {
     "quality": "WEB-DL",
-    "title": "Amar"
+    "title": "Amar",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
-    "title": "Oolu"
+    "title": "Oolu",
+    "quality": "HDTV",
+    "resolution": "720p"
   },
   {
-    "audio": "Dolby Digital 2.0",
+    "audio": [
+      "Dolby Digital 2.0",
+      "Dual"
+    ],
     "codec": "H.264",
     "quality": "Blu-ray",
     "size": "800MB",
     "subtitles": "Available",
-    "title": "Vacancy"
+    "title": "Vacancy",
+    "resolution": "720p"
   },
   {
     "audio": "Dual",
     "codec": "H.264",
     "quality": "WEB-DL",
-    "title": "Darkness Falls"
+    "title": "Darkness Falls",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital 5.1",
@@ -1344,7 +1588,9 @@
       "Italian",
       "English"
     ],
-    "title": "Wasp Network"
+    "title": "Wasp Network",
+    "quality": "WEBRip",
+    "resolution": "1080p"
   },
   {
     "filetype": "MKV",
@@ -1353,13 +1599,16 @@
       "English"
     ],
     "quality": "Blu-ray",
-    "title": "Darlin"
+    "title": "Darlin",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "filetype": "MP4",
     "quality": "DVD-Rip",
-    "title": "Wild Target"
+    "title": "Wild Target",
+    "audio": "AAC",
+    "resolution": null
   },
   {
     "audio": "Dolby Digital 5.1",
@@ -1368,39 +1617,51 @@
       "Italian",
       "Danish"
     ],
-    "title": "Infection-What We Become"
+    "title": "Infection-What We Become",
+    "quality": "BDRip",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "language": "Hindi",
-    "title": "Perversion"
+    "title": "Perversion",
+    "quality": "WEB-DL",
+    "resolution": "720p"
   },
   {
     "codec": "H.265",
     "quality": "Blu-ray",
-    "title": "Casino"
+    "title": "Casino",
+    "audio": "AAC 7.1",
+    "resolution": "1080p"
   },
   {
     "audio": "5.1",
     "quality": "WEB-DL",
-    "title": "Parks and Recreation"
+    "title": "Parks and Recreation",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "quality": "Blu-ray",
     "subtitles": "Available",
-    "title": "The Amazing Spider-Man 2"
+    "title": "The Amazing Spider-Man 2",
+    "audio": "AAC 5.1",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital Plus 5.1",
     "codec": "H.265",
     "filetype": "MKV",
-    "title": "Jay And Silent Bob Strike Back"
+    "title": "Jay And Silent Bob Strike Back",
+    "quality": "BDRip",
+    "resolution": "1080p"
   },
   {
     "quality": "Blu-ray",
     "subtitles": "English",
-    "title": "Mother [Madre]"
+    "title": "Mother [Madre]",
+    "resolution": "720p"
   },
   {
     "language": "Bengali",
@@ -1415,13 +1676,16 @@
       "Russian"
     ],
     "subtitles": "Available",
-    "title": "The Deep Blue Sea"
+    "title": "The Deep Blue Sea",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby TrueHD 5.1",
     "codec": "H.265",
     "filetype": "MKV",
-    "title": "Clerks II"
+    "title": "Clerks II",
+    "quality": "BDRip",
+    "resolution": "1080p"
   },
   {
     "title": "Rustlers on Horseback"
@@ -1429,7 +1693,8 @@
   {
     "codec": "H.264",
     "quality": "WEBRip",
-    "title": "Athlete A"
+    "title": "Athlete A",
+    "resolution": "1080p"
   },
   {
     "language": "Bengali",
@@ -1437,20 +1702,28 @@
     "title": "SHAHENSHA"
   },
   {
-    "audio": "Dolby Digital 2.0",
+    "audio": [
+      "Dolby Digital 2.0",
+      "AAC"
+    ],
     "codec": "H.264",
     "network": "Amazon Studios",
     "subtitles": "English",
-    "title": "Rasbhari"
+    "title": "Rasbhari",
+    "quality": "WEB-DL"
   },
   {
     "codec": "H.264",
     "filetype": "MP4",
     "quality": "DVD-Rip",
-    "title": "A Walk in the Woods"
+    "title": "A Walk in the Woods",
+    "audio": "AAC",
+    "resolution": null
   },
   {
-    "title": "Treasure Planet"
+    "title": "Treasure Planet",
+    "audio": "FLAC",
+    "resolution": "1080p"
   },
   {
     "codec": "H.265",
@@ -1458,40 +1731,54 @@
       "English",
       "Japanese"
     ],
-    "title": "L.A. Story"
+    "title": "L.A. Story",
+    "audio": [
+      "AAC 5.1",
+      "Dual"
+    ],
+    "resolution": "4K"
   },
   {
     "codec": "H.265",
-    "title": "Monk"
+    "title": "Monk",
+    "resolution": "1080p"
   },
   {
     "codec": "H.265",
-    "title": "24 Hours In A And E"
+    "title": "24 Hours In A And E",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
-    "title": "Stephen Colbert"
+    "title": "Stephen Colbert",
+    "quality": "HDTV",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "quality": "WEBRip",
-    "title": "American Masters"
+    "title": "American Masters",
+    "resolution": "720p"
   },
   {
     "codec": "H.265",
-    "title": "The 11th Hour with Brian Williams"
+    "title": "The 11th Hour with Brian Williams",
+    "quality": "WEBRip",
+    "resolution": "1080p"
   },
   {
     "audio": "Dual",
     "codec": "H.265",
     "quality": "Blu-ray",
     "subtitles": "English",
-    "title": "Black Lagoon"
+    "title": "Black Lagoon",
+    "resolution": "1080p"
   },
   {
     "codec": "H.265",
     "subtitles": "Available",
-    "title": "One Piece"
+    "title": "One Piece",
+    "resolution": "1080p"
   },
   {
     "title": "Shokugeki No Soma"
@@ -1500,25 +1787,32 @@
     "audio": "DTS-HD MA 5.1",
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "Dil Chahta Hai"
+    "title": "Dil Chahta Hai",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "network": "Amazon Studios",
     "subtitles": "English",
-    "title": "NOS4A2"
+    "title": "NOS4A2",
+    "audio": "AAC",
+    "quality": "WEB-DL",
+    "resolution": "720p"
   },
   {
     "codec": "H.265",
     "subtitles": "Available",
-    "title": "Haikyuu!!"
+    "title": "Haikyuu!!",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.264",
     "size": "2.5GB",
     "subtitles": "English",
-    "title": "Moothon: The Elder One"
+    "title": "Moothon: The Elder One",
+    "quality": "WEB-DL",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital 5.1",
@@ -1532,7 +1826,8 @@
       "Italian",
       "English"
     ],
-    "title": "Doppia Pelle - Le Daim"
+    "title": "Doppia Pelle - Le Daim",
+    "resolution": "1080p"
   },
   {
     "audio": "DTS-HD MA 5.1",
@@ -1545,7 +1840,8 @@
       "Italian",
       "English"
     ],
-    "title": "The Twilight Saga: Breaking Down - Parte 2"
+    "title": "The Twilight Saga: Breaking Down - Parte 2",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital 2.0",
@@ -1553,13 +1849,15 @@
     "quality": "Blu-ray",
     "size": "1.3GB",
     "subtitles": "English",
-    "title": "The Painted Bird"
+    "title": "The Painted Bird",
+    "resolution": "720p"
   },
   {
     "audio": "DTS-HD MA 5.1",
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "Proximity"
+    "title": "Proximity",
+    "resolution": "1080p"
   },
   {
     "codec": "Xvid",
@@ -1577,11 +1875,14 @@
       "Italian",
       "English"
     ],
-    "title": "Just Mercy - Il diritto di opporsi"
+    "title": "Just Mercy - Il diritto di opporsi",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
-    "title": "Mae West Dirty Blonde"
+    "title": "Mae West Dirty Blonde",
+    "quality": "HDTV",
+    "resolution": "720p"
   },
   {
     "language": "English",
@@ -1591,22 +1892,27 @@
   {
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "War"
+    "title": "War",
+    "resolution": "720p"
   },
   {
     "codec": "Xvid",
-    "title": "X-Men"
+    "title": "X-Men",
+    "quality": "BRRip"
   },
   {
     "codec": "Xvid",
-    "title": "X2 X-Men United"
+    "title": "X2 X-Men United",
+    "quality": "BRRip"
   },
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.264",
     "size": "1.5GB",
     "subtitles": "English",
-    "title": "#Yaaram"
+    "title": "#Yaaram",
+    "quality": "WEBRip",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital 5.1",
@@ -1615,7 +1921,9 @@
       "Italian",
       "Spanish"
     ],
-    "title": "Nessuno sa chi io sono qui-Nadie sabe que estoy aqui"
+    "title": "Nessuno sa chi io sono qui-Nadie sabe que estoy aqui",
+    "quality": "WEBRip",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital 2.0",
@@ -1624,7 +1932,9 @@
       "Italian",
       "English"
     ],
-    "title": "L.ultima corve"
+    "title": "L.ultima corve",
+    "quality": "BDRip",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital 2.0",
@@ -1633,7 +1943,9 @@
       "Italian",
       "English"
     ],
-    "title": "La signora di Shanghai-The lady from Shanghai"
+    "title": "La signora di Shanghai-The lady from Shanghai",
+    "quality": "BDRip",
+    "resolution": "1080p"
   },
   {
     "language": [
@@ -1644,7 +1956,8 @@
     ],
     "quality": "Blu-ray",
     "subtitles": "English",
-    "title": "The Four"
+    "title": "The Four",
+    "resolution": "720p"
   },
   {
     "audio": "Dual",
@@ -1652,15 +1965,21 @@
     "network": "Amazon Studios",
     "size": "1.2GB",
     "subtitles": "English",
-    "title": "Samrat & Co."
+    "title": "Samrat & Co.",
+    "quality": "WEBRip",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "quality": "WEB-DL",
-    "title": "Tulips in Spring"
+    "title": "Tulips in Spring",
+    "resolution": "720p"
   },
   {
-    "audio": "Dolby Digital 5.1",
+    "audio": [
+      "Dolby Digital 5.1",
+      "Dual"
+    ],
     "codec": "H.265",
     "language": [
       "English",
@@ -1668,113 +1987,146 @@
     ],
     "network": "Netflix",
     "size": "950MB",
-    "title": "Adu"
+    "title": "Adu",
+    "quality": "WEB-DL",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "resolution": "720p",
-    "title": "When Sparks Fly"
+    "title": "When Sparks Fly",
+    "quality": "HDTV"
   },
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "quality": "WEB-DL",
+    "quality": [
+      "WEB-DL",
+      "WEBRip"
+    ],
     "subtitles": "Available",
-    "title": "The Fxxk-It List"
+    "title": "The Fxxk-It List",
+    "resolution": "720p"
   },
   {
     "codec": "H.265",
     "filetype": "MKV",
-    "title": "The Twilight Saga Breaking Dawn - Part 2"
+    "title": "The Twilight Saga Breaking Dawn - Part 2",
+    "audio": "DTS-HD MA 7.1",
+    "quality": "BDRip",
+    "resolution": "1080p"
   },
   {
     "codec": "H.265",
     "filetype": "MKV",
     "quality": "DVD-Rip",
-    "title": "Scooby-Doo Goes Hollywood"
+    "title": "Scooby-Doo Goes Hollywood",
+    "audio": "AAC 1.0",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital",
     "codec": "H.264",
     "subtitles": "English",
-    "title": "Sarkar 3"
+    "title": "Sarkar 3",
+    "quality": "WEBRip",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.264",
     "network": "Amazon Studios",
     "quality": "WEB-DL",
-    "title": "Jagga Jagravan Joga"
+    "title": "Jagga Jagravan Joga",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "filetype": "MP4",
-    "title": "Sea Monsters"
+    "title": "Sea Monsters",
+    "audio": "AAC",
+    "quality": "HDTV",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "quality": "Blu-ray",
     "subtitles": "English",
-    "title": "Dukhtar"
+    "title": "Dukhtar",
+    "resolution": "1080p"
   },
   {
     "subtitles": "English",
-    "title": "Main Teri Tu Mera"
+    "title": "Main Teri Tu Mera",
+    "quality": "WEBRip",
+    "resolution": "720p"
   },
   {
     "quality": "WEB-DL",
-    "title": "RangiTaranga"
+    "title": "RangiTaranga",
+    "resolution": "720p"
   },
   {
     "codec": "H.265",
     "quality": "Blu-ray",
-    "title": "McFarland USA"
+    "title": "McFarland USA",
+    "resolution": "1080p"
   },
   {
     "audio": "DTS-HD MA 5.1",
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "Jasper Mall"
+    "title": "Jasper Mall",
+    "resolution": "1080p"
   },
   {
     "codec": "H.265",
     "language": "Japanese",
     "quality": "Blu-ray",
-    "title": "Lupin III The First"
+    "title": "Lupin III The First",
+    "resolution": "1080p"
   },
   {
     "codec": "H.265",
     "language": "Japanese",
     "subtitles": "English",
-    "title": "The Rule for a Vagabond"
+    "title": "The Rule for a Vagabond",
+    "quality": "WEBRip",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "language": "Portuguese",
     "quality": "Blu-ray",
-    "title": "Cousins"
+    "title": "Cousins",
+    "audio": "AAC",
+    "resolution": "1080p"
   },
   {
     "quality": "BRRip",
-    "title": "Easy Rider"
+    "title": "Easy Rider",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "quality": "WEB-DL",
     "subtitles": "English",
-    "title": "PENALTY"
+    "title": "PENALTY",
+    "resolution": "720p"
   },
   {
     "audio": "Dual",
     "codec": "H.264",
     "quality": "WEB-DL",
-    "title": "Wasp Network"
+    "title": "Wasp Network",
+    "resolution": "720p"
   },
   {
     "quality": "BRRip",
-    "title": "The Gentlemen"
+    "title": "The Gentlemen",
+    "resolution": "576p"
   },
   {
     "codec": "H.264",
@@ -1783,13 +2135,15 @@
   },
   {
     "codec": "H.264",
-    "title": "If Loving You Is Wrong"
+    "title": "If Loving You Is Wrong",
+    "resolution": "480p"
   },
   {
     "title": "Digimon Adventure"
   },
   {
-    "title": "Kavali"
+    "title": "Kavali",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
@@ -1799,7 +2153,8 @@
       "English"
     ],
     "quality": "AHDTV",
-    "title": "Gangs Of London"
+    "title": "Gangs Of London",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
@@ -1809,15 +2164,19 @@
       "English"
     ],
     "quality": "Blu-ray",
-    "title": "Fear the Walking Dead"
+    "title": "Fear the Walking Dead",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
-    "title": "2nd Chance Charlie"
+    "title": "2nd Chance Charlie",
+    "quality": "HDTV",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
-    "title": "Police Ten 7"
+    "title": "Police Ten 7",
+    "quality": "HDTV"
   },
   {
     "audio": "Dual",
@@ -1826,19 +2185,23 @@
       "Marathi"
     ],
     "quality": "WEBRip",
-    "title": "Nude"
+    "title": "Nude",
+    "resolution": "720p"
   },
   {
     "codec": "H.265",
     "quality": "Blu-ray",
-    "title": "X-men The Last Stand"
+    "title": "X-men The Last Stand",
+    "audio": "AAC 6.1",
+    "resolution": "1080p"
   },
   {
     "genre": [
       "Comedy",
       "Western"
     ],
-    "title": "The Kissing Bandit"
+    "title": "The Kissing Bandit",
+    "resolution": "720p"
   },
   {
     "title": "The King of Comedy"
@@ -1851,7 +2214,9 @@
     "audio": "Dolby Digital Plus 2.0",
     "codec": "H.264",
     "network": "Amazon Studios",
-    "title": "Romantic Comedy"
+    "title": "Romantic Comedy",
+    "quality": "WEBRip",
+    "resolution": "1080p"
   },
   {
     "title": "Sugarfoot"
@@ -1859,13 +2224,16 @@
   {
     "codec": "H.264",
     "quality": "WEBRip",
-    "title": "Valeries Home Cooking"
+    "title": "Valeries Home Cooking",
+    "resolution": "720p"
   },
   {
     "audio": "AAC 2.0",
     "codec": "H.264",
     "network": "Investigation Discovery",
-    "title": "American Monster"
+    "title": "American Monster",
+    "quality": "WEB-DL",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital 5.1",
@@ -1885,182 +2253,244 @@
     "codec": "H.264",
     "filetype": "MKV",
     "quality": "Blu-ray",
-    "title": "Extraterrestrial"
+    "title": "Extraterrestrial",
+    "resolution": "1080i"
   },
   {
     "codec": "H.264",
-    "title": "Magnum P.I."
+    "title": "Magnum P.I.",
+    "quality": "HDTV",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "filetype": "MKV",
     "quality": "Blu-ray",
-    "title": "Friends"
+    "title": "Friends",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "filetype": "SRT",
     "quality": "Blu-ray",
-    "title": "Shrek 2"
+    "title": "Shrek 2",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
     "quality": "HD DVD",
-    "title": "Accepted"
+    "title": "Accepted",
+    "resolution": "720p"
   },
   {
     "audio": "Dolby Digital 2.0",
     "network": "Amazon Studios",
-    "title": "Its Always Sunny In Philadelphia"
+    "title": "Its Always Sunny In Philadelphia",
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital 5.1",
-    "title": "Animals"
+    "title": "Animals",
+    "quality": "WEBRip",
+    "codec": "H.264",
+    "resolution": "1080p"
   },
   {
     "audio": "AAC 2.0",
     "network": "iTunes",
-    "title": "SpongeBob SquarePants"
+    "title": "SpongeBob SquarePants",
+    "quality": "WEB-DL",
+    "codec": "H.264"
   },
   {
     "audio": "AAC 2.0",
     "network": "Adult Swim",
-    "title": "The Shivering Truth"
+    "title": "The Shivering Truth",
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "resolution": "1080p"
   },
   {
     "audio": "AAC 2.0",
     "network": "Crave",
-    "title": "Letterkenny"
+    "title": "Letterkenny",
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "resolution": "720p"
   },
   {
     "audio": "AAC 2.0",
     "codec": "H.264",
     "network": "Comedy Central",
-    "title": "Workaholics"
+    "title": "Workaholics",
+    "quality": "WEBRip",
+    "resolution": "1080p"
   },
   {
     "audio": "AAC 2.0",
     "codec": "H.264",
     "network": "Seeso",
-    "title": "HarmonQuest"
+    "title": "HarmonQuest",
+    "quality": "WEBRip",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
-    "title": "Bee and Puppycat"
+    "title": "Bee and Puppycat",
+    "quality": "WEB-DL",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital Plus 5.0",
     "codec": "H.264",
     "network": "Peacock",
-    "title": "A P Bio"
+    "title": "A P Bio",
+    "quality": "WEB-DL",
+    "resolution": "1080p"
   },
   {
     "audio": "AAC 2.0",
     "codec": "H.264",
     "filetype": "MKV",
-    "title": "Star Trek Discovery"
+    "title": "Star Trek Discovery",
+    "quality": "WEB-DL",
+    "resolution": "540p"
   },
   {
     "audio": "Dolby TrueHD 5.1",
     "filetype": "MKV",
     "quality": "Blu-ray",
-    "title": "IMAX Blue Planet"
+    "title": "IMAX Blue Planet",
+    "codec": "VC-1",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital EX",
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "John Wick Chapter 2"
+    "title": "John Wick Chapter 2",
+    "resolution": "720p"
   },
   {
     "audio": "DTS-HD MA",
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "Archer"
+    "title": "Archer",
+    "resolution": "1080p"
   },
   {
     "audio": "FLAC 2.0",
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "Peaky Blinders"
+    "title": "Peaky Blinders",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "quality": "DVD-Rip",
-    "title": "Ghost Stories"
+    "title": "Ghost Stories",
+    "audio": "OGG"
   },
   {
     "audio": "AAC 2.0",
     "filetype": "MKV",
     "network": "BBC iPlayer",
-    "title": "Rick Steins Road To Mexico"
+    "title": "Rick Steins Road To Mexico",
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "resolution": "720p"
   },
   {
     "audio": "AAC 2.0",
     "filetype": "MKV",
-    "title": "Road to the NHL Winter Classic"
+    "title": "Road to the NHL Winter Classic",
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "resolution": "1080p"
   },
   {
     "audio": "AAC 2.0",
     "filetype": "MKV",
-    "title": "Robert Kirkmans Secret History of Comics"
+    "title": "Robert Kirkmans Secret History of Comics",
+    "quality": "WEB-DL",
+    "codec": "H.264",
+    "resolution": "1080p"
   },
   {
     "audio": "AAC 2.0",
     "codec": "H.264",
     "filetype": "MKV",
-    "title": "Ready Jet Go"
+    "title": "Ready Jet Go",
+    "quality": "WEBRip",
+    "resolution": "720p"
   },
   {
     "audio": "AAC 2.0",
     "filetype": "MKV",
     "network": "Stan.",
-    "title": "Philip K Dicks Electric Dreams"
+    "title": "Philip K Dicks Electric Dreams",
+    "quality": "WEB-DL",
+    "codec": "H.264"
   },
   {
     "audio": "AAC 2.0",
     "codec": "H.264",
     "filetype": "MKV",
     "network": "DisneyNOW",
-    "title": "Octonauts"
+    "title": "Octonauts",
+    "quality": "WEBRip",
+    "resolution": "720p"
   },
   {
     "audio": "AAC 2.0",
     "filetype": "MKV",
     "network": "RTE Player",
-    "title": "Nowhere Fast"
+    "title": "Nowhere Fast",
+    "quality": "WEB-DL",
+    "codec": "H.264"
   },
   {
     "audio": "AAC 2.0",
     "codec": "H.264",
     "network": "Crunchyroll",
-    "title": "New Game"
+    "title": "New Game",
+    "quality": "WEB-DL"
   },
   {
     "audio": "AAC 2.0",
     "codec": "H.264",
     "filetype": "MKV",
     "network": "Animal Planet Live",
-    "title": "Mystery of the Lost Islands"
+    "title": "Mystery of the Lost Islands",
+    "quality": "WEB-DL",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital 2.0",
     "codec": "H.264",
     "filetype": "MKV",
     "network": "DirecTV Stream",
-    "title": "Mr Mercedes"
+    "title": "Mr Mercedes",
+    "quality": "WEB-DL"
   },
   {
     "audio": "AAC 2.0",
     "codec": "H.264",
     "filetype": "MKV",
-    "title": "Most Expensivest"
+    "title": "Most Expensivest",
+    "quality": "WEB-DL",
+    "resolution": "1080p"
   },
   {
     "quality": "Blu-ray",
-    "title": "Non Non Biyori"
+    "title": "Non Non Biyori",
+    "audio": "FLAC",
+    "codec": "H.264",
+    "resolution": "1080p"
   },
   {
     "quality": "Blu-ray",
@@ -2076,9 +2506,13 @@
     "title": "Naruto"
   },
   {
-    "audio": "Dolby TrueHD",
+    "audio": [
+      "Dolby TrueHD",
+      "Dual"
+    ],
     "quality": "Blu-ray",
-    "title": "Attack on Titan"
+    "title": "Attack on Titan",
+    "resolution": "1080p"
   },
   {
     "quality": "Blu-ray",
@@ -2086,27 +2520,38 @@
   },
   {
     "quality": "Blu-ray",
-    "title": "Hero Mask"
+    "title": "Hero Mask",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "quality": "BDRip",
     "resolution": "1080p",
-    "title": "Nisekoi"
+    "title": "Nisekoi",
+    "audio": "FLAC"
   },
   {
-    "audio": "Dual",
+    "audio": [
+      "Dual",
+      "FLAC"
+    ],
     "codec": "H.265",
     "title": "Kimi no Suizou o Tabetai"
   },
   {
-    "audio": "Dual",
-    "title": "Accel World"
+    "audio": [
+      "Dual",
+      "FLAC"
+    ],
+    "title": "Accel World",
+    "resolution": "1080p"
   },
   {
     "audio": "Dolby Digital 5.1",
     "codec": "H.264",
-    "title": "The Djinn"
+    "title": "The Djinn",
+    "quality": "BRRip",
+    "resolution": "1080p"
   },
   {
     "genre": "Drama",
@@ -2131,21 +2576,26 @@
     "audio": "Dolby Digital",
     "codec": "H.264",
     "filetype": "MP4",
-    "title": "Justified"
+    "title": "Justified",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "Movie 43"
+    "title": "Movie 43",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "Mommy"
+    "title": "Mommy",
+    "resolution": "720p"
   },
   {
     "codec": "H.265",
-    "title": "Rendez Vous."
+    "title": "Rendez Vous.",
+    "quality": "WEBRip",
+    "resolution": "1080p"
   },
   {
     "filetype": "MKV",
@@ -2155,13 +2605,16 @@
     "audio": "Dolby Digital Plus 2.0",
     "codec": "H.264",
     "filetype": "MKV",
-    "title": "What If..."
+    "title": "What If...",
+    "quality": "WEB-DL",
+    "resolution": "1080p"
   },
   {
     "audio": "AAC 2.0",
     "codec": "H.264",
     "filetype": "MKV",
-    "title": "Eu gosto do Homem-Aranha... y dai"
+    "title": "Eu gosto do Homem-Aranha... y dai",
+    "resolution": "1080p"
   },
   {
     "filetype": "MP4",
@@ -2176,27 +2629,35 @@
     "audio": "AAC 2.0",
     "codec": "H.264",
     "filetype": "MKV",
-    "title": "Lollapalooza"
+    "title": "Lollapalooza",
+    "quality": "WEB-DL",
+    "resolution": "1080p"
   },
   {
     "codec": "H.265",
     "quality": "Blu-ray",
-    "title": "Dark Matter"
+    "title": "Dark Matter",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
     "language": "French",
     "quality": "WEBRip",
-    "title": "Presque"
+    "title": "Presque",
+    "resolution": "1080p"
   },
   {
-    "audio": "Dolby Digital Plus 5.1",
+    "audio": [
+      "Dolby Digital Plus 5.1",
+      "AAC"
+    ],
     "codec": "H.265",
     "filetype": "MKV",
     "quality": "WEB-DL",
     "sbs": "SBS",
     "subtitles": "English",
-    "title": "Lucky Man"
+    "title": "Lucky Man",
+    "resolution": "720p"
   },
   {
     "codec": "H.264",
@@ -2208,46 +2669,60 @@
     ],
     "quality": "WEB-DL",
     "subtitles": "English",
-    "title": "Sultan of Delhi"
+    "title": "Sultan of Delhi",
+    "audio": "AAC"
   },
   {
     "audio": "Custom",
     "filetype": "MKV",
     "language": "Polish",
-    "title": "Mission Impossible"
+    "title": "Mission Impossible",
+    "resolution": "1080p"
   },
   {
     "audio": "DTS-ES 6.1",
     "filetype": "MKV",
     "quality": "Blu-ray",
-    "title": "Black Rain"
+    "title": "Black Rain",
+    "codec": "MPEG-2",
+    "resolution": "1080p"
   },
   {
-    "audio": "Dolby Digital EX 5.1",
+    "audio": [
+      "Dolby Digital EX 5.1",
+      "DTS-HD MA"
+    ],
     "codec": "H.264",
     "filetype": "ISO",
     "quality": "Blu-ray",
-    "title": "Bolt"
+    "title": "Bolt",
+    "resolution": "1080p"
   },
   {
     "audio": "DTS:X 7.1",
     "codec": "H.265",
     "filetype": "MKV",
     "quality": "Blu-ray",
-    "title": "Casino"
+    "title": "Casino",
+    "resolution": "2160p"
   },
   {
     "audio": "HE-AAC 2.0",
     "codec": "H.264",
     "filetype": "MKV",
     "network": "Netflix",
-    "title": "Seinfeld"
+    "title": "Seinfeld",
+    "quality": "WEB-DL",
+    "resolution": "1080p"
   },
   {
     "audio": "HE-AAC v2",
     "filetype": "MKV",
     "language": "Polish",
-    "title": "Escape Room Tournament of Champions"
+    "title": "Escape Room Tournament of Champions",
+    "quality": "BRRip",
+    "codec": "AV1",
+    "resolution": "1080p"
   },
   {
     "title": "Steven Universe"
@@ -2257,7 +2732,9 @@
   },
   {
     "codec": "H.265",
-    "title": "Avatar The Last Airbender"
+    "title": "Avatar The Last Airbender",
+    "audio": "AAC",
+    "resolution": "1080p"
   },
   {
     "title": "The Inbetweeners"
@@ -2269,7 +2746,8 @@
     "codec": "H.264",
     "filetype": "MKV",
     "subtitles": "French",
-    "title": "The Walking Dead"
+    "title": "The Walking Dead",
+    "quality": "HDTV"
   },
   {
     "audio": "AAC",
@@ -2277,7 +2755,8 @@
     "filetype": "MKV",
     "quality": "WEB-DL",
     "subtitles": "French",
-    "title": "The Good German"
+    "title": "The Good German",
+    "resolution": "720p"
   },
   {
     "title": "Anatomy Of A Fall"
@@ -2286,21 +2765,27 @@
     "audio": "AAC 2.0",
     "codec": "H.264",
     "filetype": "MKV",
-    "title": "Eu gosto do Homem-Aranha e dai"
+    "title": "Eu gosto do Homem-Aranha e dai",
+    "resolution": "1080p"
   },
   {
     "codec": "H.264",
     "filetype": "MKV",
-    "resolution": "1440p",
+    "resolution": [
+      "1440p",
+      "2K"
+    ],
     "subtitles": "English",
-    "title": "Thuritham"
+    "title": "Thuritham",
+    "audio": "AAC"
   },
   {
     "codec": "H.264",
     "filetype": "MKV",
     "quality": "WEB-DL",
     "subtitles": "English",
-    "title": "Raja Vikramarka"
+    "title": "Raja Vikramarka",
+    "audio": "AAC"
   },
   {
     "codec": "H.264",
@@ -2310,6 +2795,8 @@
   {
     "codec": "H.264",
     "quality": "Blu-ray",
-    "title": "The Lord of the Rings"
+    "title": "The Lord of the Rings",
+    "audio": "DTS",
+    "resolution": "1080p"
   }
 ]
