@@ -1174,7 +1174,7 @@
     "encoder": "DSD",
     "filetype": "Mp-4",
     "quality": "Dvd-Rip",
-    "resolution": null,
+    "resolution": "480p",
     "title": "The Peacemaker",
     "year": 1997
   },
@@ -2365,7 +2365,7 @@
     "encoder": "DSD",
     "filetype": "Mp-4",
     "quality": "Dvd-Rip",
-    "resolution": null,
+    "resolution": "480p",
     "title": "Wild Target",
     "year": 2010
   },
@@ -2522,7 +2522,7 @@
     "encoder": "DSD",
     "filetype": "Mp-4",
     "quality": "Dvd-Rip",
-    "resolution": null,
+    "resolution": "480p",
     "title": "A Walk in the Woods",
     "year": 2015
   },

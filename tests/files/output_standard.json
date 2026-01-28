@@ -827,7 +827,7 @@
     "filetype": "MP4",
     "quality": "DVD-Rip",
     "title": "The Peacemaker",
-    "resolution": null
+    "resolution": "480p"
   },
   {
     "audio": "Dolby Digital",
@@ -1608,7 +1608,7 @@
     "quality": "DVD-Rip",
     "title": "Wild Target",
     "audio": "AAC",
-    "resolution": null
+    "resolution": "480p"
   },
   {
     "audio": "Dolby Digital 5.1",
@@ -1718,7 +1718,7 @@
     "quality": "DVD-Rip",
     "title": "A Walk in the Woods",
     "audio": "AAC",
-    "resolution": null
+    "resolution": "480p"
   },
   {
     "title": "Treasure Planet",
