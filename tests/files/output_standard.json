@@ -2800,7 +2800,17 @@
     "resolution": "1080p"
   },
   {
-    "title": "Movie",
+    "title": "Dune",
+    "resolution": "2160p",
+    "quality": "Blu-ray",
+    "codec": "H.265",
+    "audio": [
+      "DTS-HD MA 5.1",
+      "DTS:X 7.1"
+    ]
+  },
+  {
+    "title": "Interstellar",
     "quality": "Blu-ray",
     "codec": "H.264",
     "audio": [
@@ -2810,19 +2820,50 @@
     ]
   },
   {
-    "title": "Movie",
-    "quality": [
-      "WEB-DL",
-      "Blu-ray"
-    ],
-    "codec": "H.264"
-  },
-  {
-    "title": "Movie",
+    "title": "Inception",
+    "quality": "Blu-ray",
     "codec": "H.264",
     "audio": [
-      "Dolby Digital Plus 5.1",
-      "AAC 2.0"
+      "Dolby Digital 5.1",
+      "DTS-HD MA 5.1"
     ]
+  },
+  {
+    "title": "The Matrix",
+    "resolution": "2160p",
+    "quality": "Blu-ray",
+    "codec": "H.265",
+    "audio": [
+      "Dolby TrueHD",
+      "Dolby Atmos 7.1",
+      "DTS-HD MA 5.1"
+    ]
+  },
+  {
+    "title": "Avatar The Way of Water",
+    "quality": "Blu-ray",
+    "codec": "H.264",
+    "audio": [
+      "Dolby Atmos",
+      "Dolby Digital Plus 7.1",
+      "DTS-HD MA 7.1"
+    ]
+  },
+  {
+    "title": "Parasite",
+    "quality": "Blu-ray",
+    "codec": "H.264",
+    "audio": [
+      "Dolby Digital 5.1",
+      "Dolby Digital 7.1"
+    ]
+  },
+  {
+    "title": "The Batman",
+    "audio": [
+      "Dolby Atmos",
+      "Dolby Digital Plus 5.1"
+    ],
+    "network": "Amazon Studios"
   }
 ]

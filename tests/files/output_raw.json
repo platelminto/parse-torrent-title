@@ -4084,38 +4084,100 @@
     "year": 2001
   },
   {
+    "resolution": [
+      "2160p",
+      "UHD"
+    ],
+    "quality": "BluRay",
+    "year": 2021,
+    "codec": "HEVC",
+    "audio": [
+      "DTS-HD.MA.5.1",
+      "DTS.X.7.1"
+    ],
+    "hdr": true,
+    "remux": true,
+    "title": "Dune",
+    "encoder": "FraMeSToR"
+  },
+  {
     "resolution": "1080p",
     "quality": "BluRay",
-    "year": 2020,
-    "codec": "x264",
+    "year": 2014,
+    "codec": "AVC",
     "audio": [
       "TrueHD.7.1",
       "Atmos",
       "DTS-HD.MA.5.1"
     ],
-    "title": "Movie",
-    "encoder": "GROUP"
+    "remux": true,
+    "title": "Interstellar",
+    "encoder": "FGT"
   },
   {
     "resolution": "1080p",
-    "quality": [
-      "WEB-DL",
-      "BluRay"
-    ],
-    "year": 2020,
-    "codec": "x264",
-    "title": "Movie",
-    "encoder": "GROUP"
-  },
-  {
-    "resolution": "1080p",
-    "year": 2020,
+    "quality": "BluRay",
+    "year": 2010,
     "codec": "x264",
     "audio": [
-      "DDP5.1",
-      "AAC.2.0"
+      "DD5.1",
+      "DTS-HD.MA.5.1"
     ],
-    "title": "Movie",
-    "encoder": "GROUP"
+    "title": "Inception",
+    "encoder": "CtrlHD"
+  },
+  {
+    "resolution": [
+      "2160p",
+      "UHD"
+    ],
+    "quality": "BluRay",
+    "year": 1999,
+    "codec": "HEVC",
+    "audio": [
+      "TrueHD",
+      "Atmos.7.1",
+      "DTS-HD.MA.5.1"
+    ],
+    "title": "The Matrix",
+    "encoder": "SURCODE"
+  },
+  {
+    "resolution": "1080p",
+    "quality": "BluRay",
+    "year": 2022,
+    "codec": "x264",
+    "audio": [
+      "Atmos",
+      "DDP.7.1",
+      "DTS-HD.MA.7.1"
+    ],
+    "title": "Avatar The Way of Water",
+    "encoder": "SPHD"
+  },
+  {
+    "resolution": "1080p",
+    "quality": "BluRay",
+    "year": 2019,
+    "codec": "x264",
+    "audio": [
+      "DD5.1",
+      "DD+7.1"
+    ],
+    "title": "Parasite",
+    "encoder": "GalaxyRG"
+  },
+  {
+    "resolution": "1080p",
+    "quality": "WEB-DL",
+    "year": 2022,
+    "codec": "H.264",
+    "audio": [
+      "Atmos",
+      "DDP5.1"
+    ],
+    "network": "AMZN",
+    "title": "The Batman",
+    "encoder": "FLUX"
   }
 ]
