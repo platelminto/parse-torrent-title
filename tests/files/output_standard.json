@@ -2865,5 +2865,55 @@
       "Dolby Digital Plus 5.1"
     ],
     "network": "Amazon Studios"
+  },
+  {
+    "title": "The Dark Knight",
+    "resolution": "2160p",
+    "quality": "Blu-ray",
+    "codec": "H.265",
+    "audio": [
+      "Dolby TrueHD 7.1",
+      "Dolby Atmos",
+      "DTS-HD MA 5.1"
+    ]
+  },
+  {
+    "title": "Gladiator",
+    "quality": "Blu-ray",
+    "codec": "H.265",
+    "audio": [
+      "Dolby TrueHD 7.1",
+      "Dolby Atmos",
+      "DTS-HD MA"
+    ]
+  },
+  {
+    "title": "Joker",
+    "resolution": "2160p",
+    "quality": "Blu-ray",
+    "codec": "H.265",
+    "audio": [
+      "Dolby TrueHD",
+      "Dolby Atmos 7.1"
+    ]
+  },
+  {
+    "title": "1917",
+    "quality": "Blu-ray",
+    "codec": "H.265",
+    "audio": [
+      "Dolby TrueHD 7.1",
+      "Dolby Atmos",
+      "DTS-HD MA"
+    ]
+  },
+  {
+    "title": "Breaking Bad",
+    "quality": "Blu-ray",
+    "codec": "H.264",
+    "audio": [
+      "Dolby Digital 5.1",
+      "DTS-HD MA 5.1"
+    ]
   }
 ]

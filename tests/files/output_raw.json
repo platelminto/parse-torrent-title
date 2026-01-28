@@ -4179,5 +4179,82 @@
     "network": "AMZN",
     "title": "The Batman",
     "encoder": "FLUX"
+  },
+  {
+    "resolution": [
+      "2160p",
+      "UHD"
+    ],
+    "quality": "BluRay",
+    "year": 2008,
+    "codec": "HEVC",
+    "audio": [
+      "TrueHD.7.1",
+      "Atmos",
+      "DTS-HD.MA.5.1"
+    ],
+    "hdr": true,
+    "remux": true,
+    "title": "The Dark Knight",
+    "encoder": "EPSiLON"
+  },
+  {
+    "resolution": "2160p",
+    "quality": "BluRay",
+    "year": 2000,
+    "codec": "HEVC",
+    "audio": [
+      "TrueHD.7.1",
+      "Atmos",
+      "DTS-HD.MA"
+    ],
+    "extended": true,
+    "remux": true,
+    "title": "Gladiator",
+    "encoder": "FGT"
+  },
+  {
+    "resolution": [
+      "2160p",
+      "UHD"
+    ],
+    "quality": "BluRay",
+    "year": 2019,
+    "codec": "HEVC",
+    "audio": [
+      "TrueHD",
+      "Atmos.7.1"
+    ],
+    "remux": true,
+    "title": "Joker",
+    "encoder": "FraMeSToR"
+  },
+  {
+    "resolution": "2160p",
+    "quality": "BluRay",
+    "year": 2019,
+    "codec": "HEVC",
+    "audio": [
+      "TrueHD.7.1",
+      "Atmos",
+      "DTS-HD.MA"
+    ],
+    "remux": true,
+    "title": "1917",
+    "encoder": "FGT"
+  },
+  {
+    "resolution": "1080p",
+    "quality": "BluRay",
+    "season": 5,
+    "episode": 16,
+    "codec": "x264",
+    "audio": [
+      "DD5.1",
+      "DTS-HD.MA.5.1"
+    ],
+    "title": "Breaking Bad",
+    "episodeName": "Felina",
+    "encoder": "CtrlHD"
   }
 ]
