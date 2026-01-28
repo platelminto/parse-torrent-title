@@ -4082,5 +4082,40 @@
     "resolution": "1080p",
     "title": "The Lord of the Rings",
     "year": 2001
+  },
+  {
+    "resolution": "1080p",
+    "quality": "BluRay",
+    "year": 2020,
+    "codec": "x264",
+    "audio": [
+      "TrueHD.7.1",
+      "Atmos",
+      "DTS-HD.MA.5.1"
+    ],
+    "title": "Movie",
+    "encoder": "GROUP"
+  },
+  {
+    "resolution": "1080p",
+    "quality": [
+      "WEB-DL",
+      "BluRay"
+    ],
+    "year": 2020,
+    "codec": "x264",
+    "title": "Movie",
+    "encoder": "GROUP"
+  },
+  {
+    "resolution": "1080p",
+    "year": 2020,
+    "codec": "x264",
+    "audio": [
+      "DDP5.1",
+      "AAC.2.0"
+    ],
+    "title": "Movie",
+    "encoder": "GROUP"
   }
 ]

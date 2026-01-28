@@ -2798,5 +2798,31 @@
     "title": "The Lord of the Rings",
     "audio": "DTS",
     "resolution": "1080p"
+  },
+  {
+    "title": "Movie",
+    "quality": "Blu-ray",
+    "codec": "H.264",
+    "audio": [
+      "Dolby TrueHD 7.1",
+      "Dolby Atmos",
+      "DTS-HD MA 5.1"
+    ]
+  },
+  {
+    "title": "Movie",
+    "quality": [
+      "WEB-DL",
+      "Blu-ray"
+    ],
+    "codec": "H.264"
+  },
+  {
+    "title": "Movie",
+    "codec": "H.264",
+    "audio": [
+      "Dolby Digital Plus 5.1",
+      "AAC 2.0"
+    ]
   }
 ]
