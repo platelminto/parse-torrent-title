@@ -2,7 +2,7 @@
 
 > Extract media information from torrent-like filename
 
-![Python versions](https://img.shields.io/badge/Python-2.7%2C%203.5-brightgreen.svg?style=flat-square)
+![Python versions](https://img.shields.io/badge/Python-3.8%2B-brightgreen.svg?style=flat-square)
 
 Originally based off of [this JavaScript
 library](https://github.com/jzjzjzj/parse-torrent-name).
@@ -21,16 +21,6 @@ PTN can be installed automatically using `pip`.
 ```sh
 $ pip install parse-torrent-title
 ```
-
-### Requirements
-
-Requirements are **optional**. That being said, the `regex` library increases performance on Python 2 by more than 10x, so it might be worth installing with:
-
-```sh
-$ pip install -r requirements.txt
-```
-
-With Python 3, the default `re` module is faster than `regex`, so it will always be used regardless of installed requirements.
 
 ## Why?
 
