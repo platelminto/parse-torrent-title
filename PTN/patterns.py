@@ -97,6 +97,16 @@ patterns_allow_overlap = [
     "sbs"
 ]
 
+# Fields that can have multiple distinct values (e.g., multiple audio formats, qualities, etc.)
+# When multiple matches are found for these fields, they will be stored as a list if the values
+# are significantly different from each other.
+patterns_allow_multiple = [
+    "audio",
+    "quality",
+    "codec",
+    "resolution",
+]
+
 patterns = {}
 patterns["episode"] = [
     r"(?<![a-z])(?:e|ep)(?:\(?[0-9]{1,2}(?:-?(?:e|ep)?(?:[0-9]{1,2}))?\)?)(?![0-9])",

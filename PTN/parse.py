@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import re
 from .extras import exceptions, genres, langs, link_patterns, patterns_ignore_title
-from .patterns import delimiters, patterns, patterns_ordered, types, patterns_allow_overlap
+from .patterns import delimiters, patterns, patterns_ordered, types, patterns_allow_overlap, patterns_allow_multiple
 from .post import post_processing_after_excess, post_processing_before_excess
 
 
@@ -28,6 +28,55 @@ class PTN:
         if match_slice:
             self.match_slices.append(match_slice)
 
+    def _extract_value_from_match(self, match, key):
+        """
+        Extract and process the value from a regex match.
+        
+        Args:
+            match: The regex match object
+            key: The field key being processed
+            
+        Returns:
+            The cleaned value
+        """
+        index = self.get_match_indexes(match)
+        
+        if key in ("season", "episode"):
+            clean = self.get_season_episode(match)
+        elif key == "subtitles":
+            clean = self.get_subtitles(match)
+        elif key in ("language", "genre"):
+            clean = self.split_multi(match)
+        elif key in types.keys() and types[key] == "boolean":
+            clean = True
+        else:
+            clean = match[index["clean"]]
+            if key in types.keys() and types[key] == "integer":
+                clean = int(clean)
+        
+        return clean
+    
+    def _check_overlap(self, match_start, match_end):
+        """
+        Check if a match overlaps with any existing parts.
+        
+        Args:
+            match_start: Start position of the match
+            match_end: End position of the match
+            
+        Returns:
+            True if there's an overlap, False otherwise
+        """
+        for part, part_slices in self.part_slices.items():
+            if part not in patterns_allow_overlap:
+                # Strict smaller/larger than since punctuation can overlap.
+                if (
+                    (part_slices[0] < match_start < part_slices[1])
+                    or (part_slices[0] < match_end < part_slices[1])
+                ):
+                    return True
+        return False
+
     @staticmethod
     def _clean_string(string):
         clean = re.sub(r"^( -|\(|\[)", "", string)
@@ -45,6 +94,112 @@ class PTN:
         clean = clean.strip(" _-")
 
         return clean
+
+    def _values_are_different(self, value1, value2, field_key=None):
+        """
+        Check if two values are significantly different.
+        
+        This prevents adding duplicate values when different regex patterns
+        match the same or semantically equivalent content.
+        
+        Args:
+            value1: First value to compare
+            value2: Second value to compare
+            field_key: The field key (optional, used for field-specific logic)
+            
+        Returns:
+            True if values are different enough to be treated as separate matches
+        """
+        # Normalize for comparison
+        v1_str = str(value1)
+        v2_str = str(value2)
+        
+        v1 = v1_str.lower().replace("-", "").replace(".", "").replace(" ", "")
+        v2 = v2_str.lower().replace("-", "").replace(".", "").replace(" ", "")
+        
+        # If they're identical after normalization, they're not different
+        if v1 == v2:
+            return False
+        
+        # Field-specific logic
+        if field_key == "codec":
+            # x265 and HEVC are the same codec
+            # x264 and AVC are the same codec
+            codec_equivalents = [
+                {"x265", "hevc", "h265", "h.265"},
+                {"x264", "avc", "h264", "h.264"},
+                {"xvid"},
+                {"av1"},
+                {"vc1", "vc-1"},
+            ]
+            for equiv_set in codec_equivalents:
+                if v1 in equiv_set and v2 in equiv_set:
+                    return False
+        
+        if field_key == "resolution":
+            # QHD (1440p) and qHD (540p) can both match "QHD" in text
+            # If we have 1440p, don't add 540p (QHD takes precedence over qHD)
+            if (v1 == "1440p" or v1 == "qhd") and (v2 == "540p" or v2 == "qhd"):
+                return False
+            if (v2 == "1440p" or v2 == "qhd") and (v1 == "540p" or v1 == "qhd"):
+                return False
+                    
+        if field_key == "quality":
+            # PPV (Pay-Per-View) is often used to describe content type rather than source quality
+            # If one is PPV and the other is a proper source quality, don't consider them different
+            quality_sources = ["webdl", "webrip", "bluray", "brrip", "bdrip", "dvdrip", "hdtv", 
+                             "web", "cam", "ts", "tc", "screener", "dvdr", "hddvd", "remux"]
+            v1_is_ppv = "ppv" in v1
+            v2_is_ppv = "ppv" in v2
+            v1_is_source = any(src in v1 for src in quality_sources)
+            v2_is_source = any(src in v2 for src in quality_sources)
+            
+            if v1_is_ppv and v2_is_source:
+                return False  # Don't add PPV if we have a proper source
+            if v2_is_ppv and v1_is_source:
+                return False  # Don't add PPV if we have a proper source
+        
+        if field_key == "audio":
+            # Special handling for standalone channel numbers (e.g., "5.1", "7.1")
+            # These should not be added if a full audio format with that channel exists
+            standalone_channels = ["5.1", "7.1", "2.0", "1.0", "2.1", "6.1"]
+            v1_is_channel = v1_str.strip() in standalone_channels
+            v2_is_channel = v2_str.strip() in standalone_channels
+            
+            if v1_is_channel or v2_is_channel:
+                # If one is a standalone channel, check if it's contained in the other
+                if v1_is_channel and v1_str.strip() in v2_str:
+                    return False  # v1 is redundant
+                if v2_is_channel and v2_str.strip() in v1_str:
+                    return False  # v2 is redundant
+            
+            # Check for substring containment with channel-specific logic
+            if v1 in v2 or v2 in v1:
+                # Exception: different channel configurations should be considered different
+                # e.g., "DTS 5.1" vs "DTS 7.1"
+                has_channel_v1 = any(ch in v1_str for ch in ["5.1", "7.1", "2.0", "1.0"])
+                has_channel_v2 = any(ch in v2_str for ch in ["5.1", "7.1", "2.0", "1.0"])
+                if has_channel_v1 and has_channel_v2:
+                    # Both have channel info - extract and compare channels
+                    channel_v1 = None
+                    channel_v2 = None
+                    for ch in ["5.1", "7.1", "2.0", "1.0", "2.1", "6.1"]:
+                        if ch in v1_str:
+                            channel_v1 = ch
+                            break  # Use first match
+                        if ch in v2_str:
+                            channel_v2 = ch
+                            break  # Use first match
+                    # They're different if channels differ
+                    return channel_v1 != channel_v2
+                # Otherwise, substring containment means they're similar enough
+                return False
+        
+        # General check for substring containment (for non-audio fields)
+        if v1 in v2 or v2 in v1:
+            return False
+        
+        return True
 
     def parse(self, name, standardise, coherent_types):
         name = name.strip()
@@ -80,42 +235,70 @@ class PTN:
                     matches[match_index]["start"],
                     matches[match_index]["end"],
                 )
-                if (
-                    key in self.parts
-                ):  # We can skip ahead if we already have a matched part
+                
+                # Check if this match is part of a larger hyphenated term
+                # Only relevant for fields that have ambiguous short patterns
+                # (e.g., "HD" in "DTS-HD" should not be a standalone resolution)
+                if key in ["resolution"] and match_end < len(self.torrent_name):
+                    match_text = self.torrent_name[match_start:match_end]
+                    # Only skip very short ambiguous terms like "HD" (2 chars)
+                    # when they're part of a hyphenated compound
+                    if len(match_text) <= 2:
+                        has_hyphen_before = (match_start > 0 and 
+                                            self.torrent_name[match_start - 1] == '-' and
+                                            match_start > 1 and 
+                                            not re.match(delimiters, self.torrent_name[match_start - 2]))
+                        has_hyphen_after = (self.torrent_name[match_end] == '-' and
+                                           match_end + 1 < len(self.torrent_name) and
+                                           not re.match(delimiters, self.torrent_name[match_end + 1]))
+                        
+                        if has_hyphen_before or has_hyphen_after:
+                            # Still mark as matched to track the slice, but don't add to parts
+                            self._part(key, (match_start, match_end), None, overwrite=False)
+                            continue
+                
+                # Handle fields that can have multiple values
+                if key in self.parts and key in patterns_allow_multiple:
+                    # Extract and process the new value
+                    clean = self._extract_value_from_match(match, key)
+                    
+                    if self.standardise:
+                        clean = self.standardise_clean(clean, key, replace, transforms)
+                    
+                    # Check if this is a significantly different value
+                    existing = self.parts[key]
+                    if not isinstance(existing, list):
+                        existing = [existing]
+                    
+                    # Check if the new value is different from all existing values
+                    is_different = True
+                    for existing_value in existing:
+                        if not self._values_are_different(clean, existing_value, key):
+                            is_different = False
+                            break
+                    
+                    if is_different:
+                        # Check for overlaps before adding
+                        if not self._check_overlap(match_start, match_end):
+                            # Add the new value to the list
+                            updated_list = existing + [clean]
+                            self._part(key, (match_start, match_end), updated_list, overwrite=True)
+                    else:
+                        # Still mark as matched to remove from excess
+                        self._part(key, (match_start, match_end), None, overwrite=False)
+                    continue
+                elif key in self.parts:
+                    # We can skip ahead if we already have a matched part (and it doesn't allow multiple)
                     self._part(key, (match_start, match_end), None, overwrite=False)
                     continue
 
-                index = self.get_match_indexes(match)
-
-                if key in ("season", "episode"):
-                    clean = self.get_season_episode(match)
-                elif key == "subtitles":
-                    clean = self.get_subtitles(match)
-                elif key in ("language", "genre"):
-                    clean = self.split_multi(match)
-                elif key in types.keys() and types[key] == "boolean":
-                    clean = True
-                else:
-                    clean = match[index["clean"]]
-                    if key in types.keys() and types[key] == "integer":
-                        clean = int(clean)
+                # Extract value for non-multiple fields
+                clean = self._extract_value_from_match(match, key)
 
                 if self.standardise:
                     clean = self.standardise_clean(clean, key, replace, transforms)
 
-                part_overlaps = False
-                for part, part_slices in self.part_slices.items():
-                    if part not in patterns_allow_overlap:
-                        # Strict smaller/larger than since punctuation can overlap.
-                        if (
-                            (part_slices[0] < match_start < part_slices[1])
-                            or (part_slices[0] < match_end < part_slices[1])
-                        ):
-                            part_overlaps = True
-                            break
-
-                if not part_overlaps:
+                if not self._check_overlap(match_start, match_end):
                     self._part(key, (match_start, match_end), clean)
 
         self.process_title()
