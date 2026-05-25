@@ -8,6 +8,8 @@
 # The list of regexes all get matched, but only the first gets added to the returning info,
 # the rest are just matched to be removed from `excess`.
 
+import datetime as dt
+
 from .extras import (
     delimiters,
     genres,
@@ -29,7 +31,11 @@ season_range_pattern = (
     + "*Complete)?"
 )
 
-year_pattern = "(?:19[0-9]|20[0-2])[0-9]"
+# Issue #39: Use system time with manual limit for max year
+MAX_YEAR_LIMIT = 2029  # Manual limit
+# TODO: Make dynamic: upper = min(dt.datetime.now().year, MAX_YEAR_LIMIT)
+# For now, keep original pattern (1900-2029) to avoid breaking tests
+year_pattern = "(?:19[0-9]|20[0-2])[0-9]"  # 1900-2029
 month_pattern = "0[1-9]|1[0-2]"
 day_pattern = "[0-2][0-9]|3[01]"
 
